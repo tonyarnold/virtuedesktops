@@ -11,7 +11,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					502,
+					630,
 					20,
 					48,
 					43,
@@ -28,12 +28,12 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153410802;
-			PBXWorkspaceStateSaveDate = 153410802;
+			PBXPerProjectTemplateStateSaveDate = 153414259;
+			PBXWorkspaceStateSaveDate = 153414259;
 		};
 		perUserProjectItems = {
-			EAB7BC760924DC160067CDFD /* PBXTextBookmark */ = EAB7BC760924DC160067CDFD /* PBXTextBookmark */;
-			EAB7BCC00924DD1E0067CDFD /* PBXTextBookmark */ = EAB7BCC00924DD1E0067CDFD /* PBXTextBookmark */;
+			EAB7BE3F0924E74E0067CDFD /* PBXTextBookmark */ = EAB7BE3F0924E74E0067CDFD /* PBXTextBookmark */;
+			EAB7C0260924F7790067CDFD /* PBXTextBookmark */ = EAB7C0260924F7790067CDFD /* PBXTextBookmark */;
 		};
 		sourceControlManager = EAE822B10924A5DC00239477 /* Source Control */;
 		userBuildSettings = {
@@ -64,16 +64,16 @@
 	};
 	E936380806FCCCA300E354DB /* DECInjector.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {694, 4065}}";
-			sepNavSelRange = "{4662, 13}";
-			sepNavVisRect = "{{0, 2296}, {694, 374}}";
+			sepNavIntBoundsRect = "{{0, 0}, {822, 3975}}";
+			sepNavSelRange = "{5734, 0}";
+			sepNavVisRect = "{{0, 2689}, {822, 587}}";
 		};
 	};
 	E936380B06FCCCA300E354DB /* mach_inject.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {694, 2865}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {694, 374}}";
+			sepNavIntBoundsRect = "{{0, 0}, {822, 3180}}";
+			sepNavSelRange = "{5910, 0}";
+			sepNavVisRect = "{{0, 2813}, {822, 367}}";
 		};
 	};
 	E958EEDA06FDA03E001DCB1E /* decomm */ = {
@@ -119,25 +119,25 @@
 			sepNavWindowFrame = "{{-4, 77}, {722, 801}}";
 		};
 	};
-	EAB7BC760924DC160067CDFD /* PBXTextBookmark */ = {
+	EAB7BE3F0924E74E0067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
-		name = dockExtension;
-		rLen = 13;
-		rLoc = 4662;
+		name = kDecErrorMac;
+		rLen = 12;
+		rLoc = 2121;
 		rType = 0;
-		vrLen = 633;
-		vrLoc = 4309;
+		vrLen = 310;
+		vrLoc = 1803;
 	};
-	EAB7BCC00924DD1E0067CDFD /* PBXTextBookmark */ = {
+	EAB7C0260924F7790067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
-		name = dockExtension;
-		rLen = 13;
-		rLoc = 4662;
+		name = "DECInjector.c: 190";
+		rLen = 0;
+		rLoc = 5734;
 		rType = 0;
-		vrLen = 633;
-		vrLoc = 4309;
+		vrLen = 904;
+		vrLoc = 5333;
 	};
 	EAE822B10924A5DC00239477 /* Source Control */ = {
 		isa = PBXSourceControlManager;

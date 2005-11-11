@@ -33,7 +33,7 @@
 
 enum
 {
-	kVtMenuItemMagicNumber			= 666,
+	kVtMenuItemMagicNumber				= 666,
 	kVtMenuItemRemoveMagicNumber	= 667,
 };
 
@@ -69,7 +69,7 @@ enum
 		mStatusItem = nil; 
 		mStatusItemMenuDesktopNeedsUpdate = YES; 
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES; 
-
+		
 		return self; 
 	}
 	
@@ -109,7 +109,8 @@ enum
 	BOOL showSplashScreen = ([[NSUserDefaults standardUserDefaults] boolForKey: VTPrivateHideSplashScreen] == NO); 
 	
 	if (showSplashScreen) {
-		// display our splashscreen 
+		// display our splashscreen
+		[mVersionField setStringValue:[NSString stringWithFormat:@"Version %@", [self versionString]]];
 		[mSplashScreen center]; 
 		[mSplashScreen orderFront: self]; 
 		[mSplashScreenProgress startAnimation: self]; 
@@ -118,20 +119,7 @@ enum
 	// inject dock extension code into the Dock process
 	// Strangely, removing this code still allows Virtue to run, but results in
 	// The dock process not dying. Need to check this closer...
-	int isInjected	= 0; 
-	int minor				= 0; 
-	int major				= 0; 
-	
-	dec_info(&isInjected, &major, &minor);
-	// restart dock 
-	if (isInjected != 1)
-		dec_inject_code(); 
-	
-	dec_info(&isInjected, &major, &minor);
-	
-	if (isInjected == 1) {
-		mUpdatedDock = YES; 
-	}
+	dec_inject_code();
 	
 	// create all necessary objects and controllers; we are called after the version
 	// check has run, so we are set to go... 
@@ -274,8 +262,11 @@ enum
 		[mSplashScreenProgress stopAnimation: self]; 
 		[mSplashScreen close]; 
 	}
-	
 	mStartedUp = YES; 
+}
+
+- (NSString*) versionString {
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
 #pragma mark -

@@ -66,7 +66,7 @@ void injectEntry(ptrdiff_t a_iOffset, void *a_poParamBlock, size_t a_iParamSize)
 {
 	OSErr iError;
 	
-	printf("Virtue DockExtension [%i.%i] [decomm %i.%i]\n", g_majorVersion, g_minorVersion, dec_version_major(), dec_version_minor()); 
+	//printf("Virtue DockExtension [%i.%i] [decomm %i.%i]\n", g_majorVersion, g_minorVersion, dec_version_major(), dec_version_minor()); 
 	printf("Virtue DockExtension injecting code into Dock process...\n"); 
 	
 	iError = AEInstallEventHandler(kDecEventClass, 

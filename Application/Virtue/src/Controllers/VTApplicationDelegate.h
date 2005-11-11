@@ -30,6 +30,7 @@
 	IBOutlet NSMenuItem*			mStatusItemRemoveActiveDesktopItem; 
 	IBOutlet NSPanel*				mSplashScreen; 
 	IBOutlet NSProgressIndicator*	mSplashScreenProgress; 
+	IBOutlet NSTextField* mVersionField;
 	// attributes 
 	BOOL							mStartedUp; 
 	NSStatusItem*					mStatusItem; 
@@ -49,6 +50,7 @@
 	VTApplicationViewController*	mApplicationInspector; 
 }
 
+- (NSString*) versionString;
 #pragma mark -
 #pragma mark Actions 
 - (IBAction) showPreferences: (id) sender; 

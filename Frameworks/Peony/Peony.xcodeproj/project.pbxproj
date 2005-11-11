@@ -175,7 +175,7 @@
 			children = (
 				EA1E6DD80924CCF300AABD4D /* Zen.xcodeproj */,
 				EA1E6DD00924CCE100AABD4D /* decomm.xcodeproj */,
-				08FB77AEFE84172EC02AAC07 /* Classes */,
+				08FB77AEFE84172EC02AAC07 /* Sources */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -205,7 +205,7 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+		08FB77AEFE84172EC02AAC07 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				E9572C41070B32810053E494 /* PNDesktopScripting.h */,
@@ -226,7 +226,7 @@
 				E93637DD06FCCC2200E354DB /* PNWindowPool.h */,
 				E93637DE06FCCC2200E354DB /* PNWindowPool.m */,
 			);
-			name = Classes;
+			name = Sources;
 			sourceTree = "<group>";
 		};
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
@@ -567,6 +567,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
+				PREBINDING = NO;
 				PRODUCT_NAME = Peony;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
@@ -615,6 +616,8 @@
 		EAE822EB0924A62C00239477 /* Deployment Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "../../../../Dock\\ Extension/**";
+				PREBINDING = NO;
 			};
 			name = "Deployment Private Framework";
 		};

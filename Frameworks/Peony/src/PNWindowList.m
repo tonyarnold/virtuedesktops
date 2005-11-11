@@ -109,7 +109,7 @@
 		CGSExtClearWindowListTags(windows, windowsCount, CGSTagSticky); 
 	}
 	
-	free(windows); 
+	free(windows);
 }
 
 - (BOOL) isSticky {

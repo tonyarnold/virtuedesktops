@@ -55,6 +55,7 @@ static mach_error_t	dec_mac_to_mach_error(OSErr a_oError)
 	return a_oError ? (kDecErrorMac | a_oError) : err_none;
 }
 
+
 OSErr dec_find_dock_process(ProcessSerialNumber* psn)
 {
 	return dec_find_process_by_signature('APPL', 'dock', psn); 
@@ -124,77 +125,80 @@ OSErr dec_info(int* isInjected, int* majorVersion, int* minorVersion)
 	return noErr; 
 }
 
+#define err_mac			err_system(0xf)	/* Mac (Carbon) errors */
+static mach_error_t	_mac_err( OSErr err ) {
+	return err ? (err_mac|err) : err_none;
+}
+#define	mac_err( CODE )	_mac_err( (CODE) );
 
 OSErr dec_inject_code() 
 {
-	/* we will refuse to inject if there is already code injected in the Dock 
-	 * process; */ 
-	int isInjected; 
+	mach_error_t err = err_none;
+//	printf("Attempting to install Dock patch...\n");
 	
-	OSErr infoError = dec_info(&isInjected, NULL, NULL); 
-	if (infoError) 
-		return infoError; 
-	if (isInjected) 
-		return noErr; 
-	
-	mach_error_t oError = err_none; 
-	
-	/* Get the main bundle for the app. */
+	// Get the main bundle for the app.
 	CFBundleRef mainBundle = NULL;
-	if(!oError) {
+	if(!err) {
 		mainBundle = CFBundleGetMainBundle();
-		if( !mainBundle )
-			oError = kDecErrorMac;
+    if( !mainBundle )
+			err = kDecErrorMainBundleLoad;
 	}
 	
-	/* Find our injection bundle by name. */
+	// Find our injection bundle by name.
 	CFURLRef injectionURL = NULL;
-	if (!oError) 
-	{
-		injectionURL = CFBundleCopyResourceURL(mainBundle,
-																					 CFSTR("dockExtension.bundle"), NULL, NULL);
-		if (!injectionURL)
-			oError = kDecErrorMac;
+	if( !err ) {
+		injectionURL = CFBundleCopyResourceURL( mainBundle,
+																						CFSTR("dockExtension.bundle"), NULL, NULL );
+		if( !injectionURL )
+			err = kDecErrorInjectionBundle;
 	}
 	
-	/*	Create injection bundle instance. */
+	//	Create injection bundle instance.
 	CFBundleRef injectionBundle = NULL;
-	if (!oError) 
-	{
-		injectionBundle = CFBundleCreate(kCFAllocatorDefault, injectionURL);
-		if (!injectionBundle)
-			oError = kDecErrorMac;
+	if( !err ) {
+		injectionBundle = CFBundleCreate( kCFAllocatorDefault, injectionURL );
+		if( !injectionBundle )
+			err = kDecErrorInjectionBundleLoad;
 	}
 	
-	/*	Load the thread code injection. */
-	void* injectionCode = NULL;
-	if (!oError) 
-	{
-		injectionCode = CFBundleGetFunctionPointerForName(injectionBundle, 
-																											CFSTR("injectEntry"));
-		if (injectionCode == NULL)
-			oError = kDecErrorMac;
+	//	Load the thread code injection.
+	void *injectionCode = NULL;
+	if( !err ) {
+		injectionCode = CFBundleGetFunctionPointerForName( injectionBundle, 
+																											 CFSTR( INJECT_ENTRY_SYMBOL ));
+		if( injectionCode == NULL )
+			err = kDecErrorInjectionCode;
+	}
+		
+	//	Find target by signature.
+	ProcessSerialNumber psn;
+	if( !err )
+		err = mac_err( dec_find_process_by_signature( 'APPL', 'dock', &psn ));
+	
+	//	Convert PSN to PID.
+	pid_t dockpid;
+	if( !err )
+		err = mac_err( GetProcessPID( &psn, &dockpid ));
+	//if( !err )
+	//    printf( "pid: %ld\n", (long) dockpid );
+	
+	//	Inject the code.
+	if( !err )
+		err = mach_inject( injectionCode, NULL, 0, dockpid, 0 );
+	
+	if(err) {
+		printf("Installation of Virtue's dock extension has failed!\n");
 	}
 	
-	/* we now try to find the dock process by its signature */
-	ProcessSerialNumber oSerial;
-	oError = dec_mac_to_mach_error(dec_find_process_by_signature('APPL', 'dock', &oSerial));
-	if (oError)
-		return oError; 
+	//	Clean up.
+	if( injectionBundle )
+		CFRelease( injectionBundle );
+	if( injectionURL )
+		CFRelease( injectionURL );
+	if( mainBundle )
+		CFRelease( mainBundle );
 	
-	/* convert PSN to PID */
-	pid_t oDockPID;
-	oError = dec_mac_to_mach_error(GetProcessPID(&oSerial, &oDockPID));
-	if (oError)
-		return oError;
-	
-	/* now finally we will try to inject the code into the docks process */
-	oError = mach_inject(injectionCode, NULL, 0, oDockPID, 32 * 1024);
-	if (oError)
-		return oError; 
-	
-	/* return */
-	return oError;
+	return err;
 }
 
 OSErr dec_kill_dock() 

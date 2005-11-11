@@ -1,5 +1,5 @@
 /****************************************************************************************
-	mach_inject.c $Revision: 1.1.1.1 $
+	mach_inject.c $Revision: 1.1 $
 	
 	Copyright (c) 2003 Red Shed Software. All rights reserved.
 	by Jonathan 'Wolf' Rentzsch (jon * redshed * net)
