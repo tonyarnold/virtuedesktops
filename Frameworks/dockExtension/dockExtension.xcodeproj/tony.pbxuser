@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Development;
+		activeBuildConfigurationName = "Deployment Private Framework";
 		activeBuildStyle = 4F9091AC011F3BD104CA0E50 /* Development */;
 		activeTarget = 8D01CCC60486CAD60068D4B7 /* dockExtension */;
 		addToTargets = (
@@ -38,7 +38,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					200,
-					63,
+					433,
 					20,
 					48,
 					43,
@@ -54,8 +54,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153409869;
-			PBXWorkspaceStateSaveDate = 153409869;
+			PBXPerProjectTemplateStateSaveDate = 153410584;
+			PBXWorkspaceStateSaveDate = 153410584;
 		};
 		sourceControlManager = EAF8CB4E09077543003D54B1 /* Source Control */;
 		userBuildSettings = {

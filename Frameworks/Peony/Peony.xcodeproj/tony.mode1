@@ -239,6 +239,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -289,8 +291,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
-									<integer>5</integer>
+									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -325,8 +326,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -344,7 +343,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EAB7B6A90924D9770067CDFD</string>
+										<string>EAB7BC550924DB230067CDFD</string>
 										<key>history</key>
 										<array>
 											<string>EA1E6D420924CAA400AABD4D</string>
@@ -352,7 +351,7 @@
 											<string>EA1E6D440924CAA400AABD4D</string>
 											<string>EA1E6E190924CE1F00AABD4D</string>
 											<string>EA6CB6760924CFD5004AC51D</string>
-											<string>EA6CB8C80924D67A004AC51D</string>
+											<string>EAB7BBFC0924DA820067CDFD</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -419,9 +418,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EAB7B6AA0924D9770067CDFD</string>
+				<string>EAB7BC370924DACE0067CDFD</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EAB7B6AB0924D9770067CDFD</string>
+				<string>EAB7BC380924DACE0067CDFD</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -540,7 +539,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>153409901.09329301</real>
+	<real>153410339.258284</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -555,6 +554,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>EA609CA60906679A003BD20D</string>
 		<string>/Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/Peony/Peony.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -637,7 +637,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>EA609CA60906679A003BD20D</string>
-				<string>EA1E6E580924CE7000AABD4D</string>
+				<string>EAB7BC390924DACE0067CDFD</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

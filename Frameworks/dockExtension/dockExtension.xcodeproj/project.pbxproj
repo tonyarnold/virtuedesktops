@@ -53,6 +53,13 @@
 			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E;
 			remoteInfo = decomm;
 		};
+		EAB7BC080924DA950067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6CB5CB0924CF38004AC51D /* decomm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E;
+			remoteInfo = decomm;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +220,7 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			dependencies = (
+				EAB7BC090924DA950067CDFD /* PBXTargetDependency */,
 			);
 			name = dockExtension;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -281,6 +289,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EAB7BC090924DA950067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = decomm;
+			targetProxy = EAB7BC080924DA950067CDFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -301,6 +317,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EAB7BC960924DC3F0067CDFD /* Deployment Private Framework */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = dockExtension_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = ../decomm/includes;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = BUNDLE;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = dockExtension;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = "Deployment Private Framework";
+		};
+		EAB7BC970924DC3F0067CDFD /* Deployment Private Framework */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = "Deployment Private Framework";
+		};
 		EAF8CB4709077543003D54B1 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,18 +461,24 @@
 		EAF8CB4B09077543003D54B1 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Development;
 		};
 		EAF8CB4C09077543003D54B1 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Deployment;
 		};
 		EAF8CB4D09077543003D54B1 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Default;
 		};
@@ -427,6 +490,7 @@
 			buildConfigurations = (
 				EAF8CB4709077543003D54B1 /* Development */,
 				EAF8CB4809077543003D54B1 /* Deployment */,
+				EAB7BC960924DC3F0067CDFD /* Deployment Private Framework */,
 				EAF8CB4909077543003D54B1 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -437,6 +501,7 @@
 			buildConfigurations = (
 				EAF8CB4B09077543003D54B1 /* Development */,
 				EAF8CB4C09077543003D54B1 /* Deployment */,
+				EAB7BC970924DC3F0067CDFD /* Deployment Private Framework */,
 				EAF8CB4D09077543003D54B1 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;

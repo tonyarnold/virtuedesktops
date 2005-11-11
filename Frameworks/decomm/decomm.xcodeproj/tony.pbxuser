@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Development;
+		activeBuildConfigurationName = "Deployment Private Framework";
 		activeBuildStyle = 4F0BB7EC011F40E904CA0E50 /* Development */;
 		activeTarget = E958EEDA06FDA03E001DCB1E /* decomm */;
 		codeSenseManager = EAE822B20924A5DC00239477 /* Code sense */;
@@ -28,12 +28,12 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153409857;
-			PBXWorkspaceStateSaveDate = 153409857;
+			PBXPerProjectTemplateStateSaveDate = 153410802;
+			PBXWorkspaceStateSaveDate = 153410802;
 		};
 		perUserProjectItems = {
-			EAB7B6600924D94C0067CDFD /* PBXTextBookmark */ = EAB7B6600924D94C0067CDFD /* PBXTextBookmark */;
-			EADC736F0924D80F0043D9AC /* PBXTextBookmark */ = EADC736F0924D80F0043D9AC /* PBXTextBookmark */;
+			EAB7BC760924DC160067CDFD /* PBXTextBookmark */ = EAB7BC760924DC160067CDFD /* PBXTextBookmark */;
+			EAB7BCC00924DD1E0067CDFD /* PBXTextBookmark */ = EAB7BCC00924DD1E0067CDFD /* PBXTextBookmark */;
 		};
 		sourceControlManager = EAE822B10924A5DC00239477 /* Source Control */;
 		userBuildSettings = {
@@ -65,8 +65,8 @@
 	E936380806FCCCA300E354DB /* DECInjector.c */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {694, 4065}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 2235}, {694, 374}}";
+			sepNavSelRange = "{4662, 13}";
+			sepNavVisRect = "{{0, 2296}, {694, 374}}";
 		};
 	};
 	E936380B06FCCCA300E354DB /* mach_inject.c */ = {
@@ -119,25 +119,25 @@
 			sepNavWindowFrame = "{{-4, 77}, {722, 801}}";
 		};
 	};
-	EAB7B6600924D94C0067CDFD /* PBXTextBookmark */ = {
+	EAB7BC760924DC160067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
-		name = "DECInjector.c: 1";
-		rLen = 0;
-		rLoc = 0;
+		name = dockExtension;
+		rLen = 13;
+		rLoc = 4662;
 		rType = 0;
-		vrLen = 591;
-		vrLoc = 4238;
+		vrLen = 633;
+		vrLoc = 4309;
 	};
-	EADC736F0924D80F0043D9AC /* PBXTextBookmark */ = {
+	EAB7BCC00924DD1E0067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
-		name = "DECInjector.c: 1";
-		rLen = 0;
-		rLoc = 0;
+		name = dockExtension;
+		rLen = 13;
+		rLoc = 4662;
 		rType = 0;
-		vrLen = 606;
-		vrLoc = 4238;
+		vrLen = 633;
+		vrLoc = 4309;
 	};
 	EAE822B10924A5DC00239477 /* Source Control */ = {
 		isa = PBXSourceControlManager;

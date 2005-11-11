@@ -67,12 +67,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153409882;
-			PBXWorkspaceStateSaveDate = 153409882;
+			PBXPerProjectTemplateStateSaveDate = 153410132;
+			PBXWorkspaceStateSaveDate = 153410132;
 		};
 		perUserProjectItems = {
-			EA6CB6680924CFC4004AC51D /* PBXTextBookmark */ = EA6CB6680924CFC4004AC51D /* PBXTextBookmark */;
 			EAB7B6970924D96A0067CDFD /* PBXTextBookmark */ = EAB7B6970924D96A0067CDFD /* PBXTextBookmark */;
+			EAB7BBE40924DA670067CDFD /* PBXTextBookmark */ = EAB7BBE40924DA670067CDFD /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA609CA10906677F003BD20D /* Source Control */;
 		userBuildSettings = {
@@ -159,17 +159,17 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	EA6CB6680924CFC4004AC51D /* PBXTextBookmark */ = {
+	EAB7B6970924D96A0067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */;
 		name = ZNWindowDidFadeInNotification;
 		rLen = 29;
 		rLoc = 363;
 		rType = 0;
-		vrLen = 721;
+		vrLen = 581;
 		vrLoc = 0;
 	};
-	EAB7B6970924D96A0067CDFD /* PBXTextBookmark */ = {
+	EAB7BBE40924DA670067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */;
 		name = ZNWindowDidFadeInNotification;

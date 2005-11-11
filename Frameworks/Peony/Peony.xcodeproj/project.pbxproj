@@ -97,6 +97,20 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = Zen;
 		};
+		EAB7BBF50924DA7E0067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1E6DD80924CCF300AABD4D /* Zen.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Zen;
+		};
+		EAB7BBF70924DA7E0067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1E6DD00924CCE100AABD4D /* decomm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E;
+			remoteInfo = decomm;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -328,6 +342,8 @@
 				WRAPPER_EXTENSION = framework;
 			};
 			dependencies = (
+				EAB7BBF60924DA7E0067CDFD /* PBXTargetDependency */,
+				EAB7BBF80924DA7E0067CDFD /* PBXTargetDependency */,
 			);
 			name = Peony;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -415,6 +431,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAB7BBF60924DA7E0067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zen;
+			targetProxy = EAB7BBF50924DA7E0067CDFD /* PBXContainerItemProxy */;
+		};
+		EAB7BBF80924DA7E0067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = decomm;
+			targetProxy = EAB7BBF70924DA7E0067CDFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {

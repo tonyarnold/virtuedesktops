@@ -266,7 +266,8 @@
 		E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
-		EAE821C10924A30B00239477 /* dockExtension.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE821BE0924A2EF00239477 /* dockExtension.bundle */; };
+		EAB7BCDE0924DDBD0067CDFD /* dockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAB7BCD70924DDAB0067CDFD /* dockExtension.bundle */; };
+		EAB7BCF00924DEA20067CDFD /* libdecomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7BCDD0924DDB40067CDFD /* libdecomm.a */; };
 		EAF8C93809076E9A003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
 		EAF8C93909076EA8003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
 		EAF8C93A09076EAF003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
@@ -293,11 +294,9 @@
 		EAF8C99D09077001003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EAF8C9A609077012003D54B1 /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C94C09076F2C003D54B1 /* Peony.framework */; };
 		EAF8C9A709077016003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
-		EAF8C9B609077042003D54B1 /* libdecomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C9B50907703E003D54B1 /* libdecomm.a */; };
 		EAF8C9B709077048003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EAF8C9B80907704C003D54B1 /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C94C09076F2C003D54B1 /* Peony.framework */; };
 		EAF8C9C309077064003D54B1 /* Peony.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C94C09076F2C003D54B1 /* Peony.framework */; };
-		EAF8C9C40907706A003D54B1 /* libdecomm.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C9B50907703E003D54B1 /* libdecomm.a */; };
 		EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 /* End PBXBuildFile section */
 
@@ -439,11 +438,53 @@
 			remoteGlobalIDString = E9D29BE8073E345700E0E6CE;
 			remoteInfo = VTDesktopColorLabelPrimitive;
 		};
-		EAE821BD0924A2EF00239477 /* PBXContainerItemProxy */ = {
+		EAB7BC210924DAAC0067CDFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EAE821B70924A2EF00239477 /* dockExtension.xcodeproj */;
+			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteInfo = Virtue;
+		};
+		EAB7BC250924DAAC0067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C94709076F2C003D54B1 /* Peony.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteInfo = Peony;
+		};
+		EAB7BC270924DAAC0067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteInfo = Zen;
+		};
+		EAB7BCD60924DDAB0067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D01CCD20486CAD60068D4B7;
+			remoteGlobalIDString = 8D01CCD20486CAD60068D4B7 /* dockExtension.bundle */;
+			remoteInfo = dockExtension;
+		};
+		EAB7BCDC0924DDB40067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E /* libdecomm.a */;
+			remoteInfo = decomm;
+		};
+		EAB7BCE20924DDD50067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E /* decomm */;
+			remoteInfo = decomm;
+		};
+		EAB7BCE40924DDD50067CDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7 /* dockExtension */;
 			remoteInfo = dockExtension;
 		};
 		EAF8C93609076E8C003D54B1 /* PBXContainerItemProxy */ = {
@@ -635,13 +676,6 @@
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
-		EAF8C9B40907703E003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C9B00907703E003D54B1 /* decomm.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E;
-			remoteInfo = decomm;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -653,7 +687,6 @@
 			files = (
 				EAF8C9C309077064003D54B1 /* Peony.framework in CopyFiles */,
 				EAF8C93C09076ED5003D54B1 /* Virtue.framework in CopyFiles */,
-				EAF8C9C40907706A003D54B1 /* libdecomm.a in CopyFiles */,
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
 			);
@@ -682,7 +715,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 12;
 			files = (
-				EAE821C10924A30B00239477 /* dockExtension.bundle in CopyFiles */,
 				E95B9A39074038E300231BC5 /* Changelog in CopyFiles */,
 				E9363A7906FCDDCD00E354DB /* COPYING in CopyFiles */,
 				E9363A7D06FCDDCD00E354DB /* GPL in CopyFiles */,
@@ -1001,11 +1033,11 @@
 		E9D29C07073E3AC400E0E6CE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E9FD547A0713BF290006590F /* iconDesktopFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconDesktopFolder.icns; sourceTree = "<group>"; };
 		E9FD54FE0715C6260006590F /* imageAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAction.png; sourceTree = "<group>"; };
-		EAE821B70924A2EF00239477 /* dockExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dockExtension.xcodeproj; path = ../../frameworks/dockExtension/dockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dockExtension.xcodeproj; path = ../../Frameworks/dockExtension/dockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = decomm.xcodeproj; path = ../../Frameworks/decomm/decomm.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Virtue.xcodeproj; path = ../../frameworks/Virtue/Virtue.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C94709076F2C003D54B1 /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../../frameworks/Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
-		EAF8C9B00907703E003D54B1 /* decomm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = decomm.xcodeproj; path = ../../frameworks/decomm/decomm.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1013,10 +1045,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB7BCF00924DEA20067CDFD /* libdecomm.a in Frameworks */,
 				E913F2E4076E47F300072617 /* VTInterface.framework in Frameworks */,
 				E98B83C00749E50400E8CE5C /* PreferencePanes.framework in Frameworks */,
 				E98B83A60749E46200E8CE5C /* Carbon.framework in Frameworks */,
-				EAF8C9B609077042003D54B1 /* libdecomm.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				EAF8C9B709077048003D54B1 /* Zen.framework in Frameworks */,
 				EAF8C9B80907704C003D54B1 /* Peony.framework in Frameworks */,
@@ -1723,8 +1755,8 @@
 		EA6CB6080924CF83004AC51D /* External Projects */ = {
 			isa = PBXGroup;
 			children = (
-				EAE821B70924A2EF00239477 /* dockExtension.xcodeproj */,
-				EAF8C9B00907703E003D54B1 /* decomm.xcodeproj */,
+				EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */,
+				EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */,
 				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
 				EAF8C94709076F2C003D54B1 /* Peony.xcodeproj */,
 				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
@@ -1732,10 +1764,18 @@
 			name = "External Projects";
 			sourceTree = "<group>";
 		};
-		EAE821B80924A2EF00239477 /* Products */ = {
+		EAB7BCD00924DDAB0067CDFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EAE821BE0924A2EF00239477 /* dockExtension.bundle */,
+				EAB7BCD70924DDAB0067CDFD /* dockExtension.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAB7BCD90924DDB40067CDFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAB7BCDD0924DDB40067CDFD /* libdecomm.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1760,14 +1800,6 @@
 			isa = PBXGroup;
 			children = (
 				EAF8C95209076F38003D54B1 /* Zen.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EAF8C9B10907703E003D54B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EAF8C9B50907703E003D54B1 /* libdecomm.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1842,6 +1874,11 @@
 				E958A895075EF3ED00773392 /* PBXTargetDependency */,
 				E913F19E076E3DA500072617 /* PBXTargetDependency */,
 				E913F1A0076E3DA500072617 /* PBXTargetDependency */,
+				EAB7BC220924DAAC0067CDFD /* PBXTargetDependency */,
+				EAB7BC260924DAAC0067CDFD /* PBXTargetDependency */,
+				EAB7BC280924DAAC0067CDFD /* PBXTargetDependency */,
+				EAB7BCE30924DDD50067CDFD /* PBXTargetDependency */,
+				EAB7BCE50924DDD50067CDFD /* PBXTargetDependency */,
 			);
 			name = Virtue;
 			productInstallPath = "$(HOME)/Applications";
@@ -2488,12 +2525,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EAF8C9B10907703E003D54B1 /* Products */;
-					ProjectRef = EAF8C9B00907703E003D54B1 /* decomm.xcodeproj */;
+					ProductGroup = EAB7BCD90924DDB40067CDFD /* Products */;
+					ProjectRef = EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */;
 				},
 				{
-					ProductGroup = EAE821B80924A2EF00239477 /* Products */;
-					ProjectRef = EAE821B70924A2EF00239477 /* dockExtension.xcodeproj */;
+					ProductGroup = EAB7BCD00924DDAB0067CDFD /* Products */;
+					ProjectRef = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
 				},
 				{
 					ProductGroup = EAF8C94809076F2C003D54B1 /* Products */;
@@ -2524,11 +2561,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EAE821BE0924A2EF00239477 /* dockExtension.bundle */ = {
+		EAB7BCD70924DDAB0067CDFD /* dockExtension.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = dockExtension.bundle;
-			remoteRef = EAE821BD0924A2EF00239477 /* PBXContainerItemProxy */;
+			remoteRef = EAB7BCD60924DDAB0067CDFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAB7BCDD0924DDB40067CDFD /* libdecomm.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdecomm.a;
+			remoteRef = EAB7BCDC0924DDB40067CDFD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		EAF8C93709076E8C003D54B1 /* Virtue.framework */ = {
@@ -2552,13 +2596,6 @@
 			remoteRef = EAF8C95109076F38003D54B1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EAF8C9B50907703E003D54B1 /* libdecomm.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libdecomm.a;
-			remoteRef = EAF8C9B40907703E003D54B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -2566,6 +2603,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB7BCDE0924DDBD0067CDFD /* dockExtension.bundle in Resources */,
 				E941CDD507466020007DF0D9 /* PNApplicationScripting.h in Resources */,
 				E941CE25074661F4007DF0D9 /* PNWindowScripting.h in Resources */,
 				E903F760071DB4EF00A00F30 /* VTApplication.h in Resources */,
@@ -2983,6 +3021,31 @@
 			isa = PBXTargetDependency;
 			target = E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */;
 			targetProxy = E9D29C09073E3AF500E0E6CE /* PBXContainerItemProxy */;
+		};
+		EAB7BC220924DAAC0067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Virtue;
+			targetProxy = EAB7BC210924DAAC0067CDFD /* PBXContainerItemProxy */;
+		};
+		EAB7BC260924DAAC0067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Peony;
+			targetProxy = EAB7BC250924DAAC0067CDFD /* PBXContainerItemProxy */;
+		};
+		EAB7BC280924DAAC0067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zen;
+			targetProxy = EAB7BC270924DAAC0067CDFD /* PBXContainerItemProxy */;
+		};
+		EAB7BCE30924DDD50067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = decomm;
+			targetProxy = EAB7BCE20924DDD50067CDFD /* PBXContainerItemProxy */;
+		};
+		EAB7BCE50924DDD50067CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = dockExtension;
+			targetProxy = EAB7BCE40924DDD50067CDFD /* PBXContainerItemProxy */;
 		};
 		EAF8C96409076F85003D54B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5001,7 +5064,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../../frameworks/decomm/includes/;
+				HEADER_SEARCH_PATHS = ../../Frameworks/decomm/includes/;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PREBINDING = NO;
