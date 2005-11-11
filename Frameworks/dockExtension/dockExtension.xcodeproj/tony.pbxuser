@@ -54,8 +54,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153409218;
-			PBXWorkspaceStateSaveDate = 153409218;
+			PBXPerProjectTemplateStateSaveDate = 153409869;
+			PBXWorkspaceStateSaveDate = 153409869;
 		};
 		sourceControlManager = EAF8CB4E09077543003D54B1 /* Source Control */;
 		userBuildSettings = {
@@ -94,10 +94,11 @@
 	EAF8CB4E09077543003D54B1 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 0;
+		isSCMEnabled = 1;
 		scmConfiguration = {
+			SubversionToolPath = /opt/darwinports/bin/svn;
 		};
-		scmType = "";
+		scmType = scm.subversion;
 	};
 	EAF8CB4F09077543003D54B1 /* Code sense */ = {
 		isa = PBXCodeSenseManager;

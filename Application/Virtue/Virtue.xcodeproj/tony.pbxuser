@@ -97,8 +97,8 @@
 			PBXWorkspaceStateSaveDate = 153409830;
 		};
 		perUserProjectItems = {
-			EA6CB8A50924D672004AC51D = EA6CB8A50924D672004AC51D /* PBXTextBookmark */;
-			EA6CB8A60924D672004AC51D = EA6CB8A60924D672004AC51D /* PBXTextBookmark */;
+			EA6CB8A60924D672004AC51D /* PBXTextBookmark */ = EA6CB8A60924D672004AC51D /* PBXTextBookmark */;
+			EAB7B6C00924D9A70067CDFD /* PBXTextBookmark */ = EAB7B6C00924D9A70067CDFD /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA609C29090666C8003BD20D /* Source Control */;
 		userBuildSettings = {
@@ -170,7 +170,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {803, 12330}}";
 			sepNavSelRange = "{3535, 15}";
-			sepNavVisRect = "{{0, 1691}, {803, 565}}";
+			sepNavVisRect = "{{0, 1680}, {803, 565}}";
 			sepNavWindowFrame = "{{260, 207}, {973, 671}}";
 		};
 	};
@@ -574,16 +574,6 @@
 		objects = (
 		);
 	};
-	EA6CB8A50924D672004AC51D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
-		name = "VTApplicationDelegate.m: 126";
-		rLen = 0;
-		rLoc = 3493;
-		rType = 0;
-		vrLen = 797;
-		vrLoc = 3049;
-	};
 	EA6CB8A60924D672004AC51D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
@@ -592,6 +582,16 @@
 		rLoc = 3535;
 		rType = 0;
 		vrLen = 1216;
+		vrLoc = 3022;
+	};
+	EAB7B6C00924D9A70067CDFD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
+		name = dec_inject_code;
+		rLen = 15;
+		rLoc = 3535;
+		rType = 0;
+		vrLen = 1181;
 		vrLoc = 3022;
 	};
 }

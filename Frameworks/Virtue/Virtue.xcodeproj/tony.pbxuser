@@ -95,16 +95,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153408207;
-			PBXWorkspaceStateSaveDate = 153408207;
+			PBXPerProjectTemplateStateSaveDate = 153409913;
+			PBXWorkspaceStateSaveDate = 153409913;
 		};
 		perUserProjectItems = {
 			EA1E6D4C0924CAA800AABD4D /* PBXTextBookmark */ = EA1E6D4C0924CAA800AABD4D /* PBXTextBookmark */;
 			EA1E6D4E0924CAA800AABD4D /* PBXTextBookmark */ = EA1E6D4E0924CAA800AABD4D /* PBXTextBookmark */;
 			EA1E6D4F0924CAA800AABD4D /* PBXTextBookmark */ = EA1E6D4F0924CAA800AABD4D /* PBXTextBookmark */;
 			EA6CB6B10924D120004AC51D /* PBXTextBookmark */ = EA6CB6B10924D120004AC51D /* PBXTextBookmark */;
-			EA6CB8C00924D678004AC51D /* PBXTextBookmark */ = EA6CB8C00924D678004AC51D /* PBXTextBookmark */;
 			EA6CB8C10924D678004AC51D /* PBXTextBookmark */ = EA6CB8C10924D678004AC51D /* PBXTextBookmark */;
+			EAB7B6BA0924D9870067CDFD /* PBXTextBookmark */ = EAB7B6BA0924D9870067CDFD /* PBXTextBookmark */;
 			EAE820FF09249B4300239477 /* PBXTextBookmark */ = EAE820FF09249B4300239477 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA609CBB090667D2003BD20D /* Source Control */;
@@ -356,10 +356,11 @@
 	EA609CBB090667D2003BD20D /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 0;
+		isSCMEnabled = 1;
 		scmConfiguration = {
+			SubversionToolPath = /opt/darwinports/bin/svn;
 		};
-		scmType = "";
+		scmType = scm.subversion;
 	};
 	EA609CBC090667D2003BD20D /* Code sense */ = {
 		isa = PBXCodeSenseManager;
@@ -375,7 +376,7 @@
 		vrLen = 516;
 		vrLoc = 353;
 	};
-	EA6CB8C00924D678004AC51D /* PBXTextBookmark */ = {
+	EA6CB8C10924D678004AC51D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E91244CD073033F500BD28CD /* VTDesktop.m */;
 		name = "VTDesktop.m: uuid";
@@ -385,7 +386,7 @@
 		vrLen = 581;
 		vrLoc = 5502;
 	};
-	EA6CB8C10924D678004AC51D /* PBXTextBookmark */ = {
+	EAB7B6BA0924D9870067CDFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E91244CD073033F500BD28CD /* VTDesktop.m */;
 		name = "VTDesktop.m: uuid";

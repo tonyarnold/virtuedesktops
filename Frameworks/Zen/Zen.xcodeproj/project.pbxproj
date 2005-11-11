@@ -123,7 +123,6 @@
 		E985E84F0760EEFF005CB196 /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNShading.m; path = src/common/ZNShading.m; sourceTree = "<group>"; };
 		E98DD9DB078DEB4C0059A0D3 /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNEffectWindow.h; path = src/widgets/effectwindow/ZNEffectWindow.h; sourceTree = "<group>"; };
 		E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNEffectWindow.m; path = src/widgets/effectwindow/ZNEffectWindow.m; sourceTree = "<group>"; };
-		EA56D78F090C943F006F3548 /* Zen.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Zen.xcclassmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +154,6 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				EA56D78F090C943F006F3548 /* Zen.xcclassmodel */,
 			);
 			name = Zen;
 			sourceTree = "<group>";

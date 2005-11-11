@@ -284,15 +284,12 @@
 								<string>089C1671FE841209C02AAC07</string>
 								<string>19C28FB4FE9D528D11CA2CBB</string>
 								<string>8D01CCD20486CAD60068D4B7</string>
-								<string>EADC73470924D6C20043D9AC</string>
-								<string>EADC734E0924D6D70043D9AC</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -332,13 +329,15 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string></string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
+										<key>PBXProjectModuleLabel</key>
+										<string></string>
 									</dict>
 									<key>SplitCount</key>
 									<string>1</string>
@@ -395,9 +394,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EADC73700924D8110043D9AC</string>
+				<string>EAB7B6810924D9580067CDFD</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EADC73710924D8110043D9AC</string>
+				<string>EAB7B6820924D9580067CDFD</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -516,7 +515,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>153409553.64419299</real>
+	<real>153409869.700201</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -531,8 +530,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>EA609C4409066736003BD20D</string>
-		<string>/Users/tony/Documents/Development/Checkouts/virtue.local/frameworks/dockExtension/dockExtension.xcodeproj</string>
+		<string>/Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/dockExtension/dockExtension.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>254 174 1060 667 0 0 1440 878 </string>
