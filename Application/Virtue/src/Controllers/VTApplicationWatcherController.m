@@ -27,10 +27,17 @@
 
 #pragma mark Instance 
 
+static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, EventRef inEvent, void *inUserData);
+
 - (id) init {
 	if (self = [super init]) {
 		// register for notifications of application focus changes 
-		[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(onApplicationDidActivate:) name: @"com.apple.HIToolbox.menuBarShownNotification" object: nil]; 		
+		//[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(onApplicationDidActivate:) name: @"com.apple.HIToolbox.menuBarShownNotification" object: nil]; 
+		[[NSNotificationCenter defaultCenter] 
+			addObserver:self selector:@selector(onApplicationDidActivate:) name: kPnApplicationDidActive object: nil]; 
+		
+		
+		[self setupAppChangeNotification];
 		// register for notifications of application launches
 		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onApplicationDidLaunch:) name: @"NSWorkspaceDidLaunchApplicationNotification" object: nil]; 
 		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onApplicationWillLaunch:) name: @"NSWorkspaceWillLaunchApplicationNotification" object: nil]; 
@@ -50,6 +57,17 @@
 	}
 	
 	return nil; 
+}
+
+- (void) setupAppChangeNotification {
+	
+	EventTypeSpec spec = { kEventClassApplication,  
+		kEventAppFrontSwitched };
+	
+	OSStatus err = InstallApplicationEventHandler(NewEventHandlerUPP(handleAppFrontSwitched), 1, &spec, (void*)self, NULL);	
+	if (err) {
+		NSLog(@"Failed to install event handler 'handleAppFrontSwitched'");
+	}
 }
 
 - (void) dealloc {
@@ -272,7 +290,7 @@
 	// we will exclude applications that were set as "hidden", that is why we have to 
 	// loop here
 	while (index < count) {
-		PNWindow*		frontWindow			= [[desktop windows] objectAtIndex: index];
+		PNWindow*		frontWindow						= [[desktop windows] objectAtIndex: index];
 		PNApplication*	frontWindowOwner	= [desktop applicationForPid: [frontWindow ownerPid]]; 
 		
 		if ([frontWindowOwner isHidden] == NO) {
@@ -285,6 +303,13 @@
 		index++; 
 	}
 }
+
+- (void) appDidChange {
+	[[NSNotificationCenter defaultCenter]
+			postNotificationName: kPnApplicationDidActive 
+										object: [[NSWorkspace sharedWorkspace] activeApplication]];		
+}
+
 
 @end
 
@@ -316,4 +341,7 @@
 }
 
 @end 
-
+static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, EventRef inEvent, void *inUserData) {
+	[(id)inUserData appDidChange];
+	return 0;
+}

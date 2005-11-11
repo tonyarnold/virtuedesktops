@@ -22,6 +22,8 @@
 // The active desktop changed 
 #define kPnOnDesktopDidActivate		@"PNDesktopDidActivate"
 #define PNDesktopDidActivate		@"PNDesktopDidActivate"
+//The active application has changed
+#define kPnApplicationDidActive @"PNApplicationDid Activate"
 
 #pragma mark -
 // A new window was added 

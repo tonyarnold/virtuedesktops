@@ -39,5 +39,6 @@
 
 - (id) init; 
 - (void) dealloc; 
+- (void) setupAppChangeNotification;
 
 @end

@@ -443,21 +443,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D01CCD20486CAD60068D4B7 /* dockExtension.bundle */;
+			remoteGlobalIDString = 8D01CCD20486CAD60068D4B7;
 			remoteInfo = dockExtension;
 		};
 		EAB7BCDC0924DDB40067CDFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E /* libdecomm.a */;
+			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E;
 			remoteInfo = decomm;
 		};
 		EAB7C03F0924F7DD0067CDFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* Peony.framework */;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EAF8C93609076E8C003D54B1 /* PBXContainerItemProxy */ = {

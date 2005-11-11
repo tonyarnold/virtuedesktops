@@ -239,8 +239,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -288,6 +286,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -322,12 +321,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>PNWindowList.m</string>
+								<string>PNNotifications.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>PNWindowList.m</string>
+										<string>PNNotifications.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EAB7C2CE092500740067CDFD</string>
+										<string>EA6A1131092564570092A3C1</string>
 										<key>history</key>
 										<array>
 											<string>EA1E6D420924CAA400AABD4D</string>
@@ -348,7 +349,8 @@
 											<string>EA6CB6760924CFD5004AC51D</string>
 											<string>EAB7BEA30924E9920067CDFD</string>
 											<string>EAB7BEA40924E9920067CDFD</string>
-											<string>EAB7BF0F0924EB000067CDFD</string>
+											<string>EA6A112E092564570092A3C1</string>
+											<string>EA6A112F092564570092A3C1</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -359,6 +361,7 @@
 											<string>EA1E6E1C0924CE1F00AABD4D</string>
 											<string>EA1E6E1D0924CE1F00AABD4D</string>
 											<string>EAB7BEAB0924E9920067CDFD</string>
+											<string>EA6A1130092564570092A3C1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -416,9 +419,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EAB7C2CF092500740067CDFD</string>
+				<string>EA6A1132092564570092A3C1</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EAB7C2D0092500740067CDFD</string>
+				<string>EA6A1133092564570092A3C1</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -537,7 +540,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>153419892.710834</real>
+	<real>153445463.42064399</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -553,6 +556,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>EAB7BE920924E9700067CDFD</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/Peony/Peony.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -635,7 +639,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>EAB7BE920924E9700067CDFD</string>
-				<string>EAB7C0500924F8810067CDFD</string>
+				<string>EA6A1127092564550092A3C1</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -771,7 +775,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>PNDesktop.m</string>
+										<string>PNNotifications.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -829,8 +833,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>EAB7BE780924E7C20067CDFD</string>
-				<string>EAB7BE790924E7C20067CDFD</string>
+				<string>EA6A112A092564550092A3C1</string>
+				<string>EA6A112B092564550092A3C1</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>
@@ -839,7 +843,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
