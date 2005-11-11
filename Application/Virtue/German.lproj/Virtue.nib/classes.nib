@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                deleteActiveDesktop = id; 
+                showAbout = id; 
+                showDesktopCollectionInspector = id; 
+                showDesktopInspector = id; 
+                showPreferences = id; 
+            }; 
+            CLASS = VTMainController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mRemoveActiveDesktopItem = NSMenuItem; 
+                mStatusBarDesktopItem = NSMenu; 
+                mStatusBarDesktopsItem = NSMenu; 
+                mStatusBarMenu = NSMenu; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

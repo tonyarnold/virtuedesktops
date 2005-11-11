@@ -1,0 +1,30 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = VTApplicationCollectionController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mApplicationView = NSOutlineView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = VTDesktopController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObjectController; 
+        }, 
+        {
+            ACTIONS = {makeNonSticky = id; makeSticky = id; }; 
+            CLASS = VTDesktopViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mOutlineView = NSOutlineView; mWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {makeNonSticky = id; makeSticky = id; }; 
+            CLASS = VTWindowCollectionController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSArrayController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

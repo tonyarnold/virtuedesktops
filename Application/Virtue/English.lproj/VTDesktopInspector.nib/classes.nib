@@ -1,0 +1,39 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = VTColorLabelButton; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {
+                addDesktop = id; 
+                deleteDesktop = id; 
+                deletePrimitive = id; 
+                inspectPrimitive = id; 
+            }; 
+            CLASS = VTDesktopViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAddPrimitiveButton = ZNImagePopUpButton; 
+                mAddPrimitiveMenu = NSMenu; 
+                mDecorationsController = NSArrayController; 
+                mDecorationsTableView = NSTableView; 
+                mDeleteDesktopButton = NSButton; 
+                mDeletePrimitiveButton = NSButton; 
+                mDesktopController = NSObjectController; 
+                mDesktopsController = NSArrayController; 
+                mDesktopsTableView = NSTableView; 
+                mHotkeyField = VTHotkeyTextField; 
+                mImageView = VTImageViewFileDropper; 
+                mInspectPrimitiveButton = NSButton; 
+                mKeyTriggerItem = NSMenuItem; 
+                mLabelButton = VTColorLabelButton; 
+                mMouseTriggerItem = NSMenuItem; 
+                mTriggerTypePopup = NSPopUpButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = VTHotkeyTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = VTImageViewFileDropper; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = ZNImagePopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }
+    ); 
+    IBVersion = 1; 
+}

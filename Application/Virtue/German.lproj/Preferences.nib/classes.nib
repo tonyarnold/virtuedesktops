@@ -1,0 +1,64 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NetSourceforgeVirtuePreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                desktopPrefController = DesktopPrefController; 
+                mNotificationController = VirtueNotificationWindowController; 
+                switchingPrefController = SwitchingPrefController; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
+        }, 
+        {
+            ACTIONS = {addDesktop = id; delDesktop = id; }; 
+            CLASS = PrefsDesktopsController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSArrayController; 
+        }, 
+        {
+            ACTIONS = {toggleHotkey = id; writePreferences = id; }; 
+            CLASS = VTHotkeyViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mActionLabel = id; 
+                mDescriptionLabel = id; 
+                mEnabledCheckbox = id; 
+                mHotkeyView = NSOutlineView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = VTPluginViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mPluginContainerView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {showNotificationWindow = id; }; 
+            CLASS = VTPreferencesViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAppearancePane = NSWindow; 
+                mBehaviourPane = NSWindow; 
+                mHotkeyView = VTHotkeyViewController; 
+                mPluginsPane = NSWindow; 
+                mPreferencesWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

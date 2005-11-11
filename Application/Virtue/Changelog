@@ -1,0 +1,98 @@
+Virtue Changelog
+Tony Arnold <tonyarnold (at) users (dot) sourceforge (dot) net> (Version 0.5r3 and above)
+Thomas Staller <playback (at) users (dot) sourceforge (dot) net> (Version 0.5r2 and below)
+
+Virtue 0.5r3
+Bugfix release.
+[FIX]	Virtue now starts and (somewhat) works under Mac OS X 10.4 "Tiger".
+		There is still a long way to go, as many features are still broken.
+[NEW]	Added the Tiger-only transistion "Flip Desktop".
+
+Virtue 0.5r2
+Bugfix and Feature release. 
+
+[NEW]	Reordering of desktops via the Pager (id1069967, id1081382, id1072262). 
+[NEW]	Mouse triggers are now merged into the Trigger concept. You can assign
+		mouse triggers to all actions you can assign hotkey triggers. 
+[NEW]	Application sticky state remembered through restarts. 
+[NEW]	Applications can be hidden from display in the Pager, useful for application
+		you have stickied and know they are running. 
+[NEW]	First version of user documentation (id1070872). 
+[IMP]	Preferences were reorganized, I hope they are more easy to understand 
+		now (thank you Nathan and Nicholas) (id1072246). 
+[IMP]	PathFinder users not running the Finder should no longer get the Finder
+		restarted by Virtue (id1071958); Virtue will also allow changing the 
+		default wallpaper while running.
+[FIX]	Applications on non-visible desktops should no longer pop up tooltips if
+		they are listening to mouse events directly (e.g. Adium) (id1070430). 
+[FIX]	Fixed preference saving. Preferences could be lost when shutting down 
+		Virtue (id1069968, id1074781).
+[FIX]	Transition animations can now be turned off (Kevin). 
+[FIX]	Fixed a crash bug that was likely to crash Virtue upon desktop switches. 
+[FIX]	Fixed position of Notification Bezel that was expecting the Dock to be 
+		on the lower edge of the screen. 
+[FIX]	Pager keyboard navigation is now complete. No need to touch the mouse
+		(id1072265).
+[FIX]	Fixed modifier names that were stated incorrectly in the user interface in 
+		some places (id1078622). 
+
+Virtue 0.5r1
+Major rewrite of Virtue 0.4 code-base; fixes and new features as follows:  
+
+[NEW]	AppleScript support (Experimental and far from complete)
+[NEW]	Plugin architecture for Desktop Layouts and Desktop Pagers 
+[NEW]	Desktop Decorations separated
+		- Tinting 
+		- Arbitrary text or text bound to Desktop name 
+		- Watermarks 
+[NEW]	Plugin architecture for Desktop Decoration Primitives 
+[NEW] 	Desktop Color Labels (similar to File Color Labels)
+[NEW]	Desktop Backgrounds and Icons per virtual desktop 
+[NEW]	Redesigned interface including
+		- Preferences
+		- Desktop Collection inspector 
+		- Desktop inspector 
+[NEW]	Statusbar Menu optionally displays currently shown desktop name
+[FIX]	Hotkey enabled-state was not correctly persisted in 
+	User defaults 
+[FIX]	Switching to an empty desktop did not deactivate the 
+	previous application; the Finder is now activated
+[FIX]	Operations menu window did not provide a way of aborting, 
+	can now be aborted via ESC or the Cancel button 
+
+Virtue 0.4
+
+[NEW]	Application icons in notification window 
+[NEW]	Application icons in overlay pager
+[NEW]	German localization 
+[NEW]	Statusbar icon can now be toggled on/off via hotkeys and 
+		via preferences (Preferences/Display/Interface)
+[NEW]	Showing preferences window if application is started a second
+		time while running <Yann Bizeul>
+[NEW]	Pager is even shinier than before, and can be configured in 
+		appearance. 
+[NEW]	Operations menu window tinting and fading out of windows when 
+		moving to a new desktop can now be turned off. 
+[NEW]	Operations on all application windows. Applications can now be 
+		stickied and sent to another desktop via the Operations menu. New
+		windows for an application will inherit the sticky flag of their
+		application (experimental). 
+[FIX]	Multi-screen setups should be fully supported now. Please report
+		any problems you encounter. 
+[FIX]	Window alpha levels were overwritten upon sending to a 
+		different desktop - they are now preserved. 
+[FIX]	Deleting of desktops did not work properly and Virtue 
+		lost orientation - desktops can now be deleted 
+[FIX]	Deleting the last desktop is no longer allowed
+[FIX]	Deleting a desktop sent its windows to the wrong desktop
+[FIX]	Desktop switches that would result in the same desktop
+		(e.g. in a one column layout switching to the left desktop)
+		are now not carried out as designed. 
+[FIX]	Overlay pager did display deleted desktops
+[FIX]	Desktop navigation resulted in wrong desktops 
+[FIX]	Overlay pager was reacting counter intuitive in most situations;  
+		the pager will now only switch to a desktop, if the mouse pointer 
+		was under a desktop while closing, or if a desktop was clicked. 
+[FIX]	Fixed bug that prevented setting transition durations below 1 sec
+
+Virtue 0.3

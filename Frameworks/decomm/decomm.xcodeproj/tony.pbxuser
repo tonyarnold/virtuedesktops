@@ -1,0 +1,148 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Development;
+		activeBuildStyle = 4F0BB7EC011F40E904CA0E50 /* Development */;
+		activeTarget = E958EEDA06FDA03E001DCB1E /* decomm */;
+		codeSenseManager = EAE822B20924A5DC00239477 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					502,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 153409283;
+			PBXWorkspaceStateSaveDate = 153409283;
+		};
+		perUserProjectItems = {
+			EADC73680924D7210043D9AC /* PBXBookmark */ = EADC73680924D7210043D9AC /* PBXBookmark */;
+			EADC736F0924D80F0043D9AC /* PBXTextBookmark */ = EADC736F0924D80F0043D9AC /* PBXTextBookmark */;
+		};
+		sourceControlManager = EAE822B10924A5DC00239477 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB77B0FE84176FC02AAC07 /* main.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {694, 374}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {694, 374}}";
+		};
+	};
+	E93637F806FCCCA300E354DB /* DECEvent.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 3345}}";
+			sepNavSelRange = "{3959, 21}";
+			sepNavVisRect = "{{0, 1554}, {677, 687}}";
+			sepNavWindowFrame = "{{526, 77}, {722, 801}}";
+		};
+	};
+	E936380606FCCCA300E354DB /* DECEventTags.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 1500}}";
+			sepNavSelRange = "{2911, 4}";
+			sepNavVisRect = "{{0, 804}, {677, 687}}";
+			sepNavWindowFrame = "{{554, 77}, {722, 801}}";
+		};
+	};
+	E936380806FCCCA300E354DB /* DECInjector.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {694, 4065}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 2238}, {694, 374}}";
+		};
+	};
+	E936380B06FCCCA300E354DB /* mach_inject.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {694, 2865}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {694, 374}}";
+		};
+	};
+	E958EEDA06FDA03E001DCB1E /* decomm */ = {
+		activeExec = 0;
+	};
+	E9A4811A06FF59DF00A8AE3C /* DECEvent.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 1155}}";
+			sepNavSelRange = "{1971, 13}";
+			sepNavVisRect = "{{0, 168}, {677, 687}}";
+			sepNavWindowFrame = "{{589, 77}, {722, 801}}";
+		};
+	};
+	E9A4812006FF59DF00A8AE3C /* DECEventProperty.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 870}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {677, 687}}";
+			sepNavWindowFrame = "{{15, 72}, {722, 801}}";
+		};
+	};
+	E9A4812106FF59DF00A8AE3C /* DECEventTags.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 840}}";
+			sepNavSelRange = "{1814, 0}";
+			sepNavVisRect = "{{0, 153}, {677, 687}}";
+			sepNavWindowFrame = "{{486, 74}, {722, 801}}";
+		};
+	};
+	E9D2B61B0701E823008879E0 /* DECCgsExt.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 840}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {677, 687}}";
+			sepNavWindowFrame = "{{15, 72}, {722, 801}}";
+		};
+	};
+	E9D2B61D0701E833008879E0 /* DECCgsExt.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 3630}}";
+			sepNavSelRange = "{4608, 18}";
+			sepNavVisRect = "{{0, 1863}, {677, 687}}";
+			sepNavWindowFrame = "{{-4, 77}, {722, 801}}";
+		};
+	};
+	EADC73680924D7210043D9AC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
+	};
+	EADC736F0924D80F0043D9AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
+		name = "DECInjector.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 606;
+		vrLoc = 4238;
+	};
+	EAE822B10924A5DC00239477 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	EAE822B20924A5DC00239477 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

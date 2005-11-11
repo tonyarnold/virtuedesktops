@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {hideSheet = id; setDesktopForApplication = id; setDesktopForWindow = id; }; 
+            CLASS = VTOperationsViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplicationDesktopButton = NSPopUpButton; 
+                mController = NSObjectController; 
+                mWindowDesktopButton = NSPopUpButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = VTOverlayPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
+        {CLASS = ZNImagePopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }
+    ); 
+    IBVersion = 1; 
+}

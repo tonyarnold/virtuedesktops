@@ -1,0 +1,6 @@
+VTPlugin = {
+	author = "Thomas Staller, Virtue project"; 
+	hidden = 1; 
+	name = "Primitiva colore etichetta desktop";
+	type = VTObjectiveC; 
+}; 

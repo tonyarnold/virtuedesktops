@@ -1,0 +1,6 @@
+VTPlugin = {
+	author = "Thomas Staller, Virtue project"; 
+	hidden = 1; 
+	name = "Modèle de couleur des étiquettes";
+	type = VTObjectiveC; 
+}; 

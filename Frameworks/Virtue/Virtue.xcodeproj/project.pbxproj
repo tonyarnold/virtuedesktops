@@ -1,0 +1,1031 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		E912451F073033F500BD28CD /* NSBezierPathPlate.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244C3073033F500BD28CD /* NSBezierPathPlate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124520073033F500BD28CD /* NSBezierPathPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244C4073033F500BD28CD /* NSBezierPathPlate.m */; };
+		E9124521073033F500BD28CD /* NSScreenOverallScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244C5073033F500BD28CD /* NSScreenOverallScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124522073033F500BD28CD /* NSScreenOverallScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244C6073033F500BD28CD /* NSScreenOverallScreen.m */; };
+		E9124523073033F500BD28CD /* NSStringFSRef.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244C7073033F500BD28CD /* NSStringFSRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124524073033F500BD28CD /* NSStringFSRef.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244C8073033F500BD28CD /* NSStringFSRef.m */; };
+		E9124525073033F500BD28CD /* NSUserDefaultsColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244C9073033F500BD28CD /* NSUserDefaultsColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124526073033F500BD28CD /* NSUserDefaultsColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244CA073033F500BD28CD /* NSUserDefaultsColor.m */; };
+		E9124527073033F500BD28CD /* VTDesktop.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244CC073033F500BD28CD /* VTDesktop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124528073033F500BD28CD /* VTDesktop.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244CD073033F500BD28CD /* VTDesktop.m */; };
+		E9124529073033F500BD28CD /* VTInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244CE073033F500BD28CD /* VTInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912452A073033F500BD28CD /* VTInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244CF073033F500BD28CD /* VTInspector.m */; };
+		E912452B073033F500BD28CD /* VTModifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244D0073033F500BD28CD /* VTModifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912452C073033F500BD28CD /* VTNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244D1073033F500BD28CD /* VTNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124535073033F500BD28CD /* VTDesktopController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244DB073033F500BD28CD /* VTDesktopController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124536073033F500BD28CD /* VTDesktopController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244DC073033F500BD28CD /* VTDesktopController.m */; };
+		E9124537073033F500BD28CD /* VTDesktopDecorationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244DD073033F500BD28CD /* VTDesktopDecorationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124538073033F500BD28CD /* VTDesktopDecorationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244DE073033F500BD28CD /* VTDesktopDecorationController.m */; };
+		E9124539073033F500BD28CD /* VTDesktopFilesystemController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244DF073033F500BD28CD /* VTDesktopFilesystemController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912453A073033F500BD28CD /* VTDesktopFilesystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244E0073033F500BD28CD /* VTDesktopFilesystemController.m */; };
+		E912453D073033F500BD28CD /* VTLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244E3073033F500BD28CD /* VTLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912453E073033F500BD28CD /* VTLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244E4073033F500BD28CD /* VTLayoutController.m */; };
+		E912453F073033F500BD28CD /* VTMouseWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244E5073033F500BD28CD /* VTMouseWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124540073033F500BD28CD /* VTMouseWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244E6073033F500BD28CD /* VTMouseWatcher.m */; };
+		E9124541073033F500BD28CD /* VTMouseWatcherProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244E7073033F500BD28CD /* VTMouseWatcherProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124545073033F500BD28CD /* VTDecorationPrimitiveInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244EE073033F500BD28CD /* VTDecorationPrimitiveInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124547073033F500BD28CD /* VTDecorationPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244F0073033F500BD28CD /* VTDecorationPrimitive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124548073033F500BD28CD /* VTDecorationPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244F1073033F500BD28CD /* VTDecorationPrimitive.m */; };
+		E9124549073033F500BD28CD /* VTDecorationPrimitiveText.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244F2073033F500BD28CD /* VTDecorationPrimitiveText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912454A073033F500BD28CD /* VTDecorationPrimitiveText.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244F3073033F500BD28CD /* VTDecorationPrimitiveText.m */; };
+		E912454B073033F500BD28CD /* VTDecorationPrimitiveTint.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244F4073033F500BD28CD /* VTDecorationPrimitiveTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912454C073033F500BD28CD /* VTDecorationPrimitiveTint.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244F5073033F500BD28CD /* VTDecorationPrimitiveTint.m */; };
+		E912454D073033F500BD28CD /* VTDecorationPrimitiveWatermark.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244F6073033F500BD28CD /* VTDecorationPrimitiveWatermark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912454E073033F500BD28CD /* VTDecorationPrimitiveWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244F7073033F500BD28CD /* VTDecorationPrimitiveWatermark.m */; };
+		E912454F073033F500BD28CD /* VTDesktopDecoration.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244F8073033F500BD28CD /* VTDesktopDecoration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124550073033F500BD28CD /* VTDesktopDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244F9073033F500BD28CD /* VTDesktopDecoration.m */; };
+		E9124551073033F500BD28CD /* VTDesktopDecorationView.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244FA073033F500BD28CD /* VTDesktopDecorationView.h */; };
+		E9124552073033F500BD28CD /* VTDesktopDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244FB073033F500BD28CD /* VTDesktopDecorationView.m */; };
+		E9124561073033F600BD28CD /* VTDesktopLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E912450D073033F500BD28CD /* VTDesktopLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124562073033F600BD28CD /* VTDesktopLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E912450E073033F500BD28CD /* VTDesktopLayout.m */; };
+		E9124563073033F600BD28CD /* VTPager.h in Headers */ = {isa = PBXBuildFile; fileRef = E912450F073033F500BD28CD /* VTPager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124568073033F600BD28CD /* VTPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = E9124517073033F500BD28CD /* VTPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912456B073033F600BD28CD /* VTPluginDecoration.h in Headers */ = {isa = PBXBuildFile; fileRef = E912451A073033F500BD28CD /* VTPluginDecoration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912456C073033F600BD28CD /* VTPluginLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E912451B073033F500BD28CD /* VTPluginLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912456D073033F600BD28CD /* VTPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = E912451D073033F500BD28CD /* VTPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912456E073033F600BD28CD /* VTPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E912451E073033F500BD28CD /* VTPreferences.m */; };
+		E912466A07303B6800BD28CD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E912466907303B6800BD28CD /* Carbon.framework */; };
+		E9124D9F0730BA2E00BD28CD /* VTLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E9124D9D0730BA2E00BD28CD /* VTLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9124F1607316EB800BD28CD /* VTCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = E9124F1507316EB700BD28CD /* VTCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E917FD130768D09E00F8A8FD /* VTTriggerDesktopNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = E917FD110768D09E00F8A8FD /* VTTriggerDesktopNotification.h */; };
+		E917FD140768D09E00F8A8FD /* VTTriggerDesktopNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E917FD120768D09E00F8A8FD /* VTTriggerDesktopNotification.m */; };
+		E917FE24076A2A6800F8A8FD /* VTApplicationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E917FE22076A2A6800F8A8FD /* VTApplicationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E917FE25076A2A6800F8A8FD /* VTApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E917FE23076A2A6800F8A8FD /* VTApplicationController.m */; };
+		E917FE29076A2AE000F8A8FD /* VTApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E917FE27076A2AE000F8A8FD /* VTApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E917FE2A076A2AE000F8A8FD /* VTApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E917FE28076A2AE000F8A8FD /* VTApplicationWrapper.m */; };
+		E940C6840734E23300C1642C /* NSColorString.h in Headers */ = {isa = PBXBuildFile; fileRef = E940C6820734E23300C1642C /* NSColorString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E940C6850734E23300C1642C /* NSColorString.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C6830734E23300C1642C /* NSColorString.m */; };
+		E941D19307469B9C007DF0D9 /* VTScriptPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D19107469B9C007DF0D9 /* VTScriptPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E941D19407469B9C007DF0D9 /* VTScriptPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E941D19207469B9C007DF0D9 /* VTScriptPlugin.m */; };
+		E941D1B30746A368007DF0D9 /* VTPluginScript.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D1B20746A368007DF0D9 /* VTPluginScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E941D2140746C042007DF0D9 /* VTPluginCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D2120746C042007DF0D9 /* VTPluginCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E941D2150746C042007DF0D9 /* VTPluginCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E941D2130746C042007DF0D9 /* VTPluginCollection.m */; };
+		E94339D40751C9570075ADF3 /* VTDesktopProtector.h in Headers */ = {isa = PBXBuildFile; fileRef = E94339D20751C9570075ADF3 /* VTDesktopProtector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E94339D50751C9570075ADF3 /* VTDesktopProtector.m in Sources */ = {isa = PBXBuildFile; fileRef = E94339D30751C9570075ADF3 /* VTDesktopProtector.m */; };
+		E9544C970753D6C8009DA20D /* VTDesktopBackgroundHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E9544C950753D6C8009DA20D /* VTDesktopBackgroundHelper.h */; };
+		E9544C980753D6C8009DA20D /* VTDesktopBackgroundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9544C960753D6C8009DA20D /* VTDesktopBackgroundHelper.m */; };
+		E958A5F5075CFB5A00773392 /* NSBundlePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = E958A5F3075CFB5A00773392 /* NSBundlePlugin.h */; };
+		E958A5F6075CFB5A00773392 /* NSBundlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E958A5F4075CFB5A00773392 /* NSBundlePlugin.m */; };
+		E959D412076230DD00013EB2 /* VTTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = E959D410076230DD00013EB2 /* VTTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E959D413076230DD00013EB2 /* VTTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = E959D411076230DD00013EB2 /* VTTrigger.m */; };
+		E959D4170762313B00013EB2 /* VTMouseTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = E959D4150762313B00013EB2 /* VTMouseTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E959D4180762313B00013EB2 /* VTMouseTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = E959D4160762313B00013EB2 /* VTMouseTrigger.m */; };
+		E959D41B0762317300013EB2 /* VTHotkeyTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = E959D4190762317300013EB2 /* VTHotkeyTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E959D41C0762317300013EB2 /* VTHotkeyTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = E959D41A0762317300013EB2 /* VTHotkeyTrigger.m */; };
+		E959D6910762497F00013EB2 /* VTTriggerNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = E959D68F0762497F00013EB2 /* VTTriggerNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E959D6920762497F00013EB2 /* VTTriggerNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E959D6900762497F00013EB2 /* VTTriggerNotification.m */; };
+		E959D6990762536700013EB2 /* VTTriggerGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E959D6970762536700013EB2 /* VTTriggerGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E959D69A0762536700013EB2 /* VTTriggerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E959D6980762536700013EB2 /* VTTriggerGroup.m */; };
+		E959D70B07631C9C00013EB2 /* VTTriggerController.h in Headers */ = {isa = PBXBuildFile; fileRef = E959D70907631C9C00013EB2 /* VTTriggerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E959D70C07631C9C00013EB2 /* VTTriggerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E959D70A07631C9C00013EB2 /* VTTriggerController.m */; };
+		E9832998073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E9832996073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9832999073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E9832997073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.m */; };
+		E99B09DE073D07BE004B9D57 /* NSImageTint.h in Headers */ = {isa = PBXBuildFile; fileRef = E99B09DC073D07BE004B9D57 /* NSImageTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E99B09DF073D07BE004B9D57 /* NSImageTint.m in Sources */ = {isa = PBXBuildFile; fileRef = E99B09DD073D07BE004B9D57 /* NSImageTint.m */; };
+		E9C74A7C07588AFB005EFD90 /* VTPluginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C74A7A07588AFB005EFD90 /* VTPluginProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C74A8A07589001005EFD90 /* VTPluginInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C74A8807589001005EFD90 /* VTPluginInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C74A8B07589001005EFD90 /* VTPluginInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C74A8907589001005EFD90 /* VTPluginInstance.m */; };
+		E9C74BA70758B974005EFD90 /* iconExtension.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9C74BA50758B974005EFD90 /* iconExtension.icns */; };
+		E9C74BA80758B974005EFD90 /* iconExtensionScript.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */; };
+		EAF8C847090768AE003D54B1 /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C846090768A1003D54B1 /* Peony.framework */; };
+		EAF8C848090768AE003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C84009076898003D54B1 /* Zen.framework */; };
+		EAF8CCE4090779C5003D54B1 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8CCE3090779C5003D54B1 /* ApplicationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA440018CDF011CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA450018CDF011CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		E912457C073038E400BD28CD /* Development Private Framework */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				ZERO_LINK = YES;
+			};
+			name = "Development Private Framework";
+		};
+		E98B7FD507495FCA00E8CE5C /* Deployment Private Framework */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				ZERO_LINK = NO;
+			};
+			name = "Deployment Private Framework";
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		EAF8C83F09076898003D54B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C83B09076898003D54B1 /* Zen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Zen;
+		};
+		EAF8C845090768A1003D54B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C841090768A1003D54B1 /* Peony.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Peony;
+		};
+		EAF8C849090768BA003D54B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C83B09076898003D54B1 /* Zen.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Zen;
+		};
+		EAF8C84B090768BA003D54B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C841090768A1003D54B1 /* Peony.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Peony;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* Virtue_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtue_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* Virtue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Virtue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91244C3073033F500BD28CD /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
+		E91244C4073033F500BD28CD /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
+		E91244C5073033F500BD28CD /* NSScreenOverallScreen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSScreenOverallScreen.h; sourceTree = "<group>"; };
+		E91244C6073033F500BD28CD /* NSScreenOverallScreen.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSScreenOverallScreen.m; sourceTree = "<group>"; };
+		E91244C7073033F500BD28CD /* NSStringFSRef.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSStringFSRef.h; sourceTree = "<group>"; };
+		E91244C8073033F500BD28CD /* NSStringFSRef.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSStringFSRef.m; sourceTree = "<group>"; };
+		E91244C9073033F500BD28CD /* NSUserDefaultsColor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsColor.h; sourceTree = "<group>"; };
+		E91244CA073033F500BD28CD /* NSUserDefaultsColor.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsColor.m; sourceTree = "<group>"; };
+		E91244CC073033F500BD28CD /* VTDesktop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktop.h; sourceTree = "<group>"; };
+		E91244CD073033F500BD28CD /* VTDesktop.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktop.m; sourceTree = "<group>"; };
+		E91244CE073033F500BD28CD /* VTInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTInspector.h; sourceTree = "<group>"; };
+		E91244CF073033F500BD28CD /* VTInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTInspector.m; sourceTree = "<group>"; };
+		E91244D0073033F500BD28CD /* VTModifiers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTModifiers.h; sourceTree = "<group>"; };
+		E91244D1073033F500BD28CD /* VTNotifications.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTNotifications.h; sourceTree = "<group>"; };
+		E91244DB073033F500BD28CD /* VTDesktopController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopController.h; sourceTree = "<group>"; };
+		E91244DC073033F500BD28CD /* VTDesktopController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopController.m; sourceTree = "<group>"; };
+		E91244DD073033F500BD28CD /* VTDesktopDecorationController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopDecorationController.h; sourceTree = "<group>"; };
+		E91244DE073033F500BD28CD /* VTDesktopDecorationController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopDecorationController.m; sourceTree = "<group>"; };
+		E91244DF073033F500BD28CD /* VTDesktopFilesystemController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopFilesystemController.h; sourceTree = "<group>"; };
+		E91244E0073033F500BD28CD /* VTDesktopFilesystemController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopFilesystemController.m; sourceTree = "<group>"; };
+		E91244E3073033F500BD28CD /* VTLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTLayoutController.h; sourceTree = "<group>"; };
+		E91244E4073033F500BD28CD /* VTLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTLayoutController.m; sourceTree = "<group>"; };
+		E91244E5073033F500BD28CD /* VTMouseWatcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTMouseWatcher.h; sourceTree = "<group>"; };
+		E91244E6073033F500BD28CD /* VTMouseWatcher.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTMouseWatcher.m; sourceTree = "<group>"; };
+		E91244E7073033F500BD28CD /* VTMouseWatcherProtocol.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTMouseWatcherProtocol.h; sourceTree = "<group>"; };
+		E91244EE073033F500BD28CD /* VTDecorationPrimitiveInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitiveInspector.h; sourceTree = "<group>"; };
+		E91244F0073033F500BD28CD /* VTDecorationPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitive.h; sourceTree = "<group>"; };
+		E91244F1073033F500BD28CD /* VTDecorationPrimitive.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitive.m; sourceTree = "<group>"; };
+		E91244F2073033F500BD28CD /* VTDecorationPrimitiveText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitiveText.h; sourceTree = "<group>"; };
+		E91244F3073033F500BD28CD /* VTDecorationPrimitiveText.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitiveText.m; sourceTree = "<group>"; };
+		E91244F4073033F500BD28CD /* VTDecorationPrimitiveTint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitiveTint.h; sourceTree = "<group>"; };
+		E91244F5073033F500BD28CD /* VTDecorationPrimitiveTint.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitiveTint.m; sourceTree = "<group>"; };
+		E91244F6073033F500BD28CD /* VTDecorationPrimitiveWatermark.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitiveWatermark.h; sourceTree = "<group>"; };
+		E91244F7073033F500BD28CD /* VTDecorationPrimitiveWatermark.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitiveWatermark.m; sourceTree = "<group>"; };
+		E91244F8073033F500BD28CD /* VTDesktopDecoration.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopDecoration.h; sourceTree = "<group>"; };
+		E91244F9073033F500BD28CD /* VTDesktopDecoration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopDecoration.m; sourceTree = "<group>"; };
+		E91244FA073033F500BD28CD /* VTDesktopDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopDecorationView.h; sourceTree = "<group>"; };
+		E91244FB073033F500BD28CD /* VTDesktopDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopDecorationView.m; sourceTree = "<group>"; };
+		E912450D073033F500BD28CD /* VTDesktopLayout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopLayout.h; sourceTree = "<group>"; };
+		E912450E073033F500BD28CD /* VTDesktopLayout.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopLayout.m; sourceTree = "<group>"; };
+		E912450F073033F500BD28CD /* VTPager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPager.h; sourceTree = "<group>"; };
+		E9124517073033F500BD28CD /* VTPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPlugin.h; sourceTree = "<group>"; };
+		E912451A073033F500BD28CD /* VTPluginDecoration.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginDecoration.h; sourceTree = "<group>"; };
+		E912451B073033F500BD28CD /* VTPluginLayout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginLayout.h; sourceTree = "<group>"; };
+		E912451D073033F500BD28CD /* VTPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPreferences.h; sourceTree = "<group>"; };
+		E912451E073033F500BD28CD /* VTPreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTPreferences.m; sourceTree = "<group>"; };
+		E912466907303B6800BD28CD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		E9124D9D0730BA2E00BD28CD /* VTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTLayout.h; sourceTree = "<group>"; };
+		E9124F1507316EB700BD28CD /* VTCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTCoding.h; sourceTree = "<group>"; };
+		E917FD110768D09E00F8A8FD /* VTTriggerDesktopNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerDesktopNotification.h; sourceTree = "<group>"; };
+		E917FD120768D09E00F8A8FD /* VTTriggerDesktopNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerDesktopNotification.m; sourceTree = "<group>"; };
+		E917FE22076A2A6800F8A8FD /* VTApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationController.h; path = src/Common/VTApplicationController.h; sourceTree = SOURCE_ROOT; };
+		E917FE23076A2A6800F8A8FD /* VTApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationController.m; path = src/Common/VTApplicationController.m; sourceTree = SOURCE_ROOT; };
+		E917FE27076A2AE000F8A8FD /* VTApplicationWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationWrapper.h; sourceTree = "<group>"; };
+		E917FE28076A2AE000F8A8FD /* VTApplicationWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationWrapper.m; sourceTree = "<group>"; };
+		E940C6820734E23300C1642C /* NSColorString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorString.h; sourceTree = "<group>"; };
+		E940C6830734E23300C1642C /* NSColorString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorString.m; sourceTree = "<group>"; };
+		E941D19107469B9C007DF0D9 /* VTScriptPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTScriptPlugin.h; sourceTree = "<group>"; };
+		E941D19207469B9C007DF0D9 /* VTScriptPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTScriptPlugin.m; sourceTree = "<group>"; };
+		E941D1B20746A368007DF0D9 /* VTPluginScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginScript.h; sourceTree = "<group>"; };
+		E941D2120746C042007DF0D9 /* VTPluginCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPluginCollection.h; path = src/Hotkeys/VTPluginCollection.h; sourceTree = SOURCE_ROOT; };
+		E941D2130746C042007DF0D9 /* VTPluginCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPluginCollection.m; path = src/Hotkeys/VTPluginCollection.m; sourceTree = SOURCE_ROOT; };
+		E94339D20751C9570075ADF3 /* VTDesktopProtector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopProtector.h; sourceTree = "<group>"; };
+		E94339D30751C9570075ADF3 /* VTDesktopProtector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopProtector.m; sourceTree = "<group>"; };
+		E9544C950753D6C8009DA20D /* VTDesktopBackgroundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopBackgroundHelper.h; sourceTree = "<group>"; };
+		E9544C960753D6C8009DA20D /* VTDesktopBackgroundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopBackgroundHelper.m; sourceTree = "<group>"; };
+		E958A5F3075CFB5A00773392 /* NSBundlePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBundlePlugin.h; sourceTree = "<group>"; };
+		E958A5F4075CFB5A00773392 /* NSBundlePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBundlePlugin.m; sourceTree = "<group>"; };
+		E959D410076230DD00013EB2 /* VTTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTrigger.h; sourceTree = "<group>"; };
+		E959D411076230DD00013EB2 /* VTTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTrigger.m; sourceTree = "<group>"; };
+		E959D4150762313B00013EB2 /* VTMouseTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTMouseTrigger.h; sourceTree = "<group>"; };
+		E959D4160762313B00013EB2 /* VTMouseTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTMouseTrigger.m; sourceTree = "<group>"; };
+		E959D4190762317300013EB2 /* VTHotkeyTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTHotkeyTrigger.h; sourceTree = "<group>"; };
+		E959D41A0762317300013EB2 /* VTHotkeyTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTHotkeyTrigger.m; sourceTree = "<group>"; };
+		E959D68F0762497F00013EB2 /* VTTriggerNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerNotification.h; sourceTree = "<group>"; };
+		E959D6900762497F00013EB2 /* VTTriggerNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerNotification.m; sourceTree = "<group>"; };
+		E959D6970762536700013EB2 /* VTTriggerGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerGroup.h; sourceTree = "<group>"; };
+		E959D6980762536700013EB2 /* VTTriggerGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerGroup.m; sourceTree = "<group>"; };
+		E959D70907631C9C00013EB2 /* VTTriggerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerController.h; sourceTree = "<group>"; };
+		E959D70A07631C9C00013EB2 /* VTTriggerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerController.m; sourceTree = "<group>"; };
+		E9832996073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsControllerKeyFactory.h; sourceTree = "<group>"; };
+		E9832997073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsControllerKeyFactory.m; sourceTree = "<group>"; };
+		E99B09DC073D07BE004B9D57 /* NSImageTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImageTint.h; sourceTree = "<group>"; };
+		E99B09DD073D07BE004B9D57 /* NSImageTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSImageTint.m; sourceTree = "<group>"; };
+		E9C74A7A07588AFB005EFD90 /* VTPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginProtocol.h; sourceTree = "<group>"; };
+		E9C74A8807589001005EFD90 /* VTPluginInstance.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginInstance.h; sourceTree = "<group>"; };
+		E9C74A8907589001005EFD90 /* VTPluginInstance.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTPluginInstance.m; sourceTree = "<group>"; };
+		E9C74BA50758B974005EFD90 /* iconExtension.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconExtension.icns; path = data/icons/iconExtension.icns; sourceTree = "<group>"; };
+		E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconExtensionScript.icns; path = data/icons/iconExtensionScript.icns; sourceTree = "<group>"; };
+		EAE820400924977E00239477 /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEventHandlers.h; path = ../dockExtension/src/DEEventHandlers.h; sourceTree = SOURCE_ROOT; };
+		EAE820410924977E00239477 /* DEEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEvents.h; path = ../dockExtension/src/DEEvents.h; sourceTree = SOURCE_ROOT; };
+		EAF4A4AA09077D5A0013B506 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
+		EAF8C83B09076898003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAF8C841090768A1003D54B1 /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAF8CCE3090779C5003D54B1 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF8C847090768AE003D54B1 /* Peony.framework in Frameworks */,
+				EAF8C848090768AE003D54B1 /* Zen.framework in Frameworks */,
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				E912466A07303B6800BD28CD /* Carbon.framework in Frameworks */,
+				EAF8CCE4090779C5003D54B1 /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* Virtue.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Virtue */ = {
+			isa = PBXGroup;
+			children = (
+				EAF8C841090768A1003D54B1 /* Peony.xcodeproj */,
+				EAF8C83B09076898003D54B1 /* Zen.xcodeproj */,
+				E9C74B120758B8F5005EFD90 /* data */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = Virtue;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E91493170736B6C100668ACC /* Scripting */,
+				E912451C073033F500BD28CD /* Preferences */,
+				E9124510073033F500BD28CD /* Plugins */,
+				E9124503073033F500BD28CD /* Layout */,
+				E91244FC073033F500BD28CD /* Hotkeys */,
+				E91244EA073033F500BD28CD /* Decoration */,
+				E91244D2073033F500BD28CD /* Controllers */,
+				E91244CB073033F500BD28CD /* Common */,
+				E91244C2073033F500BD28CD /* CocoaExtensions */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E912466907303B6800BD28CD /* Carbon.framework */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF4A4AA09077D5A0013B506 /* CoreGraphics.framework */,
+				EAF8CCE3090779C5003D54B1 /* ApplicationServices.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EAE820400924977E00239477 /* DEEventHandlers.h */,
+				EAE820410924977E00239477 /* DEEvents.h */,
+				32DBCF5E0370ADEE00C91783 /* Virtue_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		E91244C2073033F500BD28CD /* CocoaExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				E958A5F3075CFB5A00773392 /* NSBundlePlugin.h */,
+				E958A5F4075CFB5A00773392 /* NSBundlePlugin.m */,
+				E99B09DC073D07BE004B9D57 /* NSImageTint.h */,
+				E99B09DD073D07BE004B9D57 /* NSImageTint.m */,
+				E9832996073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.h */,
+				E9832997073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.m */,
+				E940C6820734E23300C1642C /* NSColorString.h */,
+				E940C6830734E23300C1642C /* NSColorString.m */,
+				E91244C3073033F500BD28CD /* NSBezierPathPlate.h */,
+				E91244C4073033F500BD28CD /* NSBezierPathPlate.m */,
+				E91244C5073033F500BD28CD /* NSScreenOverallScreen.h */,
+				E91244C6073033F500BD28CD /* NSScreenOverallScreen.m */,
+				E91244C7073033F500BD28CD /* NSStringFSRef.h */,
+				E91244C8073033F500BD28CD /* NSStringFSRef.m */,
+				E91244C9073033F500BD28CD /* NSUserDefaultsColor.h */,
+				E91244CA073033F500BD28CD /* NSUserDefaultsColor.m */,
+			);
+			name = CocoaExtensions;
+			path = src/CocoaExtensions;
+			sourceTree = "<group>";
+		};
+		E91244CB073033F500BD28CD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E917FE27076A2AE000F8A8FD /* VTApplicationWrapper.h */,
+				E917FE28076A2AE000F8A8FD /* VTApplicationWrapper.m */,
+				E9124F1507316EB700BD28CD /* VTCoding.h */,
+				E91244CC073033F500BD28CD /* VTDesktop.h */,
+				E91244CD073033F500BD28CD /* VTDesktop.m */,
+				E91244CE073033F500BD28CD /* VTInspector.h */,
+				E91244CF073033F500BD28CD /* VTInspector.m */,
+				E91244D0073033F500BD28CD /* VTModifiers.h */,
+				E91244D1073033F500BD28CD /* VTNotifications.h */,
+			);
+			name = Common;
+			path = src/Common;
+			sourceTree = SOURCE_ROOT;
+		};
+		E91244D2073033F500BD28CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E917FE22076A2A6800F8A8FD /* VTApplicationController.h */,
+				E917FE23076A2A6800F8A8FD /* VTApplicationController.m */,
+				E959D70907631C9C00013EB2 /* VTTriggerController.h */,
+				E959D70A07631C9C00013EB2 /* VTTriggerController.m */,
+				E9544C950753D6C8009DA20D /* VTDesktopBackgroundHelper.h */,
+				E9544C960753D6C8009DA20D /* VTDesktopBackgroundHelper.m */,
+				E94339D20751C9570075ADF3 /* VTDesktopProtector.h */,
+				E94339D30751C9570075ADF3 /* VTDesktopProtector.m */,
+				E91244DB073033F500BD28CD /* VTDesktopController.h */,
+				E91244DC073033F500BD28CD /* VTDesktopController.m */,
+				E91244DD073033F500BD28CD /* VTDesktopDecorationController.h */,
+				E91244DE073033F500BD28CD /* VTDesktopDecorationController.m */,
+				E91244DF073033F500BD28CD /* VTDesktopFilesystemController.h */,
+				E91244E0073033F500BD28CD /* VTDesktopFilesystemController.m */,
+				E91244E3073033F500BD28CD /* VTLayoutController.h */,
+				E91244E4073033F500BD28CD /* VTLayoutController.m */,
+				E91244E5073033F500BD28CD /* VTMouseWatcher.h */,
+				E91244E6073033F500BD28CD /* VTMouseWatcher.m */,
+				E91244E7073033F500BD28CD /* VTMouseWatcherProtocol.h */,
+			);
+			name = Controllers;
+			path = src/Controllers;
+			sourceTree = "<group>";
+		};
+		E91244EA073033F500BD28CD /* Decoration */ = {
+			isa = PBXGroup;
+			children = (
+				E91244EB073033F500BD28CD /* Inspector */,
+				E91244F0073033F500BD28CD /* VTDecorationPrimitive.h */,
+				E91244F1073033F500BD28CD /* VTDecorationPrimitive.m */,
+				E91244F2073033F500BD28CD /* VTDecorationPrimitiveText.h */,
+				E91244F3073033F500BD28CD /* VTDecorationPrimitiveText.m */,
+				E91244F4073033F500BD28CD /* VTDecorationPrimitiveTint.h */,
+				E91244F5073033F500BD28CD /* VTDecorationPrimitiveTint.m */,
+				E91244F6073033F500BD28CD /* VTDecorationPrimitiveWatermark.h */,
+				E91244F7073033F500BD28CD /* VTDecorationPrimitiveWatermark.m */,
+				E91244F8073033F500BD28CD /* VTDesktopDecoration.h */,
+				E91244F9073033F500BD28CD /* VTDesktopDecoration.m */,
+				E91244FA073033F500BD28CD /* VTDesktopDecorationView.h */,
+				E91244FB073033F500BD28CD /* VTDesktopDecorationView.m */,
+			);
+			name = Decoration;
+			path = src/Decoration;
+			sourceTree = "<group>";
+		};
+		E91244EB073033F500BD28CD /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				E91244EE073033F500BD28CD /* VTDecorationPrimitiveInspector.h */,
+			);
+			comments = "Inspector Protocol to be implemented by decoration primitives that want inspection capabilities. ";
+			path = Inspector;
+			sourceTree = "<group>";
+		};
+		E91244FC073033F500BD28CD /* Hotkeys */ = {
+			isa = PBXGroup;
+			children = (
+				E917FD110768D09E00F8A8FD /* VTTriggerDesktopNotification.h */,
+				E917FD120768D09E00F8A8FD /* VTTriggerDesktopNotification.m */,
+				E959D6970762536700013EB2 /* VTTriggerGroup.h */,
+				E959D6980762536700013EB2 /* VTTriggerGroup.m */,
+				E959D68F0762497F00013EB2 /* VTTriggerNotification.h */,
+				E959D6900762497F00013EB2 /* VTTriggerNotification.m */,
+				E959D4190762317300013EB2 /* VTHotkeyTrigger.h */,
+				E959D41A0762317300013EB2 /* VTHotkeyTrigger.m */,
+				E959D4150762313B00013EB2 /* VTMouseTrigger.h */,
+				E959D4160762313B00013EB2 /* VTMouseTrigger.m */,
+				E959D410076230DD00013EB2 /* VTTrigger.h */,
+				E959D411076230DD00013EB2 /* VTTrigger.m */,
+			);
+			name = Hotkeys;
+			path = src/Hotkeys;
+			sourceTree = "<group>";
+		};
+		E9124503073033F500BD28CD /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E9124D9D0730BA2E00BD28CD /* VTLayout.h */,
+				E912450D073033F500BD28CD /* VTDesktopLayout.h */,
+				E912450E073033F500BD28CD /* VTDesktopLayout.m */,
+				E912450F073033F500BD28CD /* VTPager.h */,
+			);
+			name = Layout;
+			path = src/Layout;
+			sourceTree = "<group>";
+		};
+		E9124510073033F500BD28CD /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				E9C74A8807589001005EFD90 /* VTPluginInstance.h */,
+				E9C74A8907589001005EFD90 /* VTPluginInstance.m */,
+				E9C74A7A07588AFB005EFD90 /* VTPluginProtocol.h */,
+				E941D2120746C042007DF0D9 /* VTPluginCollection.h */,
+				E941D2130746C042007DF0D9 /* VTPluginCollection.m */,
+				E941D1B20746A368007DF0D9 /* VTPluginScript.h */,
+				E941D19107469B9C007DF0D9 /* VTScriptPlugin.h */,
+				E941D19207469B9C007DF0D9 /* VTScriptPlugin.m */,
+				E9124517073033F500BD28CD /* VTPlugin.h */,
+				E912451A073033F500BD28CD /* VTPluginDecoration.h */,
+				E912451B073033F500BD28CD /* VTPluginLayout.h */,
+			);
+			name = Plugins;
+			path = src/Plugins;
+			sourceTree = "<group>";
+		};
+		E912451C073033F500BD28CD /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				E912451D073033F500BD28CD /* VTPreferences.h */,
+				E912451E073033F500BD28CD /* VTPreferences.m */,
+			);
+			name = Preferences;
+			path = src/Preferences;
+			sourceTree = "<group>";
+		};
+		E91493170736B6C100668ACC /* Scripting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scripting;
+			sourceTree = "<group>";
+		};
+		E9C74B120758B8F5005EFD90 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				E9C74B130758B901005EFD90 /* icons */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		E9C74B130758B901005EFD90 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				E9C74BA50758B974005EFD90 /* iconExtension.icns */,
+				E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		EAF8C83C09076898003D54B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAF8C84009076898003D54B1 /* Zen.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAF8C842090768A1003D54B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAF8C846090768A1003D54B1 /* Peony.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E912456C073033F600BD28CD /* VTPluginLayout.h in Headers */,
+				E912451F073033F500BD28CD /* NSBezierPathPlate.h in Headers */,
+				E9124521073033F500BD28CD /* NSScreenOverallScreen.h in Headers */,
+				E9124523073033F500BD28CD /* NSStringFSRef.h in Headers */,
+				E9124525073033F500BD28CD /* NSUserDefaultsColor.h in Headers */,
+				E9124527073033F500BD28CD /* VTDesktop.h in Headers */,
+				E9124529073033F500BD28CD /* VTInspector.h in Headers */,
+				E912452B073033F500BD28CD /* VTModifiers.h in Headers */,
+				E912452C073033F500BD28CD /* VTNotifications.h in Headers */,
+				E9124535073033F500BD28CD /* VTDesktopController.h in Headers */,
+				E9124537073033F500BD28CD /* VTDesktopDecorationController.h in Headers */,
+				E9124539073033F500BD28CD /* VTDesktopFilesystemController.h in Headers */,
+				E912453D073033F500BD28CD /* VTLayoutController.h in Headers */,
+				E912453F073033F500BD28CD /* VTMouseWatcher.h in Headers */,
+				E9124541073033F500BD28CD /* VTMouseWatcherProtocol.h in Headers */,
+				E9124545073033F500BD28CD /* VTDecorationPrimitiveInspector.h in Headers */,
+				E9124547073033F500BD28CD /* VTDecorationPrimitive.h in Headers */,
+				E9124549073033F500BD28CD /* VTDecorationPrimitiveText.h in Headers */,
+				E912454B073033F500BD28CD /* VTDecorationPrimitiveTint.h in Headers */,
+				E912454D073033F500BD28CD /* VTDecorationPrimitiveWatermark.h in Headers */,
+				E912454F073033F500BD28CD /* VTDesktopDecoration.h in Headers */,
+				E9124551073033F500BD28CD /* VTDesktopDecorationView.h in Headers */,
+				E9124561073033F600BD28CD /* VTDesktopLayout.h in Headers */,
+				E9124563073033F600BD28CD /* VTPager.h in Headers */,
+				E9124568073033F600BD28CD /* VTPlugin.h in Headers */,
+				E912456B073033F600BD28CD /* VTPluginDecoration.h in Headers */,
+				E912456D073033F600BD28CD /* VTPreferences.h in Headers */,
+				E9124D9F0730BA2E00BD28CD /* VTLayout.h in Headers */,
+				E9124F1607316EB800BD28CD /* VTCoding.h in Headers */,
+				E940C6840734E23300C1642C /* NSColorString.h in Headers */,
+				E9832998073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.h in Headers */,
+				E99B09DE073D07BE004B9D57 /* NSImageTint.h in Headers */,
+				E941D19307469B9C007DF0D9 /* VTScriptPlugin.h in Headers */,
+				E941D1B30746A368007DF0D9 /* VTPluginScript.h in Headers */,
+				E941D2140746C042007DF0D9 /* VTPluginCollection.h in Headers */,
+				E94339D40751C9570075ADF3 /* VTDesktopProtector.h in Headers */,
+				E9544C970753D6C8009DA20D /* VTDesktopBackgroundHelper.h in Headers */,
+				E9C74A7C07588AFB005EFD90 /* VTPluginProtocol.h in Headers */,
+				E9C74A8A07589001005EFD90 /* VTPluginInstance.h in Headers */,
+				E958A5F5075CFB5A00773392 /* NSBundlePlugin.h in Headers */,
+				E959D412076230DD00013EB2 /* VTTrigger.h in Headers */,
+				E959D4170762313B00013EB2 /* VTMouseTrigger.h in Headers */,
+				E959D41B0762317300013EB2 /* VTHotkeyTrigger.h in Headers */,
+				E959D6910762497F00013EB2 /* VTTriggerNotification.h in Headers */,
+				E959D6990762536700013EB2 /* VTTriggerGroup.h in Headers */,
+				E959D70B07631C9C00013EB2 /* VTTriggerController.h in Headers */,
+				E917FD130768D09E00F8A8FD /* VTTriggerDesktopNotification.h in Headers */,
+				E917FE24076A2A6800F8A8FD /* VTApplicationController.h in Headers */,
+				E917FE29076A2AE000F8A8FD /* VTApplicationWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* Virtue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA609CAF090667D2003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					../Zen/build,
+					../Peony/build,
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = framework;
+			};
+			dependencies = (
+				EAF8C84A090768BA003D54B1 /* PBXTargetDependency */,
+				EAF8C84C090768BA003D54B1 /* PBXTargetDependency */,
+			);
+			name = Virtue;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = Virtue;
+			productReference = 8DC2EF5B0486A6940098B216 /* Virtue.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EA609CB5090667D2003BD20D /* Build configuration list for PBXProject "Virtue" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA440018CDF011CA2923 /* Development */,
+				E912457C073038E400BD28CD /* Development Private Framework */,
+				014CEA450018CDF011CA2923 /* Deployment */,
+				E98B7FD507495FCA00E8CE5C /* Deployment Private Framework */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* Virtue */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EAF8C842090768A1003D54B1 /* Products */;
+					ProjectRef = EAF8C841090768A1003D54B1 /* Peony.xcodeproj */;
+				},
+				{
+					ProductGroup = EAF8C83C09076898003D54B1 /* Products */;
+					ProjectRef = EAF8C83B09076898003D54B1 /* Zen.xcodeproj */;
+				},
+			);
+			targets = (
+				8DC2EF4F0486A6940098B216 /* Virtue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EAF8C84009076898003D54B1 /* Zen.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zen.framework;
+			remoteRef = EAF8C83F09076898003D54B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAF8C846090768A1003D54B1 /* Peony.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Peony.framework;
+			remoteRef = EAF8C845090768A1003D54B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				E9C74BA70758B974005EFD90 /* iconExtension.icns in Resources */,
+				E9C74BA80758B974005EFD90 /* iconExtensionScript.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9124520073033F500BD28CD /* NSBezierPathPlate.m in Sources */,
+				E9124522073033F500BD28CD /* NSScreenOverallScreen.m in Sources */,
+				E9124524073033F500BD28CD /* NSStringFSRef.m in Sources */,
+				E9124526073033F500BD28CD /* NSUserDefaultsColor.m in Sources */,
+				E9124528073033F500BD28CD /* VTDesktop.m in Sources */,
+				E912452A073033F500BD28CD /* VTInspector.m in Sources */,
+				E9124536073033F500BD28CD /* VTDesktopController.m in Sources */,
+				E9124538073033F500BD28CD /* VTDesktopDecorationController.m in Sources */,
+				E912453A073033F500BD28CD /* VTDesktopFilesystemController.m in Sources */,
+				E912453E073033F500BD28CD /* VTLayoutController.m in Sources */,
+				E9124540073033F500BD28CD /* VTMouseWatcher.m in Sources */,
+				E9124548073033F500BD28CD /* VTDecorationPrimitive.m in Sources */,
+				E912454A073033F500BD28CD /* VTDecorationPrimitiveText.m in Sources */,
+				E912454C073033F500BD28CD /* VTDecorationPrimitiveTint.m in Sources */,
+				E912454E073033F500BD28CD /* VTDecorationPrimitiveWatermark.m in Sources */,
+				E9124550073033F500BD28CD /* VTDesktopDecoration.m in Sources */,
+				E9124552073033F500BD28CD /* VTDesktopDecorationView.m in Sources */,
+				E9124562073033F600BD28CD /* VTDesktopLayout.m in Sources */,
+				E912456E073033F600BD28CD /* VTPreferences.m in Sources */,
+				E940C6850734E23300C1642C /* NSColorString.m in Sources */,
+				E9832999073ACA3E00E6D99A /* NSUserDefaultsControllerKeyFactory.m in Sources */,
+				E99B09DF073D07BE004B9D57 /* NSImageTint.m in Sources */,
+				E941D19407469B9C007DF0D9 /* VTScriptPlugin.m in Sources */,
+				E941D2150746C042007DF0D9 /* VTPluginCollection.m in Sources */,
+				E94339D50751C9570075ADF3 /* VTDesktopProtector.m in Sources */,
+				E9544C980753D6C8009DA20D /* VTDesktopBackgroundHelper.m in Sources */,
+				E9C74A8B07589001005EFD90 /* VTPluginInstance.m in Sources */,
+				E958A5F6075CFB5A00773392 /* NSBundlePlugin.m in Sources */,
+				E959D413076230DD00013EB2 /* VTTrigger.m in Sources */,
+				E959D4180762313B00013EB2 /* VTMouseTrigger.m in Sources */,
+				E959D41C0762317300013EB2 /* VTHotkeyTrigger.m in Sources */,
+				E959D6920762497F00013EB2 /* VTTriggerNotification.m in Sources */,
+				E959D69A0762536700013EB2 /* VTTriggerGroup.m in Sources */,
+				E959D70C07631C9C00013EB2 /* VTTriggerController.m in Sources */,
+				E917FD140768D09E00F8A8FD /* VTTriggerDesktopNotification.m in Sources */,
+				E917FE25076A2A6800F8A8FD /* VTApplicationController.m in Sources */,
+				E917FE2A076A2AE000F8A8FD /* VTApplicationWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAF8C84A090768BA003D54B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zen;
+			targetProxy = EAF8C849090768BA003D54B1 /* PBXContainerItemProxy */;
+		};
+		EAF8C84C090768BA003D54B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Peony;
+			targetProxy = EAF8C84B090768BA003D54B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA609CB0090667D2003BD20D /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		EA609CB1090667D2003BD20D /* Development Private Framework */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = "Development Private Framework";
+		};
+		EA609CB2090667D2003BD20D /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		EA609CB3090667D2003BD20D /* Deployment Private Framework */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)",
+					/System/Library/Frameworks/ApplicationServices.framework/Frameworks,
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PREBINDING = NO;
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = "Deployment Private Framework";
+		};
+		EA609CB4090667D2003BD20D /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Default;
+		};
+		EA609CB6090667D2003BD20D /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		EA609CB7090667D2003BD20D /* Development Private Framework */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = "Development Private Framework";
+		};
+		EA609CB8090667D2003BD20D /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Deployment;
+		};
+		EA609CB9090667D2003BD20D /* Deployment Private Framework */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = "Deployment Private Framework";
+		};
+		EA609CBA090667D2003BD20D /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA609CAF090667D2003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA609CB0090667D2003BD20D /* Development */,
+				EA609CB1090667D2003BD20D /* Development Private Framework */,
+				EA609CB2090667D2003BD20D /* Deployment */,
+				EA609CB3090667D2003BD20D /* Deployment Private Framework */,
+				EA609CB4090667D2003BD20D /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		EA609CB5090667D2003BD20D /* Build configuration list for PBXProject "Virtue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA609CB6090667D2003BD20D /* Development */,
+				EA609CB7090667D2003BD20D /* Development Private Framework */,
+				EA609CB8090667D2003BD20D /* Deployment */,
+				EA609CB9090667D2003BD20D /* Deployment Private Framework */,
+				EA609CBA090667D2003BD20D /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

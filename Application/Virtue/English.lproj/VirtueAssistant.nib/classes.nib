@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                selectNextTab = id; 
+                selectPrevTab = id; 
+                upgradeDock = id; 
+                upgradeDone = id; 
+                upgradeKill = id; 
+            }; 
+            CLASS = VTSetupAssistant; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCurrentOperation = NSTextField; 
+                mDoneButton = NSButton; 
+                mKillButton = NSButton; 
+                mNextButton = NSButton; 
+                mPreviousButton = NSButton; 
+                mProgress = NSProgressIndicator; 
+                mTabs = NSTabView; 
+                mUpgradeDesktopsButton = NSButton; 
+                mUpgradeDockButton = NSButton; 
+                mUpgradeDockItem = NSTabViewItem; 
+                mUpgradePreferencesButton = NSButton; 
+                mUpgradePreferencesItem = NSTabViewItem; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

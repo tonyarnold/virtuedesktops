@@ -1,0 +1,54 @@
+// Quit Dialog
+// Dialog displayed when Virtue was asked to die. There is no NIB file for this 
+// dialog, so localize here 
+
+// Short question if user wants to quit 
+VTQuitConfirmationDialogMessage			= "Voulez-vous vraiment quitter Virtue ?";
+// Extensive description about what will happen 
+VTQuitConfirmationDialogDescription		= "Quitter Virtue rend les bureaux inactif inaccessible jusqu'au redémarrage.";
+// Cancel Button cancels quitting
+VTQuitConfirmationDialogCancel			= "Annuler"; 
+// OK Button quits Virtue
+VTQuitConfirmationDialogOK				= "Quitter";
+
+
+// Statusbar Menu
+// Localizable strings in the Statusbar Menu 
+
+// No visible applications on the desktop 
+VTStatusbarMenuNoApplication			= "Pas d'Applications"; 
+
+
+// Trigger Preferences 
+// Localizable strings for the trigger settings 
+
+// Asks the user to press the key combination to set as the hotkey; please keep
+// this one short 
+VTTriggerPreferencesPressToSet			= "Presser une touche";
+
+// Application Inspector 
+// Localizable strings for the Application Inspector View 
+
+// The application is currently seen as running for Virtue 
+VTApplicationRunningStateYes			= "L'application est démarrée" ; 
+// The application is currently not seen as running by Virtue 
+VTApplicationRunningStateNo				= "L'application n'est pas démarée"; 
+
+// Desktop Inspector 
+// Localizable strings for the Desktop Inspector view 
+
+// None
+VTDesktopRunningApplicationCountNo		= "aucune"; 
+// Singluar
+VTDesktopRunningApplicationSingluar		= "application"; 
+// Plural 
+VTDesktopRunningApplicationPlural		= "applications";
+// The number of currently running applications per desktop
+// Param	1: number of applications or None
+// Param	2: multiplicty of application
+VTDesktopRunningApplicationCount		= "Affiche %@ %@"; 
+
+// Matrix Layout 
+// Localizable strings for the matrix layout (this is handled in this special way as it is
+// a built-in layout)
+VTMatrixLayoutName						= "Navigateur"; 

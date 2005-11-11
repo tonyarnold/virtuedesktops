@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {hideSheet = id; toggleStickyApplication = id; toggleStickyWindow = id; }; 
+            CLASS = VTOverlayController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplicationIcon = NSImageView; 
+                mApplicationTitle = NSTextField; 
+                mPanel = NSPanel; 
+                mStickyApplication = NSButton; 
+                mStickyWindow = NSButton; 
+                mTargetDesktopApplication = NSPopUpButton; 
+                mTargetDesktopWindow = NSPopUpButton; 
+                mWindowTitle = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = VTOverlayPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }
+    ); 
+    IBVersion = 1; 
+}

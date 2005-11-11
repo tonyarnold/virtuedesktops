@@ -1,0 +1,66 @@
+/******************************************************************************
+* 
+* Peony.Virtue 
+*
+* A desktop extension for MacOS X
+*
+* Copyright 2004, Thomas Staller 
+* playback@users.sourceforge.net
+*
+* See COPYING for licensing details
+* 
+*****************************************************************************/ 
+
+#import <Foundation/Foundation.h>
+#import "PNDesktopItem.h" 
+#import "PNWindow.h" 
+
+
+@interface PNWindowList : NSObject<PNDesktopItem> 
+{
+	NSMutableArray* mWindows;			//!< List of managed windows 
+	NSMutableArray* mNativeWindows;		//!< List of managed windows by their native identifier 
+}
+
++ (id) windowListWithArray: (NSArray*) windows; 
+
+- (id) init; 
+- (id) initWithArray: (NSArray*) windows; 
+
+/// @name Content handling 
+//  @{
+
+- (void) addWindow: (PNWindow*) window; 
+- (void) addWindows: (NSArray*) windows; 
+
+- (void) delWindow: (PNWindow*) window; 
+
+- (NSArray*) windows; 
+
+//  @}
+/// @name DesktopItem implementation 
+//  @{
+
+	// sticky 
+- (void) setSticky: (BOOL) stickyState; 
+- (BOOL) isSticky; 
+	// alphaValue 
+- (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration; 
+- (void) setAlphaValue: (float) alpha; 
+- (float) alphaValue; 
+	// desktop
+- (int) desktopId;
+- (void) setDesktop: (PNDesktop*) desktop; 
+	// name
+- (NSString*) name; 
+	// iconic representation
+- (NSImage*) icon; 
+
+- (void) orderOut; 
+- (void) orderIn; 
+- (void) orderAbove: (NSObject<PNDesktopItem>*) item; 
+- (void) orderBelow: (NSObject<PNDesktopItem>*) item; 
+
+//  @}
+
+@end
