@@ -97,12 +97,12 @@
 	struct kevent		event;
 	int					descriptor	= open([path fileSystemRepresentation], O_RDONLY, 0);
 	FSRef				fsref; 
-	
+		
 	// if we could not open the file, we will bail immediately 
 	if (descriptor <= 0)
 		return; 
 	// create the fsref structure 
-	if (FSPathMakeRef([path fileSystemRepresentation], &fsref, NULL)) 
+	if (FSPathMakeRef((UInt8 *)[path fileSystemRepresentation], &fsref, NULL)) 
 		return; 
 	
 	EV_SET(&event, descriptor, EVFILT_VNODE, EV_ADD | EV_ENABLE | EV_CLEAR, flags, 0, (void*)[path copy]);

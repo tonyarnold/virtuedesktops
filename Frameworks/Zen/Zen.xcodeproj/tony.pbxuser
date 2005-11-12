@@ -9,6 +9,20 @@
 		breakpointsGroup = EAF8C7EA090767D0003D54B1 /* XCBreakpointsBucket */;
 		codeSenseManager = EA609CA20906677F003BD20D /* Code sense */;
 		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					300,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
@@ -67,12 +81,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153410132;
-			PBXWorkspaceStateSaveDate = 153410132;
+			PBXPerProjectTemplateStateSaveDate = 153459103;
+			PBXWorkspaceStateSaveDate = 153459103;
 		};
 		perUserProjectItems = {
-			EAB7B6970924D96A0067CDFD /* PBXTextBookmark */ = EAB7B6970924D96A0067CDFD /* PBXTextBookmark */;
-			EAB7BBE40924DA670067CDFD /* PBXTextBookmark */ = EAB7BBE40924DA670067CDFD /* PBXTextBookmark */;
+			EA57E53109259C120098A112 /* PBXTextBookmark */ = EA57E53109259C120098A112 /* PBXTextBookmark */;
+			EA57E53209259C120098A112 /* PBXTextBookmark */ = EA57E53209259C120098A112 /* PBXTextBookmark */;
+			EA57E53309259C120098A112 /* PBXTextBookmark */ = EA57E53309259C120098A112 /* PBXTextBookmark */;
+			EA57E5FA0925A05F0098A112 /* PBXTextBookmark */ = EA57E5FA0925A05F0098A112 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA609CA10906677F003BD20D /* Source Control */;
 		userBuildSettings = {
@@ -83,10 +99,10 @@
 	};
 	E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {751, 2912}}";
-			sepNavSelRange = "{2522, 0}";
-			sepNavVisRect = "{{0, 1341}, {751, 244}}";
-			sepNavWindowFrame = "{{15, 202}, {973, 671}}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 3296}}";
+			sepNavSelRange = "{2583, 0}";
+			sepNavVisRect = "{{0, 1540}, {875, 328}}";
+			sepNavWindowFrame = "{{391, 113}, {973, 671}}";
 		};
 	};
 	E95731DB0711B0320053E494 /* Zen.h */ = {
@@ -141,10 +157,48 @@
 	};
 	E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 2760}}";
+			sepNavIntBoundsRect = "{{0, 0}, {875, 2976}}";
 			sepNavSelRange = "{363, 29}";
 			sepNavVisRect = "{{0, 0}, {875, 328}}";
 		};
+	};
+	EA57E53109259C120098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */;
+		name = ZNWindowDidFadeInNotification;
+		rLen = 29;
+		rLoc = 363;
+		rType = 0;
+		vrLen = 580;
+		vrLoc = 0;
+	};
+	EA57E53209259C120098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: cast from pointer to integer of different size";
+		fRef = E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */;
+		rLen = 1;
+		rLoc = 104;
+		rType = 1;
+	};
+	EA57E53309259C120098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */;
+		name = ZNWindowDidFadeInNotification;
+		rLen = 29;
+		rLoc = 363;
+		rType = 0;
+		vrLen = 580;
+		vrLoc = 0;
+	};
+	EA57E5FA0925A05F0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */;
+		name = "ZNFilesystemWatcher.m: 105";
+		rLen = 0;
+		rLoc = 2583;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 2280;
 	};
 	EA609CA10906677F003BD20D /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -158,26 +212,6 @@
 	EA609CA20906677F003BD20D /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	EAB7B6970924D96A0067CDFD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */;
-		name = ZNWindowDidFadeInNotification;
-		rLen = 29;
-		rLoc = 363;
-		rType = 0;
-		vrLen = 581;
-		vrLoc = 0;
-	};
-	EAB7BBE40924DA670067CDFD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */;
-		name = ZNWindowDidFadeInNotification;
-		rLen = 29;
-		rLoc = 363;
-		rType = 0;
-		vrLen = 581;
-		vrLoc = 0;
 	};
 	EAF8C7EA090767D0003D54B1 /* XCBreakpointsBucket */ = {
 		isa = XCBreakpointsBucket;

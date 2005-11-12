@@ -292,7 +292,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>0</integer>
+									<integer>45</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -331,7 +331,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZNEffectWindow.m</string>
+								<string>ZNFilesystemWatcher.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -339,14 +339,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZNEffectWindow.m</string>
+										<string>ZNFilesystemWatcher.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EAB7BBE40924DA670067CDFD</string>
+										<string>EA57E5FA0925A05F0098A112</string>
 										<key>history</key>
 										<array>
-											<string>EAB7B6970924D96A0067CDFD</string>
+											<string>EA57E53109259C120098A112</string>
+											<string>EA57E53209259C120098A112</string>
+										</array>
+										<key>prevStack</key>
+										<array>
+											<string>EA57E53309259C120098A112</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -404,9 +409,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EAB7BBE50924DA670067CDFD</string>
+				<string>EA57E53509259C120098A112</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EAB7BBE60924DA670067CDFD</string>
+				<string>EA57E53609259C120098A112</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -525,7 +530,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>153410132.74148199</real>
+	<real>153460831.441773</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -540,6 +545,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>EA609C930906677F003BD20D</string>
 		<string>/Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/Zen/Zen.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -564,7 +570,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ZNFilesystemWatcher.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -573,7 +579,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {798, 261}}</string>
 								<key>RubberWindowFrame</key>
-								<string>523 203 798 571 0 0 1440 878 </string>
+								<string>408 190 798 571 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -599,7 +605,7 @@
 								<key>Frame</key>
 								<string>{{0, 266}, {798, 264}}</string>
 								<key>RubberWindowFrame</key>
-								<string>523 203 798 571 0 0 1440 878 </string>
+								<string>408 190 798 571 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -622,14 +628,14 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>EA609C930906677F003BD20D</string>
-				<string>EAA34874090BE18A00D789DD</string>
+				<string>EA57E50F09259B740098A112</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.build</string>
 			<key>WindowString</key>
-			<string>523 203 798 571 0 0 1440 878 </string>
+			<string>408 190 798 571 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>EA609C930906677F003BD20D</string>
 			<key>WindowToolIsVisible</key>

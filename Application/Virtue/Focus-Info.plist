@@ -14,42 +14,34 @@
 			<key>CFBundleTypeIconFile</key>
 			<string>iconExtension</string>
 			<key>CFBundleTypeName</key>
-			<string>Virtue Plugin</string>
+			<string>Focus Plugin</string>
 			<key>CFBundleTypeRole</key>
 			<string>None</string>
 			<key>LSTypeIsPackage</key>
-			<string>YES</string>
+			<true/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>Binary</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
-	<string>Virtue</string>
-	<key>CFBundleGetInfoString</key>
-	<string>Copyright © 2004 Thomas Staller</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>virtueHelp</string>
-	<key>CFBundleHelpBookName</key>
-	<string>Virtue Help</string>
+	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>iconVirtue</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.Virtue</string>
+	<string>com.tonyarnold.focus.Focus</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>Virtue</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>FOCU</string>
 	<key>CFBundleVersion</key>
-	<string>0.5r11</string>
-	<key>LSUIElement</key>
-	<string>1</string>
-	<key>NSAppleScriptEnabled</key>
-	<string>YES</string>
+	<string>0.6</string>
 	<key>NSMainNibFile</key>
 	<string>Virtue</string>
 	<key>NSPrincipalClass</key>
 	<string>VTApplication</string>
+	<key>LSUIElement</key>
+	<string>1</string>
 </dict>
 </plist>

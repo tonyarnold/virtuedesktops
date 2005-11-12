@@ -34,7 +34,8 @@ typedef enum {
 	kPnTransitionWarpFade, 
 	kPnTransitionSwap,
 	kPnTransitionCube,
-	kPnTransitionWarpSwitch
+	kPnTransitionWarpSwitch,
+	kPnTransitionFlip
 } PNTransitionType; 
 
 /**

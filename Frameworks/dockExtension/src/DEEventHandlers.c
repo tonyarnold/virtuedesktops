@@ -11,6 +11,7 @@
 * 
 *****************************************************************************/ 
 
+#include <stdlib.h>
 /* CGS Private stuff */ 
 #include "CGSPrivate.h" 
 /* Decomm */ 
@@ -86,7 +87,7 @@ void DEHandleLevelEvent(DecEvent* event) {
 	/* we have to do the list operation on our own, as CGS does not provide an 
 	   equivalent */ 
 	for (i = 0; i < eventTargetsSize; i++) {
-		iError = CGSSetWindowLevel(iConnection, eventTargets[i], level); 
+		iError = CGSSetWindowLevel(iConnection, eventTargets[i], &level); 
 /* 
 		if (iError) 
 			printf("DEHandleLevelEvent - CGSSetWindowLevel failed [%i]\n", iError); 
@@ -193,10 +194,10 @@ void DEHandlePropertyEvent(DecEvent* event) {
 	char*			value	= dec_event_property_value_get(eventProp); 
 	DecPropertyType	type	= dec_event_property_type_get(eventProp); 
 	
-	CGSValue keyObject		= CGSCreateCString(key); 
-	CGSValue valueObject	= NULL; 
+	CGSValue keyObject		= CGSCreateCStringNoCopy(key); 
+	CGSValue valueObject	= (int)NULL; 
 	if (value)
-		valueObject = CGSCreateCString(value); 
+		valueObject = CGSCreateCStringNoCopy(value); 
 	
 	CGSConnection iConnection = _CGSDefaultConnection(); 
 	OSErr iError = noErr; 
@@ -205,7 +206,7 @@ void DEHandlePropertyEvent(DecEvent* event) {
 	/* Have to iterate on our own as there is no CGS equivalent there */ 
 	for (i = 0; i < eventTargetsSize; i++) {
 		if (type == kDecPropertySet) 
-			iError = CGSSetWindowProperty(iConnection, eventTargets[i], keyObject, valueObject); 
+			iError = CGSSetWindowProperty(iConnection, eventTargets[i], keyObject, &valueObject); 
 		else
 /*			
 			CGSDeleteWindowProperty(iConnection, eventTargets[i], keyObject); 
@@ -216,9 +217,9 @@ void DEHandlePropertyEvent(DecEvent* event) {
 			printf("DEHandlePropertyEvent - Accessing window property failed [%i]\n", iError); 
 	}
 	
-	CGSReleaseGenericObj(keyObject); 
+	CGSReleaseGenericObj(&keyObject); 
 	if (value)
-		CGSReleaseGenericObj(valueObject); 
+		CGSReleaseGenericObj(&valueObject); 
 }
 
 void DEHandleDesktopEvent(DecEvent* event) {

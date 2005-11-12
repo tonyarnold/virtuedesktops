@@ -202,13 +202,13 @@
 }
  
 - (NSString*) name {
-	static CGSValue kCGSWindowTitle = NULL; 
+	static CGSValue kCGSWindowTitle = (int)NULL; 
 
 	// we have to create the private constant 
-	if (kCGSWindowTitle == NULL) 
+	if (kCGSWindowTitle == (int)NULL) 
 		kCGSWindowTitle = CGSCreateCStringNoCopy("kCGSWindowTitle");
 
-	CGSValue oWindowTitle = NULL;
+	CGSValue oWindowTitle = (int)NULL;
 	OSStatus oResult;
 	
 	// get connection 

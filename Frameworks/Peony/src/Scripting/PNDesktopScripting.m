@@ -38,6 +38,8 @@
 			return kPnTransitionWarpFade; 
 		case FOUR_CHAR_CODE('TTws'):
 			return kPnTransitionWarpSwitch; 
+		case FOUR_CHAR_CODE('TTfl'):
+			return kPnTransitionFlip;
 	}; 
 	
 	return kPnTransitionNone; 

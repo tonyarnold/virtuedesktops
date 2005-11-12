@@ -152,31 +152,22 @@
         return;
 	
     // make folder icon file invisible
-    result = FSpGetFInfo(&targetFileFSSpec, &finderInfo);
-    if (result != noErr)
-        return;
-	
-    finderInfo.fdFlags = (finderInfo.fdFlags | kIsInvisible) & ~kHasBeenInited;
-    // and write info back
-    result = FSpSetFInfo(&targetFileFSSpec, &finderInfo);
-    if (result != noErr)
-        return;
-	
-    result = FSGetCatalogInfo( &targetFolderFSRef,
+		result = FSGetCatalogInfo( &targetFolderFSRef,
                                kFSCatInfoFinderInfo,
                                &catInfo, nil, nil, nil);
     if (result != noErr)
         return;
 	
-    ((DInfo*)catInfo.finderInfo)->frFlags = (((DInfo*)catInfo.finderInfo)->frFlags | kHasCustomIcon) & ~kHasBeenInited;
-	
-    FSSetCatalogInfo( &targetFolderFSRef,
+		((DInfo*)catInfo.finderInfo)->frFlags = (((DInfo*)catInfo.finderInfo)->frFlags | kIsInvisible | kHasCustomIcon) & ~kHasBeenInited;
+    
+		// and write info back
+		FSSetCatalogInfo( &targetFolderFSRef,
                       kFSCatInfoFinderInfo,
                       &catInfo);
-	
+		
     if (result != noErr)
         return;
-	
+		
 	// notify listeners that we just changed the filesystem 
 	[[NSWorkspace sharedWorkspace] noteFileSystemChanged: path]; 
 }

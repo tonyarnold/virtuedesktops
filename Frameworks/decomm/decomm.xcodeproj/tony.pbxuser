@@ -28,12 +28,17 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153414259;
-			PBXWorkspaceStateSaveDate = 153414259;
+			PBXPerProjectTemplateStateSaveDate = 153459496;
+			PBXWorkspaceStateSaveDate = 153459496;
 		};
 		perUserProjectItems = {
-			EAB7BE3F0924E74E0067CDFD /* PBXTextBookmark */ = EAB7BE3F0924E74E0067CDFD /* PBXTextBookmark */;
-			EAB7C0260924F7790067CDFD /* PBXTextBookmark */ = EAB7C0260924F7790067CDFD /* PBXTextBookmark */;
+			EA57E4BA092598870098A112 /* PBXTextBookmark */ = EA57E4BA092598870098A112 /* PBXTextBookmark */;
+			EA57E4CF0925991F0098A112 /* PBXTextBookmark */ = EA57E4CF0925991F0098A112 /* PBXTextBookmark */;
+			EA57E4D00925991F0098A112 /* PBXTextBookmark */ = EA57E4D00925991F0098A112 /* PBXTextBookmark */;
+			EA57E4D20925991F0098A112 /* PBXTextBookmark */ = EA57E4D20925991F0098A112 /* PBXTextBookmark */;
+			EA57E4D30925991F0098A112 /* PBXTextBookmark */ = EA57E4D30925991F0098A112 /* PBXTextBookmark */;
+			EA57E4E00925999C0098A112 /* PBXTextBookmark */ = EA57E4E00925999C0098A112 /* PBXTextBookmark */;
+			EA57E50209259B3E0098A112 /* PBXTextBookmark */ = EA57E50209259B3E0098A112 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EAE822B10924A5DC00239477 /* Source Control */;
 		userBuildSettings = {
@@ -64,16 +69,25 @@
 	};
 	E936380806FCCCA300E354DB /* DECInjector.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {822, 3975}}";
-			sepNavSelRange = "{5734, 0}";
-			sepNavVisRect = "{{0, 2689}, {822, 587}}";
+			sepNavIntBoundsRect = "{{0, 0}, {822, 4320}}";
+			sepNavSelRange = "{2003, 75}";
+			sepNavVisRect = "{{0, 531}, {822, 587}}";
 		};
 	};
 	E936380B06FCCCA300E354DB /* mach_inject.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {822, 3180}}";
-			sepNavSelRange = "{5910, 0}";
-			sepNavVisRect = "{{0, 2813}, {822, 367}}";
+			sepNavIntBoundsRect = "{{0, 0}, {822, 3216}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {822, 587}}";
+			sepNavWindowFrame = "{{15, 108}, {1268, 765}}";
+		};
+	};
+	E936380C06FCCCA300E354DB /* mach_inject.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 1328}}";
+			sepNavSelRange = "{721, 0}";
+			sepNavVisRect = "{{0, 5}, {822, 587}}";
+			sepNavWindowFrame = "{{290, 91}, {1268, 765}}";
 		};
 	};
 	E958EEDA06FDA03E001DCB1E /* decomm */ = {
@@ -119,25 +133,75 @@
 			sepNavWindowFrame = "{{-4, 77}, {722, 801}}";
 		};
 	};
-	EAB7BE3F0924E74E0067CDFD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
-		name = kDecErrorMac;
-		rLen = 12;
-		rLoc = 2121;
-		rType = 0;
-		vrLen = 310;
-		vrLoc = 1803;
-	};
-	EAB7C0260924F7790067CDFD /* PBXTextBookmark */ = {
+	EA57E4BA092598870098A112 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
 		name = "DECInjector.c: 190";
 		rLen = 0;
 		rLoc = 5734;
 		rType = 0;
-		vrLen = 904;
+		vrLen = 858;
 		vrLoc = 5333;
+	};
+	EA57E4CF0925991F0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380B06FCCCA300E354DB /* mach_inject.c */;
+		name = "mach_inject.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 0;
+	};
+	EA57E4D00925991F0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380806FCCCA300E354DB /* DECInjector.c */;
+		name = "OSErr dec_find_process_by_signature(OSType, OSType, ProcessSerialNumber*);";
+		rLen = 75;
+		rLoc = 2003;
+		rType = 0;
+		vrLen = 1130;
+		vrLoc = 1468;
+	};
+	EA57E4D20925991F0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380B06FCCCA300E354DB /* mach_inject.c */;
+		name = "vm_address_t remoteCode = NULL;";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 1604;
+	};
+	EA57E4D30925991F0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380C06FCCCA300E354DB /* mach_inject.h */;
+		name = "mach_inject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1260;
+		vrLoc = 0;
+	};
+	EA57E4E00925999C0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380C06FCCCA300E354DB /* mach_inject.h */;
+		name = "mach_inject.h: 83";
+		rLen = 0;
+		rLoc = 2853;
+		rType = 0;
+		vrLen = 1260;
+		vrLoc = 0;
+	};
+	EA57E50209259B3E0098A112 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E936380C06FCCCA300E354DB /* mach_inject.h */;
+		name = "mach_inject.h: 16";
+		rLen = 0;
+		rLoc = 721;
+		rType = 0;
+		vrLen = 1260;
+		vrLoc = 0;
 	};
 	EAE822B10924A5DC00239477 /* Source Control */ = {
 		isa = PBXSourceControlManager;

@@ -184,8 +184,8 @@
 	GetProcessBundleLocation(&mPsn, &fsRef); 
 	
 	char string[512];
-	FSRefMakePath(&fsRef, string, 512);
-    
+	FSRefMakePath(&fsRef, (UInt8 *)string, 512);
+
 	// get the icon
 	mIcon = [[[NSWorkspace sharedWorkspace] iconForFile: [NSString stringWithCString: string]] retain];
 	
@@ -206,7 +206,7 @@
 	GetProcessBundleLocation(&mPsn, &fsRef); 
 	
 	char string[512];
-	FSRefMakePath(&fsRef, string, 512);
+	FSRefMakePath(&fsRef, (UInt8 *)string, 512);
     
 	// get the path
 	mBundlePath = [[NSString stringWithCString: string] retain];
