@@ -340,7 +340,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EA57E5FB0925A0620098A112</string>
+										<string>EAB74BBD0925A93A003CBCF1</string>
 										<key>history</key>
 										<array>
 											<string>EA1E6D440924CAA400AABD4D</string>
@@ -350,7 +350,7 @@
 											<string>EA6A112E092564570092A3C1</string>
 											<string>EA57E3D5092592210098A112</string>
 											<string>EA57E46A092596F40098A112</string>
-											<string>EA57E46C092596F40098A112</string>
+											<string>EA57E5FB0925A0620098A112</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -419,9 +419,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EA57E470092596F40098A112</string>
+				<string>EAB74BBE0925A93A003CBCF1</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EA57E471092596F40098A112</string>
+				<string>EAB74BBF0925A93A003CBCF1</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -540,7 +540,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>153460834.93946299</real>
+	<real>153463075.32492799</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -555,8 +555,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>EA57E47F0925973D0098A112</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/Peony/Peony.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
