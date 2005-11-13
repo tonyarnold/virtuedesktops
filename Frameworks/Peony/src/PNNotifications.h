@@ -52,6 +52,10 @@
 #define kPnOnWindowUnstickied		@"PNWindowWasUnstickied"
 #define PNWindowWasUnstickied		@"PNWindowWasUnstickied"
 
+// An application was stickied
+#define kPnOnApplicationStickied		@"PNApplicationWasStickied"
+#define kPnOnApplicationUnstickied	@"PNApplicationWasUnstickied"
+
 #pragma mark -
 // Parameters for PNWindow(Will|Did)ChangeDesktop notifications 
 #define PNWindowChangeDesktopWindowParam	@"PNWindowChangeWindowParam"

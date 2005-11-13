@@ -37,7 +37,10 @@
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillActivate:) name: kPnOnDesktopWillActivate object: nil]; 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidActivate:) name: kPnOnDesktopDidActivate object: nil]; 		
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
-		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowUnstickied:) name: kPnOnWindowUnstickied object: nil]; 
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowUnstickied:) name: kPnOnWindowUnstickied object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onApplicationStickied:) name: kPnOnApplicationStickied object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onApplicationUnstickied:) name: kPnOnApplicationUnstickied object: nil];
 		
 		return self; 
 	}
@@ -97,6 +100,18 @@
 {
 	// fetch the window that was just unstickied and remove it from our list 
 	[mWindows delWindow: [aNotification object]]; 
+}
+
+- (void) onApplicationStickied: (NSNotification*) aNotification
+{
+	// fetch the window that was just stickied and add it to our list 
+	[mWindows addWindows: [aNotification object]]; 
+}
+
+- (void) onApplicationUnstickied: (NSNotification*) aNotification
+{
+	// fetch the window that was just unstickied and remove it from our list 
+	[mWindows delWindows: [aNotification object]]; 
 }
 
 @end

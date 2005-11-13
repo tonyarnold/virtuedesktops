@@ -34,6 +34,7 @@
 - (void) addWindows: (NSArray*) windows; 
 
 - (void) delWindow: (PNWindow*) window; 
+- (void) delWindows: (NSArray*) windows;
 
 - (NSArray*) windows; 
 

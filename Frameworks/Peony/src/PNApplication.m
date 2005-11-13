@@ -13,6 +13,7 @@
 
 #import "PNApplication.h"
 #import "PNWindowList.h"
+#import "PNNotifications.h"
 #import <Zen/Zen.h> 
 
 @implementation PNApplication
@@ -93,14 +94,17 @@
 
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState {
-	mIsSticky = stickyState; 
+	mIsSticky = stickyState;
 	
-	PNWindowList*	mWindowList = [[PNWindowList alloc] initWithArray: mWindows];
-	[mWindowList setSticky: stickyState];
+	if (stickyState == YES) {
+		// post notification about the window becoming sticky 
+		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: mWindows]; 
+	}
+	else {
+		// post notification about the window being no longer sticky 
+		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: mWindows]; 		
+	}
 	
-	// we will iterate over all windows that this application is known to 
-	// manage and set their sticky state to the passed value 
-		
 }
 
 - (BOOL) isSticky {
@@ -140,20 +144,19 @@
 	// we will not modify the desktop we belong to but will just move 
 	// all the windows we know about to the passed desktop, a new application
 	// instance will be created there... 
-	//NSLog(@"Setting window list desktop '%@'",[desktop name]);
-//	PNWindowList*		appWindowList = [[PNWindowList alloc] windowListWithArray: [self windows]];
-//	[appWindowList setDesktop: desktop];
 	
-	NSMutableArray* windowsForSwitching = nil;
-	
+	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] initWithCapacity:0];
 	NSEnumerator*   windowIter      = [mWindows objectEnumerator];
 	PNWindow*       window          = nil;
 	       
 	while (window = [windowIter nextObject]) {
-		if ([window isSticky] == NO)
+		//if ([window isSticky] == NO)
+		NSLog(@"Window titled '%@' has stickBit set to %i.",[window name], [window isSticky]);
 			[windowsForSwitching addObject: window];
 	}
+
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
+	NSLog(@"There are %i windows to set the desktop for out of %i original windows in application. Setting windowList length to %i",[windowsForSwitching count], [mWindows count], [[mWindowList windows] count]);
 	[mWindowList setDesktop: desktop];
 }
 

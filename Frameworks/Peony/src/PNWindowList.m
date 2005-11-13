@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #import "PNWindowList.h"
+#import "PNNotifications.h"
 #import "PNDesktop.h" 
 #import "PNDesktopItem.h" 
 #import "CGSPrivate.h"
@@ -88,19 +89,27 @@
 	[mNativeWindows removeObject: [NSNumber numberWithInt: [window nativeWindow]]]; 
 }
 
+- (void) delWindows: (NSArray*) windows {
+	// iterate the passed array and add all PNWindow objects 
+	NSEnumerator*	windowIter	= [windows objectEnumerator]; 
+	NSObject*		window		= nil; 
+	
+	while (window = [windowIter nextObject]) {
+		if ([window isKindOfClass: [PNWindow class]] == NO)
+			return; 
+		
+		[self delWindow: (PNWindow*)window]; 
+	}
+}
+
 - (NSArray*) windows {
 	return mWindows; 
 }
 
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState {
-	if ([mWindows count] == 0)
-		return; 
-	
 	int* windows; 
-	int  windowsCount; 
-	
-	windowsCount = [self nativeWindowsInCArray: &windows]; 
+	int  windowsCount = [self nativeWindowsInCArray: &windows]; 
 	
 	if (stickyState == YES) {
 		CGSExtSetWindowListTags(windows, windowsCount, CGSTagSticky); 
@@ -212,8 +221,8 @@
 	*windows = (int*)malloc(sizeof(int) * [mNativeWindows count]);
 	// fill up 
 	NSEnumerator*	windowIter	= [mNativeWindows objectEnumerator]; 
-	NSNumber*		window		= nil; 
-	int				i			= 0; 
+	NSNumber*			window			= nil; 
+	int						i						= 0; 
 	
 	while (window = [windowIter nextObject]) {
 		(*windows)[i] = [window intValue]; 
