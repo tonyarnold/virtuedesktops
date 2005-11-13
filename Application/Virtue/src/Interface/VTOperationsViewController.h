@@ -21,7 +21,9 @@
 	IBOutlet NSObjectController*	mController; 
 	IBOutlet NSPopUpButton*			mApplicationDesktopButton; 
 	IBOutlet NSPopUpButton*			mWindowDesktopButton; 	
-// ivars 
+	IBOutlet NSButton*					mApplicationStickyButton;
+	IBOutlet NSButton*					mWindowStickyButton;
+	// ivars 
 	NSWindow*				mOverlayWindow;				//!< Window used to tint our target
 	
 	PNWindow*				mRepresentedWindow;			//!< Our target 

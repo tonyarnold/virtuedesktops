@@ -19,25 +19,25 @@
 // types 
 typedef enum {
 	kVtDecorationPositionAbsolute	= FOUR_CHAR_CODE('PTab'), 
-	kVtDecorationPositionLL			= FOUR_CHAR_CODE('PTll'), 
-	kVtDecorationPositionLR			= FOUR_CHAR_CODE('PTlr'),
-	kVtDecorationPositionTL			= FOUR_CHAR_CODE('PTtl'),
-	kVtDecorationPositionTR			= FOUR_CHAR_CODE('PTtr'),
-	kVtDecorationPositionLeft		= FOUR_CHAR_CODE('PTl '),
+	kVtDecorationPositionLL				= FOUR_CHAR_CODE('PTll'), 
+	kVtDecorationPositionLR				= FOUR_CHAR_CODE('PTlr'),
+	kVtDecorationPositionTL				= FOUR_CHAR_CODE('PTtl'),
+	kVtDecorationPositionTR				= FOUR_CHAR_CODE('PTtr'),
+	kVtDecorationPositionLeft			= FOUR_CHAR_CODE('PTl '),
 	kVtDecorationPositionRight		= FOUR_CHAR_CODE('PTr '), 
-	kVtDecorationPositionTop		= FOUR_CHAR_CODE('PTt '),
+	kVtDecorationPositionTop			= FOUR_CHAR_CODE('PTt '),
 	kVtDecorationPositionBottom		= FOUR_CHAR_CODE('PTb '), 
 } VTDecorationPosition; 
 
 @interface VTDecorationPrimitive : NSObject<NSCoding, NSCopying, VTCoding> {
-	NSString*				mName; 
+	NSString*							mName; 
 	VTDesktopDecoration*	mContainer; 
-	BOOL					mEnabled; 
+	BOOL									mEnabled; 
 	// positional attributes 
 	VTDecorationPosition	mPositionType; 
-	NSPoint					mPosition; 
+	NSPoint								mPosition; 
 	// drawing 
-	NSView*					mControlView; 
+	NSView*								mControlView; 
 }
 
 #pragma mark -

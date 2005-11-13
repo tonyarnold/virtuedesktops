@@ -86,11 +86,11 @@
 - (void) delWindow: (PNWindow*) window {
 	// remove the window 
 	[mWindows removeObject: window]; 
-	[mNativeWindows removeObject: [NSNumber numberWithInt: [window nativeWindow]]]; 
+	[mNativeWindows removeObject: [NSNumber numberWithInt: [window nativeWindow]]];
 }
 
 - (void) delWindows: (NSArray*) windows {
-	// iterate the passed array and add all PNWindow objects 
+	// iterate the passed array and delete all PNWindow objects 
 	NSEnumerator*	windowIter	= [windows objectEnumerator]; 
 	NSObject*		window		= nil; 
 	
@@ -117,6 +117,14 @@
 	else {
 		CGSExtClearWindowListTags(windows, windowsCount, CGSTagSticky); 
 	}
+	
+	NSEnumerator*	windowIter	= [mWindows objectEnumerator]; 
+	PNWindow*			window			= nil; 
+	int						i						= 0; 
+	
+	while (window = [windowIter nextObject]) {
+		[window setSticky: stickyState];
+	} 
 	
 	free(windows);
 }

@@ -19,7 +19,7 @@
 
 - (NSArray*) supportedMarkers {
 	NSEnumerator*	positionIter	= [[self supportedPositionTypes] objectEnumerator]; 
-	NSNumber*		positionType	= nil; 
+	NSNumber*		positionType		= nil; 
 	
 	NSMutableArray*	markers			= [NSMutableArray array]; 
 	

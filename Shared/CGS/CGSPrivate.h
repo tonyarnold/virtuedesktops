@@ -121,8 +121,8 @@ typedef struct {
 	uint32_t unknown1;
 	CGSTransitionType type;
 	CGSTransitionOption option;
-	CGSWindow wid; /* Can be 0 for full-screen */
-	float *backColour; /* Null for black otherwise pointer to 3 float array with RGB value */
+	CGSWindow wid;			/* Can be 0 for full-screen */
+	float *backColour;	/* Null for black otherwise pointer to 3 float array with RGB value */
 } CGSTransitionSpec;
 
 /* Transition handling. */

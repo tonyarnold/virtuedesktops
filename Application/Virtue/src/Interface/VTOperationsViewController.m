@@ -152,9 +152,11 @@
 	[self endSheet]; 
 	// move application to the selected desktop 
 	if ([sender state] == NSOnState) {
+		[mRepresentedWindow setSticky: YES];
 		[mRepresentedApplication setSticky:YES];
 	} else {
-		[mRepresentedApplication setSticky:NO];
+		[mRepresentedApplication setSticky: NO];
+		[mRepresentedWindow setSticky: NO];
 	}
 }
 
@@ -302,7 +304,7 @@
 	[mApplicationDesktopButton setAutoenablesItems: NO]; 
 	[mWindowDesktopButton removeAllItems]; 
 	[mWindowDesktopButton setAutoenablesItems: NO]; 
-	
+
 	for (menuItemIndex = 0; menuItemIndex < menuItemCount; menuItemIndex++) {
 		VTDesktop*  desktop		= [desktops objectAtIndex: menuItemIndex]; 
 		
@@ -330,6 +332,11 @@
 	int selectedItemIndex = [desktops indexOfObject: [[VTDesktopController sharedInstance] activeDesktop]]; 
 	[mApplicationDesktopButton selectItemAtIndex: selectedItemIndex]; 
 	[mWindowDesktopButton selectItemAtIndex: selectedItemIndex]; 
+	[mApplicationStickyButton setState: [mRepresentedApplication isSticky]];
+	if ([mRepresentedApplication isSticky] == YES) {
+		[mWindowStickyButton setState: YES];
+	} else {
+		 [mWindowStickyButton setState: [mRepresentedWindow isSticky]];
+	}
 }
-
 @end 

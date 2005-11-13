@@ -94,17 +94,17 @@
 
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState {
-	mIsSticky = stickyState;
-	
 	if (stickyState == YES) {
 		// post notification about the window becoming sticky 
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: mWindows]; 
 	}
 	else {
 		// post notification about the window being no longer sticky 
-		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: mWindows]; 		
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: nil];
+		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: mWindows];		
 	}
-	
+	mIsSticky = stickyState;
 }
 
 - (BOOL) isSticky {
@@ -150,13 +150,11 @@
 	PNWindow*       window          = nil;
 	       
 	while (window = [windowIter nextObject]) {
-		//if ([window isSticky] == NO)
-		NSLog(@"Window titled '%@' has stickBit set to %i.",[window name], [window isSticky]);
+		if ([window isSticky] == NO)
 			[windowsForSwitching addObject: window];
 	}
 
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
-	NSLog(@"There are %i windows to set the desktop for out of %i original windows in application. Setting windowList length to %i",[windowsForSwitching count], [mWindows count], [[mWindowList windows] count]);
 	[mWindowList setDesktop: desktop];
 }
 

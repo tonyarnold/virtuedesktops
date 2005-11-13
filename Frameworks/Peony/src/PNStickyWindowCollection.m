@@ -98,7 +98,7 @@
 
 - (void) onWindowUnstickied: (NSNotification*) aNotification
 {
-	// fetch the window that was just unstickied and remove it from our list 
+	// fetch the window that was just unstickied and remove it from our list
 	[mWindows delWindow: [aNotification object]]; 
 }
 
@@ -111,7 +111,15 @@
 - (void) onApplicationUnstickied: (NSNotification*) aNotification
 {
 	// fetch the window that was just unstickied and remove it from our list 
-	[mWindows delWindows: [aNotification object]]; 
+	//[mWindows delWindows: [aNotification object]];
+	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] initWithCapacity:0];
+	NSEnumerator*   windowIter      = [[aNotification object] objectEnumerator];
+	PNWindow*       window          = nil;
+	
+	while (window = [windowIter nextObject]) {
+		[mWindows delWindow: window]; 
+	}
+	
 }
 
 @end

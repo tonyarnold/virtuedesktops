@@ -297,12 +297,18 @@
  *					'window'	self.mNativeWindow 
  */ 
 - (void) setSticky: (BOOL) stickyState {
+	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys:  
+			 	                [NSNumber numberWithInt: mNativeWindow], @"window", 
+			 	                nil]; 
+	
 	if (stickyState == YES) {
 		// post notification about the window becoming sticky 
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowStickied object: nil userInfo: infoDict];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowStickied object: self]; 
 	}
 	else {
 		// post notification about the window being no longer sticky 
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowUnstickied object: nil userInfo: infoDict];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowUnstickied object: self]; 		
 	}
 	

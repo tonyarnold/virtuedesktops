@@ -1155,7 +1155,6 @@
 				EAB7C1940924FF6C0067CDFD /* generateSVNRevision.sh */,
 				E9127278072AAA22006DC207 /* plists */,
 				E91ADC3307057EFF00F69228 /* Scripting */,
-				E9363A3D06FCD8F400E354DB /* Shared Includes */,
 				32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -1373,13 +1372,6 @@
 			);
 			name = Plugins;
 			path = src/Plugins;
-			sourceTree = "<group>";
-		};
-		E9363A3D06FCD8F400E354DB /* Shared Includes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Shared Includes";
 			sourceTree = "<group>";
 		};
 		E9363A9206FCDE8300E354DB /* Informational */ = {

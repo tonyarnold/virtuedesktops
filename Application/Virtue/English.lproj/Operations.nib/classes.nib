@@ -13,8 +13,10 @@
             LANGUAGE = ObjC; 
             OUTLETS = {
                 mApplicationDesktopButton = NSPopUpButton; 
+                mApplicationStickyButton = NSButton; 
                 mController = NSObjectController; 
                 mWindowDesktopButton = NSPopUpButton; 
+                mWindowStickyButton = NSButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 
