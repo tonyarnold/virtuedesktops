@@ -104,10 +104,10 @@ typedef enum {
 } CGSTransitionOption;
 
 typedef enum {
-	CGSTagExposeFade	= 0x0002,			// Fade out when Expose activates.
-	CGSTagNoShadow		= 0x0008,			// No window shadow.
+	CGSTagExposeFade		= 0x0002,			// Fade out when Expose activates.
+	CGSTagNoShadow			= 0x0008,			// No window shadow.
 	CGSTagTransparent   = 0x0200,   // Transparent to mouse clicks.
-	CGSTagSticky		= 0x0800,				// Appears on all workspaces.
+	CGSTagSticky				= 0x0800,				// Appears on all workspaces.
 } CGSWindowTag;
 
 extern OSStatus CGSSetWorkspaceWithTransition(const CGSConnection cid,

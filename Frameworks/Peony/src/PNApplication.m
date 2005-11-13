@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #import "PNApplication.h"
+#import "PNWindowList.h"
 #import <Zen/Zen.h> 
 
 @implementation PNApplication
@@ -94,13 +95,12 @@
 - (void) setSticky: (BOOL) stickyState {
 	mIsSticky = stickyState; 
 	
+	PNWindowList*	mWindowList = [[PNWindowList alloc] initWithArray: mWindows];
+	[mWindowList setSticky: stickyState];
+	
 	// we will iterate over all windows that this application is known to 
 	// manage and set their sticky state to the passed value 
-	NSEnumerator*	windowIter	= [mWindows objectEnumerator]; 
-	PNWindow*		window		= nil; 
-	
-	while (window = [windowIter nextObject])
-		[window setSticky: stickyState]; 	
+		
 }
 
 - (BOOL) isSticky {
@@ -140,14 +140,21 @@
 	// we will not modify the desktop we belong to but will just move 
 	// all the windows we know about to the passed desktop, a new application
 	// instance will be created there... 
-
-	NSEnumerator*	windowIter	= [mWindows objectEnumerator]; 
-	PNWindow*		window		= nil; 
+	//NSLog(@"Setting window list desktop '%@'",[desktop name]);
+//	PNWindowList*		appWindowList = [[PNWindowList alloc] windowListWithArray: [self windows]];
+//	[appWindowList setDesktop: desktop];
 	
+	NSMutableArray* windowsForSwitching = nil;
+	
+	NSEnumerator*   windowIter      = [mWindows objectEnumerator];
+	PNWindow*       window          = nil;
+	       
 	while (window = [windowIter nextObject]) {
 		if ([window isSticky] == NO)
-			[window setDesktop: desktop]; 
+			[windowsForSwitching addObject: window];
 	}
+	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
+	[mWindowList setDesktop: desktop];
 }
 
 #pragma mark -
