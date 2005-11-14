@@ -38,7 +38,6 @@
 		E9122405078090F0005A3C10 /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		E91224550781988B005A3C10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E91224540781988B005A3C10 /* InfoPlist.strings */; };
 		E9124370072E9B2D00BD28CD /* imagePosition.png in Resources */ = {isa = PBXBuildFile; fileRef = E912436F072E9B2D00BD28CD /* imagePosition.png */; };
-		E91243C9073009F700BD28CD /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9127206072A6211006DC207 /* VTPluginPreferences.prefPane */; };
 		E9124D280730474900BD28CD /* VTPluginController.h in Resources */ = {isa = PBXBuildFile; fileRef = E903F78D071DB56900A00F30 /* VTPluginController.h */; };
 		E9124D290730474A00BD28CD /* VTPluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F78E071DB56900A00F30 /* VTPluginController.m */; };
 		E9124D8B0730B92500BD28CD /* VTMatrixDesktopLayout.h in Resources */ = {isa = PBXBuildFile; fileRef = E9124D830730B92500BD28CD /* VTMatrixDesktopLayout.h */; };
@@ -265,6 +264,11 @@
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA57E18309258E250098A112 /* VTVersionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E971034C0747CF53009CEAFD /* VTVersionTracker.m */; };
+		EAA628D60928933900EED448 /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9127206072A6211006DC207 /* VTPluginPreferences.prefPane */; };
+		EAA628DA092893EA00EED448 /* imageWidgetDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = E912738F072C096A006DC207 /* imageWidgetDelete.png */; };
+		EAA628DB092893EA00EED448 /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127390072C096A006DC207 /* imageWidgetDeletePressed.png */; };
+		EAA628DD0928940000EED448 /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127391072C096A006DC207 /* imageWidgetInfo.png */; };
+		EAA628DE0928940000EED448 /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127392072C096A006DC207 /* imageWidgetInfoPressed.png */; };
 		EAB7BCF00924DEA20067CDFD /* libdecomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7BCDD0924DDB40067CDFD /* libdecomm.a */; };
 		EAB7BD0A0924DFD70067CDFD /* libdecomm.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAB7BCDD0924DDB40067CDFD /* libdecomm.a */; };
 		EAB7C02B0924F79E0067CDFD /* dockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAB7BCD70924DDAB0067CDFD /* dockExtension.bundle */; };
@@ -615,6 +619,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				EAA628D60928933900EED448 /* VTPluginPreferences.prefPane in CopyFiles */,
 				E913F19C076E3D9600072617 /* VTDesktopTemplatePreferences.prefPane in CopyFiles */,
 				E958A88C075EF3C300773392 /* VTLayoutPreferences.prefPane in CopyFiles */,
 				E9C62AF8075A4CEB0072C1EF /* VTHotkeyPreferences.prefPane in CopyFiles */,
@@ -622,7 +627,6 @@
 				E9C629A8075A16FF0072C1EF /* VTApplicationPreferences.prefPane in CopyFiles */,
 				E9D29C35073E3C8C00E0E6CE /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */,
 				E903F8DC071DB85800A00F30 /* VTDesktopNamePrimitive.plugin in CopyFiles */,
-				E91243C9073009F700BD28CD /* VTPluginPreferences.prefPane in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2694,6 +2698,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA628DD0928940000EED448 /* imageWidgetInfo.png in Resources */,
+				EAA628DE0928940000EED448 /* imageWidgetInfoPressed.png in Resources */,
+				EAA628DA092893EA00EED448 /* imageWidgetDelete.png in Resources */,
+				EAA628DB092893EA00EED448 /* imageWidgetDeletePressed.png in Resources */,
 				E959D6D007630E6400013EB2 /* imageWidgetAdd.png in Resources */,
 				E959D6D107630E6400013EB2 /* imageWidgetAddPressed.png in Resources */,
 				E9C62B03075A5CE30072C1EF /* imageCrossSmall.tif in Resources */,
@@ -2737,7 +2745,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "my $REVISION = `PATH=\"$PATH:/opt/darwinports/bin:/opt/local/bin:/usr/local/bin:/usr/local/subversion/bin:/sw/bin\" svnversion .`; chomp $REVISION;\n   $REVISION =~ s/^.*:([0-9]+).*$/$1/ if $REVISION =~ m/:/;\nmy $project_file = $ENV{SCRIPT_INPUT_FILE_0};\nmy $tmp_file = $ENV{SCRIPT_INPUT_FILE_1};\n\nmy $file_content;\nmy @file_contents;\nmy $line_to_process = 0;\nopen( FILE_HANDLE, $project_file) or die \"File '$project_file' could not be opened! Script cannot run.\\n\";\nwhile (<FILE_HANDLE>) { \n\tif ($line_to_process ne '0') {\n\t\t$_ =~ s,<string>[^<]+</string>,<string>0.5r$REVISION</string>,;\n\t\t$line_to_process = 0;\n\t}\n\t\n\tif ($_ =~ m,CFBundleVersion,) {\n\t\t$line_to_process = scalar(@file_contents) + 2;\n\t}\n\tpush(@file_contents, $_); \n\t$file_content .= $_;\n}\nclose(FILE_HANDLE);\nunlink($project_file); unlink($tmp_file);\nforeach my $file_content_line (@file_contents) {\n\tchomp $file_content_line;\n\tmy $cmd = `echo \"$file_content_line\" >> $project_file`;\n\t   $cmd = `echo \"$file_content_line\" >> $tmp_file`;\n}\n\n1;";
+			shellScript = "my $REVISION = `PATH=\"$PATH:/opt/darwinports/bin:/opt/local/bin:/usr/local/bin:/usr/local/subversion/bin:/sw/bin\" svnversion .`; chomp $REVISION;\n   $REVISION =~ s/^.*:([0-9]+).*$/$1/ if ($REVISION =~ m/:/);\nmy $project_file = $ENV{SCRIPT_INPUT_FILE_0};\nmy $tmp_file = $ENV{SCRIPT_INPUT_FILE_1};\n\nmy $file_content;\nmy @file_contents;\nmy $line_to_process = 0;\nopen( FILE_HANDLE, $project_file) or die \"File '$project_file' could not be opened! Script cannot run.\\n\";\nwhile (<FILE_HANDLE>) { \n\tif ($line_to_process ne '0') {\n\t\t$_ =~ s,<string>[^<]+</string>,<string>0.5r$REVISION</string>,;\n\t\t$line_to_process = 0;\n\t}\n\t\n\tif ($_ =~ m,CFBundleVersion,) {\n\t\t$line_to_process = scalar(@file_contents) + 2;\n\t}\n\tpush(@file_contents, $_); \n\t$file_content .= $_;\n}\nclose(FILE_HANDLE);\nunlink($project_file); unlink($tmp_file);\nforeach my $file_content_line (@file_contents) {\n\tchomp $file_content_line;\n\tmy $cmd = `echo \"$file_content_line\" >> \"$project_file\"`;\n\t   $cmd = `echo \"$file_content_line\" >> \"$tmp_file\"`;\n}\n\n1;";
 		};
 /* End PBXShellScriptBuildPhase section */
 
