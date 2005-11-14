@@ -953,7 +953,6 @@
 		EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dockExtension.xcodeproj; path = ../../Frameworks/dockExtension/dockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = decomm.xcodeproj; path = ../../Frameworks/decomm/decomm.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
-		EAB7C1940924FF6C0067CDFD /* generateSVNRevision.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generateSVNRevision.sh; sourceTree = "<group>"; };
 		EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Virtue.xcodeproj; path = ../../frameworks/Virtue/Virtue.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../../frameworks/Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -1152,7 +1151,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EAB7C1940924FF6C0067CDFD /* generateSVNRevision.sh */,
 				E9127278072AAA22006DC207 /* plists */,
 				E91ADC3307057EFF00F69228 /* Scripting */,
 				32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */,
@@ -1744,6 +1742,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA609C1D090666C8003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */;
 			buildPhases = (
+				EAA6266F09286DAC00EED448 /* ShellScript */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
@@ -2723,6 +2722,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAA6266F09286DAC00EED448 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(PROJECT_DIR)/Info.plist",
+				"$(TEMP_FILE_DIR)/Info.plist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env perl";
+			shellScript = "my $REVISION = `PATH=\"$PATH:/opt/darwinports/bin:/opt/local/bin:/usr/local/bin:/usr/local/subversion/bin:/sw/bin\" svnversion .`; chomp $REVISION;\n   $REVISION =~ s/^.*:([0-9]+).*$/$1/ if $REVISION =~ m/:/;\nmy $project_file = $ENV{SCRIPT_INPUT_FILE_0};\nmy $tmp_file = $ENV{SCRIPT_INPUT_FILE_1};\n\nmy $file_content;\nmy @file_contents;\nmy $line_to_process = 0;\nopen( FILE_HANDLE, $project_file) or die \"File '$project_file' could not be opened! Script cannot run.\\n\";\nwhile (<FILE_HANDLE>) { \n\tif ($line_to_process ne '0') {\n\t\t$_ =~ s,<string>[^<]+</string>,<string>0.5r$REVISION</string>,;\n\t\t$line_to_process = 0;\n\t}\n\t\n\tif ($_ =~ m,CFBundleVersion,) {\n\t\t$line_to_process = scalar(@file_contents) + 2;\n\t}\n\tpush(@file_contents, $_); \n\t$file_content .= $_;\n}\nclose(FILE_HANDLE);\nunlink($project_file); unlink($tmp_file);\nforeach my $file_content_line (@file_contents) {\n\tchomp $file_content_line;\n\tmy $cmd = `echo \"$file_content_line\" >> $project_file`;\n\t   $cmd = `echo \"$file_content_line\" >> $tmp_file`;\n}\n\n1;";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -4976,6 +4993,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;

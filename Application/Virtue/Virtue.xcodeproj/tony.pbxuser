@@ -2,9 +2,10 @@
 {
 	089C165DFE840E0CC02AAC07 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {803, 493}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 556}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {803, 493}}";
+			sepNavVisRect = "{{0, 0}, {1098, 556}}";
+			sepNavWindowFrame = "{{61, 161}, {1143, 670}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -13,6 +14,7 @@
 		activeExecutable = EA609B86090666AF003BD20D /* Virtue */;
 		activeTarget = 8D1107260486CEB800E47090 /* Virtue */;
 		addToTargets = (
+			8D1107260486CEB800E47090 /* Virtue */,
 		);
 		breakpoints = (
 		);
@@ -94,8 +96,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153549534;
-			PBXWorkspaceStateSaveDate = 153549534;
+			PBXPerProjectTemplateStateSaveDate = 153651193;
+			PBXWorkspaceStateSaveDate = 153651193;
+		};
+		perUserProjectItems = {
+			EAA6289B09288F7500EED448 /* PBXBookmark */ = EAA6289B09288F7500EED448 /* PBXBookmark */;
+			EAA628A309288FDC00EED448 /* PBXTextBookmark */ = EAA628A309288FDC00EED448 /* PBXTextBookmark */;
+			EAA628A90928901400EED448 /* PBXTextBookmark */ = EAA628A90928901400EED448 /* PBXTextBookmark */;
+			EAA628B10928908F00EED448 /* PBXTextBookmark */ = EAA628B10928908F00EED448 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA609C29090666C8003BD20D /* Source Control */;
 		userBuildSettings = {
@@ -109,9 +117,9 @@
 	};
 	8D1107310486CEB800E47090 /* Info.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {891, 912}}";
-			sepNavSelRange = "{172, 0}";
-			sepNavVisRect = "{{0, 0}, {891, 542}}";
+			sepNavIntBoundsRect = "{{0, 0}, {677, 912}}";
+			sepNavSelRange = "{1277, 48}";
+			sepNavVisRect = "{{0, 0}, {677, 687}}";
 			sepNavWindowFrame = "{{15, 72}, {722, 801}}";
 		};
 	};
@@ -191,9 +199,9 @@
 	};
 	E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {891, 7264}}";
-			sepNavSelRange = "{667, 0}";
-			sepNavVisRect = "{{0, 201}, {891, 542}}";
+			sepNavIntBoundsRect = "{{0, 0}, {928, 12944}}";
+			sepNavSelRange = "{928, 0}";
+			sepNavVisRect = "{{0, 19}, {928, 557}}";
 			sepNavWindowFrame = "{{260, 207}, {973, 671}}";
 		};
 	};
@@ -310,9 +318,9 @@
 	};
 	E912721F072A6B00006DC207 /* VTOperationsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {928, 5616}}";
-			sepNavSelRange = "{11055, 0}";
-			sepNavVisRect = "{{0, 5059}, {928, 557}}";
+			sepNavIntBoundsRect = "{{0, 0}, {928, 5680}}";
+			sepNavSelRange = "{10155, 0}";
+			sepNavVisRect = "{{0, 5123}, {928, 557}}";
 			sepNavWindowFrame = "{{408, 204}, {973, 671}}";
 		};
 	};
@@ -414,9 +422,10 @@
 	};
 	E91493CA0739926E00668ACC /* VTPagerPreferencesController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {815, 1260}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 1424}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 762}, {815, 498}}";
+			sepNavVisRect = "{{0, 20}, {1098, 556}}";
+			sepNavWindowFrame = "{{130, 98}, {1143, 670}}";
 		};
 	};
 	E9175202078065E3004F5633 /* English */ = {
@@ -683,12 +692,38 @@
 		objects = (
 		);
 	};
-	EAB7C1940924FF6C0067CDFD /* generateSVNRevision.sh */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {891, 542}}";
-			sepNavSelRange = "{460, 5}";
-			sepNavVisRect = "{{0, 0}, {891, 542}}";
-			sepNavWindowFrame = "{{15, 72}, {722, 801}}";
-		};
+	EAA6289B09288F7500EED448 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = E912721F072A6B00006DC207 /* VTOperationsViewController.m */;
+	};
+	EAA628A309288FDC00EED448 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E912721F072A6B00006DC207 /* VTOperationsViewController.m */;
+		name = "VTOperationsViewController.m: 155";
+		rLen = 0;
+		rLoc = 4351;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 3843;
+	};
+	EAA628A90928901400EED448 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E912721F072A6B00006DC207 /* VTOperationsViewController.m */;
+		name = "VTOperationsViewController.m: 158";
+		rLen = 0;
+		rLoc = 4563;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 3923;
+	};
+	EAA628B10928908F00EED448 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E912721F072A6B00006DC207 /* VTOperationsViewController.m */;
+		name = "VTOperationsViewController.m: 322";
+		rLen = 0;
+		rLoc = 10155;
+		rType = 0;
+		vrLen = 1531;
+		vrLoc = 9654;
 	};
 }

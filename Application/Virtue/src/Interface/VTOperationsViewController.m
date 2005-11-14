@@ -149,15 +149,17 @@
 
 - (IBAction) setApplicationIsSticky: (id) sender {
 	// end sheet 
-	[self endSheet]; 
+	
 	// move application to the selected desktop 
 	if ([sender state] == NSOnState) {
-		[mRepresentedWindow setSticky: YES];
 		[mRepresentedApplication setSticky:YES];
+		[mWindowStickyButton setEnabled: NO];
+		[mWindowStickyButton setState: YES];
 	} else {
 		[mRepresentedApplication setSticky: NO];
 		[mRepresentedWindow setSticky: NO];
 	}
+	[self endSheet];
 }
 
 #pragma mark -
@@ -333,10 +335,12 @@
 	[mApplicationDesktopButton selectItemAtIndex: selectedItemIndex]; 
 	[mWindowDesktopButton selectItemAtIndex: selectedItemIndex]; 
 	[mApplicationStickyButton setState: [mRepresentedApplication isSticky]];
-	if ([mRepresentedApplication isSticky] == YES) {
+	if ([mApplicationStickyButton state] == YES) {
 		[mWindowStickyButton setState: YES];
+		[mWindowStickyButton setEnabled: NO];
 	} else {
-		 [mWindowStickyButton setState: [mRepresentedWindow isSticky]];
+		[mWindowStickyButton setEnabled: YES];
+		[mWindowStickyButton setState: [mRepresentedWindow isSticky]];
 	}
 }
 @end 

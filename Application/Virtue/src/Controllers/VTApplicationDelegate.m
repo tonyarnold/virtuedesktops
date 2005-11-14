@@ -10,7 +10,6 @@
 * See COPYING for licensing details
 * 
 *****************************************************************************/ 
-
 #import <Virtue/VTDesktopController.h>
 #import <Virtue/VTDesktopDecorationController.h>
 #import <Virtue/VTDesktopFilesystemController.h>
