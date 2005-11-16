@@ -442,13 +442,6 @@
 			remoteGlobalIDString = E9D29BE8073E345700E0E6CE;
 			remoteInfo = VTDesktopColorLabelPrimitive;
 		};
-		EA57E1300925897D0098A112 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7;
-			remoteInfo = dockExtension;
-		};
 		EAB7BCD60924DDAB0067CDFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
@@ -482,118 +475,6 @@
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C96309076F85003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C96709076F85003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C96C09076F9C003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C97009076F9C003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C97409076FA9003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C97809076FA9003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C98009076FC9003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C98409076FC9003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C98C09076FE2003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C99009076FE2003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C99609076FF6003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C99A09076FF6003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C9A009077008003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C9A409077008003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
-		EAF8C9AA09077022003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Virtue;
-		};
-		EAF8C9AE09077022003D54B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 /* End PBXContainerItemProxy section */
@@ -1788,7 +1669,6 @@
 				E958A895075EF3ED00773392 /* PBXTargetDependency */,
 				E913F19E076E3DA500072617 /* PBXTargetDependency */,
 				E913F1A0076E3DA500072617 /* PBXTargetDependency */,
-				EA57E1310925897D0098A112 /* PBXTargetDependency */,
 			);
 			name = Virtue;
 			productInstallPath = "$(HOME)/Applications";
@@ -1833,8 +1713,6 @@
 				WRAPPER_EXTENSION = prefPane;
 			};
 			dependencies = (
-				EAF8C9A109077008003D54B1 /* PBXTargetDependency */,
-				EAF8C9A509077008003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTPluginPreferences;
 			productName = VTPluginPreferences;
@@ -1903,8 +1781,6 @@
 			};
 			dependencies = (
 				E913F199076E3D8100072617 /* PBXTargetDependency */,
-				EAF8C96D09076F9C003D54B1 /* PBXTargetDependency */,
-				EAF8C97109076F9C003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTDesktopTemplatePreferences;
 			productName = VTDesktopTemplatePreferences;
@@ -1973,8 +1849,6 @@
 				);
 			};
 			dependencies = (
-				EAF8C96409076F85003D54B1 /* PBXTargetDependency */,
-				EAF8C96809076F85003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTInterface;
 			productName = VTInterface;
@@ -2041,8 +1915,6 @@
 			};
 			dependencies = (
 				E912271707856A78005A3C10 /* PBXTargetDependency */,
-				EAF8C9AB09077022003D54B1 /* PBXTargetDependency */,
-				EAF8C9AF09077022003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTDesktopNamePrimitive;
 			productName = VTDesktopNamePrimitive;
@@ -2108,8 +1980,6 @@
 				WRAPPER_EXTENSION = prefPane;
 			};
 			dependencies = (
-				EAF8C97509076FA9003D54B1 /* PBXTargetDependency */,
-				EAF8C97909076FA9003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTLayoutPreferences;
 			productName = VTLayoutPreferences;
@@ -2175,8 +2045,6 @@
 				WRAPPER_EXTENSION = prefPane;
 			};
 			dependencies = (
-				EAF8C98D09076FE2003D54B1 /* PBXTargetDependency */,
-				EAF8C99109076FE2003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTApplicationPreferences;
 			productName = VTApplicationPreferences;
@@ -2303,8 +2171,6 @@
 			};
 			dependencies = (
 				E9729DAA0772404E00B09C57 /* PBXTargetDependency */,
-				EAF8C98109076FC9003D54B1 /* PBXTargetDependency */,
-				EAF8C98509076FC9003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTHotkeyPreferences;
 			productName = VTHotkeyPreferences;
@@ -2371,8 +2237,6 @@
 			};
 			dependencies = (
 				E912271907856A86005A3C10 /* PBXTargetDependency */,
-				EAF8C99709076FF6003D54B1 /* PBXTargetDependency */,
-				EAF8C99B09076FF6003D54B1 /* PBXTargetDependency */,
 			);
 			name = VTDesktopColorLabelPrimitive;
 			productName = VTDesktopColorLabelPrimitive;
@@ -2944,91 +2808,6 @@
 			isa = PBXTargetDependency;
 			target = E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */;
 			targetProxy = E9D29C09073E3AF500E0E6CE /* PBXContainerItemProxy */;
-		};
-		EA57E1310925897D0098A112 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = dockExtension;
-			targetProxy = EA57E1300925897D0098A112 /* PBXContainerItemProxy */;
-		};
-		EAF8C96409076F85003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C96309076F85003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C96809076F85003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C96709076F85003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C96D09076F9C003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C96C09076F9C003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C97109076F9C003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C97009076F9C003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C97509076FA9003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C97409076FA9003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C97909076FA9003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C97809076FA9003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C98109076FC9003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C98009076FC9003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C98509076FC9003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C98409076FC9003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C98D09076FE2003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C98C09076FE2003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C99109076FE2003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C99009076FE2003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C99709076FF6003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C99609076FF6003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C99B09076FF6003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C99A09076FF6003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C9A109077008003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C9A009077008003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C9A509077008003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C9A409077008003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C9AB09077022003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Virtue;
-			targetProxy = EAF8C9AA09077022003D54B1 /* PBXContainerItemProxy */;
-		};
-		EAF8C9AF09077022003D54B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EAF8C9AE09077022003D54B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
