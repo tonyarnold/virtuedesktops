@@ -7,25 +7,25 @@
 cd "`echo $0 | sed 's/[^/]*$//'`"
 
 # Build decomm bundle
-cd ../../frameworks/decomm
-xcodebuild -buildstyle "Deployment Private Framework" clean build || exit 1;
+cd ../../Frameworks/decomm
+xcodebuild -configuration "Deployment Private Framework" clean build || exit 1;
 
 # Build dockExtension bundle 
-cd ../../frameworks/dockExtension
-xcodebuild -buildstyle "Deployment" clean build || exit 1; 
+cd ../../Frameworks/dockExtension
+xcodebuild -configuration "Deployment" clean build || exit 1; 
 
 # Build Zen Framework
-cd ../../frameworks/Zen
-xcodebuild -buildstyle "Deployment Private Framework" clean build || exit 1; 
+cd ../../Frameworks/Zen
+xcodebuild -configuration "Deployment Private Framework" clean build || exit 1; 
 
 # Build Peony Framework 
-cd ../../frameworks/Peony
-xcodebuild -buildstyle "Deployment Private Framework" clean build || exit 1; 
+cd ../../Frameworks/Peony
+xcodebuild -configuration "Deployment Private Framework" clean build || exit 1; 
 
 # Build Virtue Framework 
-cd ../../frameworks/Virtue
-xcodebuild -buildstyle "Deployment Private Framework" clean build || exit 1; 
+cd ../../Frameworks/Virtue
+xcodebuild -configuration "Deployment Private Framework" clean build || exit 1; 
 
 # Build Virtue Application 
-cd ../../application/Virtue
-xcodebuild -target Virtue -buildstyle "Deployment Private Framework" clean build || exit 1; 
+cd ../../Application/Virtue
+xcodebuild -target Virtue -configuration "Deployment Private Framework" clean build || exit 1; 

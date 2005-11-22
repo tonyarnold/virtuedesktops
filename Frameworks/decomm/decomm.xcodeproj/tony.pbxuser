@@ -28,8 +28,12 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153578394;
-			PBXWorkspaceStateSaveDate = 153578394;
+			PBXPerProjectTemplateStateSaveDate = 154319160;
+			PBXWorkspaceStateSaveDate = 154319160;
+		};
+		perUserProjectItems = {
+			EAEC27B60932B94200A97755 /* PBXTextBookmark */ = EAEC27B60932B94200A97755 /* PBXTextBookmark */;
+			EAEC27BE0932B95000A97755 /* PBXTextBookmark */ = EAEC27BE0932B95000A97755 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EAE822B10924A5DC00239477 /* Source Control */;
 		userBuildSettings = {
@@ -54,7 +58,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {822, 1280}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 693}, {822, 587}}";
+			sepNavVisRect = "{{0, 16}, {822, 587}}";
 		};
 	};
 	E93637FE06FCCCA300E354DB /* DECEventInfo.c */ = {
@@ -150,5 +154,25 @@
 	EAE822B20924A5DC00239477 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	EAEC27B60932B94200A97755 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E93637FC06FCCCA300E354DB /* DECEventDesktop.c */;
+		name = "DECEventDesktop.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 80;
+	};
+	EAEC27BE0932B95000A97755 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E93637FC06FCCCA300E354DB /* DECEventDesktop.c */;
+		name = "DECEventDesktop.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 80;
 	};
 }

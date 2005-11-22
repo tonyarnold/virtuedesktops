@@ -325,13 +325,23 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string>DECEventDesktop.c</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
+										<key>PBXProjectModuleLabel</key>
+										<string>DECEventDesktop.c</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>EAEC27BE0932B95000A97755</string>
+										<key>history</key>
+										<array>
+											<string>EAEC27B60932B94200A97755</string>
+										</array>
 									</dict>
 									<key>SplitCount</key>
 									<string>1</string>
@@ -388,9 +398,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EAFD4E4C09276D80005D4ECB</string>
+				<string>EAEC27B80932B94200A97755</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EAFD4E4D09276D80005D4ECB</string>
+				<string>EAEC27B90932B94200A97755</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -509,7 +519,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>153578394.69367999</real>
+	<real>154319184.36177599</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -524,6 +534,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>EAE822A00924A5DA00239477</string>
 		<string>/Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/decomm/decomm.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -570,7 +581,7 @@
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-								<string>{{0, 241}, {875, 418}}</string>
+								<string>{{0, 220}, {875, 439}}</string>
 								<key>PBXProjectModuleGUID</key>
 								<string>XCMainBuildResultsModuleGUID</string>
 								<key>PBXProjectModuleLabel</key>
@@ -608,7 +619,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>EAE822A00924A5DA00239477</string>
-				<string>EA57E4C1092598870098A112</string>
+				<string>EAEC27BA0932B94200A97755</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

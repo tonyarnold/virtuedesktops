@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = "Development Private Framework";
+		activeBuildConfigurationName = "Deployment Private Framework";
 		activeBuildStyle = 014CEA440018CDF011CA2923 /* Development */;
 		activeTarget = 8DC2EF4F0486A6940098B216 /* Peony */;
 		addToTargets = (
@@ -81,8 +81,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 154319106;
-			PBXWorkspaceStateSaveDate = 154319106;
+			PBXPerProjectTemplateStateSaveDate = 154319241;
+			PBXWorkspaceStateSaveDate = 154319241;
 		};
 		perUserProjectItems = {
 			EA1E6D470924CAA400AABD4D /* PBXTextBookmark */ = EA1E6D470924CAA400AABD4D /* PBXTextBookmark */;
@@ -94,10 +94,10 @@
 			EA6CB6760924CFD5004AC51D /* PBXTextBookmark */ = EA6CB6760924CFD5004AC51D /* PBXTextBookmark */;
 			EA88D6CB092BEB93002AC277 /* PBXTextBookmark */ = EA88D6CB092BEB93002AC277 /* PBXTextBookmark */;
 			EA88D6CC092BEB93002AC277 /* PBXTextBookmark */ = EA88D6CC092BEB93002AC277 /* PBXTextBookmark */;
-			EAEC275B0932B62A00A97755 /* PBXTextBookmark */ = EAEC275B0932B62A00A97755 /* PBXTextBookmark */;
-			EAEC275C0932B62A00A97755 /* PBXTextBookmark */ = EAEC275C0932B62A00A97755 /* PBXTextBookmark */;
-			EAEC275D0932B62A00A97755 /* PBXTextBookmark */ = EAEC275D0932B62A00A97755 /* PBXTextBookmark */;
-			EAEC27870932B8AE00A97755 /* PBXTextBookmark */ = EAEC27870932B8AE00A97755 /* PBXTextBookmark */;
+			EAEC27C60932B96300A97755 /* PBXTextBookmark */ = EAEC27C60932B96300A97755 /* PBXTextBookmark */;
+			EAEC27EC0932B9B200A97755 /* PBXTextBookmark */ = EAEC27EC0932B9B200A97755 /* PBXTextBookmark */;
+			EAEC27ED0932B9B200A97755 /* PBXTextBookmark */ = EAEC27ED0932B9B200A97755 /* PBXTextBookmark */;
+			EAEC28070932BA0100A97755 /* PBXTextBookmark */ = EAEC28070932BA0100A97755 /* PBXTextBookmark */;
 			EAFD4CC409276018005D4ECB /* PBXTextBookmark */ = EAFD4CC409276018005D4ECB /* PBXTextBookmark */;
 			EAFD4CC709276018005D4ECB /* PBXTextBookmark */ = EAFD4CC709276018005D4ECB /* PBXTextBookmark */;
 			EAFD4D56092766EE005D4ECB /* PBXTextBookmark */ = EAFD4D56092766EE005D4ECB /* PBXTextBookmark */;
@@ -144,8 +144,8 @@
 	E93637D206FCCC2200E354DB /* PNApplication.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {812, 4864}}";
-			sepNavSelRange = "{2995, 0}";
-			sepNavVisRect = "{{0, 2264}, {812, 652}}";
+			sepNavSelRange = "{3173, 0}";
+			sepNavVisRect = "{{0, 2256}, {812, 652}}";
 			sepNavWindowFrame = "{{165, 72}, {1268, 765}}";
 		};
 	};
@@ -338,18 +338,6 @@
 		vrLen = 809;
 		vrLoc = 617;
 	};
-	EA88D6CE092BEB93002AC277 /* ZNShading.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = ZNShading.m;
-		path = /Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/Zen/src/common/ZNShading.m;
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {963, 2544}}";
-			sepNavSelRange = "{3316, 22}";
-			sepNavVisRect = "{{0, 1488}, {963, 557}}";
-		};
-	};
 	EAE822ED0924A62C00239477 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
@@ -363,44 +351,56 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	EAEC275B0932B62A00A97755 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA88D6CE092BEB93002AC277 /* ZNShading.m */;
-		name = "switch (startEdge) {";
-		rLen = 22;
-		rLoc = 3316;
-		rType = 0;
-		vrLen = 1181;
-		vrLoc = 2797;
-	};
-	EAEC275C0932B62A00A97755 /* PBXTextBookmark */ = {
+	EAEC27C60932B96300A97755 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E93637D206FCCC2200E354DB /* PNApplication.m */;
-		name = kPnOnApplicationUnstickied;
-		rLen = 26;
-		rLoc = 2260;
-		rType = 0;
-		vrLen = 983;
-		vrLoc = 1508;
-	};
-	EAEC275D0932B62A00A97755 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA88D6CE092BEB93002AC277 /* ZNShading.m */;
-		name = "switch (startEdge) {";
-		rLen = 22;
-		rLoc = 3316;
-		rType = 0;
-		vrLen = 1181;
-		vrLoc = 2797;
-	};
-	EAEC27870932B8AE00A97755 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E93637D206FCCC2200E354DB /* PNApplication.m */;
-		name = "PNApplication.m: 144";
+		name = "PNApplication.m: 147";
 		rLen = 0;
-		rLoc = 2995;
+		rLoc = 3173;
 		rType = 0;
-		vrLen = 1106;
+		vrLen = 1090;
+		vrLoc = 2809;
+	};
+	EAEC27CA0932B96300A97755 /* tony.pbxuser */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text;
+		name = tony.pbxuser;
+		path = /Users/tony/Documents/Development/Checkouts/Virtue/Frameworks/Peony/Peony.xcodeproj/tony.pbxuser;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {812, 9200}}";
+			sepNavSelRange = "{16704, 0}";
+			sepNavVisRect = "{{0, 0}, {812, 652}}";
+		};
+	};
+	EAEC27EC0932B9B200A97755 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EAEC27CA0932B96300A97755 /* tony.pbxuser */;
+		name = "tony.pbxuser: 539";
+		rLen = 0;
+		rLoc = 16704;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 0;
+	};
+	EAEC27ED0932B9B200A97755 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EAEC27CA0932B96300A97755 /* tony.pbxuser */;
+		name = "tony.pbxuser: 539";
+		rLen = 0;
+		rLoc = 16704;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 0;
+	};
+	EAEC28070932BA0100A97755 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E93637D206FCCC2200E354DB /* PNApplication.m */;
+		name = "PNApplication.m: 147";
+		rLen = 0;
+		rLoc = 3173;
+		rType = 0;
+		vrLen = 1090;
 		vrLoc = 2809;
 	};
 	EAFD4CC409276018005D4ECB /* PBXTextBookmark */ = {
