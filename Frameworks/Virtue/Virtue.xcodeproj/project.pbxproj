@@ -825,34 +825,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA609CB0090667D2003BD20D /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILD_DIR)",
-					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				PRODUCT_NAME = Virtue;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
 		EA609CB1090667D2003BD20D /* Development Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -881,32 +853,6 @@
 			};
 			name = "Development Private Framework";
 		};
-		EA609CB2090667D2003BD20D /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILD_DIR)",
-					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				PRODUCT_NAME = Virtue;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
 		EA609CB3090667D2003BD20D /* Deployment Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -934,37 +880,6 @@
 			};
 			name = "Deployment Private Framework";
 		};
-		EA609CB4090667D2003BD20D /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILD_DIR)",
-					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks",
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				PRODUCT_NAME = Virtue;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Default;
-		};
-		EA609CB6090667D2003BD20D /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
-		};
 		EA609CB7090667D2003BD20D /* Development Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -972,14 +887,6 @@
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = "Development Private Framework";
-		};
-		EA609CB8090667D2003BD20D /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Deployment;
 		};
 		EA609CB9090667D2003BD20D /* Deployment Private Framework */ = {
 			isa = XCBuildConfiguration;
@@ -989,40 +896,26 @@
 			};
 			name = "Deployment Private Framework";
 		};
-		EA609CBA090667D2003BD20D /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		EA609CAF090667D2003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA609CB0090667D2003BD20D /* Development */,
 				EA609CB1090667D2003BD20D /* Development Private Framework */,
-				EA609CB2090667D2003BD20D /* Deployment */,
 				EA609CB3090667D2003BD20D /* Deployment Private Framework */,
-				EA609CB4090667D2003BD20D /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = "Deployment Private Framework";
 		};
 		EA609CB5090667D2003BD20D /* Build configuration list for PBXProject "Virtue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA609CB6090667D2003BD20D /* Development */,
 				EA609CB7090667D2003BD20D /* Development Private Framework */,
-				EA609CB8090667D2003BD20D /* Deployment */,
 				EA609CB9090667D2003BD20D /* Deployment Private Framework */,
-				EA609CBA090667D2003BD20D /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = "Deployment Private Framework";
 		};
 /* End XCConfigurationList section */
 	};

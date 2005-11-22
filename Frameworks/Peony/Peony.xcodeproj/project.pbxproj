@@ -473,32 +473,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EAE822E20924A62C00239477 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "";
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = peony_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../decomm/includes;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				PRODUCT_NAME = Peony;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
 		EAE822E30924A62C00239477 /* Development Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -525,30 +499,6 @@
 			};
 			name = "Development Private Framework";
 		};
-		EAE822E40924A62C00239477 /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "";
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = peony_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../decomm/includes;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				PRODUCT_NAME = Peony;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
 		EAE822E50924A62C00239477 /* Deployment Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -566,35 +516,6 @@
 			};
 			name = "Deployment Private Framework";
 		};
-		EAE822E60924A62C00239477 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "";
-				FRAMEWORK_VERSION = A;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = peony_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../decomm/includes;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				PRODUCT_NAME = Peony;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Default;
-		};
-		EAE822E80924A62C00239477 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
-		};
 		EAE822E90924A62C00239477 /* Development Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -602,14 +523,6 @@
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = "Development Private Framework";
-		};
-		EAE822EA0924A62C00239477 /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Deployment;
 		};
 		EAE822EB0924A62C00239477 /* Deployment Private Framework */ = {
 			isa = XCBuildConfiguration;
@@ -620,40 +533,26 @@
 			};
 			name = "Deployment Private Framework";
 		};
-		EAE822EC0924A62C00239477 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		EAE822E10924A62C00239477 /* Build configuration list for PBXNativeTarget "Peony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAE822E20924A62C00239477 /* Development */,
 				EAE822E30924A62C00239477 /* Development Private Framework */,
-				EAE822E40924A62C00239477 /* Deployment */,
 				EAE822E50924A62C00239477 /* Deployment Private Framework */,
-				EAE822E60924A62C00239477 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = "Deployment Private Framework";
 		};
 		EAE822E70924A62C00239477 /* Build configuration list for PBXProject "Peony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAE822E80924A62C00239477 /* Development */,
 				EAE822E90924A62C00239477 /* Development Private Framework */,
-				EAE822EA0924A62C00239477 /* Deployment */,
 				EAE822EB0924A62C00239477 /* Deployment Private Framework */,
-				EAE822EC0924A62C00239477 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = "Deployment Private Framework";
 		};
 /* End XCConfigurationList section */
 	};
