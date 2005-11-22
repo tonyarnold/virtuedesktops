@@ -129,11 +129,6 @@
 	free(windows);
 }
 
-- (BOOL) isSticky {
-	// cannot return anything useful here, think we should throw an exception 
-	return NO; 
-}
-
 #pragma mark -
 - (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration {
 	if ([mWindows count] == 0)
@@ -163,17 +158,7 @@
 	free(windows); 
 }
 
-- (float) alphaValue {
-	// cannot return anything useful here, think we should throw an exception 
-	return 0.0; 
-}
-
 #pragma mark -
-- (int) desktopId {
-	// cannot return anything useful here, think we should throw an exception 	
-	return -1;
-}
-
 - (void) setDesktop: (PNDesktop*) desktop {
 	if ([mWindows count] == 0)
 		return; 
@@ -186,18 +171,6 @@
 	CGSExtSetWindowListWorkspace(windows, windowsCount, [desktop identifier]);  
 
 	free(windows); 
-}
-
-#pragma mark -
-- (NSString*) name {
-	// cannot return anything useful here, think we should throw an exception 
-	return nil; 
-}
-
-#pragma mark -
-- (NSImage*) icon {
-	// cannot return anything useful here, think we should throw an exception 
-	return nil; 
 }
 
 #pragma mark -

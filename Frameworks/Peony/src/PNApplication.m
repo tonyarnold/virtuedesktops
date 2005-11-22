@@ -141,17 +141,18 @@
  *
  */ 
 - (void) setDesktop: (PNDesktop*) desktop {
-	// we will not modify the desktop we belong to but will just move 
+	// We will not modify the desktop we belong to but will just move 
 	// all the windows we know about to the passed desktop, a new application
 	// instance will be created there... 
 	
-	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] initWithCapacity:0];
-	NSEnumerator*   windowIter      = [mWindows objectEnumerator];
-	PNWindow*       window          = nil;
+	NSMutableArray* windowsForSwitching = nil;
+	NSEnumerator*   windowIter					= [mWindows objectEnumerator];
+	PNWindow*       window							= nil;
 	       
 	while (window = [windowIter nextObject]) {
-		if ([window isSticky] == NO)
+		if ([window isSticky] == NO) {
 			[windowsForSwitching addObject: window];
+		}
 	}
 
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
