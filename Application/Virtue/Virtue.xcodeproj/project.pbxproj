@@ -400,182 +400,182 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B2FD509333FA700477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B2FD709333FA700477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B2FD909333FB500477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B2FDB09333FB500477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B2FDD09333FB500477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B2FDF09333FC200477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B2FE109333FC200477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B2FE309333FC200477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B2FE709333FD000477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B2FE909333FD000477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B2FEB09333FD000477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B2FEF09333FDE00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B2FF109333FDE00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B2FF309333FDE00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B2FF709333FE800477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B2FF909333FE800477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B2FFB09333FE800477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B2FFF09333FF600477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B300109333FF600477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B300309333FF600477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B300709333FFF00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Zen */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Zen;
 		};
 		EA8B300909333FFF00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Virtue */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Virtue;
 		};
 		EA8B300B09333FFF00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7BCCF0924DDAB0067CDFD /* dockExtension.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7 /* dockExtension */;
+			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7;
 			remoteInfo = dockExtension;
 		};
 		EA8B300D09333FFF00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Peony */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
 		EA8B300F09333FFF00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB7BCD80924DDB40067CDFD /* decomm.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E /* decomm */;
+			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E;
 			remoteInfo = decomm;
 		};
 		EAB7BCD60924DDAB0067CDFD /* PBXContainerItemProxy */ = {
@@ -2726,7 +2726,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "my $REVISION = `PATH=\"$PATH:/opt/darwinports/bin:/opt/local/bin:/usr/local/bin:/usr/local/subversion/bin:/sw/bin\" svnversion .`; chomp $REVISION;\n   $REVISION =~ s/^.*:([0-9]+).*$/$1/ if ($REVISION =~ m/:/);\nmy $project_file = $ENV{SCRIPT_INPUT_FILE_0};\nmy $tmp_file = $ENV{SCRIPT_INPUT_FILE_1};\n\nmy $file_content;\nmy @file_contents;\nmy $line_to_process = 0;\nopen( FILE_HANDLE, $project_file) or die \"File '$project_file' could not be opened! Script cannot run.\\n\";\nwhile (<FILE_HANDLE>) { \n\tif ($line_to_process ne '0') {\n\t\t$_ =~ s,<string>[^<]+</string>,<string>0.5r$REVISION</string>,;\n\t\t$line_to_process = 0;\n\t}\n\t\n\tif ($_ =~ m,CFBundleVersion,) {\n\t\t$line_to_process = scalar(@file_contents) + 2;\n\t}\n\tpush(@file_contents, $_); \n\t$file_content .= $_;\n}\nclose(FILE_HANDLE);\nunlink($project_file); unlink($tmp_file);\nforeach my $file_content_line (@file_contents) {\n\tchomp $file_content_line;\n\tmy $cmd = `echo \"$file_content_line\" >> \"$project_file\"`;\n\t   $cmd = `echo \"$file_content_line\" >> \"$tmp_file\"`;\n}\n\n1;";
+			shellScript = "my $REVISION = `PATH=\"$PATH:/opt/darwinports/bin:/opt/local/bin:/usr/local/bin:/usr/local/subversion/bin:/sw/bin\" svnversion .`; chomp $REVISION;\n   $REVISION =~ s/^.*:([0-9]+).*$/$1/ if ($REVISION =~ m/:/);\nmy $project_file = $ENV{SCRIPT_INPUT_FILE_0};\nmy $tmp_file = $ENV{SCRIPT_INPUT_FILE_1};\nmy $tmp_file2 = $ENV{SCRIPT_INPUT_FILE_2};\n\nmy $file_content;\nmy @file_contents;\nmy $line_to_process = 0;\nopen( FILE_HANDLE, $project_file) or die \"File '$project_file' could not be opened! Script cannot run.\\n\";\nwhile (<FILE_HANDLE>) { \n\tif ($line_to_process ne '0') {\n\t\t$_ =~ s,<string>[^<]+</string>,<string>0.5r$REVISION</string>,;\n\t\t$line_to_process = 0;\n\t}\n\t\n\tif ($_ =~ m,CFBundleVersion,) {\n\t\t$line_to_process = scalar(@file_contents) + 2;\n\t}\n\tpush(@file_contents, $_); \n\t$file_content .= $_;\n}\nclose(FILE_HANDLE);\nunlink($project_file); unlink($tmp_file);\nforeach my $file_content_line (@file_contents) {\n\tchomp $file_content_line;\n\tmy $cmd = `echo \"$file_content_line\" >> \"$project_file\"`;\n\t   $cmd = `echo \"$file_content_line\" >> \"$tmp_file\"`;\n\t\t$cmd = `echo \"$file_content_line\" >> \"$tmp_file2\"`;\n}\n\n1;";
 		};
 /* End PBXShellScriptBuildPhase section */
 
