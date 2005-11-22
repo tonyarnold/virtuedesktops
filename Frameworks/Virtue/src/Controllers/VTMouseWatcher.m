@@ -79,7 +79,6 @@
 - (void) dealloc {
 	ZEN_RELEASE(mShader); 
 	ZEN_RELEASE(mWatcher); 
-	NSLog(@"De-allocating VTMouseWatcherView");
 	[super dealloc]; 
 }
 
@@ -159,7 +158,7 @@
 	ZEN_RELEASE(mWindows); 
 	ZEN_RELEASE(mTrackingRects); 
 	ZEN_RELEASE(mObservers);
-	NSLog(@"De-allocating VTMouseWatcherView without a super dealloc");
+	[super dealloc];
 }
 
 + (id) sharedInstance {
@@ -186,9 +185,7 @@
 		[mObservers setObject: observersForEdge forKey: [NSNumber numberWithInt: edge]]; 
 	}
 	[observersForEdge addObject: observer];
-	
-	NSLog(@"Edge %i added", edge);
-}
+	}
 
 - (void) removeObserver: (NSObject*) observer {
 	[self removeObserver: observer forEdge: ZNEdgeAny]; 
@@ -199,8 +196,6 @@
 	[observers removeObject: observer]; 
 	if ([observers count] == 0) 
 		[self enableEdge: edge enabled: NO]; 
-	
-	NSLog(@"Removed edge %i", edge);
 }
 
 #pragma mark -
@@ -218,7 +213,7 @@
 	[[edgeWindow contentView] setNeedsDisplay: YES]; 
 	
 	// fade in window (we do that really fast for mouseEntered events) 
-	[edgeWindow setFadingAnimationTime: 0.1f]; 
+	[edgeWindow setFadingAnimationTime: 0.2f]; 
 	[edgeWindow fadeIn];
 	
 	// loop over our observers and notify them 
@@ -227,8 +222,6 @@
 	
 	while (observer = [observerIter nextObject])
 		[observer mouseEntered: event]; 
-	
-	NSLog(@"Mouse entered edge %i", mCurrentEdge);
 }
 
 - (void) mouseExited: (NSEvent*) event {
@@ -238,7 +231,7 @@
 	ZNEffectWindow*	edgeWindow	= [mWindows objectForKey: edgeObject]; 
 	
 	// start fading in the window 
-	[edgeWindow setFadingAnimationTime: 0.6f]; 
+	[edgeWindow setFadingAnimationTime: 0.7f]; 
 	[edgeWindow fadeOut]; 
 	// start ignoring mouse clicks 
 	[edgeWindow setIgnoresMouseEvents: YES];
@@ -402,14 +395,14 @@
 	
 	// bind the view to the window  
 	[window setContentView: view];
-//	[window setBackgroundColor: [NSColor clearColor]];
-//	[window setAlphaValue: 0.0f]; 
+	[window setBackgroundColor: [NSColor clearColor]];
+	[window setAlphaValue: 0.0f]; 
 	[window setLevel: NSStatusWindowLevel + 1];	
-	[window setOpaque: YES]; 
+	[window setOpaque: NO]; 
 	[window setAcceptsMouseMovedEvents: YES];
 	[window setIgnoresMouseEvents: YES];
 	[window setInitialFirstResponder: view]; 
-	[window setReleasedWhenClosed: NO];
+	[window setReleasedWhenClosed: YES];
 	
 	// set ourselves as the delegate 
 	[window setDelegate: self];
@@ -465,8 +458,6 @@
 	// remove from our dictionaries 
 	[mTrackingRects removeObjectForKey: [NSNumber numberWithInt: edge]]; 
 	[mWindows removeObjectForKey: [NSNumber numberWithInt: edge]]; 
-	
-	NSLog(@"Removed window for edge %i",edge);
 }
 
 @end 
@@ -483,8 +474,6 @@
 		[window orderFront: self]; 
 	else
 		[window orderOut: self]; 
-	
-	NSLog(@"Enabled edge %i",edge);
 }
 
 @end 

@@ -174,9 +174,7 @@
     // fetch the hot key reference for identifying the hotkey 
 	EventHotKeyRef hotKeyRef;
     [oValue getValue: &hotKeyRef];
-		
-	NSLog(@"Hot key %@ pressed", hotKeyRef);
-	
+
 	// iterate over all notifications and try to find the hotkey ref 
 	// we just got passed in the notification 
 	NSEnumerator*			notificationIter	= [[mNotifications allNotifications] objectEnumerator]; 

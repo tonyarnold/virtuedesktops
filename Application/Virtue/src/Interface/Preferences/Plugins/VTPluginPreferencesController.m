@@ -52,7 +52,7 @@
 #pragma mark -
 #pragma mark VTPluginInstance
 @interface VTPluginInstance (VTPreferencesDisplay) 
-- (NSMutableData*) pluginDescriptionHelper; 
+- (NSData*) pluginDescriptionHelper; 
 @end
 
 @implementation VTPluginInstance (VTPreferencesDisplay) 

@@ -433,26 +433,14 @@
 		EAE822A90924A5DC00239477 /* Deployment Private Framework */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Carbon,
 				);
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = decomm;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				ZERO_LINK = NO;
 			};
 			name = "Deployment Private Framework";
 		};
