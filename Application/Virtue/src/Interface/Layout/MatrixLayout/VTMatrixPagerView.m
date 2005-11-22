@@ -391,7 +391,34 @@ enum
 }
 
 - (void) resetCursorRects {
-	[self rebuildTrackingRects]; 
+	//[self rebuildTrackingRects]; 
+	// remove all tracking rects we got 
+	// remove all tracking rects 
+	while ([mTrackingRects count] > 0) 
+		[self removeTrackingRect: [[mTrackingRects objectAtIndex: 0] intValue]]; 
+	[mTrackingRects removeAllObjects]; 
+	
+	// now create the new ones 
+	NSEnumerator*		cellIter	= [[mPagerCells cells] objectEnumerator]; 
+	VTMatrixPagerCell*	cell		= nil; 
+		
+	while (cell = [cellIter nextObject]) {
+		if ([cell desktop] == nil)
+			continue; 
+		
+		int row; 
+		int col; 
+				
+		[mPagerCells getRow: &row column: &col ofCell: cell]; 
+				
+		NSRect cellFrame		= [mPagerCells cellFrameAtRow: row column: col]; 
+		NSRect cellFrameView	= [mPagerCells convertRect: cellFrame toView: self]; 
+				
+		// add the new one 
+		NSTrackingRectTag trackingRect = [self addTrackingRect: cellFrameView owner: self userData: self assumeInside: NO]; 
+				
+		[cell setTag: trackingRect]; 
+	}
 }
 
 #pragma mark -

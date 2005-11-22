@@ -1,13 +1,30 @@
 Virtue Changelog
-Tony Arnold <tonyarnold (at) users (dot) sourceforge (dot) net> (Version 0.5r3 and above)
-Thomas Staller <playback (at) users (dot) sourceforge (dot) net> (Version 0.5r2 and below)
+Tony Arnold			<tonyarnold (at) users (dot) sourceforge (dot) net> (Version 0.5r3 and above)
+Thomas Staller	<playback (at) users (dot) sourceforge (dot) net> (Version 0.5r2 and below)
 
-Virtue 0.5r3
+[Virtue 0.5r17]
+[REMOVED] Key equivalents from Virtue status menu. They can't be used whilst this is running with LSUIElement set to 1. 
+[FIXED] Operations window will disable the individual window sticky settings when the application is sticky. It should in future also disable or hide the pop-up menus that control which desktop parents an application or window, as this seems to be interfering with the sticky bit. 
+[NEW] Builds will automatically tag themselves with the latest full svn revision. 
+
+[Virtue 0.5r14]
+[CHANGED] Updated PNApplication to use PNWindowList rather than iterating over all the windows in the mWindows array.
+
+[Virtue 0.5r12]
+[FIXED] Replaced references to FSpGetInfo/FSpSetInfo with FSGetCatalogInfo/FSSetCatalogInfo. FSp*etInfo is deprecated under Tiger 
+[FIXED] Reverted mac_inject to the official version (how did it ever change in the first place?!) 
+[CHANGED] We now have some more optimisations enabled. Virtue seems to use a little less memory than it has been, but I'd say the memory usage isn't going to get much better while there are 3 frameworks, a static library and a bundle in the mix. Re-factoring (or at least simplification) will need to be put on the cards for 0.6 
+
+[Virtue 0.5r10]
+[FIXED] Virtue's automatic desktop switching on application change now works under Tiger.
+
+[Virtue 0.5r3]
 Bugfix release.
-[FIX]	Virtue now starts and (somewhat) works under Mac OS X 10.4 "Tiger".
+[CHANGED] Virtue is now only for Mac OS X 10.4 "Tiger" and later.
+[FIXED]	Virtue now starts and (somewhat) works under Mac OS X 10.4 "Tiger".
 [NEW]	Added the Tiger-only transistion "Flip Desktop".
 
-Virtue 0.5r2
+[Virtue 0.5r2]
 Bugfix and Feature release. 
 
 [NEW]	Reordering of desktops via the Pager (id1069967, id1081382, id1072262). 
@@ -15,17 +32,17 @@ Bugfix and Feature release.
 [NEW]	Application sticky state remembered through restarts. 
 [NEW]	Applications can be hidden from display in the Pager, useful for application you have stickied and know they are running. 
 [NEW]	First version of user documentation (id1070872). 
-[IMP]	Preferences were reorganized, I hope they are more easy to understand now (thank you Nathan and Nicholas) (id1072246). 
-[IMP]	PathFinder users not running the Finder should no longer get the Finder restarted by Virtue (id1071958); Virtue will also allow changing the default wallpaper while running.
-[FIX]	Applications on non-visible desktops should no longer pop up tooltips ifthey are listening to mouse events directly (e.g. Adium) (id1070430). 
-[FIX]	Fixed preference saving. Preferences could be lost when shutting down Virtue (id1069968, id1074781).
-[FIX]	Transition animations can now be turned off (Kevin). 
-[FIX]	Fixed a crash bug that was likely to crash Virtue upon desktop switches. 
-[FIX]	Fixed position of Notification Bezel that was expecting the Dock to be on the lower edge of the screen. 
-[FIX]	Pager keyboard navigation is now complete. No need to touch the mouse(id1072265).
-[FIX]	Fixed modifier names that were stated incorrectly in the user interface in some places (id1078622). 
+[CHANGED]	Preferences were reorganized, I hope they are more easy to understand now (thank you Nathan and Nicholas) (id1072246). 
+[CHANGED]	PathFinder users not running the Finder should no longer get the Finder restarted by Virtue (id1071958); Virtue will also allow changing the default wallpaper while running.
+[FIXED]	Applications on non-visible desktops should no longer pop up tooltips ifthey are listening to mouse events directly (e.g. Adium) (id1070430). 
+[FIXED]	Fixed preference saving. Preferences could be lost when shutting down Virtue (id1069968, id1074781).
+[FIXED]	Transition animations can now be turned off (Kevin). 
+[FIXED]	Fixed a crash bug that was likely to crash Virtue upon desktop switches. 
+[FIXED]	Fixed position of Notification Bezel that was expecting the Dock to be on the lower edge of the screen. 
+[FIXED]	Pager keyboard navigation is now complete. No need to touch the mouse(id1072265).
+[FIXED]	Fixed modifier names that were stated incorrectly in the user interface in some places (id1078622). 
 
-Virtue 0.5r1
+[Virtue 0.5r1]
 Major rewrite of Virtue 0.4 code-base; fixes and new features as follows:  
 
 [NEW]	AppleScript support (Experimental and far from complete)
@@ -42,15 +59,14 @@ Major rewrite of Virtue 0.4 code-base; fixes and new features as follows:
 		- Desktop Collection inspector 
 		- Desktop inspector 
 [NEW]	Statusbar Menu optionally displays currently shown desktop name
-[FIX]	Hotkey enabled-state was not correctly persisted in 
+[FIXED]	Hotkey enabled-state was not correctly persisted in 
 	User defaults 
-[FIX]	Switching to an empty desktop did not deactivate the 
+[FIXED]	Switching to an empty desktop did not deactivate the 
 	previous application; the Finder is now activated
-[FIX]	Operations menu window did not provide a way of aborting, 
+[FIXED]	Operations menu window did not provide a way of aborting, 
 	can now be aborted via ESC or the Cancel button 
 
-Virtue 0.4
-
+[Virtue 0.4]
 [NEW]	Application icons in notification window 
 [NEW]	Application icons in overlay pager
 [NEW]	German localization 
@@ -66,22 +82,22 @@ Virtue 0.4
 		stickied and sent to another desktop via the Operations menu. New
 		windows for an application will inherit the sticky flag of their
 		application (experimental). 
-[FIX]	Multi-screen setups should be fully supported now. Please report
+[FIXED]	Multi-screen setups should be fully supported now. Please report
 		any problems you encounter. 
-[FIX]	Window alpha levels were overwritten upon sending to a 
+[FIXED]	Window alpha levels were overwritten upon sending to a 
 		different desktop - they are now preserved. 
-[FIX]	Deleting of desktops did not work properly and Virtue 
+[FIXED]	Deleting of desktops did not work properly and Virtue 
 		lost orientation - desktops can now be deleted 
-[FIX]	Deleting the last desktop is no longer allowed
-[FIX]	Deleting a desktop sent its windows to the wrong desktop
-[FIX]	Desktop switches that would result in the same desktop
+[FIXED]	Deleting the last desktop is no longer allowed
+[FIXED]	Deleting a desktop sent its windows to the wrong desktop
+[FIXED]	Desktop switches that would result in the same desktop
 		(e.g. in a one column layout switching to the left desktop)
 		are now not carried out as designed. 
-[FIX]	Overlay pager did display deleted desktops
-[FIX]	Desktop navigation resulted in wrong desktops 
-[FIX]	Overlay pager was reacting counter intuitive in most situations;  
+[FIXED]	Overlay pager did display deleted desktops
+[FIXED]	Desktop navigation resulted in wrong desktops 
+[FIXED]	Overlay pager was reacting counter intuitive in most situations;  
 		the pager will now only switch to a desktop, if the mouse pointer 
 		was under a desktop while closing, or if a desktop was clicked. 
-[FIX]	Fixed bug that prevented setting transition durations below 1 sec
+[FIXED]	Fixed bug that prevented setting transition durations below 1 sec
 
-Virtue 0.3
+[Virtue 0.3]
