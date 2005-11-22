@@ -44,11 +44,18 @@
 
 	// sticky 
 - (void) setSticky: (BOOL) stickyState; 
+- (BOOL) isSticky; 
 	// alphaValue 
 - (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration; 
 - (void) setAlphaValue: (float) alpha; 
+- (float) alphaValue; 
 	// desktop
+- (int) desktopId;
 - (void) setDesktop: (PNDesktop*) desktop; 
+	// name
+- (NSString*) name; 
+	// iconic representation
+- (NSImage*) icon; 
 
 - (void) orderOut; 
 - (void) orderIn; 

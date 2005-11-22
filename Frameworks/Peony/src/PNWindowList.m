@@ -85,20 +85,18 @@
 
 - (void) delWindow: (PNWindow*) window {
 	// remove the window 
-	[mWindows removeObject: window]; 
-	[mNativeWindows removeObject: [NSNumber numberWithInt: [window nativeWindow]]];
+	[mWindows removeObject: window];
+	[mNativeWindows removeObject: [NSNumber numberWithInt: [window nativeWindow]]]; 
 }
 
 - (void) delWindows: (NSArray*) windows {
 	// iterate the passed array and delete all PNWindow objects 
-	NSEnumerator*	windowIter	= [windows objectEnumerator]; 
-	NSObject*		window		= nil; 
+	NSEnumerator*	windowIter	= [windows objectEnumerator];
+	NSObject*		window		= nil;
 	
 	while (window = [windowIter nextObject]) {
-		if ([window isKindOfClass: [PNWindow class]] == NO)
-			return; 
-		
-		[self delWindow: (PNWindow*)window]; 
+		if ([window isKindOfClass: [PNWindow class]] == YES)
+			[self delWindow: (PNWindow*)window]; 
 	}
 }
 
@@ -118,15 +116,12 @@
 		CGSExtClearWindowListTags(windows, windowsCount, CGSTagSticky); 
 	}
 	
-	NSEnumerator*	windowIter	= [mWindows objectEnumerator]; 
-	PNWindow*			window			= nil; 
-	int						i						= 0; 
-	
-	while (window = [windowIter nextObject]) {
-		[window setSticky: stickyState];
-	} 
-	
 	free(windows);
+}
+
+- (BOOL) isSticky {
+	// cannot return anything useful here, think we should throw an exception 
+	return NO; 
 }
 
 #pragma mark -
@@ -158,7 +153,17 @@
 	free(windows); 
 }
 
+- (float) alphaValue {
+	// cannot return anything useful here, think we should throw an exception 
+	return 0.0; 
+}
+
 #pragma mark -
+- (int) desktopId {
+	// cannot return anything useful here, think we should throw an exception 	
+	return -1;
+}
+
 - (void) setDesktop: (PNDesktop*) desktop {
 	if ([mWindows count] == 0)
 		return; 
@@ -171,6 +176,18 @@
 	CGSExtSetWindowListWorkspace(windows, windowsCount, [desktop identifier]);  
 
 	free(windows); 
+}
+
+#pragma mark -
+- (NSString*) name {
+	// cannot return anything useful here, think we should throw an exception 
+	return nil; 
+}
+
+#pragma mark -
+- (NSImage*) icon {
+	// cannot return anything useful here, think we should throw an exception 
+	return nil; 
 }
 
 #pragma mark -

@@ -12,17 +12,17 @@
 *****************************************************************************/ 
 
 #import "VTMouseWatcher.h"
-#import "NSScreenOverallScreen.h" 
+#import "../CocoaExtensions/NSScreenOverallScreen.h" 
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 
 #import <Zen/ZNEdge.h> 
 #import <Zen/ZNShading.h>
 #import <Zen/ZNEffectWindow.h> 
 
-#define kVTEdgeSpacer		50
-#define kVTEdgeSize			 8
-#define kVTCornerEdgeSize	20
-#define kVTEdgeTrackSize	 3
+#define kVTEdgeSpacer				50
+#define kVTEdgeSize					8
+#define kVTCornerEdgeSize		20
+#define kVTEdgeTrackSize		3
 
 #pragma mark -
 @interface VTMouseWatcher (Creation)
@@ -68,7 +68,7 @@
 		mMouseIn	= NO; 
 		mShader		= nil; 
 		mWatcher	= nil; 
-		mEdge		= ZNEdgeAny; 
+		mEdge			= ZNEdgeAny; 
 		
 		return self; 
 	}
@@ -79,7 +79,7 @@
 - (void) dealloc {
 	ZEN_RELEASE(mShader); 
 	ZEN_RELEASE(mWatcher); 
-	
+	NSLog(@"De-allocating VTMouseWatcherView");
 	[super dealloc]; 
 }
 
@@ -99,11 +99,11 @@
 			[path closePath]; 
 			[mShader fill]; 
 			[[NSGraphicsContext currentContext] restoreGraphicsState]; 
-			
+
 			return; 
 		}
 	}
-
+	
 	[[NSGraphicsContext currentContext] saveGraphicsState]; 
 	[[NSColor clearColor] set]; 
 	[NSBezierPath fillRect: aRect]; 
@@ -144,11 +144,10 @@
 - (id) init {
 	if (self = [super init]) {
 		// ivars 
-		mWindows		= [[NSMutableDictionary alloc] init]; 
+		mWindows				= [[NSMutableDictionary alloc] init]; 
 		mTrackingRects	= [[NSMutableDictionary alloc] init]; 
-		mObservers		= [[NSMutableDictionary alloc] init]; 
-		
-		mCurrentEdge	= ZNEdgeAny; 
+		mObservers			= [[NSMutableDictionary alloc] init]; 
+		mCurrentEdge		= ZNEdgeAny; 
 		
 		return self; 
 	}
@@ -159,8 +158,8 @@
 - (void) dealloc {	
 	ZEN_RELEASE(mWindows); 
 	ZEN_RELEASE(mTrackingRects); 
-	ZEN_RELEASE(mObservers); 
-	[super dealloc];
+	ZEN_RELEASE(mObservers);
+	NSLog(@"De-allocating VTMouseWatcherView without a super dealloc");
 }
 
 + (id) sharedInstance {
@@ -187,6 +186,8 @@
 		[mObservers setObject: observersForEdge forKey: [NSNumber numberWithInt: edge]]; 
 	}
 	[observersForEdge addObject: observer];
+	
+	NSLog(@"Edge %i added", edge);
 }
 
 - (void) removeObserver: (NSObject*) observer {
@@ -196,9 +197,10 @@
 - (void) removeObserver: (NSObject*) observer forEdge: (ZNEdge) edge {
 	NSMutableArray*	observers = [mObservers objectForKey: [NSNumber numberWithInt: edge]]; 
 	[observers removeObject: observer]; 
-	
 	if ([observers count] == 0) 
 		[self enableEdge: edge enabled: NO]; 
+	
+	NSLog(@"Removed edge %i", edge);
 }
 
 #pragma mark -
@@ -208,16 +210,16 @@
 	mCurrentEdge = [self edgeForTrackingRect: [event trackingNumber]];  
 	NSNumber*		edgeObject = [NSNumber numberWithInt: mCurrentEdge]; 
 	ZNEffectWindow*	edgeWindow	= [mWindows objectForKey: edgeObject]; 
-
+	
 	// start accepting mouse clicks 
 	[edgeWindow setIgnoresMouseEvents: NO]; 
 	// and tell the view to color itself 
 	[[edgeWindow contentView] setMouseIn: YES];
 	[[edgeWindow contentView] setNeedsDisplay: YES]; 
-
+	
 	// fade in window (we do that really fast for mouseEntered events) 
 	[edgeWindow setFadingAnimationTime: 0.1f]; 
-	[edgeWindow fadeIn]; 
+	[edgeWindow fadeIn];
 	
 	// loop over our observers and notify them 
 	NSEnumerator* observerIter = [[mObservers objectForKey: edgeObject] objectEnumerator]; 
@@ -225,6 +227,8 @@
 	
 	while (observer = [observerIter nextObject])
 		[observer mouseEntered: event]; 
+	
+	NSLog(@"Mouse entered edge %i", mCurrentEdge);
 }
 
 - (void) mouseExited: (NSEvent*) event {
@@ -237,8 +241,9 @@
 	[edgeWindow setFadingAnimationTime: 0.6f]; 
 	[edgeWindow fadeOut]; 
 	// start ignoring mouse clicks 
-	[edgeWindow setIgnoresMouseEvents: YES]; 
-
+	[edgeWindow setIgnoresMouseEvents: YES];
+	[edgeWindow setAcceptsMouseMovedEvents: YES];
+	
 	// loop over our observers and notify them 
 	NSEnumerator* observerIter = [[mObservers objectForKey: edgeObject] objectEnumerator]; 
 	NSObject<VTMouseWatcherProtocol>* observer = nil; 
@@ -283,7 +288,7 @@
 
 - (NSRect) frameForEdge: (ZNEdge) edge {
 	NSRect screenRect = [[NSScreen mainScreen] frame]; 
-
+	
 	switch (edge) {
 		// Edges 
 		case ZNEdgeTop: 
@@ -294,7 +299,7 @@
 			return NSMakeRect(0, 0, kVTEdgeSize, screenRect.size.height); 
 		case ZNEdgeRight: 
 			return NSMakeRect(screenRect.size.width-kVTEdgeSize, 0, kVTEdgeSize, screenRect.size.height); 
-		// Corners 
+			// Corners 
 		case ZNEdgeTopLeft: 
 			return NSMakeRect(0, screenRect.size.height-kVTCornerEdgeSize, kVTCornerEdgeSize, kVTCornerEdgeSize); 
 		case ZNEdgeTopRight: 
@@ -321,7 +326,7 @@
 			return NSMakeRect(0, kVTEdgeSpacer, kVTEdgeTrackSize, screenRect.size.height-kVTEdgeSpacer*2); 
 		case ZNEdgeRight: 
 			return NSMakeRect(kVTEdgeSize-kVTEdgeTrackSize, kVTEdgeSpacer, kVTEdgeTrackSize, screenRect.size.height-kVTEdgeSpacer*2); 
-		// Corners
+			// Corners
 		case ZNEdgeTopLeft: 
 			return NSMakeRect(0, kVTCornerEdgeSize-kVTEdgeTrackSize, kVTEdgeTrackSize, kVTEdgeTrackSize); 
 		case ZNEdgeTopRight: 
@@ -377,9 +382,9 @@
 	NSRect frame = [self frameForEdge: edge]; 
 	// otherwise we will have to create it... 
 	window = [[ZNEffectWindow alloc] initWithContentRect: frame
-											   styleMask: NSBorderlessWindowMask
-												 backing: NSBackingStoreBuffered
-												   defer: NO];
+																						 styleMask: NSBorderlessWindowMask
+																							 backing: NSBackingStoreBuffered
+																								 defer: NO];
 	
 	// create view 
 	VTMouseWatcherView* view = [[VTMouseWatcherView alloc] initWithFrame: [window contentRectForFrameRect: [window frame]]];    
@@ -397,12 +402,12 @@
 	
 	// bind the view to the window  
 	[window setContentView: view];
-	[window setBackgroundColor: [NSColor clearColor]];
-	[window setAlphaValue: 0.0f]; 
+//	[window setBackgroundColor: [NSColor clearColor]];
+//	[window setAlphaValue: 0.0f]; 
 	[window setLevel: NSStatusWindowLevel + 1];	
-	[window setOpaque: NO]; 
+	[window setOpaque: YES]; 
+	[window setAcceptsMouseMovedEvents: YES];
 	[window setIgnoresMouseEvents: YES];
-	[window setAcceptsMouseMovedEvents: YES]; 
 	[window setInitialFirstResponder: view]; 
 	[window setReleasedWhenClosed: NO];
 	
@@ -412,15 +417,15 @@
 	
 	// and make the window special to hide it 
 	PNWindow* windowWrapper = [PNWindow windowWithNSWindow: window]; 
-	[windowWrapper setSticky: YES]; 
-	[windowWrapper setSpecial: YES]; 
+	[windowWrapper setSticky: YES];
+	[windowWrapper setSpecial: YES];
 	
 	// now take care of adding the tracking rectangle 
 	NSRect				trackingRectFrame	= [self trackingFrameForEdge: edge];
 	NSTrackingRectTag	trackingRect		= [view addTrackingRect: trackingRectFrame owner: self userData: (void*)(&edge) assumeInside: NO]; 
 	// and add it
 	[mTrackingRects setObject: [NSNumber numberWithInt: trackingRect] forKey: [NSNumber numberWithInt: edge]]; 
-
+	
 	// add the window to our dictionary and return 
 	[mWindows setObject: window forKey: [NSNumber numberWithInt: edge]]; 
 	
@@ -440,7 +445,7 @@
 		if ([[mTrackingRects objectForKey: edgeObject] isEqual: tagObject]) 
 			return [edgeObject intValue];
 	}
-	
+		
 	return ZNEdgeAny; 
 }
 
@@ -449,17 +454,19 @@
 	
 	if (window == nil)
 		return; 
-
+	
 	// remove the rtacking rectangle 
 	[[window contentView] removeTrackingRect: 
 		[[mTrackingRects objectForKey: [NSNumber numberWithInt: edge]] intValue]];  
-
+	
 	// order out the window 
 	[window close]; 
 	
 	// remove from our dictionaries 
 	[mTrackingRects removeObjectForKey: [NSNumber numberWithInt: edge]]; 
 	[mWindows removeObjectForKey: [NSNumber numberWithInt: edge]]; 
+	
+	NSLog(@"Removed window for edge %i",edge);
 }
 
 @end 
@@ -476,6 +483,8 @@
 		[window orderFront: self]; 
 	else
 		[window orderOut: self]; 
+	
+	NSLog(@"Enabled edge %i",edge);
 }
 
 @end 

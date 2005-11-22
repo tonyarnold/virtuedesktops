@@ -150,9 +150,8 @@
 	PNWindow*       window							= nil;
 	       
 	while (window = [windowIter nextObject]) {
-		if ([window isSticky] == NO) {
+		if ([window isSticky] == NO)
 			[windowsForSwitching addObject: window];
-		}
 	}
 
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];

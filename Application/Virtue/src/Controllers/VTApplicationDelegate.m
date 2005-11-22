@@ -411,7 +411,7 @@ enum
 	// persist desktops 
 	[[VTDesktopController sharedInstance] serializeDesktops]; 
 	// persist hotkeys 
-	[[VTTriggerController sharedInstance] synchronize]; 
+	[[VTTriggerController sharedInstance] synchronize];
 	// persist layouts 
 	[[VTLayoutController sharedInstance] synchronize]; 
 	// and write out preferences to be sure 

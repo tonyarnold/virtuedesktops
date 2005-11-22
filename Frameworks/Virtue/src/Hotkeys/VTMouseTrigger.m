@@ -189,7 +189,7 @@
 	
 	// we attach to the mouse watcher as an observer for our edge 
 	[[VTMouseWatcher sharedInstance] addObserver: self forEdge: mEdge]; 
-	
+	NSLog(@"Registered observer for edge %i", mEdge);
 	mRegistered = YES; 
 }
 
@@ -198,7 +198,7 @@
 		return; 
 	
 	[[VTMouseWatcher sharedInstance] removeObserver: self forEdge: mEdge]; 
-	
+	NSLog(@"Unregistered observer for edge %i", mEdge);
 	mRegistered = NO; 
 }
 

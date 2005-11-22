@@ -1,6 +1,10 @@
 Virtue Changelog
 Tony Arnold			<tonyarnold (at) users (dot) sourceforge (dot) net> (Version 0.5r3 and above)
-Thomas Staller	<playback (at) users (dot) sourceforge (dot) net> (Version 0.5r2 and below)
+# Thomas Staller	<playback (at) users (dot) sourceforge (dot) net> (Version 0.5r2 and below)
+
+[Virtue 0.5r24]
+[FIXED] Mouse triggers stop working after two uses
+[REMOVED] Unused preference settings (eg. Show in dock)
 
 [Virtue 0.5r17]
 [REMOVED] Key equivalents from Virtue status menu. They can't be used whilst this is running with LSUIElement set to 1. 
