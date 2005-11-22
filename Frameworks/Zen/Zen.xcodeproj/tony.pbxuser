@@ -81,14 +81,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 153468092;
-			PBXWorkspaceStateSaveDate = 153468092;
+			PBXPerProjectTemplateStateSaveDate = 154216890;
+			PBXWorkspaceStateSaveDate = 154216890;
 		};
 		perUserProjectItems = {
 			EA57E53109259C120098A112 /* PBXTextBookmark */ = EA57E53109259C120098A112 /* PBXTextBookmark */;
 			EA57E53309259C120098A112 /* PBXTextBookmark */ = EA57E53309259C120098A112 /* PBXTextBookmark */;
-			EA57E5FA0925A05F0098A112 /* PBXTextBookmark */ = EA57E5FA0925A05F0098A112 /* PBXTextBookmark */;
-			EAFAB9EA0925BCC0002DE24D /* PBXTextBookmark */ = EAFAB9EA0925BCC0002DE24D /* PBXTextBookmark */;
+			EA9DAFBA09312BF500FC4458 /* PBXTextBookmark */ = EA9DAFBA09312BF500FC4458 /* PBXTextBookmark */;
+			EA9DAFBB09312BF500FC4458 /* PBXBookmark */ = EA9DAFBB09312BF500FC4458 /* PBXBookmark */;
+			EA9DAFBC09312BF500FC4458 /* PBXTextBookmark */ = EA9DAFBC09312BF500FC4458 /* PBXTextBookmark */;
+			EA9DAFBD09312BF500FC4458 /* PBXTextBookmark */ = EA9DAFBD09312BF500FC4458 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA609CA10906677F003BD20D /* Source Control */;
 		userBuildSettings = {
@@ -101,7 +103,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {875, 3296}}";
 			sepNavSelRange = "{2583, 0}";
-			sepNavVisRect = "{{0, 1532}, {875, 328}}";
+			sepNavVisRect = "{{0, 1520}, {875, 328}}";
 			sepNavWindowFrame = "{{391, 113}, {973, 671}}";
 		};
 	};
@@ -182,16 +184,6 @@
 		vrLen = 580;
 		vrLoc = 0;
 	};
-	EA57E5FA0925A05F0098A112 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */;
-		name = "ZNFilesystemWatcher.m: 105";
-		rLen = 0;
-		rLoc = 2583;
-		rType = 0;
-		vrLen = 808;
-		vrLoc = 2280;
-	};
 	EA609CA10906677F003BD20D /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
@@ -205,20 +197,44 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	EAF8C7EA090767D0003D54B1 /* XCBreakpointsBucket */ = {
-		isa = XCBreakpointsBucket;
-		name = "Project Breakpoints";
-		objects = (
-		);
-	};
-	EAFAB9EA0925BCC0002DE24D /* PBXTextBookmark */ = {
+	EA9DAFBA09312BF500FC4458 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */;
 		name = "ZNFilesystemWatcher.m: 105";
 		rLen = 0;
 		rLoc = 2583;
 		rType = 0;
-		vrLen = 847;
+		vrLen = 846;
 		vrLoc = 2241;
+	};
+	EA9DAFBB09312BF500FC4458 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = E958AAF40760444300773392 /* ZNEdge.h */;
+	};
+	EA9DAFBC09312BF500FC4458 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */;
+		name = "ZNFilesystemWatcher.m: 105";
+		rLen = 0;
+		rLoc = 2583;
+		rType = 0;
+		vrLen = 846;
+		vrLoc = 2241;
+	};
+	EA9DAFBD09312BF500FC4458 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E958AAF40760444300773392 /* ZNEdge.h */;
+		name = "ZNEdge.h: ZNEdgeAny";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 435;
+		vrLoc = 119;
+	};
+	EAF8C7EA090767D0003D54B1 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
 	};
 }
