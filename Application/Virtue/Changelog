@@ -2,6 +2,11 @@ Virtue Changelog
 Tony Arnold			<tonyarnold (at) users (dot) sourceforge (dot) net> (Version 0.5r3 and above)
 # Thomas Staller	<playback (at) users (dot) sourceforge (dot) net> (Version 0.5r2 and below)
 
+[Virtue 0.5r31/0.51b1]
+[CHANGED] Everything is now building optimised, and headers are not being copied for non-framework targets 
+[REMOVED] All debug logging
+[FIXED] Reverted to older PNWindowList code which appears to not break mouse triggers. 
+
 [Virtue 0.5r24]
 [FIXED] Mouse triggers stop working after two uses
 [REMOVED] Unused preference settings (eg. Show in dock)
