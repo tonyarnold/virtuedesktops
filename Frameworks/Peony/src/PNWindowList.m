@@ -92,7 +92,7 @@
 - (void) delWindows: (NSArray*) windows {
 	// iterate the passed array and delete all PNWindow objects 
 	NSEnumerator*	windowIter	= [windows objectEnumerator];
-	NSObject*		window		= nil;
+	NSObject*			window			= nil;
 	
 	while (window = [windowIter nextObject]) {
 		if ([window isKindOfClass: [PNWindow class]] == YES)

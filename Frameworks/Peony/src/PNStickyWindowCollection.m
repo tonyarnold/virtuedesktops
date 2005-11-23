@@ -104,22 +104,14 @@
 
 - (void) onApplicationStickied: (NSNotification*) aNotification
 {
-	// fetch the window that was just stickied and add it to our list 
-	[mWindows addWindows: [aNotification object]]; 
+	// fetch the windows that were just stickied and add them to our list 
+	[mWindows addWindows: [aNotification object]];
 }
 
 - (void) onApplicationUnstickied: (NSNotification*) aNotification
 {
-	// fetch the window that was just unstickied and remove it from our list 
-	//[mWindows delWindows: [aNotification object]];
-	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] initWithCapacity:0];
-	NSEnumerator*   windowIter      = [[aNotification object] objectEnumerator];
-	PNWindow*       window          = nil;
-	
-	while (window = [windowIter nextObject]) {
-		[mWindows delWindow: window]; 
-	}
-	
+	// fetch the windows that were just unstickied and remove them from our list 
+	[mWindows delWindows: [aNotification object]];
 }
 
 @end
