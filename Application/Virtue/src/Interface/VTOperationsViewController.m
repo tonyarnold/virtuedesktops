@@ -123,34 +123,34 @@
 
 #pragma mark -
 - (IBAction) setDesktopForWindow: (id) sender {
-	// end sheet 
 	[self endSheet];
 
-	// move application to the selected desktop 
+	/* Move the currently represented window to the selected desktop */
 	[mRepresentedWindow setDesktop: [sender representedObject]]; 
 }
 
 - (IBAction) setDesktopForApplication: (id) sender {
-	// end sheet 
 	[self endSheet]; 
-	// move application to the selected desktop 
+	
+	/* Move the application represented by this window to the selected desktop */
 	[mRepresentedApplication setDesktop: [sender representedObject]]; 
 }
 
 - (IBAction) setWindowIsSticky: (id) sender {
-	// end sheet 
 	[self endSheet]; 
+	
+	/* Make window sticky based upon state of the NSButton */
 	if ([sender state] == NSOnState) {
-		[mRepresentedWindow setSticky:YES];
+		[mRepresentedWindow setSticky: YES];
 	} else {
-		[mRepresentedWindow setSticky:NO];
+		[mRepresentedWindow setSticky: NO];
 	}
 }
 
 - (IBAction) setApplicationIsSticky: (id) sender {
-	// end sheet 
+	[self endSheet];
 	
-	// move application to the selected desktop 
+	/* Move the application windows to the selected desktop */
 	if ([sender state] == NSOnState) {
 		[mRepresentedApplication setSticky:YES];
 		[mWindowStickyButton setEnabled: NO];
@@ -159,7 +159,7 @@
 		[mRepresentedApplication setSticky: NO];
 		[mRepresentedWindow setSticky: NO];
 	}
-	[self endSheet];
+	
 }
 
 #pragma mark -
