@@ -97,31 +97,31 @@
 		32DBCF5E0370ADEE00C91783 /* Zen_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zen_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Zen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNImagePopUpButton.h; path = src/widgets/imagepopupbutton/ZNImagePopUpButton.h; sourceTree = "<group>"; };
-		E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNImagePopUpButton.m; path = src/widgets/imagepopupbutton/ZNImagePopUpButton.m; sourceTree = "<group>"; };
-		E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSNumberBytes.h; path = src/cocoa/NSNumberBytes.h; sourceTree = "<group>"; };
-		E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSNumberBytes.m; path = src/cocoa/NSNumberBytes.m; sourceTree = "<group>"; };
-		E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSMethodSignatureArguments.h; path = src/cocoa/NSMethodSignatureArguments.h; sourceTree = "<group>"; };
-		E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSMethodSignatureArguments.m; path = src/cocoa/NSMethodSignatureArguments.m; sourceTree = "<group>"; };
-		E9544CD807553831009DA20D /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSFileManagerAlias.h; path = src/cocoa/NSFileManagerAlias.h; sourceTree = "<group>"; };
-		E9544CD907553831009DA20D /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSFileManagerAlias.m; path = src/cocoa/NSFileManagerAlias.m; sourceTree = "<group>"; };
-		E95731D40711A4CA0053E494 /* ZNFilesystemWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNFilesystemWatcher.h; path = src/filesystem/ZNFilesystemWatcher.h; sourceTree = "<group>"; };
-		E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNFilesystemWatcher.m; path = src/filesystem/ZNFilesystemWatcher.m; sourceTree = "<group>"; };
-		E95731DB0711B0320053E494 /* Zen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Zen.h; path = src/Zen.h; sourceTree = "<group>"; };
-		E958AAF40760444300773392 /* ZNEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNEdge.h; path = src/common/ZNEdge.h; sourceTree = "<group>"; };
-		E959D4310762431400013EB2 /* NSStringWithModifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSStringWithModifiers.h; path = src/cocoa/NSStringWithModifiers.h; sourceTree = "<group>"; };
-		E959D4320762431400013EB2 /* NSStringWithModifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringWithModifiers.m; path = src/cocoa/NSStringWithModifiers.m; sourceTree = "<group>"; };
-		E959D4350762448D00013EB2 /* ZenCocoaCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZenCocoaCategories.h; path = src/cocoa/ZenCocoaCategories.h; sourceTree = "<group>"; };
+		E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNImagePopUpButton.h; sourceTree = "<group>"; };
+		E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNImagePopUpButton.m; sourceTree = "<group>"; };
+		E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSNumberBytes.h; sourceTree = "<group>"; };
+		E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSNumberBytes.m; sourceTree = "<group>"; };
+		E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
+		E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSMethodSignatureArguments.m; sourceTree = "<group>"; };
+		E9544CD807553831009DA20D /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
+		E9544CD907553831009DA20D /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
+		E95731D40711A4CA0053E494 /* ZNFilesystemWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNFilesystemWatcher.h; sourceTree = "<group>"; };
+		E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNFilesystemWatcher.m; sourceTree = "<group>"; };
+		E95731DB0711B0320053E494 /* Zen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zen.h; sourceTree = "<group>"; };
+		E958AAF40760444300773392 /* ZNEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNEdge.h; sourceTree = "<group>"; };
+		E959D4310762431400013EB2 /* NSStringWithModifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSStringWithModifiers.h; sourceTree = "<group>"; };
+		E959D4320762431400013EB2 /* NSStringWithModifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSStringWithModifiers.m; sourceTree = "<group>"; };
+		E959D4350762448D00013EB2 /* ZenCocoaCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZenCocoaCategories.h; sourceTree = "<group>"; };
 		E959D441076245DC00013EB2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		E95C980306EA2DE500679ECF /* ZNMemoryManagementMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNMemoryManagementMacros.h; path = src/macros/ZNMemoryManagementMacros.h; sourceTree = "<group>"; };
-		E95C9F4D0733A32700148FA8 /* ZNUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNUUID.h; path = src/common/ZNUUID.h; sourceTree = "<group>"; };
-		E95C9F4E0733A32700148FA8 /* ZNUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNUUID.m; path = src/common/ZNUUID.m; sourceTree = "<group>"; };
+		E95C980306EA2DE500679ECF /* ZNMemoryManagementMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNMemoryManagementMacros.h; path = Source/Macros/ZNMemoryManagementMacros.h; sourceTree = "<group>"; };
+		E95C9F4D0733A32700148FA8 /* ZNUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNUUID.h; sourceTree = "<group>"; };
+		E95C9F4E0733A32700148FA8 /* ZNUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNUUID.m; sourceTree = "<group>"; };
 		E97C3A97074DD9110025CD57 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/COPYING; sourceTree = "<group>"; };
 		E97C3A99074DD9110025CD57 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/GPL; sourceTree = "<group>"; };
-		E985E84E0760EEFF005CB196 /* ZNShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNShading.h; path = src/common/ZNShading.h; sourceTree = "<group>"; };
-		E985E84F0760EEFF005CB196 /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNShading.m; path = src/common/ZNShading.m; sourceTree = "<group>"; };
-		E98DD9DB078DEB4C0059A0D3 /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNEffectWindow.h; path = src/widgets/effectwindow/ZNEffectWindow.h; sourceTree = "<group>"; };
-		E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNEffectWindow.m; path = src/widgets/effectwindow/ZNEffectWindow.m; sourceTree = "<group>"; };
+		E985E84E0760EEFF005CB196 /* ZNShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNShading.h; sourceTree = "<group>"; };
+		E985E84F0760EEFF005CB196 /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNShading.m; sourceTree = "<group>"; };
+		E98DD9DB078DEB4C0059A0D3 /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNEffectWindow.h; sourceTree = "<group>"; };
+		E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNEffectWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 		0867D691FE84028FC02AAC07 /* Zen */ = {
 			isa = PBXGroup;
 			children = (
-				08FB77AEFE84172EC02AAC07 /* Classes */,
+				08FB77AEFE84172EC02AAC07 /* Source */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -176,16 +176,16 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+		08FB77AEFE84172EC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				E95731DB0711B0320053E494 /* Zen.h */,
 				E95B9A6F07409C9200231BC5 /* CocoaExtensions */,
 				E95C9F560733A5BD00148FA8 /* Common */,
 				E9127295072ADD84006DC207 /* Widgets */,
-				E95731D30711A48E0053E494 /* Filesystem */,
+				E95731D30711A48E0053E494 /* FileSystem */,
 			);
-			name = Classes;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
@@ -224,16 +224,16 @@
 				E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */,
 				E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */,
 			);
-			name = Widgets;
+			path = Widgets;
 			sourceTree = "<group>";
 		};
-		E95731D30711A48E0053E494 /* Filesystem */ = {
+		E95731D30711A48E0053E494 /* FileSystem */ = {
 			isa = PBXGroup;
 			children = (
 				E95731D40711A4CA0053E494 /* ZNFilesystemWatcher.h */,
 				E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */,
 			);
-			name = Filesystem;
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		E95B9A6F07409C9200231BC5 /* CocoaExtensions */ = {
@@ -249,7 +249,7 @@
 				E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */,
 				E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */,
 			);
-			name = CocoaExtensions;
+			path = CocoaExtensions;
 			sourceTree = "<group>";
 		};
 		E95C980706EA2F0200679ECF /* Macros */ = {
@@ -269,7 +269,7 @@
 				E95C9F4D0733A32700148FA8 /* ZNUUID.h */,
 				E95C9F4E0733A32700148FA8 /* ZNUUID.m */,
 			);
-			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E97C3A95074DD8F10025CD57 /* Informational */ = {
