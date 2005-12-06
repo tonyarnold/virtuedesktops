@@ -93,7 +93,7 @@
 		E936380A06FCCCA300E354DB /* DECPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECPrivate.h; path = src/DECPrivate.h; sourceTree = "<group>"; };
 		E936380B06FCCCA300E354DB /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mach_inject.c; path = src/mach_inject.c; sourceTree = "<group>"; };
 		E936380C06FCCCA300E354DB /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = mach_inject.h; path = src/mach_inject.h; sourceTree = "<group>"; };
-		E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E958EEDB06FDA03E001DCB1E /* libdecomm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdecomm.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C3AC2074DDA9F0025CD57 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/COPYING.rtf; sourceTree = "<group>"; };
 		E9A4811A06FF59DF00A8AE3C /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEvent.h; path = includes/DECEvent.h; sourceTree = "<group>"; };
 		E9A4811B06FF59DF00A8AE3C /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventAlpha.h; path = includes/DECEventAlpha.h; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		034768DDFF38A45A11DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */,
+				E958EEDB06FDA03E001DCB1E /* libdecomm.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 			);
 			name = DockCommunicator;
 			productName = decomm;
-			productReference = E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */;
+			productReference = E958EEDB06FDA03E001DCB1E /* libdecomm.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -367,8 +367,24 @@
 		EAE822AD0924A5DC00239477 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
