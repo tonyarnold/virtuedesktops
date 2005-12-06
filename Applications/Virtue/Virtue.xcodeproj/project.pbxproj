@@ -163,7 +163,6 @@
 		E95B98ED073FFFD400231BC5 /* VTDesktopScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B98EB073FFFD400231BC5 /* VTDesktopScripting.m */; };
 		E95B9920074006BF00231BC5 /* VTDesktopDecorationScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B991E074006BF00231BC5 /* VTDesktopDecorationScripting.m */; };
 		E95B997107401FE700231BC5 /* VTDecorationPrimitiveScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B996F07401FE700231BC5 /* VTDecorationPrimitiveScripting.m */; };
-		E95B9A39074038E300231BC5 /* Changelog in CopyFiles */ = {isa = PBXBuildFile; fileRef = E95B9A38074038E300231BC5 /* Changelog */; };
 		E95C9F3E0732E74600148FA8 /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = E95C9F3D0732E74600148FA8 /* DefaultDesktops.plist */; };
 		E98B83C00749E50400E8CE5C /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E958203B07198C88009583A0 /* PreferencePanes.framework */; };
 		E98B866C074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = E98B866A074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.m */; };
@@ -209,7 +208,7 @@
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA6B9227094440D700E6EACB /* libDockCommunicator.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA6B92150944409200E6EACB /* libDockCommunicator.a */; };
-		EA9AF715094444F1005D60CB /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
+		EA9AF715094444F1005D60CB /* dockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* dockExtension.bundle */; };
 		EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
 		EA9AFA6F09445764005D60CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EA9AFB23094457F8005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
@@ -648,7 +647,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 12;
 			files = (
-				E95B9A39074038E300231BC5 /* Changelog in CopyFiles */,
 				E9363A7906FCDDCD00E354DB /* COPYING in CopyFiles */,
 				E9363A7D06FCDDCD00E354DB /* GPL in CopyFiles */,
 				E9363A8206FCDDCD00E354DB /* Readme.rtf in CopyFiles */,
@@ -663,46 +661,46 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtue_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9035C81077754EF00016B73 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
-		E903F72B071DB45D00A00F30 /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopViewController.h; path = src/Interface/VTDesktopViewController.h; sourceTree = "<group>"; };
-		E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopViewController.m; path = src/Interface/VTDesktopViewController.m; sourceTree = "<group>"; };
-		E903F72D071DB45D00A00F30 /* VTImageViewFileDropper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTImageViewFileDropper.h; path = src/Interface/VTImageViewFileDropper.h; sourceTree = "<group>"; };
-		E903F72E071DB45D00A00F30 /* VTImageViewFileDropper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTImageViewFileDropper.m; path = src/Interface/VTImageViewFileDropper.m; sourceTree = "<group>"; };
-		E903F72F071DB45D00A00F30 /* VTNotificationBezel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTNotificationBezel.h; path = src/Interface/VTNotificationBezel.h; sourceTree = "<group>"; };
-		E903F730071DB45D00A00F30 /* VTNotificationBezel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTNotificationBezel.m; path = src/Interface/VTNotificationBezel.m; sourceTree = "<group>"; };
-		E903F731071DB45D00A00F30 /* VTNotificationBezelView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTNotificationBezelView.h; path = src/Interface/VTNotificationBezelView.h; sourceTree = "<group>"; };
-		E903F732071DB45D00A00F30 /* VTNotificationBezelView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTNotificationBezelView.m; path = src/Interface/VTNotificationBezelView.m; sourceTree = "<group>"; };
-		E903F742071DB4B300A00F30 /* VTApplicationDelegateScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTApplicationDelegateScripting.h; path = src/Scripting/VTApplicationDelegateScripting.h; sourceTree = "<group>"; };
-		E903F743071DB4B300A00F30 /* VTApplicationDelegateScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTApplicationDelegateScripting.m; path = src/Scripting/VTApplicationDelegateScripting.m; sourceTree = "<group>"; };
-		E903F746071DB4B300A00F30 /* VTDesktopControllerScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopControllerScripting.h; path = src/Scripting/VTDesktopControllerScripting.h; sourceTree = "<group>"; };
-		E903F747071DB4B300A00F30 /* VTDesktopControllerScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopControllerScripting.m; path = src/Scripting/VTDesktopControllerScripting.m; sourceTree = "<group>"; };
+		E903F72B071DB45D00A00F30 /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopViewController.h; path = Source/Interface/VTDesktopViewController.h; sourceTree = "<group>"; };
+		E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopViewController.m; path = Source/Interface/VTDesktopViewController.m; sourceTree = "<group>"; };
+		E903F72D071DB45D00A00F30 /* VTImageViewFileDropper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTImageViewFileDropper.h; path = Source/Interface/VTImageViewFileDropper.h; sourceTree = "<group>"; };
+		E903F72E071DB45D00A00F30 /* VTImageViewFileDropper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTImageViewFileDropper.m; path = Source/Interface/VTImageViewFileDropper.m; sourceTree = "<group>"; };
+		E903F72F071DB45D00A00F30 /* VTNotificationBezel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTNotificationBezel.h; path = Source/Interface/VTNotificationBezel.h; sourceTree = "<group>"; };
+		E903F730071DB45D00A00F30 /* VTNotificationBezel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTNotificationBezel.m; path = Source/Interface/VTNotificationBezel.m; sourceTree = "<group>"; };
+		E903F731071DB45D00A00F30 /* VTNotificationBezelView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTNotificationBezelView.h; path = Source/Interface/VTNotificationBezelView.h; sourceTree = "<group>"; };
+		E903F732071DB45D00A00F30 /* VTNotificationBezelView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTNotificationBezelView.m; path = Source/Interface/VTNotificationBezelView.m; sourceTree = "<group>"; };
+		E903F742071DB4B300A00F30 /* VTApplicationDelegateScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTApplicationDelegateScripting.h; path = Source/Scripting/VTApplicationDelegateScripting.h; sourceTree = "<group>"; };
+		E903F743071DB4B300A00F30 /* VTApplicationDelegateScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTApplicationDelegateScripting.m; path = Source/Scripting/VTApplicationDelegateScripting.m; sourceTree = "<group>"; };
+		E903F746071DB4B300A00F30 /* VTDesktopControllerScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopControllerScripting.h; path = Source/Scripting/VTDesktopControllerScripting.h; sourceTree = "<group>"; };
+		E903F747071DB4B300A00F30 /* VTDesktopControllerScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopControllerScripting.m; path = Source/Scripting/VTDesktopControllerScripting.m; sourceTree = "<group>"; };
 		E903F75C071DB4EF00A00F30 /* VTApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTApplication.h; sourceTree = "<group>"; };
 		E903F75D071DB4EF00A00F30 /* VTApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTApplication.m; sourceTree = "<group>"; };
 		E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTApplicationDelegate.h; sourceTree = "<group>"; };
 		E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTApplicationDelegate.m; sourceTree = "<group>"; };
 		E903F78D071DB56900A00F30 /* VTPluginController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginController.h; sourceTree = "<group>"; };
 		E903F78E071DB56900A00F30 /* VTPluginController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTPluginController.m; sourceTree = "<group>"; };
-		E903F7DD071DB65F00A00F30 /* VTPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPreferencesViewController.h; path = src/Interface/Preferences/VTPreferencesViewController.h; sourceTree = "<group>"; };
-		E903F7DE071DB65F00A00F30 /* VTPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPreferencesViewController.m; path = src/Interface/Preferences/VTPreferencesViewController.m; sourceTree = "<group>"; };
+		E903F7DD071DB65F00A00F30 /* VTPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPreferencesViewController.h; path = Source/Interface/Preferences/VTPreferencesViewController.h; sourceTree = "<group>"; };
+		E903F7DE071DB65F00A00F30 /* VTPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPreferencesViewController.m; path = Source/Interface/Preferences/VTPreferencesViewController.m; sourceTree = "<group>"; };
 		E903F8DE071DB88200A00F30 /* VTDesktopNamePrimitive.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopNamePrimitive.h; path = Primitives/DesktopName/VTDesktopNamePrimitive.h; sourceTree = "<group>"; };
 		E903F8DF071DB88200A00F30 /* VTDesktopNamePrimitive.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopNamePrimitive.m; path = Primitives/DesktopName/VTDesktopNamePrimitive.m; sourceTree = "<group>"; };
 		E903F8E0071DB88200A00F30 /* VTPluginDesktopNamePrimitive.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPluginDesktopNamePrimitive.h; path = Primitives/DesktopName/VTPluginDesktopNamePrimitive.h; sourceTree = "<group>"; };
-		E912238E07808A4F005A3C10 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Plugins/Primitives/DesktopName/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E912239207808A60005A3C10 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Plugins/Primitives/DesktopName/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E912238E07808A4F005A3C10 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Plugins/Primitives/DesktopName/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E912239207808A60005A3C10 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Plugins/Primitives/DesktopName/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E91223D807808DBC005A3C10 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
 		E91223DB07808E02005A3C10 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		E91224520781987E005A3C10 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Plugins/Primitives/ColorLabel/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E912245607819890005A3C10 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Plugins/Primitives/ColorLabel/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E91224520781987E005A3C10 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Plugins/Primitives/ColorLabel/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E912245607819890005A3C10 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Plugins/Primitives/ColorLabel/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E912436F072E9B2D00BD28CD /* imagePosition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePosition.png; sourceTree = "<group>"; };
-		E9124D830730B92500BD28CD /* VTMatrixDesktopLayout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixDesktopLayout.h; path = src/Interface/Layout/MatrixLayout/VTMatrixDesktopLayout.h; sourceTree = "<group>"; };
-		E9124D840730B92500BD28CD /* VTMatrixDesktopLayout.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixDesktopLayout.m; path = src/Interface/Layout/MatrixLayout/VTMatrixDesktopLayout.m; sourceTree = "<group>"; };
-		E9124D850730B92500BD28CD /* VTMatrixPager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixPager.h; path = src/Interface/Layout/MatrixLayout/VTMatrixPager.h; sourceTree = "<group>"; };
-		E9124D860730B92500BD28CD /* VTMatrixPager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPager.m; path = src/Interface/Layout/MatrixLayout/VTMatrixPager.m; sourceTree = "<group>"; };
-		E9124D870730B92500BD28CD /* VTMatrixPagerCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerCell.h; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerCell.h; sourceTree = "<group>"; };
-		E9124D880730B92500BD28CD /* VTMatrixPagerCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPagerCell.m; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerCell.m; sourceTree = "<group>"; };
-		E9124D890730B92500BD28CD /* VTMatrixPagerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerView.h; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerView.h; sourceTree = "<group>"; };
-		E9124D8A0730B92500BD28CD /* VTMatrixPagerView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPagerView.m; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerView.m; sourceTree = "<group>"; };
+		E9124D830730B92500BD28CD /* VTMatrixDesktopLayout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixDesktopLayout.h; path = Source/Interface/Layout/MatrixLayout/VTMatrixDesktopLayout.h; sourceTree = "<group>"; };
+		E9124D840730B92500BD28CD /* VTMatrixDesktopLayout.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixDesktopLayout.m; path = Source/Interface/Layout/MatrixLayout/VTMatrixDesktopLayout.m; sourceTree = "<group>"; };
+		E9124D850730B92500BD28CD /* VTMatrixPager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixPager.h; path = Source/Interface/Layout/MatrixLayout/VTMatrixPager.h; sourceTree = "<group>"; };
+		E9124D860730B92500BD28CD /* VTMatrixPager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPager.m; path = Source/Interface/Layout/MatrixLayout/VTMatrixPager.m; sourceTree = "<group>"; };
+		E9124D870730B92500BD28CD /* VTMatrixPagerCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerCell.h; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerCell.h; sourceTree = "<group>"; };
+		E9124D880730B92500BD28CD /* VTMatrixPagerCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPagerCell.m; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerCell.m; sourceTree = "<group>"; };
+		E9124D890730B92500BD28CD /* VTMatrixPagerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerView.h; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerView.h; sourceTree = "<group>"; };
+		E9124D8A0730B92500BD28CD /* VTMatrixPagerView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPagerView.m; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerView.m; sourceTree = "<group>"; };
 		E9124EAB073140CE00BD28CD /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9124F9B073201D200BD28CD /* VTApplicationWatcherController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTApplicationWatcherController.h; sourceTree = "<group>"; };
 		E9124F9C073201D200BD28CD /* VTApplicationWatcherController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTApplicationWatcherController.m; sourceTree = "<group>"; };
@@ -711,13 +709,13 @@
 		E912708507279AF8006DC207 /* imageIsSticky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageIsSticky.png; sourceTree = "<group>"; };
 		E912708607279AF8006DC207 /* imageIsUnsticky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageIsUnsticky.png; sourceTree = "<group>"; };
 		E91271AF0729BA58006DC207 /* VTBehaviourPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTBehaviourPreferences-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E91271B80729BAD2006DC207 /* VTBehaviourPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTBehaviourPreferencesController.h; path = src/Interface/Preferences/Behaviour/VTBehaviourPreferencesController.h; sourceTree = "<group>"; };
-		E91271B90729BAD2006DC207 /* VTBehaviourPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTBehaviourPreferencesController.m; path = src/Interface/Preferences/Behaviour/VTBehaviourPreferencesController.m; sourceTree = "<group>"; };
+		E91271B80729BAD2006DC207 /* VTBehaviourPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTBehaviourPreferencesController.h; path = Source/Interface/Preferences/Behaviour/VTBehaviourPreferencesController.h; sourceTree = "<group>"; };
+		E91271B90729BAD2006DC207 /* VTBehaviourPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTBehaviourPreferencesController.m; path = Source/Interface/Preferences/Behaviour/VTBehaviourPreferencesController.m; sourceTree = "<group>"; };
 		E9127206072A6211006DC207 /* VTPluginPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTPluginPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9127208072A62C3006DC207 /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPluginPreferencesController.h; path = src/Interface/Preferences/Plugins/VTPluginPreferencesController.h; sourceTree = "<group>"; };
-		E9127209072A62C3006DC207 /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPluginPreferencesController.m; path = src/Interface/Preferences/Plugins/VTPluginPreferencesController.m; sourceTree = "<group>"; };
-		E912721E072A6B00006DC207 /* VTOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTOperationsViewController.h; path = src/Interface/VTOperationsViewController.h; sourceTree = "<group>"; };
-		E912721F072A6B00006DC207 /* VTOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTOperationsViewController.m; path = src/Interface/VTOperationsViewController.m; sourceTree = "<group>"; };
+		E9127208072A62C3006DC207 /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPluginPreferencesController.h; path = Source/Interface/Preferences/Plugins/VTPluginPreferencesController.h; sourceTree = "<group>"; };
+		E9127209072A62C3006DC207 /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPluginPreferencesController.m; path = Source/Interface/Preferences/Plugins/VTPluginPreferencesController.m; sourceTree = "<group>"; };
+		E912721E072A6B00006DC207 /* VTOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTOperationsViewController.h; path = Source/Interface/VTOperationsViewController.h; sourceTree = "<group>"; };
+		E912721F072A6B00006DC207 /* VTOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTOperationsViewController.m; path = Source/Interface/VTOperationsViewController.m; sourceTree = "<group>"; };
 		E912737A072BC76F006DC207 /* imagePreferencesAppearance.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imagePreferencesAppearance.tiff; sourceTree = "<group>"; };
 		E912738D072C096A006DC207 /* imageWidgetAddPopup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAddPopup.png; sourceTree = "<group>"; };
 		E912738E072C096A006DC207 /* imageWidgetAddPopupPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAddPopupPressed.png; sourceTree = "<group>"; };
@@ -726,64 +724,64 @@
 		E9127391072C096A006DC207 /* imageWidgetInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetInfo.png; sourceTree = "<group>"; };
 		E9127392072C096A006DC207 /* imageWidgetInfoPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetInfoPressed.png; sourceTree = "<group>"; };
 		E913F15D076E375500072617 /* VTDesktopTemplatePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopTemplatePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		E913F15E076E375500072617 /* VTDesktopTemplatePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "VTDesktopTemplatePreferences-Info.plist"; path = "/Users/thomas/Documents/Projects/Programming/Virtue/CVS/virtue.0/application/Virtue/VTDesktopTemplatePreferences-Info.plist"; sourceTree = "<absolute>"; };
+		E913F15E076E375500072617 /* VTDesktopTemplatePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopTemplatePreferences-Info.plist"; sourceTree = "<group>"; };
 		E913F160076E37B300072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		E913F162076E37CB00072617 /* VTDesktopTemplatePreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopTemplatePreferences.h; path = src/Interface/Preferences/DesktopTemplate/VTDesktopTemplatePreferences.h; sourceTree = "<group>"; };
-		E913F163076E37CB00072617 /* VTDesktopTemplatePreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopTemplatePreferences.m; path = src/Interface/Preferences/DesktopTemplate/VTDesktopTemplatePreferences.m; sourceTree = "<group>"; };
-		E913F179076E3BD900072617 /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "VTInterface-Info.plist"; path = "/Users/thomas/Documents/Projects/Programming/Virtue/CVS/virtue.0/application/Virtue/VTInterface-Info.plist"; sourceTree = "<absolute>"; };
+		E913F162076E37CB00072617 /* VTDesktopTemplatePreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopTemplatePreferences.h; path = Source/Interface/Preferences/DesktopTemplate/VTDesktopTemplatePreferences.h; sourceTree = "<group>"; };
+		E913F163076E37CB00072617 /* VTDesktopTemplatePreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopTemplatePreferences.m; path = Source/Interface/Preferences/DesktopTemplate/VTDesktopTemplatePreferences.m; sourceTree = "<group>"; };
+		E913F179076E3BD900072617 /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTInterface-Info.plist"; sourceTree = "<group>"; };
 		E913F17B076E3C1200072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
-		E913F183076E3CFE00072617 /* VTDecorationPrimitiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveViewController.h; path = src/Interface/VTDecorationPrimitiveViewController.h; sourceTree = "<group>"; };
-		E913F184076E3CFE00072617 /* VTDecorationPrimitiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveViewController.m; path = src/Interface/VTDecorationPrimitiveViewController.m; sourceTree = "<group>"; };
-		E913F188076E3D3500072617 /* VTColorLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTColorLabelButton.h; path = src/Interface/Widgets/ColorLabelButton/VTColorLabelButton.h; sourceTree = "<group>"; };
-		E913F189076E3D3500072617 /* VTColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTColorLabelButton.m; path = src/Interface/Widgets/ColorLabelButton/VTColorLabelButton.m; sourceTree = "<group>"; };
-		E913F18A076E3D3500072617 /* VTColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTColorLabelButtonCell.h; path = src/Interface/Widgets/ColorLabelButton/VTColorLabelButtonCell.h; sourceTree = "<group>"; };
-		E913F18B076E3D3500072617 /* VTColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTColorLabelButtonCell.m; path = src/Interface/Widgets/ColorLabelButton/VTColorLabelButtonCell.m; sourceTree = "<group>"; };
-		E913F190076E3D4F00072617 /* VTPositionGrid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPositionGrid.h; path = src/Interface/Widgets/PositionGrid/VTPositionGrid.h; sourceTree = "<group>"; };
-		E913F191076E3D4F00072617 /* VTPositionGrid.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPositionGrid.m; path = src/Interface/Widgets/PositionGrid/VTPositionGrid.m; sourceTree = "<group>"; };
-		E913F192076E3D4F00072617 /* VTPositionGridCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPositionGridCell.h; path = src/Interface/Widgets/PositionGrid/VTPositionGridCell.h; sourceTree = "<group>"; };
-		E913F193076E3D4F00072617 /* VTPositionGridCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPositionGridCell.m; path = src/Interface/Widgets/PositionGrid/VTPositionGridCell.m; sourceTree = "<group>"; };
-		E913F20A076E3FB400072617 /* VTDecorationPrimitiveBindings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveBindings.h; path = src/Interface/Decorations/VTDecorationPrimitiveBindings.h; sourceTree = "<group>"; };
-		E913F20B076E3FB400072617 /* VTDecorationPrimitiveBindings.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveBindings.m; path = src/Interface/Decorations/VTDecorationPrimitiveBindings.m; sourceTree = "<group>"; };
-		E913F20C076E3FB400072617 /* VTDecorationPrimitiveTextInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveTextInspector.h; path = src/Interface/Decorations/VTDecorationPrimitiveTextInspector.h; sourceTree = "<group>"; };
-		E913F20D076E3FB400072617 /* VTDecorationPrimitiveTextInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveTextInspector.m; path = src/Interface/Decorations/VTDecorationPrimitiveTextInspector.m; sourceTree = "<group>"; };
-		E913F20E076E3FB400072617 /* VTDecorationPrimitiveWatermarkInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveWatermarkInspector.h; path = src/Interface/Decorations/VTDecorationPrimitiveWatermarkInspector.h; sourceTree = "<group>"; };
-		E913F20F076E3FB400072617 /* VTDecorationPrimitiveWatermarkInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveWatermarkInspector.m; path = src/Interface/Decorations/VTDecorationPrimitiveWatermarkInspector.m; sourceTree = "<group>"; };
-		E913F216076E3FCD00072617 /* VTDecorationPrimitiveTintInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveTintInspector.h; path = src/Interface/VTDecorationPrimitiveTintInspector.h; sourceTree = "<group>"; };
-		E913F217076E3FCD00072617 /* VTDecorationPrimitiveTintInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveTintInspector.m; path = src/Interface/VTDecorationPrimitiveTintInspector.m; sourceTree = "<group>"; };
+		E913F183076E3CFE00072617 /* VTDecorationPrimitiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveViewController.h; path = Source/Interface/VTDecorationPrimitiveViewController.h; sourceTree = "<group>"; };
+		E913F184076E3CFE00072617 /* VTDecorationPrimitiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveViewController.m; path = Source/Interface/VTDecorationPrimitiveViewController.m; sourceTree = "<group>"; };
+		E913F188076E3D3500072617 /* VTColorLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTColorLabelButton.h; path = Source/Interface/Widgets/ColorLabelButton/VTColorLabelButton.h; sourceTree = "<group>"; };
+		E913F189076E3D3500072617 /* VTColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTColorLabelButton.m; path = Source/Interface/Widgets/ColorLabelButton/VTColorLabelButton.m; sourceTree = "<group>"; };
+		E913F18A076E3D3500072617 /* VTColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTColorLabelButtonCell.h; path = Source/Interface/Widgets/ColorLabelButton/VTColorLabelButtonCell.h; sourceTree = "<group>"; };
+		E913F18B076E3D3500072617 /* VTColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTColorLabelButtonCell.m; path = Source/Interface/Widgets/ColorLabelButton/VTColorLabelButtonCell.m; sourceTree = "<group>"; };
+		E913F190076E3D4F00072617 /* VTPositionGrid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPositionGrid.h; path = Source/Interface/Widgets/PositionGrid/VTPositionGrid.h; sourceTree = "<group>"; };
+		E913F191076E3D4F00072617 /* VTPositionGrid.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPositionGrid.m; path = Source/Interface/Widgets/PositionGrid/VTPositionGrid.m; sourceTree = "<group>"; };
+		E913F192076E3D4F00072617 /* VTPositionGridCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPositionGridCell.h; path = Source/Interface/Widgets/PositionGrid/VTPositionGridCell.h; sourceTree = "<group>"; };
+		E913F193076E3D4F00072617 /* VTPositionGridCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPositionGridCell.m; path = Source/Interface/Widgets/PositionGrid/VTPositionGridCell.m; sourceTree = "<group>"; };
+		E913F20A076E3FB400072617 /* VTDecorationPrimitiveBindings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveBindings.h; path = Source/Interface/Decorations/VTDecorationPrimitiveBindings.h; sourceTree = "<group>"; };
+		E913F20B076E3FB400072617 /* VTDecorationPrimitiveBindings.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveBindings.m; path = Source/Interface/Decorations/VTDecorationPrimitiveBindings.m; sourceTree = "<group>"; };
+		E913F20C076E3FB400072617 /* VTDecorationPrimitiveTextInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveTextInspector.h; path = Source/Interface/Decorations/VTDecorationPrimitiveTextInspector.h; sourceTree = "<group>"; };
+		E913F20D076E3FB400072617 /* VTDecorationPrimitiveTextInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveTextInspector.m; path = Source/Interface/Decorations/VTDecorationPrimitiveTextInspector.m; sourceTree = "<group>"; };
+		E913F20E076E3FB400072617 /* VTDecorationPrimitiveWatermarkInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveWatermarkInspector.h; path = Source/Interface/Decorations/VTDecorationPrimitiveWatermarkInspector.h; sourceTree = "<group>"; };
+		E913F20F076E3FB400072617 /* VTDecorationPrimitiveWatermarkInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveWatermarkInspector.m; path = Source/Interface/Decorations/VTDecorationPrimitiveWatermarkInspector.m; sourceTree = "<group>"; };
+		E913F216076E3FCD00072617 /* VTDecorationPrimitiveTintInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveTintInspector.h; path = Source/Interface/VTDecorationPrimitiveTintInspector.h; sourceTree = "<group>"; };
+		E913F217076E3FCD00072617 /* VTDecorationPrimitiveTintInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveTintInspector.m; path = Source/Interface/VTDecorationPrimitiveTintInspector.m; sourceTree = "<group>"; };
 		E913F21B076E3FF400072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		E913F21D076E3FF400072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
 		E913F21F076E3FF400072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
 		E913F26D076E411B00072617 /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E913F335076F715E00072617 /* VTHotkeyCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTHotkeyCell.h; path = src/Interface/VTHotkeyCell.h; sourceTree = "<group>"; };
-		E913F336076F715E00072617 /* VTHotkeyCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyCell.m; path = src/Interface/VTHotkeyCell.m; sourceTree = "<group>"; };
-		E913F337076F715E00072617 /* VTHotkeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTHotkeyTextField.h; path = src/Interface/VTHotkeyTextField.h; sourceTree = "<group>"; };
-		E913F338076F715E00072617 /* VTHotkeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyTextField.m; path = src/Interface/VTHotkeyTextField.m; sourceTree = "<group>"; };
-		E913F339076F715E00072617 /* VTHotkeyTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTHotkeyTextView.h; path = src/Interface/VTHotkeyTextView.h; sourceTree = "<group>"; };
-		E913F33A076F715E00072617 /* VTHotkeyTextView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyTextView.m; path = src/Interface/VTHotkeyTextView.m; sourceTree = "<group>"; };
-		E913F34A076F733100072617 /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningCountTransformer.h; path = src/Interface/Transformers/VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
-		E913F34B076F733100072617 /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningCountTransformer.m; path = src/Interface/Transformers/VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
+		E913F335076F715E00072617 /* VTHotkeyCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTHotkeyCell.h; path = Source/Interface/VTHotkeyCell.h; sourceTree = "<group>"; };
+		E913F336076F715E00072617 /* VTHotkeyCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyCell.m; path = Source/Interface/VTHotkeyCell.m; sourceTree = "<group>"; };
+		E913F337076F715E00072617 /* VTHotkeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTHotkeyTextField.h; path = Source/Interface/VTHotkeyTextField.h; sourceTree = "<group>"; };
+		E913F338076F715E00072617 /* VTHotkeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyTextField.m; path = Source/Interface/VTHotkeyTextField.m; sourceTree = "<group>"; };
+		E913F339076F715E00072617 /* VTHotkeyTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTHotkeyTextView.h; path = Source/Interface/VTHotkeyTextView.h; sourceTree = "<group>"; };
+		E913F33A076F715E00072617 /* VTHotkeyTextView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyTextView.m; path = Source/Interface/VTHotkeyTextView.m; sourceTree = "<group>"; };
+		E913F34A076F733100072617 /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningCountTransformer.h; path = Source/Interface/Transformers/VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
+		E913F34B076F733100072617 /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningCountTransformer.m; path = Source/Interface/Transformers/VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
 		E913F452076F7A2000072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = English.lproj/virtueHelp; sourceTree = "<group>"; };
 		E91493C8073991F100668ACC /* VTPagerPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTPagerPreferences-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E91493C90739926E00668ACC /* VTPagerPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPagerPreferencesController.h; path = src/Interface/Preferences/Pagers/VTPagerPreferencesController.h; sourceTree = "<group>"; };
-		E91493CA0739926E00668ACC /* VTPagerPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPagerPreferencesController.m; path = src/Interface/Preferences/Pagers/VTPagerPreferencesController.m; sourceTree = "<group>"; };
+		E91493C90739926E00668ACC /* VTPagerPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPagerPreferencesController.h; path = Source/Interface/Preferences/Pagers/VTPagerPreferencesController.h; sourceTree = "<group>"; };
+		E91493CA0739926E00668ACC /* VTPagerPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPagerPreferencesController.m; path = Source/Interface/Preferences/Pagers/VTPagerPreferencesController.m; sourceTree = "<group>"; };
 		E914940B073A0D0E00668ACC /* imagePreferencesPagers.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imagePreferencesPagers.tiff; sourceTree = "<group>"; };
 		E91750FB078061AB004F5633 /* VTPluginPreferences-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "VTPluginPreferences-Info.plist"; sourceTree = "<group>"; };
-		E9175202078065E3004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Interface/Preferences/Plugins/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E9175206078065FF004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Interface/Preferences/Plugins/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917520D07806CAA004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Interface/Preferences/Application/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917521107806CBE004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Interface/Preferences/Application/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917521207806DC5004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Interface/Preferences/Appearance/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917521607806DD4004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Interface/Preferences/Appearance/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917521707806DFA004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Interface/Preferences/Hotkeys/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917521B07806E0A004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Interface/Preferences/Hotkeys/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917521C07806E2C004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Interface/Preferences/Layout/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917522007806E41004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Interface/Preferences/Layout/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917522107806E6B004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/Interface/Preferences/DesktopTemplate/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E917522507806E7B004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = src/Interface/Preferences/DesktopTemplate/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9175202078065E3004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Interface/Preferences/Plugins/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9175206078065FF004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Interface/Preferences/Plugins/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917520D07806CAA004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Interface/Preferences/Application/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917521107806CBE004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Interface/Preferences/Application/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917521207806DC5004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Interface/Preferences/Appearance/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917521607806DD4004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Interface/Preferences/Appearance/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917521707806DFA004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Interface/Preferences/Hotkeys/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917521B07806E0A004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Interface/Preferences/Hotkeys/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917521C07806E2C004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Interface/Preferences/Layout/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917522007806E41004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Interface/Preferences/Layout/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917522107806E6B004F5633 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Source/Interface/Preferences/DesktopTemplate/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E917522507806E7B004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Source/Interface/Preferences/DesktopTemplate/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E917525907807BE1004F5633 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E917FCFB07677EE500F8A8FD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		E917FF13076B237700F8A8FD /* VTApplicationRunningTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningTransformer.h; path = src/Interface/Transformers/VTApplicationRunningTransformer.h; sourceTree = "<group>"; };
-		E917FF14076B237700F8A8FD /* VTApplicationRunningTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningTransformer.m; path = src/Interface/Transformers/VTApplicationRunningTransformer.m; sourceTree = "<group>"; };
+		E917FF13076B237700F8A8FD /* VTApplicationRunningTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningTransformer.h; path = Source/Interface/Transformers/VTApplicationRunningTransformer.h; sourceTree = "<group>"; };
+		E917FF14076B237700F8A8FD /* VTApplicationRunningTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningTransformer.m; path = Source/Interface/Transformers/VTApplicationRunningTransformer.m; sourceTree = "<group>"; };
 		E91ACD970702AD9A00F69228 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 		E91ACD9B0702ADA900F69228 /* AppKitScripting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKitScripting.framework; path = /System/Library/Frameworks/AppKitScripting.framework; sourceTree = "<absolute>"; };
 		E91AD79B0703570400F69228 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -812,7 +810,7 @@
 		E9363AEC06FCE64300E354DB /* imageVirtue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageVirtue.png; sourceTree = "<group>"; };
 		E9363AED06FCE64300E354DB /* imageVirtueHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageVirtueHighlighted.png; sourceTree = "<group>"; };
 		E9363AEE06FCE64300E354DB /* imageWindow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWindow.png; sourceTree = "<group>"; };
-		E940C5E60733F03400C1642C /* DefaultHotkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = DefaultHotkeys.plist; path = data/defaults/DefaultHotkeys.plist; sourceTree = "<group>"; };
+		E940C5E60733F03400C1642C /* DefaultHotkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = DefaultHotkeys.plist; path = Data/defaults/DefaultHotkeys.plist; sourceTree = "<group>"; };
 		E940C7370735139B00C1642C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E940C73A073513D700C1642C /* VTPrimitiveDesktopNameInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPrimitiveDesktopNameInspector.h; path = Primitives/DesktopName/VTPrimitiveDesktopNameInspector.h; sourceTree = "<group>"; };
 		E940C73B073513D700C1642C /* VTPrimitiveDesktopNameInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPrimitiveDesktopNameInspector.m; path = Primitives/DesktopName/VTPrimitiveDesktopNameInspector.m; sourceTree = "<group>"; };
@@ -820,18 +818,18 @@
 		E941CCB707460FA7007DF0D9 /* imageWidgetStickyPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetStickyPressed.png; sourceTree = "<group>"; };
 		E941CCB807460FA7007DF0D9 /* imageWidgetUnsticky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetUnsticky.png; sourceTree = "<group>"; };
 		E941CCB907460FA7007DF0D9 /* imageWidgetUnstickyPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetUnstickyPressed.png; sourceTree = "<group>"; };
-		E941CDD307466020007DF0D9 /* PNApplicationScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNApplicationScripting.h; path = src/Scripting/PNApplicationScripting.h; sourceTree = "<group>"; };
-		E941CDD407466020007DF0D9 /* PNApplicationScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNApplicationScripting.m; path = src/Scripting/PNApplicationScripting.m; sourceTree = "<group>"; };
-		E941CE23074661F4007DF0D9 /* PNWindowScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNWindowScripting.h; path = src/Scripting/PNWindowScripting.h; sourceTree = "<group>"; };
-		E941CE24074661F4007DF0D9 /* PNWindowScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNWindowScripting.m; path = src/Scripting/PNWindowScripting.m; sourceTree = "<group>"; };
-		E94338B6074FA1230075ADF3 /* VTMatrixPagerAppletCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerAppletCell.h; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerAppletCell.h; sourceTree = "<group>"; };
-		E94338B7074FA1230075ADF3 /* VTMatrixPagerAppletCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPagerAppletCell.m; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerAppletCell.m; sourceTree = "<group>"; };
-		E9557E91076B9DD800401479 /* VTDesktopIdTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTDesktopIdTransformer.h; path = src/Interface/Transformers/VTDesktopIdTransformer.h; sourceTree = "<group>"; };
-		E9557E92076B9DD800401479 /* VTDesktopIdTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTDesktopIdTransformer.m; path = src/Interface/Transformers/VTDesktopIdTransformer.m; sourceTree = "<group>"; };
-		E9558182076CA62B00401479 /* VTApplicationRunningColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningColorTransformer.h; path = src/Interface/Transformers/VTApplicationRunningColorTransformer.h; sourceTree = "<group>"; };
-		E9558183076CA62B00401479 /* VTApplicationRunningColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningColorTransformer.m; path = src/Interface/Transformers/VTApplicationRunningColorTransformer.m; sourceTree = "<group>"; };
-		E95581C5076CC7C100401479 /* VTWindowStickyStateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTWindowStickyStateTransformer.h; path = src/Interface/Transformers/VTWindowStickyStateTransformer.h; sourceTree = "<group>"; };
-		E95581C6076CC7C200401479 /* VTWindowStickyStateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTWindowStickyStateTransformer.m; path = src/Interface/Transformers/VTWindowStickyStateTransformer.m; sourceTree = "<group>"; };
+		E941CDD307466020007DF0D9 /* PNApplicationScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNApplicationScripting.h; path = Source/Scripting/PNApplicationScripting.h; sourceTree = "<group>"; };
+		E941CDD407466020007DF0D9 /* PNApplicationScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNApplicationScripting.m; path = Source/Scripting/PNApplicationScripting.m; sourceTree = "<group>"; };
+		E941CE23074661F4007DF0D9 /* PNWindowScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNWindowScripting.h; path = Source/Scripting/PNWindowScripting.h; sourceTree = "<group>"; };
+		E941CE24074661F4007DF0D9 /* PNWindowScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNWindowScripting.m; path = Source/Scripting/PNWindowScripting.m; sourceTree = "<group>"; };
+		E94338B6074FA1230075ADF3 /* VTMatrixPagerAppletCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerAppletCell.h; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerAppletCell.h; sourceTree = "<group>"; };
+		E94338B7074FA1230075ADF3 /* VTMatrixPagerAppletCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTMatrixPagerAppletCell.m; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerAppletCell.m; sourceTree = "<group>"; };
+		E9557E91076B9DD800401479 /* VTDesktopIdTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTDesktopIdTransformer.h; path = Source/Interface/Transformers/VTDesktopIdTransformer.h; sourceTree = "<group>"; };
+		E9557E92076B9DD800401479 /* VTDesktopIdTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTDesktopIdTransformer.m; path = Source/Interface/Transformers/VTDesktopIdTransformer.m; sourceTree = "<group>"; };
+		E9558182076CA62B00401479 /* VTApplicationRunningColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningColorTransformer.h; path = Source/Interface/Transformers/VTApplicationRunningColorTransformer.h; sourceTree = "<group>"; };
+		E9558183076CA62B00401479 /* VTApplicationRunningColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningColorTransformer.m; path = Source/Interface/Transformers/VTApplicationRunningColorTransformer.m; sourceTree = "<group>"; };
+		E95581C5076CC7C100401479 /* VTWindowStickyStateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTWindowStickyStateTransformer.h; path = Source/Interface/Transformers/VTWindowStickyStateTransformer.h; sourceTree = "<group>"; };
+		E95581C6076CC7C200401479 /* VTWindowStickyStateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTWindowStickyStateTransformer.m; path = Source/Interface/Transformers/VTWindowStickyStateTransformer.m; sourceTree = "<group>"; };
 		E9560C3F071DA9AE00D497BE /* VTDesktopNamePrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopNamePrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9560C40071DA9AE00D497BE /* VTDesktopNamePrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9560C4B071DAB6000D497BE /* VTPluginDesktopNamePrimitive.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPluginDesktopNamePrimitive.m; path = Primitives/DesktopName/VTPluginDesktopNamePrimitive.m; sourceTree = "<group>"; };
@@ -857,45 +855,44 @@
 		E956B787078CAE91008B2571 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Notifications.strings; sourceTree = "<group>"; };
 		E956B788078CAE9A008B2571 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
 		E956B789078CAEA4008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B78A078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Plugins/Primitives/ColorLabel/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B78B078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Plugins/Primitives/DesktopName/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B78C078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Interface/Preferences/DesktopTemplate/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B78D078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Interface/Preferences/Layout/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B78E078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Interface/Preferences/Hotkeys/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B78F078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Interface/Preferences/Appearance/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B790078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Interface/Preferences/Application/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E956B791078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = src/Interface/Preferences/Plugins/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B78A078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Plugins/Primitives/ColorLabel/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B78B078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Plugins/Primitives/DesktopName/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B78C078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/DesktopTemplate/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B78D078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Layout/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B78E078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Hotkeys/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B78F078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Appearance/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B790078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Application/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E956B791078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Plugins/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E9581F1B0717DE56009583A0 /* iconVirtualDesktopsFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconVirtualDesktopsFolder.icns; sourceTree = "<group>"; };
 		E958203B07198C88009583A0 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		E9582083071AF896009583A0 /* VTAppearancePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTAppearancePreferences-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E9582084071AF913009583A0 /* VTAppearancePreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTAppearancePreferencesController.h; path = src/Interface/Preferences/Appearance/VTAppearancePreferencesController.h; sourceTree = "<group>"; };
-		E9582085071AF913009583A0 /* VTAppearancePreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTAppearancePreferencesController.m; path = src/Interface/Preferences/Appearance/VTAppearancePreferencesController.m; sourceTree = "<group>"; };
+		E9582084071AF913009583A0 /* VTAppearancePreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTAppearancePreferencesController.h; path = Source/Interface/Preferences/Appearance/VTAppearancePreferencesController.h; sourceTree = "<group>"; };
+		E9582085071AF913009583A0 /* VTAppearancePreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTAppearancePreferencesController.m; path = Source/Interface/Preferences/Appearance/VTAppearancePreferencesController.m; sourceTree = "<group>"; };
 		E95820F0071B162A009583A0 /* imageActionNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageActionNormal.png; sourceTree = "<group>"; };
 		E95820F1071B162A009583A0 /* imageActionPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageActionPressed.png; sourceTree = "<group>"; };
 		E958A873075EEEC200773392 /* VTLayoutPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTLayoutPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		E958A874075EEEC500773392 /* VTLayoutPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "VTLayoutPreferences-Info.plist"; path = "/Users/thomas/Documents/Projects/Programming/Virtue/CVS/virtue.0/application/Virtue/VTLayoutPreferences-Info.plist"; sourceTree = "<absolute>"; };
+		E958A874075EEEC500773392 /* VTLayoutPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTLayoutPreferences-Info.plist"; sourceTree = "<group>"; };
 		E958A87A075EEFDA00773392 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
-		E958A87D075EF00900773392 /* VTLayoutPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTLayoutPreferencesController.h; path = src/Interface/Preferences/Layout/VTLayoutPreferencesController.h; sourceTree = "<group>"; };
-		E958A87E075EF00900773392 /* VTLayoutPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTLayoutPreferencesController.m; path = src/Interface/Preferences/Layout/VTLayoutPreferencesController.m; sourceTree = "<group>"; };
+		E958A87D075EF00900773392 /* VTLayoutPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTLayoutPreferencesController.h; path = Source/Interface/Preferences/Layout/VTLayoutPreferencesController.h; sourceTree = "<group>"; };
+		E958A87E075EF00900773392 /* VTLayoutPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTLayoutPreferencesController.m; path = Source/Interface/Preferences/Layout/VTLayoutPreferencesController.m; sourceTree = "<group>"; };
 		E958A9B4075F96E700773392 /* imageWidgetAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAdd.png; sourceTree = "<group>"; };
 		E958A9B5075F96E700773392 /* imageWidgetAddPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAddPressed.png; sourceTree = "<group>"; };
-		E9599FFB0765055B00543439 /* VTTriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTTriggerViewController.h; path = src/Interface/VTTriggerViewController.h; sourceTree = "<group>"; };
-		E9599FFC0765055B00543439 /* VTTriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTTriggerViewController.m; path = src/Interface/VTTriggerViewController.m; sourceTree = "<group>"; };
+		E9599FFB0765055B00543439 /* VTTriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTTriggerViewController.h; path = Source/Interface/VTTriggerViewController.h; sourceTree = "<group>"; };
+		E9599FFC0765055B00543439 /* VTTriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTTriggerViewController.m; path = Source/Interface/VTTriggerViewController.m; sourceTree = "<group>"; };
 		E959A03807663D3600543439 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Notifications.strings; sourceTree = "<group>"; };
-		E959A09907671BBD00543439 /* VTApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationViewController.h; path = src/Interface/VTApplicationViewController.h; sourceTree = "<group>"; };
-		E959A09A07671BBD00543439 /* VTApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationViewController.m; path = src/Interface/VTApplicationViewController.m; sourceTree = "<group>"; };
+		E959A09907671BBD00543439 /* VTApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationViewController.h; path = Source/Interface/VTApplicationViewController.h; sourceTree = "<group>"; };
+		E959A09A07671BBD00543439 /* VTApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationViewController.m; path = Source/Interface/VTApplicationViewController.m; sourceTree = "<group>"; };
 		E959D6DD0763113400013EB2 /* imageKeyboardTrigger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageKeyboardTrigger.png; sourceTree = "<group>"; };
 		E959D6DE0763113400013EB2 /* imageMouseTrigger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageMouseTrigger.png; sourceTree = "<group>"; };
 		E95AF1A607478D050065B830 /* imageNext.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imageNext.tiff; sourceTree = "<group>"; };
 		E95AF1A707478D050065B830 /* imagePrevious.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imagePrevious.tiff; sourceTree = "<group>"; };
-		E95B98EA073FFFD400231BC5 /* VTDesktopScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopScripting.h; path = src/Scripting/VTDesktopScripting.h; sourceTree = "<group>"; };
-		E95B98EB073FFFD400231BC5 /* VTDesktopScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopScripting.m; path = src/Scripting/VTDesktopScripting.m; sourceTree = "<group>"; };
-		E95B991D074006BF00231BC5 /* VTDesktopDecorationScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopDecorationScripting.h; path = src/Scripting/VTDesktopDecorationScripting.h; sourceTree = "<group>"; };
-		E95B991E074006BF00231BC5 /* VTDesktopDecorationScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopDecorationScripting.m; path = src/Scripting/VTDesktopDecorationScripting.m; sourceTree = "<group>"; };
-		E95B996E07401FE700231BC5 /* VTDecorationPrimitiveScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveScripting.h; path = src/Scripting/VTDecorationPrimitiveScripting.h; sourceTree = "<group>"; };
-		E95B996F07401FE700231BC5 /* VTDecorationPrimitiveScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveScripting.m; path = src/Scripting/VTDecorationPrimitiveScripting.m; sourceTree = "<group>"; };
-		E95B9A38074038E300231BC5 /* Changelog */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
-		E95C9F3D0732E74600148FA8 /* DefaultDesktops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = DefaultDesktops.plist; path = data/defaults/DefaultDesktops.plist; sourceTree = "<group>"; };
+		E95B98EA073FFFD400231BC5 /* VTDesktopScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopScripting.h; path = Source/Scripting/VTDesktopScripting.h; sourceTree = "<group>"; };
+		E95B98EB073FFFD400231BC5 /* VTDesktopScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopScripting.m; path = Source/Scripting/VTDesktopScripting.m; sourceTree = "<group>"; };
+		E95B991D074006BF00231BC5 /* VTDesktopDecorationScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopDecorationScripting.h; path = Source/Scripting/VTDesktopDecorationScripting.h; sourceTree = "<group>"; };
+		E95B991E074006BF00231BC5 /* VTDesktopDecorationScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopDecorationScripting.m; path = Source/Scripting/VTDesktopDecorationScripting.m; sourceTree = "<group>"; };
+		E95B996E07401FE700231BC5 /* VTDecorationPrimitiveScripting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitiveScripting.h; path = Source/Scripting/VTDecorationPrimitiveScripting.h; sourceTree = "<group>"; };
+		E95B996F07401FE700231BC5 /* VTDecorationPrimitiveScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveScripting.m; path = Source/Scripting/VTDecorationPrimitiveScripting.m; sourceTree = "<group>"; };
+		E95C9F3D0732E74600148FA8 /* DefaultDesktops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = DefaultDesktops.plist; path = Data/defaults/DefaultDesktops.plist; sourceTree = "<group>"; };
 		E96B2BC3077B3CE200EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/Operations.nib; sourceTree = "<group>"; };
 		E96B2BC4077B3D5000EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		E96B2BC5077B3D5A00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
@@ -916,17 +913,17 @@
 		E96B2BD5077B3E0A00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
 		E96B2BD6077B3E1300EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
 		E96B2BD7077B3E1B00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		E97105580747D445009CEAFD /* VTPreferenceKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPreferenceKeys.h; path = src/Common/VTPreferenceKeys.h; sourceTree = SOURCE_ROOT; };
+		E97105580747D445009CEAFD /* VTPreferenceKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPreferenceKeys.h; path = Source/Common/VTPreferenceKeys.h; sourceTree = SOURCE_ROOT; };
 		E97C3912074D2D700025CD57 /* imageAssistantUpdateDesktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAssistantUpdateDesktop.png; sourceTree = "<group>"; };
 		E97C3913074D2D700025CD57 /* imageAssistantUpdateDock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAssistantUpdateDock.png; sourceTree = "<group>"; };
-		E9832A09073B4D2200E6D99A /* VTMatrixPagerPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerPreferences.h; path = src/Interface/Layout/MatrixLayout/VTMatrixPagerPreferences.h; sourceTree = "<group>"; };
-		E98B8669074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitivePositionMarkers.h; path = src/Categories/VTDecorationPrimitivePositionMarkers.h; sourceTree = "<group>"; };
-		E98B866A074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitivePositionMarkers.m; path = src/Categories/VTDecorationPrimitivePositionMarkers.m; sourceTree = "<group>"; };
+		E9832A09073B4D2200E6D99A /* VTMatrixPagerPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTMatrixPagerPreferences.h; path = Source/Interface/Layout/MatrixLayout/VTMatrixPagerPreferences.h; sourceTree = "<group>"; };
+		E98B8669074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTDecorationPrimitivePositionMarkers.h; path = Source/Categories/VTDecorationPrimitivePositionMarkers.h; sourceTree = "<group>"; };
+		E98B866A074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitivePositionMarkers.m; path = Source/Categories/VTDecorationPrimitivePositionMarkers.m; sourceTree = "<group>"; };
 		E99B0A06073D0A76004B9D57 /* imageColorLabelMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageColorLabelMask.png; sourceTree = "<group>"; };
 		E99B0A25073D31DF004B9D57 /* imageColorLabelMaskComposite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageColorLabelMaskComposite.png; sourceTree = "<group>"; };
 		E99B0A49073D58EA004B9D57 /* imageColorLabelMaskBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageColorLabelMaskBar.png; sourceTree = "<group>"; };
-		E9A2D06E07637265009CDAC5 /* VTTriggerToTypeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTTriggerToTypeImage.h; path = src/Interface/Preferences/Hotkeys/VTTriggerToTypeImage.h; sourceTree = "<group>"; };
-		E9A2D06F07637265009CDAC5 /* VTTriggerToTypeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTTriggerToTypeImage.m; path = src/Interface/Preferences/Hotkeys/VTTriggerToTypeImage.m; sourceTree = "<group>"; };
+		E9A2D06E07637265009CDAC5 /* VTTriggerToTypeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTTriggerToTypeImage.h; path = Source/Interface/Preferences/Hotkeys/VTTriggerToTypeImage.h; sourceTree = "<group>"; };
+		E9A2D06F07637265009CDAC5 /* VTTriggerToTypeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTTriggerToTypeImage.m; path = Source/Interface/Preferences/Hotkeys/VTTriggerToTypeImage.m; sourceTree = "<group>"; };
 		E9A4816506FF5D6F00A8AE3C /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		E9C628C80758FAB40072C1EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTPreferences.nib; sourceTree = "<group>"; };
 		E9C6290007591C520072C1EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
@@ -934,17 +931,17 @@
 		E9C6297F075A01BE0072C1EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		E9C62981075A01F90072C1EF /* iconExtension.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconExtension.icns; sourceTree = "<group>"; };
 		E9C62992075A146C0072C1EF /* VTApplicationPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTApplicationPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9C62993075A146E0072C1EF /* VTApplicationPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "VTApplicationPreferences-Info.plist"; path = "/Users/thomas/Documents/Projects/Programming/Virtue/CVS/virtue.0/application/Virtue/VTApplicationPreferences-Info.plist"; sourceTree = "<absolute>"; };
+		E9C62993075A146E0072C1EF /* VTApplicationPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTApplicationPreferences-Info.plist"; sourceTree = "<group>"; };
 		E9C62995075A14F00072C1EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
-		E9C62997075A15330072C1EF /* VTApplicationPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationPreferencesController.h; path = src/Interface/Preferences/Application/VTApplicationPreferencesController.h; sourceTree = "<group>"; };
-		E9C62998075A15330072C1EF /* VTApplicationPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationPreferencesController.m; path = src/Interface/Preferences/Application/VTApplicationPreferencesController.m; sourceTree = "<group>"; };
-		E9C6299E075A16D10072C1EF /* iconApplicationPreferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconApplicationPreferences.icns; path = data/icons/iconApplicationPreferences.icns; sourceTree = SOURCE_ROOT; };
+		E9C62997075A15330072C1EF /* VTApplicationPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationPreferencesController.h; path = Source/Interface/Preferences/Application/VTApplicationPreferencesController.h; sourceTree = "<group>"; };
+		E9C62998075A15330072C1EF /* VTApplicationPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationPreferencesController.m; path = Source/Interface/Preferences/Application/VTApplicationPreferencesController.m; sourceTree = "<group>"; };
+		E9C6299E075A16D10072C1EF /* iconApplicationPreferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconApplicationPreferences.icns; path = Data/icons/iconApplicationPreferences.icns; sourceTree = SOURCE_ROOT; };
 		E9C629BA075A35F00072C1EF /* VTAppearancePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTAppearancePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C629BC075A36500072C1EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
 		E9C629FE075A49B20072C1EF /* VTHotkeyPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTHotkeyPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9C629FF075A49B60072C1EF /* VTHotkeyPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "VTHotkeyPreferences-Info.plist"; path = "/Users/thomas/Documents/Projects/Programming/Virtue/CVS/virtue.0/application/Virtue/VTHotkeyPreferences-Info.plist"; sourceTree = "<absolute>"; };
-		E9C62A02075A4A590072C1EF /* VTHotkeyPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTHotkeyPreferencesController.h; path = src/Interface/Preferences/Hotkeys/VTHotkeyPreferencesController.h; sourceTree = "<group>"; };
-		E9C62A03075A4A590072C1EF /* VTHotkeyPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyPreferencesController.m; path = src/Interface/Preferences/Hotkeys/VTHotkeyPreferencesController.m; sourceTree = "<group>"; };
+		E9C629FF075A49B60072C1EF /* VTHotkeyPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTHotkeyPreferences-Info.plist"; sourceTree = "<group>"; };
+		E9C62A02075A4A590072C1EF /* VTHotkeyPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTHotkeyPreferencesController.h; path = Source/Interface/Preferences/Hotkeys/VTHotkeyPreferencesController.h; sourceTree = "<group>"; };
+		E9C62A03075A4A590072C1EF /* VTHotkeyPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyPreferencesController.m; path = Source/Interface/Preferences/Hotkeys/VTHotkeyPreferencesController.m; sourceTree = "<group>"; };
 		E9C62A0B075A4B370072C1EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
 		E9C62AE8075A4CB50072C1EF /* imageHotkeyPreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imageHotkeyPreferences.tiff; sourceTree = "<group>"; };
 		E9D29BB0073D900200E0E6CE /* imageColorLabelClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageColorLabelClear.png; sourceTree = "<group>"; };
@@ -959,6 +956,18 @@
 		E9D29C07073E3AC400E0E6CE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E9FD547A0713BF290006590F /* iconDesktopFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconDesktopFolder.icns; sourceTree = "<group>"; };
 		E9FD54FE0715C6260006590F /* imageAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAction.png; sourceTree = "<group>"; };
+		EA2108E2094541B5007BED41 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECCgsExt.h; sourceTree = "<group>"; };
+		EA2108E3094541B5007BED41 /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEvent.h; sourceTree = "<group>"; };
+		EA2108E4094541B5007BED41 /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventAlpha.h; sourceTree = "<group>"; };
+		EA2108E5094541B5007BED41 /* DECEventDesktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventDesktop.h; sourceTree = "<group>"; };
+		EA2108E6094541B5007BED41 /* DECEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventInfo.h; sourceTree = "<group>"; };
+		EA2108E7094541B5007BED41 /* DECEventLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventLevel.h; sourceTree = "<group>"; };
+		EA2108E8094541B5007BED41 /* DECEventOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventOrder.h; sourceTree = "<group>"; };
+		EA2108E9094541B5007BED41 /* DECEventProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventProperty.h; sourceTree = "<group>"; };
+		EA2108EA094541B5007BED41 /* DECEventTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventTags.h; sourceTree = "<group>"; };
+		EA2108EB094541B5007BED41 /* DECInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECInjector.h; sourceTree = "<group>"; };
+		EA2108EC094541B5007BED41 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEComm.h; sourceTree = "<group>"; };
+		EA2108ED094541B6007BED41 /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -1093,7 +1102,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				E9124EAB073140CE00BD28CD /* main.m */,
@@ -1104,7 +1113,7 @@
 				E936398F06FCD8D500E354DB /* Controllers */,
 				E93639A506FCD8D500E354DB /* Plugins */,
 			);
-			name = Classes;
+			name = Source;
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -1148,15 +1157,11 @@
 		29B97314FDCFA39411CA2CEA /* virtue */ = {
 			isa = PBXGroup;
 			children = (
-				080E96DDFE201D6D7F000001 /* Classes */,
+				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				E9123F5107883A4E005A3C10 /* Localization Strings */,
-				E9363A9206FCDE8300E354DB /* Informational */,
-				E9363ADB06FCE64300E354DB /* data */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				EA6CB6080924CF83004AC51D /* External Projects */,
 			);
 			name = virtue;
 			sourceTree = "<group>";
@@ -1164,7 +1169,13 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E9127278072AAA22006DC207 /* plists */,
+				EA2108E1094541B5007BED41 /* DockCommunicator */,
+				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
+				EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */,
+				EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */,
+				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
+				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
+				E9127278072AAA22006DC207 /* Property Lists */,
 				E91ADC3307057EFF00F69228 /* Scripting */,
 				32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */,
 			);
@@ -1174,6 +1185,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9363A9206FCDE8300E354DB /* Informational */,
+				E9123F5107883A4E005A3C10 /* Localization Strings */,
+				E9363ADB06FCE64300E354DB /* Data */,
 				E913F21A076E3FF400072617 /* PrimitiveTextInspector.nib */,
 				E913F21C076E3FF400072617 /* PrimitiveTintInspector.nib */,
 				E913F21E076E3FF400072617 /* PrimitiveWatermarkInspector.nib */,
@@ -1251,7 +1265,7 @@
 			name = MatrixLayout;
 			sourceTree = "<group>";
 		};
-		E9127278072AAA22006DC207 /* plists */ = {
+		E9127278072AAA22006DC207 /* Property Lists */ = {
 			isa = PBXGroup;
 			children = (
 				E91750FB078061AB004F5633 /* VTPluginPreferences-Info.plist */,
@@ -1269,7 +1283,7 @@
 				E9560C40071DA9AE00D497BE /* VTDesktopNamePrimitive-Info.plist */,
 				E91271AF0729BA58006DC207 /* VTBehaviourPreferences-Info.plist */,
 			);
-			name = plists;
+			name = "Property Lists";
 			sourceTree = "<group>";
 		};
 		E913F13A076E288500072617 /* Desktop Template */ = {
@@ -1372,7 +1386,7 @@
 				E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */,
 			);
 			name = Controllers;
-			path = src/Controllers;
+			path = Source/Controllers;
 			sourceTree = "<group>";
 		};
 		E93639A506FCD8D500E354DB /* Plugins */ = {
@@ -1381,14 +1395,13 @@
 				E9560C45071DAA1500D497BE /* Primitives */,
 			);
 			name = Plugins;
-			path = src/Plugins;
+			path = Source/Plugins;
 			sourceTree = "<group>";
 		};
 		E9363A9206FCDE8300E354DB /* Informational */ = {
 			isa = PBXGroup;
 			children = (
 				E9035C81077754EF00016B73 /* TODO.rtf */,
-				E95B9A38074038E300231BC5 /* Changelog */,
 				E9363A6B06FCDDCD00E354DB /* GPL */,
 				E9363A6306FCDDCD00E354DB /* COPYING */,
 				E9363A7506FCDDCD00E354DB /* Readme.rtf */,
@@ -1396,13 +1409,14 @@
 			name = Informational;
 			sourceTree = "<group>";
 		};
-		E9363ADB06FCE64300E354DB /* data */ = {
+		E9363ADB06FCE64300E354DB /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				E913F451076F7A2000072617 /* virtueHelp */,
 				E9363ADC06FCE64300E354DB /* icons */,
 				E9363ADE06FCE64300E354DB /* images */,
 			);
+			name = Data;
 			path = data;
 			sourceTree = "<group>";
 		};
@@ -1669,6 +1683,26 @@
 			name = DesktopColorLabel;
 			sourceTree = "<group>";
 		};
+		EA2108E1094541B5007BED41 /* DockCommunicator */ = {
+			isa = PBXGroup;
+			children = (
+				EA2108E2094541B5007BED41 /* DECCgsExt.h */,
+				EA2108E3094541B5007BED41 /* DECEvent.h */,
+				EA2108E4094541B5007BED41 /* DECEventAlpha.h */,
+				EA2108E5094541B5007BED41 /* DECEventDesktop.h */,
+				EA2108E6094541B5007BED41 /* DECEventInfo.h */,
+				EA2108E7094541B5007BED41 /* DECEventLevel.h */,
+				EA2108E8094541B5007BED41 /* DECEventOrder.h */,
+				EA2108E9094541B5007BED41 /* DECEventProperty.h */,
+				EA2108EA094541B5007BED41 /* DECEventTags.h */,
+				EA2108EB094541B5007BED41 /* DECInjector.h */,
+				EA2108EC094541B5007BED41 /* DEComm.h */,
+				EA2108ED094541B6007BED41 /* DECVersion.h */,
+			);
+			name = DockCommunicator;
+			path = ../../Frameworks/DockCommunicator/Includes;
+			sourceTree = SOURCE_ROOT;
+		};
 		EA6B92110944409200E6EACB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1677,22 +1711,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA6CB6080924CF83004AC51D /* External Projects */ = {
-			isa = PBXGroup;
-			children = (
-				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
-				EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */,
-				EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */,
-				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
-				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
-			);
-			name = "External Projects";
-			sourceTree = "<group>";
-		};
 		EA9AF70E094444DC005D60CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA9AF712094444DC005D60CB /* DockExtension.bundle */,
+				EA9AF712094444DC005D60CB /* dockExtension.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1822,7 +1844,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				HEADER_SEARCH_PATHS = ../Virtue/src/Hotkeys;
+				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2483,10 +2505,10 @@
 			remoteRef = EA6B92140944409200E6EACB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA9AF712094444DC005D60CB /* DockExtension.bundle */ = {
+		EA9AF712094444DC005D60CB /* dockExtension.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = DockExtension.bundle;
+			path = dockExtension.bundle;
 			remoteRef = EA9AF711094444DC005D60CB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -2518,7 +2540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9AF715094444F1005D60CB /* DockExtension.bundle in Resources */,
+				EA9AF715094444F1005D60CB /* dockExtension.bundle in Resources */,
 				E959A0880767140A00543439 /* imageKeyboardTrigger.png in Resources */,
 				E959A0890767140A00543439 /* imageMouseTrigger.png in Resources */,
 				E940C5E70733F03400C1642C /* DefaultHotkeys.plist in Resources */,
@@ -3521,7 +3543,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				HEADER_SEARCH_PATHS = ../Virtue/src/Hotkeys;
+				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3555,7 +3577,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
 				GCC_USE_GCC3_PFE_SUPPORT = YES;
 				GENERATE_MASTER_OBJECT_FILE = YES;
-				HEADER_SEARCH_PATHS = ../Virtue/src/Hotkeys;
+				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
@@ -3924,13 +3946,10 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../../frameworks/decomm/includes/;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
-				PREBINDING = YES;
 				PRODUCT_NAME = Virtue;
 				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = app;
@@ -3966,8 +3985,23 @@
 		EA609C25090666C8003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_PROFILING_CODE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
