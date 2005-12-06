@@ -322,7 +322,6 @@
  *
  */ 
 - (BOOL) isSticky {
-	NSLog(@"Window %x is sticky: %x", [self nativeWindow], mIsSticky);
 	return mIsSticky;
 }
 

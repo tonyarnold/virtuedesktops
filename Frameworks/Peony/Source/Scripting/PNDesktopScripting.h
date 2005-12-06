@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import "PNDesktop.h" 
+#import "../PNDesktop.h" 
 
 
 @interface PNDesktop(PNScripting)

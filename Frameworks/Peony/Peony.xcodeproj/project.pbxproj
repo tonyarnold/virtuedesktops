@@ -32,7 +32,7 @@
 		E97C3AB8074DDA550025CD57 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AB6074DDA550025CD57 /* COPYING */; };
 		E97C3ABB074DDA690025CD57 /* GPL in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AB9074DDA690025CD57 /* GPL */; };
 		EA1E6DDF0924CD0100AABD4D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E6DDD0924CCF300AABD4D /* Zen.framework */; };
-		EA9AF88A0944533D005D60CB /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B921E094440B600E6EACB /* libDockCommunicator.a */; };
+		EA7A35EC09453D5600A860B2 /* libdecomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A35D509453CF100A860B2 /* libdecomm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -90,16 +90,16 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = Zen;
 		};
-		EA6B921D094440B600E6EACB /* PBXContainerItemProxy */ = {
+		EA7A35D409453CF100A860B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA1E6DD00924CCE100AABD4D /* DockCommunicator.xcodeproj */;
+			containerPortal = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E;
+			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E /* libdecomm.a */;
 			remoteInfo = DockCommunicator;
 		};
-		EA9AF88F09445343005D60CB /* PBXContainerItemProxy */ = {
+		EA7A35ED09453D5C00A860B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA1E6DD00924CCE100AABD4D /* DockCommunicator.xcodeproj */;
+			containerPortal = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E /* DockCommunicator */;
 			remoteInfo = DockCommunicator;
@@ -121,29 +121,41 @@
 		32DBCF5E0370ADEE00C91783 /* peony_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peony_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Peony.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Peony.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E93637D006FCCC2200E354DB /* Peony.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Peony.h; path = src/Peony.h; sourceTree = "<group>"; };
-		E93637D106FCCC2200E354DB /* PNApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNApplication.h; path = src/PNApplication.h; sourceTree = "<group>"; };
-		E93637D206FCCC2200E354DB /* PNApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNApplication.m; path = src/PNApplication.m; sourceTree = "<group>"; };
-		E93637D306FCCC2200E354DB /* PNDesktop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNDesktop.h; path = src/PNDesktop.h; sourceTree = "<group>"; };
-		E93637D406FCCC2200E354DB /* PNDesktop.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNDesktop.m; path = src/PNDesktop.m; sourceTree = "<group>"; };
-		E93637D506FCCC2200E354DB /* PNDesktopItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNDesktopItem.h; path = src/PNDesktopItem.h; sourceTree = "<group>"; };
-		E93637D606FCCC2200E354DB /* PNNotifications.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNNotifications.h; path = src/PNNotifications.h; sourceTree = "<group>"; };
-		E93637D706FCCC2200E354DB /* PNStickyWindowCollection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNStickyWindowCollection.h; path = src/PNStickyWindowCollection.h; sourceTree = "<group>"; };
-		E93637D806FCCC2200E354DB /* PNStickyWindowCollection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNStickyWindowCollection.m; path = src/PNStickyWindowCollection.m; sourceTree = "<group>"; };
-		E93637D906FCCC2200E354DB /* PNWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindow.h; path = src/PNWindow.h; sourceTree = "<group>"; };
-		E93637DA06FCCC2200E354DB /* PNWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindow.m; path = src/PNWindow.m; sourceTree = "<group>"; };
-		E93637DB06FCCC2200E354DB /* PNWindowList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindowList.h; path = src/PNWindowList.h; sourceTree = "<group>"; };
-		E93637DC06FCCC2200E354DB /* PNWindowList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindowList.m; path = src/PNWindowList.m; sourceTree = "<group>"; };
-		E93637DD06FCCC2200E354DB /* PNWindowPool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindowPool.h; path = src/PNWindowPool.h; sourceTree = "<group>"; };
-		E93637DE06FCCC2200E354DB /* PNWindowPool.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindowPool.m; path = src/PNWindowPool.m; sourceTree = "<group>"; };
+		E93637D006FCCC2200E354DB /* Peony.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Peony.h; path = Source/Peony.h; sourceTree = "<group>"; };
+		E93637D106FCCC2200E354DB /* PNApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNApplication.h; path = Source/PNApplication.h; sourceTree = "<group>"; };
+		E93637D206FCCC2200E354DB /* PNApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNApplication.m; path = Source/PNApplication.m; sourceTree = "<group>"; };
+		E93637D306FCCC2200E354DB /* PNDesktop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNDesktop.h; path = Source/PNDesktop.h; sourceTree = "<group>"; };
+		E93637D406FCCC2200E354DB /* PNDesktop.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNDesktop.m; path = Source/PNDesktop.m; sourceTree = "<group>"; };
+		E93637D506FCCC2200E354DB /* PNDesktopItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNDesktopItem.h; path = Source/PNDesktopItem.h; sourceTree = "<group>"; };
+		E93637D606FCCC2200E354DB /* PNNotifications.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNNotifications.h; path = Source/PNNotifications.h; sourceTree = "<group>"; };
+		E93637D706FCCC2200E354DB /* PNStickyWindowCollection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNStickyWindowCollection.h; path = Source/PNStickyWindowCollection.h; sourceTree = "<group>"; };
+		E93637D806FCCC2200E354DB /* PNStickyWindowCollection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNStickyWindowCollection.m; path = Source/PNStickyWindowCollection.m; sourceTree = "<group>"; };
+		E93637D906FCCC2200E354DB /* PNWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindow.h; path = Source/PNWindow.h; sourceTree = "<group>"; };
+		E93637DA06FCCC2200E354DB /* PNWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindow.m; path = Source/PNWindow.m; sourceTree = "<group>"; };
+		E93637DB06FCCC2200E354DB /* PNWindowList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindowList.h; path = Source/PNWindowList.h; sourceTree = "<group>"; };
+		E93637DC06FCCC2200E354DB /* PNWindowList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindowList.m; path = Source/PNWindowList.m; sourceTree = "<group>"; };
+		E93637DD06FCCC2200E354DB /* PNWindowPool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindowPool.h; path = Source/PNWindowPool.h; sourceTree = "<group>"; };
+		E93637DE06FCCC2200E354DB /* PNWindowPool.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindowPool.m; path = Source/PNWindowPool.m; sourceTree = "<group>"; };
 		E936395706FCD31A00E354DB /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../../shared/CGS/CGSPrivate.h; sourceTree = SOURCE_ROOT; };
-		E9572C41070B32810053E494 /* PNDesktopScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNDesktopScripting.h; path = src/Scripting/PNDesktopScripting.h; sourceTree = "<group>"; };
-		E9572C42070B32810053E494 /* PNDesktopScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNDesktopScripting.m; path = src/Scripting/PNDesktopScripting.m; sourceTree = "<group>"; };
+		E9572C41070B32810053E494 /* PNDesktopScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNDesktopScripting.h; path = Source/Scripting/PNDesktopScripting.h; sourceTree = "<group>"; };
+		E9572C42070B32810053E494 /* PNDesktopScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNDesktopScripting.m; path = Source/Scripting/PNDesktopScripting.m; sourceTree = "<group>"; };
 		E958EF9D06FDA220001DCB1E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		E97C3AB7074DDA550025CD57 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/COPYING; sourceTree = "<group>"; };
 		E97C3ABA074DDA690025CD57 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/GPL; sourceTree = "<group>"; };
-		EA1E6DD00924CCE100AABD4D /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EA1E6DD80924CCF300AABD4D /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EA7A35BC09453CA600A860B2 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECCgsExt.h; sourceTree = "<group>"; };
+		EA7A35BD09453CA600A860B2 /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEvent.h; sourceTree = "<group>"; };
+		EA7A35BE09453CA600A860B2 /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventAlpha.h; sourceTree = "<group>"; };
+		EA7A35BF09453CA600A860B2 /* DECEventDesktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventDesktop.h; sourceTree = "<group>"; };
+		EA7A35C009453CA600A860B2 /* DECEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventInfo.h; sourceTree = "<group>"; };
+		EA7A35C109453CA600A860B2 /* DECEventLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventLevel.h; sourceTree = "<group>"; };
+		EA7A35C209453CA600A860B2 /* DECEventOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventOrder.h; sourceTree = "<group>"; };
+		EA7A35C309453CA600A860B2 /* DECEventProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventProperty.h; sourceTree = "<group>"; };
+		EA7A35C409453CA600A860B2 /* DECEventTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventTags.h; sourceTree = "<group>"; };
+		EA7A35C509453CA600A860B2 /* DECInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECInjector.h; sourceTree = "<group>"; };
+		EA7A35C609453CA600A860B2 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEComm.h; sourceTree = "<group>"; };
+		EA7A35C709453CA600A860B2 /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
+		EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9AF88A0944533D005D60CB /* libDockCommunicator.a in Frameworks */,
+				EA7A35EC09453D5600A860B2 /* libdecomm.a in Frameworks */,
 				E91AD80C0703571B00F69228 /* Foundation.framework in Frameworks */,
 				E958EF9E06FDA227001DCB1E /* Carbon.framework in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
@@ -173,9 +185,10 @@
 		0867D691FE84028FC02AAC07 /* peony */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */,
 				EA1E6DD80924CCF300AABD4D /* Zen.xcodeproj */,
-				EA1E6DD00924CCE100AABD4D /* DockCommunicator.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Sources */,
+				EA7A35A709453C7D00A860B2 /* Shared includes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -279,10 +292,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA6B921A094440B600E6EACB /* Products */ = {
+		EA7A35A709453C7D00A860B2 /* Shared includes */ = {
 			isa = PBXGroup;
 			children = (
-				EA6B921E094440B600E6EACB /* libDockCommunicator.a */,
+				EA7A35BB09453CA600A860B2 /* DockCommunicator */,
+			);
+			name = "Shared includes";
+			sourceTree = "<group>";
+		};
+		EA7A35BB09453CA600A860B2 /* DockCommunicator */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A35BC09453CA600A860B2 /* DECCgsExt.h */,
+				EA7A35BD09453CA600A860B2 /* DECEvent.h */,
+				EA7A35BE09453CA600A860B2 /* DECEventAlpha.h */,
+				EA7A35BF09453CA600A860B2 /* DECEventDesktop.h */,
+				EA7A35C009453CA600A860B2 /* DECEventInfo.h */,
+				EA7A35C109453CA600A860B2 /* DECEventLevel.h */,
+				EA7A35C209453CA600A860B2 /* DECEventOrder.h */,
+				EA7A35C309453CA600A860B2 /* DECEventProperty.h */,
+				EA7A35C409453CA600A860B2 /* DECEventTags.h */,
+				EA7A35C509453CA600A860B2 /* DECInjector.h */,
+				EA7A35C609453CA600A860B2 /* DEComm.h */,
+				EA7A35C709453CA600A860B2 /* DECVersion.h */,
+			);
+			name = DockCommunicator;
+			path = ../DockCommunicator/Includes;
+			sourceTree = SOURCE_ROOT;
+		};
+		EA7A35D009453CF100A860B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A35D509453CF100A860B2 /* libdecomm.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,7 +384,7 @@
 			};
 			dependencies = (
 				EAB7BBF60924DA7E0067CDFD /* PBXTargetDependency */,
-				EA9AF89009445343005D60CB /* PBXTargetDependency */,
+				EA7A35EE09453D5C00A860B2 /* PBXTargetDependency */,
 			);
 			name = Peony;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -371,8 +412,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EA6B921A094440B600E6EACB /* Products */;
-					ProjectRef = EA1E6DD00924CCE100AABD4D /* DockCommunicator.xcodeproj */;
+					ProductGroup = EA7A35D009453CF100A860B2 /* Products */;
+					ProjectRef = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
 				},
 				{
 					ProductGroup = EA1E6DD90924CCF300AABD4D /* Products */;
@@ -393,11 +434,11 @@
 			remoteRef = EA1E6DDC0924CCF300AABD4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA6B921E094440B600E6EACB /* libDockCommunicator.a */ = {
+		EA7A35D509453CF100A860B2 /* libdecomm.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libDockCommunicator.a;
-			remoteRef = EA6B921D094440B600E6EACB /* PBXContainerItemProxy */;
+			path = libdecomm.a;
+			remoteRef = EA7A35D409453CF100A860B2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -433,10 +474,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EA9AF89009445343005D60CB /* PBXTargetDependency */ = {
+		EA7A35EE09453D5C00A860B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DockCommunicator;
-			targetProxy = EA9AF88F09445343005D60CB /* PBXContainerItemProxy */;
+			targetProxy = EA7A35ED09453D5C00A860B2 /* PBXContainerItemProxy */;
 		};
 		EAB7BBF60924DA7E0067CDFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -487,7 +528,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = peony_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../decomm/includes;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
@@ -531,8 +572,25 @@
 		EAE822E90924A62C00239477 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_PROFILING_CODE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PREBINDING = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
