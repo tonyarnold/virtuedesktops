@@ -16,7 +16,7 @@
 		E936385D06FCCD7500E354DB /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = E936385806FCCD7500E354DB /* main.h */; };
 		E936393206FCD19000E354DB /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E936393106FCD18800E354DB /* CGSPrivate.h */; };
 		E97C3ACB074DDB090025CD57 /* COPYING.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AC9074DDB090025CD57 /* COPYING.rtf */; };
-		EA6B93100944416400E6EACB /* libdecomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B930B0944415E00E6EACB /* libdecomm.a */; };
+		EA7B9B7B0945AF5200503865 /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B930B0944415E00E6EACB /* libDockCommunicator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -67,7 +67,7 @@
 		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		32BAE0B30371A71500C91783 /* dockExtension_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dockExtension_Prefix.pch; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D01CCD20486CAD60068D4B7 /* dockExtension.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dockExtension.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D01CCD20486CAD60068D4B7 /* DockExtension.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockExtension.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E936385406FCCD7500E354DB /* DEEventHandlers.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DEEventHandlers.c; path = Source/DEEventHandlers.c; sourceTree = "<group>"; };
 		E936385506FCCD7500E354DB /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DEEventHandlers.h; path = Source/DEEventHandlers.h; sourceTree = "<group>"; };
 		E936385706FCCD7500E354DB /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = main.c; path = Source/main.c; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6B93100944416400E6EACB /* libdecomm.a in Frameworks */,
 				8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */,
+				EA7B9B7B0945AF5200503865 /* libDockCommunicator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +148,7 @@
 		19C28FB4FE9D528D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D01CCD20486CAD60068D4B7 /* dockExtension.bundle */,
+				8D01CCD20486CAD60068D4B7 /* DockExtension.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		EA6B93070944415E00E6EACB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA6B930B0944415E00E6EACB /* libdecomm.a */,
+				EA6B930B0944415E00E6EACB /* libDockCommunicator.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			name = DockExtension;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = dockExtension;
-			productReference = 8D01CCD20486CAD60068D4B7 /* dockExtension.bundle */;
+			productReference = 8D01CCD20486CAD60068D4B7 /* DockExtension.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -289,10 +289,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EA6B930B0944415E00E6EACB /* libdecomm.a */ = {
+		EA6B930B0944415E00E6EACB /* libDockCommunicator.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libdecomm.a;
+			path = libDockCommunicator.a;
 			remoteRef = EA6B930A0944415E00E6EACB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -355,7 +355,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
@@ -366,16 +365,15 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = ../decomm/includes;
+				HEADER_SEARCH_PATHS = ../DockCommunicator/Includes;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "";
 				LIBRARY_STYLE = BUNDLE;
 				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = dockExtension;
+				PRODUCT_NAME = DockExtension;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -417,6 +415,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -426,8 +425,10 @@
 				HEADER_SEARCH_PATHS = ../DockCommunicator/includes;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = ../DockCommunicator/build/Release;
 				LIBRARY_STYLE = BUNDLE;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PREBINDING = NO;
 				PRODUCT_NAME = DockExtension;
 				SEPARATE_STRIP = YES;
 				STRIP_INSTALLED_PRODUCT = YES;

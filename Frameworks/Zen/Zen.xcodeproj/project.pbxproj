@@ -97,31 +97,31 @@
 		32DBCF5E0370ADEE00C91783 /* Zen_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zen_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Zen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNImagePopUpButton.h; sourceTree = "<group>"; };
-		E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNImagePopUpButton.m; sourceTree = "<group>"; };
-		E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSNumberBytes.h; sourceTree = "<group>"; };
-		E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSNumberBytes.m; sourceTree = "<group>"; };
-		E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
-		E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSMethodSignatureArguments.m; sourceTree = "<group>"; };
-		E9544CD807553831009DA20D /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
-		E9544CD907553831009DA20D /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
-		E95731D40711A4CA0053E494 /* ZNFilesystemWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNFilesystemWatcher.h; sourceTree = "<group>"; };
-		E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNFilesystemWatcher.m; sourceTree = "<group>"; };
+		E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNImagePopUpButton.h; sourceTree = "<group>"; };
+		E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNImagePopUpButton.m; sourceTree = "<group>"; };
+		E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberBytes.h; sourceTree = "<group>"; };
+		E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberBytes.m; sourceTree = "<group>"; };
+		E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
+		E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMethodSignatureArguments.m; sourceTree = "<group>"; };
+		E9544CD807553831009DA20D /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
+		E9544CD907553831009DA20D /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
+		E95731D40711A4CA0053E494 /* ZNFilesystemWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNFilesystemWatcher.h; sourceTree = "<group>"; };
+		E95731D50711A4CA0053E494 /* ZNFilesystemWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNFilesystemWatcher.m; sourceTree = "<group>"; };
 		E95731DB0711B0320053E494 /* Zen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zen.h; sourceTree = "<group>"; };
-		E958AAF40760444300773392 /* ZNEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNEdge.h; sourceTree = "<group>"; };
-		E959D4310762431400013EB2 /* NSStringWithModifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSStringWithModifiers.h; sourceTree = "<group>"; };
-		E959D4320762431400013EB2 /* NSStringWithModifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSStringWithModifiers.m; sourceTree = "<group>"; };
-		E959D4350762448D00013EB2 /* ZenCocoaCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZenCocoaCategories.h; sourceTree = "<group>"; };
+		E958AAF40760444300773392 /* ZNEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNEdge.h; sourceTree = "<group>"; };
+		E959D4310762431400013EB2 /* NSStringWithModifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringWithModifiers.h; sourceTree = "<group>"; };
+		E959D4320762431400013EB2 /* NSStringWithModifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringWithModifiers.m; sourceTree = "<group>"; };
+		E959D4350762448D00013EB2 /* ZenCocoaCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenCocoaCategories.h; sourceTree = "<group>"; };
 		E959D441076245DC00013EB2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		E95C980306EA2DE500679ECF /* ZNMemoryManagementMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNMemoryManagementMacros.h; path = Source/Macros/ZNMemoryManagementMacros.h; sourceTree = "<group>"; };
-		E95C9F4D0733A32700148FA8 /* ZNUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNUUID.h; sourceTree = "<group>"; };
-		E95C9F4E0733A32700148FA8 /* ZNUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNUUID.m; sourceTree = "<group>"; };
+		E95C9F4D0733A32700148FA8 /* ZNUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNUUID.h; sourceTree = "<group>"; };
+		E95C9F4E0733A32700148FA8 /* ZNUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNUUID.m; sourceTree = "<group>"; };
 		E97C3A97074DD9110025CD57 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/COPYING; sourceTree = "<group>"; };
 		E97C3A99074DD9110025CD57 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/GPL; sourceTree = "<group>"; };
-		E985E84E0760EEFF005CB196 /* ZNShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNShading.h; sourceTree = "<group>"; };
-		E985E84F0760EEFF005CB196 /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNShading.m; sourceTree = "<group>"; };
-		E98DD9DB078DEB4C0059A0D3 /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNEffectWindow.h; sourceTree = "<group>"; };
-		E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = ZNEffectWindow.m; sourceTree = "<group>"; };
+		E985E84E0760EEFF005CB196 /* ZNShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNShading.h; sourceTree = "<group>"; };
+		E985E84F0760EEFF005CB196 /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNShading.m; sourceTree = "<group>"; };
+		E98DD9DB078DEB4C0059A0D3 /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNEffectWindow.h; sourceTree = "<group>"; };
+		E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNEffectWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,24 +480,14 @@
 		EA609C990906677F003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Zen_Prefix.pch;
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_STYLE = Dynamic;
 				MACH_O_TYPE = mh_dylib;
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = Zen;
 				SEPARATE_STRIP = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -518,7 +508,17 @@
 		EA609C9F0906677F003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_GC = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;

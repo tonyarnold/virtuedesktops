@@ -346,7 +346,6 @@
 	// configure color label binding 
 	[mDesktop bind: @"colorLabel" toObject: mLabelButton withKeyPath: @"selectedColorLabel" options: nil]; 
 	[mLabelButton bind: @"selectedColorLabel" toObject: mDesktop withKeyPath: @"colorLabel" options: nil]; 
-		
 }
 
 @end 

@@ -81,4 +81,9 @@
 	// Implemented by subclasses 
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+	id triggerCopy = NSCopyObject(self, 0, zone);
+	return triggerCopy;
+}
+
 @end

@@ -57,4 +57,8 @@
 
 - (void) drawInView: (NSView*) view withRect: (NSRect) rect; 
 
+#pragma mark -
+#pragma mark Bindings
+- (void) moveObjectAtIndex: (unsigned int) index toIndex: (unsigned int) otherIndex;
+
 @end

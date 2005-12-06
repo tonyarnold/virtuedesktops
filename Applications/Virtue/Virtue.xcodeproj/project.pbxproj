@@ -207,8 +207,8 @@
 		E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
+		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
 		EA6B9227094440D700E6EACB /* libDockCommunicator.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA6B92150944409200E6EACB /* libDockCommunicator.a */; };
-		EA9AF715094444F1005D60CB /* dockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* dockExtension.bundle */; };
 		EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
 		EA9AFA6F09445764005D60CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EA9AFB23094457F8005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
@@ -661,7 +661,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtue_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9035C81077754EF00016B73 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		E903F72B071DB45D00A00F30 /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopViewController.h; path = Source/Interface/VTDesktopViewController.h; sourceTree = "<group>"; };
 		E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopViewController.m; path = Source/Interface/VTDesktopViewController.m; sourceTree = "<group>"; };
@@ -969,7 +969,7 @@
 		EA2108EC094541B5007BED41 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEComm.h; sourceTree = "<group>"; };
 		EA2108ED094541B6007BED41 /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Virtue.xcodeproj; path = ../../frameworks/Virtue/Virtue.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -1107,7 +1107,6 @@
 			children = (
 				E9124EAB073140CE00BD28CD /* main.m */,
 				E98B8668074AB7F400E8CE5C /* Categories */,
-				E95AF18F074786BE0065B830 /* Assistant */,
 				E9572C53070B3F630053E494 /* Interface */,
 				E91ADE0A070595A700F69228 /* Scripting */,
 				E936398F06FCD8D500E354DB /* Controllers */,
@@ -1621,13 +1620,6 @@
 			name = Triggers;
 			sourceTree = "<group>";
 		};
-		E95AF18F074786BE0065B830 /* Assistant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Assistant;
-			sourceTree = "<group>";
-		};
 		E95B9A450740905C00231BC5 /* PositionGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -1689,13 +1681,13 @@
 				EA2108E2094541B5007BED41 /* DECCgsExt.h */,
 				EA2108E3094541B5007BED41 /* DECEvent.h */,
 				EA2108E4094541B5007BED41 /* DECEventAlpha.h */,
+				EA2108EB094541B5007BED41 /* DECInjector.h */,
 				EA2108E5094541B5007BED41 /* DECEventDesktop.h */,
 				EA2108E6094541B5007BED41 /* DECEventInfo.h */,
 				EA2108E7094541B5007BED41 /* DECEventLevel.h */,
 				EA2108E8094541B5007BED41 /* DECEventOrder.h */,
 				EA2108E9094541B5007BED41 /* DECEventProperty.h */,
 				EA2108EA094541B5007BED41 /* DECEventTags.h */,
-				EA2108EB094541B5007BED41 /* DECInjector.h */,
 				EA2108EC094541B5007BED41 /* DEComm.h */,
 				EA2108ED094541B6007BED41 /* DECVersion.h */,
 			);
@@ -1714,7 +1706,7 @@
 		EA9AF70E094444DC005D60CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA9AF712094444DC005D60CB /* dockExtension.bundle */,
+				EA9AF712094444DC005D60CB /* DockExtension.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2505,10 +2497,10 @@
 			remoteRef = EA6B92140944409200E6EACB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA9AF712094444DC005D60CB /* dockExtension.bundle */ = {
+		EA9AF712094444DC005D60CB /* DockExtension.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = dockExtension.bundle;
+			path = DockExtension.bundle;
 			remoteRef = EA9AF711094444DC005D60CB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -2540,7 +2532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9AF715094444F1005D60CB /* dockExtension.bundle in Resources */,
+				EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */,
 				E959A0880767140A00543439 /* imageKeyboardTrigger.png in Resources */,
 				E959A0890767140A00543439 /* imageMouseTrigger.png in Resources */,
 				E940C5E70733F03400C1642C /* DefaultHotkeys.plist in Resources */,
@@ -3937,21 +3929,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILD_DIR)",
-					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
+				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/Includes;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
+				OTHER_LDFLAGS = "-fprofile-arcs";
 				PRODUCT_NAME = Virtue;
-				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -3960,7 +3948,6 @@
 		EA609C21090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
@@ -3969,11 +3956,9 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
 				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = Virtue;
 				SEPARATE_STRIP = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -4008,8 +3993,19 @@
 		EA609C27090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SEPARATE_STRIP = YES;
 			};
 			name = Release;
 		};

@@ -125,9 +125,9 @@
 	mSticky = flag; 
 	
 	// if we are running, tell all application objects to sticky 
-	NSEnumerator*	applicationIter	= [mApplications objectEnumerator]; 
-	PNApplication*	application		= nil; 
-	VTDesktop*		activeDesktop	= [[VTDesktopController sharedInstance] activeDesktop]; 
+	NSEnumerator*		applicationIter	= [mApplications objectEnumerator]; 
+	PNApplication*	application			= nil; 
+	VTDesktop*			activeDesktop		= [[VTDesktopController sharedInstance] activeDesktop]; 
 	
 	while (application = [applicationIter nextObject]) {
 		// Workaround.. Pull the application to the current desktop before 
@@ -169,13 +169,14 @@
 
 #pragma mark -
 - (void) setBindingToDesktop: (BOOL) flag {
-	mBindDesktop = flag; 
+	mBindDesktop = flag;
 	
-	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES))
+	if ((mBindDesktop == NO) || (mSticky == YES))
 		return; 
 	
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
+	
 }
 
 - (BOOL) isBindingToDesktop {
@@ -247,7 +248,7 @@
 #pragma mark -
 #pragma mark Notifications 
 - (void) onApplicationAttached: (NSNotification*) notification {
-	NSDictionary*	userInfo	= [notification userInfo]; 
+	NSDictionary*		userInfo		= [notification userInfo]; 
 	PNApplication*	application	= [userInfo objectForKey: PNApplicationInstanceParam]; 
 	
 	// check validity of this application 
@@ -277,7 +278,7 @@
 	[application setHidden: mHidden];
 	
 	// check if we should move this application to another desktop 
-	if ((mSticky == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
+	if ((mSticky == NO) && (mBindDesktop == YES) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 		[application setDesktop: mDesktop];
 	}
 	
@@ -409,7 +410,7 @@
 	// bundle itself 
 	mPid = 0; 
 
-	NSBundle* bundle	= [NSBundle bundleWithPath: mBundle]; 
+	NSBundle* bundle		= [NSBundle bundleWithPath: mBundle]; 
 	NSString* imageFile = [bundle objectForInfoDictionaryKey: @"CFBundleIconFile"];
 	NSString* imagePath	= [bundle pathForResource: [imageFile stringByDeletingPathExtension] ofType: [imageFile pathExtension]];
 	
