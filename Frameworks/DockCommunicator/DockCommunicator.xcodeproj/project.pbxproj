@@ -318,12 +318,8 @@
 				LIBRARY_STYLE = STATIC;
 				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
-				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = decomm;
+				PRODUCT_NAME = DockCommunicator;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -352,10 +348,7 @@
 				LIBRARY_STYLE = STATIC;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = DockCommunicator;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = all;

@@ -233,15 +233,15 @@
 		E9124517073033F500BD28CD /* VTPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPlugin.h; sourceTree = "<group>"; };
 		E912451A073033F500BD28CD /* VTPluginDecoration.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginDecoration.h; sourceTree = "<group>"; };
 		E912451B073033F500BD28CD /* VTPluginLayout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginLayout.h; sourceTree = "<group>"; };
-		E912451D073033F500BD28CD /* VTPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPreferences.h; sourceTree = "<group>"; };
-		E912451E073033F500BD28CD /* VTPreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTPreferences.m; sourceTree = "<group>"; };
+		E912451D073033F500BD28CD /* VTPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTPreferences.h; path = ../../Source/Preferences/VTPreferences.h; sourceTree = "<group>"; };
+		E912451E073033F500BD28CD /* VTPreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPreferences.m; path = ../../Source/Preferences/VTPreferences.m; sourceTree = "<group>"; };
 		E912466907303B6800BD28CD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		E9124D9D0730BA2E00BD28CD /* VTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTLayout.h; sourceTree = "<group>"; };
 		E9124F1507316EB700BD28CD /* VTCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTCoding.h; sourceTree = "<group>"; };
 		E917FD110768D09E00F8A8FD /* VTTriggerDesktopNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerDesktopNotification.h; sourceTree = "<group>"; };
 		E917FD120768D09E00F8A8FD /* VTTriggerDesktopNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerDesktopNotification.m; sourceTree = "<group>"; };
-		E917FE22076A2A6800F8A8FD /* VTApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationController.h; path = src/Common/VTApplicationController.h; sourceTree = SOURCE_ROOT; };
-		E917FE23076A2A6800F8A8FD /* VTApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationController.m; path = src/Common/VTApplicationController.m; sourceTree = SOURCE_ROOT; };
+		E917FE22076A2A6800F8A8FD /* VTApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationController.h; path = Source/Common/VTApplicationController.h; sourceTree = SOURCE_ROOT; };
+		E917FE23076A2A6800F8A8FD /* VTApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationController.m; path = Source/Common/VTApplicationController.m; sourceTree = SOURCE_ROOT; };
 		E917FE27076A2AE000F8A8FD /* VTApplicationWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationWrapper.h; sourceTree = "<group>"; };
 		E917FE28076A2AE000F8A8FD /* VTApplicationWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationWrapper.m; sourceTree = "<group>"; };
 		E940C6820734E23300C1642C /* NSColorString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorString.h; sourceTree = "<group>"; };
@@ -249,8 +249,8 @@
 		E941D19107469B9C007DF0D9 /* VTScriptPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTScriptPlugin.h; sourceTree = "<group>"; };
 		E941D19207469B9C007DF0D9 /* VTScriptPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTScriptPlugin.m; sourceTree = "<group>"; };
 		E941D1B20746A368007DF0D9 /* VTPluginScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginScript.h; sourceTree = "<group>"; };
-		E941D2120746C042007DF0D9 /* VTPluginCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPluginCollection.h; path = src/Hotkeys/VTPluginCollection.h; sourceTree = SOURCE_ROOT; };
-		E941D2130746C042007DF0D9 /* VTPluginCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPluginCollection.m; path = src/Hotkeys/VTPluginCollection.m; sourceTree = SOURCE_ROOT; };
+		E941D2120746C042007DF0D9 /* VTPluginCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPluginCollection.h; path = Source/Hotkeys/VTPluginCollection.h; sourceTree = SOURCE_ROOT; };
+		E941D2130746C042007DF0D9 /* VTPluginCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPluginCollection.m; path = Source/Hotkeys/VTPluginCollection.m; sourceTree = SOURCE_ROOT; };
 		E94339D20751C9570075ADF3 /* VTDesktopProtector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopProtector.h; sourceTree = "<group>"; };
 		E94339D30751C9570075ADF3 /* VTDesktopProtector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopProtector.m; sourceTree = "<group>"; };
 		E9544C950753D6C8009DA20D /* VTDesktopBackgroundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopBackgroundHelper.h; sourceTree = "<group>"; };
@@ -276,10 +276,10 @@
 		E9C74A7A07588AFB005EFD90 /* VTPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginProtocol.h; sourceTree = "<group>"; };
 		E9C74A8807589001005EFD90 /* VTPluginInstance.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTPluginInstance.h; sourceTree = "<group>"; };
 		E9C74A8907589001005EFD90 /* VTPluginInstance.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTPluginInstance.m; sourceTree = "<group>"; };
-		E9C74BA50758B974005EFD90 /* iconExtension.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconExtension.icns; path = data/icons/iconExtension.icns; sourceTree = "<group>"; };
-		E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconExtensionScript.icns; path = data/icons/iconExtensionScript.icns; sourceTree = "<group>"; };
-		EAE820400924977E00239477 /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEventHandlers.h; path = ../dockExtension/src/DEEventHandlers.h; sourceTree = SOURCE_ROOT; };
-		EAE820410924977E00239477 /* DEEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEvents.h; path = ../dockExtension/src/DEEvents.h; sourceTree = SOURCE_ROOT; };
+		E9C74BA50758B974005EFD90 /* iconExtension.icns */ = {isa = PBXFileReference; lastKnownFileType = file; name = iconExtension.icns; path = icons/iconExtension.icns; sourceTree = "<group>"; };
+		E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */ = {isa = PBXFileReference; lastKnownFileType = file; name = iconExtensionScript.icns; path = icons/iconExtensionScript.icns; sourceTree = "<group>"; };
+		EAE820400924977E00239477 /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEventHandlers.h; path = ../DockExtension/Source/DEEventHandlers.h; sourceTree = SOURCE_ROOT; };
+		EAE820410924977E00239477 /* DEEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEvents.h; path = ../DockExtension/Source/DEEvents.h; sourceTree = SOURCE_ROOT; };
 		EAF4A4AA09077D5A0013B506 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
 		EAF8C83B09076898003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C841090768A1003D54B1 /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -313,12 +313,9 @@
 		0867D691FE84028FC02AAC07 /* Virtue */ = {
 			isa = PBXGroup;
 			children = (
-				EAF8C841090768A1003D54B1 /* Peony.xcodeproj */,
-				EAF8C83B09076898003D54B1 /* Zen.xcodeproj */,
-				E9C74B120758B8F5005EFD90 /* data */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
-				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -337,6 +334,7 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9C74B120758B8F5005EFD90 /* Data */,
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
@@ -346,7 +344,6 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E91493170736B6C100668ACC /* Scripting */,
 				E912451C073033F500BD28CD /* Preferences */,
 				E9124510073033F500BD28CD /* Plugins */,
 				E9124503073033F500BD28CD /* Layout */,
@@ -382,6 +379,8 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EAF8C841090768A1003D54B1 /* Peony.xcodeproj */,
+				EAF8C83B09076898003D54B1 /* Zen.xcodeproj */,
 				EAE820400924977E00239477 /* DEEventHandlers.h */,
 				EAE820410924977E00239477 /* DEEvents.h */,
 				32DBCF5E0370ADEE00C91783 /* Virtue_Prefix.pch */,
@@ -410,7 +409,7 @@
 				E91244CA073033F500BD28CD /* NSUserDefaultsColor.m */,
 			);
 			name = CocoaExtensions;
-			path = src/CocoaExtensions;
+			path = Source/CocoaExtensions;
 			sourceTree = "<group>";
 		};
 		E91244CB073033F500BD28CD /* Common */ = {
@@ -427,8 +426,8 @@
 				E91244D1073033F500BD28CD /* VTNotifications.h */,
 			);
 			name = Common;
-			path = src/Common;
-			sourceTree = SOURCE_ROOT;
+			path = Source/Common;
+			sourceTree = "<group>";
 		};
 		E91244D2073033F500BD28CD /* Controllers */ = {
 			isa = PBXGroup;
@@ -454,7 +453,7 @@
 				E91244E7073033F500BD28CD /* VTMouseWatcherProtocol.h */,
 			);
 			name = Controllers;
-			path = src/Controllers;
+			path = Source/Controllers;
 			sourceTree = "<group>";
 		};
 		E91244EA073033F500BD28CD /* Decoration */ = {
@@ -475,7 +474,7 @@
 				E91244FB073033F500BD28CD /* VTDesktopDecorationView.m */,
 			);
 			name = Decoration;
-			path = src/Decoration;
+			path = Source/Decoration;
 			sourceTree = "<group>";
 		};
 		E91244EB073033F500BD28CD /* Inspector */ = {
@@ -504,7 +503,7 @@
 				E959D411076230DD00013EB2 /* VTTrigger.m */,
 			);
 			name = Hotkeys;
-			path = src/Hotkeys;
+			path = Source/Hotkeys;
 			sourceTree = "<group>";
 		};
 		E9124503073033F500BD28CD /* Layout */ = {
@@ -516,7 +515,7 @@
 				E912450F073033F500BD28CD /* VTPager.h */,
 			);
 			name = Layout;
-			path = src/Layout;
+			path = Source/Layout;
 			sourceTree = "<group>";
 		};
 		E9124510073033F500BD28CD /* Plugins */ = {
@@ -535,7 +534,7 @@
 				E912451B073033F500BD28CD /* VTPluginLayout.h */,
 			);
 			name = Plugins;
-			path = src/Plugins;
+			path = Source/Plugins;
 			sourceTree = "<group>";
 		};
 		E912451C073033F500BD28CD /* Preferences */ = {
@@ -545,22 +544,15 @@
 				E912451E073033F500BD28CD /* VTPreferences.m */,
 			);
 			name = Preferences;
-			path = src/Preferences;
+			path = Source/Preferences;
 			sourceTree = "<group>";
 		};
-		E91493170736B6C100668ACC /* Scripting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Scripting;
-			sourceTree = "<group>";
-		};
-		E9C74B120758B8F5005EFD90 /* data */ = {
+		E9C74B120758B8F5005EFD90 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				E9C74B130758B901005EFD90 /* icons */,
 			);
-			name = data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		E9C74B130758B901005EFD90 /* icons */ = {
@@ -893,8 +885,25 @@
 		EA609CB7090667D2003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_PROFILING_CODE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PREBINDING = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};

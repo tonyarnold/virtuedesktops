@@ -16,7 +16,7 @@
 		E936385D06FCCD7500E354DB /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = E936385806FCCD7500E354DB /* main.h */; };
 		E936393206FCD19000E354DB /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E936393106FCD18800E354DB /* CGSPrivate.h */; };
 		E97C3ACB074DDB090025CD57 /* COPYING.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AC9074DDB090025CD57 /* COPYING.rtf */; };
-		EA6B93100944416400E6EACB /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B930B0944415E00E6EACB /* libDockCommunicator.a */; };
+		EA6B93100944416400E6EACB /* libdecomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B930B0944415E00E6EACB /* libdecomm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6B93100944416400E6EACB /* libDockCommunicator.a in Frameworks */,
+				EA6B93100944416400E6EACB /* libdecomm.a in Frameworks */,
 				8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +173,7 @@
 		EA6B93070944415E00E6EACB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA6B930B0944415E00E6EACB /* libDockCommunicator.a */,
+				EA6B930B0944415E00E6EACB /* libdecomm.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,10 +289,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EA6B930B0944415E00E6EACB /* libDockCommunicator.a */ = {
+		EA6B930B0944415E00E6EACB /* libdecomm.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libDockCommunicator.a;
+			path = libdecomm.a;
 			remoteRef = EA6B930A0944415E00E6EACB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
