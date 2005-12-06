@@ -825,7 +825,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA609CB1090667D2003BD20D /* Development Private Framework */ = {
+		EA609CB1090667D2003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -851,12 +851,13 @@
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = YES;
 			};
-			name = "Development Private Framework";
+			name = Debug;
 		};
-		EA609CB3090667D2003BD20D /* Deployment Private Framework */ = {
+		EA609CB3090667D2003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -864,37 +865,46 @@
 					/System/Library/Frameworks/ApplicationServices.framework/Frameworks,
 				);
 				FRAMEWORK_VERSION = A;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = Virtue;
+				SEPARATE_STRIP = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
 			};
-			name = "Deployment Private Framework";
+			name = Release;
 		};
-		EA609CB7090667D2003BD20D /* Development Private Framework */ = {
+		EA609CB7090667D2003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Development Private Framework";
+			name = Debug;
 		};
-		EA609CB9090667D2003BD20D /* Deployment Private Framework */ = {
+		EA609CB9090667D2003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Deployment Private Framework";
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -902,20 +912,20 @@
 		EA609CAF090667D2003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA609CB1090667D2003BD20D /* Development Private Framework */,
-				EA609CB3090667D2003BD20D /* Deployment Private Framework */,
+				EA609CB1090667D2003BD20D /* Debug */,
+				EA609CB3090667D2003BD20D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Deployment Private Framework";
+			defaultConfigurationName = Release;
 		};
 		EA609CB5090667D2003BD20D /* Build configuration list for PBXProject "Virtue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA609CB7090667D2003BD20D /* Development Private Framework */,
-				EA609CB9090667D2003BD20D /* Deployment Private Framework */,
+				EA609CB7090667D2003BD20D /* Debug */,
+				EA609CB9090667D2003BD20D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Deployment Private Framework";
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -94,12 +94,18 @@
 
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState {
+	NSEnumerator*   windowIterator			= [mWindows objectEnumerator];
+	PNWindow*       window							= nil;
+	
+	while (window = [windowIterator nextObject]) {
+		[window setSticky: stickyState];
+	}
+	
 	if (stickyState == YES) {
 		// post notification about the window becoming sticky 
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: mWindows]; 
-	}
-	else {
+	} else {
 		// post notification about the window being no longer sticky 
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: mWindows];		
@@ -145,15 +151,14 @@
 	// all the windows we know about to the passed desktop, a new application
 	// instance will be created there... 
 	
-	NSMutableArray* windowsForSwitching = nil;
+	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] init];
 	NSEnumerator*   windowIter					= [mWindows objectEnumerator];
 	PNWindow*       window							= nil;
 	       
 	while (window = [windowIter nextObject]) {
-		if ([window isSticky] == NO)
+		if ([window isSticky] == 0)
 			[windowsForSwitching addObject: window];
 	}
-
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
 	[mWindowList setDesktop: desktop];
 }

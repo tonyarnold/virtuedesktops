@@ -124,7 +124,6 @@
 #pragma mark -
 - (IBAction) setDesktopForWindow: (id) sender {
 	[self endSheet];
-
 	/* Move the currently represented window to the selected desktop */
 	[mRepresentedWindow setDesktop: [sender representedObject]]; 
 }
@@ -134,32 +133,6 @@
 	
 	/* Move the application represented by this window to the selected desktop */
 	[mRepresentedApplication setDesktop: [sender representedObject]]; 
-}
-
-- (IBAction) setWindowIsSticky: (id) sender {
-	[self endSheet]; 
-	
-	/* Make window sticky based upon state of the NSButton */
-	if ([sender state] == NSOnState) {
-		[mRepresentedWindow setSticky: YES];
-	} else {
-		[mRepresentedWindow setSticky: NO];
-	}
-}
-
-- (IBAction) setApplicationIsSticky: (id) sender {
-	[self endSheet];
-	
-	/* Move the application windows to the selected desktop */
-	if ([sender state] == NSOnState) {
-		[mRepresentedApplication setSticky:YES];
-		[mWindowStickyButton setEnabled: NO];
-		[mWindowStickyButton setState: YES];
-	} else {
-		[mRepresentedApplication setSticky: NO];
-		[mRepresentedWindow setSticky: NO];
-	}
-	
 }
 
 #pragma mark -
@@ -334,13 +307,5 @@
 	int selectedItemIndex = [desktops indexOfObject: [[VTDesktopController sharedInstance] activeDesktop]]; 
 	[mApplicationDesktopButton selectItemAtIndex: selectedItemIndex]; 
 	[mWindowDesktopButton selectItemAtIndex: selectedItemIndex]; 
-	[mApplicationStickyButton setState: [mRepresentedApplication isSticky]];
-	if ([mApplicationStickyButton state] == YES) {
-		[mWindowStickyButton setState: YES];
-		[mWindowStickyButton setEnabled: NO];
-	} else {
-		[mWindowStickyButton setEnabled: YES];
-		[mWindowStickyButton setState: [mRepresentedWindow isSticky]];
-	}
 }
 @end 

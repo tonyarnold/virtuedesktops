@@ -40,7 +40,7 @@
 
 - (id) initWithArray: (NSArray*) windows {
 	if (self = [super init]) {
-		mWindows		= [[NSMutableArray alloc] init]; 
+		mWindows				= [[NSMutableArray alloc] init]; 
 		mNativeWindows	= [[NSMutableArray alloc] init]; 
 		
 		if (windows)
@@ -108,7 +108,7 @@
 - (void) setSticky: (BOOL) stickyState {
 	int* windows; 
 	int  windowsCount = [self nativeWindowsInCArray: &windows]; 
-	
+		
 	if (stickyState == YES) {
 		CGSExtSetWindowListTags(windows, windowsCount, CGSTagSticky); 
 	}

@@ -65,20 +65,14 @@ int g_majorVersion = 1;
 void injectEntry(ptrdiff_t a_iOffset, void *a_poParamBlock, size_t a_iParamSize) 
 {
 	OSErr iError;
-	
-	//printf("Virtue DockExtension [%i.%i] [decomm %i.%i]\n", g_majorVersion, g_minorVersion, dec_version_major(), dec_version_minor()); 
-	printf("Virtue DockExtension injecting code into Dock process...\n"); 
-	
 	iError = AEInstallEventHandler(kDecEventClass, 
 																 kDecEventId, 
 																 NewAEEventHandlerUPP((&DEHandleEvent) + a_iOffset), 
 																 0,
 																 FALSE); 
 	if (iError) 
-		printf("Virtue DockExtension installing handler failed [Error %i]\n", iError); 
-	
-	printf("Virtue DockExtension done\n"); 
-	
+		printf("Installation of Virtue's dock extensions has failed [Error %i]\n", iError); 
+		
 	/* after we installed the necessary event handlers, we put ourselves to sleep */ 
 	thread_suspend(mach_thread_self());
 }

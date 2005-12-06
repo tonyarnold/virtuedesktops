@@ -18,7 +18,7 @@
 
 @interface PNWindowList : NSObject<PNDesktopItem> 
 {
-	NSMutableArray* mWindows;			//!< List of managed windows 
+	NSMutableArray* mWindows;					//!< List of managed windows 
 	NSMutableArray* mNativeWindows;		//!< List of managed windows by their native identifier 
 }
 
@@ -42,20 +42,24 @@
 /// @name DesktopItem implementation 
 //  @{
 
-	// sticky 
+	// Sticky 
 - (void) setSticky: (BOOL) stickyState; 
-- (BOOL) isSticky; 
+- (BOOL) isSticky;
+
 	// alphaValue 
 - (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration; 
 - (void) setAlphaValue: (float) alpha; 
-- (float) alphaValue; 
+- (float) alphaValue;
+
 	// desktop
 - (int) desktopId;
-- (void) setDesktop: (PNDesktop*) desktop; 
+- (void) setDesktop: (PNDesktop*) desktop;
+
 	// name
-- (NSString*) name; 
+- (NSString*) name;
+
 	// iconic representation
-- (NSImage*) icon; 
+- (NSImage*) icon;
 
 - (void) orderOut; 
 - (void) orderIn; 

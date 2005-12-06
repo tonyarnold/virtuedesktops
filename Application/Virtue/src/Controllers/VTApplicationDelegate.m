@@ -25,10 +25,9 @@
 #import "VTMatrixDesktopLayout.h" 
 #import "VTDesktopViewController.h"
 #import "VTApplicationViewController.h" 
-#import "VTVersionTracker.h" 
 #import "VTPreferenceKeys.h" 
 
-#include "DECInjector.h"
+#import "DECInjector.h"
 
 enum
 {
@@ -104,24 +103,11 @@ enum
 
 
 
-- (void) bootstrap {
-	BOOL showSplashScreen = ([[NSUserDefaults standardUserDefaults] boolForKey: VTPrivateHideSplashScreen] == NO); 
-	
-	if (showSplashScreen) {
-		// display our splashscreen
-		[mVersionField setStringValue:[NSString stringWithFormat:@"Version %@", [self versionString]]];
-		[mSplashScreen center]; 
-		[mSplashScreen orderFront: self]; 
-		[mSplashScreenProgress startAnimation: self]; 
-	}
-	
+- (void) bootstrap {	
 	// inject dock extension code into the Dock process
 	// Strangely, removing this code still allows Virtue to run, but results in
 	// The dock process not dying. Need to check this closer...
 	dec_inject_code();
-	
-	// create all necessary objects and controllers; we are called after the version
-	// check has run, so we are set to go... 
 	
 	// set up default preferences 
 	[VTPreferences registerDefaults]; 
@@ -254,13 +240,7 @@ enum
 	if (desktopLayer != nil) {
 		[[VTDesktopDecorationController sharedInstance] setDesktopWindowLevel: [desktopLayer intValue]]; 
 	}
-// END WORKAROUND 	
-
-	if (showSplashScreen) {
-		// order out splash screen 
-		[mSplashScreenProgress stopAnimation: self]; 
-		[mSplashScreen close]; 
-	}
+// END WORKAROUND
 	mStartedUp = YES; 
 }
 
@@ -332,38 +312,15 @@ enum
 	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: index]; 
 }
 
-#pragma mark -
-- (IBAction) showAssistant: (id) sender {
-	mVersionTracker = [[VTVersionTracker alloc] init]; 
-	[mVersionTracker setDelegate: self]; 
-	[mVersionTracker performVersionCheck]; 
-}
-
-- (void) versionCheckSucceeded {
-	[mVersionTracker setDelegate: nil]; 
-	[mVersionTracker release]; 
-	
-	[self bootstrap]; 
-}
-
-- (void) versionCheckAborted {
-	[mVersionTracker setDelegate: nil]; 
-	[mVersionTracker release]; 
-	
-	// and terminate application 
-	[[NSApplication sharedApplication] terminate: self]; 
-}
-
 
 #pragma mark -
 #pragma mark NSApplication delegates 
 
-- (void) applicationWillFinishLaunching: (NSNotification*) notification {
-}
+- (void) applicationWillFinishLaunching: (NSNotification*) notification {}
 
 - (void) applicationDidFinishLaunching: (NSNotification*) notification {
-	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
-	[self showAssistant: self]; 
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+	[self bootstrap]; 
 }
 
 - (NSApplicationTerminateReply) applicationShouldTerminate: (NSApplication *)sender {
@@ -371,31 +328,30 @@ enum
 	if (mStartedUp == NO) 
 		return NSTerminateNow; 
 	
-	// check if we should bug the user... 
+	// Check if we should confirm that we are going to quit 
 	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueWarnBeforeQuitting] == YES) {
 		[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
 		
-		// display an alert to make sure the user knows what he is doing 
+		// Display an alert to make sure the user knows what he is doing 
 		NSAlert* alertWindow = [[NSAlert alloc] init]; 
-		// set up 
-		[alertWindow setAlertStyle: NSInformationalAlertStyle]; 
-		[alertWindow setMessageText:	 NSLocalizedString(@"VTQuitConfirmationDialogMessage", @"Short message of the dialog")]; 
-		[alertWindow setInformativeText: NSLocalizedString(@"VTQuitConfirmationDialogDescription", @"Longer description about what will happen")];
-		[alertWindow addButtonWithTitle: NSLocalizedString(@"VTQuitConfirmationDialogCancel", @"Cancel Button")];
-		[alertWindow addButtonWithTitle: NSLocalizedString(@"VTQuitConfirmationDialogOK", @"OK Button")];
+		
+		// Set-up 
+		[alertWindow setAlertStyle:				NSInformationalAlertStyle]; 
+		[alertWindow setMessageText:			NSLocalizedString(@"VTQuitConfirmationDialogMessage", @"Short message of the dialog")]; 
+		[alertWindow setInformativeText:	NSLocalizedString(@"VTQuitConfirmationDialogDescription", @"Longer description about what will happen")];
+		[alertWindow addButtonWithTitle:	NSLocalizedString(@"VTQuitConfirmationDialogCancel", @"Cancel Button")];
+		[alertWindow addButtonWithTitle:	NSLocalizedString(@"VTQuitConfirmationDialogOK", @"OK Button")];
 		
 		int returnValue = [alertWindow runModal]; 
 		
-		// get rid of the alert box 
 		[alertWindow release]; 
 		
 		if (returnValue == NSAlertFirstButtonReturn)
 			return NSTerminateCancel; 
 	}
 	
-	// start shutdown by collecting all windows to the current desktop 
+	// Begin shutdown by moving all windows to the current desktop 
 	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTWindowsCollectOnQuit] == YES) {
-		// will collect all windows to the active desktop 
 		NSEnumerator*	desktopIter = [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 		VTDesktop*		desktop		= nil; 
 		VTDesktop*		target		= [[VTDesktopController sharedInstance] activeDesktop]; 

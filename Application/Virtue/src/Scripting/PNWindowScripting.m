@@ -18,7 +18,7 @@
 
 - (NSScriptObjectSpecifier*) objectSpecifier {	
 	// find our container 
-	VTDesktop*		desktop		= [[VTDesktopController sharedInstance] desktopWithIdentifier: [self desktopId]]; 
+	VTDesktop*		desktop				= [[VTDesktopController sharedInstance] desktopWithIdentifier: [self desktopId]]; 
 	PNApplication*	application	= [desktop applicationForPid: [self ownerPid]]; 
 	
 	int index = [[application windows] indexOfObject: self]; 
@@ -32,7 +32,7 @@
 #pragma mark Scripting commands 
 
 - (void) sendToDesktopCommand: (NSScriptCommand*) command {
-	NSDictionary*	arguments		= [command evaluatedArguments]; 
+	NSDictionary*	arguments			= [command evaluatedArguments]; 
 	VTDesktop*		targetDesktop	= [arguments objectForKey: @"to"]; 
 	
 	if (targetDesktop == nil)

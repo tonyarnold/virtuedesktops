@@ -168,8 +168,7 @@ void DEHandleTagsEvent(DecEvent* event) {
 	
 		if (type == kDecTagsClear) {
 			CGSClearWindowTags(oConnection, eventTargets[i], oWindowTags, 32);
-		}
-		else {
+		} else {
 			CGSSetWindowTags(oConnection, eventTargets[i], oWindowTags, 32); 
 		}
 	}

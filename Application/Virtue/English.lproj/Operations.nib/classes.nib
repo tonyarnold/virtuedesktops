@@ -2,21 +2,13 @@
     IBClasses = (
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
-            ACTIONS = {
-                hideSheet = id; 
-                setApplicationIsSticky = id; 
-                setDesktopForApplication = id; 
-                setDesktopForWindow = id; 
-                setWindowIsSticky = id; 
-            }; 
+            ACTIONS = {hideSheet = id; setDesktopForApplication = id; setDesktopForWindow = id; }; 
             CLASS = VTOperationsViewController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
                 mApplicationDesktopButton = NSPopUpButton; 
-                mApplicationStickyButton = NSButton; 
                 mController = NSObjectController; 
                 mWindowDesktopButton = NSPopUpButton; 
-                mWindowStickyButton = NSButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 

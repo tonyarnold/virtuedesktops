@@ -18,35 +18,33 @@
 #import "VTApplicationWatcherController.h"
 #import "VTDesktopCollectionViewController.h" 
 #import "VTPluginController.h"
-#import "VTVersionTracker.h" 
 #import "VTDesktopViewController.h"
 #import "VTApplicationViewController.h" 
 #import <Virtue/VTDesktopProtector.h>
 
 @interface VTApplicationDelegate : NSObject {
-	// outlets 
-	IBOutlet NSMenu*				mStatusItemMenu; 
-	IBOutlet NSMenu*				mStatusItemActiveDesktopItem; 
-	IBOutlet NSMenuItem*			mStatusItemRemoveActiveDesktopItem; 
-	IBOutlet NSPanel*				mSplashScreen; 
-	IBOutlet NSProgressIndicator*	mSplashScreenProgress; 
-	IBOutlet NSTextField* mVersionField;
-	// attributes 
+	// Outlets 
+	IBOutlet NSMenu*							mStatusItemMenu; 
+	IBOutlet NSMenu*							mStatusItemActiveDesktopItem; 
+	IBOutlet NSMenuItem*					mStatusItemRemoveActiveDesktopItem; 
+	
+	// Attributes 
 	BOOL							mStartedUp; 
-	NSStatusItem*					mStatusItem; 
+	NSStatusItem*			mStatusItem; 
 	BOOL							mStatusItemMenuDesktopNeedsUpdate; 
 	BOOL							mStatusItemMenuActiveDesktopNeedsUpdate;
-	BOOL							mUpdatedDock; 
-	// controllers 
-	VTPreferencesViewController*	mPreferenceController;
-	VTOperationsViewController*		mOperationsController; 
+	BOOL							mUpdatedDock;
+	
+	// Controllers 
+	VTPreferencesViewController*		mPreferenceController;
+	VTOperationsViewController*			mOperationsController; 
 	VTApplicationWatcherController*	mApplicationWatcher; 
-	VTPluginController*				mPluginController; 
-	VTVersionTracker*				mVersionTracker; 
-	VTDesktopProtector*				mDesktopProtector; 
-	// interface
-	VTNotificationBezel*			mNotificationBezel; 
-	VTDesktopViewController*		mDesktopInspector; 
+	VTPluginController*							mPluginController; 
+	VTDesktopProtector*							mDesktopProtector; 
+	
+	// Interface
+	VTNotificationBezel*					mNotificationBezel; 
+	VTDesktopViewController*			mDesktopInspector; 
 	VTApplicationViewController*	mApplicationInspector; 
 }
 
@@ -68,8 +66,5 @@
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 
-
-#pragma mark -
-- (IBAction) showAssistant: (id) sender; 
 
 @end

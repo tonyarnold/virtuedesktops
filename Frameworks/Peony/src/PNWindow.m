@@ -10,13 +10,13 @@
 * See COPYING for licensing details
 * 
 *****************************************************************************/ 
-
+#import <syslog.h>
 #import "PNWindow.h" 
 #import "PNStickyWindowCollection.h" 
 #import "PNNotifications.h"
 #import "PNDesktop.h" 
 #import "PNWindowPool.h" 
-#include "DECEvent.h"
+#import "DECEvent.h"
 #import <Zen/Zen.h> 
 
 @implementation PNWindow
@@ -239,17 +239,15 @@
 
 #pragma mark -
 - (int) level {
-    CGSConnection   oConnection = _CGSDefaultConnection();
-	OSStatus		oResult; 
-	int				iLevel;
+	CGSConnection   oConnection = _CGSDefaultConnection();
+	OSStatus				oResult; 
+	int							iLevel;
  
 	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel); 
-    if (oResult) {
-//		NSLog(@"[Window %i] Failed getting window level [Error: %i]", mNativeWindow, oResult); 
+	if (oResult)
 		return kPnWindowInvalidLevel; 
-	}
 	
-    return iLevel;
+	return iLevel;
 }
 
 - (void) setLevel: (int) level {
@@ -258,15 +256,13 @@
 
 #pragma mark -
 - (float) alphaValue {
-    CGSConnection   oConnection = _CGSDefaultConnection();
-	OSStatus		oResult; 
-	float			fAlpha; 
+	CGSConnection   oConnection = _CGSDefaultConnection();
+	OSStatus				oResult; 
+	float						fAlpha; 
 	
 	oResult = CGSGetWindowAlpha(oConnection, mNativeWindow, &fAlpha); 
-	if (oResult) {
-//		NSLog(@"[Window %i] Failed getting window alpha [Error: %i]", mNativeWindow, oResult); 
+	if (oResult)
 		return 1.0; 
-	}
 	
 	return fAlpha; 
 }
@@ -326,7 +322,8 @@
  *
  */ 
 - (BOOL) isSticky {
-	return mIsSticky; 
+	NSLog(@"Window %x is sticky: %x", [self nativeWindow], mIsSticky);
+	return mIsSticky;
 }
 
 #pragma mark -
@@ -353,10 +350,8 @@
     CGSConnection   oConnection = _CGSDefaultConnection();
     
     oResult = CGSGetScreenRectForWindow(oConnection, mNativeWindow, (CGRect*)&rect);
-    if (oResult) {
-//		NSLog(@"[Window %i] Failed getting screen rect [Error: %i]", mNativeWindow, oResult); 
- 		return NSMakeRect(0, 0, 0, 0);
-    }
+    if (oResult)
+			return NSMakeRect(0, 0, 0, 0);
                 
     return rect;
 }

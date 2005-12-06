@@ -17,18 +17,16 @@
 #import <Virtue/VTApplicationWrapper.h> 
 
 @interface VTOperationsViewController : NSWindowController {
-// outlets 
+	// Outlets 
 	IBOutlet NSObjectController*	mController; 
 	IBOutlet NSPopUpButton*			mApplicationDesktopButton; 
 	IBOutlet NSPopUpButton*			mWindowDesktopButton; 	
-	IBOutlet NSButton*					mApplicationStickyButton;
-	IBOutlet NSButton*					mWindowStickyButton;
-	// ivars 
-	NSWindow*				mOverlayWindow;				//!< Window used to tint our target
-	
-	PNWindow*				mRepresentedWindow;			//!< Our target 
-	VTApplicationWrapper*	mRepresentedWrapper;		//!< The application wrapper 
-	PNApplication*			mRepresentedApplication;	//!< The application 
+
+	// Objects 
+	NSWindow*							mOverlayWindow;						//!< Window used to tint our target
+	PNWindow*							mRepresentedWindow;				//!< Our target 
+	VTApplicationWrapper*	mRepresentedWrapper;			//!< The application wrapper 
+	PNApplication*				mRepresentedApplication;	//!< The application 
 }
 
 #pragma mark -
@@ -50,8 +48,6 @@
 #pragma mark -
 - (IBAction) setDesktopForWindow: (id) sender; 
 - (IBAction) setDesktopForApplication: (id) sender; 
-- (IBAction) setWindowIsSticky: (id) sender;
-- (IBAction) setApplicationIsSticky: (id) sender;
 
 #pragma mark -
 #pragma mark Operations 

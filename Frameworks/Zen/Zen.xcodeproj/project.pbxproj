@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DC2EF510486A6940098B216 /* Zen_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF5E0370ADEE00C91783 /* Zen_Prefix.pch */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF550486A6940098B216 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B4FE84181DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
@@ -289,7 +288,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF510486A6940098B216 /* Zen_Prefix.pch in Headers */,
 				E95C980406EA2DE500679ECF /* ZNMemoryManagementMacros.h in Headers */,
 				E95731D60711A4CA0053E494 /* ZNFilesystemWatcher.h in Headers */,
 				E95731DC0711B0320053E494 /* Zen.h in Headers */,
@@ -317,7 +315,6 @@
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
 				8DC2EF560486A6940098B216 /* Frameworks */,
-				8DC2EF580486A6940098B216 /* Rez */,
 			);
 			buildRules = (
 			);
@@ -393,16 +390,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXRezBuildPhase section */
-		8DC2EF580486A6940098B216 /* Rez */ = {
-			isa = PBXRezBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXRezBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -451,7 +438,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA609C970906677F003BD20D /* Development Private Framework */ = {
+		EA609C970906677F003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -488,40 +475,53 @@
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = YES;
 			};
-			name = "Development Private Framework";
+			name = Debug;
 		};
-		EA609C990906677F003BD20D /* Deployment Private Framework */ = {
+		EA609C990906677F003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Zen_Prefix.pch;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_STYLE = Dynamic;
 				MACH_O_TYPE = mh_dylib;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = Zen;
+				SEPARATE_STRIP = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = framework;
 			};
-			name = "Deployment Private Framework";
+			name = Release;
 		};
-		EA609C9D0906677F003BD20D /* Development Private Framework */ = {
+		EA609C9D0906677F003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Development Private Framework";
+			name = Debug;
 		};
-		EA609C9F0906677F003BD20D /* Deployment Private Framework */ = {
+		EA609C9F0906677F003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Deployment Private Framework";
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -529,20 +529,20 @@
 		EA609C950906677F003BD20D /* Build configuration list for PBXNativeTarget "Zen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA609C970906677F003BD20D /* Development Private Framework */,
-				EA609C990906677F003BD20D /* Deployment Private Framework */,
+				EA609C970906677F003BD20D /* Debug */,
+				EA609C990906677F003BD20D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Deployment Private Framework";
+			defaultConfigurationName = Release;
 		};
 		EA609C9B0906677F003BD20D /* Build configuration list for PBXProject "Zen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA609C9D0906677F003BD20D /* Development Private Framework */,
-				EA609C9F0906677F003BD20D /* Deployment Private Framework */,
+				EA609C9D0906677F003BD20D /* Debug */,
+				EA609C9F0906677F003BD20D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Deployment Private Framework";
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
