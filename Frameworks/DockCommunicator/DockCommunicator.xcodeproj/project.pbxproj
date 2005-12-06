@@ -77,36 +77,35 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		08FB77B0FE84176FC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		32BAE0B70371A74B00C91783 /* decomm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decomm_Prefix.pch; sourceTree = "<group>"; };
 		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E9124F40073187DA00BD28CD /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DECVersion.h; path = includes/DECVersion.h; sourceTree = "<group>"; };
-		E9124F430731885E00BD28CD /* DECVersion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DECVersion.c; path = src/DECVersion.c; sourceTree = "<group>"; };
-		E93637F806FCCCA300E354DB /* DECEvent.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEvent.c; path = src/DECEvent.c; sourceTree = "<group>"; };
-		E93637FA06FCCCA300E354DB /* DECEventAlpha.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventAlpha.c; path = src/DECEventAlpha.c; sourceTree = "<group>"; };
-		E93637FC06FCCCA300E354DB /* DECEventDesktop.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventDesktop.c; path = src/DECEventDesktop.c; sourceTree = "<group>"; };
-		E93637FE06FCCCA300E354DB /* DECEventInfo.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventInfo.c; path = src/DECEventInfo.c; sourceTree = "<group>"; };
-		E936380006FCCCA300E354DB /* DECEventLevel.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventLevel.c; path = src/DECEventLevel.c; sourceTree = "<group>"; };
-		E936380206FCCCA300E354DB /* DECEventOrder.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventOrder.c; path = src/DECEventOrder.c; sourceTree = "<group>"; };
-		E936380406FCCCA300E354DB /* DECEventProperty.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventProperty.c; path = src/DECEventProperty.c; sourceTree = "<group>"; };
-		E936380606FCCCA300E354DB /* DECEventTags.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventTags.c; path = src/DECEventTags.c; sourceTree = "<group>"; };
-		E936380806FCCCA300E354DB /* DECInjector.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECInjector.c; path = src/DECInjector.c; sourceTree = "<group>"; };
-		E936380A06FCCCA300E354DB /* DECPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECPrivate.h; path = src/DECPrivate.h; sourceTree = "<group>"; };
-		E936380B06FCCCA300E354DB /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mach_inject.c; path = src/mach_inject.c; sourceTree = "<group>"; };
-		E936380C06FCCCA300E354DB /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = mach_inject.h; path = src/mach_inject.h; sourceTree = "<group>"; };
-		E958EEDB06FDA03E001DCB1E /* libdecomm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdecomm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9124F40073187DA00BD28CD /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DECVersion.h; path = Includes/DECVersion.h; sourceTree = "<group>"; };
+		E9124F430731885E00BD28CD /* DECVersion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DECVersion.c; path = Source/DECVersion.c; sourceTree = "<group>"; };
+		E93637F806FCCCA300E354DB /* DECEvent.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEvent.c; path = Source/DECEvent.c; sourceTree = "<group>"; };
+		E93637FA06FCCCA300E354DB /* DECEventAlpha.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventAlpha.c; path = Source/DECEventAlpha.c; sourceTree = "<group>"; };
+		E93637FC06FCCCA300E354DB /* DECEventDesktop.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventDesktop.c; path = Source/DECEventDesktop.c; sourceTree = "<group>"; };
+		E93637FE06FCCCA300E354DB /* DECEventInfo.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventInfo.c; path = Source/DECEventInfo.c; sourceTree = "<group>"; };
+		E936380006FCCCA300E354DB /* DECEventLevel.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventLevel.c; path = Source/DECEventLevel.c; sourceTree = "<group>"; };
+		E936380206FCCCA300E354DB /* DECEventOrder.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventOrder.c; path = Source/DECEventOrder.c; sourceTree = "<group>"; };
+		E936380406FCCCA300E354DB /* DECEventProperty.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventProperty.c; path = Source/DECEventProperty.c; sourceTree = "<group>"; };
+		E936380606FCCCA300E354DB /* DECEventTags.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventTags.c; path = Source/DECEventTags.c; sourceTree = "<group>"; };
+		E936380806FCCCA300E354DB /* DECInjector.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECInjector.c; path = Source/DECInjector.c; sourceTree = "<group>"; };
+		E936380A06FCCCA300E354DB /* DECPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECPrivate.h; path = Source/DECPrivate.h; sourceTree = "<group>"; };
+		E936380B06FCCCA300E354DB /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mach_inject.c; path = Source/mach_inject.c; sourceTree = "<group>"; };
+		E936380C06FCCCA300E354DB /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = mach_inject.h; path = Source/mach_inject.h; sourceTree = "<group>"; };
+		E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C3AC2074DDA9F0025CD57 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/COPYING.rtf; sourceTree = "<group>"; };
-		E9A4811A06FF59DF00A8AE3C /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEvent.h; path = includes/DECEvent.h; sourceTree = "<group>"; };
-		E9A4811B06FF59DF00A8AE3C /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventAlpha.h; path = includes/DECEventAlpha.h; sourceTree = "<group>"; };
-		E9A4811C06FF59DF00A8AE3C /* DECEventDesktop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventDesktop.h; path = includes/DECEventDesktop.h; sourceTree = "<group>"; };
-		E9A4811D06FF59DF00A8AE3C /* DECEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventInfo.h; path = includes/DECEventInfo.h; sourceTree = "<group>"; };
-		E9A4811E06FF59DF00A8AE3C /* DECEventLevel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventLevel.h; path = includes/DECEventLevel.h; sourceTree = "<group>"; };
-		E9A4811F06FF59DF00A8AE3C /* DECEventOrder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventOrder.h; path = includes/DECEventOrder.h; sourceTree = "<group>"; };
-		E9A4812006FF59DF00A8AE3C /* DECEventProperty.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventProperty.h; path = includes/DECEventProperty.h; sourceTree = "<group>"; };
-		E9A4812106FF59DF00A8AE3C /* DECEventTags.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventTags.h; path = includes/DECEventTags.h; sourceTree = "<group>"; };
-		E9A4812206FF59DF00A8AE3C /* DECInjector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECInjector.h; path = includes/DECInjector.h; sourceTree = "<group>"; };
-		E9D2B60E0701E750008879E0 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DEComm.h; path = includes/DEComm.h; sourceTree = "<group>"; };
-		E9D2B61B0701E823008879E0 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECCgsExt.h; path = includes/DECCgsExt.h; sourceTree = "<group>"; };
-		E9D2B61D0701E833008879E0 /* DECCgsExt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECCgsExt.c; path = src/DECCgsExt.c; sourceTree = "<group>"; };
+		E9A4811A06FF59DF00A8AE3C /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEvent.h; path = Includes/DECEvent.h; sourceTree = "<group>"; };
+		E9A4811B06FF59DF00A8AE3C /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventAlpha.h; path = Includes/DECEventAlpha.h; sourceTree = "<group>"; };
+		E9A4811C06FF59DF00A8AE3C /* DECEventDesktop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventDesktop.h; path = Includes/DECEventDesktop.h; sourceTree = "<group>"; };
+		E9A4811D06FF59DF00A8AE3C /* DECEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventInfo.h; path = Includes/DECEventInfo.h; sourceTree = "<group>"; };
+		E9A4811E06FF59DF00A8AE3C /* DECEventLevel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventLevel.h; path = Includes/DECEventLevel.h; sourceTree = "<group>"; };
+		E9A4811F06FF59DF00A8AE3C /* DECEventOrder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventOrder.h; path = Includes/DECEventOrder.h; sourceTree = "<group>"; };
+		E9A4812006FF59DF00A8AE3C /* DECEventProperty.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventProperty.h; path = Includes/DECEventProperty.h; sourceTree = "<group>"; };
+		E9A4812106FF59DF00A8AE3C /* DECEventTags.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventTags.h; path = Includes/DECEventTags.h; sourceTree = "<group>"; };
+		E9A4812206FF59DF00A8AE3C /* DECInjector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECInjector.h; path = Includes/DECInjector.h; sourceTree = "<group>"; };
+		E9D2B60E0701E750008879E0 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DEComm.h; path = Includes/DEComm.h; sourceTree = "<group>"; };
+		E9D2B61B0701E823008879E0 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECCgsExt.h; path = Includes/DECCgsExt.h; sourceTree = "<group>"; };
+		E9D2B61D0701E833008879E0 /* DECCgsExt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECCgsExt.c; path = Source/DECCgsExt.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +123,7 @@
 		034768DDFF38A45A11DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E958EEDB06FDA03E001DCB1E /* libdecomm.a */,
+				E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +175,6 @@
 				E936380A06FCCCA300E354DB /* DECPrivate.h */,
 				E936380B06FCCCA300E354DB /* mach_inject.c */,
 				E936380C06FCCCA300E354DB /* mach_inject.h */,
-				32BAE0B70371A74B00C91783 /* decomm_Prefix.pch */,
 				08FB77B0FE84176FC02AAC07 /* main.c */,
 			);
 			name = Source;
@@ -236,7 +234,7 @@
 			);
 			name = DockCommunicator;
 			productName = decomm;
-			productReference = E958EEDB06FDA03E001DCB1E /* libdecomm.a */;
+			productReference = E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
