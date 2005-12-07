@@ -23,12 +23,6 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>Virtue</string>
-	<key>CFBundleGetInfoString</key>
-	<string>Copyright © 2004 Thomas Staller</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>virtueHelp</string>
-	<key>CFBundleHelpBookName</key>
-	<string>Virtue Help</string>
 	<key>CFBundleIconFile</key>
 	<string>iconVirtue</string>
 	<key>CFBundleIdentifier</key>
@@ -42,7 +36,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.5r66</string>
+	<string>0.5r67</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSAppleScriptEnabled</key>
