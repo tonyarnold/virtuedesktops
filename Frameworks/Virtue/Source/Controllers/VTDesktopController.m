@@ -56,10 +56,10 @@
 - (id) init {
 	if (self = [super init]) {
 		// init attributes 
-		mDesktops						= [[NSMutableArray alloc] init];
-		mPreviousDesktop				= nil; 
-		mSnapbackDesktop				= nil; 
-		mDecorationPrototype			= nil; 
+		mDesktops											= [[NSMutableArray alloc] init];
+		mPreviousDesktop							= nil; 
+		mSnapbackDesktop							= nil; 
+		mDecorationPrototype					= nil; 
 		mNeedDesktopBackgroundUpdate	= NO; 
 		mExpectingBackgroundChange		= NO; 
 		
@@ -428,7 +428,7 @@
 	
 	// otherwise get the background picture and set it as the default 
 	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
-	
+		
 	// and propagate to existing desktops 
 	[[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundPath:) withObject: mDefaultDesktopBackgroundPath]; 
 }
@@ -698,7 +698,7 @@
 	while (primitive = [primitiveIter nextObject]) {
 		// check if the desktop already contains a primitive of the passed type 
 		if ([deskPrimitiveTypes containsObject: NSStringFromClass([primitive class])])
-			continue; 
+			continue;
 		
 		// copy the primitive 
 		VTDecorationPrimitive* clonedPrimitive = [primitive copy]; 
@@ -713,12 +713,8 @@
 	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
 	mExpectingBackgroundChange = YES; 
 	
-	if ([desktop showsBackground]) {
+	if ([desktop showsBackground] && [desktop desktopBackground] != nil)
 		[desktop applyDesktopBackground]; 
-	}
-	else {
-		[desktop applyDefaultDesktopBackground]; 
-	}
 }
 
 @end 

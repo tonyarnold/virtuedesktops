@@ -28,7 +28,7 @@
 		// attributes 
 		mPath = nil; 
 		// set up drag target by registering 
-		[self registerForDraggedTypes: [NSArray arrayWithObject: NSFilenamesPboardType]]; 
+		[self registerForDraggedTypes: [NSArray arrayWithObject: NSFilenamesPboardType]];
 		
 		return self; 
 	}

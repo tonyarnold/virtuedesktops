@@ -179,8 +179,9 @@
 	NSString*	desktopPath	= [VTDesktop virtualDesktopPath: desktop]; 
 	NSString*	iconPath	= [[NSBundle mainBundle] pathForResource: @"iconDesktopFolder" ofType: @"icns"]; 
 	
-	// create the resource fork to hold our custom icon 
-	[VTDesktopFilesystemController applyIconToVirtualDesktopFolder: desktopPath icon: iconPath]; 
+	/* Create the resource fork to hold our custom icon 
+	 */
+	//[VTDesktopFilesystemController applyIconToVirtualDesktopFolder: desktopPath icon: iconPath]; 
 	
 	// start watching the desktops directory for changes 
 	NSString* path = [VTDesktop virtualDesktopPath: desktop]; 

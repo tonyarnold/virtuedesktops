@@ -23,33 +23,33 @@
 
 @interface VTDesktopViewController : NSWindowController {
 	// outlets 
-	IBOutlet NSArrayController*			mDesktopsController; 
-	IBOutlet NSObjectController*		mDesktopController; 
-	IBOutlet NSArrayController*			mDecorationsController; 
+	IBOutlet NSArrayController*				mDesktopsController; 
+	IBOutlet NSObjectController*			mDesktopController; 
+	IBOutlet NSArrayController*				mDecorationsController; 
 	
-	IBOutlet VTHotkeyTextField*			mHotkeyField; 
+	IBOutlet VTHotkeyTextField*				mHotkeyField; 
 	IBOutlet VTImageViewFileDropper*	mImageView; 
 
-	IBOutlet VTColorLabelButton*		mLabelButton;
-	IBOutlet NSTableView*				mDesktopsTableView; 
-	IBOutlet NSTableView*				mDecorationsTableView; 
+	IBOutlet VTColorLabelButton*			mLabelButton;
+	IBOutlet NSTableView*							mDesktopsTableView; 
+	IBOutlet NSTableView*							mDecorationsTableView; 
 	
-	IBOutlet NSButton*					mInspectPrimitiveButton; 
-	IBOutlet NSButton*					mDeletePrimitiveButton; 
-	IBOutlet NSButton*					mDeleteDesktopButton; 
-	IBOutlet ZNImagePopUpButton*		mAddPrimitiveButton; 
-	IBOutlet NSMenu*					mAddPrimitiveMenu; 
-	IBOutlet NSPopUpButton*				mTriggerTypePopup; 
-	IBOutlet NSMenuItem*				mKeyTriggerItem; 
-	IBOutlet NSMenuItem*				mMouseTriggerItem; 
+	IBOutlet NSButton*								mInspectPrimitiveButton; 
+	IBOutlet NSButton*								mDeletePrimitiveButton; 
+	IBOutlet NSButton*								mDeleteDesktopButton; 
+	IBOutlet ZNImagePopUpButton*			mAddPrimitiveButton; 
+	IBOutlet NSMenu*									mAddPrimitiveMenu; 
+	IBOutlet NSPopUpButton*						mTriggerTypePopup; 
+	IBOutlet NSMenuItem*							mKeyTriggerItem; 
+	IBOutlet NSMenuItem*							mMouseTriggerItem; 
 	
 // ivars 
-	VTDesktop*				mDesktop;		//!< The model we are dealing with 
+	VTDesktop*					mDesktop;		//!< The model we are dealing with 
 	VTHotkeyTextView*		mFieldEditor;	//!< Used to edit the hotkey 
 
 	VTDecorationPrimitiveViewController*	mInspectorController; 
-	NSMutableDictionary*					mPrimitiveInspectors;
-	NSMutableDictionary*					mPrimitiveNames; 
+	NSMutableDictionary*									mPrimitiveInspectors;
+	NSMutableDictionary*									mPrimitiveNames; 
 }
 
 #pragma mark -

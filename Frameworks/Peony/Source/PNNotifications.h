@@ -12,45 +12,45 @@
 *****************************************************************************/ 
 
 // The desktop window list was updated 
-#define kPnOnDesktopUpdated			@"PNDesktopWasUpdated"
-#define PNDesktopWasUpdated			@"PNDesktopWasUpdated"
+#define kPnOnDesktopUpdated					@"PNDesktopWasUpdated"
+#define PNDesktopWasUpdated					@"PNDesktopWasUpdated"
 
 #pragma mark -
 // The active desktop will change 
-#define kPnOnDesktopWillActivate	@"PNDesktopWillActivate"
-#define PNDesktopWillActivate		@"PNDesktopWillActivate"
+#define kPnOnDesktopWillActivate		@"PNDesktopWillActivate"
+#define PNDesktopWillActivate				@"PNDesktopWillActivate"
 // The active desktop changed 
-#define kPnOnDesktopDidActivate		@"PNDesktopDidActivate"
-#define PNDesktopDidActivate		@"PNDesktopDidActivate"
+#define kPnOnDesktopDidActivate			@"PNDesktopDidActivate"
+#define PNDesktopDidActivate				@"PNDesktopDidActivate"
 //The active application has changed
-#define kPnApplicationDidActive @"PNApplicationDid Activate"
+#define kPnApplicationDidActive			@"PNApplicationDid Activate"
 
 #pragma mark -
 // A new window was added 
-#define kPnOnWindowAdded			@"PNWindowWasAdded"
-#define PNWindowWasAdded			@"PNWindowWasAdded" 
+#define kPnOnWindowAdded						@"PNWindowWasAdded"
+#define PNWindowWasAdded						@"PNWindowWasAdded" 
 // A window was removed 
-#define kPnOnWindowRemoved			@"PNWindowWasRemoved"
-#define PNWindowWasRemoved			@"PNWindowWasRemoved"
+#define kPnOnWindowRemoved					@"PNWindowWasRemoved"
+#define PNWindowWasRemoved					@"PNWindowWasRemoved"
 // PNWindowWas(Added|Removed) parameters 
-#define PNWindowApplicationParam	@"PNWindowApplicationParam"
+#define PNWindowApplicationParam		@"PNWindowApplicationParam"
 
 #pragma mark -
 // An application was added 
-#define PNApplicationWasAdded		@"PNApplicationWasAdded"
+#define PNApplicationWasAdded				@"PNApplicationWasAdded"
 // An application was removed 
-#define PNApplicationWasRemoved		@"PNApplicationWasRemoved"
+#define PNApplicationWasRemoved			@"PNApplicationWasRemoved"
 // Parameters for PNApplicationWas(Added|Removed) notifications 
 #define PNApplicationInstanceParam	@"PNApplicationInstanceParam"
-#define PNApplicationDesktopParam	@"PNApplicationDesktopParam"
+#define PNApplicationDesktopParam		@"PNApplicationDesktopParam"
 
 #pragma mark -
 // A window was stickied 
-#define kPnOnWindowStickied			@"PNWindowWasStickied"
-#define PNWindowWasStickied			@"PNWindowWasStickied"
+#define kPnOnWindowStickied					@"PNWindowWasStickied"
+#define PNWindowWasStickied					@"PNWindowWasStickied"
 // A window was unstickied 
-#define kPnOnWindowUnstickied		@"PNWindowWasUnstickied"
-#define PNWindowWasUnstickied		@"PNWindowWasUnstickied"
+#define kPnOnWindowUnstickied				@"PNWindowWasUnstickied"
+#define PNWindowWasUnstickied				@"PNWindowWasUnstickied"
 
 // An application was stickied
 #define kPnOnApplicationStickied		@"PNApplicationWasStickied"

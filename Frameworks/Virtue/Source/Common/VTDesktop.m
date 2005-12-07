@@ -17,13 +17,13 @@
 #import "NSColorString.h" 
 #import <Zen/Zen.h> 
 
-#define kVtCodingName				@"name"
-#define kVtCodingBackgroundImage	@"backgroundImage"
-#define kVtCodingDecoration			@"decoration" 
-#define kVtCodingIconset			@"managesIconset"
-#define kVtCodingBackground			@"managesBackground"
-#define kVtCodingUUID				@"UUID"
-#define kVtCodingColorLabel			@"colorLabel"
+#define kVtCodingName									@"name"
+#define kVtCodingBackgroundImage			@"backgroundImage"
+#define kVtCodingDecoration						@"decoration" 
+#define kVtCodingIconset							@"managesIconset"
+#define kVtCodingBackground						@"managesBackground"
+#define kVtCodingUUID									@"UUID"
+#define kVtCodingColorLabel						@"colorLabel"
 
 #pragma mark -
 @interface VTDesktop(Private) 
@@ -49,15 +49,12 @@
 #pragma mark -
 - (id) initWithName: (NSString*) name identifier: (int) identifier {
 	if (self = [super initWithId: identifier andName: name]) {
-		// attributes 
+		// Attributes 
 		mDesktopBackgroundImagePath = nil;
-		mManagesIconset				= NO; 
-		mShowsBackground			= NO; 
-		
-		mDecoration					= [[VTDesktopDecoration alloc] initWithDesktop: self]; 
-		
-		mUUID						= [[ZNUUID uuid] retain]; 
-		
+		mManagesIconset							= NO;
+		mShowsBackground						= NO;	
+		mDecoration									= [[VTDesktopDecoration alloc] initWithDesktop: self]; 
+		mUUID												= [[ZNUUID uuid] retain]; 
 		return self; 
 	}
 	
@@ -65,14 +62,15 @@
 }
 
 - (void) dealloc {
-	// attributes 
-	ZEN_RELEASE(mDesktopBackgroundImagePath); 
-	ZEN_RELEASE(mDefaultDesktopBackgroundImagePath); 
-	ZEN_RELEASE(mUUID); 
-	// decoration
-	ZEN_RELEASE(mDecoration); 
+	// Attributes
+	ZEN_RELEASE(mDesktopBackgroundImagePath);
+	ZEN_RELEASE(mDefaultDesktopBackgroundImagePath);
+	ZEN_RELEASE(mUUID);
 	
-	[super dealloc]; 
+	// decoration
+	ZEN_RELEASE(mDecoration);
+	
+	[super dealloc];
 }
 
 #pragma mark -
@@ -80,9 +78,9 @@
 
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super init]) {
-		[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]]; 
+		[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
 		[self setManagesIconset: [coder decodeBoolForKey: kVtCodingIconset]]; 
-		[self setShowsBackground: [coder decodeBoolForKey: kVtCodingBackground]]; 
+		[self setShowsBackground: [coder decodeBoolForKey: kVtCodingBackground]];
 		mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain]; 
 		
 		return self; 
@@ -100,30 +98,36 @@
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
 	if (mDesktopBackgroundImagePath)
-		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage]; 
+		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
+	
 	[dictionary setObject: [NSNumber numberWithBool: mManagesIconset] forKey: kVtCodingIconset]; 
 	[dictionary setObject: [NSNumber numberWithBool: mShowsBackground] forKey: kVtCodingBackground]; 
 	[dictionary setObject: mUUID forKey: kVtCodingUUID]; 
+	
 	if (mColorLabel)
 		// the color label is archived in a NSData object to preserve maximum accuracy 
 		[dictionary setObject: [NSArchiver archivedDataWithRootObject: mColorLabel] forKey: kVtCodingColorLabel]; 
 	
 	NSMutableDictionary* decoration = [NSMutableDictionary dictionary]; 
 	[mDecoration encodeToDictionary: decoration]; 
-	[dictionary setObject: decoration forKey: kVtCodingDecoration]; 
+	[dictionary setObject: decoration 
+								 forKey: kVtCodingDecoration]; 
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	// first our primitives 
 	mManagesIconset				= [[dictionary objectForKey: kVtCodingIconset] boolValue]; 
 	mShowsBackground			= [[dictionary objectForKey: kVtCodingBackground] boolValue]; 
-	if ([dictionary objectForKey: kVtCodingBackgroundImage])
-		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy]; 
-	mUUID						= [[dictionary objectForKey: kVtCodingUUID] copy]; 
 	
+	if ([dictionary objectForKey: kVtCodingBackgroundImage])
+		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
+			
+
+	mUUID									= [[dictionary objectForKey: kVtCodingUUID] copy];
 	NSData* colorData			= [dictionary objectForKey: kVtCodingColorLabel]; 
+	
 	if (colorData) 
-		mColorLabel				= (NSColor*)[[NSUnarchiver unarchiveObjectWithData: colorData] retain]; 
+		mColorLabel = (NSColor*)[[NSUnarchiver unarchiveObjectWithData: colorData] retain]; 
 	
 	// ensure an UUID 
 	if ((mUUID == nil) || ([mUUID length] == 0)) 
@@ -139,17 +143,24 @@
 #pragma mark Attributes 
 
 - (void) setDesktopBackground: (NSString*) path {
-	ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path); 
-}
-
-- (void) setDefaultDesktopBackgroundPath: (NSString*) path {
-	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundImagePath, path); 
-	if (mDesktopBackgroundImagePath == nil)
-		[self setDesktopBackground: path]; 
+	ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
 
 - (NSString*) desktopBackground {
-	return mDesktopBackgroundImagePath; 
+	return mDesktopBackgroundImagePath;
+}
+
+#pragma mark -
+
+- (void) setDefaultDesktopBackgroundPath: (NSString*) path {
+	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundImagePath, path); 
+	
+	if (mDesktopBackgroundImagePath == nil)
+		[self setDesktopBackground: path];
+}
+
+- (NSString*) defaultDesktopBackgroundPath {
+	return mDefaultDesktopBackgroundImagePath;
 }
 
 #pragma mark -
@@ -167,7 +178,10 @@
 #pragma mark -
 - (void) setShowsBackground: (BOOL) flag {
 	if (flag == mShowsBackground)
-		return; 
+		return;
+	
+	if ([self desktopBackground] == nil)
+		flag = NO;
 	
 	mShowsBackground = flag; 
 }
@@ -244,7 +258,8 @@
 	// but rely on the caller to trigger the update 
 
 	NSString* virtualDesktopPath	= [VTDesktop virtualDesktopPath: self]; 
-	NSString* desktopPath			= [VTDesktop desktopContainerPath]; 
+	NSString* desktopPath			= [VTDesktop desktopContainerPath];
+	
 	// all files in our virtual desktop directory 
 	NSArray*  virtualDesktopFiles	= [[NSFileManager defaultManager] directoryContentsAtPath: virtualDesktopPath]; 
 
@@ -258,7 +273,8 @@
 		if ([desktopFile hasPrefix: @"."] || [desktopFile hasSuffix: @"\r"])
 			continue; 
 		
-		[[NSFileManager defaultManager] createSymbolicLinkAtPath: targetPath pathContent: [virtualDesktopPath stringByAppendingPathComponent: desktopFile]]; 
+		[[NSFileManager defaultManager] createSymbolicLinkAtPath: targetPath 
+																								 pathContent: [virtualDesktopPath stringByAppendingPathComponent: desktopFile]]; 
 	}
 }
 
@@ -269,12 +285,13 @@
 	// we switched. we should work around that by remembering which files we linked into the directory. 
 	
 	NSString* virtualDesktopPath	= [VTDesktop virtualDesktopPath: self]; 
-	NSString* desktopPath			= [VTDesktop desktopContainerPath]; 
+	NSString* desktopPath					= [VTDesktop desktopContainerPath];
+	
 	// all files in our virtual desktop directory 
 	NSArray*  virtualDesktopFiles	= [[NSFileManager defaultManager] directoryContentsAtPath: virtualDesktopPath]; 
 	
 	NSEnumerator*	desktopFileIter	= [virtualDesktopFiles objectEnumerator]; 
-	NSString*		desktopFile		= nil; 
+	NSString*			desktopFile			= nil; 
 	
 	while (desktopFile = [desktopFileIter nextObject]) {
 		NSString* targetPath = [desktopPath stringByAppendingPathComponent: desktopFile]; 

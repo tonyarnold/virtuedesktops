@@ -220,6 +220,7 @@
 		EAA628DB092893EA00EED448 /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127390072C096A006DC207 /* imageWidgetDeletePressed.png */; };
 		EAA628DD0928940000EED448 /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127391072C096A006DC207 /* imageWidgetInfo.png */; };
 		EAA628DE0928940000EED448 /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127392072C096A006DC207 /* imageWidgetInfoPressed.png */; };
+		EAADBC4109469F7C003B8ACC /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B92150944409200E6EACB /* libDockCommunicator.a */; };
 		EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C0420924F7FB0067CDFD /* Peony.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C05D0924F9150067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
@@ -661,7 +662,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtue_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9035C81077754EF00016B73 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		E903F72B071DB45D00A00F30 /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopViewController.h; path = Source/Interface/VTDesktopViewController.h; sourceTree = "<group>"; };
 		E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopViewController.m; path = Source/Interface/VTDesktopViewController.m; sourceTree = "<group>"; };
@@ -981,6 +982,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAADBC4109469F7C003B8ACC /* libDockCommunicator.a in Frameworks */,
 				EA9AFCCF094460B1005D60CB /* Carbon.framework in Frameworks */,
 				EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */,
 				E913F2E4076E47F300072617 /* VTInterface.framework in Frameworks */,
@@ -3954,6 +3956,7 @@
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
 				GCC_USE_GCC3_PFE_SUPPORT = YES;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;

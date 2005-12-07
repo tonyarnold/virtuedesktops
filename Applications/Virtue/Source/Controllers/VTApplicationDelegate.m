@@ -120,8 +120,8 @@ enum
 	[mPluginController loadPlugins]; 
 		
 	// create controllers 
-	[VTDesktopFilesystemController sharedInstance]; 		
-	[VTDesktopController sharedInstance]; 
+	[VTDesktopFilesystemController sharedInstance];
+	[VTDesktopController sharedInstance];
 	[VTDesktopDecorationController sharedInstance]; 
 	[[VTDesktopController sharedInstance] deserializeDesktops]; 
 	[VTTriggerController sharedInstance]; 
@@ -360,7 +360,8 @@ enum
 			if ([desktop isEqual: target]) 
 				continue; 
 			
-			[desktop moveAllWindowsToDesktop: target]; 
+			[desktop moveAllWindowsToDesktop: target];
+			[desktop applyDefaultDesktopBackground];
 		}
 	}
 	

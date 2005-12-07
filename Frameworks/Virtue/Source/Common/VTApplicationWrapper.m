@@ -44,7 +44,7 @@
 				
 		// and register our interest in desktop collection changes 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillRemove:) name: VTDesktopWillRemoveNotification object: nil]; 
-
+		
 		return self; 
 	}
 	

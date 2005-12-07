@@ -1,6 +1,7 @@
 {
     IBClasses = (
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
         {CLASS = VTColorLabelButton; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
         {
             ACTIONS = {
@@ -22,7 +23,7 @@
                 mDesktopsController = NSArrayController; 
                 mDesktopsTableView = NSTableView; 
                 mHotkeyField = VTHotkeyTextField; 
-                mImageView = VTImageViewFileDropper; 
+                mImageView = NSImageView; 
                 mInspectPrimitiveButton = NSButton; 
                 mKeyTriggerItem = NSMenuItem; 
                 mLabelButton = VTColorLabelButton; 

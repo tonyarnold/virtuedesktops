@@ -37,12 +37,10 @@
 - (id) init {
 	if (self = [super init]) {
 		// attributes 
-		mName = @"Text Primitive"; 
-		
-		// attributes 
-		mText			= nil; 
-		mFont			= [[NSFont boldSystemFontOfSize: 10] retain]; 
-		mColor			= [[NSColor whiteColor] retain]; 
+		mName						= @"Text Primitive"; 
+		mText						= nil; 
+		mFont						= [[NSFont boldSystemFontOfSize: 12] autorelease]; 
+		mColor					= [[NSColor whiteColor] autorelease]; 
 		mDisplaysShadow	= YES; 
 		
 		[self setAttributes]; 

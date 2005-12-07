@@ -234,7 +234,7 @@
 #pragma mark -
 #pragma mark NSTableView delegate 
 - (void) tableViewSelectionDidChange: (NSNotification*) notification {
-	// Desktops table view 
+	// Desktops table view
 	if ([[notification object] isEqual: mDesktopsTableView]) 
 		[self showDesktop: [self selectedDesktop]]; 
 }
@@ -326,22 +326,34 @@
 	// get index of passed desktop 
 	unsigned int index = [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] indexOfObject: desktop]; 
 	// and select it in the table view 
-	[mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index] byExtendingSelection: NO]; 
+	[mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index] byExtendingSelection: NO];
 }
 
 - (void) showDesktop: (VTDesktop*) desktop {
 	// remove bindings 
-	[mImageView unbind: @"imagePath"];
+	[mImageView		unbind: @"imagePath"];
 	[mLabelButton unbind: @"selectedColorLabel"]; 
-	[mDesktop unbind: @"desktopBackground"];
-	[mDesktop unbind: @"colorLabel"]; 
+	[mDesktop			unbind: @"desktopBackground"];
+	[mDesktop			unbind: @"colorLabel"]; 
 	
 	// attributes 
-	ZEN_ASSIGN(mDesktop, desktop); 
+	ZEN_ASSIGN(mDesktop, desktop);
+	if ([mDesktop desktopBackground] != nil) {
+		[mImageView setImagePath: [mDesktop desktopBackground]];
+	} else {
+		[mImageView setImagePath: [mDesktop defaultDesktopBackgroundPath]];
+	}
 	
 	// configure image view binding 
-	[mDesktop bind: @"desktopBackground" toObject: mImageView withKeyPath: @"imagePath" options: nil]; 
-	[mImageView bind: @"imagePath" toObject: mDesktop withKeyPath: @"desktopBackground" options: nil]; 
+	[mDesktop		bind: @"desktopBackground" 
+					toObject: mImageView 
+			 withKeyPath: @"imagePath" 
+					 options: nil];
+	
+	[mImageView bind: @"imagePath" 
+					toObject: mDesktop 
+			 withKeyPath: @"desktopBackground" 
+					 options: nil]; 
 	
 	// configure color label binding 
 	[mDesktop bind: @"colorLabel" toObject: mLabelButton withKeyPath: @"selectedColorLabel" options: nil]; 
@@ -434,7 +446,8 @@
 	
 	// Plugins 
 	NSArray*				pluginDecorations	= [[VTPluginCollection sharedInstance] pluginsOfType: @protocol(VTPluginDecoration)]; 
-	NSEnumerator*			pluginIter			= [pluginDecorations objectEnumerator]; 
+	NSEnumerator*		pluginIter				= [pluginDecorations objectEnumerator]; 
+	
 	id<VTPluginDecoration>	plugin				= nil; 
 	
 	while (plugin = [[pluginIter nextObject] instance]) {

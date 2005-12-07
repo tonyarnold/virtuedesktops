@@ -41,16 +41,14 @@
  */ 
 - (id) initWithWindowId: (CGSWindow) windowId {
 	if (self = [super init]) {
-		mNativeWindow		= windowId; 
-		mOwnerPid			= kPnWindowInvalidPid; 
-		mIsSticky			= NO; 
-		mIsSpecial			= NO; 
+		mNativeWindow				= windowId; 
+		mOwnerPid						= kPnWindowInvalidPid; 
+		mIsSticky						= NO; 
+		mIsSpecial					= NO; 
 		mIsIgnoredByExpose	= NO; 
-		mIcon				= nil; 
-		
+		mIcon								= nil;
 		return self; 
 	}
-	
 	return nil; 
 }
 
@@ -65,7 +63,7 @@
 	CGSWindow nativeWindow = [window windowNumber]; 
 	
 	// pass on initialization using the CGSWindow id 
-	return [self initWithWindowId: nativeWindow]; 
+	return [self initWithWindowId: nativeWindow];
 }
 
 - (void) dealloc {

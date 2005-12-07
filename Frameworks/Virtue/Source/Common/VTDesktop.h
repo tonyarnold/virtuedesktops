@@ -19,15 +19,15 @@
 
 @interface VTDesktop : PNDesktop<NSCoding, VTCoding> {
 	// attributes 
-	NSString*				mDesktopBackgroundImagePath; 
-	NSString*				mDefaultDesktopBackgroundImagePath; 
-	BOOL					mManagesIconset; 
-	BOOL					mShowsBackground; 
-	NSColor*				mColorLabel; 
+	NSString*							mDesktopBackgroundImagePath; 
+	NSString*							mDefaultDesktopBackgroundImagePath; 
+	BOOL									mManagesIconset; 
+	BOOL									mShowsBackground; 
+	NSColor*							mColorLabel; 
 	// decoration 
 	VTDesktopDecoration*	mDecoration; 
 	// unique identifier 
-	NSString*				mUUID; 
+	NSString*							mUUID; 
 }
 
 #pragma mark Lifetime 
@@ -40,9 +40,12 @@
 #pragma mark -
 #pragma mark Attributes 
 
-- (void) setDesktopBackground: (NSString*) path; 
-- (void) setDefaultDesktopBackgroundPath: (NSString*) path; 
+- (void) setDesktopBackground: (NSString*) path;  
 - (NSString*) desktopBackground; 
+
+#pragma mark -
+- (void) setDefaultDesktopBackgroundPath: (NSString*) path;
+- (NSString*) defaultDesktopBackgroundPath;
 
 #pragma mark -
 - (void) setManagesIconset: (BOOL) flag; 

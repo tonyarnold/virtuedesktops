@@ -85,6 +85,7 @@
 	// generate default name 
 	NSString* sDefaultName = [NSString stringWithFormat: @"Desktop %i", desktopId]; 
 	// pass on initialiazion to designated initializer
+
 	return [self initWithId: desktopId andName: sDefaultName]; 
 } 
 
@@ -364,14 +365,14 @@
 		return; 
 	
 	// get connection 
-	CGSConnection   oConnection			= _CGSDefaultConnection(); 
-	OSStatus		oResult; 
+	CGSConnection   oConnection						= _CGSDefaultConnection(); 
+	OSStatus				oResult; 
 
-	int				iNumberOfWindows	= 0; 
-	NSMutableData*  oWindows			= NULL; 
+	int							iNumberOfWindows			= 0; 
+	NSMutableData*  oWindows							= NULL; 
 
-	BOOL			didChangeWindows		= NO; 
-	BOOL			didChangeApplications	= NO; 
+	BOOL						didChangeWindows			= NO; 
+	BOOL						didChangeApplications	= NO; 
 
 	// first we have to query for the number of windows in our workspace 
 	oResult = CGSGetWorkspaceWindowCount(oConnection, mDesktopId, &iNumberOfWindows);
@@ -395,7 +396,7 @@
 	// copy the current list of windows for cross checking 
 	NSMutableArray* previousWindows = [NSMutableArray arrayWithArray: mWindows]; 
 
-    int i					= 0; 
+	int i									= 0; 
 	int currentListIndex	= 0;
 	 
 	// heya, now we can start synchronizing.. we will iterate over all windows and 
