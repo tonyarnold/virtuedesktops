@@ -143,7 +143,8 @@
 #pragma mark Attributes 
 
 - (void) setDesktopBackground: (NSString*) path {
-	ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
+	if (mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath && mDesktopBackgroundImagePath != nil)
+		ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
 
 - (NSString*) desktopBackground {

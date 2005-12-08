@@ -338,6 +338,7 @@
 	
 	// attributes 
 	ZEN_ASSIGN(mDesktop, desktop);
+		
 	if ([mDesktop desktopBackground] != nil) {
 		[mImageView setImagePath: [mDesktop desktopBackground]];
 	} else {

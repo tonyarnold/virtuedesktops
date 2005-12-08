@@ -34,6 +34,7 @@
 #pragma mark -
 - (void) applyDecorationPrototypeForDesktop: (VTDesktop*) desktop overwrite: (BOOL) overwrite; 
 - (void) applyDesktopBackground; 
+- (void) applyDefaultDesktopBackground;
 @end
 
 #pragma mark -
@@ -394,14 +395,11 @@
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// and apply settings of active desktop 
-	if ([activeDesktop showsBackground])
-		[self applyDesktopBackground]; 
-		
-	// iconset
-	if ([activeDesktop managesIconset]) 
-		[activeDesktop showIconset]; 
-	else
-		[activeDesktop hideIconset]; 	
+	if ([activeDesktop showsBackground]) {
+		[[self activeDesktop] applyDesktopBackground];
+	} else {
+		[[self activeDesktop] applyDefaultDesktopBackground];
+	}
 }
 
 #pragma mark -
@@ -482,15 +480,13 @@
 	// bind desktop 
 	[desktop addObserver: self forKeyPath: @"managesIconset" options: NSKeyValueObservingOptionNew context: NULL]; 
 	[desktop addObserver: self forKeyPath: @"showsBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
-	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
-
-	// handle iconset 
-	if ([desktop managesIconset])
-		[desktop showIconset]; 
+	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL];  
 	
 	// handle background picture 
-	if (mNeedDesktopBackgroundUpdate || [desktop showsBackground]) {
-		[self applyDesktopBackground]; 
+	if (mNeedDesktopBackgroundUpdate || [desktop showsBackground] ) {
+		[desktop applyDesktopBackground];
+	} else {
+		[desktop applyDefaultDesktopBackground];
 	}
 	mNeedDesktopBackgroundUpdate = NO; 
 	
@@ -715,6 +711,14 @@
 	
 	if ([desktop showsBackground] && [desktop desktopBackground] != nil)
 		[desktop applyDesktopBackground]; 
+}
+
+- (void) applyDefaultDesktopBackground {
+	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
+	mExpectingBackgroundChange = YES; 
+	
+	if ([desktop showsBackground] && [desktop desktopBackground] != nil)
+		[desktop applyDefaultDesktopBackground]; 
 }
 
 @end 
