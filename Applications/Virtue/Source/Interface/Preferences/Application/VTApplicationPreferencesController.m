@@ -26,7 +26,7 @@
 @implementation VTApplicationPreferencesController
 
 - (IBAction) toggleModifier: (id) sender {
-	int state		= [sender state]; 
+	int state			= [sender state]; 
 	int modifiers	= [[NSUserDefaults standardUserDefaults] integerForKey: VTDesktopFollowsApplicationFocusModifier]; 
 	int modifier	= 0; 
 		

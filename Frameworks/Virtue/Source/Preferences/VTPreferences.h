@@ -14,16 +14,16 @@
 #import <Cocoa/Cocoa.h>
 
 #pragma mark Virte Application
-#define VTVirtueFirstRun					@"VTVirtueFirstRun"
-#define VTVirtueWarnBeforeQuitting			@"VTVirtueWarnBeforeQuitting"
-#define VTVirtueShowStatusbarMenu			@"VTVirtueShowStatusbarMenu"
+#define VTVirtueFirstRun									@"VTVirtueFirstRun"
+#define VTVirtueWarnBeforeQuitting				@"VTVirtueWarnBeforeQuitting"
+#define VTVirtueShowStatusbarMenu					@"VTVirtueShowStatusbarMenu"
 #define VTVirtueShowStatusbarDesktopName	@"VTVirtueShowStatusbarDesktopName"
-#define VTVirtueShowDockIcon				@"VTVirtueShowDockIcon"
+#define VTVirtueShowDockIcon							@"VTVirtueShowDockIcon"
 
 #pragma mark -
 #pragma mark Desktop Transitions
 #define VTDesktopTransitionEnabled			@"VTDesktopTransitionEnabled"
-#define VTDesktopTransitionType				@"VTDesktopTransitionType"
+#define VTDesktopTransitionType					@"VTDesktopTransitionType"
 #define VTDesktopTransitionOptions			@"VTDesktopTransitionOptions"
 #define VTDesktopTransitionDuration			@"VTDesktopTransitionDuration"
 
@@ -33,7 +33,7 @@
 
 #pragma mark -
 #pragma mark Desktop follows application
-#define VTDesktopFollowsApplicationFocus	@"VTDesktopFollowsApplicationFocus"
+#define VTDesktopFollowsApplicationFocus					@"VTDesktopFollowsApplicationFocus"
 #define VTDesktopFollowsApplicationFocusModifier	@"VTDesktopFollowsApplicationFocusModifier"
 
 #pragma mark -
@@ -51,17 +51,17 @@
 
 #pragma mark -
 #pragma mark Active Edges 
-#define VTActiveEdgesEnabled				@"VTActiveEdgesEnabled"
-#define VTActiveEdgesVerticalEnabled		@"VTActiveEdgesVerticalEnabled"
-#define VTActiveEdgesVerticalModifier		@"VTActiveEdgesVerticalModifier"
+#define VTActiveEdgesEnabled							@"VTActiveEdgesEnabled"
+#define VTActiveEdgesVerticalEnabled			@"VTActiveEdgesVerticalEnabled"
+#define VTActiveEdgesVerticalModifier			@"VTActiveEdgesVerticalModifier"
 #define VTActiveEdgesHorizontalEnabled		@"VTActiveEdgesHorizontalEnabled"
 #define VTActiveEdgesHorizontalModifier		@"VTActiveEdgesHorizontalModifier"
 
 #pragma mark -
 #pragma mark Operations 
-#define VTOperationsTint					@"VTOperationsTintWindow"
-#define VTOperationsTintColor				@"VTOperationsTintWindowColor"
-#define VTOperationsAnimateSending			@"VTOperationsAnimateSending" 
+#define VTOperationsTint										@"VTOperationsTintWindow"
+#define VTOperationsTintColor								@"VTOperationsTintWindowColor"
+#define VTOperationsAnimateSending					@"VTOperationsAnimateSending" 
 #define VTOperationsAnimateSendingDuration	@"VTOperationsAnimateSendingDuration"
 
 #pragma mark -

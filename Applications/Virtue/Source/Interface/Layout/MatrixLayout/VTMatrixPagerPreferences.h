@@ -13,5 +13,5 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define VTMatrixPagerHasShadow			@"VTMatrixPagerHasShadow"
+#define VTMatrixPagerHasShadow				@"VTMatrixPagerHasShadow"
 #define VTMatrixPagerHasAppletIcons		@"VTMatrixPagerHasAppletIcons"

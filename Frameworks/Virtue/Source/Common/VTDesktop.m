@@ -20,8 +20,6 @@
 #define kVtCodingName									@"name"
 #define kVtCodingBackgroundImage			@"backgroundImage"
 #define kVtCodingDecoration						@"decoration" 
-#define kVtCodingIconset							@"managesIconset"
-#define kVtCodingBackground						@"managesBackground"
 #define kVtCodingUUID									@"UUID"
 #define kVtCodingColorLabel						@"colorLabel"
 
@@ -78,10 +76,11 @@
 
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super init]) {
-		[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
-		[self setManagesIconset: [coder decodeBoolForKey: kVtCodingIconset]]; 
-		[self setShowsBackground: [coder decodeBoolForKey: kVtCodingBackground]];
-		mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain]; 
+		[self setName: [coder decodeObjectForKey: kVtCodingName]];
+		if ([coder decodeObjectForKey: kVtCodingBackgroundImage] != nil)
+			[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
+		
+		mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain];
 		
 		return self; 
 	}
@@ -91,40 +90,42 @@
 
 - (void) encodeWithCoder: (NSCoder*) coder {
 	[coder encodeObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
-	[coder encodeBool: mManagesIconset forKey: kVtCodingIconset]; 
-	[coder encodeBool: mShowsBackground forKey: kVtCodingBackground]; 
-	[coder encodeObject: mDecoration forKey: kVtCodingDecoration]; 
+	[coder encodeObject: mDecoration forKey: kVtCodingDecoration];
+	[coder encodeObject: [self name] forKey: kVtCodingName];
 }
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
-	if (mDesktopBackgroundImagePath)
-		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
 	
-	[dictionary setObject: [NSNumber numberWithBool: mManagesIconset] forKey: kVtCodingIconset]; 
-	[dictionary setObject: [NSNumber numberWithBool: mShowsBackground] forKey: kVtCodingBackground]; 
+	[dictionary setObject: [self name] forKey: kVtCodingName];
+	
+	if (mDesktopBackgroundImagePath && mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath)
+		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
+	else
+		[dictionary setObject: nil forKey: kVtCodingBackgroundImage];
+	
 	[dictionary setObject: mUUID forKey: kVtCodingUUID]; 
 	
+	
 	if (mColorLabel)
-		// the color label is archived in a NSData object to preserve maximum accuracy 
 		[dictionary setObject: [NSArchiver archivedDataWithRootObject: mColorLabel] forKey: kVtCodingColorLabel]; 
 	
 	NSMutableDictionary* decoration = [NSMutableDictionary dictionary]; 
 	[mDecoration encodeToDictionary: decoration]; 
-	[dictionary setObject: decoration 
-								 forKey: kVtCodingDecoration]; 
+	[dictionary setObject: decoration forKey: kVtCodingDecoration]; 
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-	// first our primitives 
-	mManagesIconset				= [[dictionary objectForKey: kVtCodingIconset] boolValue]; 
-	mShowsBackground			= [[dictionary objectForKey: kVtCodingBackground] boolValue]; 
+	[self setDefaultDesktopBackgroundPath: [[VTDesktopBackgroundHelper sharedInstance] background]];
 	
 	if ([dictionary objectForKey: kVtCodingBackgroundImage])
 		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
+	else
+		mDesktopBackgroundImagePath = mDefaultDesktopBackgroundImagePath;
 			
-
+	
 	mUUID									= [[dictionary objectForKey: kVtCodingUUID] copy];
-	NSData* colorData			= [dictionary objectForKey: kVtCodingColorLabel]; 
+	NSData* colorData			= [dictionary objectForKey: kVtCodingColorLabel];
+	[self setName: [dictionary objectForKey: kVtCodingName]];
 	
 	if (colorData) 
 		mColorLabel = (NSColor*)[[NSUnarchiver unarchiveObjectWithData: colorData] retain]; 
@@ -143,12 +144,18 @@
 #pragma mark Attributes 
 
 - (void) setDesktopBackground: (NSString*) path {
-	if (mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath && mDesktopBackgroundImagePath != nil)
+	if (path != nil)
 		ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
 
 - (NSString*) desktopBackground {
-	return mDesktopBackgroundImagePath;
+	if (mDesktopBackgroundImagePath != nil && ![mDesktopBackgroundImagePath isEqualToString:@""]) {
+		return mDesktopBackgroundImagePath;
+	}
+	else
+	{
+		return mDefaultDesktopBackgroundImagePath;
+	}
 }
 
 #pragma mark -
@@ -164,31 +171,8 @@
 	return mDefaultDesktopBackgroundImagePath;
 }
 
-#pragma mark -
-- (void) setManagesIconset: (BOOL) flag {
-	if (flag == mManagesIconset)
-		return; 
-	
-	mManagesIconset = flag; 	
-}
-
-- (BOOL) managesIconset {
-	return mManagesIconset; 
-}
-
-#pragma mark -
-- (void) setShowsBackground: (BOOL) flag {
-	if (flag == mShowsBackground)
-		return;
-	
-	if ([self desktopBackground] == nil)
-		flag = NO;
-	
-	mShowsBackground = flag; 
-}
-
 - (BOOL) showsBackground {
-	return mShowsBackground; 
+	return ([self desktopBackground] != nil);
 }
 
 #pragma mark -

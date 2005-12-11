@@ -3,10 +3,10 @@
 <plist version="1.0">
 
 <array>
-	<string>Main Desktop</string>
+	<string>Main</string>
 	<string>Mail</string>
-	<string>Safari</string>
-	<string>Work</string>
+	<string>Browsing</string>
+	<string>Code</string>
 </array>
 
 </plist>

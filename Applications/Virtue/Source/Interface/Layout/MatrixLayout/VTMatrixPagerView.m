@@ -20,8 +20,8 @@
 #import <Virtue/NSUserDefaultsControllerKeyFactory.h> 
 #import <Zen/Zen.h> 
 
-#define kVtDragTypeSource			@"VTDragTypeSourceIndex"
-#define kVtDragDataSourceIndex		@"VTDragSourceIndex"
+#define kVtDragTypeSource				@"VTDragTypeSourceIndex"
+#define kVtDragDataSourceIndex	@"VTDragSourceIndex"
 #define kVtDragDataSourceUUID		@"VTDragSourceUUID"
 
 enum
@@ -74,7 +74,7 @@ enum
 		[mLayout addObserver: self forKeyPath: @"desktopLayout" options: NSKeyValueObservingOptionNew context: NULL]; 
 		
 		// default colors
-		[self setBackgroundColor: [NSColor colorWithCalibratedRed: 0.22 green: 0.10 blue: 0.51 alpha: 0.70]]; 
+		[self setBackgroundColor: [NSColor colorWithCalibratedRed: 0.0 green: 0.0 blue: 0.0 alpha: 0.85]]; 
 		[self setBackgroundHighlightColor: [NSColor colorWithCalibratedRed: 0.34 green: 1.00 blue: 0.37 alpha: 0.50]]; 
 		[self setWindowColor: [NSColor colorWithCalibratedRed: 0.70 green: 0.70 blue: 0.70 alpha: 0.30]]; 
 		[self setWindowHighlightColor: [NSColor colorWithCalibratedRed: 0.70 green: 0.70 blue: 0.70 alpha: 0.30]]; 		

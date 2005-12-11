@@ -208,7 +208,7 @@
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
-		EA6B9227094440D700E6EACB /* libDockCommunicator.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA6B92150944409200E6EACB /* libDockCommunicator.a */; };
+		EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
 		EA9AFA6F09445764005D60CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EA9AFB23094457F8005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
@@ -220,7 +220,6 @@
 		EAA628DB092893EA00EED448 /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127390072C096A006DC207 /* imageWidgetDeletePressed.png */; };
 		EAA628DD0928940000EED448 /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127391072C096A006DC207 /* imageWidgetInfo.png */; };
 		EAA628DE0928940000EED448 /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127392072C096A006DC207 /* imageWidgetInfoPressed.png */; };
-		EAADBC4109469F7C003B8ACC /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B92150944409200E6EACB /* libDockCommunicator.a */; };
 		EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C0420924F7FB0067CDFD /* Peony.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C05D0924F9150067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
@@ -249,7 +248,6 @@
 		EAF8C99309076FEE003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EAF8C99D09077001003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EAF8C9A709077016003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
-		EAF8C9B709077048003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 /* End PBXBuildFile section */
 
@@ -391,19 +389,12 @@
 			remoteGlobalIDString = E9D29BE8073E345700E0E6CE;
 			remoteInfo = VTDesktopColorLabelPrimitive;
 		};
-		EA6B92140944409200E6EACB /* PBXContainerItemProxy */ = {
+		EA7CD178094AEE10008C738D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E;
-			remoteInfo = DockCommunicator;
-		};
-		EA6B9231094440DE00E6EACB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */;
+			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E;
-			remoteInfo = DockCommunicator;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Zen;
 		};
 		EA8B2FD309333FA700477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -552,13 +543,6 @@
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Peony;
 		};
-		EA8B300709333FFF00477F42 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zen;
-		};
 		EA8B300909333FFF00477F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
@@ -617,7 +601,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EA6B9227094440D700E6EACB /* libDockCommunicator.a in CopyFiles */,
 				EAB7C0420924F7FB0067CDFD /* Peony.framework in CopyFiles */,
 				EAF8C93C09076ED5003D54B1 /* Virtue.framework in CopyFiles */,
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
@@ -971,7 +954,6 @@
 		EA2108ED094541B6007BED41 /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
-		EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Virtue.xcodeproj; path = ../../frameworks/Virtue/Virtue.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../../frameworks/Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -982,13 +964,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAADBC4109469F7C003B8ACC /* libDockCommunicator.a in Frameworks */,
+				EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */,
 				EA9AFCCF094460B1005D60CB /* Carbon.framework in Frameworks */,
 				EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */,
 				E913F2E4076E47F300072617 /* VTInterface.framework in Frameworks */,
 				E98B83C00749E50400E8CE5C /* PreferencePanes.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				EAF8C9B709077048003D54B1 /* Zen.framework in Frameworks */,
 				EAF8C93809076E9A003D54B1 /* Virtue.framework in Frameworks */,
 				EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */,
 			);
@@ -1109,10 +1090,10 @@
 			children = (
 				E9124EAB073140CE00BD28CD /* main.m */,
 				E98B8668074AB7F400E8CE5C /* Categories */,
-				E9572C53070B3F630053E494 /* Interface */,
-				E91ADE0A070595A700F69228 /* Scripting */,
 				E936398F06FCD8D500E354DB /* Controllers */,
+				E9572C53070B3F630053E494 /* Interface */,
 				E93639A506FCD8D500E354DB /* Plugins */,
+				E91ADE0A070595A700F69228 /* Scripting */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1172,7 +1153,6 @@
 			children = (
 				EA2108E1094541B5007BED41 /* DockCommunicator */,
 				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
-				EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */,
 				EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */,
 				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
 				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
@@ -1533,46 +1513,20 @@
 				E903F730071DB45D00A00F30 /* VTNotificationBezel.m */,
 				E903F731071DB45D00A00F30 /* VTNotificationBezelView.h */,
 				E903F732071DB45D00A00F30 /* VTNotificationBezelView.m */,
-				E9582002071972B4009583A0 /* Preferences */,
-				E9581F240717E8DD009583A0 /* Transformers */,
 			);
 			name = Interface;
-			sourceTree = "<group>";
-		};
-		E9581F240717E8DD009583A0 /* Transformers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Transformers;
-			sourceTree = "<group>";
-		};
-		E9582002071972B4009583A0 /* Preferences */ = {
-			isa = PBXGroup;
-			children = (
-				E903F7DD071DB65F00A00F30 /* VTPreferencesViewController.h */,
-				E903F7DE071DB65F00A00F30 /* VTPreferencesViewController.m */,
-				E9582088071AF942009583A0 /* Appearance */,
-			);
-			name = Preferences;
-			sourceTree = "<group>";
-		};
-		E9582088071AF942009583A0 /* Appearance */ = {
-			isa = PBXGroup;
-			children = (
-				E9582084071AF913009583A0 /* VTAppearancePreferencesController.h */,
-				E9582085071AF913009583A0 /* VTAppearancePreferencesController.m */,
-			);
-			name = Appearance;
 			sourceTree = "<group>";
 		};
 		E959A022076632F600543439 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				E913F13A076E288500072617 /* Desktop Template */,
+				E903F7DD071DB65F00A00F30 /* VTPreferencesViewController.h */,
+				E903F7DE071DB65F00A00F30 /* VTPreferencesViewController.m */,
+				E959A023076632FE00543439 /* Appearance */,
 				E959A0260766332A00543439 /* Application */,
+				E913F13A076E288500072617 /* Desktop Template */,
 				E959A0250766331B00543439 /* Hotkeys */,
 				E959A0240766330F00543439 /* Layout */,
-				E959A023076632FE00543439 /* Appearance */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -1580,6 +1534,8 @@
 		E959A023076632FE00543439 /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
+				E9582084071AF913009583A0 /* VTAppearancePreferencesController.h */,
+				E9582085071AF913009583A0 /* VTAppearancePreferencesController.m */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -1697,14 +1653,6 @@
 			path = ../../Frameworks/DockCommunicator/Includes;
 			sourceTree = SOURCE_ROOT;
 		};
-		EA6B92110944409200E6EACB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA6B92150944409200E6EACB /* libDockCommunicator.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		EA9AF70E094444DC005D60CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1808,11 +1756,10 @@
 				E958A895075EF3ED00773392 /* PBXTargetDependency */,
 				E913F19E076E3DA500072617 /* PBXTargetDependency */,
 				E913F1A0076E3DA500072617 /* PBXTargetDependency */,
-				EA8B300809333FFF00477F42 /* PBXTargetDependency */,
 				EA8B300A09333FFF00477F42 /* PBXTargetDependency */,
 				EA8B300E09333FFF00477F42 /* PBXTargetDependency */,
-				EA6B9232094440DE00E6EACB /* PBXTargetDependency */,
 				EA9AF736094444FA005D60CB /* PBXTargetDependency */,
+				EA7CD179094AEE10008C738D /* PBXTargetDependency */,
 			);
 			name = Virtue;
 			productInstallPath = "$(HOME)/Applications";
@@ -2456,10 +2403,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EA6B92110944409200E6EACB /* Products */;
-					ProjectRef = EAB7BCD80924DDB40067CDFD /* DockCommunicator.xcodeproj */;
-				},
-				{
 					ProductGroup = EA9AF70E094444DC005D60CB /* Products */;
 					ProjectRef = EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */;
 				},
@@ -2492,13 +2435,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EA6B92150944409200E6EACB /* libDockCommunicator.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDockCommunicator.a;
-			remoteRef = EA6B92140944409200E6EACB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		EA9AF712094444DC005D60CB /* DockExtension.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -2922,10 +2858,10 @@
 			target = E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */;
 			targetProxy = E9D29C09073E3AF500E0E6CE /* PBXContainerItemProxy */;
 		};
-		EA6B9232094440DE00E6EACB /* PBXTargetDependency */ = {
+		EA7CD179094AEE10008C738D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DockCommunicator;
-			targetProxy = EA6B9231094440DE00E6EACB /* PBXContainerItemProxy */;
+			name = Zen;
+			targetProxy = EA7CD178094AEE10008C738D /* PBXContainerItemProxy */;
 		};
 		EA8B2FD409333FA700477F42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3031,11 +2967,6 @@
 			isa = PBXTargetDependency;
 			name = Peony;
 			targetProxy = EA8B300309333FF600477F42 /* PBXContainerItemProxy */;
-		};
-		EA8B300809333FFF00477F42 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zen;
-			targetProxy = EA8B300709333FFF00477F42 /* PBXContainerItemProxy */;
 		};
 		EA8B300A09333FFF00477F42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

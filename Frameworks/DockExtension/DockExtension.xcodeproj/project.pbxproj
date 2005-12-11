@@ -425,7 +425,6 @@
 				HEADER_SEARCH_PATHS = ../DockCommunicator/includes;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = ../DockCommunicator/build/Release;
 				LIBRARY_STYLE = BUNDLE;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PREBINDING = NO;

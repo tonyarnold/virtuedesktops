@@ -17,15 +17,15 @@
 #import "VTMatrixDesktopLayout.h" 
 
 @interface VTMatrixPager : NSObject<VTPager, VTCoding> {
-	NSWindow*				mWindow; 
+	NSWindow*								mWindow; 
 	VTMatrixDesktopLayout*	mLayout; 
 	
-	BOOL					mStick; 
-	BOOL					mAnimates; 
+	BOOL										mStick; 
+	BOOL										mAnimates; 
 	
-	BOOL					mDisplayUnderMouse; 
-	BOOL					mWarpMousePointer; 
-	BOOL					mShowing; 
+	BOOL										mDisplayUnderMouse; 
+	BOOL										mWarpMousePointer; 
+	BOOL										mShowing; 
 }
 
 #pragma mark -

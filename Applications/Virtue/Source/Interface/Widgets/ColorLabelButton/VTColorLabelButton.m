@@ -40,7 +40,7 @@
 		mColorLabels = [[NSMatrix alloc] initWithFrame: labelFrame]; 
 		
 		[mColorLabels setCellClass: [VTColorLabelButtonCell class]]; 
-        [mColorLabels setIntercellSpacing: cellSpacing]; 
+		[mColorLabels setIntercellSpacing: cellSpacing]; 
 		[mColorLabels setMode: NSRadioModeMatrix];
 		[mColorLabels setAllowsEmptySelection: NO]; 
 		[mColorLabels setSelectionByRect: NO];  
@@ -262,6 +262,7 @@
 			
 		// add the new one 
 		NSTrackingRectTag trackingRect = [self addTrackingRect: cellFrameView owner: self userData: self assumeInside: NO]; 
+		
 		// remember the tag	
 		[cell setTag: trackingRect]; 
 	}

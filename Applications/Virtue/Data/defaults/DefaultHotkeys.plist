@@ -22,7 +22,7 @@
 								<key>keyCode</key>
 								<integer>124</integer>
 								<key>keyModifiers</key>
-								<integer>1572864</integer>
+								<integer>10879235</integer>
 								<key>triggerType</key>
 								<string>VTHotkeyTrigger</string>
 							</dict>
@@ -41,7 +41,7 @@
 								<key>keyCode</key>
 								<integer>123</integer>
 								<key>keyModifiers</key>
-								<integer>1572864</integer>
+								<integer>10879235</integer>
 								<key>triggerType</key>
 								<string>VTHotkeyTrigger</string>
 							</dict>
@@ -55,7 +55,16 @@
 						<key>name</key>
 						<string>VTRequestChangeDesktopToNorth</string>
 						<key>triggers</key>
-						<array/>
+						<array>
+							<dict>
+								<key>keyCode</key>
+								<integer>126</integer>
+								<key>keyModifiers</key>
+								<integer>10879235</integer>
+								<key>triggerType</key>
+								<string>VTHotkeyTrigger</string>
+							</dict>
+						</array>
 						<key>type</key>
 						<string>VTTriggerNotification</string>
 					</dict>
@@ -70,7 +79,7 @@
 								<key>keyCode</key>
 								<integer>125</integer>
 								<key>keyModifiers</key>
-								<integer>1572864</integer>
+								<integer>10879235</integer>
 								<key>triggerType</key>
 								<string>VTHotkeyTrigger</string>
 							</dict>

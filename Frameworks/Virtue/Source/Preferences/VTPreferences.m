@@ -31,25 +31,26 @@ if ([[NSUserDefaults standardUserDefaults] colorForKey: prefName] == nil)		\
 	
 	// create the default preferences 
     NSDictionary* defaultPreferences = [NSDictionary
-        dictionaryWithObjectsAndKeys: 
-		// virtue 
+        dictionaryWithObjectsAndKeys:
+			
+		// Virtue 
 		@"YES",	VTVirtueWarnBeforeQuitting,
 		@"YES", VTVirtueShowStatusbarMenu,
         
-		// desktop transition
+		// Desktop transition
 		@"YES", VTDesktopTransitionEnabled,
 		@"9",   VTDesktopTransitionType,
-        @"0.5", VTDesktopTransitionDuration,
+		@"0.5", VTDesktopTransitionDuration,
 		
-		// desktop transition notification
+		// Desktop transition notification
 		@"YES", VTDesktopTransitionNotifyEnabled, 
 		@"2.5", VTDesktopTransitionNotifyDuration,
 		
-		// desktop activation based on application focus 
+		// Desktop activation based on application focus 
 		@"YES", VTDesktopFollowsApplicationFocus,
-		@"0",	VTDesktopFollowsApplicationFocusModifier,
+		@"0",		VTDesktopFollowsApplicationFocusModifier,
 		
-		// window collecting
+		// Window collecting
 		@"YES", VTWindowsCollectOnQuit, 
 		@"YES", VTWindowsCollectOnDelete,
 		
@@ -58,7 +59,8 @@ if ([[NSUserDefaults standardUserDefaults] colorForKey: prefName] == nil)		\
 		];
 	
 	// register them with the NSUserDefaults instance 
-	[[NSUserDefaults standardUserDefaults] registerDefaults: defaultPreferences]; 
+	[[NSUserDefaults standardUserDefaults] registerDefaults: defaultPreferences];
+	
 	// ensure color values are written to defaults 
 	VT_ENSURE_COLOR(VTOperationsTintColor, [NSColor colorWithCalibratedRed: 0.39 green: 0.39 blue: 0.39 alpha: 0.6]); 
 	BOOL saveDefaults = [[NSUserDefaults standardUserDefaults] synchronize];

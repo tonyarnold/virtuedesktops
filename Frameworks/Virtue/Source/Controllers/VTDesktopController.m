@@ -35,6 +35,7 @@
 - (void) applyDecorationPrototypeForDesktop: (VTDesktop*) desktop overwrite: (BOOL) overwrite; 
 - (void) applyDesktopBackground; 
 - (void) applyDefaultDesktopBackground;
+- (NSString *) _pathForDataFile;
 @end
 
 #pragma mark -
@@ -131,6 +132,19 @@
 	return mDesktops;
 }
 
+- (void) setDesktops: (NSArray*) desktopsToAdd {
+	if ([desktopsToAdd count] == 0)
+		return;
+	
+	NSEnumerator * desktopEnumerator = [desktopsToAdd objectEnumerator];
+	VTDesktop			*desktop;
+	while (desktop = [desktopEnumerator nextObject])
+	{
+		NSLog(@"Desktop: %@", [desktop name]);
+		[self addInDesktops: desktop];
+	}
+}
+
 - (void) addInDesktops: (VTDesktop*) desktop {
 	// and add 
 	[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
@@ -144,7 +158,7 @@
 	// and add 
 	[mDesktops insertObject: desktop atIndex: index]; 
 	// set up desktop 
-	[desktop attachToDisk]; 
+	//[desktop attachToDisk]; 
 	[desktop setDefaultDesktopBackgroundPath: mDefaultDesktopBackgroundPath]; 
 	// attach the decoration 
 	[[VTDesktopDecorationController sharedInstance] attachDecoration: [desktop decoration]]; 
@@ -158,7 +172,7 @@
 	// here we are sure we created the desktop, so we will trigger some 
 	// notifications by hand to inform our plugins 
 	NSMethodSignature*	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
-	NSInvocation*		invocation	= [NSInvocation invocationWithMethodSignature: signature];
+	NSInvocation*				invocation	= [NSInvocation invocationWithMethodSignature: signature];
 	
 	[invocation setSelector: @selector(onDesktopDidCreateNotification:)];
 	[invocation setArgument: &desktop atIndex: 2];
@@ -329,57 +343,40 @@
 
 - (void) serializeDesktops {
 	// iterate over all desktops and archive them 
-	NSEnumerator*	desktopIter	= [mDesktops objectEnumerator]; 
-	VTDesktop*		desktop		= nil; 
+	NSEnumerator*		desktopIter		= [mDesktops objectEnumerator]; 
+	VTDesktop*			desktop				= nil;
+	NSMutableArray*	desktopsArray = [[NSMutableArray alloc] init];
 	
-	while (desktop = [desktopIter nextObject]) {
-		NSString* file = [[VTDesktop virtualDesktopPath: desktop] 
-			stringByAppendingPathComponent: [VTDesktop virtualDesktopMetadataName]];
-		
-		NSMutableDictionary* dictionary = [NSMutableDictionary dictionary]; 
-		[desktop encodeToDictionary: dictionary]; 
-		[dictionary writeToFile: file atomically: YES]; 
+	
+	while (desktop = [desktopIter nextObject]) 
+	{
+		NSMutableDictionary* dictionary = [[NSMutableDictionary dictionary] retain];
+		[desktop encodeToDictionary: dictionary];
+		[desktopsArray insertObject: dictionary atIndex: [desktopsArray count]];
+		[dictionary release];
 	}
+	[desktopsArray writeToFile: [self _pathForDataFile] atomically: YES];
 }
 
 - (void) deserializeDesktops {
-	// we will create desktops as they are found in our desktop container directory and 
-	// name them accordingly 
-	NSString*		virtualDesktopPath		= [VTDesktop virtualDesktopContainerPath]; 
-	
-	// iterate all desktops found there 
-	NSArray*		virtualDesktopFiles		= [[NSFileManager defaultManager] directoryContentsAtPath: virtualDesktopPath]; 
-	NSEnumerator*	virtualDesktopFilesIter	= [virtualDesktopFiles objectEnumerator]; 
-	NSString*		virtualDesktopFile		= nil; 
-	
 	// desktop id 
-	int  desktopId = [PNDesktop firstDesktopIdentifier]; 
-	BOOL isDirectory; 	
+	int  desktopId = [PNDesktop firstDesktopIdentifier];
 	
-	while (virtualDesktopFile = [virtualDesktopFilesIter nextObject]) {
-		// check if the current file is a directory
-		NSString* targetPath = [virtualDesktopPath stringByAppendingPathComponent: virtualDesktopFile]; 
-		[[NSFileManager defaultManager] fileExistsAtPath: targetPath isDirectory: &isDirectory]; 
+	NSArray*			serialisedDesktops					= [[NSArray alloc] initWithContentsOfFile: [self _pathForDataFile]];
+	NSEnumerator*	serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
+	NSDictionary*	serialisedDesktopDictionary;
+	
+	while (serialisedDesktopDictionary = [serialisedDesktopsIterator nextObject]) {
+		VTDesktop*	desktop	= [[VTDesktop alloc] initWithName: [serialisedDesktopDictionary valueForKey: @"name"]  identifier: desktopId];  
+		[desktop decodeFromDictionary: serialisedDesktopDictionary]; 
+			
+		// insert into our array of desktops 
+		[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
 		
-		if (isDirectory == YES) {
-			NSString*	metadataPath	= [targetPath stringByAppendingPathComponent: [VTDesktop virtualDesktopMetadataName]]; 
-			VTDesktop*	desktop			= [[VTDesktop alloc] initWithName: [virtualDesktopFile lastPathComponent] identifier: desktopId];  
-			
-			// check if there is a metafile to load and if there is, load it ;) 
-			if ([[NSFileManager defaultManager] fileExistsAtPath: metadataPath]) {
-				NSDictionary* dictionary = [NSDictionary dictionaryWithContentsOfFile: metadataPath]; 
-				if (dictionary)
-					[desktop decodeFromDictionary: dictionary]; 
-			}
-			
-			// insert into our array of desktops 
-			[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
-			
-			// and release temporary instance 
-			[desktop release]; 
-			
-			desktopId++; 
-		}
+		// and release temporary instance 
+		[desktop release]; 
+		
+		desktopId++; 
 	}
 	
 	// if we still have zero desktops handy, we will trigger creation of 
@@ -390,8 +387,6 @@
 	VTDesktop* activeDesktop = [[[self activeDesktop] retain] autorelease]; 
 	
 	// bind to active desktop 
-	[activeDesktop addObserver: self forKeyPath: @"managesIconset" options: NSKeyValueObservingOptionNew context: NULL]; 
-	[activeDesktop addObserver: self forKeyPath: @"showsBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// and apply settings of active desktop 
@@ -404,8 +399,7 @@
 
 #pragma mark -
 - (void) applyDecorationPrototype: (BOOL) overwrite {
-	// we walk through all desktops and attach the decoration primitives from our 
-	// prototype if if is not included yet... 
+	// We walk through all desktops and attach the decoration primitives from our prototype if if is not included yet... 
 	NSEnumerator*	desktopIter		= [mDesktops objectEnumerator]; 
 	VTDesktop*		desktop			= nil; 
 	
@@ -452,10 +446,6 @@
 	ZEN_ASSIGN(mPreviousDesktop, [self activeDesktop]); 
 	// propagate key change for previous desktop completed 
 	[self didChangeValueForKey: @"previousDesktop"]; 
-	
-	// handle iconset
-	if ([desktop managesIconset])
-		[desktop hideIconset]; 
 
 	// handle background image changes... if we are currently displaying a 
 	// custom image, next desktop has to overwrite it... 
@@ -508,13 +498,6 @@
 		else 
 			[[self activeDesktop] applyDefaultDesktopBackground]; 
 	}
-	else if ([keyPath isEqualToString: @"managesIconset"]) {
-		// toggle iconset 
-		if ([[self activeDesktop] managesIconset]) 
-			[[self activeDesktop] showIconset]; 
-		else
-			[[self activeDesktop] hideIconset]; 
-	}
 }
 
 @end 
@@ -527,21 +510,22 @@
 	
 	// try to find the defaults definition in the main bundle 
 	NSString* defaultsPath = [[NSBundle mainBundle] pathForResource: @"DefaultDesktops" ofType: @"plist"]; 
-	if (defaultsPath == nil) {
-		// eeeks, could not find our default desktops, lets come up with something 
-		// at least
-		defaultDesktops = [NSArray arrayWithObjects: @"Main Desktop", "eDesktop", "Fun", "Misc", nil]; 
+	if (defaultsPath == nil) 
+	{
+		defaultDesktops = [NSArray arrayWithObjects: @"Main", "Mail", "Web", "Code", nil]; 
 	}
-	else {
+	else 
+	{
 		defaultDesktops = [NSArray arrayWithContentsOfFile: defaultsPath]; 
 	}
 	
 	// now iterate and create desktops 
 	NSEnumerator*	desktopNameIter	= [defaultDesktops objectEnumerator]; 
-	NSString*		desktopName		= nil; 
-	int				desktopId		= [PNDesktop firstDesktopIdentifier]; 
+	NSString*			desktopName			= nil; 
+	int						desktopId				= [PNDesktop firstDesktopIdentifier]; 
 	
-	while (desktopName = [desktopNameIter nextObject]) {
+	while (desktopName = [desktopNameIter nextObject]) 
+	{
 		// create a nice desktop
 		VTDesktop* desktop = [VTDesktop desktopWithName: desktopName identifier: desktopId];  
 		// add it 
@@ -584,8 +568,7 @@
 		duration = [[NSUserDefaults standardUserDefaults] floatForKey:   VTDesktopTransitionDuration];
 		
 		// decide on the option if we should to 
-		//if (option == kPnOptionAny) {
-			// decide based on the direction 
+		if (option != kPnOptionAny) {
 			switch (direction) {
 				case kVtDirectionNorth: 
 					option = kPnOptionDown; 
@@ -616,7 +599,7 @@
 					option = kPnOptionLeft; 
 			}
 			
-		//}
+		}
 		
 		// decide type 
 		if (type == kPnTransitionAny) {
@@ -719,6 +702,21 @@
 	
 	if ([desktop showsBackground] && [desktop desktopBackground] != nil)
 		[desktop applyDefaultDesktopBackground]; 
+}
+
+- (NSString *) _pathForDataFile {
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+	
+  NSString *folder = @"~/Library/Application Support/Virtue/";
+  folder = [folder stringByExpandingTildeInPath];
+	
+  if ([fileManager fileExistsAtPath: folder] == NO)
+  {
+    [fileManager createDirectoryAtPath: folder attributes: nil];
+  }
+	
+  NSString *fileName = @"Desktops.virtuedata";
+  return [folder stringByAppendingPathComponent: fileName];    
 }
 
 @end 

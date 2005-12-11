@@ -19,20 +19,20 @@
 
 
 @interface VTDesktopController : NSObject {
-	NSMutableArray*			mDesktops; 
-	NSMutableArray*			mApplications; 
+	NSMutableArray*				mDesktops; 
+	NSMutableArray*				mApplications; 
 	NSMutableDictionary*	mDesktopWatchers; 
 	
-	VTDesktop*				mPreviousDesktop; 
-	VTDesktop*				mSnapbackDesktop; 
+	VTDesktop*						mPreviousDesktop; 
+	VTDesktop*						mSnapbackDesktop; 
 	
-	NSString*				mDefaultDesktopBackgroundPath; 
+	NSString*							mDefaultDesktopBackgroundPath; 
 	
 	VTDesktopDecoration*	mDecorationPrototype; 
-	BOOL					mUsesDecorationPrototype; 
-	BOOL					mNeedDesktopBackgroundUpdate; 
+	BOOL									mUsesDecorationPrototype; 
+	BOOL									mNeedDesktopBackgroundUpdate; 
 	
-	BOOL					mExpectingBackgroundChange; 
+	BOOL									mExpectingBackgroundChange; 
 }
 
 #pragma mark -

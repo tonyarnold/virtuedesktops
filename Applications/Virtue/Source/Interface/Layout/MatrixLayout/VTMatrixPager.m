@@ -22,17 +22,17 @@
 #import <Zen/Zen.h> 
 #import <Zen/ZNEffectWindow.h> 
 
-#define kVtCodingHasShadow				@"displayShadow"
-#define kVtCodingApplicationIcons		@"displayIcons"
+#define kVtCodingHasShadow						@"displayShadow"
+#define kVtCodingApplicationIcons			@"displayIcons"
 #define kVtCodingDisplayApplications	@"displayIcons"
 #define kVtCodingDisplayColorLabels		@"displayLabels"
 #define kVtCodingDisplayUnderMouse		@"displayUnderMouse"
-#define kVtCodingWarpMouse				@"warpMouse"
-#define kVtCodingColorBackground		@"backgroundColor"
+#define kVtCodingWarpMouse						@"warpMouse"
+#define kVtCodingColorBackground			@"backgroundColor"
 #define kVtCodingColorBackgroundHi		@"backgroundHiColor"
-#define kVtCodingColorWindow			@"windowColor"
-#define kVtCodingColorWindowHi			@"windowHiColor"
-#define kVtCodingColorText				@"textColor"
+#define kVtCodingColorWindow					@"windowColor"
+#define kVtCodingColorWindowHi				@"windowHiColor"
+#define kVtCodingColorText						@"textColor"
 
 #pragma mark -
 @interface VTMatrixPagerWindow : ZNEffectWindow 
@@ -57,12 +57,12 @@
 	if (self = [super init]) {
 		// attributes 
 		ZEN_ASSIGN(mLayout, layout); 
-		mWindow				= nil;
-		mStick				= NO; 
-		mAnimates			= YES; 
+		mWindow							= nil;
+		mStick							= NO; 
+		mAnimates						= YES; 
 		mDisplayUnderMouse	= NO; 
-		mWarpMousePointer	= NO; 
-		mShowing			= NO; 
+		mWarpMousePointer		= NO; 
+		mShowing						= NO; 
 		
 		// initialize 
 		[self createWindow]; 

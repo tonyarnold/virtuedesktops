@@ -27,6 +27,5 @@
 #pragma mark -
 #pragma mark Persistency control 
 + (void) createVirtualDesktopContainer; 
-+ (void) applyIconToVirtualDesktopFolder: (NSString*) path icon: (NSString*) iconPath; 
 
 @end

@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 #import <Virtue/VTDesktopController.h>
 #import <Virtue/VTDesktopDecorationController.h>
-#import <Virtue/VTDesktopFilesystemController.h>
+//#import <Virtue/VTDesktopFilesystemController.h>
 #import <Virtue/VTLayoutController.h>
 #import <Virtue/VTTriggerController.h> 
 #import <Virtue/VTApplicationController.h> 
@@ -104,12 +104,10 @@ enum
 
 
 - (void) bootstrap {	
-	// inject dock extension code into the Dock process
-	// Strangely, removing this code still allows Virtue to run, but results in
-	// The dock process not dying. Need to check this closer...
+	// Inject dock extension code into the Dock process
 	dec_inject_code();
 	
-	// set up default preferences 
+	// Set-up default preferences 
 	[VTPreferences registerDefaults]; 
 	// and ensure we have our version information in there 
 	[[NSUserDefaults standardUserDefaults] setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"VTPreferencesVirtueVersionName"]; 
@@ -120,7 +118,7 @@ enum
 	[mPluginController loadPlugins]; 
 		
 	// create controllers 
-	[VTDesktopFilesystemController sharedInstance];
+//	[VTDesktopFilesystemController sharedInstance];
 	[VTDesktopController sharedInstance];
 	[VTDesktopDecorationController sharedInstance]; 
 	[[VTDesktopController sharedInstance] deserializeDesktops]; 
@@ -128,12 +126,13 @@ enum
 	[VTLayoutController sharedInstance]; 
 	[VTApplicationController sharedInstance]; 
 	
-	mPreferenceController	= [[VTPreferencesViewController alloc] init]; 
-	mOperationsController	= [[VTOperationsViewController alloc] init]; 
-	mApplicationWatcher		= [[VTApplicationWatcherController alloc] init]; 
-	mDesktopInspector		= [[VTDesktopViewController alloc] init]; 
-	mApplicationInspector	= [[VTApplicationViewController alloc] init]; 
-	mDesktopProtector		= [[VTDesktopProtector alloc] init]; 
+	mPreferenceController	= [[VTPreferencesViewController alloc] init];
+	mOperationsController	= [[VTOperationsViewController alloc] init];
+	mApplicationWatcher		= [[VTApplicationWatcherController alloc] init];
+	mDesktopInspector			= [[VTDesktopViewController alloc] init];
+	mApplicationInspector	= [[VTApplicationViewController alloc] init];
+	mDesktopProtector			= [[VTDesktopProtector alloc] init];
+	
 	[mDesktopProtector setEnabled: NO]; 
 	
 	// interface controllers 
@@ -199,32 +198,38 @@ enum
 		addObserver: self
 		 forKeyPath: @"activeLayout"
 			options: NSKeyValueObservingOptionNew
-			context: NULL]; 
+			context: NULL];
+	
 	[[VTLayoutController sharedInstance]
 		addObserver: self
 		 forKeyPath: @"activeLayout.desktops"
 			options: NSKeyValueObservingOptionNew 
-			context: NULL]; 
+			context: NULL];
+	
 	[[VTDesktopController sharedInstance] 
 		addObserver: self 
 		 forKeyPath: @"desktops" 
 			options: NSKeyValueObservingOptionNew 
-			context: NULL]; 
+			context: NULL];
+	
 	[[VTDesktopController sharedInstance]
 		addObserver: self
 		 forKeyPath: @"activeDesktop"
 			options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-			context: NULL]; 
+			context: NULL];
+	
 	[[[VTDesktopController sharedInstance] activeDesktop]
 			addObserver: self
 			 forKeyPath: @"applications"
 				options: NSKeyValueObservingOptionNew
-				context: NULL]; 
+				context: NULL];
+	
 	[[NSUserDefaultsController sharedUserDefaultsController]
 			addObserver: self
 			 forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]
 				options: NSKeyValueObservingOptionNew
-				context: NULL]; 
+				context: NULL];
+	
 	[[NSUserDefaultsController sharedUserDefaultsController]
 			addObserver: self
 			 forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]

@@ -46,14 +46,7 @@
 #pragma mark -
 - (void) setDefaultDesktopBackgroundPath: (NSString*) path;
 - (NSString*) defaultDesktopBackgroundPath;
-
-#pragma mark -
-- (void) setManagesIconset: (BOOL) flag; 
-- (BOOL) managesIconset; 
-
-#pragma mark -
-- (void) setShowsBackground: (BOOL) flag; 
-- (BOOL) showsBackground; 
+- (BOOL) showsBackground;
 
 #pragma mark -
 - (void) setColorLabel: (NSColor*) color; 

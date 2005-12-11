@@ -27,14 +27,14 @@
 #pragma mark NSPreferencePane 
 
 - (void) mainViewDidLoad {
-	// set up available layout button 
+	// Set-up available layout button 
 	[mAvailablePagerButton removeAllItems]; 
 
 	NSMenuItem* menuItem; 
 	
-	NSEnumerator*		layoutIter	= [[[VTLayoutController sharedInstance] layouts] objectEnumerator]; 
+	NSEnumerator*			layoutIter	= [[[VTLayoutController sharedInstance] layouts] objectEnumerator]; 
 	VTDesktopLayout*	layout		= nil; 
-	int					activeIndex	= -1; 
+	int								activeIndex	= -1; 
 	
 	while (layout = [layoutIter nextObject]) {
 		menuItem = [[[NSMenuItem alloc] initWithTitle: [layout name] action: @selector(onPagerSelected:) keyEquivalent: @""] autorelease]; 
@@ -45,9 +45,7 @@
 			activeIndex = [mAvailablePagerButton numberOfItems] - 1; 
 	}	
 	
-	// and set up 
 	[mAvailablePagerButton selectItemAtIndex: activeIndex]; 
-	// select pager 
 	[self selectPager]; 
 }
 	
