@@ -335,8 +335,7 @@
 	
 	// and make the window special to hide it 
 	[[PNWindow windowWithNSWindow: mWindow] setSpecial: YES];
-	[[PNWindow windowWithNSWindow: mWindow] setSticky: YES]; 
-	
+	[[PNWindow windowWithNSWindow: mWindow] setSticky: YES];	
 }
 
 - (void) doDisplayWindow {

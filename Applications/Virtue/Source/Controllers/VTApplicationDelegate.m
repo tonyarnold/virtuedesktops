@@ -12,7 +12,6 @@
 *****************************************************************************/ 
 #import <Virtue/VTDesktopController.h>
 #import <Virtue/VTDesktopDecorationController.h>
-//#import <Virtue/VTDesktopFilesystemController.h>
 #import <Virtue/VTLayoutController.h>
 #import <Virtue/VTTriggerController.h> 
 #import <Virtue/VTApplicationController.h> 
@@ -118,7 +117,6 @@ enum
 	[mPluginController loadPlugins]; 
 		
 	// create controllers 
-//	[VTDesktopFilesystemController sharedInstance];
 	[VTDesktopController sharedInstance];
 	[VTDesktopDecorationController sharedInstance]; 
 	[[VTDesktopController sharedInstance] deserializeDesktops]; 
@@ -133,7 +131,7 @@ enum
 	mApplicationInspector	= [[VTApplicationViewController alloc] init];
 	mDesktopProtector			= [[VTDesktopProtector alloc] init];
 	
-	[mDesktopProtector setEnabled: NO]; 
+	[mDesktopProtector setEnabled: YES]; 
 	
 	// interface controllers 
 	mNotificationBezel = [[VTNotificationBezel alloc] init];

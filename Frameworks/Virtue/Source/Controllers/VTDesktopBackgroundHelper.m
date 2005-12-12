@@ -18,8 +18,8 @@
 #import <Zen/NSFileManagerAlias.h> 
 
 enum {
-	kFinderSig			= 'FNDR',
-	kFinderCreator		= 'MACS',
+	kFinderSig					= 'FNDR',
+	kFinderCreator			= 'MACS',
 	typeDesktopPicture	= 'dpic', 
 };
 
@@ -27,10 +27,10 @@ enum {
 // timeout is 12 seconds (in ticks 720) 
 #define FINDER_AE_TIMEOUT 720
 
-#define VTBackgroundHelperPListDomainName			@"com.apple.desktop"
-#define VTBackgroundHelperPListDesktopName			@"Background"
+#define VTBackgroundHelperPListDomainName					@"com.apple.desktop"
+#define VTBackgroundHelperPListDesktopName				@"Background"
 #define VTBackgroundHelperPListDefaultScreenName	@"default"
-#define VTBackgroundHelperFinderName				@"com.apple.finder"
+#define VTBackgroundHelperFinderName							@"com.apple.finder"
 
 OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result); 
 
@@ -91,7 +91,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 
 #pragma mark -
 #pragma mark Operations 
-- (void) setBackground: (NSString*) file {
+- (void) setBackground: (NSString*) file {		
 	switch (mMode) {
 		case VTBackgroundHelperModeFinder: 
 			[self setBackgroundUsingFinder: file]; 

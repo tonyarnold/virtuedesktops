@@ -172,6 +172,7 @@
 		[window setLevel: (mDesktopWindowLevel + 1)];
 	else
 		[window setLevel: kVTNonActiveWindowLevel]; 
+	
 	[window setOpaque: NO];
 	
 	// create the view and set it to ignore mouse events 

@@ -34,7 +34,6 @@
 #pragma mark -
 - (void) applyDecorationPrototypeForDesktop: (VTDesktop*) desktop overwrite: (BOOL) overwrite; 
 - (void) applyDesktopBackground; 
-- (void) applyDefaultDesktopBackground;
 - (NSString *) _pathForDataFile;
 @end
 
@@ -68,15 +67,9 @@
 		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
 		
 		// register as observer for desktop switches 
-		[[NSNotificationCenter defaultCenter] 
-			addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
-		[[NSNotificationCenter defaultCenter] 
-			addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
-		[[NSDistributedNotificationCenter defaultCenter]
-            addObserver: self
-			   selector: @selector(onDesktopBackgroundChanged:)
-				   name: VTBackgroundHelperDesktopChangedName
-				 object: VTBackgroundHelperDesktopChangedObject]; 
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopBackgroundChanged:) name: VTBackgroundHelperDesktopChangedName object: VTBackgroundHelperDesktopChangedObject]; 
 			
 		// create timer loop to update desktops 
 		[NSTimer scheduledTimerWithTimeInterval: 1.5 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
@@ -88,9 +81,6 @@
 }
 
 - (void) dealloc {
-	// unbind desktop 
-	[[self activeDesktop] removeObserver: self forKeyPath: @"managesIconset"]; 
-	[[self activeDesktop] removeObserver: self forKeyPath: @"showsBackground"]; 
 		
 	// get rid of observer status 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
@@ -140,7 +130,6 @@
 	VTDesktop			*desktop;
 	while (desktop = [desktopEnumerator nextObject])
 	{
-		NSLog(@"Desktop: %@", [desktop name]);
 		[self addInDesktops: desktop];
 	}
 }
@@ -158,7 +147,7 @@
 	// and add 
 	[mDesktops insertObject: desktop atIndex: index]; 
 	// set up desktop 
-	//[desktop attachToDisk]; 
+	
 	[desktop setDefaultDesktopBackgroundPath: mDefaultDesktopBackgroundPath]; 
 	// attach the decoration 
 	[[VTDesktopDecorationController sharedInstance] attachDecoration: [desktop decoration]]; 
@@ -222,8 +211,6 @@
 		[self didChangeValueForKey: @"snapbackDesktop"]; 
 	}
 		
-	// remove all persistent traces of the desktop 
-	[desktopToRemove detachFromDisk]; 
 	// detach the decoration 
 	[[VTDesktopDecorationController sharedInstance] detachDecorationForDesktop: desktopToRemove];
 	
@@ -390,11 +377,7 @@
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// and apply settings of active desktop 
-	if ([activeDesktop showsBackground]) {
-		[[self activeDesktop] applyDesktopBackground];
-	} else {
-		[[self activeDesktop] applyDefaultDesktopBackground];
-	}
+	[[self activeDesktop] applyDesktopBackground];
 }
 
 #pragma mark -
@@ -414,7 +397,7 @@
 - (void) onDesktopBackgroundChanged: (NSNotification*) notification {
 	// ignore if we expected it because we triggered the change 
 	if (mExpectingBackgroundChange) {
-		mExpectingBackgroundChange = NO; 
+		mExpectingBackgroundChange = NO;
 		return; 
 	}
 	
@@ -452,15 +435,12 @@
 	if ([desktop showsBackground])  {
 		mNeedDesktopBackgroundUpdate = YES;
 	}
-	else {
+	else
+	{
 		mNeedDesktopBackgroundUpdate = NO; 
 	}
-
-	[VTDesktop updateDesktopPath]; 
 	
 	// unbind desktop 
-	[desktop removeObserver: self forKeyPath: @"managesIconset"]; 
-	[desktop removeObserver: self forKeyPath: @"showsBackground"]; 
 	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
 }
 
@@ -468,20 +448,18 @@
 	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
 	
 	// bind desktop 
-	[desktop addObserver: self forKeyPath: @"managesIconset" options: NSKeyValueObservingOptionNew context: NULL]; 
-	[desktop addObserver: self forKeyPath: @"showsBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
-	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL];  
+	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
+	
 	
 	// handle background picture 
-	if (mNeedDesktopBackgroundUpdate || [desktop showsBackground] ) {
+	mExpectingBackgroundChange = (mNeedDesktopBackgroundUpdate == NO && [desktop showsBackground]);
+	if (mExpectingBackgroundChange)
 		[desktop applyDesktopBackground];
-	} else {
+	else
 		[desktop applyDefaultDesktopBackground];
-	}
+	
 	mNeedDesktopBackgroundUpdate = NO; 
-	
-	[VTDesktop updateDesktopPath]; 
-	
+		
 	[self didChangeValueForKey: @"activeDesktop"]; 
 }
 
@@ -489,11 +467,11 @@
 #pragma mark KVO Sink 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-	if ([keyPath isEqualToString: @"showsBackground"] || [keyPath isEqualToString: @"desktopBackground"]) {
+	if ([keyPath isEqualToString: @"desktopBackground"]) {
 		mExpectingBackgroundChange = YES; 
 		
 		// toggle background on and off 
-		if ([[self activeDesktop] showsBackground])
+		if ([[self activeDesktop] showsBackground] && [[self activeDesktop] desktopBackground] != nil)
 			[[self activeDesktop] applyDesktopBackground]; 
 		else 
 			[[self activeDesktop] applyDefaultDesktopBackground]; 
@@ -689,19 +667,12 @@
 }
 
 - (void) applyDesktopBackground {
-	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
 	mExpectingBackgroundChange = YES; 
 	
-	if ([desktop showsBackground] && [desktop desktopBackground] != nil)
-		[desktop applyDesktopBackground]; 
-}
-
-- (void) applyDefaultDesktopBackground {
-	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
-	mExpectingBackgroundChange = YES; 
-	
-	if ([desktop showsBackground] && [desktop desktopBackground] != nil)
-		[desktop applyDefaultDesktopBackground]; 
+	if ([[self activeDesktop] showsBackground] && [[self activeDesktop] desktopBackground] != nil)
+		[[self activeDesktop] applyDesktopBackground]; 
+	else
+		[[self activeDesktop] applyDefaultDesktopBackground];
 }
 
 - (NSString *) _pathForDataFile {

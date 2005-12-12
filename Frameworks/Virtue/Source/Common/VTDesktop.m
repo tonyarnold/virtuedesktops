@@ -24,12 +24,6 @@
 #define kVtCodingColorLabel						@"colorLabel"
 
 #pragma mark -
-@interface VTDesktop(Private) 
-- (NSString*) virtualDesktopMetadataPath; 
-@end 
-
-
-#pragma mark -
 @implementation VTDesktop
 
 #pragma mark -
@@ -49,10 +43,9 @@
 	if (self = [super initWithId: identifier andName: name]) {
 		// Attributes 
 		mDesktopBackgroundImagePath = nil;
-		mManagesIconset							= NO;
-		mShowsBackground						= NO;	
 		mDecoration									= [[VTDesktopDecoration alloc] initWithDesktop: self]; 
-		mUUID												= [[ZNUUID uuid] retain]; 
+		mUUID												= [[ZNUUID uuid] retain];
+		
 		return self; 
 	}
 	
@@ -76,12 +69,10 @@
 
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super init]) {
+		[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
 		[self setName: [coder decodeObjectForKey: kVtCodingName]];
-		if ([coder decodeObjectForKey: kVtCodingBackgroundImage] != nil)
-			[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
-		
 		mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain];
-		
+
 		return self; 
 	}
 	
@@ -96,13 +87,10 @@
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
 	
-	[dictionary setObject: [self name] forKey: kVtCodingName];
-	
 	if (mDesktopBackgroundImagePath && mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath)
 		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
-	else
-		[dictionary setObject: nil forKey: kVtCodingBackgroundImage];
 	
+	[dictionary setObject: [self name] forKey: kVtCodingName];
 	[dictionary setObject: mUUID forKey: kVtCodingUUID]; 
 	
 	
@@ -115,16 +103,12 @@
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-	[self setDefaultDesktopBackgroundPath: [[VTDesktopBackgroundHelper sharedInstance] background]];
-	
 	if ([dictionary objectForKey: kVtCodingBackgroundImage])
-		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
-	else
-		mDesktopBackgroundImagePath = mDefaultDesktopBackgroundImagePath;
-			
+		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];	
 	
-	mUUID									= [[dictionary objectForKey: kVtCodingUUID] copy];
-	NSData* colorData			= [dictionary objectForKey: kVtCodingColorLabel];
+	mUUID												= [[dictionary objectForKey: kVtCodingUUID] copy];
+	NSData* colorData						= [dictionary objectForKey: kVtCodingColorLabel];
+	
 	[self setName: [dictionary objectForKey: kVtCodingName]];
 	
 	if (colorData) 
@@ -144,18 +128,14 @@
 #pragma mark Attributes 
 
 - (void) setDesktopBackground: (NSString*) path {
-	if (path != nil)
-		ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
+	ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
 
 - (NSString*) desktopBackground {
-	if (mDesktopBackgroundImagePath != nil && ![mDesktopBackgroundImagePath isEqualToString:@""]) {
-		return mDesktopBackgroundImagePath;
-	}
+	if ([mDesktopBackgroundImagePath length] > 1)
+		return mDesktopBackgroundImagePath; 
 	else
-	{
 		return mDefaultDesktopBackgroundImagePath;
-	}
 }
 
 #pragma mark -
@@ -172,7 +152,7 @@
 }
 
 - (BOOL) showsBackground {
-	return ([self desktopBackground] != nil);
+	return ([mDesktopBackgroundImagePath length] > 1);
 }
 
 #pragma mark -
@@ -187,16 +167,8 @@
 	if ((name == nil) || ([name length] == 0))
 		return; 
 	
-	// take care of renaming the desktop directory to the new desktop name 
-	NSString* oldNamePath = [VTDesktop virtualDesktopPath: self]; 
-
 	// now set the name 
 	[super setName: name]; 
-	
-	NSString* newNamePath = [VTDesktop virtualDesktopPath: self]; 
-	
-	// now rename 
-	[[NSFileManager defaultManager] movePath: oldNamePath toPath: newNamePath handler: nil]; 
 }
 
 #pragma mark -
@@ -214,89 +186,10 @@
 }
 
 #pragma mark -
-#pragma mark Persistency 
-
-- (void) attachToDisk {
-	// first check for our directory, we expect the container to exist
-	NSString* virtualDesktopPath = [VTDesktop virtualDesktopPath: self]; 
-	
-	if ([[NSFileManager defaultManager] fileExistsAtPath: virtualDesktopPath] == NO) {
-		[[NSFileManager defaultManager] createDirectoryAtPath: virtualDesktopPath attributes: nil];
-	}
-}
-
-- (void) detachFromDisk {
-	// we will remove the directory and be gone 
-	NSString* virtualDesktopPath = [VTDesktop virtualDesktopPath: self]; 
-	
-	if ([[NSFileManager defaultManager] fileExistsAtPath: virtualDesktopPath] == YES) {
-		[[NSFileManager defaultManager] removeFileAtPath: virtualDesktopPath handler: nil]; 
-	}
-}
-
-
-#pragma mark -
-#pragma mark Iconset
-
-- (void) showIconset {
-	// we are doing this by linking our contents to the main desktop directory, we won't refresh
-	// but rely on the caller to trigger the update 
-
-	NSString* virtualDesktopPath	= [VTDesktop virtualDesktopPath: self]; 
-	NSString* desktopPath			= [VTDesktop desktopContainerPath];
-	
-	// all files in our virtual desktop directory 
-	NSArray*  virtualDesktopFiles	= [[NSFileManager defaultManager] directoryContentsAtPath: virtualDesktopPath]; 
-
-	NSEnumerator*	desktopFileIter	= [virtualDesktopFiles objectEnumerator]; 
-	NSString*		desktopFile		= nil; 
-	
-	while (desktopFile = [desktopFileIter nextObject]) {
-		NSString* targetPath = [desktopPath stringByAppendingPathComponent: desktopFile]; 
-	
-		// ignoring some special files 
-		if ([desktopFile hasPrefix: @"."] || [desktopFile hasSuffix: @"\r"])
-			continue; 
-		
-		[[NSFileManager defaultManager] createSymbolicLinkAtPath: targetPath 
-																								 pathContent: [virtualDesktopPath stringByAppendingPathComponent: desktopFile]]; 
-	}
-}
-
-- (void) hideIconset {
-	// we are doing this by unlinking our contents from the main desktop directory, we won't refresh
-	// but rely on the caller to trigger the update. we will only touch files, that are contained in 
-	// our virtual desktop directory, currently we will miss files that were deleted from there before 
-	// we switched. we should work around that by remembering which files we linked into the directory. 
-	
-	NSString* virtualDesktopPath	= [VTDesktop virtualDesktopPath: self]; 
-	NSString* desktopPath					= [VTDesktop desktopContainerPath];
-	
-	// all files in our virtual desktop directory 
-	NSArray*  virtualDesktopFiles	= [[NSFileManager defaultManager] directoryContentsAtPath: virtualDesktopPath]; 
-	
-	NSEnumerator*	desktopFileIter	= [virtualDesktopFiles objectEnumerator]; 
-	NSString*			desktopFile			= nil; 
-	
-	while (desktopFile = [desktopFileIter nextObject]) {
-		NSString* targetPath = [desktopPath stringByAppendingPathComponent: desktopFile]; 
-
-		// ignoring some special files 
-		if ([desktopFile hasPrefix: @"."] || [desktopFile hasSuffix: @"\r"])
-			continue; 
-		
-		// unlink in our file if it exists 
-		if ([[NSFileManager defaultManager] fileExistsAtPath: targetPath])
-			[[NSFileManager defaultManager] removeFileAtPath: targetPath handler: nil]; 
-	}	
-}
-
-
-#pragma mark -
 #pragma mark Desktop background 
 
 - (void) applyDesktopBackground {
-	[[VTDesktopBackgroundHelper sharedInstance] setBackground: mDesktopBackgroundImagePath]; 
+	[[VTDesktopBackgroundHelper sharedInstance] setBackground: mDesktopBackgroundImagePath];
 }
 
 - (void) applyDefaultDesktopBackground {
@@ -306,50 +199,32 @@
 #pragma mark -
 #pragma mark Class methods 
 
-+ (void) updateDesktopPath {
-	[[NSWorkspace sharedWorkspace] noteFileSystemChanged: [VTDesktop desktopContainerPath]]; 
-}
-
-+ (NSString*) virtualDesktopContainerPath {
-	NSString* homeDirectory = NSHomeDirectory(); 
-	// check for symlinks and traverse them in advance 
-	NSDictionary* fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath: homeDirectory traverseLink: NO]; 
-	if ([[fileAttributes fileType] isEqualToString: NSFileTypeSymbolicLink]) 
-		homeDirectory = [[NSFileManager defaultManager] pathContentOfSymbolicLinkAtPath: homeDirectory]; 
-		
-	return [homeDirectory stringByAppendingPathComponent: @"Library/Application Support/Virtue/Desktops"]; 
-}
-
-+ (NSString*) virtualDesktopPath: (VTDesktop*) desktop {
-	return [[VTDesktop virtualDesktopContainerPath] stringByAppendingPathComponent: [desktop name]]; 
-}
-
-+ (NSString*) virtualDesktopMetadataName {
-	return @".desktop.plist"; 
-}
-
-+ (NSString*) desktopContainerPath {
-	NSString* homeDirectory = NSHomeDirectory(); 
-	// check for symlinks and traverse them in advance 
-	NSDictionary* fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath: homeDirectory traverseLink: NO]; 
-	if ([[fileAttributes fileType] isEqualToString: NSFileTypeSymbolicLink]) 
-		homeDirectory = [[NSFileManager defaultManager] pathContentOfSymbolicLinkAtPath: homeDirectory]; 
-
-	return [homeDirectory stringByAppendingPathComponent: @"Desktop"]; 
-}
-
 + (NSString*) currentDesktopBackground {
 	return [[VTDesktopBackgroundHelper sharedInstance] background]; 
 }
 
-
-@end
-
-#pragma mark -
-@implementation VTDesktop(Private) 
-
-- (NSString*) virtualDesktopMetadataPath {
-	return [[VTDesktop virtualDesktopPath: self] stringByAppendingPathComponent: [VTDesktop virtualDesktopMetadataName]]; 
++ (NSString*) virtualDesktopContainerPath {
+	NSString* homeDirectory = NSHomeDirectory();
+	
+	// check for symlinks and traverse them in advance 
+	NSDictionary* fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath: homeDirectory traverseLink: NO];
+	
+	if ([[fileAttributes fileType] isEqualToString: NSFileTypeSymbolicLink])
+		homeDirectory = [[NSFileManager defaultManager] pathContentOfSymbolicLinkAtPath: homeDirectory];
+		
+	return [homeDirectory stringByAppendingPathComponent: @"Library/Application Support/Virtue/Desktops"];
 }
 
-@end 
++ (NSString*) desktopContainerPath {
+	NSString* homeDirectory = NSHomeDirectory();
+	
+	// check for symlinks and traverse them in advance 
+	NSDictionary* fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath: homeDirectory traverseLink: NO];
+	
+	if ([[fileAttributes fileType] isEqualToString: NSFileTypeSymbolicLink])
+		homeDirectory = [[NSFileManager defaultManager] pathContentOfSymbolicLinkAtPath: homeDirectory];
+
+	return [homeDirectory stringByAppendingPathComponent: @"Desktop"];
+}
+
+@end

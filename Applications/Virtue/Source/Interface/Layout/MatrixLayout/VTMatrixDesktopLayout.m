@@ -510,7 +510,7 @@
 	// FIRST pass 
 	// Remove entries referencing non-existant desktops 
 	NSEnumerator*	uuidIter	= [mDesktopLayout objectEnumerator]; 
-	NSString*		uuid		= nil; 
+	NSString*			uuid		= nil; 
 	
 	while (uuid = [uuidIter nextObject]) {
 		if ([[VTDesktopController sharedInstance] desktopWithUUID: uuid] == nil) 

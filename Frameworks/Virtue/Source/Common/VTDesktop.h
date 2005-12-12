@@ -21,8 +21,6 @@
 	// attributes 
 	NSString*							mDesktopBackgroundImagePath; 
 	NSString*							mDefaultDesktopBackgroundImagePath; 
-	BOOL									mManagesIconset; 
-	BOOL									mShowsBackground; 
 	NSColor*							mColorLabel; 
 	// decoration 
 	VTDesktopDecoration*	mDecoration; 
@@ -59,18 +57,7 @@
 - (void) setName: (NSString*) name; 
 
 #pragma mark -
-- (NSString*) uuid; 
-
-#pragma mark -
-#pragma mark Persistency 
-- (void) attachToDisk; 
-- (void) detachFromDisk; 
-
-#pragma mark -
-#pragma mark Iconset  
-
-- (void) showIconset; 
-- (void) hideIconset; 
+- (NSString*) uuid;
 
 #pragma mark -
 #pragma mark Desktop background
@@ -81,12 +68,8 @@
 #pragma mark -
 #pragma mark Class method 
 
-+ (void) updateDesktopPath; 
 + (NSString*) currentDesktopBackground; 
-
 + (NSString*) virtualDesktopContainerPath; 
-+ (NSString*) virtualDesktopPath: (VTDesktop*) desktop; 
-+ (NSString*) virtualDesktopMetadataName; 
 + (NSString*) desktopContainerPath; 
 
 @end

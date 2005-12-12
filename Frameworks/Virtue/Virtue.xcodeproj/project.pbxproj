@@ -27,8 +27,6 @@
 		E9124536073033F500BD28CD /* VTDesktopController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244DC073033F500BD28CD /* VTDesktopController.m */; };
 		E9124537073033F500BD28CD /* VTDesktopDecorationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244DD073033F500BD28CD /* VTDesktopDecorationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9124538073033F500BD28CD /* VTDesktopDecorationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244DE073033F500BD28CD /* VTDesktopDecorationController.m */; };
-		E9124539073033F500BD28CD /* VTDesktopFilesystemController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244DF073033F500BD28CD /* VTDesktopFilesystemController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E912453A073033F500BD28CD /* VTDesktopFilesystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244E0073033F500BD28CD /* VTDesktopFilesystemController.m */; };
 		E912453D073033F500BD28CD /* VTLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244E3073033F500BD28CD /* VTLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E912453E073033F500BD28CD /* VTLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91244E4073033F500BD28CD /* VTLayoutController.m */; };
 		E912453F073033F500BD28CD /* VTMouseWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = E91244E5073033F500BD28CD /* VTMouseWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -598,7 +596,6 @@
 				E912452C073033F500BD28CD /* VTNotifications.h in Headers */,
 				E9124535073033F500BD28CD /* VTDesktopController.h in Headers */,
 				E9124537073033F500BD28CD /* VTDesktopDecorationController.h in Headers */,
-				E9124539073033F500BD28CD /* VTDesktopFilesystemController.h in Headers */,
 				E912453D073033F500BD28CD /* VTLayoutController.h in Headers */,
 				E912453F073033F500BD28CD /* VTMouseWatcher.h in Headers */,
 				E9124541073033F500BD28CD /* VTMouseWatcherProtocol.h in Headers */,
@@ -758,7 +755,6 @@
 				E912452A073033F500BD28CD /* VTInspector.m in Sources */,
 				E9124536073033F500BD28CD /* VTDesktopController.m in Sources */,
 				E9124538073033F500BD28CD /* VTDesktopDecorationController.m in Sources */,
-				E912453A073033F500BD28CD /* VTDesktopFilesystemController.m in Sources */,
 				E912453E073033F500BD28CD /* VTLayoutController.m in Sources */,
 				E9124540073033F500BD28CD /* VTMouseWatcher.m in Sources */,
 				E9124548073033F500BD28CD /* VTDecorationPrimitive.m in Sources */,
