@@ -34,14 +34,12 @@
 }
 
 + (id) desktopWithName: (NSString*) name identifier: (int) identifier {
-	// create desktop 
 	return [[[VTDesktop alloc] initWithName: name identifier: identifier] autorelease]; 
 }
 
 #pragma mark -
 - (id) initWithName: (NSString*) name identifier: (int) identifier {
 	if (self = [super initWithId: identifier andName: name]) {
-		// Attributes 
 		mDesktopBackgroundImagePath = nil;
 		mDecoration									= [[VTDesktopDecoration alloc] initWithDesktop: self]; 
 		mUUID												= [[ZNUUID uuid] retain];
@@ -53,12 +51,9 @@
 }
 
 - (void) dealloc {
-	// Attributes
 	ZEN_RELEASE(mDesktopBackgroundImagePath);
 	ZEN_RELEASE(mDefaultDesktopBackgroundImagePath);
 	ZEN_RELEASE(mUUID);
-	
-	// decoration
 	ZEN_RELEASE(mDecoration);
 	
 	[super dealloc];
@@ -86,8 +81,7 @@
 }
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
-	
-	if (mDesktopBackgroundImagePath && mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath)
+	if (mDesktopBackgroundImagePath && [mDesktopBackgroundImagePath length] > 1 && mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath)
 		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
 	
 	[dictionary setObject: [self name] forKey: kVtCodingName];
@@ -103,9 +97,7 @@
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-	if ([dictionary objectForKey: kVtCodingBackgroundImage])
-		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];	
-	
+	mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
 	mUUID												= [[dictionary objectForKey: kVtCodingUUID] copy];
 	NSData* colorData						= [dictionary objectForKey: kVtCodingColorLabel];
 	
@@ -132,16 +124,13 @@
 }
 
 - (NSString*) desktopBackground {
-	if ([mDesktopBackgroundImagePath length] > 1)
-		return mDesktopBackgroundImagePath; 
-	else
-		return mDefaultDesktopBackgroundImagePath;
+	return mDesktopBackgroundImagePath;
 }
 
 #pragma mark -
 
 - (void) setDefaultDesktopBackgroundPath: (NSString*) path {
-	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundImagePath, path); 
+	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundImagePath, path);
 	
 	if (mDesktopBackgroundImagePath == nil)
 		[self setDesktopBackground: path];
@@ -152,7 +141,7 @@
 }
 
 - (BOOL) showsBackground {
-	return ([mDesktopBackgroundImagePath length] > 1);
+	return (mDesktopBackgroundImagePath != nil && [mDesktopBackgroundImagePath length] > 1);
 }
 
 #pragma mark -

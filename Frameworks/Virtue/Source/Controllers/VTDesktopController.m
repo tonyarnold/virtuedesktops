@@ -57,22 +57,28 @@
 - (id) init {
 	if (self = [super init]) {
 		// init attributes 
-		mDesktops											= [[NSMutableArray alloc] init];
-		mPreviousDesktop							= nil; 
-		mSnapbackDesktop							= nil; 
-		mDecorationPrototype					= nil; 
+		mDesktops						= [[NSMutableArray alloc] init];
+		mPreviousDesktop				= nil; 
+		mSnapbackDesktop				= nil; 
+		mDecorationPrototype			= nil; 
 		mNeedDesktopBackgroundUpdate	= NO; 
 		mExpectingBackgroundChange		= NO; 
 		
 		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
 		
 		// register as observer for desktop switches 
-		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
-		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
-		[[NSDistributedNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopBackgroundChanged:) name: VTBackgroundHelperDesktopChangedName object: VTBackgroundHelperDesktopChangedObject]; 
-			
+		[[NSNotificationCenter defaultCenter] 
+			addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
+		[[NSNotificationCenter defaultCenter] 
+			addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
+		[[NSDistributedNotificationCenter defaultCenter]
+            addObserver: self
+							 selector: @selector(onDesktopBackgroundChanged:)
+									 name: VTBackgroundHelperDesktopChangedName
+								 object: VTBackgroundHelperDesktopChangedObject]; 
+		
 		// create timer loop to update desktops 
-		[NSTimer scheduledTimerWithTimeInterval: 1.5 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
+		[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 		
 		return self; 
 	}
@@ -81,6 +87,8 @@
 }
 
 - (void) dealloc {
+	// unbind desktop 
+	[[self activeDesktop] removeObserver: self forKeyPath: @"showsBackground"]; 
 		
 	// get rid of observer status 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
@@ -108,7 +116,7 @@
 	while (YES) {
 		if ([self desktopForId: i] == nil)
 			return i; 
-			
+		
 		// try next one 
 		i++; 
 	}	
@@ -120,18 +128,6 @@
 
 - (NSArray*) desktops {
 	return mDesktops;
-}
-
-- (void) setDesktops: (NSArray*) desktopsToAdd {
-	if ([desktopsToAdd count] == 0)
-		return;
-	
-	NSEnumerator * desktopEnumerator = [desktopsToAdd objectEnumerator];
-	VTDesktop			*desktop;
-	while (desktop = [desktopEnumerator nextObject])
-	{
-		[self addInDesktops: desktop];
-	}
 }
 
 - (void) addInDesktops: (VTDesktop*) desktop {
@@ -146,7 +142,7 @@
 	
 	// and add 
 	[mDesktops insertObject: desktop atIndex: index]; 
-	// set up desktop 
+	// set up desktop
 	
 	[desktop setDefaultDesktopBackgroundPath: mDefaultDesktopBackgroundPath]; 
 	// attach the decoration 
@@ -161,7 +157,7 @@
 	// here we are sure we created the desktop, so we will trigger some 
 	// notifications by hand to inform our plugins 
 	NSMethodSignature*	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
-	NSInvocation*				invocation	= [NSInvocation invocationWithMethodSignature: signature];
+	NSInvocation*		invocation	= [NSInvocation invocationWithMethodSignature: signature];
 	
 	[invocation setSelector: @selector(onDesktopDidCreateNotification:)];
 	[invocation setArgument: &desktop atIndex: 2];
@@ -192,7 +188,7 @@
 		targetIndex = [mDesktops count] - 1; 
 	
 	VTDesktop* target = [mDesktops objectAtIndex: targetIndex]; 
-
+	
 	if ([[self activeDesktop] isEqual: desktopToRemove]) 
 		[self activateDesktop: target]; 
 	
@@ -216,7 +212,7 @@
 	
 	// now check if we should move windows 
 	if (([[NSUserDefaults standardUserDefaults] boolForKey: VTWindowsCollectOnDelete]) && 
-		([mDesktops count] > 1)) {
+			([mDesktops count] > 1)) {
 		[desktopToRemove moveAllWindowsToDesktop: target]; 
 	}
 	
@@ -306,7 +302,7 @@
 - (void) activateDesktop: (VTDesktop*) desktop {
 	// fetch direction to foward 
 	VTDirection direction = [[[VTLayoutController sharedInstance] activeLayout] directionFromDesktop: [[VTDesktopController sharedInstance] activeDesktop] toDesktop: desktop];
-
+	
 	[self doActivateDesktop: desktop withDirection: direction]; 
 }
 
@@ -356,7 +352,7 @@
 	while (serialisedDesktopDictionary = [serialisedDesktopsIterator nextObject]) {
 		VTDesktop*	desktop	= [[VTDesktop alloc] initWithName: [serialisedDesktopDictionary valueForKey: @"name"]  identifier: desktopId];  
 		[desktop decodeFromDictionary: serialisedDesktopDictionary]; 
-			
+		
 		// insert into our array of desktops 
 		[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
 		
@@ -377,12 +373,14 @@
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// and apply settings of active desktop 
-	[[self activeDesktop] applyDesktopBackground];
+	mExpectingBackgroundChange = YES;
+	[activeDesktop applyDesktopBackground];
 }
 
 #pragma mark -
 - (void) applyDecorationPrototype: (BOOL) overwrite {
-	// We walk through all desktops and attach the decoration primitives from our prototype if if is not included yet... 
+	// we walk through all desktops and attach the decoration primitives from our 
+	// prototype if if is not included yet... 
 	NSEnumerator*	desktopIter		= [mDesktops objectEnumerator]; 
 	VTDesktop*		desktop			= nil; 
 	
@@ -394,16 +392,17 @@
 #pragma mark -
 #pragma mark Notification sinks
 
-- (void) onDesktopBackgroundChanged: (NSNotification*) notification {
+- (void) onDesktopBackgroundChanged: (NSNotification*) notification {	
 	// ignore if we expected it because we triggered the change 
 	if (mExpectingBackgroundChange) {
-		mExpectingBackgroundChange = NO;
+		mExpectingBackgroundChange = NO; 
 		return; 
 	}
 	
+	
 	// otherwise get the background picture and set it as the default 
 	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
-		
+	
 	// and propagate to existing desktops 
 	[[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundPath:) withObject: mDefaultDesktopBackgroundPath]; 
 }
@@ -429,18 +428,18 @@
 	ZEN_ASSIGN(mPreviousDesktop, [self activeDesktop]); 
 	// propagate key change for previous desktop completed 
 	[self didChangeValueForKey: @"previousDesktop"]; 
-
+	
 	// handle background image changes... if we are currently displaying a 
 	// custom image, next desktop has to overwrite it... 
 	if ([desktop showsBackground])  {
 		mNeedDesktopBackgroundUpdate = YES;
 	}
-	else
-	{
+	else {
 		mNeedDesktopBackgroundUpdate = NO; 
 	}
-	
+		
 	// unbind desktop 
+	[desktop removeObserver: self forKeyPath: @"showsBackground"]; 
 	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
 }
 
@@ -448,16 +447,13 @@
 	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
 	
 	// bind desktop 
+	[desktop addObserver: self forKeyPath: @"showsBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
-	
 	// handle background picture 
-	mExpectingBackgroundChange = (mNeedDesktopBackgroundUpdate == NO && [desktop showsBackground]);
-	if (mExpectingBackgroundChange)
-		[desktop applyDesktopBackground];
-	else
-		[desktop applyDefaultDesktopBackground];
-	
+	if (mNeedDesktopBackgroundUpdate || [desktop showsBackground]) {
+		[self applyDesktopBackground]; 
+	}
 	mNeedDesktopBackgroundUpdate = NO; 
 		
 	[self didChangeValueForKey: @"activeDesktop"]; 
@@ -467,11 +463,11 @@
 #pragma mark KVO Sink 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-	if ([keyPath isEqualToString: @"desktopBackground"]) {
+	if ([keyPath isEqualToString: @"showsBackground"] || [keyPath isEqualToString: @"desktopBackground"]) {
 		mExpectingBackgroundChange = YES; 
 		
 		// toggle background on and off 
-		if ([[self activeDesktop] showsBackground] && [[self activeDesktop] desktopBackground] != nil)
+		if ([[self activeDesktop] showsBackground])
 			[[self activeDesktop] applyDesktopBackground]; 
 		else 
 			[[self activeDesktop] applyDefaultDesktopBackground]; 
@@ -488,22 +484,21 @@
 	
 	// try to find the defaults definition in the main bundle 
 	NSString* defaultsPath = [[NSBundle mainBundle] pathForResource: @"DefaultDesktops" ofType: @"plist"]; 
-	if (defaultsPath == nil) 
-	{
-		defaultDesktops = [NSArray arrayWithObjects: @"Main", "Mail", "Web", "Code", nil]; 
+	if (defaultsPath == nil) {
+		// eeeks, could not find our default desktops, lets come up with something 
+		// at least
+		defaultDesktops = [NSArray arrayWithObjects: @"Main Desktop", "eDesktop", "Fun", "Misc", nil]; 
 	}
-	else 
-	{
+	else {
 		defaultDesktops = [NSArray arrayWithContentsOfFile: defaultsPath]; 
 	}
 	
 	// now iterate and create desktops 
 	NSEnumerator*	desktopNameIter	= [defaultDesktops objectEnumerator]; 
-	NSString*			desktopName			= nil; 
-	int						desktopId				= [PNDesktop firstDesktopIdentifier]; 
+	NSString*		desktopName		= nil; 
+	int				desktopId		= [PNDesktop firstDesktopIdentifier]; 
 	
-	while (desktopName = [desktopNameIter nextObject]) 
-	{
+	while (desktopName = [desktopNameIter nextObject]) {
 		// create a nice desktop
 		VTDesktop* desktop = [VTDesktop desktopWithName: desktopName identifier: desktopId];  
 		// add it 
@@ -546,38 +541,39 @@
 		duration = [[NSUserDefaults standardUserDefaults] floatForKey:   VTDesktopTransitionDuration];
 		
 		// decide on the option if we should to 
-		if (option != kPnOptionAny) {
-			switch (direction) {
-				case kVtDirectionNorth: 
-					option = kPnOptionDown; 
-					break; 
-				case kVtDirectionSouth: 
-					option = kPnOptionUp; 
-					break; 
-				case kVtDirectionWest: 
-					option = kPnOptionRight; 
-					break; 
-				case kVtDirectionEast: 
-					option = kPnOptionLeft; 
-					break;
-				case kVtDirectionNortheast: 
-					option = kPnOptionTopRight; 
-					break; 
-				case kVtDirectionSoutheast: 
-					option = kPnOptionBottomRight; 
-					break; 
-				case kVtDirectionSouthwest: 
-					option = kPnOptionBottomLeft; 
-					break; 
-				case kVtDirectionNorthwest: 
-					option = kPnOptionTopLeft; 
-					break; 
-					
-				default: 
-					option = kPnOptionLeft; 
-			}
-			
+		//if (option == kPnOptionAny) {
+		// decide based on the direction 
+		switch (direction) {
+			case kVtDirectionNorth: 
+				option = kPnOptionDown; 
+				break; 
+			case kVtDirectionSouth: 
+				option = kPnOptionUp; 
+				break; 
+			case kVtDirectionWest: 
+				option = kPnOptionRight; 
+				break; 
+			case kVtDirectionEast: 
+				option = kPnOptionLeft; 
+				break;
+			case kVtDirectionNortheast: 
+				option = kPnOptionTopRight; 
+				break; 
+			case kVtDirectionSoutheast: 
+				option = kPnOptionBottomRight; 
+				break; 
+			case kVtDirectionSouthwest: 
+				option = kPnOptionBottomLeft; 
+				break; 
+			case kVtDirectionNorthwest: 
+				option = kPnOptionTopLeft; 
+				break; 
+				
+			default: 
+				option = kPnOptionLeft; 
 		}
+		
+		//}
 		
 		// decide type 
 		if (type == kPnTransitionAny) {
@@ -587,9 +583,9 @@
 		type = kPnTransitionNone;
 		option = kPnOptionAny;
 		duration = 0.0;
-	}
-	// now do it ;) 
-	[self doActivateDesktop: desktop usingTransition: type withOptions: option andDuration: duration]; 
+}
+// now do it ;) 
+[self doActivateDesktop: desktop usingTransition: type withOptions: option andDuration: duration]; 
 }
 
 - (void) doActivateDesktop: (VTDesktop*) desktop usingTransition: (PNTransitionType) type withOptions: (PNTransitionOption) option andDuration: (float) duration {
@@ -630,7 +626,7 @@
 	[[VTPluginCollection sharedInstance] makePluginsOfType: @protocol(VTPluginScript) performInvocation: invocation];
 	
 }
-	
+
 #pragma mark -
 - (void) applyDecorationPrototypeForDesktop: (VTDesktop*) desktop overwrite: (BOOL) overwrite {
 	if (overwrite == YES) {
@@ -643,7 +639,7 @@
 	NSEnumerator*			deskPrimitiveIter	= [[[desktop decoration] decorationPrimitives] objectEnumerator]; 
 	VTDecorationPrimitive*	deskPrimitive		= nil; 
 	NSMutableArray*			deskPrimitiveTypes	= [[NSMutableArray alloc] init]; 
-
+	
 	while (deskPrimitive = [deskPrimitiveIter nextObject]) {
 		if ([deskPrimitiveTypes containsObject: NSStringFromClass([deskPrimitive class])] == NO)
 			[deskPrimitiveTypes addObject: NSStringFromClass([deskPrimitive class])]; 
@@ -655,7 +651,7 @@
 	while (primitive = [primitiveIter nextObject]) {
 		// check if the desktop already contains a primitive of the passed type 
 		if ([deskPrimitiveTypes containsObject: NSStringFromClass([primitive class])])
-			continue;
+			continue; 
 		
 		// copy the primitive 
 		VTDecorationPrimitive* clonedPrimitive = [primitive copy]; 
@@ -667,12 +663,15 @@
 }
 
 - (void) applyDesktopBackground {
+	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
 	mExpectingBackgroundChange = YES; 
 	
-	if ([[self activeDesktop] showsBackground] && [[self activeDesktop] desktopBackground] != nil)
-		[[self activeDesktop] applyDesktopBackground]; 
-	else
-		[[self activeDesktop] applyDefaultDesktopBackground];
+	if ([desktop showsBackground]) {
+		[desktop applyDesktopBackground]; 
+	}
+	else {
+		[desktop applyDefaultDesktopBackground]; 
+	}
 }
 
 - (NSString *) _pathForDataFile {

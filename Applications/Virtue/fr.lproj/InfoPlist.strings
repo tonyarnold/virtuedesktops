@@ -1,5 +1,5 @@
 CFBundleName = "Virtue";
-CFBundleVersion = "5.0r3"; 
-CFBundleShortVersionString = "Virtue 0.5r3";
-CFBundleGetInfoString = "Virtue, Copyright 2004 Thomas Staller";
+CFBundleVersion = "0.51"; 
+CFBundleShortVersionString = "Virtue 0.51";
+CFBundleGetInfoString = "Virtue 0.51";
 NSHumanReadableCopyright = "Copyright 2004 Thomas Staller";

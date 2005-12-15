@@ -321,7 +321,7 @@
 	[mWindow setIgnoresMouseEvents: NO];
 	[mWindow setAcceptsMouseMovedEvents: YES]; 
 	[mWindow setHasShadow: YES];
-	[mWindow setReleasedWhenClosed: NO]; 
+	[mWindow setReleasedWhenClosed: NO];
 	
 	// bind the view to the window  
 	[mWindow setContentView: view];
