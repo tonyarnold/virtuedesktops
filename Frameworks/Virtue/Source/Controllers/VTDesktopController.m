@@ -86,10 +86,7 @@
 	return nil; 
 }
 
-- (void) dealloc {
-	// unbind desktop 
-	[[self activeDesktop] removeObserver: self forKeyPath: @"showsBackground"]; 
-		
+- (void) dealloc {		
 	// get rid of observer status 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
 	[[NSDistributedNotificationCenter defaultCenter] removeObserver: self]; 
@@ -409,7 +406,7 @@
 
 - (void) onUpdateDesktops: (NSTimer*) timer {
 	[mDesktops makeObjectsPerformSelector: @selector(updateDesktop)]; 
-	[NSTimer scheduledTimerWithTimeInterval: 1.5 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
+	[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 }
 
 - (void) onDesktopWillChange: (NSNotification*) notification {
@@ -439,7 +436,6 @@
 	}
 		
 	// unbind desktop 
-	[desktop removeObserver: self forKeyPath: @"showsBackground"]; 
 	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
 }
 
@@ -447,7 +443,6 @@
 	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
 	
 	// bind desktop 
-	[desktop addObserver: self forKeyPath: @"showsBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// handle background picture 
@@ -495,8 +490,8 @@
 	
 	// now iterate and create desktops 
 	NSEnumerator*	desktopNameIter	= [defaultDesktops objectEnumerator]; 
-	NSString*		desktopName		= nil; 
-	int				desktopId		= [PNDesktop firstDesktopIdentifier]; 
+	NSString*			desktopName			= nil; 
+	int						desktopId				=	[PNDesktop firstDesktopIdentifier]; 
 	
 	while (desktopName = [desktopNameIter nextObject]) {
 		// create a nice desktop
@@ -636,7 +631,7 @@
 			[[desktop decoration] delDecorationPrimitive: [[[desktop decoration] decorationPrimitives] objectAtIndex: 0]]; 
 	}
 	
-	NSEnumerator*			deskPrimitiveIter	= [[[desktop decoration] decorationPrimitives] objectEnumerator]; 
+	NSEnumerator*			deskPrimitiveIter			= [[[desktop decoration] decorationPrimitives] objectEnumerator]; 
 	VTDecorationPrimitive*	deskPrimitive		= nil; 
 	NSMutableArray*			deskPrimitiveTypes	= [[NSMutableArray alloc] init]; 
 	

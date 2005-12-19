@@ -61,7 +61,6 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 		
 		// find out which mode to use 
 		[self updateMode]; 
-		
 		return self; 
 	}
 	
@@ -140,9 +139,9 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	// 
 	
 	// first try to find the Finder process, and if it is there, use it 
-	NSArray*		applications	= [[NSWorkspace sharedWorkspace] launchedApplications]; 
+	NSArray*			applications		= [[NSWorkspace sharedWorkspace] launchedApplications]; 
 	NSEnumerator*	applicationIter	= [applications objectEnumerator];  
-	NSDictionary*	application		= nil; 
+	NSDictionary*	application			= nil; 
 	
 	while (application = [applicationIter nextObject]) {
 		if ([[application objectForKey: @"NSApplicationBundleIdentifier"] isEqualToString: VTBackgroundHelperFinderName]) {

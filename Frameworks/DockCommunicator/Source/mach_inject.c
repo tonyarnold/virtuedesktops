@@ -1,9 +1,9 @@
-/******************************************************************************
-mach_inject.c
-Copyright (c) 2003-2005 Jonathan 'Wolf' Rentzsch: <http://rentzsch.com>
-Some rights reserved: <http://creativecommons.org/licenses/by/2.0/>
+ /*******************************************************************************
+	mach_inject.c
+		Copyright (c) 2003-2005 Jonathan 'Wolf' Rentzsch: <http://rentzsch.com>
+		Some rights reserved: <http://creativecommons.org/licenses/by/2.0/>
 
-***************************************************************************/
+	***************************************************************************/
 
 #include	"mach_inject.h"
 
@@ -15,10 +15,10 @@ Some rights reserved: <http://creativecommons.org/licenses/by/2.0/>
 #include <assert.h>
 
 #ifndef	COMPILE_TIME_ASSERT( exp )
-#define COMPILE_TIME_ASSERT( exp ) { switch (0) { case 0: case (exp):; } }
+	#define COMPILE_TIME_ASSERT( exp ) { switch (0) { case 0: case (exp):; } }
 #endif
 #define ASSERT_CAST( CAST_TO, CAST_FROM ) \
-COMPILE_TIME_ASSERT( sizeof(CAST_TO)==sizeof(CAST_FROM) )
+	COMPILE_TIME_ASSERT( sizeof(CAST_TO)==sizeof(CAST_FROM) )
 
 /*******************************************************************************
 *	
@@ -28,13 +28,13 @@ COMPILE_TIME_ASSERT( sizeof(CAST_TO)==sizeof(CAST_FROM) )
 #pragma mark	-
 #pragma mark	(Interface)
 
-mach_error_t
+	mach_error_t
 mach_inject(
-						const mach_inject_entry	threadEntry,
-						const void				*paramBlock,
-						size_t					paramSize,
-						pid_t					targetProcess,
-						vm_size_t				stackSize )
+		const mach_inject_entry	threadEntry,
+		const void				*paramBlock,
+		size_t					paramSize,
+		pid_t					targetProcess,
+		vm_size_t				stackSize )
 {
 	assert( threadEntry );
 	assert( targetProcess > 0 );
@@ -48,7 +48,7 @@ mach_inject(
 	//	Initialize stackSize to default if requested.
 	if( stackSize == 0 )
 		/** @bug
-		We only want an 8K default, fix the plop-in-the-middle code below.
+			We only want an 8K default, fix the plop-in-the-middle code below.
 		*/
 		stackSize = 16 * 1024;
 	
@@ -60,8 +60,8 @@ mach_inject(
 	/** @todo
 		Would be nice to just allocate one block for both the remote stack
 		*and* the remoteCode (including the parameter data block once that's
-													written.
-													*/
+		written.
+	*/
 	
 	//	Allocate the remoteStack.
 	vm_address_t remoteStack = (vm_address_t)NULL;
@@ -84,7 +84,7 @@ mach_inject(
 		if( !err ) {
 			ASSERT_CAST( pointer_t, paramBlock );
 			err = vm_write( remoteTask, remoteParamBlock,
-											(pointer_t) paramBlock, paramSize );
+					(pointer_t) paramBlock, paramSize );
 		}
 	}
 	
@@ -105,7 +105,7 @@ mach_inject(
 		ppc_thread_state_t remoteThreadState;
 		
 		/** @bug
-		Stack math should be more sophisticated than this (ala redzone).
+			Stack math should be more sophisticated than this (ala redzone).
 		*/
 		remoteStack += stackSize / 2;
 		
@@ -136,13 +136,13 @@ mach_inject(
 		printf( "remoteCode size: %ld\n", imageSize );
 		printf( "remoteCode pc: %p\n", (void*) remoteThreadState.srr0 );
 		printf( "remoteCode end: %p\n",
-						(void*) (((char*)remoteCode)+imageSize) );
+			(void*) (((char*)remoteCode)+imageSize) );
 		fflush(0);
 #endif
 		
 		err = thread_create_running( remoteTask, PPC_THREAD_STATE,
-																 (thread_state_t) &remoteThreadState, PPC_THREAD_STATE_COUNT,
-																 &remoteThread );
+				(thread_state_t) &remoteThreadState, PPC_THREAD_STATE_COUNT,
+				&remoteThread );
 	}
 	
 	if( err ) {
@@ -157,11 +157,11 @@ mach_inject(
 	return err;
 }
 
-mach_error_t
+	mach_error_t
 machImageForPointer(
-										const void *pointer,
-										const void **image,
-										unsigned long *size )
+		const void *pointer,
+		const void **image,
+		unsigned long *size )
 {
 	assert( pointer );
 	assert( image );
@@ -173,8 +173,8 @@ machImageForPointer(
 	for( imageIndex = 0; imageIndex < imageCount; imageIndex++ ) {
 		const struct mach_header *header = _dyld_get_image_header( imageIndex );
 		const struct section *section = getsectbynamefromheader( header,
-																														 SEG_TEXT,
-																														 SECT_TEXT );
+																	SEG_TEXT,
+																	SECT_TEXT );
 		long start = section->addr + _dyld_get_image_vmaddr_slide( imageIndex );
 		long stop = start + section->size;
 		if( p >= start && p <= stop ) {

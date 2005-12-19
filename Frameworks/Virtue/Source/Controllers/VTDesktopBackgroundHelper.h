@@ -13,7 +13,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define VTBackgroundHelperDesktopChangedName		@"com.apple.desktop"
+#define VTBackgroundHelperDesktopChangedName			@"com.apple.desktop"
 #define VTBackgroundHelperDesktopChangedObject		@"BackgroundChanged"
 
 

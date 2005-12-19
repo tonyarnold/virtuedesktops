@@ -342,15 +342,15 @@
 
 #pragma mark -
 - (NSRect) screenRectangle {
-    NSRect			rect;
-    OSStatus		oResult;
-    CGSConnection   oConnection = _CGSDefaultConnection();
-    
-    oResult = CGSGetScreenRectForWindow(oConnection, mNativeWindow, (CGRect*)&rect);
-    if (oResult)
-			return NSMakeRect(0, 0, 0, 0);
-                
-    return rect;
+	NSRect			rect;
+	OSStatus		oResult;
+	CGSConnection   oConnection = _CGSDefaultConnection();
+	
+	oResult = CGSGetScreenRectForWindow(oConnection, mNativeWindow, (CGRect*)&rect);
+	if (oResult)
+		return NSMakeRect(0, 0, 0, 0);
+							
+	return rect;
 }
 
 #pragma mark -

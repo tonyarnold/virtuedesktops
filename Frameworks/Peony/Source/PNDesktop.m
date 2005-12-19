@@ -296,6 +296,7 @@
 		
 		CGSNewTransition(oConnection, &transSpec, &transNo);
 		CGSSetWorkspace(oConnection,mDesktopId);
+		
 		usleep(10000);
 		CGSInvokeTransition(oConnection, transNo, seconds);
 	
