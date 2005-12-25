@@ -105,7 +105,6 @@
 		E9363A7E06FCDDCD00E354DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9363A6D06FCDDCD00E354DB /* Localizable.strings */; };
 		E9363A8006FCDDCD00E354DB /* Operations.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9363A7106FCDDCD00E354DB /* Operations.nib */; };
 		E9363A8206FCDDCD00E354DB /* Readme.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A7506FCDDCD00E354DB /* Readme.rtf */; };
-		E9363A8306FCDDCD00E354DB /* Virtue.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9363A7706FCDDCD00E354DB /* Virtue.nib */; };
 		E9363AEF06FCE64300E354DB /* iconVirtue.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9363ADD06FCE64300E354DB /* iconVirtue.icns */; };
 		E9363AF006FCE64300E354DB /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363ADF06FCE64300E354DB /* imageCrossSmall.tif */; };
 		E9363AF106FCE64300E354DB /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE006FCE64300E354DB /* imageCrossSmallHover.tif */; };
@@ -169,7 +168,6 @@
 		E99B0A26073D31E0004B9D57 /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = E99B0A25073D31DF004B9D57 /* imageColorLabelMaskComposite.png */; };
 		E99B0A4A073D58EA004B9D57 /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E99B0A49073D58EA004B9D57 /* imageColorLabelMaskBar.png */; };
 		E9A2D07107637265009CDAC5 /* VTTriggerToTypeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D06F07637265009CDAC5 /* VTTriggerToTypeImage.m */; };
-		E9A4804C06FF3D3200A8AE3C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107310486CEB800E47090 /* Info.plist */; };
 		E9C628C90758FAB40072C1EF /* VTPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9C628C70758FAB40072C1EF /* VTPreferences.nib */; };
 		E9C6290107591C520072C1EF /* VTApplicationInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9C628FF07591C520072C1EF /* VTApplicationInspector.nib */; };
 		E9C6290407591CFE0072C1EF /* VTDesktopInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9C6290207591CFE0072C1EF /* VTDesktopInspector.nib */; };
@@ -229,6 +227,124 @@
 		EAB7C06B0924F9590067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C06C0924F95E0067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C06D0924F9670067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
+		EAC2B5E0095E167600748870 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
+		EAC2B5E1095E167600748870 /* imageKeyboardTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = E959D6DD0763113400013EB2 /* imageKeyboardTrigger.png */; };
+		EAC2B5E2095E167600748870 /* imageMouseTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = E959D6DE0763113400013EB2 /* imageMouseTrigger.png */; };
+		EAC2B5E3095E167600748870 /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E940C5E60733F03400C1642C /* DefaultHotkeys.plist */; };
+		EAC2B5E4095E167600748870 /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = E95C9F3D0732E74600148FA8 /* DefaultDesktops.plist */; };
+		EAC2B5E6095E167600748870 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9363A6D06FCDDCD00E354DB /* Localizable.strings */; };
+		EAC2B5E7095E167600748870 /* Operations.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9363A7106FCDDCD00E354DB /* Operations.nib */; };
+		EAC2B5E9095E167600748870 /* iconVirtue.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9363ADD06FCE64300E354DB /* iconVirtue.icns */; };
+		EAC2B5EA095E167600748870 /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363ADF06FCE64300E354DB /* imageCrossSmall.tif */; };
+		EAC2B5EB095E167600748870 /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE006FCE64300E354DB /* imageCrossSmallHover.tif */; };
+		EAC2B5EC095E167600748870 /* imageCrossSmallPressed.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE106FCE64300E354DB /* imageCrossSmallPressed.tif */; };
+		EAC2B5ED095E167600748870 /* imageDesktopActive.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE306FCE64300E354DB /* imageDesktopActive.png */; };
+		EAC2B5EE095E167600748870 /* imageDesktopEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE406FCE64300E354DB /* imageDesktopEmpty.png */; };
+		EAC2B5EF095E167600748870 /* imageDesktopPopulated.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE506FCE64300E354DB /* imageDesktopPopulated.png */; };
+		EAC2B5F0095E167600748870 /* imageMinus.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE606FCE64300E354DB /* imageMinus.png */; };
+		EAC2B5F1095E167600748870 /* imageNotification.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE706FCE64300E354DB /* imageNotification.png */; };
+		EAC2B5F2095E167600748870 /* imageSnapback.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AEB06FCE64300E354DB /* imageSnapback.png */; };
+		EAC2B5F3095E167600748870 /* imageVirtue.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AEC06FCE64300E354DB /* imageVirtue.png */; };
+		EAC2B5F4095E167600748870 /* imageVirtueHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AED06FCE64300E354DB /* imageVirtueHighlighted.png */; };
+		EAC2B5F5095E167600748870 /* imageWindow.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AEE06FCE64300E354DB /* imageWindow.png */; };
+		EAC2B5F6095E167600748870 /* Virtue.scriptSuite in Resources */ = {isa = PBXBuildFile; fileRef = E91AD9B40703672900F69228 /* Virtue.scriptSuite */; };
+		EAC2B5F7095E167600748870 /* Virtue.scriptTerminology in Resources */ = {isa = PBXBuildFile; fileRef = E91AD9CD07036E3F00F69228 /* Virtue.scriptTerminology */; };
+		EAC2B5F8095E167600748870 /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
+		EAC2B5F9095E167600748870 /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
+		EAC2B5FA095E167600748870 /* iconVirtualDesktopsFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9581F1B0717DE56009583A0 /* iconVirtualDesktopsFolder.icns */; };
+		EAC2B5FB095E167600748870 /* imageActionNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = E95820F0071B162A009583A0 /* imageActionNormal.png */; };
+		EAC2B5FC095E167600748870 /* imageActionPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E95820F1071B162A009583A0 /* imageActionPressed.png */; };
+		EAC2B5FD095E167600748870 /* imageAction.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E91270510726F06E006DC207 /* imageAction.tiff */; };
+		EAC2B5FE095E167600748870 /* imageActionPressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E91270520726F06E006DC207 /* imageActionPressed.tiff */; };
+		EAC2B5FF095E167600748870 /* imageIsSticky.png in Resources */ = {isa = PBXBuildFile; fileRef = E912708507279AF8006DC207 /* imageIsSticky.png */; };
+		EAC2B600095E167600748870 /* imageIsUnsticky.png in Resources */ = {isa = PBXBuildFile; fileRef = E912708607279AF8006DC207 /* imageIsUnsticky.png */; };
+		EAC2B601095E167600748870 /* imageWidgetAddPopup.png in Resources */ = {isa = PBXBuildFile; fileRef = E912738D072C096A006DC207 /* imageWidgetAddPopup.png */; };
+		EAC2B602095E167600748870 /* imageWidgetAddPopupPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E912738E072C096A006DC207 /* imageWidgetAddPopupPressed.png */; };
+		EAC2B603095E167600748870 /* imageWidgetDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = E912738F072C096A006DC207 /* imageWidgetDelete.png */; };
+		EAC2B604095E167600748870 /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127390072C096A006DC207 /* imageWidgetDeletePressed.png */; };
+		EAC2B605095E167600748870 /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127391072C096A006DC207 /* imageWidgetInfo.png */; };
+		EAC2B606095E167600748870 /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127392072C096A006DC207 /* imageWidgetInfoPressed.png */; };
+		EAC2B607095E167600748870 /* imagePosition.png in Resources */ = {isa = PBXBuildFile; fileRef = E912436F072E9B2D00BD28CD /* imagePosition.png */; };
+		EAC2B608095E167600748870 /* imageColorLabelMask.png in Resources */ = {isa = PBXBuildFile; fileRef = E99B0A06073D0A76004B9D57 /* imageColorLabelMask.png */; };
+		EAC2B609095E167600748870 /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = E99B0A25073D31DF004B9D57 /* imageColorLabelMaskComposite.png */; };
+		EAC2B60A095E167600748870 /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E99B0A49073D58EA004B9D57 /* imageColorLabelMaskBar.png */; };
+		EAC2B60B095E167600748870 /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D29BB0073D900200E0E6CE /* imageColorLabelClear.png */; };
+		EAC2B60C095E167600748870 /* imageWidgetSticky.png in Resources */ = {isa = PBXBuildFile; fileRef = E941CCB607460FA7007DF0D9 /* imageWidgetSticky.png */; };
+		EAC2B60D095E167600748870 /* imageWidgetStickyPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E941CCB707460FA7007DF0D9 /* imageWidgetStickyPressed.png */; };
+		EAC2B60E095E167600748870 /* imageWidgetUnsticky.png in Resources */ = {isa = PBXBuildFile; fileRef = E941CCB807460FA7007DF0D9 /* imageWidgetUnsticky.png */; };
+		EAC2B60F095E167600748870 /* imageWidgetUnstickyPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E941CCB907460FA7007DF0D9 /* imageWidgetUnstickyPressed.png */; };
+		EAC2B610095E167600748870 /* VTPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9C628C70758FAB40072C1EF /* VTPreferences.nib */; };
+		EAC2B611095E167600748870 /* VTApplicationInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9C628FF07591C520072C1EF /* VTApplicationInspector.nib */; };
+		EAC2B612095E167600748870 /* VTDesktopInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9C6290207591CFE0072C1EF /* VTDesktopInspector.nib */; };
+		EAC2B613095E167600748870 /* imageWidgetAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = E958A9B4075F96E700773392 /* imageWidgetAdd.png */; };
+		EAC2B614095E167600748870 /* imageWidgetAddPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E958A9B5075F96E700773392 /* imageWidgetAddPressed.png */; };
+		EAC2B615095E167600748870 /* Notifications.strings in Resources */ = {isa = PBXBuildFile; fileRef = E959A03707663D3600543439 /* Notifications.strings */; };
+		EAC2B616095E167600748870 /* VTTriggerInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E917FCFA07677EE500F8A8FD /* VTTriggerInspector.nib */; };
+		EAC2B617095E167600748870 /* DefaultPrimitiveNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = E91223D707808DBC005A3C10 /* DefaultPrimitiveNames.strings */; };
+		EAC2B619095E167600748870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9124EAB073140CE00BD28CD /* main.m */; };
+		EAC2B61A095E167600748870 /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */; };
+		EAC2B61B095E167600748870 /* VTImageViewFileDropper.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F72E071DB45D00A00F30 /* VTImageViewFileDropper.m */; };
+		EAC2B61C095E167600748870 /* VTNotificationBezel.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F730071DB45D00A00F30 /* VTNotificationBezel.m */; };
+		EAC2B61D095E167600748870 /* VTNotificationBezelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F732071DB45D00A00F30 /* VTNotificationBezelView.m */; };
+		EAC2B61E095E167600748870 /* VTApplicationDelegateScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F743071DB4B300A00F30 /* VTApplicationDelegateScripting.m */; };
+		EAC2B621095E167600748870 /* VTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */; };
+		EAC2B622095E167600748870 /* VTPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F7DE071DB65F00A00F30 /* VTPreferencesViewController.m */; };
+		EAC2B623095E167600748870 /* VTOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E912721F072A6B00006DC207 /* VTOperationsViewController.m */; };
+		EAC2B624095E167600748870 /* VTPluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F78E071DB56900A00F30 /* VTPluginController.m */; };
+		EAC2B625095E167600748870 /* VTMatrixDesktopLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E9124D840730B92500BD28CD /* VTMatrixDesktopLayout.m */; };
+		EAC2B626095E167600748870 /* VTMatrixPager.m in Sources */ = {isa = PBXBuildFile; fileRef = E9124D860730B92500BD28CD /* VTMatrixPager.m */; };
+		EAC2B627095E167600748870 /* VTMatrixPagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9124D880730B92500BD28CD /* VTMatrixPagerCell.m */; };
+		EAC2B628095E167600748870 /* VTMatrixPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9124D8A0730B92500BD28CD /* VTMatrixPagerView.m */; };
+		EAC2B629095E167600748870 /* VTApplicationWatcherController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9124F9C073201D200BD28CD /* VTApplicationWatcherController.m */; };
+		EAC2B62A095E167600748870 /* VTDesktopScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B98EB073FFFD400231BC5 /* VTDesktopScripting.m */; };
+		EAC2B62B095E167600748870 /* VTDesktopDecorationScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B991E074006BF00231BC5 /* VTDesktopDecorationScripting.m */; };
+		EAC2B62C095E167600748870 /* VTDecorationPrimitiveScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B996F07401FE700231BC5 /* VTDecorationPrimitiveScripting.m */; };
+		EAC2B62D095E167600748870 /* PNApplicationScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E941CDD407466020007DF0D9 /* PNApplicationScripting.m */; };
+		EAC2B62E095E167600748870 /* PNWindowScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = E941CE24074661F4007DF0D9 /* PNWindowScripting.m */; };
+		EAC2B62F095E167600748870 /* VTDecorationPrimitivePositionMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = E98B866A074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.m */; };
+		EAC2B630095E167600748870 /* VTMatrixPagerAppletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E94338B7074FA1230075ADF3 /* VTMatrixPagerAppletCell.m */; };
+		EAC2B631095E167600748870 /* VTTriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9599FFC0765055B00543439 /* VTTriggerViewController.m */; };
+		EAC2B632095E167600748870 /* VTApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E959A09A07671BBD00543439 /* VTApplicationViewController.m */; };
+		EAC2B633095E167600748870 /* VTApplicationRunningTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E917FF14076B237700F8A8FD /* VTApplicationRunningTransformer.m */; };
+		EAC2B634095E167600748870 /* VTDesktopIdTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9557E92076B9DD800401479 /* VTDesktopIdTransformer.m */; };
+		EAC2B635095E167600748870 /* VTApplicationRunningColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9558183076CA62B00401479 /* VTApplicationRunningColorTransformer.m */; };
+		EAC2B636095E167600748870 /* VTWindowStickyStateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E95581C6076CC7C200401479 /* VTWindowStickyStateTransformer.m */; };
+		EAC2B637095E167600748870 /* VTApplicationRunningCountTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E913F34B076F733100072617 /* VTApplicationRunningCountTransformer.m */; };
+		EAC2B639095E167600748870 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
+		EAC2B63A095E167600748870 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A4816506FF5D6F00A8AE3C /* Carbon.framework */; };
+		EAC2B63B095E167600748870 /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
+		EAC2B63C095E167600748870 /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
+		EAC2B63D095E167600748870 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E958203B07198C88009583A0 /* PreferencePanes.framework */; };
+		EAC2B63E095E167600748870 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EAC2B63F095E167600748870 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
+		EAC2B640095E167600748870 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
+		EAC2B642095E167600748870 /* Peony.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
+		EAC2B643095E167600748870 /* Virtue.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
+		EAC2B644095E167600748870 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
+		EAC2B645095E167600748870 /* Zen.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
+		EAC2B647095E167600748870 /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9127206072A6211006DC207 /* VTPluginPreferences.prefPane */; };
+		EAC2B648095E167600748870 /* VTDesktopTemplatePreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F15D076E375500072617 /* VTDesktopTemplatePreferences.prefPane */; };
+		EAC2B649095E167600748870 /* VTLayoutPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E958A873075EEEC200773392 /* VTLayoutPreferences.prefPane */; };
+		EAC2B64A095E167600748870 /* VTHotkeyPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9C629FE075A49B20072C1EF /* VTHotkeyPreferences.prefPane */; };
+		EAC2B64B095E167600748870 /* VTAppearancePreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9C629BA075A35F00072C1EF /* VTAppearancePreferences.prefPane */; };
+		EAC2B64C095E167600748870 /* VTApplicationPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9C62992075A146C0072C1EF /* VTApplicationPreferences.prefPane */; };
+		EAC2B64D095E167600748870 /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */; };
+		EAC2B64E095E167600748870 /* VTDesktopNamePrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9560C3F071DA9AE00D497BE /* VTDesktopNamePrimitive.plugin */; };
+		EAC2B650095E167600748870 /* COPYING in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A6306FCDDCD00E354DB /* COPYING */; };
+		EAC2B651095E167600748870 /* GPL in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A6B06FCDDCD00E354DB /* GPL */; };
+		EAC2B652095E167600748870 /* Readme.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A7506FCDDCD00E354DB /* Readme.rtf */; };
+		EAC2B653095E167600748870 /* TODO.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9035C81077754EF00016B73 /* TODO.rtf */; };
+		EAC2B668095E173000748870 /* FocusApplication.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC2B666095E173000748870 /* FocusApplication.h */; };
+		EAC2B669095E173000748870 /* FocusApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC2B667095E173000748870 /* FocusApplication.m */; };
+		EAC2B680095E17A000748870 /* FocusApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC2B667095E173000748870 /* FocusApplication.m */; };
+		EAC2B681095E17B500748870 /* Focus.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B679095E178C00748870 /* Focus.nib */; };
+		EAC2B688095E17EC00748870 /* Focus.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B686095E17EC00748870 /* Focus.plist */; };
+		EAC2B689095E17EC00748870 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B687095E17EC00748870 /* Info.plist */; };
+		EAC2B68F095E185100748870 /* FocusDesktopsHelp in Resources */ = {isa = PBXBuildFile; fileRef = E913F451076F7A2000072617 /* FocusDesktopsHelp */; };
+		EAC2B6A3095E19B200748870 /* focus_Prefix.pch in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC2B6A2095E19B200748870 /* focus_Prefix.pch */; };
+		EAC2B6EA095E1A6500748870 /* FocusDesktopControllerScripting.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC2B6E8095E1A6500748870 /* FocusDesktopControllerScripting.m */; };
+		EAC2B6EB095E1A6500748870 /* FocusDesktopControllerScripting.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC2B6E9095E1A6500748870 /* FocusDesktopControllerScripting.h */; };
+		EAC2BF80095EA0E300748870 /* Virtue.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC2BF7A095EA0E300748870 /* Virtue.nib */; };
 		EAF8C93809076E9A003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
 		EAF8C93909076EA8003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
 		EAF8C93A09076EAF003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
@@ -577,6 +693,97 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = Peony;
 		};
+		EAC2B5C6095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9560C3E071DA9AE00D497BE;
+			remoteInfo = VTDesktopNamePrimitive;
+		};
+		EAC2B5C8095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9127205072A6211006DC207;
+			remoteInfo = VTPluginPreferences;
+		};
+		EAC2B5CA095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9D29BE8073E345700E0E6CE;
+			remoteInfo = VTDesktopColorLabelPrimitive;
+		};
+		EAC2B5CC095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9C62991075A146C0072C1EF;
+			remoteInfo = VTApplicationPreferences;
+		};
+		EAC2B5CE095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9C629B9075A35F00072C1EF;
+			remoteInfo = VTAppearancePreferences;
+		};
+		EAC2B5D0095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9C629FD075A49B20072C1EF;
+			remoteInfo = VTHotkeyPreferences;
+		};
+		EAC2B5D2095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E958A872075EEEC200773392;
+			remoteInfo = VTLayoutPreferences;
+		};
+		EAC2B5D4095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E913F15C076E375500072617;
+			remoteInfo = VTDesktopTemplatePreferences;
+		};
+		EAC2B5D6095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E913F26C076E411B00072617;
+			remoteInfo = VTInterface;
+		};
+		EAC2B5D8095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Virtue;
+		};
+		EAC2B5DA095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Peony;
+		};
+		EAC2B5DC095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7;
+			remoteInfo = DockExtension;
+		};
+		EAC2B5DE095E167600748870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Zen;
+		};
 		EAF8C93609076E8C003D54B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */;
@@ -604,6 +811,7 @@
 				EAF8C93C09076ED5003D54B1 /* Virtue.framework in CopyFiles */,
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
+				EAC2B668095E173000748870 /* FocusApplication.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,13 +845,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAC2B641095E167600748870 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAC2B642095E167600748870 /* Peony.framework in CopyFiles */,
+				EAC2B643095E167600748870 /* Virtue.framework in CopyFiles */,
+				EAC2B644095E167600748870 /* VTInterface.framework in CopyFiles */,
+				EAC2B645095E167600748870 /* Zen.framework in CopyFiles */,
+				EAC2B6A3095E19B200748870 /* focus_Prefix.pch in CopyFiles */,
+				EAC2B6EB095E1A6500748870 /* FocusDesktopControllerScripting.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC2B646095E167600748870 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EAC2B647095E167600748870 /* VTPluginPreferences.prefPane in CopyFiles */,
+				EAC2B648095E167600748870 /* VTDesktopTemplatePreferences.prefPane in CopyFiles */,
+				EAC2B649095E167600748870 /* VTLayoutPreferences.prefPane in CopyFiles */,
+				EAC2B64A095E167600748870 /* VTHotkeyPreferences.prefPane in CopyFiles */,
+				EAC2B64B095E167600748870 /* VTAppearancePreferences.prefPane in CopyFiles */,
+				EAC2B64C095E167600748870 /* VTApplicationPreferences.prefPane in CopyFiles */,
+				EAC2B64D095E167600748870 /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */,
+				EAC2B64E095E167600748870 /* VTDesktopNamePrimitive.plugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC2B64F095E167600748870 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				EAC2B650095E167600748870 /* COPYING in CopyFiles */,
+				EAC2B651095E167600748870 /* GPL in CopyFiles */,
+				EAC2B652095E167600748870 /* Readme.rtf in CopyFiles */,
+				EAC2B653095E167600748870 /* TODO.rtf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtue_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9035C81077754EF00016B73 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		E903F72B071DB45D00A00F30 /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopViewController.h; path = Source/Interface/VTDesktopViewController.h; sourceTree = "<group>"; };
@@ -743,7 +995,7 @@
 		E913F33A076F715E00072617 /* VTHotkeyTextView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTHotkeyTextView.m; path = Source/Interface/VTHotkeyTextView.m; sourceTree = "<group>"; };
 		E913F34A076F733100072617 /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTApplicationRunningCountTransformer.h; path = Source/Interface/Transformers/VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
 		E913F34B076F733100072617 /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTApplicationRunningCountTransformer.m; path = Source/Interface/Transformers/VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
-		E913F452076F7A2000072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = English.lproj/virtueHelp; sourceTree = "<group>"; };
+		E913F452076F7A2000072617 /* FocusDesktopsHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FocusDesktopsHelp; sourceTree = "<group>"; };
 		E91493C8073991F100668ACC /* VTPagerPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTPagerPreferences-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E91493C90739926E00668ACC /* VTPagerPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPagerPreferencesController.h; path = Source/Interface/Preferences/Pagers/VTPagerPreferencesController.h; sourceTree = "<group>"; };
 		E91493CA0739926E00668ACC /* VTPagerPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPagerPreferencesController.m; path = Source/Interface/Preferences/Pagers/VTPagerPreferencesController.m; sourceTree = "<group>"; };
@@ -775,7 +1027,6 @@
 		E9363A6E06FCDDCD00E354DB /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9363A7206FCDDCD00E354DB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Operations.nib; sourceTree = "<group>"; };
 		E9363A7606FCDDCD00E354DB /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Readme.rtf; sourceTree = "<group>"; };
-		E9363A7806FCDDCD00E354DB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Virtue.nib; sourceTree = "<group>"; };
 		E9363A8406FCDDF800E354DB /* German */ = {isa = PBXFileReference; lastKnownFileType = text; name = German; path = German.lproj/COPYING; sourceTree = "<group>"; };
 		E9363A8706FCDDF800E354DB /* German */ = {isa = PBXFileReference; lastKnownFileType = text; name = German; path = German.lproj/GPL; sourceTree = "<group>"; };
 		E9363A8E06FCDDF800E354DB /* German */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = German; path = German.lproj/Readme.rtf; sourceTree = "<group>"; };
@@ -821,7 +1072,6 @@
 		E956B773078CAD10008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
 		E956B774078CAD1B008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
 		E956B775078CAD27008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		E956B776078CAD33008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/Virtue.nib; sourceTree = "<group>"; };
 		E956B778078CADD4008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E956B779078CADDE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E956B77B078CADF5008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/Operations.nib; sourceTree = "<group>"; };
@@ -884,7 +1134,6 @@
 		E96B2BC8077B3D7900EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
 		E96B2BC9077B3D8600EFF051 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E96B2BCA077B3D9300EFF051 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Notifications.strings; sourceTree = "<group>"; };
-		E96B2BCB077B3DA000EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/Virtue.nib; sourceTree = "<group>"; };
 		E96B2BCC077B3DAE00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E96B2BCD077B3DB800EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E96B2BCF077B3DCF00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
@@ -954,6 +1203,16 @@
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAC2B658095E167600748870 /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC2B666095E173000748870 /* FocusApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusApplication.h; sourceTree = "<group>"; };
+		EAC2B667095E173000748870 /* FocusApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusApplication.m; sourceTree = "<group>"; };
+		EAC2B67A095E178C00748870 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Focus.nib; sourceTree = "<group>"; };
+		EAC2B686095E17EC00748870 /* Focus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Focus.plist; sourceTree = "<group>"; };
+		EAC2B687095E17EC00748870 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC2B6A2095E19B200748870 /* focus_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = focus_Prefix.pch; sourceTree = "<group>"; };
+		EAC2B6E8095E1A6500748870 /* FocusDesktopControllerScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FocusDesktopControllerScripting.m; path = Source/Scripting/FocusDesktopControllerScripting.m; sourceTree = "<group>"; };
+		EAC2B6E9095E1A6500748870 /* FocusDesktopControllerScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FocusDesktopControllerScripting.h; path = Source/Scripting/FocusDesktopControllerScripting.h; sourceTree = "<group>"; };
+		EAC2BF7B095EA0E300748870 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Virtue.nib; sourceTree = "<group>"; };
 		EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Virtue.xcodeproj; path = ../../frameworks/Virtue/Virtue.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../../frameworks/Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -1081,6 +1340,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAC2B638095E167600748870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC2B639095E167600748870 /* Zen.framework in Frameworks */,
+				EAC2B63A095E167600748870 /* Carbon.framework in Frameworks */,
+				EAC2B63B095E167600748870 /* Peony.framework in Frameworks */,
+				EAC2B63C095E167600748870 /* VTInterface.framework in Frameworks */,
+				EAC2B63D095E167600748870 /* PreferencePanes.framework in Frameworks */,
+				EAC2B63E095E167600748870 /* Cocoa.framework in Frameworks */,
+				EAC2B63F095E167600748870 /* Virtue.framework in Frameworks */,
+				EAC2B640095E167600748870 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1131,6 +1405,7 @@
 				E958A873075EEEC200773392 /* VTLayoutPreferences.prefPane */,
 				E913F15D076E375500072617 /* VTDesktopTemplatePreferences.prefPane */,
 				E913F26D076E411B00072617 /* VTInterface.framework */,
+				EAC2B658095E167600748870 /* Focus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1157,6 +1432,7 @@
 				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
 				E9127278072AAA22006DC207 /* Property Lists */,
 				E91ADC3307057EFF00F69228 /* Scripting */,
+				EAC2B6A2095E19B200748870 /* focus_Prefix.pch */,
 				32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -1165,16 +1441,18 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAC2B686095E17EC00748870 /* Focus.plist */,
+				EAC2B687095E17EC00748870 /* Info.plist */,
 				E9363A9206FCDE8300E354DB /* Informational */,
 				E9123F5107883A4E005A3C10 /* Localization Strings */,
 				E9363ADB06FCE64300E354DB /* Data */,
+				EAC2BF7A095EA0E300748870 /* Virtue.nib */,
 				E913F21A076E3FF400072617 /* PrimitiveTextInspector.nib */,
 				E913F21C076E3FF400072617 /* PrimitiveTintInspector.nib */,
 				E913F21E076E3FF400072617 /* PrimitiveWatermarkInspector.nib */,
 				E913F17A076E3C1200072617 /* VTDecorationPrimitiveInspector.nib */,
 				E913F15F076E37B300072617 /* VTDesktopTemplatePreferences.nib */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				E9363A7706FCDDCD00E354DB /* Virtue.nib */,
+				EAC2B679095E178C00748870 /* Focus.nib */,
 				E940C7360735139B00C1642C /* PrimitiveDesktopNameInspector.nib */,
 				E9D29C06073E3AC400E0E6CE /* PrimitiveDesktopColorLabelInspector.nib */,
 				E9363A7106FCDDCD00E354DB /* Operations.nib */,
@@ -1334,6 +1612,8 @@
 		E91ADE0A070595A700F69228 /* Scripting */ = {
 			isa = PBXGroup;
 			children = (
+				EAC2B6E8095E1A6500748870 /* FocusDesktopControllerScripting.m */,
+				EAC2B6E9095E1A6500748870 /* FocusDesktopControllerScripting.h */,
 				E941CE23074661F4007DF0D9 /* PNWindowScripting.h */,
 				E941CE24074661F4007DF0D9 /* PNWindowScripting.m */,
 				E941CDD307466020007DF0D9 /* PNApplicationScripting.h */,
@@ -1364,6 +1644,8 @@
 				E903F75D071DB4EF00A00F30 /* VTApplication.m */,
 				E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */,
 				E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */,
+				EAC2B666095E173000748870 /* FocusApplication.h */,
+				EAC2B667095E173000748870 /* FocusApplication.m */,
 			);
 			name = Controllers;
 			path = Source/Controllers;
@@ -1392,7 +1674,7 @@
 		E9363ADB06FCE64300E354DB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				E913F451076F7A2000072617 /* virtueHelp */,
+				E913F451076F7A2000072617 /* FocusDesktopsHelp */,
 				E9363ADC06FCE64300E354DB /* icons */,
 				E9363ADE06FCE64300E354DB /* images */,
 			);
@@ -2375,6 +2657,63 @@
 ";
 			productType = "com.apple.product-type.bundle";
 		};
+		EAC2B5C4095E167600748870 /* Focus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC2B655095E167600748870 /* Build configuration list for PBXNativeTarget "Focus" */;
+			buildPhases = (
+				EAC2B5DF095E167600748870 /* Resources */,
+				EAC2B618095E167600748870 /* Sources */,
+				EAC2B638095E167600748870 /* Frameworks */,
+				EAC2B641095E167600748870 /* CopyFiles */,
+				EAC2B646095E167600748870 /* CopyFiles */,
+				EAC2B64F095E167600748870 /* CopyFiles */,
+				EAC2B654095E167600748870 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					../../frameworks/decomm/build/,
+					../../frameworks/Peony/build/,
+					../../frameworks/dockExtension/build/,
+					../../frameworks/Zen/build,
+					../../frameworks/Virtue/build,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = virtue_Prefix.pch;
+				HEADER_SEARCH_PATHS = ../../frameworks/decomm/includes/;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = ../../frameworks/decomm/build/;
+				PREBINDING = YES;
+				PRODUCT_NAME = Virtue;
+				VERSIONING_SYSTEM = "";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			dependencies = (
+				EAC2B5C5095E167600748870 /* PBXTargetDependency */,
+				EAC2B5C7095E167600748870 /* PBXTargetDependency */,
+				EAC2B5C9095E167600748870 /* PBXTargetDependency */,
+				EAC2B5CB095E167600748870 /* PBXTargetDependency */,
+				EAC2B5CD095E167600748870 /* PBXTargetDependency */,
+				EAC2B5CF095E167600748870 /* PBXTargetDependency */,
+				EAC2B5D1095E167600748870 /* PBXTargetDependency */,
+				EAC2B5D3095E167600748870 /* PBXTargetDependency */,
+				EAC2B5D5095E167600748870 /* PBXTargetDependency */,
+				EAC2B5D7095E167600748870 /* PBXTargetDependency */,
+				EAC2B5D9095E167600748870 /* PBXTargetDependency */,
+				EAC2B5DB095E167600748870 /* PBXTargetDependency */,
+				EAC2B5DD095E167600748870 /* PBXTargetDependency */,
+			);
+			name = Focus;
+			productInstallPath = "$(HOME)/Applications";
+			productName = virtue;
+			productReference = EAC2B658095E167600748870 /* Focus.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2429,6 +2768,7 @@
 				E958A872075EEEC200773392 /* VTLayoutPreferences */,
 				E913F15C076E375500072617 /* VTDesktopTemplatePreferences */,
 				E913F26C076E411B00072617 /* VTInterface */,
+				EAC2B5C4095E167600748870 /* Focus */,
 			);
 		};
 /* End PBXProject section */
@@ -2474,10 +2814,8 @@
 				E959A0890767140A00543439 /* imageMouseTrigger.png in Resources */,
 				E940C5E70733F03400C1642C /* DefaultHotkeys.plist in Resources */,
 				E95C9F3E0732E74600148FA8 /* DefaultDesktops.plist in Resources */,
-				E9A4804C06FF3D3200A8AE3C /* Info.plist in Resources */,
 				E9363A7E06FCDDCD00E354DB /* Localizable.strings in Resources */,
 				E9363A8006FCDDCD00E354DB /* Operations.nib in Resources */,
-				E9363A8306FCDDCD00E354DB /* Virtue.nib in Resources */,
 				E9363AEF06FCE64300E354DB /* iconVirtue.icns in Resources */,
 				E9363AF006FCE64300E354DB /* imageCrossSmall.tif in Resources */,
 				E9363AF106FCE64300E354DB /* imageCrossSmallHover.tif in Resources */,
@@ -2525,6 +2863,9 @@
 				E959A03907663D3600543439 /* Notifications.strings in Resources */,
 				E917FCFC07677EE500F8A8FD /* VTTriggerInspector.nib in Resources */,
 				E91223D907808DBC005A3C10 /* DefaultPrimitiveNames.strings in Resources */,
+				EAC2B688095E17EC00748870 /* Focus.plist in Resources */,
+				EAC2B689095E17EC00748870 /* Info.plist in Resources */,
+				EAC2BF80095EA0E300748870 /* Virtue.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2640,10 +2981,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAC2B5DF095E167600748870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC2B68F095E185100748870 /* FocusDesktopsHelp in Resources */,
+				EAC2B681095E17B500748870 /* Focus.nib in Resources */,
+				EAC2B5E0095E167600748870 /* DockExtension.bundle in Resources */,
+				EAC2B5E1095E167600748870 /* imageKeyboardTrigger.png in Resources */,
+				EAC2B5E2095E167600748870 /* imageMouseTrigger.png in Resources */,
+				EAC2B5E3095E167600748870 /* DefaultHotkeys.plist in Resources */,
+				EAC2B5E4095E167600748870 /* DefaultDesktops.plist in Resources */,
+				EAC2B5E6095E167600748870 /* Localizable.strings in Resources */,
+				EAC2B5E7095E167600748870 /* Operations.nib in Resources */,
+				EAC2B5E9095E167600748870 /* iconVirtue.icns in Resources */,
+				EAC2B5EA095E167600748870 /* imageCrossSmall.tif in Resources */,
+				EAC2B5EB095E167600748870 /* imageCrossSmallHover.tif in Resources */,
+				EAC2B5EC095E167600748870 /* imageCrossSmallPressed.tif in Resources */,
+				EAC2B5ED095E167600748870 /* imageDesktopActive.png in Resources */,
+				EAC2B5EE095E167600748870 /* imageDesktopEmpty.png in Resources */,
+				EAC2B5EF095E167600748870 /* imageDesktopPopulated.png in Resources */,
+				EAC2B5F0095E167600748870 /* imageMinus.png in Resources */,
+				EAC2B5F1095E167600748870 /* imageNotification.png in Resources */,
+				EAC2B5F2095E167600748870 /* imageSnapback.png in Resources */,
+				EAC2B5F3095E167600748870 /* imageVirtue.png in Resources */,
+				EAC2B5F4095E167600748870 /* imageVirtueHighlighted.png in Resources */,
+				EAC2B5F5095E167600748870 /* imageWindow.png in Resources */,
+				EAC2B5F6095E167600748870 /* Virtue.scriptSuite in Resources */,
+				EAC2B5F7095E167600748870 /* Virtue.scriptTerminology in Resources */,
+				EAC2B5F8095E167600748870 /* iconDesktopFolder.icns in Resources */,
+				EAC2B5F9095E167600748870 /* imageAction.png in Resources */,
+				EAC2B5FA095E167600748870 /* iconVirtualDesktopsFolder.icns in Resources */,
+				EAC2B5FB095E167600748870 /* imageActionNormal.png in Resources */,
+				EAC2B5FC095E167600748870 /* imageActionPressed.png in Resources */,
+				EAC2B5FD095E167600748870 /* imageAction.tiff in Resources */,
+				EAC2B5FE095E167600748870 /* imageActionPressed.tiff in Resources */,
+				EAC2B5FF095E167600748870 /* imageIsSticky.png in Resources */,
+				EAC2B600095E167600748870 /* imageIsUnsticky.png in Resources */,
+				EAC2B601095E167600748870 /* imageWidgetAddPopup.png in Resources */,
+				EAC2B602095E167600748870 /* imageWidgetAddPopupPressed.png in Resources */,
+				EAC2B603095E167600748870 /* imageWidgetDelete.png in Resources */,
+				EAC2B604095E167600748870 /* imageWidgetDeletePressed.png in Resources */,
+				EAC2B605095E167600748870 /* imageWidgetInfo.png in Resources */,
+				EAC2B606095E167600748870 /* imageWidgetInfoPressed.png in Resources */,
+				EAC2B607095E167600748870 /* imagePosition.png in Resources */,
+				EAC2B608095E167600748870 /* imageColorLabelMask.png in Resources */,
+				EAC2B609095E167600748870 /* imageColorLabelMaskComposite.png in Resources */,
+				EAC2B60A095E167600748870 /* imageColorLabelMaskBar.png in Resources */,
+				EAC2B60B095E167600748870 /* imageColorLabelClear.png in Resources */,
+				EAC2B60C095E167600748870 /* imageWidgetSticky.png in Resources */,
+				EAC2B60D095E167600748870 /* imageWidgetStickyPressed.png in Resources */,
+				EAC2B60E095E167600748870 /* imageWidgetUnsticky.png in Resources */,
+				EAC2B60F095E167600748870 /* imageWidgetUnstickyPressed.png in Resources */,
+				EAC2B610095E167600748870 /* VTPreferences.nib in Resources */,
+				EAC2B611095E167600748870 /* VTApplicationInspector.nib in Resources */,
+				EAC2B612095E167600748870 /* VTDesktopInspector.nib in Resources */,
+				EAC2B613095E167600748870 /* imageWidgetAdd.png in Resources */,
+				EAC2B614095E167600748870 /* imageWidgetAddPressed.png in Resources */,
+				EAC2B615095E167600748870 /* Notifications.strings in Resources */,
+				EAC2B616095E167600748870 /* VTTriggerInspector.nib in Resources */,
+				EAC2B617095E167600748870 /* DefaultPrimitiveNames.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		EA66DABA095043B4003E0238 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env perl";
+			shellScript = "use strict;\n\t\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\t\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $REV = `/opt/darwinports/bin/svnversion -n ./`;\nmy $INFO = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy $version = $REV;\n$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\t\n#$info =~ s/([\\t ]+<key>CFBundleVersion<\\/key>\\n[\\t ]+<string>).*?(<\\/string>)/$1$version$2/;\n$info =~ s/r0000/r$version/;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+		};
+		EAC2B654095E167600748870 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2694,6 +3111,7 @@
 				E9558185076CA62B00401479 /* VTApplicationRunningColorTransformer.m in Sources */,
 				E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */,
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
+				EAC2B669095E173000748870 /* FocusApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2782,6 +3200,44 @@
 				E9D29BF4073E362300E0E6CE /* VTDesktopColorLabelPrimitive.m in Sources */,
 				E9D29BFA073E370000E0E6CE /* VTPrimitiveDesktopColorLabelInspector.m in Sources */,
 				E9D29BFF073E37EE00E0E6CE /* VTPluginDesktopColorLabelPrimitive.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC2B618095E167600748870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC2B619095E167600748870 /* main.m in Sources */,
+				EAC2B680095E17A000748870 /* FocusApplication.m in Sources */,
+				EAC2B61A095E167600748870 /* VTDesktopViewController.m in Sources */,
+				EAC2B61B095E167600748870 /* VTImageViewFileDropper.m in Sources */,
+				EAC2B61C095E167600748870 /* VTNotificationBezel.m in Sources */,
+				EAC2B61D095E167600748870 /* VTNotificationBezelView.m in Sources */,
+				EAC2B61E095E167600748870 /* VTApplicationDelegateScripting.m in Sources */,
+				EAC2B621095E167600748870 /* VTApplicationDelegate.m in Sources */,
+				EAC2B622095E167600748870 /* VTPreferencesViewController.m in Sources */,
+				EAC2B623095E167600748870 /* VTOperationsViewController.m in Sources */,
+				EAC2B624095E167600748870 /* VTPluginController.m in Sources */,
+				EAC2B625095E167600748870 /* VTMatrixDesktopLayout.m in Sources */,
+				EAC2B626095E167600748870 /* VTMatrixPager.m in Sources */,
+				EAC2B627095E167600748870 /* VTMatrixPagerCell.m in Sources */,
+				EAC2B628095E167600748870 /* VTMatrixPagerView.m in Sources */,
+				EAC2B6EA095E1A6500748870 /* FocusDesktopControllerScripting.m in Sources */,
+				EAC2B629095E167600748870 /* VTApplicationWatcherController.m in Sources */,
+				EAC2B62A095E167600748870 /* VTDesktopScripting.m in Sources */,
+				EAC2B62B095E167600748870 /* VTDesktopDecorationScripting.m in Sources */,
+				EAC2B62C095E167600748870 /* VTDecorationPrimitiveScripting.m in Sources */,
+				EAC2B62D095E167600748870 /* PNApplicationScripting.m in Sources */,
+				EAC2B62E095E167600748870 /* PNWindowScripting.m in Sources */,
+				EAC2B62F095E167600748870 /* VTDecorationPrimitivePositionMarkers.m in Sources */,
+				EAC2B630095E167600748870 /* VTMatrixPagerAppletCell.m in Sources */,
+				EAC2B631095E167600748870 /* VTTriggerViewController.m in Sources */,
+				EAC2B632095E167600748870 /* VTApplicationViewController.m in Sources */,
+				EAC2B633095E167600748870 /* VTApplicationRunningTransformer.m in Sources */,
+				EAC2B634095E167600748870 /* VTDesktopIdTransformer.m in Sources */,
+				EAC2B635095E167600748870 /* VTApplicationRunningColorTransformer.m in Sources */,
+				EAC2B636095E167600748870 /* VTWindowStickyStateTransformer.m in Sources */,
+				EAC2B637095E167600748870 /* VTApplicationRunningCountTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2978,6 +3434,71 @@
 			name = DockExtension;
 			targetProxy = EA9AF735094444FA005D60CB /* PBXContainerItemProxy */;
 		};
+		EAC2B5C5095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9560C3E071DA9AE00D497BE /* VTDesktopNamePrimitive */;
+			targetProxy = EAC2B5C6095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5C7095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9127205072A6211006DC207 /* VTPluginPreferences */;
+			targetProxy = EAC2B5C8095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5C9095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */;
+			targetProxy = EAC2B5CA095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5CB095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9C62991075A146C0072C1EF /* VTApplicationPreferences */;
+			targetProxy = EAC2B5CC095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5CD095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9C629B9075A35F00072C1EF /* VTAppearancePreferences */;
+			targetProxy = EAC2B5CE095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5CF095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9C629FD075A49B20072C1EF /* VTHotkeyPreferences */;
+			targetProxy = EAC2B5D0095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5D1095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E958A872075EEEC200773392 /* VTLayoutPreferences */;
+			targetProxy = EAC2B5D2095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5D3095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E913F15C076E375500072617 /* VTDesktopTemplatePreferences */;
+			targetProxy = EAC2B5D4095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5D5095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E913F26C076E411B00072617 /* VTInterface */;
+			targetProxy = EAC2B5D6095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5D7095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Virtue;
+			targetProxy = EAC2B5D8095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5D9095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Peony;
+			targetProxy = EAC2B5DA095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5DB095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DockExtension;
+			targetProxy = EAC2B5DC095E167600748870 /* PBXContainerItemProxy */;
+		};
+		EAC2B5DD095E167600748870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zen;
+			targetProxy = EAC2B5DE095E167600748870 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -3075,13 +3596,13 @@
 			name = PrimitiveWatermarkInspector.nib;
 			sourceTree = "<group>";
 		};
-		E913F451076F7A2000072617 /* virtueHelp */ = {
+		E913F451076F7A2000072617 /* FocusDesktopsHelp */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E913F452076F7A2000072617 /* English */,
+				E913F452076F7A2000072617 /* FocusDesktopsHelp */,
 			);
-			name = virtueHelp;
-			path = ..;
+			name = FocusDesktopsHelp;
+			path = ../English.lproj/FocusDesktopsHelp;
 			sourceTree = "<group>";
 		};
 		E9175204078065EF004F5633 /* InfoPlist.strings */ = {
@@ -3208,16 +3729,6 @@
 			name = Readme.rtf;
 			sourceTree = "<group>";
 		};
-		E9363A7706FCDDCD00E354DB /* Virtue.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9363A7806FCDDCD00E354DB /* English */,
-				E96B2BCB077B3DA000EFF051 /* it */,
-				E956B776078CAD33008B2571 /* fr */,
-			);
-			name = Virtue.nib;
-			sourceTree = "<group>";
-		};
 		E940C7360735139B00C1642C /* PrimitiveDesktopNameInspector.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3327,6 +3838,22 @@
 				E956B779078CADDE008B2571 /* fr */,
 			);
 			name = PrimitiveDesktopColorLabelInspector.nib;
+			sourceTree = "<group>";
+		};
+		EAC2B679095E178C00748870 /* Focus.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC2B67A095E178C00748870 /* English */,
+			);
+			name = Focus.nib;
+			sourceTree = "<group>";
+		};
+		EAC2BF7A095EA0E300748870 /* Virtue.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC2BF7B095EA0E300748870 /* English */,
+			);
+			name = Virtue.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3938,6 +4465,49 @@
 			};
 			name = Release;
 		};
+		EAC2B656095E167600748870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = virtue_Prefix.pch;
+				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/Includes;
+				INFOPLIST_FILE = "/Users/tony/Documents/Development/Source/Virtue/Applications/Virtue/Info copy.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "-fprofile-arcs";
+				PRODUCT_NAME = Virtue;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EAC2B657095E167600748870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = focus_Prefix.pch;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
+				INFOPLIST_FILE = Focus.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = Focus;
+				SEPARATE_STRIP = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = all;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4036,6 +4606,15 @@
 			buildConfigurations = (
 				EA609C25090666C8003BD20D /* Debug */,
 				EA609C27090666C8003BD20D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC2B655095E167600748870 /* Build configuration list for PBXNativeTarget "Focus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC2B656095E167600748870 /* Debug */,
+				EAC2B657095E167600748870 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

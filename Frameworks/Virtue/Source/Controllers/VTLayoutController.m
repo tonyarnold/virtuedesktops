@@ -15,8 +15,8 @@
 #import "VTPreferences.h" 
 #import <Zen/Zen.h> 
 
-#define	kVtCodingLayouts		@"layouts"
-#define kVtCodingLayout			@"layout"
+#define	kVtCodingLayouts			@"layouts"
+#define kVtCodingLayout				@"layout"
 #define kVtCodingLayoutType		@"type"
 #define kVtCodingLayoutName		@"name"
 #define kVtCodingActiveLayout	@"activeLayout"
@@ -36,8 +36,8 @@
 - (id) init {
 	if (self = [super init]) {
 		// attributes 
-		mActiveLayout = nil; 
-		mLayouts = [[NSMutableArray alloc] init]; 
+		mActiveLayout	= nil; 
+		mLayouts 			= [[NSMutableArray alloc] init]; 
 		
 		[self readPreferences]; 
 		

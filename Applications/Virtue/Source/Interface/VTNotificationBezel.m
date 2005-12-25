@@ -17,7 +17,7 @@
 #import <Zen/ZNMemoryManagementMacros.h> 
 
 #define kVtFadingIncrement	0.05
-#define kVtFadingDelay		0.5 / (1.0 / kVtFadingIncrement)
+#define kVtFadingDelay			0.5 / (1.0 / kVtFadingIncrement)
 
 @interface VTNotificationBezel(Private) 
 - (void) show: (PNDesktop*) desktop withText: (NSString*) text; 

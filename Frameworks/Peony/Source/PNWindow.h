@@ -45,11 +45,11 @@ enum
 @interface PNWindow : NSObject<PNDesktopItem>
 {
 	CGSWindow   mNativeWindow;		//!< The native window that is wrapped 
-	pid_t		mOwnerPid;			//!< The pid of the window owner 
-	NSImage*	mIcon;				//!< Window icon 
+	pid_t		mOwnerPid;						//!< The pid of the window owner 
+	NSImage*	mIcon;							//!< Window icon 
 	
-	BOOL		mIsSticky;			//!< YES if the window is stickied 
-	BOOL		mIsSpecial;			//!< If YES, Virtue will not display this window 
+	BOOL		mIsSticky;						//!< YES if the window is stickied 
+	BOOL		mIsSpecial;						//!< If YES, Virtue will not display this window 
 	BOOL		mIsIgnoredByExpose; 
 }
 

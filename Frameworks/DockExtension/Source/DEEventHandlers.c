@@ -145,12 +145,12 @@ void DEHandleTagsEvent(DecEvent* event) {
 		return; 
 	}
 	
-	int		i; 
+	int i; 
 	
-	CGSConnection oConnection = _CGSDefaultConnection(); 
-	CGSWindowTag  oWindowTags[2];
+	CGSConnection	oConnection = _CGSDefaultConnection(); 
+	CGSWindowTag	oWindowTags[2];
 	
-	int			tags = dec_event_tags_value_get(eventTags); 
+	int					tags = dec_event_tags_value_get(eventTags); 
 	DecTagsType	type = dec_event_tags_type_get(eventTags); 
 	
 	/* I would not feel good about setting the tags for all windows at 

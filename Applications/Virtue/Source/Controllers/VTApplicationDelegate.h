@@ -20,7 +20,6 @@
 #import "VTPluginController.h"
 #import "VTDesktopViewController.h"
 #import "VTApplicationViewController.h" 
-#import <Virtue/VTDesktopProtector.h>
 
 @interface VTApplicationDelegate : NSObject {
 	// Outlets 
@@ -40,7 +39,6 @@
 	VTOperationsViewController*			mOperationsController; 
 	VTApplicationWatcherController*	mApplicationWatcher; 
 	VTPluginController*							mPluginController; 
-	VTDesktopProtector*							mDesktopProtector; 
 	
 	// Interface
 	VTNotificationBezel*					mNotificationBezel; 

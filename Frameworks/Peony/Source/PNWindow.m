@@ -1,102 +1,102 @@
 /******************************************************************************
-* 
-* Peony.Virtue 
+*
+* Peony.Virtue
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
+* Copyright 2004, Thomas Staller
 * playback@users.sourceforge.net
 *
 * See COPYING for licensing details
-* 
-*****************************************************************************/ 
+*
+*****************************************************************************/
 #import <syslog.h>
-#import "PNWindow.h" 
-#import "PNStickyWindowCollection.h" 
+#import "PNWindow.h"
+#import "PNStickyWindowCollection.h"
 #import "PNNotifications.h"
-#import "PNDesktop.h" 
-#import "PNWindowPool.h" 
+#import "PNDesktop.h"
+#import "PNWindowPool.h"
 #import "DECEvent.h"
-#import <Zen/Zen.h> 
+#import <Zen/Zen.h>
 
 @implementation PNWindow
 
 #pragma mark -
-#pragma mark Lifetime 
+#pragma mark Lifetime
 
 + (PNWindow*) windowWithNSWindow: (NSWindow*) window {
-	return [PNWindow windowWithWindowId: [window windowNumber]]; 
+	return [PNWindow windowWithWindowId: [window windowNumber]];
 }
 
 + (PNWindow*) windowWithWindowId: (CGSWindow) window {
-	return [[PNWindowPool sharedWindowPool] windowWithId: window]; 
+	return [[PNWindowPool sharedWindowPool] windowWithId: window];
 }
 
 #pragma mark -
 /**
- * @brief	Designated initializer for PNWindow instances 
+ * @brief Designated initializer for PNWindow instances
  *
- * @param	windowId	The native CGSWindow id that is wrapped by the initialized instance
+ * @param windowId	The native CGSWindow id that is wrapped by the initialized instance
  *
- */ 
+ */
 - (id) initWithWindowId: (CGSWindow) windowId {
 	if (self = [super init]) {
-		mNativeWindow				= windowId; 
-		mOwnerPid						= kPnWindowInvalidPid; 
-		mIsSticky						= NO; 
-		mIsSpecial					= NO; 
-		mIsIgnoredByExpose	= NO; 
+		mNativeWindow				= windowId;
+		mOwnerPid						= kPnWindowInvalidPid;
+		mIsSticky						= NO;
+		mIsSpecial					= NO;
+		mIsIgnoredByExpose	= NO;
 		mIcon								= nil;
-		return self; 
+		return self;
 	}
-	return nil; 
+	return nil;
 }
 
 /**
- * @brief	Initializer for PNWindow instances 
+ * @brief Initializer for PNWindow instances
  *
- * @param	window	The native NSWindow instance that should be wrapped by the initialized instance
+ * @param window	The native NSWindow instance that should be wrapped by the initialized instance
  *
- */ 
+ */
 - (id) initWithNSWindow: (NSWindow*) window {
-	// ask the passed window for its CGSWindow 
-	CGSWindow nativeWindow = [window windowNumber]; 
-	
-	// pass on initialization using the CGSWindow id 
+	// ask the passed window for its CGSWindow
+	CGSWindow nativeWindow = [window windowNumber];
+
+	// pass on initialization using the CGSWindow id
 	return [self initWithWindowId: nativeWindow];
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mIcon); 
-	
-	[super dealloc]; 
+	ZEN_RELEASE(mIcon);
+
+	[super dealloc];
 }
 
 #pragma mark -
-#pragma mark Operations 
+#pragma mark Operations
 
 - (BOOL) isEqual: (id) toObject {
 	if ([toObject isKindOfClass: [PNWindow class]] == NO)
-		return NO; 
-		
-	return (((PNWindow*)toObject)->mNativeWindow == mNativeWindow); 
+		return NO;
+
+	return (((PNWindow*)toObject)->mNativeWindow == mNativeWindow);
 }
 
 #pragma mark -
 - (void) orderAbove: (NSObject<PNDesktopItem>*) item {
-	// if we are ordering relative to a window, we just take that window and pass it 
-	// on. in case of something else... i do not know yet ;) 
+	// if we are ordering relative to a window, we just take that window and pass it
+	// on. in case of something else... i do not know yet ;)
 	if (item == nil)
-		CGSExtOrderWindow(mNativeWindow, kCGSOrderAbove, 0); 
+		CGSExtOrderWindow(mNativeWindow, kCGSOrderAbove, 0);
 	else if ([item isKindOfClass: [PNWindow class]])
-		CGSExtOrderWindow(mNativeWindow, kCGSOrderAbove, [(PNWindow*)item nativeWindow]); 
+		CGSExtOrderWindow(mNativeWindow, kCGSOrderAbove, [(PNWindow*)item nativeWindow]);
 }
 
 - (void) orderBelow: (NSObject<PNDesktopItem>*) item {
-	// if we are ordering relative to a window, we just take that window and pass it 
+	// if we are ordering relative to a window, we just take that window and pass it
 	// on. in case of something else... i do not know yet ;)
 	if ([item isKindOfClass: [PNWindow class]])
-		CGSExtOrderWindow(mNativeWindow, kCGSOrderBelow, [(PNWindow*)item nativeWindow]); 
+		CGSExtOrderWindow(mNativeWindow, kCGSOrderBelow, [(PNWindow*)item nativeWindow]);
 }
 
 - (void) orderOut {
@@ -107,236 +107,236 @@
 
 #pragma mark -
 - (BOOL) isValid {
-    CGSConnection   oConnection = _CGSDefaultConnection();
-	OSStatus		oResult; 
-	int				iLevel;
- 
-	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel); 	
+	CGSConnection	oConnection = _CGSDefaultConnection();
+	OSStatus			oResult;
+	int						iLevel;
+
+	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel);
 	if (oResult) {
-		return NO; 
+		return NO;
 	}
-	
-	return YES; 
+
+	return YES;
 }
 
 #pragma mark -
 - (void) setProperty: (NSString*) property forKey: (NSString*) key {
- 	CGSExtSetWindowProperty(mNativeWindow, [key cString], [property cString]); 
+	CGSExtSetWindowProperty(mNativeWindow, [key cString], [property cString]);
 }
 
 - (NSString*) propertyForKey: (NSString*) key {
-	CGSConnection	oConnection = _CGSDefaultConnection(); 
-	OSStatus		iResult; 
-	
-	CGSValue		oKey = CGSCreateCStringNoCopy([key cString]); 
-	CGSValue		oValue; 
-	
-	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue); 
+	CGSConnection oConnection = _CGSDefaultConnection();
+	OSStatus		iResult;
+
+	CGSValue		oKey = CGSCreateCStringNoCopy([key cString]);
+	CGSValue		oValue;
+
+	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue);
 	if (iResult)
-		return nil; 
-	
+		return nil;
+
 	char* acValueString = CGSCStringValue(oValue);
-	if (acValueString) 
+	if (acValueString)
 		return [NSString stringWithUTF8String: acValueString];
-	
-	return nil; 
+
+	return nil;
 }
 
 #pragma mark -
-#pragma mark Accessors 
+#pragma mark Accessors
 
 - (int) desktopId {
-	// fetch the desktop this window resides on 
-	CGSConnection   oConnection = _CGSDefaultConnection(); 
-	int				iDesktopId  = -1; 
-	
-	OSStatus oResult = CGSGetWindowWorkspace(oConnection, mNativeWindow, &iDesktopId); 
+	// fetch the desktop this window resides on
+	CGSConnection		oConnection = _CGSDefaultConnection();
+	int				iDesktopId	= -1;
+
+	OSStatus oResult = CGSGetWindowWorkspace(oConnection, mNativeWindow, &iDesktopId);
 	if (oResult) {
-		NSLog(@"[Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult); 
-		return kPnDesktopInvalidId; 
+		NSLog(@"[Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult);
+		return kPnDesktopInvalidId;
 	}
 
-	return iDesktopId; 
+	return iDesktopId;
 }
 
 - (void) setDesktopId: (int) desktopId {
-	if ([self isSticky]) 
-		return; 
-	
-	// notification parameters 
-	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: 
-		[NSNumber numberWithInt: [self desktopId]], PNWindowChangeDesktopSourceParam, 
-		[NSNumber numberWithInt: desktopId], PNWindowChangeDesktopTargetParam, 
-		nil]; 
-	
-	// send notification about the upcoming change 
-	[[NSNotificationCenter defaultCenter] 
-		postNotificationName: PNWindowWillChangeDesktop object: self userInfo: userInfo]; 
-	
-	CGSExtSetWindowWorkspace(mNativeWindow, desktopId); 
-	
-	// post notification about the change 
+	if ([self isSticky])
+		return;
+
+	// notification parameters
+	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+		[NSNumber numberWithInt: [self desktopId]], PNWindowChangeDesktopSourceParam,
+		[NSNumber numberWithInt: desktopId], PNWindowChangeDesktopTargetParam,
+		nil];
+
+	// send notification about the upcoming change
 	[[NSNotificationCenter defaultCenter]
-		postNotificationName: PNWindowDidChangeDesktop object: self userInfo: userInfo]; 
+		postNotificationName: PNWindowWillChangeDesktop object: self userInfo: userInfo];
+
+	CGSExtSetWindowWorkspace(mNativeWindow, desktopId);
+
+	// post notification about the change
+	[[NSNotificationCenter defaultCenter]
+		postNotificationName: PNWindowDidChangeDesktop object: self userInfo: userInfo];
 }
 
 /**
- * @brief	Attaches the window to the passed desktop
+ * @brief Attaches the window to the passed desktop
  *
- * @param	desktop	The desktop that will become the owner of this window 
+ * @param desktop The desktop that will become the owner of this window
  *
- */ 
+ */
 - (void) setDesktop: (PNDesktop*) desktop {
 	// we won't allow setting a nil desktop
 	if (desktop == nil)
-		return; 
+		return;
 
-	[self setDesktopId: [desktop identifier]]; 
+	[self setDesktopId: [desktop identifier]];
 }
 
 #pragma mark -
 - (CGSWindow) nativeWindow {
 	return mNativeWindow;
 }
- 
-- (NSString*) name {
-	static CGSValue kCGSWindowTitle = (int)NULL; 
 
-	// we have to create the private constant 
-	if (kCGSWindowTitle == (int)NULL) 
+- (NSString*) name {
+	static CGSValue kCGSWindowTitle = (int)NULL;
+
+	// we have to create the private constant
+	if (kCGSWindowTitle == (int)NULL)
 		kCGSWindowTitle = CGSCreateCStringNoCopy("kCGSWindowTitle");
 
 	CGSValue oWindowTitle = (int)NULL;
 	OSStatus oResult;
-	
-	// get connection 
-    CGSConnection oConnection = _CGSDefaultConnection();
 
-	// get the window title 
-	oResult = CGSGetWindowProperty(oConnection, mNativeWindow, kCGSWindowTitle, &oWindowTitle); 
+	// get connection
+		CGSConnection oConnection = _CGSDefaultConnection();
+
+	// get the window title
+	oResult = CGSGetWindowProperty(oConnection, mNativeWindow, kCGSWindowTitle, &oWindowTitle);
 	if (oResult) {
-		return nil; 
+		return nil;
 	}
-	
+
 	char* acStrVal = CGSCStringValue(oWindowTitle);
 	if (acStrVal) {
 		return [NSString stringWithUTF8String: acStrVal];
 	}
-	
+
 	return nil;
 }
 
 #pragma mark -
 - (BOOL) isSpecial {
-	return mIsSpecial; 
+	return mIsSpecial;
 }
-  
+
 - (void) setSpecial: (BOOL) special {
-	mIsSpecial = special; 
+	mIsSpecial = special;
 }
 
 #pragma mark -
 - (int) level {
-	CGSConnection   oConnection = _CGSDefaultConnection();
-	OSStatus				oResult; 
+	CGSConnection		oConnection = _CGSDefaultConnection();
+	OSStatus				oResult;
 	int							iLevel;
- 
-	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel); 
+
+	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel);
 	if (oResult)
-		return kPnWindowInvalidLevel; 
-	
+		return kPnWindowInvalidLevel;
+
 	return iLevel;
 }
 
 - (void) setLevel: (int) level {
-	CGSExtSetWindowLevel(mNativeWindow, level); 
+	CGSExtSetWindowLevel(mNativeWindow, level);
 }
 
 #pragma mark -
 - (float) alphaValue {
-	CGSConnection   oConnection = _CGSDefaultConnection();
-	OSStatus				oResult; 
-	float						fAlpha; 
-	
-	oResult = CGSGetWindowAlpha(oConnection, mNativeWindow, &fAlpha); 
+	CGSConnection		oConnection = _CGSDefaultConnection();
+	OSStatus				oResult;
+	float						fAlpha;
+
+	oResult = CGSGetWindowAlpha(oConnection, mNativeWindow, &fAlpha);
 	if (oResult)
-		return 1.0; 
-	
-	return fAlpha; 
+		return 1.0;
+
+	return fAlpha;
 }
 
 - (void) setAlphaValue: (float) alpha {
-	CGSExtSetWindowAlpha(mNativeWindow, alpha, 0, 0); 
+	CGSExtSetWindowAlpha(mNativeWindow, alpha, 0, 0);
 }
 
 - (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration {
-	CGSExtSetWindowAlpha(mNativeWindow, alpha, flag == YES ? 1 : 0, duration); 
+	CGSExtSetWindowAlpha(mNativeWindow, alpha, flag == YES ? 1 : 0, duration);
 }
 
 #pragma mark -
 /**
- * @brief	Sets the window to be stickied according to the passed flag 
+ * @brief Sets the window to be stickied according to the passed flag
  *
- * @param	stickyState	If set ot @c YES, the window will be stickied, if 
- *						set to @c NO, the window will become nonsticky. 
+ * @param stickyState If set ot @c YES, the window will be stickied, if
+ *						set to @c NO, the window will become nonsticky.
  *
- * @notify		kPnOnWindowStickied 
+ * @notify		kPnOnWindowStickied
  *					'object'	self
- * @notify		kPnOnWindowUnstickied 
- *					'object'	self 
- * 
- * @distnotify	kPnOnWindowStickied 
+ * @notify		kPnOnWindowUnstickied
+ *					'object'	self
+ *
+ * @distnotify	kPnOnWindowStickied
  *					'window'	self.mNativeWindow
- * @distnotify	kPnOnWindowUnstickied 
- *					'window'	self.mNativeWindow 
- */ 
+ * @distnotify	kPnOnWindowUnstickied
+ *					'window'	self.mNativeWindow
+ */
 - (void) setSticky: (BOOL) stickyState {
-	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys:  
-			 	                [NSNumber numberWithInt: mNativeWindow], @"window", 
-			 	                nil]; 
-	
+	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys:
+												[NSNumber numberWithInt: mNativeWindow], @"window",
+												nil];
+
 	if (stickyState == YES) {
-		// post notification about the window becoming sticky 
+		// post notification about the window becoming sticky
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowStickied object: nil userInfo: infoDict];
-		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowStickied object: self]; 
+		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowStickied object: self];
 	}
 	else {
-		// post notification about the window being no longer sticky 
+		// post notification about the window being no longer sticky
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowUnstickied object: nil userInfo: infoDict];
-		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowUnstickied object: self]; 		
+		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowUnstickied object: self];
 	}
-	
-	// set sticky state 
-	mIsSticky = stickyState; 
+
+	// set sticky state
+	mIsSticky = stickyState;
 }
 
-/** 
- * @brief   Query the sticky state of the window 
+/**
+ * @brief		Query the sticky state of the window
  *
- * @return  Returns @c YES if the window is sticky. 
+ * @return	Returns @c YES if the window is sticky.
  *
- * This method will only check the cached setting without querying the 
- * windowing system. We trust ourselves to be consistent there. 
+ * This method will only check the cached setting without querying the
+ * windowing system. We trust ourselves to be consistent there.
  *
- */ 
+ */
 - (BOOL) isSticky {
 	return mIsSticky;
 }
 
 #pragma mark -
 - (void) setIgnoredByExpose: (BOOL) flag {
-	// first set our flag 
-	mIsIgnoredByExpose = flag; 
-	
-	// now set the window tag accordingly 
+	// first set our flag
+	mIsIgnoredByExpose = flag;
+
+	// now set the window tag accordingly
 	if (flag)
-		CGSExtClearWindowTags(mNativeWindow, CGSTagExposeFade); 
+		CGSExtClearWindowTags(mNativeWindow, CGSTagExposeFade);
 	else
-		CGSExtSetWindowTags(mNativeWindow, CGSTagExposeFade); 
+		CGSExtSetWindowTags(mNativeWindow, CGSTagExposeFade);
 }
 
 - (BOOL) isIgnoredByExpose {
-	return mIsIgnoredByExpose; 
+	return mIsIgnoredByExpose;
 }
 
 
@@ -344,34 +344,34 @@
 - (NSRect) screenRectangle {
 	NSRect			rect;
 	OSStatus		oResult;
-	CGSConnection   oConnection = _CGSDefaultConnection();
-	
+	CGSConnection		oConnection = _CGSDefaultConnection();
+
 	oResult = CGSGetScreenRectForWindow(oConnection, mNativeWindow, (CGRect*)&rect);
 	if (oResult)
 		return NSMakeRect(0, 0, 0, 0);
-							
+
 	return rect;
 }
 
 #pragma mark -
 - (NSImage*) icon {
 	if (mIcon == nil) {
-		mIcon = [[NSImage imageNamed: @"imageWindow.png"] retain]; 
+		mIcon = [[NSImage imageNamed: @"imageWindow.png"] retain];
 	}
-	
-	return mIcon; 
+
+	return mIcon;
 }
 
 #pragma mark -
 - (pid_t) ownerPid {
 	if (mOwnerPid != kPnWindowInvalidPid)
-		return mOwnerPid; 
-	
+		return mOwnerPid;
+
 	OSStatus		oResult;
-	
-	CGSConnection   oConnection = _CGSDefaultConnection();
-	CGSConnection   oOwnerCID;
-	
+
+	CGSConnection		oConnection = _CGSDefaultConnection();
+	CGSConnection		oOwnerCID;
+
 	if (oResult = CGSGetWindowOwner(oConnection, mNativeWindow, &oOwnerCID)) {
 //		NSLog(@"[Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
 		return 0;
@@ -379,28 +379,28 @@
 
 	if (oResult = CGSConnectionGetPID(oOwnerCID, &mOwnerPid, oOwnerCID)) {
 //		NSLog(@"[Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
-		mOwnerPid = kPnWindowInvalidPid; 
+		mOwnerPid = kPnWindowInvalidPid;
 	}
-	
+
 	return mOwnerPid;
 }
 
-- (ProcessSerialNumber) ownerPsn {	
-    ProcessSerialNumber oOwnerPsn;
-    OSStatus			oResult;
+- (ProcessSerialNumber) ownerPsn {
+		ProcessSerialNumber oOwnerPsn;
+		OSStatus			oResult;
 
-	oOwnerPsn.highLongOfPSN = 0; 
-	oOwnerPsn.lowLongOfPSN = 0; 
-	
+	oOwnerPsn.highLongOfPSN = 0;
+	oOwnerPsn.lowLongOfPSN = 0;
+
 	if ([self ownerPid] == kPnWindowInvalidPid)
-		return oOwnerPsn; 
-	
-    oResult = GetProcessForPID([self ownerPid], &oOwnerPsn); 
+		return oOwnerPsn;
+
+		oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
 	if (oResult) {
-		NSLog(@"[Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult); 
+		NSLog(@"[Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
 	}
 
-    return oOwnerPsn;
+		return oOwnerPsn;
 }
 
-@end 
+@end

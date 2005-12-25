@@ -74,7 +74,6 @@ enum
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mDesktopProtector); 
 	ZEN_RELEASE(mStatusItem); 
 	ZEN_RELEASE(mNotificationBezel); 
 	ZEN_RELEASE(mPreferenceController); 
@@ -99,8 +98,6 @@ enum
 
 #pragma mark -
 #pragma mark Bootstrapping 
-
-
 
 - (void) bootstrap {	
 	// Inject dock extension code into the Dock process
@@ -129,15 +126,12 @@ enum
 	mApplicationWatcher		= [[VTApplicationWatcherController alloc] init];
 	mDesktopInspector			= [[VTDesktopViewController alloc] init];
 	mApplicationInspector	= [[VTApplicationViewController alloc] init];
-	mDesktopProtector			= [[VTDesktopProtector alloc] init];
-	
-	[mDesktopProtector setEnabled: YES]; 
-	
+		
 	// interface controllers 
 	mNotificationBezel = [[VTNotificationBezel alloc] init];
 	
 	// make sure we have our matrix layout created 
-	NSArray*			layouts = [[VTLayoutController sharedInstance] layouts]; 
+	NSArray*					layouts = [[VTLayoutController sharedInstance] layouts]; 
 	VTDesktopLayout*	layout	= nil; 
 	
 	if (layouts) {
@@ -178,9 +172,9 @@ enum
 	
 	// decode application preferences
 	NSDictionary* applicationDict = [[NSUserDefaults standardUserDefaults] objectForKey: VTPreferencesApplicationsName]; 
-	if (applicationDict) {
+	if (applicationDict)
 		[[VTApplicationController sharedInstance] decodeFromDictionary: applicationDict]; 
-	}
+	
 	// and scan for initial applications 
 	[[VTApplicationController sharedInstance] scanApplications]; 
 
@@ -613,9 +607,9 @@ enum
 	mStatusItemMenuDesktopNeedsUpdate = NO; 
 	
 	// first remove all items that have no associated object
-	NSArray*		menuItems		= [mStatusItemMenu itemArray]; 
+	NSArray*				menuItems			= [mStatusItemMenu itemArray]; 
 	NSEnumerator*   menuItemIter	= [menuItems objectEnumerator]; 
-	NSMenuItem*		menuItem		= nil; 
+	NSMenuItem*			menuItem			= nil; 
 	
 	while (menuItem = [menuItemIter nextObject]) {
 		// check if we should remove the item 
@@ -626,9 +620,9 @@ enum
 	
 	// now we can readd the items 
 	NSEnumerator*	desktopIter		= [[[[[VTLayoutController sharedInstance] activeLayout] desktops] objectEnumerator] retain]; 
-	NSString*		uuid			= nil; 
-	VTDesktop*		desktop			= nil; 
-	int				currentIndex	= 0; 
+	NSString*			uuid					= nil; 
+	VTDesktop*		desktop				= nil; 
+	int						currentIndex	= 0; 
 	
 	while (uuid = [desktopIter nextObject]) {
 		// get desktop 

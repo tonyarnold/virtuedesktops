@@ -142,7 +142,8 @@
 	// and make the window special to hide it 
 	PNWindow* windowWrapper = [PNWindow windowWithNSWindow: window]; 
 	[windowWrapper setSpecial: YES]; 
-	[windowWrapper setSticky: NO]; 
+	[windowWrapper setSticky: YES];
+	[windowWrapper setIgnoredByExpose: YES];
 	[windowWrapper setDesktop: desktop]; 
 	
 	[mDesktopProtectionViews setObject: window forKey: desktopUUID];

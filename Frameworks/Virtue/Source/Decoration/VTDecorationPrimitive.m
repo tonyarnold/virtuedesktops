@@ -55,10 +55,10 @@
 - (id) copyWithZone: (NSZone*) zone {
 	VTDecorationPrimitive* newInstance = [[[self class] allocWithZone: zone] init]; 
 	// and initialize 
-	newInstance->mName			= [mName copyWithZone: zone]; 
-	newInstance->mControlView	= nil; 
-	newInstance->mContainer		= nil; 
-	newInstance->mPosition		= mPosition; 
+	newInstance->mName					= [mName copyWithZone: zone]; 
+	newInstance->mControlView		= nil; 
+	newInstance->mContainer			= nil; 
+	newInstance->mPosition			= mPosition; 
 	newInstance->mPositionType	= mPositionType; 
 	
 	return newInstance; 
@@ -70,10 +70,10 @@
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super init]) {
 		mContainer		= [[coder decodeObjectForKey: kVtCodingContainer] retain]; 
-		mName			= [[coder decodeObjectForKey: kVtCodingName] retain];
-		mPosition		= [coder decodePointForKey: kVtCodingPosition]; 
+		mName					= [[coder decodeObjectForKey: kVtCodingName] retain];
+		mPosition			= [coder decodePointForKey: kVtCodingPosition]; 
 		mPositionType	= [coder decodeIntForKey: kVtCodingPositionType]; 
-		mEnabled		= [coder decodeBoolForKey: kVtCodingEnabled]; 
+		mEnabled			= [coder decodeBoolForKey: kVtCodingEnabled]; 
 		
 		mControlView	= nil; 
 		

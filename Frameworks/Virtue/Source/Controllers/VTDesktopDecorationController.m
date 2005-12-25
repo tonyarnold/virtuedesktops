@@ -137,16 +137,16 @@
 	// standard -5000 level. we have to set the window level higher, as a window
 	// with level INT_MIN+25 (the one used to put the window behind icons) will
 	// make the window sticky; seems to be a 'feature' of the apple window manager
-	VTDesktop* desktop	= [[VTDesktopController sharedInstance] activeDesktop]; 
-	NSWindow* window	= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]]; 
-	[window setLevel: kVTNonActiveWindowLevel]; 
+	//VTDesktop* desktop	= [[VTDesktopController sharedInstance] activeDesktop]; 
+	//NSWindow* window	= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]]; 
+	//[window setLevel: kVTNonActiveWindowLevel]; 
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// see onDesktopWillChange: on why we are doing the stuff we are doing
-	VTDesktop* desktopToActivate	= [notification object]; 
-	NSWindow* windowToActivate		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]; 
-	[windowToActivate setLevel: (mDesktopWindowLevel + 1)];
+	//VTDesktop* desktopToActivate	= [notification object]; 
+	//NSWindow* windowToActivate		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]; 
+	//[windowToActivate setLevel: (mDesktopWindowLevel + 1)];
 }
 
 @end 
@@ -163,7 +163,7 @@
 		[mainScreen frame] 
 		styleMask: NSBorderlessWindowMask 
 		backing: NSBackingStoreBuffered
-		defer: NO] autorelease]; 
+		defer: NO] autorelease];
 	
 	// we have to have different window levels for active and non-active windows 
 	// as the level we chose for the decoration window is automatically set sticky
@@ -172,7 +172,7 @@
 		[window setLevel: (mDesktopWindowLevel + 1)];
 	else
 		[window setLevel: kVTNonActiveWindowLevel]; 
-	
+
 	[window setOpaque: NO];
 	
 	// create the view and set it to ignore mouse events 
@@ -185,17 +185,15 @@
 	[window setIgnoresMouseEvents: YES];
 	[window setFrame: frameRect display: NO];
 	[window setAlphaValue: 0.0];
-	[window display]; 
-	[window orderWindow: NSWindowBelow relativeTo: 0];	
+	[window display];
+	[window orderWindow: NSWindowAbove relativeTo: kCGDesktopWindowLevelKey];
 	
-	// and mark the window as being special 
-	// we will make the window sticky so it will be visible on every desktop
 	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];  
-	[desktopNameWindow setSticky: NO]; 
-	// by making it special, it will not show up in the window lists of the 
-	// available desktops 
+	[desktopNameWindow setDesktop: desktop];
+	[desktopNameWindow setSticky: NO];
+	
+	// By making it special, it will not show up in the window lists of the available desktops 
 	[desktopNameWindow setSpecial: YES]; 
-	[desktopNameWindow setDesktop: desktop]; 
 	[desktopNameWindow setIgnoredByExpose: YES]; 
 
 	[window setAlphaValue: 1.0];

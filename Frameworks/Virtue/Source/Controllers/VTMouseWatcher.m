@@ -404,6 +404,8 @@
 	[window setInitialFirstResponder: view]; 
 	[window setReleasedWhenClosed: YES];
 	
+	[window setTitle: [NSString stringWithFormat: @"MouseWatcher for edge %i", edge]];
+	
 	// set ourselves as the delegate 
 	[window setDelegate: self];
 	[window orderFront: self]; 
@@ -412,10 +414,11 @@
 	PNWindow* windowWrapper = [PNWindow windowWithNSWindow: window]; 
 	[windowWrapper setSticky: YES];
 	[windowWrapper setSpecial: YES];
+	[windowWrapper setIgnoredByExpose: YES];
 	
 	// now take care of adding the tracking rectangle 
-	NSRect				trackingRectFrame	= [self trackingFrameForEdge: edge];
-	NSTrackingRectTag	trackingRect		= [view addTrackingRect: trackingRectFrame owner: self userData: (void*)(&edge) assumeInside: NO]; 
+	NSRect						trackingRectFrame		= [self trackingFrameForEdge: edge];
+	NSTrackingRectTag	trackingRect				= [view addTrackingRect: trackingRectFrame owner: self userData: (void*)(&edge) assumeInside: NO]; 
 	// and add it
 	[mTrackingRects setObject: [NSNumber numberWithInt: trackingRect] forKey: [NSNumber numberWithInt: edge]]; 
 	

@@ -214,13 +214,13 @@
 		return [firstInstance windows]; 
 	}
 	
-	NSEnumerator*	applicationIter	= [mApplications objectEnumerator]; 
-	PNApplication*	application		= nil; 
-	NSMutableArray* windows			= [[[NSMutableArray alloc] init] autorelease]; 
+	NSEnumerator*		applicationIter	= [mApplications objectEnumerator]; 
+	PNApplication*	application			= nil; 
+	NSMutableArray* windows					= [[[NSMutableArray alloc] init] autorelease]; 
 	
 	while (application = [applicationIter nextObject]) {
 		NSEnumerator*	windowIter	= [[[application windows] objectEnumerator] retain]; 
-		PNWindow*		window		= nil; 
+		PNWindow*			window			= nil; 
 		
 		while (window = [windowIter nextObject]) {
 			if ([windows indexOfObjectIdenticalTo: window] == NSNotFound)

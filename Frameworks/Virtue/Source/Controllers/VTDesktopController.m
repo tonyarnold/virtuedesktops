@@ -640,7 +640,7 @@
 			[deskPrimitiveTypes addObject: NSStringFromClass([deskPrimitive class])]; 
 	}
 	
-	NSEnumerator*			primitiveIter		= [[mDecorationPrototype decorationPrimitives] objectEnumerator]; 
+	NSEnumerator*					primitiveIter		= [[mDecorationPrototype decorationPrimitives] objectEnumerator]; 
 	VTDecorationPrimitive*	primitive			= nil; 
 	
 	while (primitive = [primitiveIter nextObject]) {
