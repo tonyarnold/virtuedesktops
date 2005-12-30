@@ -289,11 +289,11 @@
 		int transNo = -1;
 		CGSTransitionSpec transSpec;
 
-		transSpec.type = transition;
-		transSpec.option = option;
-		transSpec.wid = 0;
-		transSpec.backColour = 0;
-
+		transSpec.type				= transition;
+		transSpec.option			= option;
+		transSpec.wid					= 0;
+		transSpec.backColour	= 0;
+		
 		CGSNewTransition(oConnection, &transSpec, &transNo);
 		CGSSetWorkspace(oConnection,mDesktopId);
 		usleep(10000);

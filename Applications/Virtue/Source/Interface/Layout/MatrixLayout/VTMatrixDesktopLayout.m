@@ -376,27 +376,46 @@
 
 - (VTDirection) directionFromDesktop: (VTDesktop*) referenceDesktop toDesktop: (VTDesktop*) desktop {
 	// we need indices of both desktops... 
-	unsigned int indexOfTarget		= [self indexOfDesktop: desktop]; 
+	unsigned int indexOfTarget			=	[self indexOfDesktop: desktop]; 
 	unsigned int indexOfReference   = [self indexOfDesktop: referenceDesktop]; 
 	// and also their rows...
-	int rowOfTarget		= [self rowForIndex: indexOfTarget]; 
+	int rowOfTarget			= [self rowForIndex: indexOfTarget]; 
 	int rowOfReference  = [self rowForIndex: indexOfReference]; 
 	
-	// if they are in the same row.. 
-	if (rowOfTarget == rowOfReference) {		
-		if (indexOfTarget > indexOfReference)
+	int columnOfTarget			= [self columnForIndex: indexOfTarget];
+	int columnOfReference		=	[self columnForIndex: indexOfReference];
+	
+	
+	// If they are in the same row.. 
+	if (rowOfTarget == rowOfReference) {
+		if (columnOfTarget > columnOfReference)
 			return kVtDirectionEast; 
-		if (indexOfTarget < indexOfReference)
-			return kVtDirectionWest; 
-		
-		return kVtDirectionNone; 
+		if (columnOfTarget < columnOfReference)
+			return kVtDirectionWest;
+	}
+	else
+	{
+		if (rowOfTarget > rowOfReference) {
+			if (columnOfTarget > columnOfReference)
+				return kVtDirectionSoutheast; 
+			if (columnOfTarget < columnOfReference)
+				return kVtDirectionSouthwest;
+			
+			return kVtDirectionSouth;
+		}
+		else
+		{
+			if (columnOfTarget > columnOfReference)
+				return kVtDirectionNortheast; 
+			if (columnOfTarget < columnOfReference)
+				return kVtDirectionNorthwest;
+			
+			return kVtDirectionNorth;
+		}
 	}
 	
-	// if they are different... 
-	if (rowOfTarget > rowOfReference)
-		return kVtDirectionSouth; 
-	
-	return kVtDirectionNorth; 
+	// If all else fails...
+	return kVtDirectionNone; 
 }
 
 

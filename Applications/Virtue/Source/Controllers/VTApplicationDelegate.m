@@ -431,8 +431,24 @@ enum
 	[[VTDesktopController sharedInstance] activateDesktopInDirection: kVtDirectionNorth]; 
 }
 
+- (void) onSwitchToDesktopNortheast: (NSNotification*) notification {
+	[[VTDesktopController sharedInstance] activateDesktopInDirection: kVtDirectionNortheast]; 
+}
+
+- (void) onSwitchToDesktopNorthwest: (NSNotification*) notification {
+	[[VTDesktopController sharedInstance] activateDesktopInDirection: kVtDirectionNorthwest]; 
+}
+
 - (void) onSwitchToDesktopSouth: (NSNotification*) notification {
 	[[VTDesktopController sharedInstance] activateDesktopInDirection: kVtDirectionSouth]; 
+}
+
+- (void) onSwitchToDesktopSoutheast: (NSNotification*) notification {
+	[[VTDesktopController sharedInstance] activateDesktopInDirection: kVtDirectionSoutheast]; 
+}
+
+- (void) onSwitchToDesktopSouthwest: (NSNotification*) notification {
+	[[VTDesktopController sharedInstance] activateDesktopInDirection: kVtDirectionSouthwest]; 
 }
 
 - (void) onSwitchToDesktopEast: (NSNotification*) notification {
@@ -527,9 +543,17 @@ enum
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onSwitchToDesktopNorth:) name: VTRequestChangeDesktopToNorthName object: nil]; 
 	[[NSNotificationCenter defaultCenter]
+		addObserver: self selector: @selector(onSwitchToDesktopNortheast:) name: VTRequestChangeDesktopToNortheastName object: nil];
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self selector: @selector(onSwitchToDesktopNorthwest:) name: VTRequestChangeDesktopToNorthwestName object: nil];
+	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onSwitchToDesktopEast:) name: VTRequestChangeDesktopToEastName object: nil]; 
 	[[NSNotificationCenter defaultCenter]
-		addObserver: self selector: @selector(onSwitchToDesktopSouth:) name: VTRequestChangeDesktopToSouthName object: nil]; 
+		addObserver: self selector: @selector(onSwitchToDesktopSouth:) name: VTRequestChangeDesktopToSouthName object: nil];
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self selector: @selector(onSwitchToDesktopSoutheast:) name: VTRequestChangeDesktopToSoutheastName object: nil];
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self selector: @selector(onSwitchToDesktopSouthwest:) name: VTRequestChangeDesktopToSouthwestName object: nil];
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onSwitchToDesktopWest:) name: VTRequestChangeDesktopToWestName object: nil]; 
 	[[NSNotificationCenter defaultCenter]

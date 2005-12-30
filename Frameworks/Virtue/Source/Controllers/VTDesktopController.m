@@ -578,9 +578,10 @@
 		type = kPnTransitionNone;
 		option = kPnOptionAny;
 		duration = 0.0;
-}
-// now do it ;) 
-[self doActivateDesktop: desktop usingTransition: type withOptions: option andDuration: duration]; 
+	}
+	// now do it ;)
+
+	[self doActivateDesktop: desktop usingTransition: type withOptions: option andDuration: duration]; 
 }
 
 - (void) doActivateDesktop: (VTDesktop*) desktop usingTransition: (PNTransitionType) type withOptions: (PNTransitionOption) option andDuration: (float) duration {
@@ -631,9 +632,9 @@
 			[[desktop decoration] delDecorationPrimitive: [[[desktop decoration] decorationPrimitives] objectAtIndex: 0]]; 
 	}
 	
-	NSEnumerator*			deskPrimitiveIter			= [[[desktop decoration] decorationPrimitives] objectEnumerator]; 
-	VTDecorationPrimitive*	deskPrimitive		= nil; 
-	NSMutableArray*			deskPrimitiveTypes	= [[NSMutableArray alloc] init]; 
+	NSEnumerator*						deskPrimitiveIter			= [[[desktop decoration] decorationPrimitives] objectEnumerator]; 
+	VTDecorationPrimitive*	deskPrimitive					= nil; 
+	NSMutableArray*					deskPrimitiveTypes		= [[NSMutableArray alloc] init]; 
 	
 	while (deskPrimitive = [deskPrimitiveIter nextObject]) {
 		if ([deskPrimitiveTypes containsObject: NSStringFromClass([deskPrimitive class])] == NO)

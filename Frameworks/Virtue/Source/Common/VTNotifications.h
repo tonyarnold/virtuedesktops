@@ -50,6 +50,13 @@
 #define VTRequestChangeDesktopToNorthName	@"VTRequestChangeDesktopToNorth"
 // Request to change to the desktop below 
 #define VTRequestChangeDesktopToSouthName	@"VTRequestChangeDesktopToSouth"
+
+#define VTRequestChangeDesktopToNortheastName	@"VTRequestChangeDesktopToNortheast"
+#define VTRequestChangeDesktopToNorthwestName	@"VTRequestChangeDesktopToNorthwest"
+
+#define VTRequestChangeDesktopToSoutheastName	@"VTRequestChangeDesktopToSoutheast"
+#define VTRequestChangeDesktopToSouthwestName	@"VTRequestChangeDesktopToSouthwest"
+
 // Request to display the overlay window 
 #define VTRequestDisplayOverlayName			@"VTRequestDisplayOverlay"
 
