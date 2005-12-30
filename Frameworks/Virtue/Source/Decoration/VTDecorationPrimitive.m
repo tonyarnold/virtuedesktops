@@ -16,9 +16,9 @@
 #import <Zen/Zen.h>
 
 #define kVtCodingContainer		@"container"
-#define kVtCodingEnabled		@"enabled"
-#define kVtCodingName			@"name"
-#define kVtCodingPosition		@"position"
+#define kVtCodingEnabled			@"enabled"
+#define kVtCodingName					@"name"
+#define kVtCodingPosition			@"position"
 #define kVtCodingPositionType	@"positionType"
 
 #pragma mark -

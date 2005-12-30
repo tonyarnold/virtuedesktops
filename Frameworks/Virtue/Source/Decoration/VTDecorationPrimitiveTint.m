@@ -16,9 +16,10 @@
 #import <Zen/Zen.h> 
 
 #pragma mark Coding Keys 
-#define kVtCodingColor		@"color"
-#define kVtCodingType		@"tintType"
-#define kVtCodingSize		@"size"
+#define kVtCodingColor			@"color"
+#define kVtCodingType				@"tintType"
+#define kVtCodingSize				@"size"
+#define kVtCodingIntensity	@"intensity"
 
 #pragma mark -
 @implementation VTDecorationPrimitiveTint
@@ -29,11 +30,11 @@
 - (id) init {
 	if (self = [super init]) {
 		// attributes 
-		mIntensity	= 0.15; 
-		mSize		= 20; 
-		mColor		= [[[NSColor greenColor] colorWithAlphaComponent: mIntensity] retain];
-		mType		= VTPrimitiveTintWholeScreen; 
-		mName		= @"Tint Primitive";  
+		mIntensity		= 0.15; 
+		mSize					= 20; 
+		mColor				= [[[NSColor greenColor] colorWithAlphaComponent: mIntensity] retain];
+		mType					= VTPrimitiveTintWholeScreen; 
+		mName					= @"Tint Primitive";  
 		mPositionType = kVtDecorationPositionBottom; 
 		
 		return self; 
@@ -52,10 +53,10 @@
 - (id) copyWithZone: (NSZone*) zone {
 	VTDecorationPrimitiveTint* newInstance = (VTDecorationPrimitiveTint*)[super copyWithZone: zone]; 
 	// and initialize 
-	newInstance->mIntensity		= mIntensity; 
-	newInstance->mSize			= mSize; 
-	newInstance->mColor			= [mColor copyWithZone: zone]; 
-	newInstance->mType			= mType; 
+	newInstance->mIntensity			= mIntensity; 
+	newInstance->mSize					= mSize; 
+	newInstance->mColor					= [mColor copyWithZone: zone]; 
+	newInstance->mType					= mType; 
 	newInstance->mPositionType	= mPositionType; 
 	
 	return newInstance; 
@@ -68,7 +69,6 @@
 	if (self = [super initWithCoder: coder]) {
 		// attributes 
 		[self setColor: [coder decodeObjectForKey: kVtCodingColor]]; 
-		
 		return self; 
 	}
 	
@@ -76,9 +76,10 @@
 }
 
 - (void) encodeWithCoder: (NSCoder*) coder {
-	[super encodeWithCoder: coder]; 
+	[super encodeWithCoder: coder];
+	if ([self color] != nil)
+		[coder encodeObject: [[self color] stringValue] forKey: kVtCodingColor];
 	
-	[coder encodeObject: mColor forKey: kVtCodingColor]; 
 }
 
 #pragma mark -
@@ -86,17 +87,21 @@
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
 	[super encodeToDictionary: dictionary]; 
 	
-	[dictionary setObject: [NSNumber numberWithInt: mType] forKey: kVtCodingType]; 
-	[dictionary setObject: [NSNumber numberWithFloat: mSize] forKey: kVtCodingSize]; 
-	[dictionary setObject: [mColor stringValue] forKey: kVtCodingColor]; 
+	[dictionary setObject: [NSNumber numberWithInt: [self type]] 
+								 forKey: kVtCodingType]; 
+	[dictionary setObject: [NSNumber numberWithFloat: [self size]] 
+								 forKey: kVtCodingSize]; 
+	if ([self color] != nil)
+		[dictionary setObject: [[self color] stringValue] forKey: kVtCodingColor];
+	 
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	if (self = [super decodeFromDictionary: dictionary]) { 
 		[self setSize: [[dictionary objectForKey: kVtCodingSize] floatValue]]; 
 		[self setType: [[dictionary objectForKey: kVtCodingType] intValue]]; 
-		[self setColor: [NSColor colorWithString: [dictionary objectForKey: kVtCodingColor]]]; 
-		
+		[self setColor: [NSColor colorWithString: [dictionary objectForKey: kVtCodingColor]]];
+		[self setIntensity: [[self color] alphaComponent]];
 		return self; 
 	}
 	
@@ -107,13 +112,15 @@
 #pragma mark Attributes 
 - (void) setColor: (NSColor*) color {
 	if (color == nil)
-		color = [NSColor clearColor]; 
+		color = [NSColor clearColor];
 	
+		
 	// copy the color over and fetch its alpha component to remember 
-	ZEN_ASSIGN_COPY(mColor, color); 
-	mIntensity = [mColor alphaComponent]; 
+	ZEN_ASSIGN_COPY(mColor, color);
 	
-	[self setNeedsDisplay]; 
+	[self setIntensity: [mColor alphaComponent]];
+	
+	[self setNeedsDisplay];
 }
 
 - (NSColor*) color {
@@ -127,14 +134,12 @@
 
 - (void) setIntensity: (float) intensity {
 	// modify alpha component of our color 
-	NSColor* color = [mColor colorWithAlphaComponent: intensity]; 
-	
-	[self willChangeValueForKey: @"color"];  
-	ZEN_ASSIGN(mColor, color); 
-	mIntensity = intensity; 
-	[self didChangeValueForKey: @"color"]; 
-	
-	[self setNeedsDisplay]; 
+	NSColor* color = [mColor colorWithAlphaComponent: intensity];
+
+	ZEN_ASSIGN(mColor, color);
+	mIntensity = intensity;
+
+	[self setNeedsDisplay];
 }
 
 #pragma mark -
@@ -173,12 +178,15 @@
 #pragma mark Drawing 
 
 - (void) drawInView: (NSView*) view withRect: (NSRect) rect {
-	NSRect barFrame = NSZeroRect;
+	if (mColor == nil)
+		return;
 	
+	NSRect barFrame = NSZeroRect;
 	if (mType == VTPrimitiveTintWholeScreen) {
 		barFrame = rect; 
 	}
-	else {	
+	else 
+	{	
 		if (mPositionType == kVtDecorationPositionLeft) {
 			barFrame.origin.x = 0; 
 			barFrame.origin.y = 0; 

@@ -16,9 +16,9 @@
 #import <Zen/ZNMemoryManagementMacros.h>
 
 #pragma mark Coding Keys 
-#define kVtCodingPrimitives		@"primitives"
-#define kVtCodingDesktop		@"desktop"
-#define kVtCodingEnabled		@"enabled"
+#define kVtCodingPrimitives			@"primitives"
+#define kVtCodingDesktop				@"desktop"
+#define kVtCodingEnabled				@"enabled"
 #define kVtCodingPrimitiveType	@"type"
 
 #pragma mark -
@@ -84,11 +84,12 @@
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
 	// now assemble our primitive list 
-	NSEnumerator*			primitiveIter	= [mDecorationPrimitives objectEnumerator]; 
-	VTDecorationPrimitive*	primitive		= nil; 
-	NSMutableArray*			primitiveList	= [NSMutableArray array]; 
+	NSEnumerator*						primitiveIter	= [mDecorationPrimitives objectEnumerator]; 
+	VTDecorationPrimitive*	primitive			= nil; 
+	NSMutableArray*					primitiveList	= [NSMutableArray array]; 
 	
 	while (primitive = [primitiveIter nextObject]) {
+		
 		// fetch the type of this primitive and persist it 
 		NSString*				primitiveType = NSStringFromClass([primitive class]); 
 		NSMutableDictionary*	primitiveDict = [NSMutableDictionary dictionary]; 
@@ -118,19 +119,20 @@
 	while (primitiveDict = [primitiveIter nextObject]) {
 		// check type and try to create an instance of the primitive 
 		NSString*	type	= [primitiveDict objectForKey: kVtCodingPrimitiveType]; 
-		Class		klass	= NSClassFromString(type); 
+		Class			primitiveClass	= NSClassFromString(type); 
 		
 		// if we do not know about this type, ignore it and go on to 
 		// interpret the next entry 
-		if (klass == nil)
+		if (primitiveClass == nil)
 			continue; 
 		
-		VTDecorationPrimitive* primitive = [[klass alloc] init]; 
+		
+		VTDecorationPrimitive* primitive = [[primitiveClass alloc] init]; 
 		if (primitive == nil)
 			continue; 
 		
 		[primitive decodeFromDictionary: primitiveDict]; 
-		
+
 		// now add the primitive to our list 
 		[self addDecorationPrimitive: primitive]; 
 	}

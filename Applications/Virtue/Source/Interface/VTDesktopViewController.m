@@ -236,7 +236,7 @@
 - (void) tableViewSelectionDidChange: (NSNotification*) notification {
 	// Desktops table view
 	if ([[notification object] isEqual: mDesktopsTableView]) 
-		[self showDesktop: [self selectedDesktop]]; 
+		[self showDesktop: [self selectedDesktop]];
 }
 
 - (BOOL) tableView: (NSTableView*) tv writeRows: (NSArray*) rows toPasteboard: (NSPasteboard*) pboard {
@@ -281,8 +281,8 @@
     
 		// if drag source is self, it's a move
 		if ([info draggingSource] == mDecorationsTableView) {
-			NSArray*	rows		= [[info draggingPasteboard] propertyListForType: kVtMovedRowsDropType];
-			int			fromIndex   = [[rows objectAtIndex: 0] intValue]; 
+			NSArray*	rows				= [[info draggingPasteboard] propertyListForType: kVtMovedRowsDropType];
+			int				fromIndex   = [[rows objectAtIndex: 0] intValue]; 
 		
 			// if the index would not change, we do not do anything 
 			if (fromIndex == row)
@@ -344,6 +344,8 @@
 	} else {
 		[mImageView setImagePath: [mDesktop defaultDesktopBackgroundPath]];
 	}
+
+	[mLabelButton selectColorLabel: [mDesktop colorLabel]];
 	
 	// configure image view binding 
 	[mDesktop		bind: @"desktopBackground" 
@@ -357,8 +359,15 @@
 					 options: nil]; 
 	
 	// configure color label binding 
-	[mDesktop bind: @"colorLabel" toObject: mLabelButton withKeyPath: @"selectedColorLabel" options: nil]; 
-	[mLabelButton bind: @"selectedColorLabel" toObject: mDesktop withKeyPath: @"colorLabel" options: nil]; 
+	[mDesktop				bind: @"colorLabel" 
+							toObject: mLabelButton 
+					 withKeyPath: @"selectedColorLabel" 
+							 options: nil];
+	
+	[mLabelButton		bind: @"selectedColorLabel" 
+							toObject: mDesktop 
+					 withKeyPath: @"colorLabel" 
+							 options: nil]; 
 }
 
 @end 

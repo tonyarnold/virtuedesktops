@@ -89,7 +89,7 @@
 	
 	
 	if (mColorLabel)
-		[dictionary setObject: [NSArchiver archivedDataWithRootObject: mColorLabel] forKey: kVtCodingColorLabel]; 
+		[dictionary setObject: [mColorLabel stringValue] forKey: kVtCodingColorLabel]; 
 	
 	NSMutableDictionary* decoration = [NSMutableDictionary dictionary]; 
 	[mDecoration encodeToDictionary: decoration]; 
@@ -99,12 +99,12 @@
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
 	mUUID												= [[dictionary objectForKey: kVtCodingUUID] copy];
-	NSData* colorData						= [dictionary objectForKey: kVtCodingColorLabel];
+	NSColor* colorData					= [NSColor colorWithString: [dictionary objectForKey: kVtCodingColorLabel]];
 	
 	[self setName: [dictionary objectForKey: kVtCodingName]];
 	
 	if (colorData) 
-		mColorLabel = (NSColor*)[[NSUnarchiver unarchiveObjectWithData: colorData] retain]; 
+		mColorLabel = [colorData retain]; 
 	
 	// ensure an UUID 
 	if ((mUUID == nil) || ([mUUID length] == 0)) 

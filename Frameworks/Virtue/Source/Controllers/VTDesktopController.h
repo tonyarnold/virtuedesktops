@@ -26,7 +26,7 @@
 	VTDesktop*						mPreviousDesktop; 
 	VTDesktop*						mSnapbackDesktop; 
 	
-	NSString*							mDefaultDesktopBackgroundPath; 
+	NSString*							mDefaultDesktopBackgroundPath;
 	
 	VTDesktopDecoration*	mDecorationPrototype; 
 	BOOL									mUsesDecorationPrototype; 

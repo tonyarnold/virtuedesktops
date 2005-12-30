@@ -20,10 +20,10 @@
 
 @interface VTDesktopDecoration : NSObject<NSCoding, VTCoding> {
 	NSMutableArray*		mDecorationPrimitives; 
-	NSView*				mControlView; 
-	VTDesktop*			mDesktop; 
+	NSView*						mControlView; 
+	VTDesktop*				mDesktop; 
 	
-	BOOL				mEnabled; 
+	BOOL							mEnabled; 
 }
 
 #pragma mark -

@@ -21,15 +21,15 @@
 // outlets 
 	IBOutlet NSArrayController*			mDecorationsController; 
 
-	IBOutlet NSTableView*				mDecorationsTableView; 
-	IBOutlet NSButton*					mInspectPrimitiveButton; 
-	IBOutlet NSButton*					mDeletePrimitiveButton; 
+	IBOutlet NSTableView*						mDecorationsTableView; 
+	IBOutlet NSButton*							mInspectPrimitiveButton; 
+	IBOutlet NSButton*							mDeletePrimitiveButton; 
 	IBOutlet ZNImagePopUpButton*		mAddPrimitiveButton; 
-	IBOutlet NSMenu*					mAddPrimitiveMenu; 
+	IBOutlet NSMenu*								mAddPrimitiveMenu; 
 
 // ivars
 	VTDecorationPrimitiveViewController*	mInspectorController; 
-	NSMutableDictionary*					mPrimitiveInspectors; 	
+	NSMutableDictionary*									mPrimitiveInspectors; 	
 }
 
 #pragma mark -

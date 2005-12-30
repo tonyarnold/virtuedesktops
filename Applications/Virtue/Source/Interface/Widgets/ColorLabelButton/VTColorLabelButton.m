@@ -89,8 +89,8 @@
 }
 
 - (NSArray*) colorLabels {
-	NSEnumerator*			cellIter	= [[mColorLabels cells] objectEnumerator]; 
-	VTColorLabelButtonCell*	cell		= nil; 
+	NSEnumerator*						cellIter	= [[mColorLabels cells] objectEnumerator]; 
+	VTColorLabelButtonCell*	cell			= nil; 
 	
 	NSMutableArray* colors = [NSMutableArray array]; 
 	
@@ -271,12 +271,12 @@
 - (void) setSelectedColorLabel: (NSColor*) color {
 	if ((color == nil) && (mDisplaysClearButton)) {
 		[mColorLabels selectCell: [[mColorLabels cells] objectAtIndex: 0]]; 
-		return; 
+		return;
 	}
 	
 	// we have to find the correct cell now 
-	NSEnumerator*			cellIter	= [[mColorLabels cells] objectEnumerator]; 
-	VTColorLabelButtonCell* cell		= nil; 
+	NSEnumerator*						cellIter	= [[mColorLabels cells] objectEnumerator]; 
+	VTColorLabelButtonCell* cell			= nil; 
 	
 	while (cell = [cellIter nextObject]) {
 		if ([[cell color] isEqual: color]) {

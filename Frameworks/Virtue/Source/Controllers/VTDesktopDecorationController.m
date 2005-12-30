@@ -18,7 +18,8 @@
 #import "VTPreferences.h" 
 #import "NSUserDefaultsColor.h" 
 #import <Peony/Peony.h> 
-#import <Zen/Zen.h> 
+#import <Zen/Zen.h>
+#import <Zen/ZNEffectWindow.h>
 
 #define kVTNonActiveWindowLevel		(-5000) 
 
@@ -36,9 +37,9 @@
 - (id) init {
 	if (self = [super init]) {
 		// create the windows dictionary and update it immediately 
-		mWindows				= [[NSMutableDictionary dictionary] retain]; 
-		mDecorations			= [[NSMutableDictionary dictionary] retain]; 
-		mDesktopWindowLevel		= kCGMinimumWindowLevel + 25; 
+		mWindows							= [[NSMutableDictionary dictionary] retain]; 
+		mDecorations					= [[NSMutableDictionary dictionary] retain]; 
+		mDesktopWindowLevel		= kCGMinimumWindowLevel + 25;
 		
 		// we are observing desktop changes, as we have to work around a nice 
 		// feature of the apple window manager... 
@@ -137,16 +138,18 @@
 	// standard -5000 level. we have to set the window level higher, as a window
 	// with level INT_MIN+25 (the one used to put the window behind icons) will
 	// make the window sticky; seems to be a 'feature' of the apple window manager
-	//VTDesktop* desktop	= [[VTDesktopController sharedInstance] activeDesktop]; 
-	//NSWindow* window	= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]]; 
-	//[window setLevel: kVTNonActiveWindowLevel]; 
+	VTDesktop*				desktop		= [[VTDesktopController sharedInstance] activeDesktop]; 
+	ZNEffectWindow*		window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
+	[window setFadingAnimationTime: 0.3f];
+	[window fadeOut];
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// see onDesktopWillChange: on why we are doing the stuff we are doing
-	//VTDesktop* desktopToActivate	= [notification object]; 
-	//NSWindow* windowToActivate		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]; 
-	//[windowToActivate setLevel: (mDesktopWindowLevel + 1)];
+	VTDesktop*				desktopToActivate		= [notification object]; 
+	ZNEffectWindow*		windowToActivate		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]; 
+	[windowToActivate setFadingAnimationTime: 0.5f];
+	[windowToActivate fadeIn];
 }
 
 @end 
@@ -159,20 +162,12 @@
 	NSScreen* mainScreen = [NSScreen mainScreen];
 	
 	// the window 
-	NSWindow* window = [[[NSWindow alloc] initWithContentRect: 
-		[mainScreen frame] 
-		styleMask: NSBorderlessWindowMask 
-		backing: NSBackingStoreBuffered
-		defer: NO] autorelease];
+	ZNEffectWindow* window = [[[ZNEffectWindow alloc] initWithContentRect: [mainScreen frame] 
+																															styleMask: NSBorderlessWindowMask 
+																																backing: NSBackingStoreBuffered
+																																	defer: NO] autorelease];
 	
-	// we have to have different window levels for active and non-active windows 
-	// as the level we chose for the decoration window is automatically set sticky
-	// by the window manager. 
-	if ([desktop visible])
-		[window setLevel: (mDesktopWindowLevel + 1)];
-	else
-		[window setLevel: kVTNonActiveWindowLevel]; 
-
+	[window setLevel: (kCGDesktopWindowLevel + 1)];
 	[window setOpaque: NO];
 	
 	// create the view and set it to ignore mouse events 
@@ -184,9 +179,9 @@
 	[window setBackgroundColor: [NSColor clearColor]]; 	
 	[window setIgnoresMouseEvents: YES];
 	[window setFrame: frameRect display: NO];
-	[window setAlphaValue: 0.0];
+	[window setAlphaValue: 0.0f];
 	[window display];
-	[window orderWindow: NSWindowAbove relativeTo: kCGDesktopWindowLevelKey];
+	[window orderWindow: NSWindowAbove relativeTo: kCGDesktopWindowLevel];
 	
 	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];  
 	[desktopNameWindow setDesktop: desktop];
@@ -195,8 +190,9 @@
 	// By making it special, it will not show up in the window lists of the available desktops 
 	[desktopNameWindow setSpecial: YES]; 
 	[desktopNameWindow setIgnoredByExpose: YES]; 
-
-	[window setAlphaValue: 1.0];
+	[window setFadingAnimationTime: 1.0f];
+	if ([desktop visible])
+		[window fadeIn];
 	
 	return window; 
 }
