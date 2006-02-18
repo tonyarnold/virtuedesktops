@@ -73,30 +73,69 @@
 #pragma mark -
 @implementation VTPluginController(PluginLoading) 
 
+/* Change this path/code to point to your App's data store. */
+- (NSString *)applicationSupportFolder {
+	NSString *applicationSupportFolder = nil;
+	FSRef foundRef;
+	OSErr err = FSFindFolder(kUserDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
+	if (err != noErr) {
+		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
+		[[NSApplication sharedApplication] terminate:self];
+	} else {
+		unsigned char path[1024];
+		FSRefMakePath(&foundRef, path, sizeof(path));
+		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+	}
+	return applicationSupportFolder;
+}
+
+- (NSString *)globalApplicationSupportFolder {
+	NSString *applicationSupportFolder = nil;
+	FSRef foundRef;
+	OSErr err = FSFindFolder(kLocalDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
+	if (err != noErr) {
+		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
+		[[NSApplication sharedApplication] terminate:self];
+	} else {
+		unsigned char path[1024];
+		FSRefMakePath(&foundRef, path, sizeof(path));
+		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+	}
+	return applicationSupportFolder;
+}
+
 - (NSArray*) pluginSearchPaths {
-	return [NSArray arrayWithObjects: 
-		[[NSBundle mainBundle] builtInPlugInsPath], 
-		[[NSString stringWithFormat: @"~/Library/Application Support/%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]] stringByExpandingTildeInPath], 
-		[NSString stringWithFormat: @"/Library/Application Support/%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]], 
-		nil]; 
+	return [NSArray arrayWithObjects:
+			[[NSBundle mainBundle] builtInPlugInsPath], 
+			[self applicationSupportFolder], 
+			[self globalApplicationSupportFolder],
+			nil
+		]; 
 }
 
 - (void) ensurePluginSearchPaths {
 	// we will only handle the user specific paths here
-	NSString* rootPath	= [[NSString stringWithFormat: @"~/Library/Application Support/%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]] stringByExpandingTildeInPath]; 
-	NSString* path		= [[NSString stringWithFormat: @"~/Library/Application Support/%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]] stringByExpandingTildeInPath]; 
+	NSString* rootPath	= [self applicationSupportFolder]; 
+	NSString* path			= [NSString stringWithFormat: @"%@/PlugIns", rootPath]; 
 	
 	// check if it exists and create it if necessary 
 	BOOL isDirectory = NO; 
 	
 	if (([[NSFileManager defaultManager] fileExistsAtPath: rootPath isDirectory: &isDirectory] == NO) ||
 		(isDirectory == NO))
-		[[NSFileManager defaultManager] createDirectoryAtPath: rootPath attributes: nil]; 
-		
+	{
+		[[NSFileManager defaultManager] createDirectoryAtPath: rootPath 
+																							 attributes: nil]; 
+	}
 	
 	if (([[NSFileManager defaultManager] fileExistsAtPath: path isDirectory: &isDirectory] == NO) ||
 		(isDirectory == NO))
-		[[NSFileManager defaultManager] createDirectoryAtPath: path attributes: nil]; 
+	{
+		[[NSFileManager defaultManager] createDirectoryAtPath: path 
+																							 attributes: nil]; 
+	}
 }
 
 - (void) loadPlugin: (NSString*) path {
