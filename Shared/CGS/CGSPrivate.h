@@ -102,6 +102,7 @@ typedef enum {
 } CGSTransitionOption;
 
 typedef enum {
+	CGSTagNone					= 0,				// No tags
 	CGSTagExposeFade		= 0x0002,		// Fade out when Expose activates.
 	CGSTagNoShadow			= 0x0008,		// No window shadow.
 	CGSTagTransparent   = 0x0200,   // Transparent to mouse clicks.

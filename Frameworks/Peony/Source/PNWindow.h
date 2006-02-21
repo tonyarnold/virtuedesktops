@@ -111,6 +111,9 @@ enum
 - (BOOL) isIgnoredByExpose; 
 
 #pragma mark -
+- (void) clearWindowTags;
+
+#pragma mark -
 - (int) level; 
 - (void) setLevel: (int) level; 
 

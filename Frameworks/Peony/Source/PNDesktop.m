@@ -296,7 +296,7 @@
 		
 		CGSNewTransition(oConnection, &transSpec, &transNo);
 		CGSSetWorkspace(oConnection,mDesktopId);
-		usleep(700000);
+		usleep(10000);
 		
 	// notify listeners that we are now the active desktop
 	[[NSDistributedNotificationCenter defaultCenter]

@@ -63,8 +63,6 @@
 	<string>Virtue</string>
 	<key>NSPrincipalClass</key>
 	<string>VTApplication</string>
-	<key>SUCheckAtStartup</key>
-	<true/>
 	<key>SUFeedURL</key>
 	<string>http://tonyarnold.com/xml/rss20/category/virtue-appcast/feed.xml</string>
 </dict>

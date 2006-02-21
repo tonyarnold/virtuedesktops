@@ -147,8 +147,8 @@ void DEHandleTagsEvent(DecEvent* event) {
 	
 	int i; 
 	
-	CGSConnection	oConnection = _CGSDefaultConnection(); 
-	CGSWindowTag	oWindowTags[2];
+	CGSConnection	cgConnection = _CGSDefaultConnection(); 
+	CGSWindowTag	cgWindowTags[2];
 	
 	int					tags = dec_event_tags_value_get(eventTags); 
 	DecTagsType	type = dec_event_tags_type_get(eventTags); 
@@ -157,19 +157,19 @@ void DEHandleTagsEvent(DecEvent* event) {
 	   once as I do not know what [1] = 0 means for clearing / setting 
 	 */ 
 	for (i = 0; i < eventTargetsSize; i++) {
-		oWindowTags[0] = 0; 
-		oWindowTags[1] = 0;
+		cgWindowTags[0] = 0; 
+		cgWindowTags[1] = 0;
 
-		OSStatus oResult = CGSGetWindowTags(oConnection, eventTargets[i], oWindowTags, 32);
+		OSStatus oResult = CGSGetWindowTags(cgConnection, eventTargets[i], cgWindowTags, 32);
 		if (oResult) 
 			continue; 
 	
-		oWindowTags[0] = tags; 
+		cgWindowTags[0] = tags; 
 	
 		if (type == kDecTagsClear) {
-			CGSClearWindowTags(oConnection, eventTargets[i], oWindowTags, 32);
+			CGSClearWindowTags( cgConnection, eventTargets[i], cgWindowTags, 32 );
 		} else {
-			CGSSetWindowTags(oConnection, eventTargets[i], oWindowTags, 32); 
+			CGSSetWindowTags( cgConnection, eventTargets[i], cgWindowTags, 32 ); 
 		}
 	}
 	

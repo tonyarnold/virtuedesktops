@@ -142,15 +142,19 @@
 	VTDesktop*				desktop		= [[VTDesktopController sharedInstance] activeDesktop]; 
 	NSWindow*					window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
 	[window setLevel: kVTNonActiveWindowLevel];
-	//[window orderWindow: NSWindowBelow relativeTo: kVTNonActiveWindowLevel];
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// see onDesktopWillChange: on why we are doing the stuff we are doing
 	VTDesktop*				desktopToActivate		= [notification object]; 
 	NSWindow*					window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
-	//[window orderWindow: NSWindowAbove relativeTo: mDesktopWindowLevel];
-	[window setLevel: (kVTNonActiveWindowLevel + 1)];
+	PNWindow* pnwin = [PNWindow windowWithNSWindow: window];
+	[window orderWindow: NSWindowBelow relativeTo: 0];
+	[window setLevel: kCGDesktopWindowLevel];
+	
+	[pnwin setIgnoredByExpose: YES];
+	[pnwin setSticky: NO];
+	
 }
 
 @end 
@@ -169,9 +173,9 @@
 																																	defer: NO] autorelease];
 
 	if ([desktop visible])
-		[window setLevel: (kVTNonActiveWindowLevel + 1)];
+		[window setLevel: kCGDesktopWindowLevel];
 	else
-		[window setLevel: kVTNonActiveWindowLevel];
+		[window setLevel: kVTNonActiveWindowLevel]; 
 	
 	[window setOpaque: NO];
 	
@@ -184,19 +188,20 @@
 	[window setBackgroundColor: [NSColor clearColor]]; 	
 	[window setIgnoresMouseEvents: YES];
 	[window setFrame: frameRect display: NO];
-	[window setAlphaValue: 1.0f];
+	[window setAlphaValue: 0.0f];
 	[window display];
 	[window orderWindow: NSWindowBelow relativeTo: 0];
-		
 	
-	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];  
-	[desktopNameWindow setDesktop: desktop];
-	[desktopNameWindow setSticky: NO];
-	
+	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];  	
 	// By making it special, it will not show up in the window lists of the available desktops 
 	[desktopNameWindow setSpecial: YES]; 
-	[desktopNameWindow setIgnoredByExpose: YES]; 
+	[desktopNameWindow setDesktop: desktop];
 	
+	[desktopNameWindow setIgnoredByExpose: YES];
+	[desktopNameWindow setSticky: NO];
+	
+	[window setAlphaValue: 1.0];
+
 	return window; 
 }
 

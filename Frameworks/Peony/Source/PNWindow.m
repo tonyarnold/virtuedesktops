@@ -339,6 +339,16 @@
 	return mIsIgnoredByExpose;
 }
 
+#pragma mark -
+- (void) clearWindowTags {
+	int tags[2];
+	
+	tags[0] = 0x02;
+	tags[1] = 0;
+	
+	CGSExtClearWindowTags(mNativeWindow, tags);
+}
+
 
 #pragma mark -
 - (NSRect) screenRectangle {
