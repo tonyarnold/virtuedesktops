@@ -65,5 +65,11 @@
 	<string>VTApplication</string>
 	<key>SUFeedURL</key>
 	<string>http://tonyarnold.com/xml/rss20/category/virtue-appcast/feed.xml</string>
+	<key>SmartCrashReports_CompanyName</key>
+	<string>Tony Arnold</string>
+	<key>SmartCrashReports_EmailTicket</key>
+	<string>SCR-BB4DC15238</string>
+	<key>SmartCrashReports_CommentsTemplate</key>
+	<string>Please include your e-mail address if you wish to be contacted in regard to this crash.</string>
 </dict>
 </plist>

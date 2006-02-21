@@ -24,7 +24,7 @@
 #import "VTMatrixDesktopLayout.h" 
 #import "VTDesktopViewController.h"
 #import "VTApplicationViewController.h" 
-#import "VTPreferenceKeys.h" 
+#import "VTPreferenceKeys.h"
 
 #import "DECInjector.h"
 
@@ -240,6 +240,7 @@ enum
 		[[VTDesktopDecorationController sharedInstance] setDesktopWindowLevel: [desktopLayer intValue]]; 
 	}
 // END WORKAROUND
+	
 	mStartedUp = YES; 
 }
 
