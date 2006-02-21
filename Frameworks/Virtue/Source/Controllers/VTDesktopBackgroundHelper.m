@@ -186,13 +186,13 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	AppleEvent ev = {typeNull, nil};
 	AEAddressDesc addr = {typeNull, nil};
 	OSType sig;
-	NSURL *url;
 	BOOL eventResent = NO;
 	
 	// Get a URL to later convert to an alias
-	url = [NSURL fileURLWithPath:file];
+	NSURL *url = [NSURL fileURLWithPath: file];
 	if (NULL == url) {
-		// bail 
+		// bail
+		NSLog(@"[VTDesktopBackgroundHelper: 192] url was NULL.");
 		return;
 	}
 	

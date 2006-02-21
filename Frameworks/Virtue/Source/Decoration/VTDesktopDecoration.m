@@ -207,8 +207,8 @@
 	// forward to primitives if they are enabled, we will not call drawing 
 	// methods on a primitive if it is not enabled; we are drawing from the
 	// end to the begin of the array 
-	NSEnumerator*			primitiveIter	= [mDecorationPrimitives reverseObjectEnumerator]; 
-	VTDecorationPrimitive*	primitive		= nil; 
+	NSEnumerator*						primitiveIter	= [mDecorationPrimitives reverseObjectEnumerator]; 
+	VTDecorationPrimitive*	primitive			= nil; 
 	
 	while (primitive = [primitiveIter nextObject]) {
 		if ([primitive isEnabled])

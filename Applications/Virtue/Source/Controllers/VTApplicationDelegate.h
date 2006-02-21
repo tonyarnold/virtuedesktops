@@ -58,11 +58,6 @@
 - (IBAction) showStatusbarMenu: (id) sender; 
 
 #pragma mark -
-- (IBAction) emailAuthor: (id) sender; 
-- (IBAction) showProductWebsite: (id) sender; 
-- (IBAction) showDonationsWebsite: (id) sender; 
-
-#pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 
 
 @end

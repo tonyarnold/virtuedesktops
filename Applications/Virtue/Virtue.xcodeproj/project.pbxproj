@@ -227,6 +227,13 @@
 		EAB7C06B0924F9590067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C06C0924F95E0067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C06D0924F9670067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
+		EABF0E9209988D8600DC868A /* NSString+extras.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E8B09988D8600DC868A /* NSString+extras.h */; };
+		EABF0E9309988D8700DC868A /* NSString+extras.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E8C09988D8600DC868A /* NSString+extras.m */; };
+		EABF0E9409988D8700DC868A /* RSS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E8D09988D8600DC868A /* RSS.h */; };
+		EABF0E9509988D8700DC868A /* RSS.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E8E09988D8600DC868A /* RSS.m */; };
+		EABF0E9609988D8700DC868A /* Sparkle.strings in Resources */ = {isa = PBXBuildFile; fileRef = EABF0E8F09988D8600DC868A /* Sparkle.strings */; };
+		EABF0E9709988D8700DC868A /* SUUpdater.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E9009988D8600DC868A /* SUUpdater.h */; };
+		EABF0E9809988D8700DC868A /* SUUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E9109988D8600DC868A /* SUUpdater.m */; };
 		EAC2B5E0095E167600748870 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
 		EAC2B5E1095E167600748870 /* imageKeyboardTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = E959D6DD0763113400013EB2 /* imageKeyboardTrigger.png */; };
 		EAC2B5E2095E167600748870 /* imageMouseTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = E959D6DE0763113400013EB2 /* imageMouseTrigger.png */; };
@@ -812,6 +819,9 @@
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
 				EAC2B668095E173000748870 /* FocusApplication.h in CopyFiles */,
+				EABF0E9209988D8600DC868A /* NSString+extras.h in CopyFiles */,
+				EABF0E9409988D8700DC868A /* RSS.h in CopyFiles */,
+				EABF0E9709988D8700DC868A /* SUUpdater.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,6 +1213,13 @@
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EABF0E8B09988D8600DC868A /* NSString+extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extras.h"; sourceTree = "<group>"; };
+		EABF0E8C09988D8600DC868A /* NSString+extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extras.m"; sourceTree = "<group>"; };
+		EABF0E8D09988D8600DC868A /* RSS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS.h; sourceTree = "<group>"; };
+		EABF0E8E09988D8600DC868A /* RSS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSS.m; sourceTree = "<group>"; };
+		EABF0E8F09988D8600DC868A /* Sparkle.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Sparkle.strings; sourceTree = "<group>"; };
+		EABF0E9009988D8600DC868A /* SUUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUUpdater.h; sourceTree = "<group>"; };
+		EABF0E9109988D8600DC868A /* SUUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUUpdater.m; sourceTree = "<group>"; };
 		EAC2B658095E167600748870 /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC2B666095E173000748870 /* FocusApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusApplication.h; sourceTree = "<group>"; };
 		EAC2B667095E173000748870 /* FocusApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusApplication.m; sourceTree = "<group>"; };
@@ -1432,6 +1449,7 @@
 				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
 				E9127278072AAA22006DC207 /* Property Lists */,
 				E91ADC3307057EFF00F69228 /* Scripting */,
+				EABF0E8A09988D8600DC868A /* Sparkle */,
 				EAC2B6A2095E19B200748870 /* focus_Prefix.pch */,
 				32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */,
 			);
@@ -1949,6 +1967,21 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		EABF0E8A09988D8600DC868A /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				EABF0E8B09988D8600DC868A /* NSString+extras.h */,
+				EABF0E8C09988D8600DC868A /* NSString+extras.m */,
+				EABF0E8D09988D8600DC868A /* RSS.h */,
+				EABF0E8E09988D8600DC868A /* RSS.m */,
+				EABF0E8F09988D8600DC868A /* Sparkle.strings */,
+				EABF0E9009988D8600DC868A /* SUUpdater.h */,
+				EABF0E9109988D8600DC868A /* SUUpdater.m */,
+			);
+			name = Sparkle;
+			path = ../../Shared/Sparkle/Sparkle;
+			sourceTree = SOURCE_ROOT;
 		};
 		EAF8C92B09076E8C003D54B1 /* Products */ = {
 			isa = PBXGroup;
@@ -2866,6 +2899,7 @@
 				EAC2B688095E17EC00748870 /* Focus.plist in Resources */,
 				EAC2B689095E17EC00748870 /* Info.plist in Resources */,
 				EAC2BF80095EA0E300748870 /* Virtue.nib in Resources */,
+				EABF0E9609988D8700DC868A /* Sparkle.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3112,6 +3146,9 @@
 				E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */,
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
 				EAC2B669095E173000748870 /* FocusApplication.m in Sources */,
+				EABF0E9309988D8700DC868A /* NSString+extras.m in Sources */,
+				EABF0E9509988D8700DC868A /* RSS.m in Sources */,
+				EABF0E9809988D8700DC868A /* SUUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

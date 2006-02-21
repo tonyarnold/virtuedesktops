@@ -118,7 +118,7 @@
 	PNDesktop* desktop = [[PNDesktop alloc] initWithId: mDesktopId andName: mDesktopName update: NO];
 
 	// and initialize
-	desktop->mWindows		= [mWindows retain];
+	desktop->mWindows				= [mWindows retain];
 	desktop->mApplications	= [mApplications retain];
 
 	return desktop;
@@ -292,18 +292,19 @@
 		transSpec.type				= transition;
 		transSpec.option			= option;
 		transSpec.wid					= 0;
-		transSpec.backColour	= 0;
+		transSpec.backColour	= NULL;
 		
 		CGSNewTransition(oConnection, &transSpec, &transNo);
 		CGSSetWorkspace(oConnection,mDesktopId);
-		usleep(10000);
-		CGSInvokeTransition(oConnection, transNo, seconds);
-
+		usleep(700000);
+		
 	// notify listeners that we are now the active desktop
 	[[NSDistributedNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
 	[[NSNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopDidActivate object: self];
+	CGSInvokeTransition(oConnection, transNo, seconds);
+
 }
 
 #pragma mark -

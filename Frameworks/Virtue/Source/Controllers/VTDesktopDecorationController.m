@@ -94,6 +94,7 @@
 	
 	NSWindow* activeDesktopWindow = [mWindows objectForKey: [NSNumber numberWithInt: [[[VTDesktopController sharedInstance] activeDesktop] identifier]]]; 
 	[activeDesktopWindow setLevel: (mDesktopWindowLevel + 1)];
+	
 }
 
 #pragma mark -
@@ -139,17 +140,17 @@
 	// with level INT_MIN+25 (the one used to put the window behind icons) will
 	// make the window sticky; seems to be a 'feature' of the apple window manager
 	VTDesktop*				desktop		= [[VTDesktopController sharedInstance] activeDesktop]; 
-	ZNEffectWindow*		window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
-	[window setFadingAnimationTime: 0.3f];
-	[window fadeOut];
+	NSWindow*					window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
+	[window setLevel: kVTNonActiveWindowLevel];
+	//[window orderWindow: NSWindowBelow relativeTo: kVTNonActiveWindowLevel];
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// see onDesktopWillChange: on why we are doing the stuff we are doing
 	VTDesktop*				desktopToActivate		= [notification object]; 
-	ZNEffectWindow*		windowToActivate		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]; 
-	[windowToActivate setFadingAnimationTime: 0.5f];
-	[windowToActivate fadeIn];
+	NSWindow*					window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
+	//[window orderWindow: NSWindowAbove relativeTo: mDesktopWindowLevel];
+	[window setLevel: (kVTNonActiveWindowLevel + 1)];
 }
 
 @end 
@@ -162,12 +163,16 @@
 	NSScreen* mainScreen = [NSScreen mainScreen];
 	
 	// the window 
-	ZNEffectWindow* window = [[[ZNEffectWindow alloc] initWithContentRect: [mainScreen frame] 
+	NSWindow* window = [[[NSWindow alloc] initWithContentRect: [mainScreen frame] 
 																															styleMask: NSBorderlessWindowMask 
 																																backing: NSBackingStoreBuffered
 																																	defer: NO] autorelease];
+
+	if ([desktop visible])
+		[window setLevel: (kVTNonActiveWindowLevel + 1)];
+	else
+		[window setLevel: kVTNonActiveWindowLevel];
 	
-	[window setLevel: (kCGDesktopWindowLevel + 1)];
 	[window setOpaque: NO];
 	
 	// create the view and set it to ignore mouse events 
@@ -179,9 +184,10 @@
 	[window setBackgroundColor: [NSColor clearColor]]; 	
 	[window setIgnoresMouseEvents: YES];
 	[window setFrame: frameRect display: NO];
-	[window setAlphaValue: 0.0f];
+	[window setAlphaValue: 1.0f];
 	[window display];
-	[window orderWindow: NSWindowAbove relativeTo: kCGDesktopWindowLevel];
+	[window orderWindow: NSWindowBelow relativeTo: 0];
+		
 	
 	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];  
 	[desktopNameWindow setDesktop: desktop];
@@ -190,9 +196,6 @@
 	// By making it special, it will not show up in the window lists of the available desktops 
 	[desktopNameWindow setSpecial: YES]; 
 	[desktopNameWindow setIgnoredByExpose: YES]; 
-	[window setFadingAnimationTime: 1.0f];
-	if ([desktop visible])
-		[window fadeIn];
 	
 	return window; 
 }

@@ -105,9 +105,11 @@ enum
 	
 	// Set-up default preferences 
 	[VTPreferences registerDefaults]; 
+	
 	// and ensure we have our version information in there 
 	[[NSUserDefaults standardUserDefaults] setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"VTPreferencesVirtueVersionName"]; 
-	[[NSUserDefaults standardUserDefaults] synchronize]; 
+	
+	[[NSUserDefaults standardUserDefaults] synchronize];
 	
 	// load plugins 
 	mPluginController = [[VTPluginController alloc] init]; 
@@ -288,18 +290,18 @@ enum
 	[self updateStatusItem]; 
 }
 
-#pragma mark -
-- (IBAction) emailAuthor: (id) sender {
-	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:playback@users.sourceforge.net?subject=Virtue%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
-}
-
-- (IBAction) showProductWebsite: (id) sender {
-	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.sourceforge.net"]];
-}
-
-- (IBAction) showDonationsWebsite: (id) sender {
-	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.sourceforge.net/donations.html"]];
-}
+//#pragma mark -
+//- (IBAction) emailAuthor: (id) sender {
+//	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:playback@users.sourceforge.net?subject=Virtue%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
+//}
+//
+//- (IBAction) showProductWebsite: (id) sender {
+//	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.sourceforge.net"]];
+//}
+//
+//- (IBAction) showDonationsWebsite: (id) sender {
+//	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.sourceforge.net/donations.html"]];
+//}
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender {

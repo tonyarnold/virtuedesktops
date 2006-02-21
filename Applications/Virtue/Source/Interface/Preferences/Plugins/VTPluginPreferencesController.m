@@ -59,16 +59,24 @@
 
 - (NSData*) pluginDescriptionHelper {
 	if ([self pluginDescriptionPath] != nil) {
-		NSDictionary*				attr; 
-		NSURL*						path = [NSURL fileURLWithPath: [mBundle pathForResource: [self pluginDescriptionPath] ofType: @"rtfd"]]; 
+		NSDictionary*								attr;
+		NSData*											data = nil;
+		NSURL*											path = [NSURL fileURLWithPath: [mBundle pathForResource: [self pluginDescriptionPath] ofType: @"rtfd"]]; 
 		NSMutableAttributedString*	text = [[[NSMutableAttributedString alloc] init] autorelease];
+		
+		if (NULL == path)
+		{
+			NSLog(@"[VTPluginPreferencesController: 64] path was NULL.");
+			return;
+		}
+	
 		[text readFromURL: path options: nil documentAttributes: &attr]; 
-		NSData*				data = [text RTFDFromRange: NSMakeRange(0, [text length]) documentAttributes: attr]; 
+		data = [text RTFDFromRange: NSMakeRange(0, [text length]) documentAttributes: attr];
 		
 		return data; 
 	}
 	
-	return [NSData dataWithData:[[self pluginDescription] dataUsingEncoding:NSISOLatin1StringEncoding]];
+	return [NSData dataWithData:[[self pluginDescription] dataUsingEncoding: NSISOLatin1StringEncoding]];
 }
 
 @end 

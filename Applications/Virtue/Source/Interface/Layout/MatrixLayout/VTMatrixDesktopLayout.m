@@ -306,10 +306,9 @@
 #pragma mark -
 #pragma mark VTDesktopLayout implementation 
 - (VTDesktop*) desktopInDirection: (VTDirection) direction ofDesktop: (VTDesktop*) desktop {
-	int			indexOfReferenceDesktop = [self indexOfDesktop: desktop]; 
-	
-	int			indicesArrayIncrement	= 0; 
-	NSArray*	indicesArray			= nil; 
+	int				indexOfReferenceDesktop = [self indexOfDesktop: desktop]; 
+	int				indicesArrayIncrement		= 0; 
+	NSArray*	indicesArray						= nil; 
 	
 	if (direction == kVtDirectionEast) {
 		indicesArrayIncrement = 1; 
@@ -379,12 +378,15 @@
 	unsigned int indexOfTarget			=	[self indexOfDesktop: desktop]; 
 	unsigned int indexOfReference   = [self indexOfDesktop: referenceDesktop]; 
 	// and also their rows...
-	int rowOfTarget			= [self rowForIndex: indexOfTarget]; 
-	int rowOfReference  = [self rowForIndex: indexOfReference]; 
-	
+	int rowOfTarget					= [self rowForIndex: indexOfTarget]; 
+	int rowOfReference			= [self rowForIndex: indexOfReference]; 
 	int columnOfTarget			= [self columnForIndex: indexOfTarget];
 	int columnOfReference		=	[self columnForIndex: indexOfReference];
 	
+	
+	// Interesting problem here:
+	//	None of Apple's transitions appear to be finished -- they don't support diagonal directions properly (those that do are reversed)
+	//	Another argument for CoreImage transitions? (if they're ever fast enough)
 	
 	// If they are in the same row.. 
 	if (rowOfTarget == rowOfReference) {
@@ -480,9 +482,9 @@
 	// resize and fill empty slots with null markers 
 	NSMutableArray*	newLayout = [[NSMutableArray alloc] initWithCapacity: (mRows * mColumns)]; 
 
-	NSEnumerator*	oldIter	= [mDesktopLayout objectEnumerator]; 
-	NSString*		old		= nil; 
-	int				index	= 0; 
+	NSEnumerator*		oldIter		= [mDesktopLayout objectEnumerator]; 
+	NSString*				old				= nil; 
+	int							index			= 0; 
 	
 	// copy over old entries 
 	while ((index < (mRows * mColumns)) && (old = [oldIter nextObject])) {

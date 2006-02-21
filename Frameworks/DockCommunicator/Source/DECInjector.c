@@ -178,7 +178,7 @@ OSErr dec_inject_code()
 	//	Convert PSN to PID.
 	pid_t dockpid;
 	if( !err )
-		err = mac_err( GetProcessPID( &psn, &dockpid ));
+		err = mac_err( GetProcessPID( &psn, &dockpid ) );
 	//if( !err )
 	//    printf( "pid: %ld\n", (long) dockpid );
 	
@@ -226,13 +226,13 @@ OSErr dec_kill_dock()
 OSErr dec_find_process_by_signature(OSType a_oType, OSType a_oCreator, ProcessSerialNumber* a_poSerial) 
 {
 	ProcessSerialNumber oTempSerial = {0, kNoProcess};
-	ProcessInfoRec		oProcessInfo;
+	ProcessInfoRec			oProcessInfo;
 	
 	OSErr oError = noErr;
 	
 	oProcessInfo.processInfoLength  = sizeof(ProcessInfoRec);
-	oProcessInfo.processName		= nil;
-	oProcessInfo.processAppSpec		= nil;
+	oProcessInfo.processName				= nil;
+	oProcessInfo.processAppSpec			= nil;
 	
 	while (!oError) 
 	{

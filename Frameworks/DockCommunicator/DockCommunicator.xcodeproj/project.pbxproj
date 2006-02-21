@@ -382,6 +382,7 @@
 		EAE822AF0924A5DC00239477 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;

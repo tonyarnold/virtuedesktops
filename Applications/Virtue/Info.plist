@@ -37,6 +37,8 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>Virtue</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Virtue version 0.51</string>
 	<key>CFBundleIconFile</key>
 	<string>iconVirtue</string>
 	<key>CFBundleIdentifier</key>
@@ -47,10 +49,12 @@
 	<string>Virtue</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.51</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.51 (r0000)</string>
+	<string>0.51r0000</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSAppleScriptEnabled</key>
@@ -59,5 +63,9 @@
 	<string>Virtue</string>
 	<key>NSPrincipalClass</key>
 	<string>VTApplication</string>
+	<key>SUCheckAtStartup</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>http://tonyarnold.com/xml/rss20/category/virtue-appcast/feed.xml</string>
 </dict>
 </plist>

@@ -15,8 +15,8 @@
 #import "VTDesktopDecoration.h" 
 #import "VTDesktop.h" 
 
-//#define kCGDesktopBackgroundWindowLevel		(-2147483547)
-//#define kCGDesktopIconWindowLevel					(-2147483507)
+#define kCGDesktopBackgroundWindowLevel		(-2147483547)
+#define kCGDesktopIconWindowLevel					(-2147483507)
 
 @interface VTDesktopDecorationController : NSObject {
 	NSMutableDictionary*	mWindows;				//!< Windows indexed by desktop id 
