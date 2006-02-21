@@ -341,11 +341,15 @@
 - (void) deserializeDesktops {
 	// desktop id 
 	int  desktopId = [PNDesktop firstDesktopIdentifier];
+	NSString* dataFilePath = [self _pathForDataFile];
+	NSArray*	serialisedDesktops;
 	
-	NSArray*			serialisedDesktops					= [[NSArray alloc] initWithContentsOfFile: [self _pathForDataFile]];
+	if (dataFilePath)
+		serialisedDesktops = [[NSArray alloc] initWithContentsOfFile: dataFilePath];
+	
 	NSEnumerator*	serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
 	NSDictionary*	serialisedDesktopDictionary;
-	
+		
 	while (serialisedDesktopDictionary = [serialisedDesktopsIterator nextObject]) {
 		VTDesktop*	desktop	= [[VTDesktop alloc] initWithName: [serialisedDesktopDictionary valueForKey: @"name"]  identifier: desktopId];  
 		[desktop decodeFromDictionary: serialisedDesktopDictionary]; 
@@ -369,9 +373,11 @@
 	// bind to active desktop 
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
-	// and apply settings of active desktop 
-	mExpectingBackgroundChange = YES;
-	[activeDesktop applyDesktopBackground];
+	if ([activeDesktop showsBackground]) {
+		// and apply settings of active desktop 
+		mExpectingBackgroundChange = YES;
+		[activeDesktop applyDesktopBackground];
+	}
 }
 
 #pragma mark -
@@ -475,18 +481,9 @@
 @implementation VTDesktopController (Private) 
 
 - (void) createDefaultDesktops {
-	NSArray* defaultDesktops = nil; 
+	NSArray* defaultDesktops;
 	
-	// try to find the defaults definition in the main bundle 
-	NSString* defaultsPath = [[NSBundle mainBundle] pathForResource: @"DefaultDesktops" ofType: @"plist"]; 
-	if (defaultsPath == nil) {
-		// eeeks, could not find our default desktops, lets come up with something 
-		// at least
-		defaultDesktops = [NSArray arrayWithObjects: @"Main Desktop", "eDesktop", "Fun", "Misc", nil]; 
-	}
-	else {
-		defaultDesktops = [NSArray arrayWithContentsOfFile: defaultsPath]; 
-	}
+	defaultDesktops = [NSArray arrayWithObjects: @"Main", @"Mail", @"Browsing", @"Code", nil];
 	
 	// now iterate and create desktops 
 	NSEnumerator*	desktopNameIter	= [defaultDesktops objectEnumerator]; 
@@ -665,24 +662,38 @@
 	if ([desktop showsBackground]) {
 		[desktop applyDesktopBackground]; 
 	}
-	else {
+	else 
+	{
 		[desktop applyDefaultDesktopBackground]; 
 	}
 }
 
+// @TODO@ Modularise this into another time and place
+- (NSString *)applicationSupportFolder {
+	NSString *applicationSupportFolder = nil;
+	FSRef foundRef;
+	OSErr err = FSFindFolder(kUserDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
+	if (err != noErr) {
+		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
+		[[NSApplication sharedApplication] terminate:self];
+	} else {
+		unsigned char path[1024];
+		FSRefMakePath(&foundRef, path, sizeof(path));
+		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+	}
+	return applicationSupportFolder;
+}
+
 - (NSString *) _pathForDataFile {
   NSFileManager *fileManager = [NSFileManager defaultManager];
-	
-  NSString *folder = @"~/Library/Application Support/Virtue/";
-  folder = [folder stringByExpandingTildeInPath];
+  NSString *folder = [self applicationSupportFolder];
+	NSString *file	 = [folder stringByAppendingPathComponent: @"Desktops.virtuedata"];
 	
   if ([fileManager fileExistsAtPath: folder] == NO)
-  {
-    [fileManager createDirectoryAtPath: folder attributes: nil];
-  }
+    [fileManager createDirectoryAtPath: folder attributes: nil];	
 	
-  NSString *fileName = @"Desktops.virtuedata";
-  return [folder stringByAppendingPathComponent: fileName];    
+  return file;    
 }
 
 @end 
