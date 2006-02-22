@@ -578,7 +578,10 @@
 	}
 	// now do it ;)
 
-	[self doActivateDesktop: desktop usingTransition: type withOptions: option andDuration: duration]; 
+	[self doActivateDesktop: desktop 
+					usingTransition: type 
+							withOptions: option 
+							andDuration: duration];
 }
 
 - (void) doActivateDesktop: (VTDesktop*) desktop usingTransition: (PNTransitionType) type withOptions: (PNTransitionOption) option andDuration: (float) duration {
@@ -592,6 +595,7 @@
 		return;
 	if (option == kPnOptionAny && type != kPnTransitionNone)
 		return;
+	
 	// here we are sure we want to switch desktops, so we will trigger some 
 	// notifications by hand to inform our plugins 
 	NSMethodSignature*	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
@@ -609,6 +613,7 @@
 	} else {
 		[desktop activateWithTransition: type option: option duration: duration]; 
 	}
+	
 	// and again to tell our clients we are done 
 	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
 	invocation	= [NSInvocation invocationWithMethodSignature: signature];

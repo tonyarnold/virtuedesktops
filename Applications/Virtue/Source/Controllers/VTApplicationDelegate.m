@@ -28,6 +28,8 @@
 
 #import "DECInjector.h"
 
+#import "../../../../Shared/Smart Crash Reports SDK/SmartCrashReportsInstall.h"
+
 enum
 {
 	kVtMenuItemMagicNumber				= 666,
@@ -99,7 +101,13 @@ enum
 #pragma mark -
 #pragma mark Bootstrapping 
 
-- (void) bootstrap {	
+- (void) bootstrap {
+	// Let's make sure that Unsanity's Smart Crash Reports is installed before we begin
+	Boolean authenticationWillBeRequired = FALSE;
+	if (UnsanitySCR_CanInstall(&authenticationWillBeRequired))
+		UnsanitySCR_Install(authenticationWillBeRequired ? kUnsanitySCR_GlobalInstall : 0);
+	
+	
 	// Inject dock extension code into the Dock process
 	dec_inject_code();
 	
@@ -267,7 +275,7 @@ enum
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
 	
 	[mPreferenceController window]; 
-	[mPreferenceController showWindow: self]; 
+	[mPreferenceController showWindow: self];
 }
 
 - (IBAction) showHelp: (id) sender {

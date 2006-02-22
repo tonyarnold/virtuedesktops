@@ -284,7 +284,7 @@
 		postNotificationName: kPnOnDesktopWillActivate object: self];
 
 	// get connection
-		CGSConnection oConnection = _CGSDefaultConnection();
+		CGSConnection cgConnection = _CGSDefaultConnection();
 
 		int transNo = -1;
 		CGSTransitionSpec transSpec;
@@ -294,17 +294,16 @@
 		transSpec.wid					= 0;
 		transSpec.backColour	= NULL;
 		
-		CGSNewTransition(oConnection, &transSpec, &transNo);
-		CGSSetWorkspace(oConnection,mDesktopId);
-		usleep(10000);
+		CGSNewTransition(cgConnection, &transSpec, &transNo);
+		CGSSetWorkspace(cgConnection,mDesktopId);
+		usleep(1000000);
+		CGSInvokeTransition(cgConnection, transNo, seconds);
 		
 	// notify listeners that we are now the active desktop
 	[[NSDistributedNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
 	[[NSNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopDidActivate object: self];
-	CGSInvokeTransition(oConnection, transNo, seconds);
-
 }
 
 #pragma mark -
@@ -315,7 +314,7 @@
 	[self updateDesktop];
 	// now go through the list of windows and move them to the passed desktop
 	NSEnumerator*		windowIter = [mWindows objectEnumerator];
-	PNWindow*		window		 = nil;
+	PNWindow*				window		 = nil;
 
 	// TODO: Move functionality to use a PNWindowList for mass-window
 	//		 operations

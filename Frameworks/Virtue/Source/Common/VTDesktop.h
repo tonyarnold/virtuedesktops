@@ -69,7 +69,5 @@
 #pragma mark Class method 
 
 + (NSString*) currentDesktopBackground; 
-+ (NSString*) virtualDesktopContainerPath; 
-+ (NSString*) desktopContainerPath; 
 
 @end

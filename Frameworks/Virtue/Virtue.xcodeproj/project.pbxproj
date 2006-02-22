@@ -205,8 +205,6 @@
 		E91244DC073033F500BD28CD /* VTDesktopController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopController.m; sourceTree = "<group>"; };
 		E91244DD073033F500BD28CD /* VTDesktopDecorationController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopDecorationController.h; sourceTree = "<group>"; };
 		E91244DE073033F500BD28CD /* VTDesktopDecorationController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopDecorationController.m; sourceTree = "<group>"; };
-		E91244DF073033F500BD28CD /* VTDesktopFilesystemController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDesktopFilesystemController.h; sourceTree = "<group>"; };
-		E91244E0073033F500BD28CD /* VTDesktopFilesystemController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDesktopFilesystemController.m; sourceTree = "<group>"; };
 		E91244E3073033F500BD28CD /* VTLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTLayoutController.h; sourceTree = "<group>"; };
 		E91244E4073033F500BD28CD /* VTLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTLayoutController.m; sourceTree = "<group>"; };
 		E91244E5073033F500BD28CD /* VTMouseWatcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTMouseWatcher.h; sourceTree = "<group>"; };
@@ -442,8 +440,6 @@
 				E91244DC073033F500BD28CD /* VTDesktopController.m */,
 				E91244DD073033F500BD28CD /* VTDesktopDecorationController.h */,
 				E91244DE073033F500BD28CD /* VTDesktopDecorationController.m */,
-				E91244DF073033F500BD28CD /* VTDesktopFilesystemController.h */,
-				E91244E0073033F500BD28CD /* VTDesktopFilesystemController.m */,
 				E91244E3073033F500BD28CD /* VTLayoutController.h */,
 				E91244E4073033F500BD28CD /* VTLayoutController.m */,
 				E91244E5073033F500BD28CD /* VTMouseWatcher.h */,

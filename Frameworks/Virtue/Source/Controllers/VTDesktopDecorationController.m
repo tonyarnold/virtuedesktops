@@ -139,22 +139,19 @@
 	// standard -5000 level. we have to set the window level higher, as a window
 	// with level INT_MIN+25 (the one used to put the window behind icons) will
 	// make the window sticky; seems to be a 'feature' of the apple window manager
-	VTDesktop*				desktop		= [[VTDesktopController sharedInstance] activeDesktop]; 
-	NSWindow*					window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
+	VTDesktop*	desktop			= [[VTDesktopController sharedInstance] activeDesktop]; 
+	NSWindow*		window			= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
 	[window setLevel: kVTNonActiveWindowLevel];
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// see onDesktopWillChange: on why we are doing the stuff we are doing
-	VTDesktop*				desktopToActivate		= [notification object]; 
-	NSWindow*					window		= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
-	PNWindow* pnwin = [PNWindow windowWithNSWindow: window];
-	[window orderWindow: NSWindowBelow relativeTo: 0];
-	[window setLevel: kCGDesktopWindowLevel];
-	
-	[pnwin setIgnoredByExpose: YES];
-	[pnwin setSticky: NO];
-	
+	VTDesktop*	desktopToActivate		= [notification object]; 
+//	NSWindow*		window							= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
+	PNWindow* peonyWindow						= [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
+	[peonyWindow setLevel: (mDesktopWindowLevel + 1)];
+	[peonyWindow setIgnoredByExpose: YES];
+	[peonyWindow setSticky: NO];	
 }
 
 @end 
@@ -173,7 +170,7 @@
 																																	defer: NO] autorelease];
 
 	if ([desktop visible])
-		[window setLevel: kCGDesktopWindowLevel];
+		[window setLevel: (mDesktopWindowLevel + 1)];
 	else
 		[window setLevel: kVTNonActiveWindowLevel]; 
 	
@@ -184,7 +181,7 @@
 	VTDesktopDecorationView* view = [[[VTDesktopDecorationView alloc] initWithFrame: frameRect withDecoration: decoration] autorelease];
 	
 	// attach view to window 
-	[window setContentView: view]; 
+	[window setContentView: view];
 	[window setBackgroundColor: [NSColor clearColor]]; 	
 	[window setIgnoresMouseEvents: YES];
 	[window setFrame: frameRect display: NO];
@@ -192,14 +189,13 @@
 	[window display];
 	[window orderWindow: NSWindowBelow relativeTo: 0];
 	
-	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];  	
+	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];
+	
 	// By making it special, it will not show up in the window lists of the available desktops 
 	[desktopNameWindow setSpecial: YES]; 
 	[desktopNameWindow setDesktop: desktop];
-	
 	[desktopNameWindow setIgnoredByExpose: YES];
 	[desktopNameWindow setSticky: NO];
-	
 	[window setAlphaValue: 1.0];
 
 	return window; 

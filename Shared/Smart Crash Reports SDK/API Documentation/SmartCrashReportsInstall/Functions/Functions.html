@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>Functions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1><br>
+<a name="HeaderDoc_functions"></a>
+<dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_CanInstall" target="doc">UnsanitySCR_CanInstall</a></tt></dt>
+<dd>Check whether this library can install Smart Crash Reports on user's system.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_Install" target="doc">UnsanitySCR_Install</a></tt></dt>
+<dd>Attempt to install Smart Crash Reports on user's system.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_InstallableVersion" target="doc">UnsanitySCR_InstallableVersion</a></tt></dt>
+<dd>Get the version of Smart Crash Reports that this library can install.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_InstalledVersion" target="doc">UnsanitySCR_InstalledVersion</a></tt></dt>
+<dd>Get the version of Smart Crash Reports installed on user's system.
+</dd>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_CanInstall;  name=UnsanitySCR_CanInstall -->
+<a name="//apple_ref/c/func/UnsanitySCR_CanInstall"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_CanInstall">UnsanitySCR_CanInstall</a></h3>
+</td></tr></table><hr><dl></dl><p>Check whether this library can install Smart Crash Reports on user's system.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_CanInstall //apple_ref/c/clm/UnsanitySCR_CanInstall //apple_ref/c/intfcm/UnsanitySCR_CanInstall //apple_ref/c/func/UnsanitySCR_CanInstall //apple_ref/c/ftmplt/UnsanitySCR_CanInstall //apple_ref/c/defn/UnsanitySCR_CanInstall //apple_ref/c/macro/UnsanitySCR_CanInstall" --><font class="function">UnsanitySCR_CanInstall</font><!-- /a -->(
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a -->*<font class="param">outOptionalAuthenticationWillBeRequired</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>outOptionalAuthenticationWillBeRequired</i></code></dt><dd>If this is not NULL, the Boolean the param points to will be set to TRUE if an authentication will be
+required to install Smart Crash Reports.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>TRUE if Smart Crash Reports can be installed, or FALSE if they are already installed (of the same or newer version).
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Returns whether Smart Crash Reports can be installed.
+</p>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_Install;  name=UnsanitySCR_Install -->
+<a name="//apple_ref/c/func/UnsanitySCR_Install"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_Install">UnsanitySCR_Install</a></h3>
+</td></tr></table><hr><dl></dl><p>Attempt to install Smart Crash Reports on user's system.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_Install //apple_ref/c/clm/UnsanitySCR_Install //apple_ref/c/intfcm/UnsanitySCR_Install //apple_ref/c/func/UnsanitySCR_Install //apple_ref/c/ftmplt/UnsanitySCR_Install //apple_ref/c/defn/UnsanitySCR_Install //apple_ref/c/macro/UnsanitySCR_Install" --><font class="function">UnsanitySCR_Install</font><!-- /a -->(
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inInstallFlags</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inInstallFlags</i></code></dt><dd>A bit mask containing the installation options. Please see the constants UnsanitySCR_Install_Flags for more information on
+individual flags.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>One of the <code>UnsanitySCR_Install_ErrorCode</code> result codes.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Presents a dialog asking the user if he/she want to install Smart Crash Reports, along with a link for more information, and Don't Show Again checkbox,
+and, if confirmed by the user, installs Smart Crash Reports from the library's archive, if possible. The confirmation dialog will block the host application
+until the user makes the choice.
+</p>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_InstallableVersion;  name=UnsanitySCR_InstallableVersion -->
+<a name="//apple_ref/c/func/UnsanitySCR_InstallableVersion"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_InstallableVersion">UnsanitySCR_InstallableVersion</a></h3>
+</td></tr></table><hr><dl></dl><p>Get the version of Smart Crash Reports that this library can install.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_InstallableVersion //apple_ref/c/clm/UnsanitySCR_InstallableVersion //apple_ref/c/intfcm/UnsanitySCR_InstallableVersion //apple_ref/c/func/UnsanitySCR_InstallableVersion //apple_ref/c/ftmplt/UnsanitySCR_InstallableVersion //apple_ref/c/defn/UnsanitySCR_InstallableVersion //apple_ref/c/macro/UnsanitySCR_InstallableVersion" --><font class="function">UnsanitySCR_InstallableVersion</font><!-- /a -->(); </pre></blockquote>
+<dl><dt><i>function result</i></dt><dd>UInt32 containing the version of Smart Crash Reports (in CFBundleGetVersionNumber() format) bundled in this library.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Returns the version of Smart Crash Reports that this library can install.
+</p>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_InstalledVersion;  name=UnsanitySCR_InstalledVersion -->
+<a name="//apple_ref/c/func/UnsanitySCR_InstalledVersion"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_InstalledVersion">UnsanitySCR_InstalledVersion</a></h3>
+</td></tr></table><hr><dl></dl><p>Get the version of Smart Crash Reports installed on user's system.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_InstalledVersion //apple_ref/c/clm/UnsanitySCR_InstalledVersion //apple_ref/c/intfcm/UnsanitySCR_InstalledVersion //apple_ref/c/func/UnsanitySCR_InstalledVersion //apple_ref/c/ftmplt/UnsanitySCR_InstalledVersion //apple_ref/c/defn/UnsanitySCR_InstalledVersion //apple_ref/c/macro/UnsanitySCR_InstalledVersion" --><font class="function">UnsanitySCR_InstalledVersion</font><!-- /a -->(
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a -->*<font class="param">outOptionalIsInstalledGlobally</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>outOptionalIsInstalledGlobally</i></code></dt><dd>If this is not NULL, the Boolean the param points to will hold TRUE if Smart Crash Reports are installed for all
+users, or FALSE if they are installed for the current user only.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>UInt32 containing the version of Smart Crash Reports (in CFBundleGetVersionNumber() format), or 0 if Smart Crash Reports
+are not installed.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Returns the version of Smart Crash Reports installed on user's system.
+</p>
+</dl>
+<p>(Last Updated February 09, 2006)
+</p></body></html>

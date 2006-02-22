@@ -227,6 +227,13 @@
 		EAB7C06B0924F9590067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C06C0924F95E0067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C06D0924F9670067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
+		EABDFE4A09AC936700C523BA /* SmartCrashReportsInstall.o in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE4209AC935300C523BA /* SmartCrashReportsInstall.o */; };
+		EABDFE5D09AC947600C523BA /* SmartCrashReportsAPI.o in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE4009AC935300C523BA /* SmartCrashReportsAPI.o */; };
+		EABDFE9109AC94D400C523BA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE6609AC94D400C523BA /* CoreFoundation.framework */; };
+		EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE9209AC94E500C523BA /* Security.framework */; };
+		EABDFEC809AC94E500C523BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE9209AC94E500C523BA /* Security.framework */; };
+		EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */; };
+		EABDFECB09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */; };
 		EABF0E9209988D8600DC868A /* NSString+extras.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E8B09988D8600DC868A /* NSString+extras.h */; };
 		EABF0E9309988D8700DC868A /* NSString+extras.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E8C09988D8600DC868A /* NSString+extras.m */; };
 		EABF0E9409988D8700DC868A /* RSS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E8D09988D8600DC868A /* RSS.h */; };
@@ -1213,6 +1220,26 @@
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EABDFE2F09AC935300C523BA /* CompositePage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = CompositePage.html; sourceTree = "<group>"; };
+		EABDFE3109AC935300C523BA /* Functions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = Functions.html; sourceTree = "<group>"; };
+		EABDFE3209AC935300C523BA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		EABDFE3309AC935300C523BA /* SmartCrashReportsAPI.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SmartCrashReportsAPI.html; sourceTree = "<group>"; };
+		EABDFE3409AC935300C523BA /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = toc.html; sourceTree = "<group>"; };
+		EABDFE3609AC935300C523BA /* CompositePage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = CompositePage.html; sourceTree = "<group>"; };
+		EABDFE3809AC935300C523BA /* Functions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = Functions.html; sourceTree = "<group>"; };
+		EABDFE3909AC935300C523BA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		EABDFE3A09AC935300C523BA /* SmartCrashReportsInstall.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SmartCrashReportsInstall.html; sourceTree = "<group>"; };
+		EABDFE3B09AC935300C523BA /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = toc.html; sourceTree = "<group>"; };
+		EABDFE3C09AC935300C523BA /* Smart Crash Reports For Developers.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = "Smart Crash Reports For Developers.rtfd"; sourceTree = "<group>"; };
+		EABDFE3D09AC935300C523BA /* Smart Crash Reports Webpage.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Smart Crash Reports Webpage.webloc"; sourceTree = "<group>"; };
+		EABDFE3E09AC935300C523BA /* smartcrashreports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartcrashreports.png; sourceTree = "<group>"; };
+		EABDFE3F09AC935300C523BA /* SmartCrashReportsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsAPI.h; sourceTree = "<group>"; };
+		EABDFE4009AC935300C523BA /* SmartCrashReportsAPI.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsAPI.o; sourceTree = "<group>"; };
+		EABDFE4109AC935300C523BA /* SmartCrashReportsInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsInstall.h; sourceTree = "<group>"; };
+		EABDFE4209AC935300C523BA /* SmartCrashReportsInstall.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsInstall.o; sourceTree = "<group>"; };
+		EABDFE6609AC94D400C523BA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		EABDFE9209AC94E500C523BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
 		EABF0E8B09988D8600DC868A /* NSString+extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extras.h"; sourceTree = "<group>"; };
 		EABF0E8C09988D8600DC868A /* NSString+extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extras.m"; sourceTree = "<group>"; };
 		EABF0E8D09988D8600DC868A /* RSS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS.h; sourceTree = "<group>"; };
@@ -1239,6 +1266,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABDFE5D09AC947600C523BA /* SmartCrashReportsAPI.o in Frameworks */,
+				EABDFE4A09AC936700C523BA /* SmartCrashReportsInstall.o in Frameworks */,
 				EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */,
 				EA9AFCCF094460B1005D60CB /* Carbon.framework in Frameworks */,
 				EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */,
@@ -1247,6 +1276,9 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				EAF8C93809076E9A003D54B1 /* Virtue.framework in Frameworks */,
 				EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */,
+				EABDFE9109AC94D400C523BA /* CoreFoundation.framework in Frameworks */,
+				EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */,
+				EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1369,6 +1401,8 @@
 				EAC2B63E095E167600748870 /* Cocoa.framework in Frameworks */,
 				EAC2B63F095E167600748870 /* Virtue.framework in Frameworks */,
 				EAC2B640095E167600748870 /* AppKit.framework in Frameworks */,
+				EABDFEC809AC94E500C523BA /* Security.framework in Frameworks */,
+				EABDFECB09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1391,6 +1425,9 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */,
+				EABDFE9209AC94E500C523BA /* Security.framework */,
+				EABDFE6609AC94D400C523BA /* CoreFoundation.framework */,
 				E958203B07198C88009583A0 /* PreferencePanes.framework */,
 				E9A4816506FF5D6F00A8AE3C /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -1442,6 +1479,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EABDFE2C09AC935300C523BA /* Smart Crash Reports SDK */,
 				EA2108E1094541B5007BED41 /* DockCommunicator */,
 				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
 				EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */,
@@ -1966,6 +2004,71 @@
 				EAB7C0400924F7DD0067CDFD /* Peony.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EABDFE2C09AC935300C523BA /* Smart Crash Reports SDK */ = {
+			isa = PBXGroup;
+			children = (
+				EABDFE2D09AC935300C523BA /* API Documentation */,
+				EABDFE3C09AC935300C523BA /* Smart Crash Reports For Developers.rtfd */,
+				EABDFE3D09AC935300C523BA /* Smart Crash Reports Webpage.webloc */,
+				EABDFE3E09AC935300C523BA /* smartcrashreports.png */,
+				EABDFE3F09AC935300C523BA /* SmartCrashReportsAPI.h */,
+				EABDFE4009AC935300C523BA /* SmartCrashReportsAPI.o */,
+				EABDFE4109AC935300C523BA /* SmartCrashReportsInstall.h */,
+				EABDFE4209AC935300C523BA /* SmartCrashReportsInstall.o */,
+			);
+			name = "Smart Crash Reports SDK";
+			path = "../../Shared/Smart Crash Reports SDK";
+			sourceTree = SOURCE_ROOT;
+		};
+		EABDFE2D09AC935300C523BA /* API Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				EABDFE2E09AC935300C523BA /* SmartCrashReportsAPI */,
+				EABDFE3509AC935300C523BA /* SmartCrashReportsInstall */,
+			);
+			path = "API Documentation";
+			sourceTree = "<group>";
+		};
+		EABDFE2E09AC935300C523BA /* SmartCrashReportsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EABDFE2F09AC935300C523BA /* CompositePage.html */,
+				EABDFE3009AC935300C523BA /* Functions */,
+				EABDFE3209AC935300C523BA /* index.html */,
+				EABDFE3309AC935300C523BA /* SmartCrashReportsAPI.html */,
+				EABDFE3409AC935300C523BA /* toc.html */,
+			);
+			path = SmartCrashReportsAPI;
+			sourceTree = "<group>";
+		};
+		EABDFE3009AC935300C523BA /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EABDFE3109AC935300C523BA /* Functions.html */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		EABDFE3509AC935300C523BA /* SmartCrashReportsInstall */ = {
+			isa = PBXGroup;
+			children = (
+				EABDFE3609AC935300C523BA /* CompositePage.html */,
+				EABDFE3709AC935300C523BA /* Functions */,
+				EABDFE3909AC935300C523BA /* index.html */,
+				EABDFE3A09AC935300C523BA /* SmartCrashReportsInstall.html */,
+				EABDFE3B09AC935300C523BA /* toc.html */,
+			);
+			path = SmartCrashReportsInstall;
+			sourceTree = "<group>";
+		};
+		EABDFE3709AC935300C523BA /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EABDFE3809AC935300C523BA /* Functions.html */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		EABF0E8A09988D8600DC868A /* Sparkle */ = {

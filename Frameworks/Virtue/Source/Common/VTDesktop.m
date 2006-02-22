@@ -192,28 +192,4 @@
 	return [[VTDesktopBackgroundHelper sharedInstance] background]; 
 }
 
-+ (NSString*) virtualDesktopContainerPath {
-	NSString* homeDirectory = NSHomeDirectory();
-	
-	// check for symlinks and traverse them in advance 
-	NSDictionary* fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath: homeDirectory traverseLink: NO];
-	
-	if ([[fileAttributes fileType] isEqualToString: NSFileTypeSymbolicLink])
-		homeDirectory = [[NSFileManager defaultManager] pathContentOfSymbolicLinkAtPath: homeDirectory];
-		
-	return [homeDirectory stringByAppendingPathComponent: @"Library/Application Support/Virtue/Desktops"];
-}
-
-+ (NSString*) desktopContainerPath {
-	NSString* homeDirectory = NSHomeDirectory();
-	
-	// check for symlinks and traverse them in advance 
-	NSDictionary* fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath: homeDirectory traverseLink: NO];
-	
-	if ([[fileAttributes fileType] isEqualToString: NSFileTypeSymbolicLink])
-		homeDirectory = [[NSFileManager defaultManager] pathContentOfSymbolicLinkAtPath: homeDirectory];
-
-	return [homeDirectory stringByAppendingPathComponent: @"Desktop"];
-}
-
 @end
