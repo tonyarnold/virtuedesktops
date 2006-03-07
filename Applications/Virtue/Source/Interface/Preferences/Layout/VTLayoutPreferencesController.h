@@ -17,14 +17,14 @@
 
 @interface VTLayoutPreferencesController : NSPreferencePane {
 // outlets 
-	IBOutlet NSBox*			mLayoutContainer; 
+	IBOutlet NSBox*					mLayoutContainer; 
 	IBOutlet NSPopUpButton*	mLayoutList; 
-	
-	IBOutlet NSView*		mMatrixLayoutView; 
+	IBOutlet NSView*				mMatrixLayoutView; 
+	IBOutlet NSView*				mFixedMatrixLayoutView;
 }
 
 #pragma mark -
 #pragma mark Accessors 
-- (VTDesktopLayout*) activeLayout; 
+- (VTDesktopLayout*) activeLayout;
 
 @end

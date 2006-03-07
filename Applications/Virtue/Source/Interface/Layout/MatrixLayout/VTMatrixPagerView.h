@@ -24,12 +24,13 @@
 	NSColor*		mTextColor; 
 	
 	BOOL			mDisplaysColorLabels; 
-	BOOL			mDisplaysApplicationIcons; 
+	BOOL			mDisplaysApplicationIcons;
+	BOOL			mDraggable;
 	
-	NSMatrix*		mPagerCells;
+	NSMatrix*				mPagerCells;
 	NSMutableArray*	mTrackingRects; 
 	
-	VTMatrixPagerCell*		mCurrentDraggingTarget; 
+	VTMatrixPagerCell*			mCurrentDraggingTarget; 
 	VTMatrixDesktopLayout*	mLayout; 
 }
 

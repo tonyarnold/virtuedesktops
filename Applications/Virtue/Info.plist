@@ -38,7 +38,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Virtue</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Virtue version 0.51</string>
+	<string>Virtue version 0.52</string>
 	<key>CFBundleIconFile</key>
 	<string>iconVirtue</string>
 	<key>CFBundleIdentifier</key>
@@ -50,11 +50,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.51</string>
+	<string>0.52</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.51r0000</string>
+	<string>0.52r0000</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSAppleScriptEnabled</key>
@@ -65,11 +65,11 @@
 	<string>VTApplication</string>
 	<key>SUFeedURL</key>
 	<string>http://tonyarnold.com/xml/rss20/category/virtue-appcast/feed.xml</string>
+	<key>SmartCrashReports_CommentsTemplate</key>
+	<string>Please include your e-mail address if you wish to be contacted in regard to this crash.</string>
 	<key>SmartCrashReports_CompanyName</key>
 	<string>Tony Arnold</string>
 	<key>SmartCrashReports_EmailTicket</key>
 	<string>SCR-BB4DC15238</string>
-	<key>SmartCrashReports_CommentsTemplate</key>
-	<string>Please include your e-mail address if you wish to be contacted in regard to this crash.</string>
 </dict>
 </plist>

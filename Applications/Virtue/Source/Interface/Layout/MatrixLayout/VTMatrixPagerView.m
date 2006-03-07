@@ -23,6 +23,7 @@
 #define kVtDragTypeSource				@"VTDragTypeSourceIndex"
 #define kVtDragDataSourceIndex	@"VTDragSourceIndex"
 #define kVtDragDataSourceUUID		@"VTDragSourceUUID"
+#define kVtDraggable						@"VTDraggable"
 
 enum
 {
@@ -211,6 +212,7 @@ enum
 - (NSColor*) windowHighlightColor {
 	return mWindowHighlightColor; 
 }
+
 
 #pragma mark -
 - (void) setDisplaysApplicationIcons: (BOOL) flag {
@@ -543,7 +545,7 @@ enum
 }
 
 - (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender {
-	int row		= -1;
+	int row			= -1;
 	int column	= -1; 
 	
 	if ([mPagerCells getRow: &row column: &column forPoint: [mPagerCells convertPoint: [sender draggingLocation] fromView: nil]] && 
@@ -600,14 +602,11 @@ enum
 	[mLayout swapDesktopAtIndex: sourceIndex withIndex: targetIndex]; 
 }
 
-- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-	if (mCurrentDraggingTarget == nil)
-		return NO; 
-	
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {	
 	return YES; 
 }
 
-- (NSDragOperation) draggingSourceOperationMarkForLocal: (BOOL) flag { 
+- (NSDragOperation) draggingSourceOperationMarkForLocal: (BOOL) flag {
 	return NSDragOperationCopy; 
 } 
 
@@ -618,7 +617,7 @@ enum
 
 - (id) initWithFrame: (NSRect) rect {
 	if (self = [super initWithFrame: rect]) {
-		mMouseDownCell = nil; 
+		mMouseDownCell = nil;
 		
 		return self; 
 	}
@@ -639,12 +638,12 @@ enum
 }
 
 - (void) mouseDown: (NSEvent*) event {
-	int row		= -1;
+	int row			= -1;
 	int column	= -1; 
 	
 	if ([self getRow: &row column: &column forPoint: [self convertPoint: [event locationInWindow] fromView: nil]] && 
-		[[self cellAtRow: row column: column] isEnabled]) { 
-		[self selectCellAtRow: row column: column]; 
+			[[self cellAtRow: row column: column] isEnabled]) { 
+			[self selectCellAtRow: row column: column]; 
 		
 		ZEN_ASSIGN(mMouseDownCell, [self cellAtRow: row column: column]); 
 		
@@ -687,7 +686,7 @@ enum
 	[pasteboard setPropertyList: dataDict forType: kVtDragTypeSource]; 
 } 
 
-- (void) mouseDragged: (NSEvent*) event {
+- (void) mouseDragged: (NSEvent*) event {	
 	NSPasteboard*	pboard; 
 	NSImage*		image		= nil; 
 	NSImage*		translucent	= nil; 

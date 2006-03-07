@@ -16,14 +16,15 @@
 #import <Virtue/VTDesktopController.h>
 #import <Zen/Zen.h>
 
-#define kVtCodingRowCount		@"rows"
-#define kVtCodingColCount		@"cols"
-#define kVtCodingWraps			@"wrapsAround"
-#define kVtCodingJumps			@"jumpsGaps"
-#define kVtCodingCompacted		@"compacted"
-#define kVtCodingContinous		@"continous"
+#define kVtCodingRowCount				@"rows"
+#define kVtCodingColCount				@"cols"
+#define kVtCodingWraps					@"wrapsAround"
+#define kVtCodingJumps					@"jumpsGaps"
+#define kVtCodingCompacted			@"compacted"
+#define kVtCodingContinous			@"continous"
 #define kVtCodingDesktopLayout	@"desktopLayout"
-#define kVtCodingPager			@"pager"
+#define kVtCodingPager					@"pager"
+#define kVtCodingDraggable			@"draggable"
 
 #pragma mark -
 #define kFreeDesktopSlotIdentifier @"" 
@@ -56,12 +57,13 @@
 	
 	if (self = [super initWithName: name]) {
 		// attributes 
-		mRows		= 2; 
-		mColumns	= 3; 
-		mWraps		= YES;
+		mRows				= 2; 
+		mColumns		= 3; 
+		mWraps			= YES;
 		mJumpsGaps	= YES;
 		mCompacted	= NO; 
 		mContinous	= NO; 
+		mDraggable	= YES;
 		
 		// pager 
 		mPager		= [[VTMatrixPager alloc] initWithLayout: self]; 
@@ -109,6 +111,9 @@
 	
 	// our desktop layout 
 	[dictionary setObject: mDesktopLayout forKey: kVtCodingDesktopLayout]; 
+	
+	// Do we allow dragging cells to re-arrange?
+	[dictionary setObject: [NSNumber numberWithBool: mDraggable]	forKey: kVtCodingDraggable];
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
@@ -124,6 +129,7 @@
 		mJumpsGaps = [[dictionary objectForKey: kVtCodingJumps] boolValue]; 
 		mCompacted = [[dictionary objectForKey: kVtCodingCompacted] boolValue]; 
 		mContinous = [[dictionary objectForKey: kVtCodingContinous] boolValue]; 	
+		mDraggable = [[dictionary objectForKey: kVtCodingDraggable] boolValue];
 		
 		// read pager information
 		if ([dictionary objectForKey: kVtCodingPager])
@@ -267,6 +273,15 @@
 
 - (void) setContinous: (BOOL) flag {
 	mContinous = flag; 
+}
+
+#pragma mark -
+- (BOOL) isDraggable {
+	return mDraggable; 
+}
+
+- (void) setDraggable: (BOOL) flag {
+	mDraggable = flag; 
 }
 
 #pragma mark -

@@ -19,11 +19,9 @@
 
 enum
 {
-	kDefaultCellWidth		= 160, 
+	kDefaultCellWidth			= 160, 
 	kDesktopAppletSize		= 16,
-	
-	kDesktopInset			= 16,
-	
+	kDesktopInset					= 16,
 	kDesktopNameSpacer		= 4,
 	kDesktopAppletSpacer	= 4, 
 }; 

@@ -52,3 +52,4 @@ VTDesktopRunningApplicationCount		= "Showing %@ %@";
 // Localizable strings for the matrix layout (this is handled in this special way as it is
 // a built-in layout)
 VTMatrixLayoutName						= "Matrix Layout"; 
+VTFixedMatrixLayoutName				= "Fixed Matrix Layout"; 

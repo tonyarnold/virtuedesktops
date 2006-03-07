@@ -57,7 +57,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EA6CB5CB0924CF38004AC51D /* DockCommunicator.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = E958EEDA06FDA03E001DCB1E;
+			remoteGlobalIDString = EA3598F709BD74CE00B55739 /* DockCommunicator */;
 			remoteInfo = DockCommunicator;
 		};
 /* End PBXContainerItemProxy section */
@@ -388,6 +388,10 @@
 		EA57E14109258B720098A112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -412,26 +416,11 @@
 		EAB7BC960924DC3F0067CDFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = dockExtension_Prefix.pch;
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				HEADER_SEARCH_PATHS = ../DockCommunicator/includes;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_STYLE = BUNDLE;
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
-				PREBINDING = NO;
 				PRODUCT_NAME = DockExtension;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -439,7 +428,10 @@
 		EAB7BC970924DC3F0067CDFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};

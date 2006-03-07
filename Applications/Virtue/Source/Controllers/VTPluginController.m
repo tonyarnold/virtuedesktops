@@ -47,11 +47,11 @@
 #pragma mark -
 #pragma mark operations 
 - (void) loadPlugins {
-	NSArray*		searchPaths			= [self pluginSearchPaths]; 
+	NSArray*			searchPaths				= [self pluginSearchPaths]; 
 	NSEnumerator*	searchPathIter		= [searchPaths objectEnumerator]; 
-	NSString*		searchPath			= nil; 
+	NSString*			searchPath				= nil; 
 	NSEnumerator*	bundlePathIter		= nil;
-	NSString*		currentBundlePath	= nil;
+	NSString*			currentBundlePath	= nil;
 	
 	while (searchPath = [searchPathIter nextObject]) {
 		bundlePathIter = [[[NSFileManager defaultManager] directoryContentsAtPath: searchPath] objectEnumerator]; 

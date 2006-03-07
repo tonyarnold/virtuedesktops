@@ -26,9 +26,10 @@
 	BOOL			mJumpsGaps; 
 	BOOL			mCompacted; 
 	BOOL			mContinous; 
+	BOOL			mDraggable;
 	
 	NSObject<VTPager>*	mPager; 
-	NSMutableArray*		mDesktopLayout; 
+	NSMutableArray*			mDesktopLayout; 
 }
 
 #pragma mark -
@@ -70,6 +71,10 @@
 #pragma mark -
 - (BOOL) isContinous; 
 - (void) setContinous: (BOOL) flag; 
+
+#pragma mark -
+- (BOOL) isDraggable; 
+- (void) setDraggable: (BOOL) flag; 
 
 #pragma mark -
 - (NSArray*) desktopLayout; 

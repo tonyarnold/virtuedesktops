@@ -71,7 +71,7 @@
 
 - (void) selectPager {
 	// check for selected pager item and update content views accordingly
-	if ([[[[mAvailablePagerButton selectedItem] representedObject] name] isEqualToString: @"Matrix Layout"]) {
+	if ([[[[mAvailablePagerButton selectedItem] representedObject] name] isEqualToString: @"Matrix Layout"] || [[[[mAvailablePagerButton selectedItem] representedObject] name] isEqualToString: @"Fixed Matrix Layout"]) {
 		// this is our built-in pager 
 		[mAppearanceTabItem setView: mAppearanceView]; 
 		[mBehaviourTabItem setView: mBehaviourView]; 

@@ -203,8 +203,11 @@
 		E9D29C35073E3C8C00E0E6CE /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */; };
 		E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
+		EA3599DE09BD7E8800B55739 /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
+		EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54635209AC9CD1002EDE9E /* WebKit.framework */; };
+		EA54638309AC9CD1002EDE9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54635209AC9CD1002EDE9E /* WebKit.framework */; };
 		EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
 		EA9AFA6F09445764005D60CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -349,7 +352,6 @@
 		EAC2B652095E167600748870 /* Readme.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A7506FCDDCD00E354DB /* Readme.rtf */; };
 		EAC2B653095E167600748870 /* TODO.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9035C81077754EF00016B73 /* TODO.rtf */; };
 		EAC2B668095E173000748870 /* FocusApplication.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC2B666095E173000748870 /* FocusApplication.h */; };
-		EAC2B669095E173000748870 /* FocusApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC2B667095E173000748870 /* FocusApplication.m */; };
 		EAC2B680095E17A000748870 /* FocusApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC2B667095E173000748870 /* FocusApplication.m */; };
 		EAC2B681095E17B500748870 /* Focus.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B679095E178C00748870 /* Focus.nib */; };
 		EAC2B688095E17EC00748870 /* Focus.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B686095E17EC00748870 /* Focus.plist */; };
@@ -517,6 +519,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E9D29BE8073E345700E0E6CE;
 			remoteInfo = VTDesktopColorLabelPrimitive;
+		};
+		EA3599DC09BD7E7900B55739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA3598F809BD74CE00B55739;
+			remoteInfo = DockCommunicator;
 		};
 		EA7CD178094AEE10008C738D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1205,6 +1214,7 @@
 		E9D29C07073E3AC400E0E6CE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E9FD547A0713BF290006590F /* iconDesktopFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconDesktopFolder.icns; sourceTree = "<group>"; };
 		E9FD54FE0715C6260006590F /* imageAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAction.png; sourceTree = "<group>"; };
+		EA04197F09B878C40031D3A9 /* VTDesktopNamePrimitive-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info copy.plist"; sourceTree = "<group>"; };
 		EA2108E2094541B5007BED41 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECCgsExt.h; sourceTree = "<group>"; };
 		EA2108E3094541B5007BED41 /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEvent.h; sourceTree = "<group>"; };
 		EA2108E4094541B5007BED41 /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventAlpha.h; sourceTree = "<group>"; };
@@ -1217,6 +1227,8 @@
 		EA2108EB094541B5007BED41 /* DECInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECInjector.h; sourceTree = "<group>"; };
 		EA2108EC094541B5007BED41 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEComm.h; sourceTree = "<group>"; };
 		EA2108ED094541B6007BED41 /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
+		EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EA54635209AC9CD1002EDE9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -1268,6 +1280,7 @@
 			files = (
 				EABDFE5D09AC947600C523BA /* SmartCrashReportsAPI.o in Frameworks */,
 				EABDFE4A09AC936700C523BA /* SmartCrashReportsInstall.o in Frameworks */,
+				EA3599DE09BD7E8800B55739 /* libDockCommunicator.a in Frameworks */,
 				EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */,
 				EA9AFCCF094460B1005D60CB /* Carbon.framework in Frameworks */,
 				EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */,
@@ -1279,6 +1292,7 @@
 				EABDFE9109AC94D400C523BA /* CoreFoundation.framework in Frameworks */,
 				EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */,
 				EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
+				EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,6 +1417,7 @@
 				EAC2B640095E167600748870 /* AppKit.framework in Frameworks */,
 				EABDFEC809AC94E500C523BA /* Security.framework in Frameworks */,
 				EABDFECB09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
+				EA54638309AC9CD1002EDE9E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1425,6 +1440,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA54635209AC9CD1002EDE9E /* WebKit.framework */,
 				EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */,
 				EABDFE9209AC94E500C523BA /* Security.framework */,
 				EABDFE6609AC94D400C523BA /* CoreFoundation.framework */,
@@ -1482,6 +1498,7 @@
 				EABDFE2C09AC935300C523BA /* Smart Crash Reports SDK */,
 				EA2108E1094541B5007BED41 /* DockCommunicator */,
 				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
+				EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */,
 				EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */,
 				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
 				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
@@ -1596,6 +1613,7 @@
 				E9582083071AF896009583A0 /* VTAppearancePreferences-Info.plist */,
 				E9560C40071DA9AE00D497BE /* VTDesktopNamePrimitive-Info.plist */,
 				E91271AF0729BA58006DC207 /* VTBehaviourPreferences-Info.plist */,
+				EA04197F09B878C40031D3A9 /* VTDesktopNamePrimitive-Info copy.plist */,
 			);
 			name = "Property Lists";
 			sourceTree = "<group>";
@@ -1989,6 +2007,14 @@
 			name = DockCommunicator;
 			path = ../../Frameworks/DockCommunicator/Includes;
 			sourceTree = SOURCE_ROOT;
+		};
+		EA3599D909BD7E7900B55739 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
 		};
 		EA9AF70E094444DC005D60CB /* Products */ = {
 			isa = PBXGroup;
@@ -2877,6 +2903,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = EA3599D909BD7E7900B55739 /* Products */;
+					ProjectRef = EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */;
+				},
+				{
 					ProductGroup = EA9AF70E094444DC005D60CB /* Products */;
 					ProjectRef = EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */;
 				},
@@ -2910,6 +2940,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDockCommunicator.a;
+			remoteRef = EA3599DC09BD7E7900B55739 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		EA9AF712094444DC005D60CB /* DockExtension.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -3248,7 +3285,6 @@
 				E9558185076CA62B00401479 /* VTApplicationRunningColorTransformer.m in Sources */,
 				E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */,
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
-				EAC2B669095E173000748870 /* FocusApplication.m in Sources */,
 				EABF0E9309988D8700DC868A /* NSString+extras.m in Sources */,
 				EABF0E9509988D8700DC868A /* RSS.m in Sources */,
 				EABF0E9809988D8700DC868A /* SUUpdater.m in Sources */,
@@ -4039,25 +4075,13 @@
 		EA609BEB090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTInterface-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTInterface;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
 			};
 			name = Release;
 		};
@@ -4099,21 +4123,9 @@
 		EA609BF1090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTDesktopNamePrimitive-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTDesktopNamePrimitive;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
@@ -4155,22 +4167,11 @@
 		EA609BF7090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTPluginPreferences;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -4213,21 +4214,10 @@
 		EA609BFD090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTDesktopColorLabelPrimitive-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTDesktopColorLabelPrimitive;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
@@ -4270,21 +4260,10 @@
 		EA609C03090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTApplicationPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTApplicationPreferences;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -4327,21 +4306,10 @@
 		EA609C09090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTAppearancePreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTAppearancePreferences;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -4384,21 +4352,10 @@
 		EA609C0F090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTHotkeyPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTHotkeyPreferences;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -4441,22 +4398,10 @@
 		EA609C15090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTLayoutPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PRODUCT_NAME = VTLayoutPreferences;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -4499,23 +4444,11 @@
 		EA609C1B090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "VTDesktopTemplatePreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = VTDesktopTemplatePreferences;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -4551,22 +4484,11 @@
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)",
 				);
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_DYNAMIC_NO_PIC = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = Virtue;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4574,6 +4496,10 @@
 		EA609C25090666C8003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -4597,19 +4523,12 @@
 		EA609C27090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
-				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SEPARATE_STRIP = YES;
 			};
 			name = Release;
 		};
@@ -4636,22 +4555,11 @@
 		EAC2B657095E167600748870 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_DYNAMIC_NO_PIC = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = focus_Prefix.pch;
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
 				INFOPLIST_FILE = Focus.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = Focus;
-				SEPARATE_STRIP = YES;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -33,7 +33,7 @@
 	// prepare
 	[self prepareSelectables]; 
 	// and select the initially shown layout
-	[self selectLayout: [self selectedLayout]]; 
+	[self selectLayout: [self selectedLayout]];
 }
 
 - (void) willUnselect {
@@ -67,9 +67,9 @@
 	
 	NSMenuItem* menuItem; 
 	
-	NSEnumerator*		layoutIter	= [[[VTLayoutController sharedInstance] layouts] objectEnumerator]; 
-	VTDesktopLayout*	layout		= nil; 
-	int					activeIndex	= -1; 
+	NSEnumerator*			layoutIter	= [[[VTLayoutController sharedInstance] layouts] objectEnumerator]; 
+	VTDesktopLayout*	layout			= nil; 
+	int								activeIndex	= -1; 
 	
 	while (layout = [layoutIter nextObject]) {
 		menuItem = [[[NSMenuItem alloc] initWithTitle: [layout name] action: @selector(onPagerSelected:) keyEquivalent: @""] autorelease]; 

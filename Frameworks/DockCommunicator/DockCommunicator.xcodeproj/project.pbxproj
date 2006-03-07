@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E9124F440731885E00BD28CD /* DECVersion.c in Sources */ = {isa = PBXBuildFile; fileRef = E9124F430731885E00BD28CD /* DECVersion.c */; };
-		E958EEDD06FDA066001DCB1E /* DECEvent.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637F806FCCCA300E354DB /* DECEvent.c */; };
-		E958EEDE06FDA066001DCB1E /* DECEventAlpha.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637FA06FCCCA300E354DB /* DECEventAlpha.c */; };
-		E958EEDF06FDA066001DCB1E /* DECEventDesktop.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637FC06FCCCA300E354DB /* DECEventDesktop.c */; };
-		E958EEE006FDA066001DCB1E /* DECEventInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637FE06FCCCA300E354DB /* DECEventInfo.c */; };
-		E958EEE106FDA066001DCB1E /* DECEventLevel.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380006FCCCA300E354DB /* DECEventLevel.c */; };
-		E958EEE206FDA066001DCB1E /* DECEventOrder.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380206FCCCA300E354DB /* DECEventOrder.c */; };
-		E958EEE306FDA066001DCB1E /* DECEventProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380406FCCCA300E354DB /* DECEventProperty.c */; };
-		E958EEE406FDA066001DCB1E /* DECEventTags.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380606FCCCA300E354DB /* DECEventTags.c */; };
-		E958EEE506FDA066001DCB1E /* DECInjector.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380806FCCCA300E354DB /* DECInjector.c */; };
-		E958EEE606FDA066001DCB1E /* mach_inject.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380B06FCCCA300E354DB /* mach_inject.c */; };
-		E958EF9C06FDA1C7001DCB1E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
-		E9D2B61E0701E833008879E0 /* DECCgsExt.c in Sources */ = {isa = PBXBuildFile; fileRef = E9D2B61D0701E833008879E0 /* DECCgsExt.c */; };
+		EA3598FE09BD74EA00B55739 /* mach_inject.c in Sources */ = {isa = PBXBuildFile; fileRef = EA6F5D0709B19C31005BE0EF /* mach_inject.c */; };
+		EA3598FF09BD74EA00B55739 /* DECEvent.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637F806FCCCA300E354DB /* DECEvent.c */; };
+		EA35990009BD74EA00B55739 /* DECEventAlpha.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637FA06FCCCA300E354DB /* DECEventAlpha.c */; };
+		EA35990109BD74EA00B55739 /* DECEventDesktop.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637FC06FCCCA300E354DB /* DECEventDesktop.c */; };
+		EA35990209BD74EA00B55739 /* DECEventInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = E93637FE06FCCCA300E354DB /* DECEventInfo.c */; };
+		EA35990309BD74EA00B55739 /* DECEventLevel.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380006FCCCA300E354DB /* DECEventLevel.c */; };
+		EA35990409BD74EA00B55739 /* DECEventOrder.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380206FCCCA300E354DB /* DECEventOrder.c */; };
+		EA35990509BD74EA00B55739 /* DECEventProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380406FCCCA300E354DB /* DECEventProperty.c */; };
+		EA35990609BD74EA00B55739 /* DECEventTags.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380606FCCCA300E354DB /* DECEventTags.c */; };
+		EA35990709BD74EA00B55739 /* DECInjector.c in Sources */ = {isa = PBXBuildFile; fileRef = E936380806FCCCA300E354DB /* DECInjector.c */; };
+		EA35990809BD74EA00B55739 /* DECCgsExt.c in Sources */ = {isa = PBXBuildFile; fileRef = E9D2B61D0701E833008879E0 /* DECCgsExt.c */; };
+		EA35990909BD74EA00B55739 /* DECVersion.c in Sources */ = {isa = PBXBuildFile; fileRef = E9124F430731885E00BD28CD /* DECVersion.c */; };
+		EA35990A09BD74F400B55739 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -73,6 +73,23 @@
 		};
 /* End PBXBuildStyle section */
 
+/* Begin PBXContainerItemProxy section */
+		EA6F5D1309B19C31005BE0EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76F8E0486A9BA00D96B5E;
+			remoteInfo = mach_inject;
+		};
+		EA6F5D1809B19C31005BE0EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76F8E0486A9BA00D96B5E;
+			remoteInfo = mach_inject;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -90,9 +107,6 @@
 		E936380606FCCCA300E354DB /* DECEventTags.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECEventTags.c; path = Source/DECEventTags.c; sourceTree = "<group>"; };
 		E936380806FCCCA300E354DB /* DECInjector.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECInjector.c; path = Source/DECInjector.c; sourceTree = "<group>"; };
 		E936380A06FCCCA300E354DB /* DECPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECPrivate.h; path = Source/DECPrivate.h; sourceTree = "<group>"; };
-		E936380B06FCCCA300E354DB /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mach_inject.c; path = Source/mach_inject.c; sourceTree = "<group>"; };
-		E936380C06FCCCA300E354DB /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = mach_inject.h; path = Source/mach_inject.h; sourceTree = "<group>"; };
-		E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C3AC2074DDA9F0025CD57 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/COPYING.rtf; sourceTree = "<group>"; };
 		E9A4811A06FF59DF00A8AE3C /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEvent.h; path = Includes/DECEvent.h; sourceTree = "<group>"; };
 		E9A4811B06FF59DF00A8AE3C /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECEventAlpha.h; path = Includes/DECEventAlpha.h; sourceTree = "<group>"; };
@@ -106,14 +120,22 @@
 		E9D2B60E0701E750008879E0 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DEComm.h; path = Includes/DEComm.h; sourceTree = "<group>"; };
 		E9D2B61B0701E823008879E0 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECCgsExt.h; path = Includes/DECCgsExt.h; sourceTree = "<group>"; };
 		E9D2B61D0701E833008879E0 /* DECCgsExt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECCgsExt.c; path = Source/DECCgsExt.c; sourceTree = "<group>"; };
+		EA3598F809BD74CE00B55739 /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6F5D0509B19C31005BE0EF /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
+		EA6F5D0609B19C31005BE0EF /* doxygen.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = doxygen.command; sourceTree = "<group>"; };
+		EA6F5D0709B19C31005BE0EF /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = "<group>"; };
+		EA6F5D0809B19C31005BE0EF /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = "<group>"; };
+		EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mach_inject.xcode; sourceTree = "<group>"; };
+		EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mach_inject.xcodeproj; sourceTree = "<group>"; };
+		EA6F5D0F09B19C31005BE0EF /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E958EED906FDA03E001DCB1E /* Frameworks */ = {
+		EA3598F609BD74CE00B55739 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E958EF9C06FDA1C7001DCB1E /* Carbon.framework in Frameworks */,
+				EA35990A09BD74F400B55739 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +145,7 @@
 		034768DDFF38A45A11DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */,
+				EA3598F809BD74CE00B55739 /* libDockCommunicator.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +155,7 @@
 			children = (
 				E9A4812D06FF59E700A8AE3C /* Includes */,
 				08FB77ACFE841707C02AAC07 /* Source */,
+				EAF1468309ADE34B00615A67 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DDFF38A45A11DB9C8B /* Products */,
@@ -173,8 +196,6 @@
 				E936380606FCCCA300E354DB /* DECEventTags.c */,
 				E936380806FCCCA300E354DB /* DECInjector.c */,
 				E936380A06FCCCA300E354DB /* DECPrivate.h */,
-				E936380B06FCCCA300E354DB /* mach_inject.c */,
-				E936380C06FCCCA300E354DB /* mach_inject.h */,
 				08FB77B0FE84176FC02AAC07 /* main.c */,
 			);
 			name = Source;
@@ -199,42 +220,76 @@
 			name = Includes;
 			sourceTree = "<group>";
 		};
+		EA6F5D0409B19C31005BE0EF /* mach_inject */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F5D0509B19C31005BE0EF /* Doxyfile */,
+				EA6F5D0609B19C31005BE0EF /* doxygen.command */,
+				EA6F5D0709B19C31005BE0EF /* mach_inject.c */,
+				EA6F5D0809B19C31005BE0EF /* mach_inject.h */,
+				EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */,
+				EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */,
+				EA6F5D0F09B19C31005BE0EF /* main.c */,
+			);
+			name = mach_inject;
+			path = ../../Shared/mach_inject;
+			sourceTree = SOURCE_ROOT;
+		};
+		EA6F5D0A09B19C31005BE0EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F5D1409B19C31005BE0EF /* mach_inject */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA6F5D0D09B19C31005BE0EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F5D1909B19C31005BE0EF /* mach_inject */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAF1468309ADE34B00615A67 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F5D0409B19C31005BE0EF /* mach_inject */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E958EEDA06FDA03E001DCB1E /* DockCommunicator */ = {
+		EA3598F709BD74CE00B55739 /* DockCommunicator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EAE822A50924A5DC00239477 /* Build configuration list for PBXNativeTarget "DockCommunicator" */;
+			buildConfigurationList = EA3599A609BD750A00B55739 /* Build configuration list for PBXNativeTarget "DockCommunicator" */;
 			buildPhases = (
-				E958EED806FDA03E001DCB1E /* Sources */,
-				E958EED906FDA03E001DCB1E /* Frameworks */,
+				EA3598F509BD74CE00B55739 /* Sources */,
+				EA3598F609BD74CE00B55739 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
 				INSTALL_PATH = /usr/local/lib;
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Carbon,
 				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = decomm;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DockCommunicator;
+				ZERO_LINK = YES;
 			};
 			dependencies = (
 			);
 			name = DockCommunicator;
-			productName = decomm;
-			productReference = E958EEDB06FDA03E001DCB1E /* libDockCommunicator.a */;
+			productName = DockCommunicator;
+			productReference = EA3598F809BD74CE00B55739 /* libDockCommunicator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -255,29 +310,56 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* decomm */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA6F5D0A09B19C31005BE0EF /* Products */;
+					ProjectRef = EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */;
+				},
+				{
+					ProductGroup = EA6F5D0D09B19C31005BE0EF /* Products */;
+					ProjectRef = EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */;
+				},
+			);
 			targets = (
-				E958EEDA06FDA03E001DCB1E /* DockCommunicator */,
+				EA3598F709BD74CE00B55739 /* DockCommunicator */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		EA6F5D1409B19C31005BE0EF /* mach_inject */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = mach_inject;
+			remoteRef = EA6F5D1309B19C31005BE0EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EA6F5D1909B19C31005BE0EF /* mach_inject */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = mach_inject;
+			remoteRef = EA6F5D1809B19C31005BE0EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
-		E958EED806FDA03E001DCB1E /* Sources */ = {
+		EA3598F509BD74CE00B55739 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E958EEDD06FDA066001DCB1E /* DECEvent.c in Sources */,
-				E958EEDE06FDA066001DCB1E /* DECEventAlpha.c in Sources */,
-				E958EEDF06FDA066001DCB1E /* DECEventDesktop.c in Sources */,
-				E958EEE006FDA066001DCB1E /* DECEventInfo.c in Sources */,
-				E958EEE106FDA066001DCB1E /* DECEventLevel.c in Sources */,
-				E958EEE206FDA066001DCB1E /* DECEventOrder.c in Sources */,
-				E958EEE306FDA066001DCB1E /* DECEventProperty.c in Sources */,
-				E958EEE406FDA066001DCB1E /* DECEventTags.c in Sources */,
-				E958EEE506FDA066001DCB1E /* DECInjector.c in Sources */,
-				E958EEE606FDA066001DCB1E /* mach_inject.c in Sources */,
-				E9D2B61E0701E833008879E0 /* DECCgsExt.c in Sources */,
-				E9124F440731885E00BD28CD /* DECVersion.c in Sources */,
+				EA3598FE09BD74EA00B55739 /* mach_inject.c in Sources */,
+				EA3598FF09BD74EA00B55739 /* DECEvent.c in Sources */,
+				EA35990009BD74EA00B55739 /* DECEventAlpha.c in Sources */,
+				EA35990109BD74EA00B55739 /* DECEventDesktop.c in Sources */,
+				EA35990209BD74EA00B55739 /* DECEventInfo.c in Sources */,
+				EA35990309BD74EA00B55739 /* DECEventLevel.c in Sources */,
+				EA35990409BD74EA00B55739 /* DECEventOrder.c in Sources */,
+				EA35990509BD74EA00B55739 /* DECEventProperty.c in Sources */,
+				EA35990609BD74EA00B55739 /* DECEventTags.c in Sources */,
+				EA35990709BD74EA00B55739 /* DECInjector.c in Sources */,
+				EA35990809BD74EA00B55739 /* DECCgsExt.c in Sources */,
+				EA35990909BD74EA00B55739 /* DECVersion.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,61 +385,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EAE822A70924A5DC00239477 /* Debug */ = {
+		EA3599A709BD750A00B55739 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_STYLE = STATIC;
-				OPTIMIZATION_CFLAGS = "-O0";
-				OTHER_CFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = DockCommunicator;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
 				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DockCommunicator;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
-		EAE822A90924A5DC00239477 /* Release */ = {
+		EA3599A809BD750A00B55739 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				GCC_USE_GCC3_PFE_SUPPORT = YES;
-				GENERATE_MASTER_OBJECT_FILE = YES;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_STYLE = STATIC;
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
-				OTHER_LDFLAGS = "";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
 				PRODUCT_NAME = DockCommunicator;
-				STRIP_INSTALLED_PRODUCT = YES;
-				STRIP_STYLE = all;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		EAE822AD0924A5DC00239477 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -375,16 +451,19 @@
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
-				ZERO_LINK = YES;
+				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		EAE822AF0924A5DC00239477 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				HEADER_SEARCH_PATHS = "../../../../Shared/mach_star-1.2/";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
@@ -392,11 +471,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EAE822A50924A5DC00239477 /* Build configuration list for PBXNativeTarget "DockCommunicator" */ = {
+		EA3599A609BD750A00B55739 /* Build configuration list for PBXNativeTarget "DockCommunicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAE822A70924A5DC00239477 /* Debug */,
-				EAE822A90924A5DC00239477 /* Release */,
+				EA3599A709BD750A00B55739 /* Debug */,
+				EA3599A809BD750A00B55739 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

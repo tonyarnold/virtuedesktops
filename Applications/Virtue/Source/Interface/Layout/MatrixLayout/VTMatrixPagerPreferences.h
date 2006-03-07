@@ -15,3 +15,4 @@
 
 #define VTMatrixPagerHasShadow				@"VTMatrixPagerHasShadow"
 #define VTMatrixPagerHasAppletIcons		@"VTMatrixPagerHasAppletIcons"
+#define VTMatrixPagerAllowsDragging		@"VTMatrixPagerAllowsDragging"

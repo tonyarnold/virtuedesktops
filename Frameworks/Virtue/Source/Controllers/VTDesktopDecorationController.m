@@ -147,7 +147,7 @@
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// see onDesktopWillChange: on why we are doing the stuff we are doing
 	VTDesktop*	desktopToActivate		= [notification object]; 
-//	NSWindow*		window							= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
+	NSWindow*		window							= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
 	PNWindow* peonyWindow						= [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
 	[peonyWindow setLevel: (mDesktopWindowLevel + 1)];
 	[peonyWindow setIgnoredByExpose: YES];
@@ -197,7 +197,7 @@
 	[desktopNameWindow setIgnoredByExpose: YES];
 	[desktopNameWindow setSticky: NO];
 	[window setAlphaValue: 1.0];
-
+	
 	return window; 
 }
 

@@ -12,6 +12,7 @@
             }; 
             SUPERCLASS = NSObject; 
         }, 
+        {CLASS = VTDesktopLayout; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
             CLASS = VTLayoutPreferencesController; 
             LANGUAGE = ObjC; 
@@ -21,7 +22,13 @@
                 mMatrixLayoutView = NSView; 
             }; 
             SUPERCLASS = NSPreferencePane; 
-        }
+        }, 
+        {
+            CLASS = VTMatrixDesktopLayout; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = VTDesktopLayout; 
+        }, 
+        {CLASS = VTMatrixPagerView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
     ); 
     IBVersion = 1; 
 }

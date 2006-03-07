@@ -98,6 +98,7 @@
 		E9C74BA80758B974005EFD90 /* iconExtensionScript.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */; };
 		EA7B9BB70945B17A00503865 /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C846090768A1003D54B1 /* Peony.framework */; };
 		EA7B9BB80945B17A00503865 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C84009076898003D54B1 /* Zen.framework */; };
+		EAC2AE2209AD585A00FA6A9B /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC2AE2109AD585A00FA6A9B /* CGSPrivate.h */; };
 		EAF8CCE4090779C5003D54B1 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8CCE3090779C5003D54B1 /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
 
@@ -274,6 +275,7 @@
 		E9C74A8907589001005EFD90 /* VTPluginInstance.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTPluginInstance.m; sourceTree = "<group>"; };
 		E9C74BA50758B974005EFD90 /* iconExtension.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconExtension.icns; path = icons/iconExtension.icns; sourceTree = "<group>"; };
 		E9C74BA60758B974005EFD90 /* iconExtensionScript.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconExtensionScript.icns; path = icons/iconExtensionScript.icns; sourceTree = "<group>"; };
+		EAC2AE2109AD585A00FA6A9B /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../../Shared/CGS/CGSPrivate.h; sourceTree = SOURCE_ROOT; };
 		EAE820400924977E00239477 /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEventHandlers.h; path = ../DockExtension/Source/DEEventHandlers.h; sourceTree = SOURCE_ROOT; };
 		EAE820410924977E00239477 /* DEEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEvents.h; path = ../DockExtension/Source/DEEvents.h; sourceTree = SOURCE_ROOT; };
 		EAF4A4AA09077D5A0013B506 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
@@ -375,6 +377,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EAC2AE2109AD585A00FA6A9B /* CGSPrivate.h */,
 				EAF8C841090768A1003D54B1 /* Peony.xcodeproj */,
 				EAF8C83B09076898003D54B1 /* Zen.xcodeproj */,
 				EAE820400924977E00239477 /* DEEventHandlers.h */,
@@ -629,6 +632,7 @@
 				E917FD130768D09E00F8A8FD /* VTTriggerDesktopNotification.h in Headers */,
 				E917FE24076A2A6800F8A8FD /* VTApplicationController.h in Headers */,
 				E917FE29076A2AE000F8A8FD /* VTApplicationWrapper.h in Headers */,
+				EAC2AE2209AD585A00FA6A9B /* CGSPrivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +863,10 @@
 		EA609CB7090667D2003BD20D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -884,6 +892,10 @@
 		EA609CB9090667D2003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = /System/Library/Frameworks/ApplicationServices.framework/Frameworks;
 				GCC_AUTO_VECTORIZATION = YES;
