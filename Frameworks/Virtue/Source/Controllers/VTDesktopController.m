@@ -66,7 +66,7 @@
 		
 		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
 		
-		// register as observer for desktop switches 
+		// Register as observer for desktop switches 
 		[[NSNotificationCenter defaultCenter] 
 			addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
 		[[NSNotificationCenter defaultCenter] 

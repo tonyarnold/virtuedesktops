@@ -4081,6 +4081,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTInterface-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PREBINDING = NO;
 				PRODUCT_NAME = VTInterface;
 			};
 			name = Release;
@@ -4488,6 +4489,7 @@
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PREBINDING = NO;
 				PRODUCT_NAME = Virtue;
 				WRAPPER_EXTENSION = app;
 			};

@@ -179,8 +179,6 @@ OSErr dec_inject_code()
 	pid_t dockpid;
 	if( !err )
 		err = mac_err( GetProcessPID( &psn, &dockpid ) );
-	if( !err )
-		printf( "pid: %ld\n", (long) dockpid );
 	
 	//	Inject the code.
 	if( !err )
