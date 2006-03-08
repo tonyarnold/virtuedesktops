@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.boombalada.DockExtension</string>
+	<string>net.sourceforge.virtue.DockExtension</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -17,7 +17,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.51</string>
+	<string>0.52</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
 </dict>

@@ -16,6 +16,7 @@
 		E936385D06FCCD7500E354DB /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = E936385806FCCD7500E354DB /* main.h */; };
 		E936393206FCD19000E354DB /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E936393106FCD18800E354DB /* CGSPrivate.h */; };
 		E97C3ACB074DDB090025CD57 /* COPYING.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AC9074DDB090025CD57 /* COPYING.rtf */; };
+		EA3B793109BEC4550072151A /* libDockCommunicator.a in Copy Bundle Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B930B0944415E00E6EACB /* libDockCommunicator.a */; };
 		EA7B9B7B0945AF5200503865 /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B930B0944415E00E6EACB /* libDockCommunicator.a */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +58,24 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EA6CB5CB0924CF38004AC51D /* DockCommunicator.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = EA3598F709BD74CE00B55739 /* DockCommunicator */;
+			remoteGlobalIDString = EA3598F709BD74CE00B55739;
 			remoteInfo = DockCommunicator;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA3B792D09BEC4390072151A /* Copy Bundle Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA3B793109BEC4550072151A /* libDockCommunicator.a in Copy Bundle Frameworks */,
+			);
+			name = "Copy Bundle Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -219,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAF8CB4609077543003D54B1 /* Build configuration list for PBXNativeTarget "DockExtension" */;
 			buildPhases = (
+				EA3B792D09BEC4390072151A /* Copy Bundle Frameworks */,
 				8D01CCC70486CAD60068D4B7 /* Headers */,
 				8D01CCC90486CAD60068D4B7 /* Resources */,
 				8D01CCCB0486CAD60068D4B7 /* Sources */,

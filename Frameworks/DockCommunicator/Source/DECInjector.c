@@ -147,8 +147,7 @@ OSErr dec_inject_code()
 	// Find our injection bundle by name.
 	CFURLRef injectionURL = NULL;
 	if( !err ) {
-		injectionURL = CFBundleCopyResourceURL( mainBundle,
-																						CFSTR("DockExtension.bundle"), NULL, NULL );
+		injectionURL = CFBundleCopyResourceURL( mainBundle, CFSTR("DockExtension.bundle"), NULL, NULL );
 		if( !injectionURL )
 			err = kDecErrorInjectionBundle;
 	}
@@ -185,7 +184,7 @@ OSErr dec_inject_code()
 		err = mach_inject( injectionCode, NULL, 0, dockpid, 0 );
 	
 	if(err) {
-		printf("Installation of Virtue's dock extension has failed!\n");
+		printf("Installation of Virtue's dock extension has failed. Some of Virtue's features will not work as expected.\n");
 	}
 	
 	//	Clean up.

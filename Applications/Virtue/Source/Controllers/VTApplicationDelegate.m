@@ -67,7 +67,11 @@ enum
 		mStartedUp = NO; 
 		mStatusItem = nil; 
 		mStatusItemMenuDesktopNeedsUpdate = YES; 
-		mStatusItemMenuActiveDesktopNeedsUpdate = YES; 
+		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
+		// Let's make sure that Unsanity's Smart Crash Reports is installed before we begin
+		Boolean authenticationWillBeRequired = FALSE;
+		if (UnsanitySCR_CanInstall(&authenticationWillBeRequired))
+			UnsanitySCR_Install(authenticationWillBeRequired ? kUnsanitySCR_GlobalInstall : 0);
 		
 		return self; 
 	}
@@ -102,12 +106,6 @@ enum
 #pragma mark Bootstrapping 
 
 - (void) bootstrap {
-	// Let's make sure that Unsanity's Smart Crash Reports is installed before we begin
-	Boolean authenticationWillBeRequired = FALSE;
-	if (UnsanitySCR_CanInstall(&authenticationWillBeRequired))
-		UnsanitySCR_Install(authenticationWillBeRequired ? kUnsanitySCR_GlobalInstall : 0);
-	
-	
 	// Inject dock extension code into the Dock process
 	dec_inject_code();
 	
