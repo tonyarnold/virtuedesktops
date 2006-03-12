@@ -95,7 +95,7 @@ enum
 	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]]; 
 	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
 	
-	[mPluginController unloadPlugins]; 
+	//[mPluginController unloadPlugins]; 
 	ZEN_RELEASE(mPluginController); 
 	
 	[self unregisterObservers]; 
@@ -330,7 +330,7 @@ enum
 }
 
 - (NSApplicationTerminateReply) applicationShouldTerminate: (NSApplication *)sender {
-	// chekc if we are started up already 
+	// Check if we are started up already 
 	if (mStartedUp == NO) 
 		return NSTerminateNow; 
 	
@@ -367,18 +367,20 @@ enum
 				continue; 
 			
 			[desktop moveAllWindowsToDesktop: target];
-			[desktop applyDefaultDesktopBackground];
+			if ([desktop defaultDesktopBackgroundPath] != nil)
+				[desktop applyDefaultDesktopBackground];
 		}
 	}
 	
+	// and write out preferences to be sure 
+	[[NSUserDefaults standardUserDefaults] synchronize]; 
 	// persist desktops 
 	[[VTDesktopController sharedInstance] serializeDesktops]; 
 	// persist hotkeys 
 	[[VTTriggerController sharedInstance] synchronize];
 	// persist layouts 
 	[[VTLayoutController sharedInstance] synchronize]; 
-	// and write out preferences to be sure 
-	[[NSUserDefaults standardUserDefaults] synchronize]; 
+	
 	
 	return NSTerminateNow; 
 }

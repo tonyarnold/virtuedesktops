@@ -76,7 +76,7 @@
 		return data; 
 	}
 	
-	return [NSData dataWithData:[[self pluginDescription] dataUsingEncoding: NSISOLatin1StringEncoding]];
+	return [NSData dataWithData:[[self pluginDescription] dataUsingEncoding: NSUTF8StringEncoding]];
 }
 
 @end 

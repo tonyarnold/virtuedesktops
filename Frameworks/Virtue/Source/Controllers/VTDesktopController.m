@@ -500,6 +500,8 @@
 		// next id
 		desktopId++; 
 	}
+	
+	[self serializeDesktops];
 }
 
 #pragma mark -
