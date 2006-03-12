@@ -335,6 +335,7 @@
 		[desktopsArray insertObject: dictionary atIndex: [desktopsArray count]];
 		[dictionary release];
 	}
+	
 	[desktopsArray writeToFile: [self _pathForDataFile] atomically: YES];
 }
 

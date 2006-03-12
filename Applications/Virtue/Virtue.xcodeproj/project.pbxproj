@@ -1936,7 +1936,7 @@
 					../../frameworks/Peony/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h";
 				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
@@ -2005,7 +2005,7 @@
 					../../frameworks/Zen/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopTemplatePreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2078,7 +2078,7 @@
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTInterface-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				OTHER_CFLAGS = "";
@@ -2145,7 +2145,7 @@
 					../../frameworks/Peony/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopNamePrimitive-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2214,7 +2214,7 @@
 					../../frameworks/Zen/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTLayoutPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2279,7 +2279,7 @@
 					../../frameworks/Zen/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTApplicationPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2342,7 +2342,7 @@
 			);
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTAppearancePreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2407,7 +2407,7 @@
 					../../frameworks/Zen/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTHotkeyPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -2476,7 +2476,7 @@
 					../../frameworks/Virtue/build,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopColorLabelPrimitive-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_CFLAGS = "";
@@ -3503,7 +3503,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTInterface-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3532,7 +3532,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTInterface-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PREBINDING = NO;
@@ -3551,7 +3551,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopNamePrimitive-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3596,7 +3596,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h";
 				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
@@ -3622,7 +3622,7 @@
 		EA609BF7090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h";
 				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
 				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
@@ -3642,7 +3642,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopColorLabelPrimitive-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3669,7 +3669,7 @@
 		EA609BFD090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopColorLabelPrimitive-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = VTDesktopColorLabelPrimitive;
@@ -3688,7 +3688,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTApplicationPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3715,7 +3715,7 @@
 		EA609C03090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTApplicationPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = VTApplicationPreferences;
@@ -3734,7 +3734,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTAppearancePreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3761,7 +3761,7 @@
 		EA609C09090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTAppearancePreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = VTAppearancePreferences;
@@ -3780,7 +3780,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTHotkeyPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3807,7 +3807,7 @@
 		EA609C0F090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTHotkeyPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = VTHotkeyPreferences;
@@ -3826,7 +3826,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTLayoutPreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3853,7 +3853,7 @@
 		EA609C15090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTLayoutPreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = VTLayoutPreferences;
@@ -3872,7 +3872,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopTemplatePreferences-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "\"$(BUILD_DIR)\"";
@@ -3899,7 +3899,7 @@
 		EA609C1B090666C8003BD20D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "VTDesktopTemplatePreferences-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = "";

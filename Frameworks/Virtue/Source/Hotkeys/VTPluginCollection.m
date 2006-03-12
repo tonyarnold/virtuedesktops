@@ -90,15 +90,10 @@
 		if ([plugin enabled] == NO)
 			continue; 
 		
-		@try {
-			if ([plugin respondsToSelector: [invocation selector]]) 
-				[invocation invokeWithTarget: [plugin instance]];
-			else
-				continue; 
-		} 
-		@catch (NSException* exception) {
+		if ([plugin respondsToSelector: [invocation selector]]) 
+			[invocation invokeWithTarget: [plugin instance]];
+		else
 			continue;
-		}
 		
 		if(!strcmp([signature methodReturnType], @encode(id))) {
 			id ret = nil;

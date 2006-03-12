@@ -67,7 +67,7 @@
 		if (NULL == path)
 		{
 			NSLog(@"[VTPluginPreferencesController: 64] path was NULL.");
-			return;
+			return nil;
 		}
 	
 		[text readFromURL: path options: nil documentAttributes: &attr]; 

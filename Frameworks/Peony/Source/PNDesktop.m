@@ -296,7 +296,7 @@
 		
 		CGSNewTransition(cgConnection, &transSpec, &transNo);
 		CGSSetWorkspace(cgConnection,mDesktopId);
-		usleep(2000);
+		usleep(10000);
 		CGSInvokeTransition(cgConnection, transNo, seconds);
 		
 	// notify listeners that we are now the active desktop

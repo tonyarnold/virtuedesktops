@@ -434,10 +434,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = dockExtension_Prefix.pch;
 				HEADER_SEARCH_PATHS = ../DockCommunicator/includes;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = DockExtension;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -448,7 +445,6 @@
 					ppc,
 					i386,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;

@@ -47,4 +47,8 @@ typedef enum {
 - (void) setSelected: (BOOL) flag; 
 - (BOOL) isSelected; 
 
+#pragma mark -
+- (void) mouseEntered: (NSEvent*) event;
+- (void) mouseExited: (NSEvent*) event;
+
 @end

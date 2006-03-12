@@ -152,7 +152,7 @@
 	VTColorLabelButtonCell*	trackedCell		= (VTColorLabelButtonCell*)[mColorLabels cellWithTag: trackingTag]; 
 
 	// forward the message to the correct cell 
-	[trackedCell mouseEntered: event]; 
+	[trackedCell mouseEntered: event];
 }
 
 - (void) mouseExited: (NSEvent*) event {

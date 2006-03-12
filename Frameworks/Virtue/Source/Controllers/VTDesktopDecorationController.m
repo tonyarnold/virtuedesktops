@@ -149,7 +149,9 @@
 	VTDesktop*	desktopToActivate		= [notification object]; 
 	NSWindow*		window							= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
 	PNWindow* peonyWindow						= [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
-	[peonyWindow setLevel: (mDesktopWindowLevel + 1)];
+	[window orderWindow: NSWindowBelow relativeTo: 0];
+	[window setLevel: (kCGDesktopIconWindowLevel - 1)];
+	
 	[peonyWindow setIgnoredByExpose: YES];
 	[peonyWindow setSticky: NO];	
 }
@@ -170,7 +172,7 @@
 																																	defer: NO] autorelease];
 
 	if ([desktop visible])
-		[window setLevel: (mDesktopWindowLevel + 1)];
+		[window setLevel: (kCGDesktopIconWindowLevel - 1)];
 	else
 		[window setLevel: kVTNonActiveWindowLevel]; 
 	

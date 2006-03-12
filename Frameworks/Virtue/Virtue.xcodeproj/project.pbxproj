@@ -818,6 +818,7 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = /System/Library/Frameworks/ApplicationServices.framework/Frameworks;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
@@ -832,6 +833,7 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = /System/Library/Frameworks/ApplicationServices.framework/Frameworks;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
