@@ -1,15 +1,18 @@
 /******************************************************************************
-*
-* Peony.Virtue
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-*
-*****************************************************************************/
+ *
+ * Peony.Virtue
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller
+ * playback@users.sourceforge.net
+ * 
+ * Copyright 2006, Tony Arnold
+ * tonyarnold@users.sourceforge.net
+ *
+ * See COPYING for licensing details
+ *
+ *****************************************************************************/
 
 #import "PNDesktop.h"
 #import "PNWindow.h"
@@ -277,34 +280,45 @@
 		[NSNumber numberWithInt: mDesktopId], @"desktop",
 		nil];
 
-	// notify clients that we will soon be the active desktop
-	[[NSDistributedNotificationCenter defaultCenter]
+// Get the connection to the CoreGraphics server
+		CGSConnection cgs = _CGSDefaultConnection();
+		
+// Set-up the transition "effect" first
+		int handle;
+		CGSTransitionSpec spec;
+		spec.unknown1		= 0;
+		spec.type				= transition;
+		spec.option			= option;
+		spec.wid				= 0;
+		spec.backColour	= 0,0,0;
+		
+// Create the transition, freezing all on-screen activity		
+		CGSNewTransition(cgs, &spec, &handle);
+		
+// Notify clients that we will soon be the active desktop
+		[[NSDistributedNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
-	[[NSNotificationCenter defaultCenter]
+		[[NSNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopWillActivate object: self];
 
-	// get connection
-		CGSConnection cgConnection = _CGSDefaultConnection();
-
-		int transNo = -1;
-		CGSTransitionSpec transSpec;
-
-		transSpec.type				= transition;
-		transSpec.option			= option;
-		transSpec.wid					= 0;
-		transSpec.backColour	= NULL;
+// Now switch the workspace while the screen is frozen, setting up the transition target
+		CGSSetWorkspace(cgs, mDesktopId);
 		
-		CGSNewTransition(cgConnection, &transSpec, &transNo);
-		CGSSetWorkspace(cgConnection,mDesktopId);
-		usleep(10000);
-		CGSInvokeTransition(cgConnection, transNo, seconds);
-		
-	// notify listeners that we are now the active desktop
-	[[NSDistributedNotificationCenter defaultCenter]
+// Notify listeners that we are now the active desktop
+		[[NSDistributedNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
-	[[NSNotificationCenter defaultCenter]
+		[[NSNotificationCenter defaultCenter]
 		postNotificationName: kPnOnDesktopDidActivate object: self];
-}
+		
+// Run the transition		
+		CGSInvokeTransition(cgs, handle, seconds);
+		
+// We need to wait for at least one second, but at least as long as the transition itself
+		sleep((long)(seconds + 1));
+		
+// Now release the transition from memory
+		CGSReleaseTransition(cgs, handle);
+	}
 
 #pragma mark -
 #pragma mark Window operations
