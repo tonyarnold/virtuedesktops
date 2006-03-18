@@ -1,0 +1,150 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeBuildStyle = 4A9504CCFFE6A4B311CA0CBA /* Debug */;
+		activeExecutable = C9C525B509C375A900FC554C /* HUDWindow */;
+		activeTarget = 8D1107260486CEB800E47090 /* HUDWindow */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* HUDWindow */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = C9C525C509C375C200FC554C /* Code sense */;
+		executables = (
+			C9C525B509C375A900FC554C /* HUDWindow */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					133,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 163960578;
+			PBXWorkspaceStateSaveDate = 163960578;
+		};
+		sourceControlManager = C9C525C409C375C200FC554C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* HUDWindow */ = {
+		activeExec = 0;
+		executables = (
+			C9C525B509C375A900FC554C /* HUDWindow */,
+		);
+	};
+	C9C525B509C375A900FC554C /* HUDWindow */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = HUDWindow;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	C9C525C009C375C200FC554C /* HUD Window Specs.rtf */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {882, 667}}";
+			sepNavSelRange = "{277, 0}";
+			sepNavVisRect = "{{0, 0}, {882, 667}}";
+			sepNavWindowFrame = "{{38, 34}, {927, 772}}";
+		};
+	};
+	C9C525C109C375C200FC554C /* hud_titlebar-close.tiff */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 55}, {927, 772}}";
+		};
+	};
+	C9C525C409C375C200FC554C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	C9C525C509C375C200FC554C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C9C525C809C375DC00FC554C /* HUDWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1212, 618}}";
+			sepNavSelRange = "{258, 0}";
+			sepNavVisRect = "{{0, 0}, {1212, 618}}";
+			sepNavWindowFrame = "{{15, 89}, {1257, 738}}";
+		};
+	};
+	C9C525C909C375DC00FC554C /* HUDWindow.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1212, 2590}}";
+			sepNavSelRange = "{2529, 0}";
+			sepNavVisRect = "{{0, 600}, {1212, 618}}";
+			sepNavWindowFrame = "{{15, 89}, {1257, 738}}";
+		};
+	};
+	C9C526DF09C384E000FC554C /* AppController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {882, 652}}";
+			sepNavSelRange = "{254, 0}";
+			sepNavVisRect = "{{0, 0}, {882, 652}}";
+			sepNavWindowFrame = "{{61, 13}, {927, 772}}";
+		};
+	};
+	C9C526E009C384E000FC554C /* AppController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {882, 756}}";
+			sepNavSelRange = "{169, 0}";
+			sepNavVisRect = "{{0, 0}, {882, 652}}";
+			sepNavWindowFrame = "{{61, 13}, {927, 772}}";
+		};
+	};
+}
