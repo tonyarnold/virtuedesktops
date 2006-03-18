@@ -374,11 +374,9 @@
 	// bind to active desktop 
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
-	if ([activeDesktop showsBackground]) {
-		// and apply settings of active desktop 
-		mExpectingBackgroundChange = YES;
-		[activeDesktop applyDesktopBackground];
-	}
+	// and apply settings of active desktop 
+	mExpectingBackgroundChange = YES;
+	[activeDesktop applyDesktopBackground];
 }
 
 #pragma mark -

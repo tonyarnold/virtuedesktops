@@ -104,7 +104,6 @@
 		E9363A7D06FCDDCD00E354DB /* GPL in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A6B06FCDDCD00E354DB /* GPL */; };
 		E9363A7E06FCDDCD00E354DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9363A6D06FCDDCD00E354DB /* Localizable.strings */; };
 		E9363A8006FCDDCD00E354DB /* Operations.nib in Resources */ = {isa = PBXBuildFile; fileRef = E9363A7106FCDDCD00E354DB /* Operations.nib */; };
-		E9363A8206FCDDCD00E354DB /* Readme.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9363A7506FCDDCD00E354DB /* Readme.rtf */; };
 		E9363AEF06FCE64300E354DB /* iconVirtue.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9363ADD06FCE64300E354DB /* iconVirtue.icns */; };
 		E9363AF006FCE64300E354DB /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363ADF06FCE64300E354DB /* imageCrossSmall.tif */; };
 		E9363AF106FCE64300E354DB /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = E9363AE006FCE64300E354DB /* imageCrossSmallHover.tif */; };
@@ -132,7 +131,6 @@
 		E9558185076CA62B00401479 /* VTApplicationRunningColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9558183076CA62B00401479 /* VTApplicationRunningColorTransformer.m */; };
 		E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E95581C6076CC7C200401479 /* VTWindowStickyStateTransformer.m */; };
 		E9560C4D071DAB6000D497BE /* VTPluginDesktopNamePrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = E9560C4B071DAB6000D497BE /* VTPluginDesktopNamePrimitive.m */; };
-		E9581F1C0717DE56009583A0 /* iconVirtualDesktopsFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9581F1B0717DE56009583A0 /* iconVirtualDesktopsFolder.icns */; };
 		E95820F2071B162A009583A0 /* imageActionNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = E95820F0071B162A009583A0 /* imageActionNormal.png */; };
 		E95820F3071B162A009583A0 /* imageActionPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E95820F1071B162A009583A0 /* imageActionPressed.png */; };
 		E958A87B075EEFDB00773392 /* VTLayoutPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = E958A879075EEFDA00773392 /* VTLayoutPreferences.nib */; };
@@ -656,7 +654,6 @@
 			files = (
 				E9363A7906FCDDCD00E354DB /* COPYING in CopyFiles */,
 				E9363A7D06FCDDCD00E354DB /* GPL in CopyFiles */,
-				E9363A8206FCDDCD00E354DB /* Readme.rtf in CopyFiles */,
 				E9035C82077754EF00016B73 /* TODO.rtf in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,10 +793,8 @@
 		E9363A6C06FCDDCD00E354DB /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = English; path = English.lproj/GPL; sourceTree = "<group>"; };
 		E9363A6E06FCDDCD00E354DB /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9363A7206FCDDCD00E354DB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Operations.nib; sourceTree = "<group>"; };
-		E9363A7606FCDDCD00E354DB /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Readme.rtf; sourceTree = "<group>"; };
 		E9363A8406FCDDF800E354DB /* German */ = {isa = PBXFileReference; lastKnownFileType = text; name = German; path = German.lproj/COPYING; sourceTree = "<group>"; };
 		E9363A8706FCDDF800E354DB /* German */ = {isa = PBXFileReference; lastKnownFileType = text; name = German; path = German.lproj/GPL; sourceTree = "<group>"; };
-		E9363A8E06FCDDF800E354DB /* German */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = German; path = German.lproj/Readme.rtf; sourceTree = "<group>"; };
 		E9363AAC06FCE1CF00E354DB /* VTDockExtensionPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDockExtensionPlugin-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9363ADD06FCE64300E354DB /* iconVirtue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconVirtue.icns; sourceTree = "<group>"; };
 		E9363ADF06FCE64300E354DB /* imageCrossSmall.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imageCrossSmall.tif; sourceTree = "<group>"; };
@@ -866,7 +861,6 @@
 		E956B78F078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Appearance/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E956B790078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Application/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E956B791078CAEAE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Source/Interface/Preferences/Plugins/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E9581F1B0717DE56009583A0 /* iconVirtualDesktopsFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconVirtualDesktopsFolder.icns; sourceTree = "<group>"; };
 		E958203B07198C88009583A0 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		E9582083071AF896009583A0 /* VTAppearancePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTAppearancePreferences-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9582084071AF913009583A0 /* VTAppearancePreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTAppearancePreferencesController.h; path = Source/Interface/Preferences/Appearance/VTAppearancePreferencesController.h; sourceTree = "<group>"; };
@@ -1450,7 +1444,6 @@
 				E9035C81077754EF00016B73 /* TODO.rtf */,
 				E9363A6B06FCDDCD00E354DB /* GPL */,
 				E9363A6306FCDDCD00E354DB /* COPYING */,
-				E9363A7506FCDDCD00E354DB /* Readme.rtf */,
 			);
 			name = Informational;
 			sourceTree = "<group>";
@@ -1469,7 +1462,6 @@
 			isa = PBXGroup;
 			children = (
 				E9C62981075A01F90072C1EF /* iconExtension.icns */,
-				E9581F1B0717DE56009583A0 /* iconVirtualDesktopsFolder.icns */,
 				E9FD547A0713BF290006590F /* iconDesktopFolder.icns */,
 				E9363ADD06FCE64300E354DB /* iconVirtue.icns */,
 			);
@@ -2657,7 +2649,6 @@
 				E91AD9CE07036E3F00F69228 /* Virtue.scriptTerminology in Resources */,
 				E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */,
 				E9FD54FF0715C6260006590F /* imageAction.png in Resources */,
-				E9581F1C0717DE56009583A0 /* iconVirtualDesktopsFolder.icns in Resources */,
 				E95820F2071B162A009583A0 /* imageActionNormal.png in Resources */,
 				E95820F3071B162A009583A0 /* imageActionPressed.png in Resources */,
 				E91270530726F06E006DC207 /* imageAction.tiff in Resources */,
@@ -3356,15 +3347,6 @@
 				E956B77B078CADF5008B2571 /* fr */,
 			);
 			name = Operations.nib;
-			sourceTree = "<group>";
-		};
-		E9363A7506FCDDCD00E354DB /* Readme.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9363A7606FCDDCD00E354DB /* English */,
-				E9363A8E06FCDDF800E354DB /* German */,
-			);
-			name = Readme.rtf;
 			sourceTree = "<group>";
 		};
 		E940C7360735139B00C1642C /* PrimitiveDesktopNameInspector.nib */ = {

@@ -90,7 +90,12 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 
 #pragma mark -
 #pragma mark Operations 
-- (void) setBackground: (NSString*) file {		
+- (void) setBackground: (NSString*) file {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if ([fileManager fileExistsAtPath: file] == NO)
+		return;
+	
+	
 	switch (mMode) {
 		case VTBackgroundHelperModeFinder: 
 			[self setBackgroundUsingFinder: file]; 
