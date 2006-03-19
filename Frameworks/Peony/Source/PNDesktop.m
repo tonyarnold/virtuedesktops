@@ -43,12 +43,11 @@
  *
  * @param		desktopId		The workspace id that should be wrapped
  *
- * Returns an autoreleased desktop wrapper instance that is fully
- * initialized and assigned a temporary desktop name.
+ * Returns an autoreleased desktop wrapper instance that is fully initialised and assigned a temporary desktop name.
  *
  */
 + (PNDesktop*) desktopWithId: (int) desktopId {
-	// create a new desktop and associate it with the passed workspace id
+	// Create a new desktop and associate it with the passed workspace id
 	return [[[PNDesktop alloc] initWithId: desktopId] autorelease];
 }
 
@@ -56,19 +55,18 @@
  * @brief		Factory for a desktop with passed id and name
  *
  * @param		desktopId		The workspace id that should be wrapped
- * @param		andName		The desktop name
+ * @param		andName			The desktop name
  *
  */
 + (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name {
-	// create a new desktop and associate it with the passed workspace id
+	// Create a new desktop and associate it with the passed workspace id
 	return [[[PNDesktop alloc] initWithId: desktopId andName: name] autorelease];
 }
 
 #pragma mark -
 
 /**
- * @brief We do not allow initialization of a non-connected
- *			desktop proxy
+ * @brief We do not allow initialisation of a non-connected desktop proxy
  *
  */
 - (id) init {
@@ -76,30 +74,28 @@
 }
 
 /**
- * @brief Initializer for a desktop
+ * @brief Initialiser for a desktop
  *
  * @param desktopId The workspace id that is wrapped
  *
- * A call to this initializer will bind the desktop to the passed workspace and
- * initialize the name of the desktop to the default name.
+ * A call to this initialiser will bind the desktop to the passed workspace and initialise the name of the desktop to the default name.
  *
  */
 - (id) initWithId: (int) desktopId {
 	// generate default name
 	NSString* sDefaultName = [NSString stringWithFormat: @"Desktop %i", desktopId];
-	// pass on initialiazion to designated initializer
-
+	
+	// Pass on initialisation to designated initialiser
 	return [self initWithId: desktopId andName: sDefaultName];
 }
 
 /**
- * @brief Designated Initializer for a desktop
+ * @brief Designated initialiser for a desktop
  *
  * @param desktopId The workspace id that is wrapped
  * @param andName		The desktop name
  *
- * A call to this initializer will bind the desktop to the passed workspace and
- * initialize the name of the desktop to the passed name.
+ * A call to this initialiser will bind the desktop to the passed workspace and initialise the name of the desktop to the passed name.
  *
  */
 - (id) initWithId: (int) desktopId andName: (NSString*) name {
@@ -111,7 +107,7 @@
 	ZEN_RELEASE(mWindows);
 	ZEN_RELEASE(mApplications);
 
-	// delegate to super
+	// Delegate deallocation to superclass
 	[super dealloc];
 }
 
@@ -120,7 +116,6 @@
 - (id) copyWithZone: (NSZone*) zone {
 	PNDesktop* desktop = [[PNDesktop alloc] initWithId: mDesktopId andName: mDesktopName update: NO];
 
-	// and initialize
 	desktop->mWindows				= [mWindows retain];
 	desktop->mApplications	= [mApplications retain];
 
@@ -133,14 +128,14 @@
 /**
  * @brief		Returns the id of the desktop that is currently shown
  *
- * @return	The workspace id of the currently shown desktop or
- *			kPnDesktopInvalidId if there was an error.
+ * @return	The workspace id of the currently shown desktop or kPnDesktopInvalidId if there was an error.
  */
 + (int) activeDesktopIdentifier
 {
-	// get cgs connection
+	// Get a connection to the CoreGraphics server
 	CGSConnection oConnection = _CGSDefaultConnection();
-	// fetch the active desktop id and return nil in case of an error
+	
+	// Fetch the active desktop id and return nil in case of an error
 	int iWorkspaceId;
 
 	OSStatus oResult = CGSGetWorkspace(oConnection, &iWorkspaceId);
@@ -154,7 +149,7 @@
 }
 
 /**
- * @brief Returns the lowest possible / valid desktop id
+ * @brief Returns the lowest possible valid desktop id
  *
  */
 + (int) firstDesktopIdentifier {
@@ -211,8 +206,7 @@
 /**
  * @brief Checks if the desktop is currently shown to the user
  *
- * @return	Returns @c YES if the desktop is the one the user is
- *			currently working on, @c NO if it is not.
+ * @return	Returns @c YES if the desktop is the one the user is currently working on, @c NO if it is not.
  *
  */
 - (BOOL) visible {
@@ -261,9 +255,7 @@
  * @param option		Option parameterizing the transition
  * @param duration	The duration the transition should take in seconds
  *
- * The passed transition type has to be different from peonyTransitionAny. If
- * peonyTransitionAny is passed, peonyTransitionNone will be used as the type
- * passed to CGS.
+ * The passed transition type has to be different from peonyTransitionAny. If peonyTransitionAny is passed, peonyTransitionNone will be used as the type passed to CGS.
  *
  * @notify		kPnOnDesktopWillActivate
  *					'object'	self
@@ -276,62 +268,58 @@
  *					'desktop' self.desktopId
  */
 - (void) activateWithTransition: (PNTransitionType) transition option: (PNTransitionOption) option duration: (float) seconds {
-	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys:
-		[NSNumber numberWithInt: mDesktopId], @"desktop",
-		nil];
+	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt: mDesktopId], @"desktop", nil];
 
-// Get the connection to the CoreGraphics server
-		CGSConnection cgs = _CGSDefaultConnection();
-		
-// Set-up the transition "effect" first
-		int handle;
-		CGSTransitionSpec spec;
-		spec.unknown1		= 0;
-		spec.type				= transition;
-		spec.option			= option;
-		spec.wid				= 0;
-		spec.backColour	= 0,0,0;
-		
-// Create the transition, freezing all on-screen activity		
-		CGSNewTransition(cgs, &spec, &handle);
-		
-// Notify clients that we will soon be the active desktop
-		[[NSDistributedNotificationCenter defaultCenter]
-		postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
-		[[NSNotificationCenter defaultCenter]
-		postNotificationName: kPnOnDesktopWillActivate object: self];
+	// Get the connection to the CoreGraphics server
+	CGSConnection cgs = _CGSDefaultConnection();
 
-// Now switch the workspace while the screen is frozen, setting up the transition target
-		CGSSetWorkspace(cgs, mDesktopId);
-		
-// Notify listeners that we are now the active desktop
-		[[NSDistributedNotificationCenter defaultCenter]
-		postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
-		[[NSNotificationCenter defaultCenter]
-		postNotificationName: kPnOnDesktopDidActivate object: self];
-		
-// Run the transition		
-		CGSInvokeTransition(cgs, handle, seconds);
-		
-// We need to wait for at least one second, but at least as long as the transition itself
-		sleep((long)(seconds + 1));
-		
-// Now release the transition from memory
-		CGSReleaseTransition(cgs, handle);
-	}
+	// Set-up the transition "effect" first
+	int handle;
+	CGSTransitionSpec spec;
+	spec.unknown1		= 0;
+	spec.type				= transition;
+	spec.option			= option;
+	spec.wid				= 0;
+	spec.backColour	= 0,0,0;
+
+	// Create the transition, freezing all on-screen activity		
+	CGSNewTransition(cgs, &spec, &handle);
+
+	// Notify clients that we will soon be the active desktop
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
+	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
+
+	// Now switch the workspace while the screen is frozen, setting up the transition target
+	CGSSetWorkspace(cgs, mDesktopId);
+
+	// Notify listeners that we are now the active desktop
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
+	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: self];
+
+	// tonyarnold@users.sourceforge.net: Previously, I would insert a usleep(100000); here, so that the desktop picture had time to update before the transition was released. I think we need to find a faster way to set the desktop picture and get it onscreen - or accept the fact that desktop picture transitions are something that will only display properly on fast machines.
+
+	// Run the transition		
+	CGSInvokeTransition(cgs, handle, seconds);
+
+	// We need to wait for at least one second, but at least as long as the transition itself
+	sleep((long)(seconds + 1));
+
+	// Now release the transition from memory
+	CGSReleaseTransition(cgs, handle);
+}
 
 #pragma mark -
 #pragma mark Window operations
 
 - (void) moveAllWindowsToDesktop: (PNDesktop*) desktop {
-	// update to fetch all windows we have
+	// Update to ensure all our windows are listed and current
 	[self updateDesktop];
-	// now go through the list of windows and move them to the passed desktop
+	
+	// Now go through the window list and move them to the new desktop
 	NSEnumerator*		windowIter = [mWindows objectEnumerator];
 	PNWindow*				window		 = nil;
 
-	// TODO: Move functionality to use a PNWindowList for mass-window
-	//		 operations
+	// TODO: Move functionality to use a PNWindowList for mass-window operations
 	while (window = [windowIter nextObject]) {
 		[window setDesktop: desktop];
 	}
@@ -675,7 +663,7 @@
 
 - (id) initWithId: (int) desktopId andName: (NSString*) name update: (BOOL) update {
 	if (self = [super init]) {
-		// initialize attributes
+		// initialise attributes
 		mDesktopId		= desktopId;
 		mDesktopName	= [name copy];
 		mWindows		= [[NSMutableArray array] retain];
