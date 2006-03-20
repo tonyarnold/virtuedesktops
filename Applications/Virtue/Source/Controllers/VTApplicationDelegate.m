@@ -64,7 +64,7 @@ enum
 
 - (id) init {
 	if (self = [super init]) {
-		// init attributes 
+		// init attributes
 		mStartedUp = NO; 
 		mWillPowerOff = NO;
 		mStatusItem = nil; 
@@ -108,6 +108,7 @@ enum
 #pragma mark Bootstrapping 
 
 - (void) bootstrap {
+	[NSApplication sharedApplication];
 	// Inject dock extension code into the Dock process
 	dec_inject_code();
 	
