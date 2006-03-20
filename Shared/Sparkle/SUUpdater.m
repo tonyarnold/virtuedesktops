@@ -234,6 +234,14 @@
 	[updateAlert showWindow:self];
 }
 
+- (void)appcastDidFailToLoad:(SUAppcast *)ac
+{
+	[ac autorelease];
+	updateInProgress = NO;
+	if (verbose)
+		[self showUpdateErrorAlertWithInfo:SULocalizedString(@"An error occurred in retrieving update information; are you connected to the internet? Please try again later.", nil)];
+}
+
 - (void)appcastDidFinishLoading:(SUAppcast *)ac
 {
 	@try
@@ -418,6 +426,9 @@
 		{
 			[statusController beginActionWithTitle:SULocalizedString(@"Installing update...", nil) maxProgressValue:0 statusText:nil];
 			[statusController setButtonEnabled:NO];
+			NSEvent *event;
+			while((event = [NSApp nextEventMatchingMask:NSAnyEventMask untilDate:nil inMode:NSDefaultRunLoopMode dequeue:YES]))
+				[NSApp sendEvent:event];			
 		}
 		
 		// We assume that the archive will contain a file named {CFBundleName}.app
@@ -472,11 +483,29 @@
 	}
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:SUUpdaterWillRestartNotification object:self];
-	[[NSWorkspace sharedWorkspace] launchApplication:currentAppPath];
-	if (![[NSWorkspace sharedWorkspace] launchApplication:currentAppPath])
-	{
-		[self showUpdateErrorAlertWithInfo:[NSString stringWithFormat:SULocalizedString(@"An error occurred while trying to relaunch %@. The update will take effect next you run %@.", nil), SUHostAppName(), SUHostAppName()]];
-	}
+	//[[NSWorkspace sharedWorkspace] launchApplication:currentAppPath];
+//	
+//	// Now we'll give the new process a chance to split off; wait up to five seconds for the launch thread to terminate.
+//	int oldCount = [NSApp copiesRunning];
+//	NSDate *failDate = [NSDate dateWithTimeIntervalSinceNow:5];
+//	while([failDate timeIntervalSinceNow] > 0)
+//	{		
+//		if([NSApp copiesRunning] > oldCount) // Has a new copy of the app appeared?
+//			[NSApp terminate:self]; // That's it! Our work is done here.
+//		[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+//	}
+//	[self showUpdateErrorAlertWithInfo:[NSString stringWithFormat:SULocalizedString(@"An error occurred while trying to relaunch %@. The update will take effect next you run %@.", nil), SUHostAppName(), SUHostAppName()]];
+//	[self abandonUpdate];
+	
+	// We do this so that Virtue doesn't launch two copies of itself (which would be very bad). This is based upon advice from Andy Matuschak
+	setenv("LAUNCH_PATH", [currentAppPath UTF8String], 1);
+	system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
+				 "    /bin/sleep .2;\n"
+				 "  done\n"
+				 "  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
+				 "    /usr/bin/open \"${LAUNCH_PATH}\"\n"
+				 "  fi\n"
+				 "} &>/dev/null &'");
 	[NSApp terminate:self];
 }
 

@@ -43,21 +43,32 @@
 {
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	
-	RSS *feed = [[RSS alloc] initWithURL:url normalize:YES];
-	
-	// Set up all the appcast items
-	NSMutableArray *tempItems = [NSMutableArray array];
-	id enumerator = [[feed newsItems] objectEnumerator], current;
-	while ((current = [enumerator nextObject]))
+	RSS *feed;
+	@try
 	{
-		[tempItems addObject:[[[SUAppcastItem alloc] initWithDictionary:current] autorelease]];
+		feed = [[RSS alloc] initWithURL:url normalize:YES];
+		// Set up all the appcast items
+		NSMutableArray *tempItems = [NSMutableArray array];
+		id enumerator = [[feed newsItems] objectEnumerator], current;
+		while ((current = [enumerator nextObject]))
+		{
+			[tempItems addObject:[[[SUAppcastItem alloc] initWithDictionary:current] autorelease]];
+		}
+		items = [[NSArray arrayWithArray:tempItems] retain];
+		
+		if ([delegate respondsToSelector:@selector(appcastDidFinishLoading:)])
+			[delegate performSelectorOnMainThread:@selector(appcastDidFinishLoading:) withObject:self waitUntilDone:NO];
+		
 	}
-	items = [[NSArray arrayWithArray:tempItems] retain];
-	
-	if ([delegate respondsToSelector:@selector(appcastDidFinishLoading:)])
-		[delegate performSelectorOnMainThread:@selector(appcastDidFinishLoading:) withObject:self waitUntilDone:NO];
-
-	[pool release];	
+	@catch (NSException *e)
+	{
+		if ([delegate respondsToSelector:@selector(appcastDidFailToLoad:)])
+			[delegate performSelectorOnMainThread:@selector(appcastDidFailToLoad:) withObject:self waitUntilDone:NO];
+	}
+	@finally
+	{
+		[pool release];	
+	}
 }
 
 @end

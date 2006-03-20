@@ -91,7 +91,7 @@
 
 - (BOOL)movePathWithAuthentication:(NSString *)src toPath:(NSString *)dst
 {
-	if ([self currentUserOwnsPath:dst])
+	if ([[NSFileManager defaultManager] isWritableFileAtPath:dst] && [[NSFileManager defaultManager] isWritableFileAtPath:[dst stringByDeletingLastPathComponent]])
 	{
 		int tag = 0;
 		BOOL result = [[NSWorkspace sharedWorkspace] performFileOperation:NSWorkspaceRecycleOperation source:[dst stringByDeletingLastPathComponent] destination:@"" files:[NSArray arrayWithObject:[dst lastPathComponent]] tag:&tag];

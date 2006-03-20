@@ -18,6 +18,7 @@ id SUInfoValueForKey(NSString *key)
 
 NSString *SUHostAppName()
 {
+	if (SUInfoValueForKey(@"CFBundleName")) { return SUInfoValueForKey(@"CFBundleName"); }
 	return [[[NSFileManager defaultManager] displayNameAtPath:[[NSBundle mainBundle] bundlePath]] stringByDeletingPathExtension];
 }
 

@@ -56,13 +56,8 @@
 	title = [aTitle copy];
 	[self didChangeValueForKey:@"title"];
 	
-	[self willChangeValueForKey:@"maxProgressValue"];
-	maxProgressValue = aMaxProgressValue;
-	[self didChangeValueForKey:@"maxProgressValue"];
-	
-	[self willChangeValueForKey:@"statusText"];
-	statusText = [aStatusText copy];
-	[self didChangeValueForKey:@"statusText"];
+	[self setMaxProgressValue:aMaxProgressValue];
+	[self setStatusText:aStatusText];
 }
 
 - (void)setButtonTitle:(NSString *)aButtonTitle target:target action:(SEL)action isDefault:(BOOL)isDefault
@@ -108,7 +103,8 @@
 {
 	[self willChangeValueForKey:@"maxProgressValue"];
 	maxProgressValue = value;
-	[self didChangeValueForKey:@"maxProgressValue"];	
+	[self didChangeValueForKey:@"maxProgressValue"];
+	[self setProgressValue:0];
 }
 
 - (void)setStatusText:(NSString *)aStatusText
