@@ -304,16 +304,12 @@
 	
 	// Run the transition	
 	CGSInvokeTransition(cgs, handle, seconds);
-	// We need to wait for at least one second, but at least as long as the transition itself
 	
-	//NSLog(@"Going to wait for %@ seconds.", [NSNumber numberWithFloat:seconds]);
-	
-	//usleep(10000);
-
+	// We need to wait for the length of the transition before releasing
+	usleep((useconds_t)(seconds*1000000));
 	
 	// Now release the transition from memory
-	//CGSReleaseTransition(cgs, handle);
-	
+	CGSReleaseTransition(cgs, handle);
 }
 
 #pragma mark -
