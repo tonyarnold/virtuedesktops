@@ -29,6 +29,7 @@
 	
 	// Attributes 
 	BOOL							mStartedUp; 
+	BOOL							mWillPowerOff;
 	NSStatusItem*			mStatusItem; 
 	BOOL							mStatusItemMenuDesktopNeedsUpdate; 
 	BOOL							mStatusItemMenuActiveDesktopNeedsUpdate;

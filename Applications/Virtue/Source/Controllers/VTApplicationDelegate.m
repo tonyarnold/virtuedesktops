@@ -47,6 +47,7 @@ enum
 - (void) updateActiveDesktopMenu; 
 #pragma mark -
 - (void) showDesktopInspectorForDesktop: (VTDesktop*) desktop;  
+- (void) workspaceWillPowerOff:(NSNotification *)aNotification;
 @end 
 
 @implementation VTApplicationDelegate
@@ -65,6 +66,7 @@ enum
 	if (self = [super init]) {
 		// init attributes 
 		mStartedUp = NO; 
+		mWillPowerOff = NO;
 		mStatusItem = nil; 
 		mStatusItemMenuDesktopNeedsUpdate = YES; 
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
@@ -234,18 +236,10 @@ enum
 			addObserver: self
 			 forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]
 				options: NSKeyValueObservingOptionNew
-				context: NULL]; 
-	
-	// register private observers 
-	[self registerObservers]; 
-
-// WORKAROUND 
-	// Read default desktop decoration levels 
-	NSNumber* desktopLayer = [[NSUserDefaults standardUserDefaults] objectForKey: VTPrivateFinderDesktopLayer]; 
-	if (desktopLayer != nil) {
-		[[VTDesktopDecorationController sharedInstance] setDesktopWindowLevel: [desktopLayer intValue]]; 
-	}
-// END WORKAROUND
+				context: NULL];
+		
+	// Register private observers 
+	[self registerObservers];
 	
 	mStartedUp = YES; 
 }
@@ -334,8 +328,9 @@ enum
 	if (mStartedUp == NO) 
 		return NSTerminateNow; 
 	
+	
 	// Check if we should confirm that we are going to quit 
-	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueWarnBeforeQuitting] == YES) {
+	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueWarnBeforeQuitting] == YES && mWillPowerOff == NO) {
 		[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
 		
 		// Display an alert to make sure the user knows what he is doing 
@@ -582,10 +577,14 @@ enum
 
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onShowPreferences:) name: VTRequestInspectPreferencesName object: nil]; 
+	
+	[[[NSWorkspace sharedWorkspace] notificationCenter] 
+		addObserver: self selector: @selector(workspaceWillPowerOff:) name: NSWorkspaceWillPowerOffNotification object: [NSWorkspace sharedWorkspace]];
 }
 
 - (void) unregisterObservers {
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
+	[[[NSWorkspace sharedWorkspace] notificationCenter] removeObserver: self];
 }
 
 #pragma mark -
@@ -767,5 +766,12 @@ enum
 	[mDesktopInspector showWindowForDesktop: desktop]; 
 }
 
+#pragma mark -
+
+- (void) workspaceWillPowerOff:(NSNotification *)aNotification
+{
+	// If we're shutting down, logging out or restarting, we don't want to ask the user if we should quit. They have already made that decision for us.
+	mWillPowerOff = YES;
+}
 
 @end 
