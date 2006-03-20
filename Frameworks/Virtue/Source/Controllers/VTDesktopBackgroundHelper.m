@@ -4,8 +4,8 @@
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller (playback@users.sourceforge.net)
+* Copyright 2006, Tony Arnold (tonyarnold@users.sourceforge.net)
 *
 * See COPYING for licensing details
 * 
@@ -191,10 +191,11 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	AppleEvent ev = {typeNull, nil};
 	AEAddressDesc addr = {typeNull, nil};
 	OSType sig;
+	NSURL *url;
 	BOOL eventResent = NO;
 	
 	// Get a URL to later convert to an alias
-	NSURL *url = [NSURL fileURLWithPath: file];
+	url = [NSURL fileURLWithPath: file];
 	if (NULL == url) {
 		// bail
 		NSLog(@"[VTDesktopBackgroundHelper: 192] url was NULL.");
@@ -214,7 +215,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 			AEDesc cmonDesc = {typeNull, nil};
 			AEDesc propertyObject = {typeNull, nil};
 				
-			int displaysIndex = 1; 
+			long displaysIndex = 1; 
 			err = AECreateDesc(typeSInt32, &displaysIndex, sizeof(long), &myDesc);
 			if (noErr == err) {
 				AEDisposeDesc(&myDesc);
