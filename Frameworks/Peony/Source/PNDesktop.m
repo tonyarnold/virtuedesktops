@@ -269,43 +269,51 @@
  */
 - (void) activateWithTransition: (PNTransitionType) transition option: (PNTransitionOption) option duration: (float) seconds {
 	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt: mDesktopId], @"desktop", nil];
-
+	
 	// Get the connection to the CoreGraphics server
 	CGSConnection cgs = _CGSDefaultConnection();
 
 	// Set-up the transition "effect" first
 	int handle;
+	float rgb[3];
+				rgb[0] = 0.0;
+				rgb[1] = 0.0;
+				rgb[2] = 0.0;
 	CGSTransitionSpec spec;
 	spec.unknown1		= 0;
 	spec.type				= transition;
 	spec.option			= option;
 	spec.wid				= 0;
-	spec.backColour	= 0,0,0;
+	spec.backColour	= rgb;
 
 	// Create the transition, freezing all on-screen activity		
 	CGSNewTransition(cgs, &spec, &handle);
 
 	// Notify clients that we will soon be the active desktop
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
 
 	// Now switch the workspace while the screen is frozen, setting up the transition target
 	CGSSetWorkspace(cgs, mDesktopId);
 
 	// Notify listeners that we are now the active desktop
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: self];
-
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
+	
 	// tonyarnold@users.sourceforge.net: Previously, I would insert a usleep(100000); here, so that the desktop picture had time to update before the transition was released. I think we need to find a faster way to set the desktop picture and get it onscreen - or accept the fact that desktop picture transitions are something that will only display properly on fast machines.
-
-	// Run the transition		
+	
+	// Run the transition	
 	CGSInvokeTransition(cgs, handle, seconds);
-
 	// We need to wait for at least one second, but at least as long as the transition itself
-	sleep((long)(seconds + 1));
+	
+	//NSLog(@"Going to wait for %@ seconds.", [NSNumber numberWithFloat:seconds]);
+	
+	//usleep(10000);
 
+	
 	// Now release the transition from memory
-	CGSReleaseTransition(cgs, handle);
+	//CGSReleaseTransition(cgs, handle);
+	
 }
 
 #pragma mark -

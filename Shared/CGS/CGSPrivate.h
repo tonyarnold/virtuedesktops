@@ -110,7 +110,9 @@ typedef enum {
 } CGSWindowTag;
 
 extern OSStatus CGSSetWorkspaceWithTransition(const CGSConnection cid,
-																							int workspaceNumber, CGSTransitionType transition, CGSTransitionOption subtype, 
+																							int workspaceNumber, 
+																							CGSTransitionType transition, 
+																							CGSTransitionOption subtype, 
 																							float time);
 
 /* Get the default connection for the current process. */
@@ -202,7 +204,4 @@ extern CGSValue CGSCreateCStringNoCopy(const char *str);
 extern CGSValue CGSCreateCString(const char* str);
 extern char* CGSCStringValue(CGSValue string);
 extern int CGSIntegerValue(CGSValue intVal);
-
 extern void *CGSReleaseGenericObj(void*);
-
-
