@@ -7,13 +7,13 @@
 
 // Navigational group used for requests that change between desktops and to 
 // show navigational helpers like the pager
-VTGroupNavigation_name					= "Navigation"; 
+VTGroupNavigation_name = "Navigation"; 
 
 // Desktop manipulation group containing operations on desktops 
-VTGroupDesktops_name					= "Desktop manipulation";
+VTGroupDesktops_name = "Desktop manipulation";
 	
 // Inspectors... 
-VTGroupInspection_name					= "Inspectors";
+VTGroupInspection_name = "Inspectors";
 
 
 // Request to change the desktop to a named desktop. Name and Description take
@@ -30,24 +30,24 @@ VTRequestChangeDesktopToSnapback_name	= "Show Snapback desktop";
 VTRequestChangeDesktopToSnapback_desc	= "Shows the desktop that was marked as the snapback desktop"; 
 	
 // Request to set the currently visible desktop as the Snapback desktop 
-VTRequestSetSnapbackDesktop_name		= "Mark snapback"; 
+VTRequestSetSnapbackDesktop_name		= "Mark as Snapback desktop"; 
 VTRequestSetSnapbackDesktop_desc		= "Sets the currently shown desktop to be the snapback desktop"; 
 	
 // Request to change to the desktop to the east (the right)
-VTRequestChangeDesktopToEast_name		= "Show desktop to the east";
-VTRequestChangeDesktopToEast_desc		= "Shows the desktop located to the east of the currently shown desktop"; 
+VTRequestChangeDesktopToEast_name		= "Show desktop to the right";
+VTRequestChangeDesktopToEast_desc		= "Shows the desktop located right of the currently shown desktop"; 
 	
 // Request to change to the desktop to the west (the left) 
-VTRequestChangeDesktopToWest_name		= "Show desktop to the west";
-VTRequestChangeDesktopToWest_desc		= "Shows the desktop located to the west of the currently shown desktop";
+VTRequestChangeDesktopToWest_name		= "Show desktop to the left";
+VTRequestChangeDesktopToWest_desc		= "Shows the desktop located left of the currently shown desktop";
 	
 // Request to change to the desktop to the north (above) 
-VTRequestChangeDesktopToNorth_name		= "Show desktop to the north";
-VTRequestChangeDesktopToNorth_desc		= "Shows the desktop located to the north the currently shown desktop";
+VTRequestChangeDesktopToNorth_name	= "Show desktop to the top";
+VTRequestChangeDesktopToNorth_desc	= "Shows the desktop located above the currently shown desktop";
 	
 // Request to change to the desktop to the south (below)
-VTRequestChangeDesktopToSouth_name		= "Show desktop to the south";
-VTRequestChangeDesktopToSouth_desc		= "Shows the desktop located to the south the currently shown desktop";
+VTRequestChangeDesktopToSouth_name	= "Show desktop to the bottom";
+VTRequestChangeDesktopToSouth_desc	= "Shows the desktop located below the currently shown desktop";
 	
 // Request to show the overlay pager in Normal-Mode
 VTRequestShowPager_name					= "Show desktop overlay pager"; 

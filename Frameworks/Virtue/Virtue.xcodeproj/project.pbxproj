@@ -838,6 +838,7 @@
 				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PREBINDING = NO;
 				PRODUCT_NAME = Virtue;
 				WRAPPER_EXTENSION = framework;
 			};

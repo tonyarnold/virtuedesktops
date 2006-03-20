@@ -19,6 +19,7 @@
 #import <Virtue/VTNotifications.h>
 #import <Virtue/NSUserDefaultsControllerKeyFactory.h>
 #import <Zen/Zen.h> 
+#import <Sparkle/Sparkle.h>
 
 #import "VTApplicationDelegate.h"
 #import "VTMatrixDesktopLayout.h" 
@@ -47,7 +48,7 @@ enum
 - (void) updateActiveDesktopMenu; 
 #pragma mark -
 - (void) showDesktopInspectorForDesktop: (VTDesktop*) desktop;  
-- (void) workspaceWillPowerOff:(NSNotification *)aNotification;
+- (void) invalidateQuitDialog:(NSNotification *)aNotification;
 @end 
 
 @implementation VTApplicationDelegate
@@ -66,7 +67,7 @@ enum
 	if (self = [super init]) {
 		// init attributes
 		mStartedUp = NO; 
-		mWillPowerOff = NO;
+		mConfirmQuitOverridden = NO;
 		mStatusItem = nil; 
 		mStatusItemMenuDesktopNeedsUpdate = YES; 
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
@@ -90,12 +91,18 @@ enum
 	ZEN_RELEASE(mDesktopInspector); 
 	ZEN_RELEASE(mApplicationInspector); 
 	
-	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout"]; 
-	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout.desktops"]; 
-	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"]; 
-	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"activeDesktop"]; 
-	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]]; 
-	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
+	[[VTLayoutController sharedInstance] 
+		removeObserver: self forKeyPath: @"activeLayout"]; 
+	[[VTLayoutController sharedInstance] 
+		removeObserver: self forKeyPath: @"activeLayout.desktops"]; 
+	[[VTDesktopController sharedInstance] 
+		removeObserver: self forKeyPath: @"desktops"]; 
+	[[VTDesktopController sharedInstance] 
+		removeObserver: self forKeyPath: @"activeDesktop"]; 
+	[[NSUserDefaultsController sharedUserDefaultsController] 
+		removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]]; 
+	[[NSUserDefaultsController sharedUserDefaultsController] 
+		removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
 	
 	//[mPluginController unloadPlugins]; 
 	ZEN_RELEASE(mPluginController); 
@@ -108,7 +115,9 @@ enum
 #pragma mark Bootstrapping 
 
 - (void) bootstrap {
+	// This registers us to recieve NSWorkspace notifications, even though we are have LSUIElement enabled
 	[NSApplication sharedApplication];
+	
 	// Inject dock extension code into the Dock process
 	dec_inject_code();
 	
@@ -120,11 +129,11 @@ enum
 	
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	
-	// load plugins 
+	// Load plugins 
 	mPluginController = [[VTPluginController alloc] init]; 
 	[mPluginController loadPlugins]; 
 		
-	// create controllers 
+	// Create controllers 
 	[VTDesktopController sharedInstance];
 	[VTDesktopDecorationController sharedInstance]; 
 	[[VTDesktopController sharedInstance] deserializeDesktops]; 
@@ -138,10 +147,10 @@ enum
 	mDesktopInspector			= [[VTDesktopViewController alloc] init];
 	mApplicationInspector	= [[VTApplicationViewController alloc] init];
 		
-	// interface controllers 
+	// Interface controllers 
 	mNotificationBezel = [[VTNotificationBezel alloc] init];
 	
-	// make sure we have our matrix layout created 
+	// Make sure we have our default matrix layout created 
 	NSArray*					layouts = [[VTLayoutController sharedInstance] layouts]; 
 	VTDesktopLayout*	layout	= nil; 
 	
@@ -164,9 +173,9 @@ enum
 		[matrixLayout release]; 
 	}
 	
-	// create decoration prototype 
+	// Create decoration prototype 
 	VTDesktopDecoration* decorationPrototype = [[[VTDesktopDecoration alloc] initWithDesktop: nil] autorelease];
-	// try to read it from our preferences, if it is not there, use the empty one 
+	// Try to read it from our preferences, if it is not there, use the empty one 
 	if ([[NSUserDefaults standardUserDefaults] dictionaryForKey: VTPreferencesDecorationTemplateName] != nil) {
 		NSDictionary* dictionary = [[NSUserDefaults standardUserDefaults] dictionaryForKey: VTPreferencesDecorationTemplateName]; 
 		[decorationPrototype decodeFromDictionary: dictionary]; 
@@ -181,7 +190,7 @@ enum
 	[[VTDesktopController sharedInstance] bind: @"usesDecorationPrototype" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTPreferencesUsesDecorationTemplateName] options: nil]; 
 	[[NSUserDefaultsController sharedUserDefaultsController] bind: [NSUserDefaultsController pathForKey: VTPreferencesUsesDecorationTemplateName] toObject: [VTDesktopController sharedInstance] withKeyPath: @"usesDecorationPrototype" options: nil]; 
 	
-	// decode application preferences
+	// Decode application preferences
 	NSDictionary* applicationDict = [[NSUserDefaults standardUserDefaults] objectForKey: VTPreferencesApplicationsName]; 
 	if (applicationDict)
 		[[VTApplicationController sharedInstance] decodeFromDictionary: applicationDict]; 
@@ -189,14 +198,14 @@ enum
 	// and scan for initial applications 
 	[[VTApplicationController sharedInstance] scanApplications]; 
 
-	// udate status item 
+	// Udate status item 
 	[self updateStatusItem]; 
 	
-	// update items in menu 
+	// Update items in menu 
 	[self updateDesktopsMenu]; 
 	[self updateActiveDesktopMenu]; 
 		
-	// register observers 
+	// Register observers 
 	[[VTLayoutController sharedInstance]
 		addObserver: self
 		 forKeyPath: @"activeLayout"
@@ -331,7 +340,7 @@ enum
 	
 	
 	// Check if we should confirm that we are going to quit 
-	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueWarnBeforeQuitting] == YES && mWillPowerOff == NO) {
+	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueWarnBeforeQuitting] == YES && mConfirmQuitOverridden == NO) {
 		[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
 		
 		// Display an alert to make sure the user knows what he is doing 
@@ -580,7 +589,10 @@ enum
 		addObserver: self selector: @selector(onShowPreferences:) name: VTRequestInspectPreferencesName object: nil]; 
 	
 	[[[NSWorkspace sharedWorkspace] notificationCenter] 
-		addObserver: self selector: @selector(workspaceWillPowerOff:) name: NSWorkspaceWillPowerOffNotification object: [NSWorkspace sharedWorkspace]];
+		addObserver: self selector: @selector(invalidateQuitDialog:) name: NSWorkspaceWillPowerOffNotification object: [NSWorkspace sharedWorkspace]];
+	
+	[[NSNotificationCenter defaultCenter]
+		addObserver:self selector: @selector(invalidateQuitDialog:) name: SUUpdaterWillRestartNotification object:nil];
 }
 
 - (void) unregisterObservers {
@@ -769,10 +781,10 @@ enum
 
 #pragma mark -
 
-- (void) workspaceWillPowerOff:(NSNotification *)aNotification
+- (void) invalidateQuitDialog:(NSNotification *)aNotification
 {
-	// If we're shutting down, logging out or restarting, we don't want to ask the user if we should quit. They have already made that decision for us.
-	mWillPowerOff = YES;
+	// If we're shutting down, logging out, restarting or auto-updating via Sparkle, we don't want to ask the user if we should quit. They have already made that decision for us.
+	mConfirmQuitOverridden = YES;
 }
 
 @end 

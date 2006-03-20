@@ -3944,7 +3944,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)",
-					"$(SRCROOT)/../../Shared",
 				);
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
