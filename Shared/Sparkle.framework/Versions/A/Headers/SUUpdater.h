@@ -18,27 +18,21 @@
 // getting, which it assumes are in the description (or body) field of the relevant RSS item.
 // Set SUShowReleaseNotes to <false/> in Info.plist to hide the button.
 
-@class RSS;
+@class SUAppcastItem, SUUpdateAlert, SUStatusController;
 @interface SUUpdater : NSObject {
+	SUAppcastItem *updateItem;
+	
+	SUStatusController *statusController;
+	SUUpdateAlert *updateAlert;
+	
 	NSURLDownload *downloader;
 	NSString *downloadPath;
-	
-	NSPanel *statusWindow;
-	NSTextField *statusField;
-	NSTextField *downloadProgressField;
-	NSProgressIndicator *progressBar;
-	NSButton *actionButton;
-	
+			
 	NSTimer *checkTimer;
-	NSTimeInterval checkInterval;
-	
-	RSS *feed;
-	NSPanel *alertPanel;
-	NSProgressIndicator *releaseNotesSpinner;
+	NSTimeInterval checkInterval;	
 	
 	BOOL verbose;
 	BOOL updateInProgress;
-	BOOL webViewFinishedLoading;
 }
 
 // This IBAction is meant for a main menu item. Hook up any menu item to this action,
@@ -59,10 +53,3 @@
 - (void)scheduleCheckWithInterval:(NSTimeInterval)interval;
 
 @end
-
-extern NSString *SUCheckAtStartupKey;
-extern NSString *SUFeedURLKey;
-extern NSString *SUShowReleaseNotesKey;
-extern NSString *SUSkippedVersionKey;
-extern NSString *SUScheduledCheckIntervalKey;
-extern NSString *SULastCheckTimeKey;

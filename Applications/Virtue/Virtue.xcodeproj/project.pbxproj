@@ -217,6 +217,8 @@
 		EAA628DB092893EA00EED448 /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127390072C096A006DC207 /* imageWidgetDeletePressed.png */; };
 		EAA628DD0928940000EED448 /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127391072C096A006DC207 /* imageWidgetInfo.png */; };
 		EAA628DE0928940000EED448 /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E9127392072C096A006DC207 /* imageWidgetInfoPressed.png */; };
+		EAB6F9EE09CE434C00F9FD16 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F9DB09CE434C00F9FD16 /* Sparkle.framework */; };
+		EAB6F9F309CE436D00F9FD16 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAB6F9DB09CE434C00F9FD16 /* Sparkle.framework */; };
 		EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C0420924F7FB0067CDFD /* Peony.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
 		EAB7C05D0924F9150067CDFD /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB7C0400924F7DD0067CDFD /* Peony.framework */; };
@@ -232,13 +234,6 @@
 		EABDFE9109AC94D400C523BA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE6609AC94D400C523BA /* CoreFoundation.framework */; };
 		EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE9209AC94E500C523BA /* Security.framework */; };
 		EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */; };
-		EABF0E9209988D8600DC868A /* NSString+extras.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E8B09988D8600DC868A /* NSString+extras.h */; };
-		EABF0E9309988D8700DC868A /* NSString+extras.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E8C09988D8600DC868A /* NSString+extras.m */; };
-		EABF0E9409988D8700DC868A /* RSS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E8D09988D8600DC868A /* RSS.h */; };
-		EABF0E9509988D8700DC868A /* RSS.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E8E09988D8600DC868A /* RSS.m */; };
-		EABF0E9609988D8700DC868A /* Sparkle.strings in Resources */ = {isa = PBXBuildFile; fileRef = EABF0E8F09988D8600DC868A /* Sparkle.strings */; };
-		EABF0E9709988D8700DC868A /* SUUpdater.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABF0E9009988D8600DC868A /* SUUpdater.h */; };
-		EABF0E9809988D8700DC868A /* SUUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF0E9109988D8600DC868A /* SUUpdater.m */; };
 		EAC2B689095E17EC00748870 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B687095E17EC00748870 /* Info.plist */; };
 		EAC2BF80095EA0E300748870 /* Virtue.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC2BF7A095EA0E300748870 /* Virtue.nib */; };
 		EAF8C93809076E9A003D54B1 /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C93709076E8C003D54B1 /* Virtue.framework */; };
@@ -623,9 +618,7 @@
 				EAF8C93C09076ED5003D54B1 /* Virtue.framework in CopyFiles */,
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
-				EABF0E9209988D8600DC868A /* NSString+extras.h in CopyFiles */,
-				EABF0E9409988D8700DC868A /* RSS.h in CopyFiles */,
-				EABF0E9709988D8700DC868A /* SUUpdater.h in CopyFiles */,
+				EAB6F9F309CE436D00F9FD16 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +961,7 @@
 		EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EA54635209AC9CD1002EDE9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		EAB6F9DB09CE434C00F9FD16 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../../Shared/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EABDFE2F09AC935300C523BA /* CompositePage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = CompositePage.html; sourceTree = "<group>"; };
@@ -1023,6 +1017,7 @@
 				EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */,
 				EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
 				EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */,
+				EAB6F9EE09CE434C00F9FD16 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,6 +1147,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAB6F9DB09CE434C00F9FD16 /* Sparkle.framework */,
 				EA54635209AC9CD1002EDE9E /* WebKit.framework */,
 				EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */,
 				EABDFE9209AC94E500C523BA /* Security.framework */,
@@ -2680,7 +2676,6 @@
 				E91223D907808DBC005A3C10 /* DefaultPrimitiveNames.strings in Resources */,
 				EAC2B689095E17EC00748870 /* Info.plist in Resources */,
 				EAC2BF80095EA0E300748870 /* Virtue.nib in Resources */,
-				EABF0E9609988D8700DC868A /* Sparkle.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2810,7 +2805,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $REV = `svnversion -n $ENV{\"SRCROOT\"}`;\nmy $INFO = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy $version = $REV;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\t\n#$info =~ s/([\\t ]+<key>CFBundleVersion<\\/key>\\n[\\t ]+<string>).*?(<\\/string>)/$1$version$2/;\n$info =~ s/r0000/r$version/;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $REV \t= `/opt/darwinports/bin/svnversion -n $ENV{\"SRCROOT\"}`;\nmy $INFO\t= \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy\t$version = $REV;\n\t$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\t\n#$info =~ s/([\\t ]+<key>CFBundleVersion<\\/key>\\n[\\t ]+<string>).*?(<\\/string>)/$1$version$2/;\n$info =~ s/r0000/r$version/;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2850,9 +2845,6 @@
 				E9558185076CA62B00401479 /* VTApplicationRunningColorTransformer.m in Sources */,
 				E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */,
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
-				EABF0E9309988D8700DC868A /* NSString+extras.m in Sources */,
-				EABF0E9509988D8700DC868A /* RSS.m in Sources */,
-				EABF0E9809988D8700DC868A /* SUUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3897,6 +3889,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)",
+					"$(SRCROOT)/../../Shared",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -3920,6 +3913,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)",
+					"$(SRCROOT)/../../Shared",
 				);
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
