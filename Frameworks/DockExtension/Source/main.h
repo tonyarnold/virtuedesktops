@@ -21,6 +21,6 @@
 extern int g_minorVersion; 
 extern int g_majorVersion; 
 
-void injectEntry(ptrdiff_t a_iOffset, void *a_poParamBlock, size_t a_iParamSize); 
+void injectEntry(ptrdiff_t a_iOffset, void *a_poParamBlock, size_t a_iParamSize, char *dummy_pthread_struct); 
 
 #endif 

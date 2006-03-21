@@ -62,9 +62,18 @@ int g_majorVersion = 1;
  * communication between the Dock Extension and its clients. 
  *
  */ 
-void injectEntry(ptrdiff_t a_iOffset, void *a_poParamBlock, size_t a_iParamSize) 
+void injectEntry(ptrdiff_t a_iOffset, void *a_poParamBlock, size_t a_iParamSize, char *dummy_pthread_struct) 
 {
 	OSErr iError;
+	
+#if defined (__i386__)
+	// pierreyves@users.sourceforge.net: Solution suggested by works from Bertrand Guiheneuf (guiheneuf.org)
+	// The original comment was :
+	//	On intel, per-pthread data is a zone of data that must be allocated. if not, all function trying to access per-pthread data (all mig functions for instance) will crash. 	
+	extern void __pthread_set_self(char*);
+	__pthread_set_self(dummy_pthread_struct);
+#endif
+	
 	iError = AEInstallEventHandler(kDecEventClass, 
 																 kDecEventId, 
 																 NewAEEventHandlerUPP((&DEHandleEvent) + a_iOffset), 
