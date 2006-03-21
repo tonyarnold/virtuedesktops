@@ -272,6 +272,11 @@
 	
 	// Get the connection to the CoreGraphics server
 	CGSConnection cgs = _CGSDefaultConnection();
+	
+	if ((int)transition == -1) {
+		transition = CGSNone;
+		seconds = 0;
+	}
 
 	// Set-up the transition "effect" first
 	int handle;
@@ -285,7 +290,8 @@
 	spec.option			= option;
 	spec.wid				= 0;
 	spec.backColour	= rgb;
-
+		
+		
 	// Create the transition, freezing all on-screen activity		
 	CGSNewTransition(cgs, &spec, &handle);
 
@@ -301,13 +307,13 @@
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
 	
 	// tonyarnold@users.sourceforge.net: Previously, I would insert a usleep(100000); here, so that the desktop picture had time to update before the transition was released. I think we need to find a faster way to set the desktop picture and get it onscreen - or accept the fact that desktop picture transitions are something that will only display properly on fast machines.
-	
+		
 	// Run the transition	
 	CGSInvokeTransition(cgs, handle, seconds);
-	
+		
 	// We need to wait for the length of the transition before releasing
 	usleep((useconds_t)(seconds*1000000));
-	
+		
 	// Now release the transition from memory
 	CGSReleaseTransition(cgs, handle);
 }
