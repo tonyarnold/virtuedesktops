@@ -68,6 +68,15 @@
 // request a sticky overlay pager 
 #define VTRequestShowPagerAndStickName		@"VTRequestShowPagerAndStick"
 
+//
+#define VTRequestApplicationMoveToEast			@"VTRequestApplicationMoveToEast"
+//
+#define VTRequestApplicationMoveToWest			@"VTRequestApplicationMoveToWest"
+//
+#define VTRequestApplicationMoveToSouth			@"VTRequestApplicationMoveToSouth"
+//
+#define VTRequestApplicationMoveToNorth			@"VTRequestApplicationMoveToNorth"
+
 #pragma mark -
 #pragma mark Window open Requests 
 

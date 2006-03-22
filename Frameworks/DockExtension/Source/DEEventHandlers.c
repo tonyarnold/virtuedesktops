@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #include <stdlib.h>
+#include <unistd.h>
 /* CGS Private stuff */ 
 #include "CGSPrivate.h" 
 /* Decomm */ 
@@ -44,21 +45,50 @@ void DEHandleAlphaEvent(DecEvent* event) {
 		return; 
 	}
 	
-	float eventValue = dec_event_alpha_value_get(eventAlpha); 
+	float eventStartValue	= dec_event_alpha_startvalue_get(eventAlpha);
+	float eventEndValue		= dec_event_alpha_endvalue_get(eventAlpha);
+	float animateSeconds	= dec_event_alpha_duration_get(eventAlpha);
 	
-	/* TODO: Implement animation parameter */ 
+	/* @todo Implement animation parameter */ 
 	CGSConnection iConnection;
 	
 	/* Correct input parameter ranges */ 
-	if (eventValue < 0.0)
-		eventValue = 0.0; 
-	if (eventValue > 1.0)
-		eventValue = 1.0; 
+	if (eventEndValue < 0.0)
+		eventEndValue = 0.0; 
+	if (eventEndValue > 1.0)
+		eventEndValue = 1.0;
+	
+	if (eventStartValue < 0.0)
+		eventStartValue = 0.0; 
+	if (eventStartValue > 1.0)
+		eventStartValue = 1.0;
+
 	
 	/* Get the default connection for our process */ 
 	iConnection = _CGSDefaultConnection(); 
 	
-	CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventValue); 
+	if (animateSeconds == 0) {
+		CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+	} else {
+		/* Animate */
+		if ( eventStartValue > eventEndValue) {
+			for (eventStartValue; eventStartValue <= eventEndValue; eventEndValue += 0.05) {
+				CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+				usleep(10000);
+			}
+		} else if ( eventStartValue < eventEndValue ) {
+			for (eventStartValue; eventStartValue >= eventEndValue; eventEndValue -= 0.05) {
+				CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+				usleep(10000);
+			}
+		} else {
+			CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+		}
+		
+	}
+	
+	
+	 
 	
 	/* get rid of the event */ 
 	dec_event_alpha_free(eventAlpha); 

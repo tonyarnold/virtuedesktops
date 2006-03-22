@@ -33,8 +33,9 @@
 #include "DECEvent.h" 
 #include "DECPrivate.h" 
 
-#define kDecEventAlphaValueKey		'alva'
-#define kDecEventAlphaDurationKey	'dura'
+#define kDecEventAlphaStartValueKey	'salp'
+#define kDecEventAlphaEndValueKey		'ealp'
+#define kDecEventAlphaDurationKey		'dura'
 
 DecEventAlpha* dec_event_alpha_new(DecEvent* event)
 {
@@ -56,25 +57,46 @@ void dec_event_alpha_free(DecEventAlpha* event)
 	free(event); 
 }
 
-float dec_event_alpha_value_get(DecEventAlpha* event)
+float dec_event_alpha_startvalue_get(DecEventAlpha* event)
 {
 	if (event == NULL)
 		return 0.0; 
 	
 	float alpha; 
-	AEGetParamPtr(event->event->appleEvent, kDecEventAlphaValueKey, typeFloat, NULL, &alpha, sizeof(float), NULL); 
+	AEGetParamPtr(event->event->appleEvent, kDecEventAlphaStartValueKey, typeFloat, NULL, &alpha, sizeof(float), NULL); 
 
 	return alpha; 
 }
 
-void  dec_event_alpha_value_set(DecEventAlpha* event, float value)
+void  dec_event_alpha_startvalue_set(DecEventAlpha* event, float value)
 {
 	if (event == NULL)
 		return; 
 	if (event->event == NULL)
 		return; 
 	
-	AEPutParamPtr(event->event->appleEvent, kDecEventAlphaValueKey, typeFloat, &value, sizeof(float)); 
+	AEPutParamPtr(event->event->appleEvent, kDecEventAlphaStartValueKey, typeFloat, &value, sizeof(float)); 
+}
+
+float dec_event_alpha_endvalue_get(DecEventAlpha* event)
+{
+	if (event == NULL)
+		return 0.0; 
+	
+	float alpha; 
+	AEGetParamPtr(event->event->appleEvent, kDecEventAlphaEndValueKey, typeFloat, NULL, &alpha, sizeof(float), NULL); 
+	
+	return alpha; 
+}
+
+void  dec_event_alpha_endvalue_set(DecEventAlpha* event, float value)
+{
+	if (event == NULL)
+		return; 
+	if (event->event == NULL)
+		return; 
+	
+	AEPutParamPtr(event->event->appleEvent, kDecEventAlphaEndValueKey, typeFloat, &value, sizeof(float)); 
 }
 
 int dec_event_alpha_duration_get(DecEventAlpha* event)

@@ -252,6 +252,46 @@
 						<key>type</key>
 						<string>VTTriggerNotification</string>
 					</dict>
+					<dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestApplicationMoveToNorth</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+					<dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestApplicationMoveToEast</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+					<dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestApplicationMoveToSouth</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+					<dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestApplicationMoveToWest</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
 				</array>
 				<key>type</key>
 				<string>VTTriggerGroup</string>

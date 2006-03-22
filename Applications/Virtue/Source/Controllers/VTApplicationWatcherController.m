@@ -159,7 +159,6 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		// if this is Virtue itself, we also abort here 
 		// TODO: Move ignore list out of here 
 		result = SameProcess(&mActivatedPSN, &mPSN, &same); 
-		if (result) 
 		
 		if (same == TRUE)
 			return; 

@@ -484,6 +484,47 @@ enum
 	[[VTDesktopController sharedInstance] activateDesktop: targetDesktop]; 
 }
 
+- (void) onMoveApplicationToDesktopEast: (NSNotification*) notification {
+	[self moveFrontApplicationToDirection: kVtDirectionEast];
+}
+
+- (void) onMoveApplicationToDesktopWest: (NSNotification*) notification {
+	[self moveFrontApplicationToDirection: kVtDirectionWest];
+}
+
+- (void) onMoveApplicationToDesktopSouth: (NSNotification*) notification {
+	[self moveFrontApplicationToDirection: kVtDirectionSouth];
+}
+
+- (void) onMoveApplicationToDesktopNorth: (NSNotification*) notification {
+	[self moveFrontApplicationToDirection: kVtDirectionNorth];
+}
+
+- (void) moveFrontApplicationToDirection: (VTDirection) direction {	
+	VTDesktop* moveToDesktop = [[VTDesktopController sharedInstance] getDesktopInDirection: direction];
+	VTDesktop* activeDesktop = [[VTDesktopController sharedInstance] activeDesktop];
+	NSEnumerator* applicationIter = [[activeDesktop applications] objectEnumerator]; 
+	PNApplication* application = nil;
+	
+	ProcessSerialNumber activePSN;
+	OSErr result = GetFrontProcess(&activePSN);
+	
+	while (application = [applicationIter nextObject]) {
+		ProcessSerialNumber currentPSN = [application psn];
+		Boolean same;
+	
+		result = SameProcess(&activePSN, &currentPSN, &same);		
+		if (same == TRUE) {
+			[application setDesktop: moveToDesktop];
+			[[[VTDesktopController sharedInstance] activeDesktop] updateDesktop];
+			[moveToDesktop updateDesktop];
+			[[VTDesktopController sharedInstance] activateDesktop: moveToDesktop];
+			result = SetFrontProcess(&currentPSN);
+			return;
+		}
+	}
+}
+
 #pragma mark -
 - (void) onShowPager: (NSNotification*) notification {
 	[[[[VTLayoutController sharedInstance] activeLayout] pager] display: NO]; 
@@ -581,7 +622,8 @@ enum
 		addObserver: self selector: @selector(onShowPagerSticky:) name: VTRequestShowPagerAndStickName object: nil]; 
 	
 	[[NSNotificationCenter defaultCenter]
-		addObserver: self selector: @selector(onShowOperations:) name: VTRequestDisplayOverlayName object: nil]; 
+		addObserver: self selector: @selector(onShowOperations:) name: VTRequestDisplayOverlayName object: nil];
+
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onShowDesktopInspector:) name: VTRequestInspectDesktopName object: nil]; 
 
@@ -593,6 +635,32 @@ enum
 	
 	[[NSNotificationCenter defaultCenter]
 		addObserver:self selector: @selector(invalidateQuitDialog:) name: SUUpdaterWillRestartNotification object:nil];
+		
+	/** observers for moving applications */
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self 
+		selector: @selector(onMoveApplicationToDesktopEast:) 
+		name: VTRequestApplicationMoveToEast 
+		object: nil];
+
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self 
+		selector: @selector(onMoveApplicationToDesktopWest:) 
+		name: VTRequestApplicationMoveToWest 
+		object: nil];
+
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self 
+		selector: @selector(onMoveApplicationToDesktopSouth:) 
+		name: VTRequestApplicationMoveToSouth 
+		object: nil];
+
+	[[NSNotificationCenter defaultCenter]
+		addObserver: self 
+		selector: @selector(onMoveApplicationToDesktopNorth:) 
+		name: VTRequestApplicationMoveToNorth 
+		object: nil];
+	/** end of moving applications */
 }
 
 - (void) unregisterObservers {

@@ -83,4 +83,21 @@ VTRequestDeleteDesktop_desc				= "Deletes the currently shown desktop optionally
 	
 // Request to show the overlay window of the window under the mouse pointer 
 VTRequestDisplayOverlay_name			= "Display window control"; 
-VTRequestDisplayOverlay_desc			= "Displays the overlay window control that allows you to sticky/unsticky and move windows between desktops"; 
+VTRequestDisplayOverlay_desc			= "Displays the overlay window control that allows you to sticky/unsticky and move windows between desktops";
+
+// Request application move east
+VTRequestApplicationMoveToEast_name			= "Move application to east";
+VTRequestApplicationMoveToEast_desc			= "Moves application to east desktop";
+
+// Request application move to west
+VTRequestApplicationMoveToWest_name			= "Move application to west";
+VTRequestApplicationMoveToWest_desc			= "Moves application to west desktop";
+
+// Request application move to north
+VTRequestApplicationMoveToNorth_name			= "Move application to north";
+VTRequestApplicationMoveToNorth_desc			= "Moves application to nort desktop";
+
+// Request application move to south
+VTRequestApplicationMoveToSouth_name			= "Move application to south";
+VTRequestApplicationMoveToSouth_desc			= "Moves application to south desktop";
+

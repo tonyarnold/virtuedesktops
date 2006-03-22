@@ -39,9 +39,9 @@
 #include "DECEventProperty.h" 
 
 
-void CGSExtSetWindowAlpha(int window, float alpha, int animate, float animateSeconds)
+void CGSExtSetWindowAlpha(int window, float startAlpha, float endAlpha, int animate, float animateSeconds)
 {
-	CGSExtSetWindowListAlpha(&window, 1, alpha, animate, animateSeconds); 
+	CGSExtSetWindowListAlpha(&window, 1, startAlpha, endAlpha, animate, animateSeconds); 
 }
 
 void CGSExtSetWindowWorkspace(int window, int desktop)
@@ -79,20 +79,21 @@ void CGSExtDeleteWindowProperty(int window, char* key)
 	CGSExtDeleteWindowListProperty(&window, 1, key); 
 } 
 
-void CGSExtSetWindowListAlpha(int* windows, int count, float alpha, int animate, float animateSeconds)
+void CGSExtSetWindowListAlpha(int* windows, int count, float startAlpha, float endAlpha, int animate, float duration)
 {
-	DecEvent*		event; 
-	DecEventAlpha*	eventAlpha; 
+	DecEvent*					event; 
+	DecEventAlpha*		eventAlpha;
 	
 	event = dec_event_new(); 
 	
 	dec_event_apple_event_new(event); 
-	dec_event_targets_set(event, windows, count); 
+	dec_event_targets_set(event, windows, count);
 	
-	eventAlpha = dec_event_alpha_new(event); 
-	dec_event_alpha_value_set(eventAlpha, alpha); 
-	dec_event_alpha_duration_set(eventAlpha, (animate == 0) ? 0 : animateSeconds * 1000); 
-	
+	eventAlpha = dec_event_alpha_new(event);
+	dec_event_alpha_startvalue_set(eventAlpha, startAlpha);
+	dec_event_alpha_endvalue_set(eventAlpha, endAlpha);
+	dec_event_alpha_duration_set(eventAlpha, (animate == 0) ? 0 : duration);
+		
 	dec_event_send_sync(event, NULL); 
 	
 	dec_event_alpha_free(eventAlpha); 

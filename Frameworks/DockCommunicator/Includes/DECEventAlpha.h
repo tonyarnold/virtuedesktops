@@ -22,8 +22,10 @@ typedef struct _Dec_Event_Alpha DecEventAlpha;
 DecEventAlpha* dec_event_alpha_new(DecEvent* event); 
 void dec_event_alpha_free(DecEventAlpha* event); 
 
-float dec_event_alpha_value_get(DecEventAlpha* event); 
-void  dec_event_alpha_value_set(DecEventAlpha* event, float value); 
+float dec_event_alpha_startvalue_get(DecEventAlpha* event); 
+void  dec_event_alpha_startvalue_set(DecEventAlpha* event, float value); 
+float dec_event_alpha_endvalue_get(DecEventAlpha* event); 
+void  dec_event_alpha_endvalue_set(DecEventAlpha* event, float value);
 int   dec_event_alpha_duration_get(DecEventAlpha* event); 
 void  dec_event_alpha_duration_set(DecEventAlpha* event, int duration); 
 

@@ -60,5 +60,6 @@
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 
+- (void) moveFrontApplicationToDirection: (VTDirection) direction;
 
 @end

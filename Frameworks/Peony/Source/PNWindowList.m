@@ -131,10 +131,10 @@
 	
 	int* windows; 
 	int  windowsCount; 
-	
+		
 	windowsCount = [self nativeWindowsInCArray: &windows]; 
 	
-	CGSExtSetWindowListAlpha(windows, windowsCount, alpha, flag == YES ? 1 : 0, duration); 
+	CGSExtSetWindowListAlpha(windows, windowsCount, 1.0, alpha, flag == YES ? 1 : 0, duration); 
 	
 	free(windows); 
 }
@@ -148,7 +148,7 @@
 	
 	windowsCount = [self nativeWindowsInCArray: &windows]; 
 	
-	CGSExtSetWindowListAlpha(windows, windowsCount, alpha, 0, 0); 
+	CGSExtSetWindowListAlpha(windows, windowsCount, 1.0, alpha, 0, 0); 
 
 	free(windows); 
 }

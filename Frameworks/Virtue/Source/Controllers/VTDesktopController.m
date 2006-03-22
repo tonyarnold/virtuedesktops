@@ -293,6 +293,10 @@
 	return [self desktopForId: identifier]; 
 }
 
+- (VTDesktop*) getDesktopInDirection: (VTDirection) direction {
+	return [[[VTLayoutController sharedInstance] activeLayout] desktopInDirection: direction ofDesktop: [[VTDesktopController sharedInstance] activeDesktop]];
+}
+
 #pragma mark -
 #pragma mark Desktop switching 
 

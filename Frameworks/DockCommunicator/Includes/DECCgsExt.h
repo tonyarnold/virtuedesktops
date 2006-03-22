@@ -34,8 +34,8 @@
 
 #include <Carbon/Carbon.h>
 
-void CGSExtSetWindowAlpha(int window, float alpha, int animate, float animateSeconds); 
-void CGSExtSetWindowListAlpha(int* window, int windowCount, float alpha, int animate, float animateSeconds); 
+void CGSExtSetWindowAlpha(int window, float startAlpha, float endAlpha, int animate, float animateSeconds); 
+void CGSExtSetWindowListAlpha(int* window, int windowCount, float startAlpha, float endAlpha, int animate, float duration); 
 void CGSExtSetWindowWorkspace(int window, int workspace); 
 void CGSExtSetWindowListWorkspace(int* windows, int windowCount, int workspace); 
 void CGSExtOrderWindow(int window, int type, int referenceWindow); 

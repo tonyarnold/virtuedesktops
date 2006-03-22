@@ -126,6 +126,12 @@
 	[self endSheet];
 	/* Move the currently represented window to the selected desktop */
 	[mRepresentedWindow setDesktop: [sender representedObject]]; 
+	
+	/* move the represented window to the front */
+	[[sender representedObject] orderWindowFront: mRepresentedWindow];	
+	
+	/* active selected desktop */
+	[[VTDesktopController sharedInstance] activateDesktop: [sender representedObject]];
 }
 
 - (IBAction) setDesktopForApplication: (id) sender {

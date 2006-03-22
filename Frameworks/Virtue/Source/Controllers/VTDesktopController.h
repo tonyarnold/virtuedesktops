@@ -76,6 +76,7 @@
 
 - (VTDesktop*) desktopWithUUID: (NSString*) uuid; 
 - (VTDesktop*) desktopWithIdentifier: (int) identifier; 
+- (VTDesktop*) getDesktopInDirection: (VTDirection) direction;
 
 #pragma mark -
 #pragma mark Desktop switching 
