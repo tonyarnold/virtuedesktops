@@ -71,19 +71,21 @@ void DEHandleAlphaEvent(DecEvent* event) {
 		CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
 	} else {
 		/* Animate */
-		if ( eventStartValue > eventEndValue) {
-			for (eventStartValue; eventStartValue <= eventEndValue; eventEndValue += 0.05) {
-				CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
-				usleep(10000);
-			}
-		} else if ( eventStartValue < eventEndValue ) {
-			for (eventStartValue; eventStartValue >= eventEndValue; eventEndValue -= 0.05) {
-				CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
-				usleep(10000);
-			}
-		} else {
-			CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
-		}
+		CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+// Not ready yet
+//		if ( eventStartValue > eventEndValue) {
+//			for (eventStartValue; eventStartValue <= eventEndValue; eventEndValue += 0.05) {
+//				CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+//				usleep(10000);
+//			}
+//		} else if ( eventStartValue < eventEndValue ) {
+//			for (eventStartValue; eventStartValue >= eventEndValue; eventEndValue -= 0.05) {
+//				CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+//				usleep(10000);
+//			}
+//		} else {
+//			CGSSetWindowListAlpha(iConnection, eventTargets, eventTargetsSize, eventEndValue);
+//		}
 		
 	}
 	

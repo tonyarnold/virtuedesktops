@@ -437,12 +437,12 @@
 	if ([self ownerPid] == kPnWindowInvalidPid)
 		return oOwnerPsn;
 
-		oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
+	oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
 	if (oResult) {
-		NSLog(@"[Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
+		NSLog(@"PNWindow:442 - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
 	}
 
-		return oOwnerPsn;
+	return oOwnerPsn;
 }
 
 @end

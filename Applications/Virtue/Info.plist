@@ -71,5 +71,9 @@
 	<string>Tony Arnold</string>
 	<key>SmartCrashReports_EmailTicket</key>
 	<string>SCR-BB4DC15238</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>Virtue Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>Virtue Help</string>
 </dict>
 </plist>

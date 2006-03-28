@@ -22,12 +22,12 @@
 #pragma mark Lifetime 
 - (id) initWithPid: (pid_t) pid onDesktop: (PNDesktop*) desktop {
 	if (self = [super init]) {
-		mPid		= pid; 
+		mPid			= pid; 
 		mDesktop	= [desktop retain]; 
 		mWindows	= [[NSMutableArray array] retain]; 
 		
-		mName		= nil; 
-		mIcon		= nil; 
+		mName				= nil; 
+		mIcon				= nil; 
 		mBundlePath	= nil; 
 		
 		mIsSticky	= NO; 
@@ -39,16 +39,14 @@
 			return nil; 
 		}
 		
-		// create psn out of the pid 
+		// Create psn out of the pid
 		OSStatus oResult = GetProcessForPID(mPid, &mPsn); 
-		if (oResult) {
-			NSLog(@"Failed getting owner PSN [Error: %i]", oResult); 
-			
-			mPsn.highLongOfPSN = 0; 
-			mPsn.lowLongOfPSN  = 0; 
+		if (!oResult) {
+			return self;
+		} else {
+			[self autorelease]; 
+			return nil;
 		}
-				
-		return self; 
 	}
 	
 	return nil; 
@@ -250,7 +248,7 @@
 	
 	[self willChangeValueForKey: @"windows"]; 
 	
-	[mWindows addObject: window]; 
+	[mWindows addObject: window];
 	// if we are displayed as sticky, we will sticky the new window too
 	if (mIsSticky)
 		[window setSticky: YES]; 
