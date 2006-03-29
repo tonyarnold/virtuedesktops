@@ -109,7 +109,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
  *   except in cases where they were triggered by a modifier key switch thus
  *   forced by the user. 
  * 
- */ 
+ */
 - (void) onApplicationDidActivate: (NSNotification*) notification {
 	// first of all we check preferences, as this can save us some 
 	// work here 
@@ -149,9 +149,9 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		Boolean same; 
 		
 		// if this is the Finder, we abort here 
-		result = SameProcess(&mActivatedPSN, &mFinderPSN, &same); 
-		if (result)
-			NSLog(@"Error comparing PSN of applications"); 
+		//result = SameProcess(&mActivatedPSN, &mFinderPSN, &same); 
+		//if (result)
+		//	NSLog(@"Error comparing PSN of applications"); 
 				
 		if (same == TRUE)
 			return; 
