@@ -19,6 +19,8 @@
 #import "DECEvent.h"
 #import <Zen/Zen.h>
 
+#define CGSTransparentBackgroundMask (1<<7)
+
 @implementation PNWindow
 
 #pragma mark -
@@ -162,35 +164,12 @@
 - (void) setDesktopId: (int) desktopId {
 	if ([self isSticky])
 		return;
-	
 
 	// notification parameters
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithInt: [self desktopId]], PNWindowChangeDesktopSourceParam,
 		[NSNumber numberWithInt: desktopId], PNWindowChangeDesktopTargetParam,
 		nil];
-	
-	
-	// Get the connection to the CoreGraphics server
-	CGSConnection cgs = _CGSDefaultConnection();
-	
-	// Set-up the transition "effect" first
-	int handle;
-	float seconds = 0.75f;
-	float rgb[3];
-	rgb[0] = 0.0;
-	rgb[1] = 0.0;
-	rgb[2] = 0.0;
-	CGSTransitionSpec spec;
-	spec.unknown1		= 0;
-	spec.type				= CGSZoom;
-	spec.option			= (1<<7);
-	spec.wid				= mNativeWindow;
-	spec.backColour	= rgb;
-		
-		
-	// Create the transition, freezing all on-screen activity		
-	CGSNewTransition(cgs, &spec, &handle);
 	
 	// send notification about the upcoming change
 	[[NSNotificationCenter defaultCenter]
@@ -201,15 +180,6 @@
 		// post notification about the change
 	[[NSNotificationCenter defaultCenter]
 		postNotificationName: PNWindowDidChangeDesktop object: self userInfo: userInfo];
-	
-	// Run the transition	
-	CGSInvokeTransition(cgs, handle, seconds);
-		
-	// We need to wait for the length of the transition before releasing
-	usleep((useconds_t)(seconds*1000000));
-		
-	// Now release the transition from memory
-	CGSReleaseTransition(cgs, handle);
 }
 
 /**
