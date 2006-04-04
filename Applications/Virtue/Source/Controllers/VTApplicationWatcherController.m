@@ -149,9 +149,9 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		Boolean same; 
 		
 		// if this is the Finder, we abort here 
-		//result = SameProcess(&mActivatedPSN, &mFinderPSN, &same); 
-		//if (result)
-		//	NSLog(@"Error comparing PSN of applications"); 
+		result = SameProcess(&mActivatedPSN, &mFinderPSN, &same); 
+		if (result)
+			NSLog(@"Error comparing PSN of applications"); 
 				
 		if (same == TRUE)
 			return; 
