@@ -175,7 +175,8 @@
 		return; 
 	
 	// and move all of our windows there 
-	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
+	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
+	
 	
 }
 
@@ -190,7 +191,8 @@
 		return; 
 
 	// and move all of our windows there 
-	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 
+	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
+	
 }
 
 - (VTDesktop*) boundDesktop {
