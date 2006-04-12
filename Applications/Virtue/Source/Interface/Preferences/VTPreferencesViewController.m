@@ -17,16 +17,16 @@
 #import <Virtue/VTTriggerController.h> 
 #import <Zen/Zen.h> 
 
-#define		VTPreferencePaneName		@"VTPreferencePaneName"
-#define		VTPreferencePaneHelpText	@"VTPreferencePaneHelpText"
-#define		VTPreferencePaneImage		@"VTPreferencePaneImage"
-#define		VTPreferencePaneBundle		@"VTPreferencePaneBundle"
-#define		VTPreferencePaneLoaded		@"VTPreferencePaneLoaded"
-#define		VTPreferencePaneInstance	@"VTPreferencePaneInstance"
+#define		VTPreferencePaneName					@"VTPreferencePaneName"
+#define		VTPreferencePaneHelpText			@"VTPreferencePaneHelpText"
+#define		VTPreferencePaneImage					@"VTPreferencePaneImage"
+#define		VTPreferencePaneBundle				@"VTPreferencePaneBundle"
+#define		VTPreferencePaneLoaded				@"VTPreferencePaneLoaded"
+#define		VTPreferencePaneInstance			@"VTPreferencePaneInstance"
+#define		VTPreferencePaneRankingOrder	@"VTPreferencePaneRankingOrder"
 
 @interface VTPreferencesViewController (Private)
 - (void) showPreferencePane: (NSPreferencePane*) pane andAnimate: (BOOL) animate; 
-
 - (NSString*) labelForBundle: (NSBundle*) bundle; 
 - (NSString*) iconForBundle: (NSBundle*) bundle; 
 - (NSString*) identifierForBundle: (NSBundle*) bundle; 
@@ -43,6 +43,11 @@
 - (void) showPreferencePane: (NSMutableDictionary*) preferencePane; 
 - (NSMutableDictionary*) selectedPreferencePane; 
 @end 
+
+#pragma mark -
+@interface NSSortDescriptor (Sorting)
++ (NSArray *) ascendingDescriptorsForKeys: (NSString *)firstKey,...;
+@end
 
 #pragma mark -
 @implementation VTPreferencesViewController
@@ -77,6 +82,7 @@
 	// set up array of preference panes we have to show 
 	[self setupPreferencePanes]; 
 	// set content of our controller 
+	
 	[mPreferencePanesController setContent: mAvailablePreferencePanes]; 
 }
 
@@ -252,12 +258,12 @@
 - (void) setupPreferencePanes {
 	// we will not immediately load the preference panes, but only find them and 
 	// build up the array including all of our descriptors 
-	NSEnumerator*	bundlePathIter;
-	NSString*		currentBundlePath;
+	NSEnumerator*		bundlePathIter;
+	NSString*				currentBundlePath;
 	
 	// only load from our built-in plugins path 
 	NSString* bundleSearchPath = [[NSBundle mainBundle] builtInPlugInsPath];
-	bundlePathIter = [[[NSFileManager defaultManager] directoryContentsAtPath: bundleSearchPath] objectEnumerator]; 
+	bundlePathIter = [[[NSFileManager defaultManager] directoryContentsAtPath: bundleSearchPath] objectEnumerator];
 	
 	while (currentBundlePath = [bundlePathIter nextObject]) {
 		if ([[currentBundlePath pathExtension] isEqualToString: @"prefPane"]) {
@@ -270,18 +276,59 @@
 			
 			// now read out the information we need 
 			NSMutableDictionary*	preferencePaneDescriptor	= [NSMutableDictionary dictionary]; 
-			NSString*				imagePath					= [[preferenceBundle resourcePath] stringByAppendingPathComponent: [preferenceBundle objectForInfoDictionaryKey: @"CFBundleIconFile"]];  
+			NSString*							imagePath									= [[preferenceBundle resourcePath] stringByAppendingPathComponent: [preferenceBundle objectForInfoDictionaryKey: @"CFBundleIconFile"]];  
 			
 			[preferencePaneDescriptor setObject: preferenceBundle forKey: VTPreferencePaneBundle]; 
 			[preferencePaneDescriptor setObject: imagePath forKey: VTPreferencePaneImage]; 
 			[preferencePaneDescriptor setObject: [preferenceBundle objectForInfoDictionaryKey: @"NSPrefPaneIconLabel"] forKey: VTPreferencePaneName]; 
 			[preferencePaneDescriptor setObject: [preferenceBundle objectForInfoDictionaryKey: VTPreferencePaneHelpText] forKey: VTPreferencePaneHelpText]; 
 			[preferencePaneDescriptor setObject: [NSNumber numberWithBool: NO] forKey: VTPreferencePaneLoaded]; 
+			[preferencePaneDescriptor setObject: [preferenceBundle objectForInfoDictionaryKey: VTPreferencePaneRankingOrder] forKey: VTPreferencePaneRankingOrder];
 
-			// and add it to our array 
+			// and add it to our array
 			[mAvailablePreferencePanes addObject: preferencePaneDescriptor]; 
 		}
-	}			
+	}	
+	// Sort our array
+	NSArray *descriptors = [NSSortDescriptor ascendingDescriptorsForKeys: VTPreferencePaneRankingOrder, VTPreferencePaneName, nil];
+	[mAvailablePreferencePanes sortUsingDescriptors: descriptors];
 }
 
 @end 
+
+#pragma mark -
+@implementation  NSSortDescriptor (Sorting)
+
++ (NSArray *) ascendingDescriptorsForKeys: (NSString *)firstKey,...
+{    
+		id returnArray   = [[NSMutableArray arrayWithCapacity: 5] retain];
+		va_list          keyList;
+    
+		NSString          * oneKey;
+		NSSortDescriptor  * oneDescriptor;
+		
+		if (firstKey)
+		{
+				oneDescriptor = [[NSSortDescriptor alloc] initWithKey: firstKey
+																										ascending: YES];
+				[returnArray addObject: oneDescriptor];
+				[oneDescriptor release];
+				
+				va_start (keyList, firstKey);
+				
+				while (oneKey = va_arg(keyList, NSString *))
+				{
+						oneDescriptor = [[NSSortDescriptor alloc] initWithKey: oneKey
+																												ascending: YES];
+						[returnArray addObject: oneDescriptor];
+						[oneDescriptor release];
+				}
+				
+				va_end (keyList);
+		}
+		
+		return [returnArray autorelease];
+		
+}
+
+@end

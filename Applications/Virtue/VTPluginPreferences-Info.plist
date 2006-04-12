@@ -28,5 +28,7 @@
 	<string>Extensions</string> 
 	<key>VTPreferencePaneHelpText</key>
 	<string>Configure installed Extensions</string>
+	<key>VTPreferencePaneRankingOrder</key>
+	<string>1</string>
 </dict>
 </plist>

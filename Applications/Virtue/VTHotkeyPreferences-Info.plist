@@ -26,5 +26,7 @@
 	<string>VTHotkeyPreferencesController</string>
 	<key>VTPreferencePaneHelpText</key>
 	<string>Keyboard and Mouse Trigger settings</string>
+	<key>VTPreferencePaneRankingOrder</key>
+	<string>1</string>
 </dict>
 </plist>

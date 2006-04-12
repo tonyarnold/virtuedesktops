@@ -17,15 +17,15 @@
 @interface VTPreferencesViewController : NSWindowController {
 // outlets 
 	IBOutlet NSArrayController*	mPreferencePanesController; 
-	IBOutlet NSBox*				mPreferencePaneContainer; 
-	IBOutlet NSView*			mPreferencePaneLoading;
-	IBOutlet NSTableView*		mPreferencePanesTable; 
+	IBOutlet NSBox*							mPreferencePaneContainer; 
+	IBOutlet NSView*						mPreferencePaneLoading;
+	IBOutlet NSTableView*				mPreferencePanesTable; 
 // ivars
 	NSMutableArray*				mAvailablePreferencePanes;	//!< Array of dictionaries describing a preference pane 
 
 	NSMutableDictionary*	mToolbarItems;		//!< Available toolbar items 
 	NSMutableDictionary*	mPreferencePanes;	//!< Available panes 
-	NSPreferencePane*		mCurrentPane;		//!< Currently displayed pane 
+	NSPreferencePane*			mCurrentPane;		//!< Currently displayed pane 
 }
 
 #pragma mark -
@@ -42,7 +42,6 @@
 - (NSColor*) pagerWindowColor; 
 - (void) setPagerWindowHighlightColor: (NSColor*) color; 
 - (NSColor*) pagerWindowHighlightColor; 
-
 - (void) setOperationsTintColor: (NSColor*) color; 
 - (NSColor*) operationsTintColor; 
 #endif 

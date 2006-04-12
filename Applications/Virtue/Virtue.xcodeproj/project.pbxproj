@@ -967,7 +967,6 @@
 		E9D29C07073E3AC400E0E6CE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E9FD547A0713BF290006590F /* iconDesktopFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconDesktopFolder.icns; sourceTree = "<group>"; };
 		E9FD54FE0715C6260006590F /* imageAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAction.png; sourceTree = "<group>"; };
-		EA04197F09B878C40031D3A9 /* VTDesktopNamePrimitive-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info copy.plist"; sourceTree = "<group>"; };
 		EA2108E2094541B5007BED41 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECCgsExt.h; sourceTree = "<group>"; };
 		EA2108E3094541B5007BED41 /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEvent.h; sourceTree = "<group>"; };
 		EA2108E4094541B5007BED41 /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventAlpha.h; sourceTree = "<group>"; };
@@ -1333,7 +1332,6 @@
 				E9582083071AF896009583A0 /* VTAppearancePreferences-Info.plist */,
 				E9560C40071DA9AE00D497BE /* VTDesktopNamePrimitive-Info.plist */,
 				E91271AF0729BA58006DC207 /* VTBehaviourPreferences-Info.plist */,
-				EA04197F09B878C40031D3A9 /* VTDesktopNamePrimitive-Info copy.plist */,
 			);
 			name = "Property Lists";
 			sourceTree = "<group>";

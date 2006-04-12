@@ -26,5 +26,7 @@
 	<string>VTApplicationPreferencesController</string>
 	<key>VTPreferencePaneHelpText</key>
 	<string>Application preferences</string>
+	<key>VTPreferencePaneRankingOrder</key>
+	<string>0</string>
 </dict>
 </plist>

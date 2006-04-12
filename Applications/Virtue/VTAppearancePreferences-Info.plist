@@ -26,5 +26,7 @@
 	<string>VTAppearancePreferencesController</string>
 	<key>VTPreferencePaneHelpText</key>
 	<string>Appearance and Animation settings</string>
+	<key>VTPreferencePaneRankingOrder</key>
+	<string>1</string>
 </dict>
 </plist>

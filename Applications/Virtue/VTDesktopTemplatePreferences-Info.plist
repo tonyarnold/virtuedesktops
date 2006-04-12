@@ -26,5 +26,7 @@
 	<string>VTDesktopTemplatePreferences</string>
 	<key>VTPreferencePaneHelpText</key>
 	<string>Desktop appearance template setup</string>
+	<key>VTPreferencePaneRankingOrder</key>
+	<string>1</string>
 </dict>
 </plist>

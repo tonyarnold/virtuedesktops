@@ -26,5 +26,7 @@
 	<string>VTLayoutPreferencesController</string>
 	<key>VTPreferencePaneHelpText</key>
 	<string>Desktop layout and pager settings</string>
+	<key>VTPreferencePaneRankingOrder</key>
+	<string>1</string>
 </dict>
 </plist>
