@@ -112,7 +112,7 @@
 
 #pragma mark -
 - (NSArray*) notificationsWithName: (NSString*) name {
-	NSMutableArray*			notifications		= [NSMutableArray array]; 
+	NSMutableArray*	notifications		= [NSMutableArray array]; 
 	NSArray*				allNotifications	= [mNotifications allNotifications]; 
 	// now filter for name and return 
 	NSEnumerator*			notificationIter	= [allNotifications objectEnumerator]; 
@@ -164,25 +164,26 @@
 #pragma mark Notification Sinks 
 
 - (void) onHotKeyPressed: (NSNotification*) notification {
+	NSLog(@"notification: %@", [notification name]);
 	// ignore if we are not enabled 
-	if (mIsEnabled == NO) {
-		return; 
-	}
+	if (mIsEnabled == NO)
+		return;
 	
 	// fetch the object of the notification object 
-    NSValue* oValue = [notification object];
-    // fetch the hot key reference for identifying the hotkey 
+  NSValue* oValue = [notification object];
+  
+	// fetch the hot key reference for identifying the hotkey 
 	EventHotKeyRef hotKeyRef;
-    [oValue getValue: &hotKeyRef];
+  [oValue getValue: &hotKeyRef];
 
 	// iterate over all notifications and try to find the hotkey ref 
 	// we just got passed in the notification 
-	NSEnumerator*			notificationIter	= [[mNotifications allNotifications] objectEnumerator]; 
+	NSEnumerator*						notificationIter		= [[mNotifications allNotifications] objectEnumerator]; 
 	VTTriggerNotification*	currentNotification	= nil; 
 	
 	while (currentNotification = [notificationIter nextObject]) {
 		// we have to iterate over all triggers in this notification object 
-		NSEnumerator*	triggerIter		= [[currentNotification triggers] objectEnumerator]; 
+		NSEnumerator*	triggerIter	= [[currentNotification triggers] objectEnumerator]; 
 		VTTrigger*		trigger			= nil; 
 				
 		while (trigger = [triggerIter nextObject]) {
@@ -351,13 +352,13 @@
 - (void) readPreferences {
 	NSDictionary* dictionary = [[NSUserDefaults standardUserDefaults] objectForKey: VTHotkeys]; 
 	if (dictionary == nil) {
-		NSString* defaultHotkeysPath = [[NSBundle mainBundle] pathForResource: @"DefaultHotkeys" ofType: @"plist"]; 
-		dictionary = [NSDictionary dictionaryWithContentsOfFile: defaultHotkeysPath]; 
+			NSString* defaultHotkeysPath = [[NSBundle mainBundle] pathForResource: @"DefaultHotkeys" ofType: @"plist"]; 
+			dictionary = [NSDictionary dictionaryWithContentsOfFile: defaultHotkeysPath]; 
 	}
 	
 	[mNotifications decodeFromDictionary: dictionary]; 
 	
-	// now we ensure that all desktops have their notification registered 
+	// Now we ensure that all desktops have their notification registered 
 	NSArray*		desktopNotifications	= [self notificationsWithName: VTRequestChangeDesktopName]; 
 	NSEnumerator*	desktopIter				= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	VTDesktop*		desktop					= nil; 

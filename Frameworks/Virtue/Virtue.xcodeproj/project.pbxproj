@@ -345,7 +345,7 @@
 				E912451C073033F500BD28CD /* Preferences */,
 				E9124510073033F500BD28CD /* Plugins */,
 				E9124503073033F500BD28CD /* Layout */,
-				E91244FC073033F500BD28CD /* Hotkeys */,
+				E91244FC073033F500BD28CD /* Triggers */,
 				E91244EA073033F500BD28CD /* Decoration */,
 				E91244D2073033F500BD28CD /* Controllers */,
 				E91244CB073033F500BD28CD /* Common */,
@@ -483,7 +483,7 @@
 			path = Inspector;
 			sourceTree = "<group>";
 		};
-		E91244FC073033F500BD28CD /* Hotkeys */ = {
+		E91244FC073033F500BD28CD /* Triggers */ = {
 			isa = PBXGroup;
 			children = (
 				E917FD110768D09E00F8A8FD /* VTTriggerDesktopNotification.h */,
@@ -499,7 +499,7 @@
 				E959D410076230DD00013EB2 /* VTTrigger.h */,
 				E959D411076230DD00013EB2 /* VTTrigger.m */,
 			);
-			name = Hotkeys;
+			name = Triggers;
 			path = Source/Hotkeys;
 			sourceTree = "<group>";
 		};

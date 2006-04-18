@@ -48,10 +48,10 @@
 
 #pragma mark -
 @interface VTMouseWatcherView : NSView {
-	BOOL			mMouseIn; 
+	BOOL						mMouseIn; 
 	ZNAxialShading*	mShader; 
 	NSObject<VTMouseWatcherProtocol>* mWatcher; 
-	ZNEdge			mEdge; 
+	ZNEdge					mEdge; 
 }
 
 - (void) setShader: (ZNAxialShading*) shading; 

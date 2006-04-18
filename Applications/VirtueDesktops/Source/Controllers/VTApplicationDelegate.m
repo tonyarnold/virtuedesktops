@@ -304,18 +304,22 @@ enum
 	[self updateStatusItem]; 
 }
 
-//#pragma mark -
-//- (IBAction) emailAuthor: (id) sender {
-//	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:playback@users.sourceforge.net?subject=Virtue%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
-//}
-//
-//- (IBAction) showProductWebsite: (id) sender {
-//	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.sourceforge.net"]];
-//}
-//
-//- (IBAction) showDonationsWebsite: (id) sender {
-//	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.sourceforge.net/donations.html"]];
-//}
+#pragma mark -
+- (IBAction) sendFeedback: (id) sender {
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:tony@tonyarnold.com?subject=VirtueDesktops%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
+}
+
+- (IBAction) showWebsite: (id) sender {
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.info"]];
+}
+
+- (IBAction) showForums: (id) sender {
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://forums.cocoaforge.com/viewforum.php?f=22"]];
+}
+
+- (IBAction) showDonationsPage: (id) sender {
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.info/donations"]];
+}
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender {

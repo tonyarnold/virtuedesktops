@@ -14,7 +14,7 @@
 #import "VTHotkeyTrigger.h"
 #import <Zen/Zen.h>
 
-#define kVtCodingKeyCode		@"keyCode"
+#define kVtCodingKeyCode			@"keyCode"
 #define kVtCodingKeyModifiers	@"keyModifiers"
 
 #pragma mark -

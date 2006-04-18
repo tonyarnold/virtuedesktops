@@ -22,21 +22,20 @@ if ([[NSUserDefaults standardUserDefaults] colorForKey: prefName] == nil)		\
 
 + (void) registerDefaults {
 	static BOOL s_bRegistered = NO; 
-	
+
 	if (s_bRegistered == YES) {
 		return;
 	} 
-		
+
 	[NSColor setIgnoresAlpha: NO]; 	
-	
+
 	// create the default preferences 
-    NSDictionary* defaultPreferences = [NSDictionary
-        dictionaryWithObjectsAndKeys:
-			
-		// Virtue 
+	NSDictionary* defaultPreferences = [NSDictionary dictionaryWithObjectsAndKeys:
+		
+		// Application 
 		@"YES",	VTVirtueWarnBeforeQuitting,
 		@"YES", VTVirtueShowStatusbarMenu,
-        
+		
 		// Desktop transition
 		@"YES", VTDesktopTransitionEnabled,
 		@"9",   VTDesktopTransitionType,
@@ -55,16 +54,16 @@ if ([[NSUserDefaults standardUserDefaults] colorForKey: prefName] == nil)		\
 		@"YES", VTWindowsCollectOnDelete,
 		
 		// the end 
-        nil
+		nil
 		];
-	
+
 	// register them with the NSUserDefaults instance 
 	[[NSUserDefaults standardUserDefaults] registerDefaults: defaultPreferences];
-	
+
 	// ensure color values are written to defaults 
 	VT_ENSURE_COLOR(VTOperationsTintColor, [NSColor colorWithCalibratedRed: 0.39 green: 0.39 blue: 0.39 alpha: 0.6]); 
 	BOOL saveDefaults = [[NSUserDefaults standardUserDefaults] synchronize];
-	
+
 	s_bRegistered = YES; 
 }
 
