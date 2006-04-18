@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeBuildStyle = 4A9504CCFFE6A4B311CA0CBA /* Development */;
+		activeExecutable = EA3F4E7309ECB542007358DC /* VirtueDesktops */;
+		activeTarget = 8D1107260486CEB800E47090 /* VirtueDesktops */;
+		breakpointsGroup = EA3F4EC209ECB602007358DC /* XCBreakpointsBucket */;
+		codeSenseManager = EA3F4EB509ECB544007358DC /* Code sense */;
+		executables = (
+			EA3F4E7309ECB542007358DC /* VirtueDesktops */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					415,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					286,
+					67,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 167064010;
+			PBXWorkspaceStateSaveDate = 167064010;
+		};
+		perUserProjectItems = {
+			EA62161809F53574006259AD /* PBXTextBookmark */ = EA62161809F53574006259AD /* PBXTextBookmark */;
+			EA62162A09F535D8006259AD /* PBXTextBookmark */ = EA62162A09F535D8006259AD /* PBXTextBookmark */;
+		};
+		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1180, 636}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1180, 636}}";
+			sepNavWindowFrame = "{{15, 123}, {1225, 750}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* VirtueDesktops */ = {
+		activeExec = 0;
+		executables = (
+			EA3F4E7309ECB542007358DC /* VirtueDesktops */,
+		);
+	};
+	E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1180, 1088}}";
+			sepNavSelRange = "{1999, 0}";
+			sepNavVisRect = "{{0, 76}, {1180, 636}}";
+			sepNavWindowFrame = "{{192, 106}, {1225, 750}}";
+		};
+	};
+	E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1180, 14496}}";
+			sepNavSelRange = "{10003, 0}";
+			sepNavVisRect = "{{0, 4666}, {1180, 636}}";
+			sepNavWindowFrame = "{{-37, 108}, {1225, 750}}";
+		};
+	};
+	E903F78E071DB56900A00F30 /* VTPluginController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 2544}}";
+			sepNavSelRange = "{1823, 758}";
+			sepNavVisRect = "{{0, 1916}, {1046, 628}}";
+			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+		};
+	};
+	E9124D830730B92500BD28CD /* VTMatrixDesktopLayout.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 1424}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1046, 628}}";
+			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+		};
+	};
+	E9124D840730B92500BD28CD /* VTMatrixDesktopLayout.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {900, 9424}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
+		};
+	};
+	E9124D850730B92500BD28CD /* VTMatrixPager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 1184}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1046, 628}}";
+			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
+		};
+	};
+	E9124D860730B92500BD28CD /* VTMatrixPager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 7488}}";
+			sepNavSelRange = "{9020, 0}";
+			sepNavVisRect = "{{0, 6423}, {1046, 628}}";
+			sepNavWindowFrame = "{{96, 107}, {1091, 742}}";
+		};
+	};
+	E9124D880730B92500BD28CD /* VTMatrixPagerCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1051, 8704}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+		};
+	};
+	E9124EAB073140CE00BD28CD /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1180, 636}}";
+			sepNavSelRange = "{85, 6}";
+			sepNavVisRect = "{{0, 0}, {1180, 636}}";
+			sepNavWindowFrame = "{{38, 102}, {1225, 750}}";
+		};
+	};
+	E9127205072A6211006DC207 /* VTPluginPreferences */ = {
+		activeExec = 0;
+	};
+	E913F15C076E375500072617 /* VTDesktopTemplatePreferences */ = {
+		activeExec = 0;
+	};
+	E913F26C076E411B00072617 /* VTInterface */ = {
+		activeExec = 0;
+	};
+	E9560C3E071DA9AE00D497BE /* VTDesktopNamePrimitive */ = {
+		activeExec = 0;
+	};
+	E958A872075EEEC200773392 /* VTLayoutPreferences */ = {
+		activeExec = 0;
+	};
+	E9599FFC0765055B00543439 /* VTTriggerViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 1856}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 1228}, {1046, 628}}";
+			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+		};
+	};
+	E95C9F3D0732E74600148FA8 /* DefaultDesktops.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 208}}";
+			sepNavSelRange = "{237, 8}";
+			sepNavVisRect = "{{0, 13}, {734, 195}}";
+		};
+	};
+	E9C62991075A146C0072C1EF /* VTApplicationPreferences */ = {
+		activeExec = 0;
+	};
+	E9C629B9075A35F00072C1EF /* VTAppearancePreferences */ = {
+		activeExec = 0;
+	};
+	E9C629FD075A49B20072C1EF /* VTHotkeyPreferences */ = {
+		activeExec = 0;
+	};
+	E9C62A03075A4A590072C1EF /* VTHotkeyPreferencesController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 9376}}";
+			sepNavSelRange = "{5601, 0}";
+			sepNavVisRect = "{{0, 2768}, {1046, 628}}";
+			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
+		};
+	};
+	E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */ = {
+		activeExec = 0;
+	};
+	E9D29BF2073E362300E0E6CE /* VTDesktopColorLabelPrimitive.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 1728}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 1100}, {1046, 628}}";
+			sepNavWindowFrame = "{{38, 110}, {1091, 742}}";
+		};
+	};
+	E9D29BF8073E370000E0E6CE /* VTPrimitiveDesktopColorLabelInspector.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 688}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1046, 628}}";
+			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+		};
+	};
+	E9D29BFD073E37EE00E0E6CE /* VTPluginDesktopColorLabelPrimitive.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 628}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1046, 628}}";
+			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
+		};
+	};
+	EA3F4E7309ECB542007358DC /* VirtueDesktops */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = VirtueDesktops;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	EA3F4EB409ECB544007358DC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 1;
+		scmConfiguration = {
+			SubversionToolPath = /opt/darwinports/bin/svn;
+		};
+		scmType = scm.subversion;
+	};
+	EA3F4EB509ECB544007358DC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	EA3F4EC209ECB602007358DC /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+	EA62161809F53574006259AD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */;
+		name = "VTApplicationDelegate.h: migrateOldPreferences";
+		rLen = 0;
+		rLoc = 1999;
+		rType = 0;
+		vrLen = 1130;
+		vrLoc = 875;
+	};
+	EA62162A09F535D8006259AD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */;
+		name = "VTApplicationDelegate.h: migrateOldPreferences";
+		rLen = 0;
+		rLoc = 1999;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 95;
+	};
+	EABDFE2F09AC935300C523BA /* CompositePage.html */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+		};
+	};
+	EAC2B687095E17EC00748870 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 1280}}";
+			sepNavSelRange = "{1878, 0}";
+			sepNavVisRect = "{{0, 652}, {1046, 628}}";
+			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+		};
+	};
+}
