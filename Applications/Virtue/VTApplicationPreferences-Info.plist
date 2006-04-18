@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>iconApplicationPreferences.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.preferences.VTApplicationPreferences</string>
+	<string>info.virtuedesktops.preferences.VTApplicationPreferences</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
