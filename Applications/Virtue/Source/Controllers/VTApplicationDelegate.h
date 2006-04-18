@@ -62,4 +62,6 @@
 - (IBAction) deleteActiveDesktop: (id) sender; 
 - (void) moveFrontApplicationToDirection: (VTDirection) direction;
 
+#pragma mark -
+- (void) migrateOldPreferences;
 @end

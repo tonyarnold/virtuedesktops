@@ -14,7 +14,7 @@
 			<key>CFBundleTypeIconFile</key>
 			<string>iconExtension</string>
 			<key>CFBundleTypeName</key>
-			<string>Virtue Plugin</string>
+			<string>VirtueDesktops Plugin</string>
 			<key>CFBundleTypeRole</key>
 			<string>None</string>
 			<key>LSTypeIsPackage</key>
@@ -26,7 +26,7 @@
 				<string>virtuedata</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>Virtue Desktop Data</string>
+			<string>VirtueDesktops Desktop Data</string>
 			<key>CFBundleTypeRole</key>
 			<string>None</string>
 			<key>LSTypeIsPackage</key>
@@ -36,13 +36,17 @@
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
-	<string>Virtue</string>
+	<string>VirtueDesktops</string>
 	<key>CFBundleGetInfoString</key>
 	<string>Virtue version 0.52</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>Virtue Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>Virtue Help</string>
 	<key>CFBundleIconFile</key>
 	<string>iconVirtue</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.Virtue</string>
+	<string>info.virtuedesktops.VirtueDesktops</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -60,20 +64,16 @@
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSMainNibFile</key>
-	<string>Virtue</string>
+	<string>VirtueDesktops</string>
 	<key>NSPrincipalClass</key>
 	<string>VTApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://tonyarnold.com/xml/rss20/category/virtue-appcast/feed.xml</string>
+	<string>http://virtuedesktops.info/appcast/rss</string>
 	<key>SmartCrashReports_CommentsTemplate</key>
 	<string>Please include your e-mail address if you wish to be contacted in regard to this crash.</string>
 	<key>SmartCrashReports_CompanyName</key>
 	<string>Tony Arnold</string>
 	<key>SmartCrashReports_EmailTicket</key>
 	<string>SCR-BB4DC15238</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>Virtue Help</string>
-	<key>CFBundleHelpBookName</key>
-	<string>Virtue Help</string>
 </dict>
 </plist>

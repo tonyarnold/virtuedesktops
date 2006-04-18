@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>iconExtension.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.preferences.VTPluginPreferences</string>
+	<string>info.virtuedesktops.preferences.VTPluginPreferences</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -22,10 +22,10 @@
 	<string>yes</string>
 	<key>NSMainNibFile</key>
 	<string>VTPluginPreferences</string>
+	<key>NSPrefPaneIconLabel</key>
+	<string>Extensions</string>
 	<key>NSPrincipalClass</key>
 	<string>VTPluginPreferencesController</string>
-	<key>NSPrefPaneIconLabel</key>
-	<string>Extensions</string> 
 	<key>VTPreferencePaneHelpText</key>
 	<string>Configure installed Extensions</string>
 	<key>VTPreferencePaneRankingOrder</key>

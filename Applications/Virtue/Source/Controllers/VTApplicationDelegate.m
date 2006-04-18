@@ -64,7 +64,7 @@ enum
 #pragma mark Lifetime 
 
 - (id) init {
-	if (self = [super init]) {
+	if (self = [super init]) {		
 		// init attributes
 		mStartedUp = NO; 
 		mConfirmQuitOverridden = NO;
@@ -120,6 +120,9 @@ enum
 	
 	// Inject dock extension code into the Dock process
 	dec_inject_code();
+	
+	// Migrate old sourceforge identified preferences to new plist
+	[self migrateOldPreferences];
 	
 	// Set-up default preferences 
 	[VTPreferences registerDefaults]; 
@@ -551,6 +554,38 @@ enum
 
 - (void) onShowApplicationInspector: (NSNotification*) notification {
 	[self showApplicationInspector: self]; 
+}
+
+#pragma mark -
+
+- (NSString *)preferencesFolder {
+	NSString *preferencesFolder = nil;
+	FSRef foundRef;
+	OSErr err = FSFindFolder(kUserDomain, kPreferencesFolderType, kDontCreateFolder, &foundRef);
+	if (err != noErr) {
+		NSRunAlertPanel(@"Alert", @"Can't find preferences folder", @"Quit", nil, nil);
+		[[NSApplication sharedApplication] terminate:self];
+	} else {
+		unsigned char path[1024];
+		FSRefMakePath(&foundRef, path, sizeof(path));
+		preferencesFolder = [NSString stringWithUTF8String:(char *)path];
+	}
+	return preferencesFolder;
+}
+
+- (void) migrateOldPreferences
+{
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *oldPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"net.sourceforge.virtue.Virtue.plist"];
+	NSString *newPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"info.virtuedesktops.VirtueDesktops.plist"];
+	
+	if	(![fileManager fileExistsAtPath: newPlist] && [fileManager fileExistsAtPath: oldPlist]) 
+	{
+		[fileManager movePath: oldPlist
+									 toPath: newPlist
+									handler: nil];
+	}
+	
 }
 
 #pragma mark -

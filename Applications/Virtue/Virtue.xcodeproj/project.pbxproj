@@ -679,7 +679,7 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtue_Prefix.pch; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Virtue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virtue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9035C81077754EF00016B73 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		E903F72B071DB45D00A00F30 /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VTDesktopViewController.h; path = Source/Interface/VTDesktopViewController.h; sourceTree = "<group>"; };
 		E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDesktopViewController.m; path = Source/Interface/VTDesktopViewController.m; sourceTree = "<group>"; };
@@ -1006,7 +1006,7 @@
 		EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
 		EABE639209CE9D0D00809063 /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = ../../Shared/Sparkle/Sparkle.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAC2B687095E17EC00748870 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAC2BF7B095EA0E300748870 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Virtue.nib; sourceTree = "<group>"; };
+		EAC2BF7B095EA0E300748870 /* VirtueDesktops.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = VirtueDesktops.nib; path = English.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
 		EAD203CD09D6A1B7009EE46D /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = "English.lproj/Virtue Help"; sourceTree = "<group>"; };
 		EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Virtue.xcodeproj; path = ../../frameworks/Virtue/Virtue.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zen.xcodeproj; path = ../../frameworks/Zen/Zen.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -1187,7 +1187,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Virtue.app */,
+				8D1107320486CEB800E47090 /* VirtueDesktops.app */,
 				E9560C3F071DA9AE00D497BE /* VTDesktopNamePrimitive.plugin */,
 				E9127206072A6211006DC207 /* VTPluginPreferences.prefPane */,
 				E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */,
@@ -1858,9 +1858,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* Virtue */ = {
+		8D1107260486CEB800E47090 /* VirtueDesktops */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA609C1D090666C8003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */;
+			buildConfigurationList = EA609C1D090666C8003BD20D /* Build configuration list for PBXNativeTarget "VirtueDesktops" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -1910,10 +1910,10 @@
 				EA7CD179094AEE10008C738D /* PBXTargetDependency */,
 				EABE639C09CE9D1C00809063 /* PBXTargetDependency */,
 			);
-			name = Virtue;
+			name = VirtueDesktops;
 			productInstallPath = "$(HOME)/Applications";
 			productName = virtue;
-			productReference = 8D1107320486CEB800E47090 /* Virtue.app */;
+			productReference = 8D1107320486CEB800E47090 /* VirtueDesktops.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E9127205072A6211006DC207 /* VTPluginPreferences */ = {
@@ -2577,16 +2577,16 @@
 				},
 			);
 			targets = (
-				8D1107260486CEB800E47090 /* Virtue */,
-				E9560C3E071DA9AE00D497BE /* VTDesktopNamePrimitive */,
-				E9127205072A6211006DC207 /* VTPluginPreferences */,
+				8D1107260486CEB800E47090 /* VirtueDesktops */,
+				E913F26C076E411B00072617 /* VTInterface */,
 				E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */,
-				E9C62991075A146C0072C1EF /* VTApplicationPreferences */,
+				E9560C3E071DA9AE00D497BE /* VTDesktopNamePrimitive */,
 				E9C629B9075A35F00072C1EF /* VTAppearancePreferences */,
+				E9C62991075A146C0072C1EF /* VTApplicationPreferences */,
+				E913F15C076E375500072617 /* VTDesktopTemplatePreferences */,
 				E9C629FD075A49B20072C1EF /* VTHotkeyPreferences */,
 				E958A872075EEEC200773392 /* VTLayoutPreferences */,
-				E913F15C076E375500072617 /* VTDesktopTemplatePreferences */,
-				E913F26C076E411B00072617 /* VTInterface */,
+				E9127205072A6211006DC207 /* VTPluginPreferences */,
 			);
 		};
 /* End PBXProject section */
@@ -3488,7 +3488,7 @@
 		EAC2BF7A095EA0E300748870 /* Virtue.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EAC2BF7B095EA0E300748870 /* English */,
+				EAC2BF7B095EA0E300748870 /* VirtueDesktops.nib */,
 			);
 			name = Virtue.nib;
 			sourceTree = "<group>";
@@ -3942,7 +3942,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = "-fprofile-arcs";
-				PRODUCT_NAME = Virtue;
+				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -3960,7 +3960,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PREBINDING = NO;
-				PRODUCT_NAME = Virtue;
+				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4088,7 +4088,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA609C1D090666C8003BD20D /* Build configuration list for PBXNativeTarget "Virtue" */ = {
+		EA609C1D090666C8003BD20D /* Build configuration list for PBXNativeTarget "VirtueDesktops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA609C1F090666C8003BD20D /* Debug */,

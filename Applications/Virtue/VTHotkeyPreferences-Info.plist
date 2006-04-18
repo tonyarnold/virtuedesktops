@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>imageHotkeyPreferences.tiff</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.preferences.VTHotkeyPreferences</string>
+	<string>info.virtuedesktops.preferences.VTHotkeyPreferences</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>

@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>imagePreferencesPagers.tiff</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.preferences.VTLayoutPreferences</string>
+	<string>info.virtuedesktops.preferences.VTLayoutPreferences</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>

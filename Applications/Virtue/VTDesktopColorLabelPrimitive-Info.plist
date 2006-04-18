@@ -7,9 +7,11 @@
 	<key>CFBundleExecutable</key>
 	<string>VTDesktopColorLabelPrimitive</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.plugins.VTPluginDesktopColorLabelPrimitive</string>
+	<string>info.virtuedesktops.plugins.VTPluginDesktopColorLabelPrimitive</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Desktop Color Label Primitive</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleSignature</key>
@@ -18,20 +20,16 @@
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
 	<string>VTPluginDesktopColorLabelPrimitive</string>
-	<key>CFBundleName</key>
-	<string>Desktop Color Label Primitive</string>	
-	
 	<key>VTPlugin</key>
 	<dict>
-		<key>type</key>
-		<string>VTObjectiveC</string>
-		<key>name</key>
-		<string>Desktop Color Label Primitive</string>
 		<key>author</key>
 		<string>Thomas Staller, Virtue project</string>
 		<key>hidden</key>
 		<true/>
+		<key>name</key>
+		<string>Desktop Color Label Primitive</string>
+		<key>type</key>
+		<string>VTObjectiveC</string>
 	</dict>
-	
 </dict>
 </plist>

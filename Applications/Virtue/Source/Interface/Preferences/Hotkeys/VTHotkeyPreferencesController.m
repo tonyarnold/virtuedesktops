@@ -178,7 +178,7 @@
 	// create field editor 
 	mFieldEditor = [[VTHotkeyTextView alloc] initWithFrame: NSMakeRect(0, 0, 10, 10)]; 
 	[mFieldEditor setFieldEditor: YES]; 
-	[mFieldEditor setTextContainerInset: NSMakeSize(0, -2)]; 
+	[mFieldEditor setTextContainerInset: NSMakeSize(0, 0)]; 
 	
 	// and set the data cell 
 	VTHotkeyCell* hotkeyCell = [[[VTHotkeyCell alloc] init] autorelease]; 

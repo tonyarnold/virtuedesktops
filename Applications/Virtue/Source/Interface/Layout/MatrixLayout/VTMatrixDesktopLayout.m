@@ -58,7 +58,7 @@
 	if (self = [super initWithName: name]) {
 		// attributes 
 		mRows				= 2; 
-		mColumns		= 3; 
+		mColumns		= 2; 
 		mWraps			= YES;
 		mJumpsGaps	= YES;
 		mCompacted	= NO; 
@@ -99,11 +99,13 @@
 	// layout information 
 	[dictionary setObject: [NSNumber numberWithInt: mRows] forKey: kVtCodingRowCount];
 	[dictionary setObject: [NSNumber numberWithInt: mColumns] forKey: kVtCodingColCount]; 
+	
 	// properties of layout 
 	[dictionary setObject: [NSNumber numberWithBool: mWraps] forKey: kVtCodingWraps]; 
 	[dictionary setObject: [NSNumber numberWithBool: mJumpsGaps] forKey: kVtCodingJumps]; 
 	[dictionary setObject: [NSNumber numberWithBool: mCompacted] forKey: kVtCodingCompacted]; 
 	[dictionary setObject: [NSNumber numberWithBool: mContinous] forKey: kVtCodingContinous]; 
+	
 	// pager preferences 
 	NSMutableDictionary* pagerDict = [NSMutableDictionary dictionary]; 
 	[(VTMatrixPager*)mPager encodeToDictionary: pagerDict]; 

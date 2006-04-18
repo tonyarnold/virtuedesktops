@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>VTDesktopNamePrimitive</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.virtue.plugins.VTPluginDesktopNamePrimitive</string>
+	<string>info.virtuedesktops.plugins.VTPluginDesktopNamePrimitive</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -20,19 +20,18 @@
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
 	<string>VTPluginDesktopNamePrimitive</string>
-
-	<key>VTPluginDisplayName</key>
-	<string>Desktop Name Primitive</string>
 	<key>VTPlugin</key>
 	<dict>
-		<key>type</key>
-		<string>VTObjectiveC</string>
-		<key>name</key>
-		<string>Desktop Name Primitive</string>
 		<key>author</key>
 		<string>Thomas Staller, Virtue project</string>
 		<key>hidden</key>
 		<true/>
+		<key>name</key>
+		<string>Desktop Name Primitive</string>
+		<key>type</key>
+		<string>VTObjectiveC</string>
 	</dict>
+	<key>VTPluginDisplayName</key>
+	<string>Desktop Name Primitive</string>
 </dict>
 </plist>
