@@ -49,6 +49,9 @@ enum
 #pragma mark -
 - (void) showDesktopInspectorForDesktop: (VTDesktop*) desktop;  
 - (void) invalidateQuitDialog:(NSNotification *)aNotification;
+- (NSString*) preferencesFolder;
+- (NSString*) applicationSupportFolder;
+- (void) migrateOldPreferences;
 @end 
 
 @implementation VTApplicationDelegate
@@ -278,9 +281,10 @@ enum
 
 - (IBAction) showPreferences: (id) sender {
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
-	
-	[mPreferenceController window]; 
+	NSWindow *prefWindow = [mPreferenceController window];
 	[mPreferenceController showWindow: self];
+
+	
 }
 
 - (IBAction) showHelp: (id) sender {
@@ -560,37 +564,7 @@ enum
 	[self showApplicationInspector: self]; 
 }
 
-#pragma mark -
 
-- (NSString *)preferencesFolder {
-	NSString *preferencesFolder = nil;
-	FSRef foundRef;
-	OSErr err = FSFindFolder(kUserDomain, kPreferencesFolderType, kDontCreateFolder, &foundRef);
-	if (err != noErr) {
-		NSRunAlertPanel(@"Alert", @"Can't find preferences folder", @"Quit", nil, nil);
-		[[NSApplication sharedApplication] terminate:self];
-	} else {
-		unsigned char path[1024];
-		FSRefMakePath(&foundRef, path, sizeof(path));
-		preferencesFolder = [NSString stringWithUTF8String:(char *)path];
-	}
-	return preferencesFolder;
-}
-
-- (void) migrateOldPreferences
-{
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSString *oldPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"net.sourceforge.virtue.Virtue.plist"];
-	NSString *newPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"info.virtuedesktops.VirtueDesktops.plist"];
-	
-	if	(![fileManager fileExistsAtPath: newPlist] && [fileManager fileExistsAtPath: oldPlist]) 
-	{
-		[fileManager movePath: oldPlist
-									 toPath: newPlist
-									handler: nil];
-	}
-	
-}
 
 #pragma mark -
 #pragma mark KVO Sinks 
@@ -892,6 +866,64 @@ enum
 {
 	// If we're shutting down, logging out, restarting or auto-updating via Sparkle, we don't want to ask the user if we should quit. They have already made that decision for us.
 	mConfirmQuitOverridden = YES;
+}
+
+
+#pragma mark -
+
+- (NSString *)preferencesFolder {
+	NSString *preferencesFolder = nil;
+	FSRef foundRef;
+	OSErr err = FSFindFolder(kUserDomain, kPreferencesFolderType, kDontCreateFolder, &foundRef);
+	if (err != noErr) {
+		NSRunAlertPanel(@"Alert", @"Can't find preferences folder", @"Quit", nil, nil);
+		[[NSApplication sharedApplication] terminate:self];
+	} else {
+		unsigned char path[PATH_MAX];
+		FSRefMakePath(&foundRef, path, sizeof(path));
+		preferencesFolder = [NSString stringWithUTF8String:(char *)path];
+	}
+	return preferencesFolder;
+}
+
+- (NSString*) applicationSupportFolder {
+	NSString *applicationSupportFolder = nil;
+	FSRef foundRef;
+	OSErr err = FSFindFolder(kUserDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
+	if (err != noErr) {
+		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
+		[[NSApplication sharedApplication] terminate:self];
+	} else {
+		unsigned char path[PATH_MAX];
+		FSRefMakePath(&foundRef, path, sizeof(path));
+		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
+	}
+	return applicationSupportFolder;
+}
+
+- (void) migrateOldPreferences
+{
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	
+	NSString *oldPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"net.sourceforge.virtue.Virtue.plist"];
+	NSString *newPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"info.virtuedesktops.VirtueDesktops.plist"];
+	
+	if	(![fileManager fileExistsAtPath: newPlist] && [fileManager fileExistsAtPath: oldPlist]) 
+	{
+		[fileManager movePath: oldPlist
+									 toPath: newPlist
+									handler: nil];
+	}
+	
+	NSString *oldAppSupportFolder = [[self applicationSupportFolder] stringByAppendingPathComponent:@"Virtue"];
+	NSString *newAppSupportFolder = [[self applicationSupportFolder] stringByAppendingPathComponent:@"VirtueDesktops"];
+	
+	if	(![fileManager fileExistsAtPath: newAppSupportFolder] && [fileManager fileExistsAtPath: oldAppSupportFolder]) 
+	{
+		[fileManager movePath: oldAppSupportFolder
+									 toPath: newAppSupportFolder
+									handler: nil];
+	}
 }
 
 @end 

@@ -38,10 +38,7 @@
 	IBOutlet NSButton*								mDeletePrimitiveButton; 
 	IBOutlet NSButton*								mDeleteDesktopButton; 
 	IBOutlet ZNImagePopUpButton*			mAddPrimitiveButton; 
-	IBOutlet NSMenu*									mAddPrimitiveMenu; 
-	IBOutlet NSPopUpButton*						mTriggerTypePopup; 
-	IBOutlet NSMenuItem*							mKeyTriggerItem; 
-	IBOutlet NSMenuItem*							mMouseTriggerItem; 
+	IBOutlet NSMenu*									mAddPrimitiveMenu;
 	
 // ivars 
 	VTDesktop*					mDesktop;		//!< The model we are dealing with 

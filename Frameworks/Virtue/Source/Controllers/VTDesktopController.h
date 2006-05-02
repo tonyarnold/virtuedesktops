@@ -93,6 +93,6 @@
 
 #pragma mark -
 
-- (void) applyDecorationPrototype: (BOOL) overwrite; 
+- (void) applyDecorationPrototype: (BOOL) overwrite;
 
 @end

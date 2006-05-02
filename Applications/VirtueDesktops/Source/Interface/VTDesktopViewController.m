@@ -92,15 +92,18 @@
 - (IBAction) addDesktop: (id) sender {
 	// create a new desktop 
 	VTDesktop*	newDesktop = [[VTDesktopController sharedInstance] desktopWithFreeId]; 
+	
 	// set up the desktop 
 	[newDesktop setName: [NSString stringWithFormat: @"Desktop %i", [newDesktop identifier]]]; 
+	
 	// and add it to our collection 
 	[[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]]; 
+	NSLog(@"Adding desktop with name: %@", [newDesktop name]);
 }
 
 - (IBAction) deleteDesktop: (id) sender {
-	VTDesktop*	desktop			= [self selectedDesktop]; 
-	int			desktopIndex	= [[[VTDesktopController sharedInstance] desktops] indexOfObject: desktop]; 
+	VTDesktop* desktop	= [self selectedDesktop]; 
+	int desktopIndex		= [[[VTDesktopController sharedInstance] desktops] indexOfObject: desktop]; 
 	
 	// remove the selected desktop 
 	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex]; 
@@ -109,9 +112,9 @@
 
 - (IBAction) deletePrimitive: (id) sender {
 	// fetch the currently selected primitive and remove it from our container 
-	VTDecorationPrimitive*	selectedPrimitive	= [self selectedPrimitive]; 
-	int						primitiveIndex		= [[[mDesktop decoration] decorationPrimitives] indexOfObject: selectedPrimitive]; 
-		
+	VTDecorationPrimitive* selectedPrimitive = [self selectedPrimitive]; 
+	int primitiveIndex = [[[mDesktop decoration] decorationPrimitives] indexOfObject: selectedPrimitive]; 
+	
 	[[mDesktop decoration] delDecorationPrimitive: selectedPrimitive]; 
 }
 
@@ -124,15 +127,16 @@
 	
 	// find the inspector for our primitive 
 	VTInspector* inspector = [self inspectorForPrimitive: selectedPrimitive]; 
+	
 	// setup inspector 
 	[inspector setInspectedObject: selectedPrimitive]; 
 	
 	[mInspectorController window]; 
 	[mInspectorController startSheetForPrimitive: selectedPrimitive
-									   inspector: inspector
-										  window: [self window] 
-										delegate: self 
-								  didEndSelector: @selector(inspectorPanelDidEnd:returnCode:contextInfo:)]; 
+																		 inspector: inspector 
+																				window: [self window] 
+																			delegate: self 
+																didEndSelector: @selector(inspectorPanelDidEnd:returnCode:contextInfo:)]; 
 }
 
 - (IBAction) showWindow: (id) sender {
@@ -177,25 +181,26 @@
 	[[self window] setDelegate: self]; 
 	
 	// set up notifications 
-	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(textDidEndEditing:) name: NSTextDidEndEditingNotification object: mFieldEditor];	
+	[[NSNotificationCenter defaultCenter] addObserver: self 
+																					 selector: @selector(textDidEndEditing:) 
+																							 name: NSTextDidEndEditingNotification 
+																						 object: mFieldEditor];	
 	
 	// create inspector 
 	mInspectorController = [[VTDecorationPrimitiveViewController alloc] init]; 
 	
-	// prepare menu 
-	[mKeyTriggerItem setImage: [NSImage imageNamed: @"imageKeyboardTrigger"]]; 
-	[mKeyTriggerItem setTag: 0]; 
-	[mMouseTriggerItem setImage: [NSImage imageNamed: @"imageMouseTrigger"]]; 
-	[mMouseTriggerItem setTag: 1]; 
-	
-	// prepare popupbutton cell 
-	[mTriggerTypePopup setImagePosition: NSImageOnly]; 
-	[[mTriggerTypePopup cell] setArrowPosition: NSPopUpNoArrow]; 
-	
 	// set up the desktop collection controller 
-	[mDesktopsController bind: @"contentArray" toObject: [[VTLayoutController sharedInstance] activeLayout] withKeyPath: @"orderedDesktops" options: nil]; 
+	[mDesktopsController bind: @"contentArray" 
+									 toObject: [[VTLayoutController sharedInstance] activeLayout] 
+								withKeyPath: @"orderedDesktops" 
+										options: nil]; 
+	
 	// set up delete button binding 
-	[mDeleteDesktopButton bind: @"enabled" toObject: [VTDesktopController sharedInstance] withKeyPath: @"canDelete" options: nil]; 
+	[mDeleteDesktopButton bind: @"enabled" 
+										toObject: [VTDesktopController sharedInstance] 
+								 withKeyPath: @"canDelete" 
+										 options: nil]; 
+	
 	// and select a desktop 
 	[self showDesktop: [self selectedDesktop]]; 
 }
@@ -205,10 +210,10 @@
 
 - (void) windowWillClose: (NSNotification*) notification {	
 	// remove bindings 
-	[mImageView unbind: @"imagePath"];
-	[mLabelButton unbind: @"selectedColorLabel"]; 
-	[mDesktop unbind: @"desktopBackground"];
-	[mDesktop unbind: @"colorLabel"]; 
+	[mImageView 					unbind: @"imagePath"];
+	[mLabelButton 				unbind: @"selectedColorLabel"]; 
+	[mDesktop 						unbind: @"desktopBackground"];
+	[mDesktop 						unbind: @"colorLabel"]; 
 	[mDeleteDesktopButton unbind: @"enabled"]; 
 	
 	// and write out preferences to be sure 
@@ -273,9 +278,9 @@
 	return NSDragOperationNone; 
 }
 
-- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id <NSDraggingInfo>)info row:(int)row dropOperation:(NSTableViewDropOperation)op {
+- (BOOL)tableView:(NSTableView*)delegateTableView acceptDrop:(id <NSDraggingInfo>)info row:(int)row dropOperation:(NSTableViewDropOperation)op {
 	// Decorations table view
-	if ([tv isEqual: mDecorationsTableView]) {   
+	if ([delegateTableView isEqual: mDecorationsTableView]) {   
 		if (row < 0)
 			row = 0;
     
@@ -326,7 +331,8 @@
 	// get index of passed desktop 
 	unsigned int index = [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] indexOfObject: desktop]; 
 	// and select it in the table view 
-	[mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index] byExtendingSelection: NO];
+	[mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index] 
+									byExtendingSelection: NO];
 }
 
 - (void) showDesktop: (VTDesktop*) desktop {
@@ -390,7 +396,7 @@
 
 - (void) onAddPrimitive: (id) sender {
 	// fetch information needed to perform operation
-	Class		primitiveClass = NSClassFromString([sender representedObject]);
+	Class			primitiveClass = NSClassFromString([sender representedObject]);
 	NSString*	primitiveName  = [sender title]; 
 	
 	// create a new instance of the fetched class and ... 
@@ -408,27 +414,33 @@
 	// items beginning with built-in items at the top... 
 	
 	// Text-Primitive 
-	item = [[[NSMenuItem alloc] initWithTitle: NSLocalizedStringFromTable(NSStringFromClass([VTDecorationPrimitiveText class]), @"DefaultPrimitiveNames", @"Text Primitive") action: @selector(onAddPrimitive:) keyEquivalent: @""] autorelease]; 
+	item = [[[NSMenuItem alloc] initWithTitle: NSLocalizedStringFromTable(NSStringFromClass([VTDecorationPrimitiveText class]), @"DefaultPrimitiveNames", @"Text Primitive") 
+																		 action: @selector(onAddPrimitive:) 
+															keyEquivalent: @""] autorelease]; 
+	
 	[item setRepresentedObject: NSStringFromClass([VTDecorationPrimitiveText class])]; 
 	[item setTarget: self]; 
 	[mAddPrimitiveMenu addItem: item]; 
+	
 	// Tint-Primitive 
 	item = [[[NSMenuItem alloc] initWithTitle: NSLocalizedStringFromTable(NSStringFromClass([VTDecorationPrimitiveTint class]), @"DefaultPrimitiveNames", @"Tint Primitive") action: @selector(onAddPrimitive:) keyEquivalent: @""] autorelease]; 
 	[item setRepresentedObject: NSStringFromClass([VTDecorationPrimitiveTint class])]; 
 	[item setTarget: self]; 
 	[mAddPrimitiveMenu addItem: item]; 
+	
 	// Watermark-Primitive 
 	item = [[[NSMenuItem alloc] initWithTitle: NSLocalizedStringFromTable(NSStringFromClass([VTDecorationPrimitiveWatermark class]), @"DefaultPrimitiveNames", @"Watermark Primitive") action: @selector(onAddPrimitive:) keyEquivalent: @""] autorelease]; 
 	[item setRepresentedObject: NSStringFromClass([VTDecorationPrimitiveWatermark class])]; 
 	[item setTarget: self]; 
 	[mAddPrimitiveMenu addItem: item]; 
+	
 	// Separator 
 	[mAddPrimitiveMenu addItem: [NSMenuItem separatorItem]]; 
 	
 	// Plugins 
-	NSArray*				pluginDecorations	= [[VTPluginCollection sharedInstance] pluginsOfType: @protocol(VTPluginDecoration)]; 
-	NSEnumerator*			pluginIter			= [pluginDecorations objectEnumerator]; 
-	VTPluginInstance*		plugin				= nil; 
+	NSArray*					pluginDecorations	= [[VTPluginCollection sharedInstance] pluginsOfType: @protocol(VTPluginDecoration)]; 
+	NSEnumerator*			pluginIter				= [pluginDecorations objectEnumerator]; 
+	VTPluginInstance*	plugin						= nil; 
 	
 	while (plugin = [pluginIter nextObject]) {
 		id<VTPluginDecoration> pluginInstance = [plugin instance]; 
@@ -447,9 +459,11 @@
 	// VTDecorationPrimitiveTextInspector 
 	inspector = [[[VTDecorationPrimitiveTextInspector alloc] init] autorelease]; 
 	[mPrimitiveInspectors setObject: inspector forKey: NSStringFromClass([VTDecorationPrimitiveText class])]; 
+	
 	// VTDecorationPrimitiveTintInspector 
 	inspector = [[[VTDecorationPrimitiveTintInspector alloc] init] autorelease]; 
 	[mPrimitiveInspectors setObject: inspector forKey: NSStringFromClass([VTDecorationPrimitiveTint class])]; 
+	
 	// VTDecorationPrimitiveWatermarkInspector
 	inspector = [[[VTDecorationPrimitiveWatermarkInspector alloc] init] autorelease]; 
 	[mPrimitiveInspectors setObject: inspector forKey: NSStringFromClass([VTDecorationPrimitiveWatermark class])]; 

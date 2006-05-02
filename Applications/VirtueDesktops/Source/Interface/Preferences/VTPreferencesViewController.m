@@ -16,6 +16,7 @@
 #import <Virtue/NSUserDefaultsColor.h>
 #import <Virtue/VTTriggerController.h> 
 #import <Zen/Zen.h> 
+#import "../../../../../Shared/CGS/CGSPrivate.h"
 
 #define		VTPreferencePaneName					@"VTPreferencePaneName"
 #define		VTPreferencePaneHelpText			@"VTPreferencePaneHelpText"
@@ -79,11 +80,10 @@
 #pragma mark NSWindowController delegate  
 
 - (void) windowDidLoad {
-	// set up array of preference panes we have to show 
-	[self setupPreferencePanes]; 
-	// set content of our controller 
-	
-	[mPreferencePanesController setContent: mAvailablePreferencePanes]; 
+	// set up array of preference panes we have to show
+	[self setupPreferencePanes];
+	// set content of our controller
+	[mPreferencePanesController setContent: mAvailablePreferencePanes];
 }
 
 - (void) windowWillClose: (NSNotification*) notification {
@@ -102,8 +102,8 @@
 	if (mCurrentPane) 
 		[mCurrentPane willSelect]; 
 	
-	[super showWindow: sender]; 
 	
+	[super showWindow: sender];
 	if (mCurrentPane)
 		[mCurrentPane didSelect]; 
 }

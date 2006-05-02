@@ -23,12 +23,9 @@
                 mDesktopsController = NSArrayController; 
                 mDesktopsTableView = NSTableView; 
                 mHotkeyField = VTHotkeyTextField; 
-                mImageView = NSImageView; 
+                mImageView = VTImageViewFileDropper; 
                 mInspectPrimitiveButton = NSButton; 
-                mKeyTriggerItem = NSMenuItem; 
                 mLabelButton = VTColorLabelButton; 
-                mMouseTriggerItem = NSMenuItem; 
-                mTriggerTypePopup = NSPopUpButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 

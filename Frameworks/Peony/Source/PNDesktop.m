@@ -8,7 +8,7 @@
  * playback@users.sourceforge.net
  * 
  * Copyright 2006, Tony Arnold
- * tonyarnold@users.sourceforge.net
+ * tony@tonyarnold.com
  *
  * See COPYING for licensing details
  *
@@ -46,7 +46,8 @@
  * Returns an autoreleased desktop wrapper instance that is fully initialised and assigned a temporary desktop name.
  *
  */
-+ (PNDesktop*) desktopWithId: (int) desktopId {
++ (PNDesktop*) desktopWithId: (int) desktopId 
+{
 	// Create a new desktop and associate it with the passed workspace id
 	return [[[PNDesktop alloc] initWithId: desktopId] autorelease];
 }
@@ -58,7 +59,8 @@
  * @param		andName			The desktop name
  *
  */
-+ (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name {
++ (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name 
+{
 	// Create a new desktop and associate it with the passed workspace id
 	return [[[PNDesktop alloc] initWithId: desktopId andName: name] autorelease];
 }
@@ -69,7 +71,8 @@
  * @brief We do not allow initialisation of a non-connected desktop proxy
  *
  */
-- (id) init {
+- (id) init 
+{
 	return [self initWithId: -1];
 }
 
@@ -81,7 +84,8 @@
  * A call to this initialiser will bind the desktop to the passed workspace and initialise the name of the desktop to the default name.
  *
  */
-- (id) initWithId: (int) desktopId {
+- (id) initWithId: (int) desktopId 
+{
 	// generate default name
 	NSString* sDefaultName = [NSString stringWithFormat: @"Desktop %i", desktopId];
 	
@@ -102,7 +106,8 @@
 	return [self initWithId: desktopId andName: name update: YES];
 }
 
-- (void) dealloc {
+- (void) dealloc 
+{
 	ZEN_RELEASE(mDesktopName);
 	ZEN_RELEASE(mWindows);
 	ZEN_RELEASE(mApplications);
@@ -113,7 +118,8 @@
 
 #pragma mark -
 #pragma mark NSCopying
-- (id) copyWithZone: (NSZone*) zone {
+- (id) copyWithZone: (NSZone*) zone 
+{
 	PNDesktop* desktop = [[PNDesktop alloc] initWithId: mDesktopId andName: mDesktopName update: NO];
 
 	desktop->mWindows				= [mWindows retain];
@@ -152,16 +158,19 @@
  * @brief Returns the lowest possible valid desktop id
  *
  */
-+ (int) firstDesktopIdentifier {
++ (int) firstDesktopIdentifier 
+{
 	return 1;
 }
 
 #pragma mark -
-- (int) identifier {
+- (int) identifier 
+{
 	return mDesktopId;
 }
 
-- (void) setIdentifier: (int) identifier {
+- (void) setIdentifier: (int) identifier 
+{
 	mDesktopId = identifier;
 
 	[self updateDesktop];
@@ -169,11 +178,13 @@
 
 
 #pragma mark -
-- (NSString*) name {
+- (NSString*) name 
+{
 	return mDesktopName;
 }
 
-- (void) setName: (NSString*) name {
+- (void) setName: (NSString*) name 
+{
 	[mDesktopName autorelease];
 
 	if (name && ([name length] > 0))
@@ -189,7 +200,8 @@
  * @brief KVO compliant list of windows contained in the desktop
  *
  */
-- (NSArray*) windows {
+- (NSArray*) windows 
+{
 	return mWindows;
 }
 
@@ -197,7 +209,8 @@
  * @brief KVO compliant list of applications contained in the desktop
  *
  */
-- (NSArray*) applications {
+- (NSArray*) applications 
+{
 	return [mApplications allValues];
 }
 
@@ -209,7 +222,8 @@
  * @return	Returns @c YES if the desktop is the one the user is currently working on, @c NO if it is not.
  *
  */
-- (BOOL) visible {
+- (BOOL) visible 
+{
 	CGSConnection oConnection = _CGSDefaultConnection();
 
 	int iActiveWorkspace;
@@ -225,14 +239,16 @@
 #pragma mark -
 #pragma mark NSObject
 
-- (BOOL) isEqual: (id) other {
+- (BOOL) isEqual: (id) other 
+{
 	if ([other isKindOfClass: [PNDesktop class]] == NO)
 		return NO;
 
 	return (mDesktopId == [(PNDesktop*)other identifier]);
 }
 
-- (NSString*) description {
+- (NSString*) description 
+{
 	return [self name];
 }
 
@@ -243,7 +259,8 @@
  * @brief Activates the desktop using the default transition and duration settings
  *
  */
-- (void) activate {
+- (void) activate 
+{
 	// delegate to the more sophisticated activation method using default values
 	[self activateWithTransition: kPnTransitionAny option: kPnOptionAny duration: kPnTransitionDurationDefault];
 }
@@ -267,7 +284,8 @@
  * @distnotify	kPnOnDesktopDidActivate
  *					'desktop' self.desktopId
  */
-- (void) activateWithTransition: (PNTransitionType) transition option: (PNTransitionOption) option duration: (float) seconds {
+- (void) activateWithTransition: (PNTransitionType) transition option: (PNTransitionOption) option duration: (float) seconds 
+{
 	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt: mDesktopId], @"desktop", nil];
 	
 	// Get the connection to the CoreGraphics server
@@ -306,7 +324,7 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: self];
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
 	
-	// tonyarnold@users.sourceforge.net: Previously, I would insert a usleep(100000); here, so that the desktop picture had time to update before the transition was released. I think we need to find a faster way to set the desktop picture and get it onscreen - or accept the fact that desktop picture transitions are something that will only display properly on fast machines.
+	// tony@tonyarnold.com: Previously, I would insert a usleep(100000); here, so that the desktop picture had time to update before the transition was released. I think we need to find a faster way to set the desktop picture and get it onscreen - or accept the fact that desktop picture transitions are something that will only display properly on fast machines.
 		
 	// Run the transition	
 	CGSInvokeTransition(cgs, handle, seconds);
@@ -321,7 +339,8 @@
 #pragma mark -
 #pragma mark Window operations
 
-- (void) moveAllWindowsToDesktop: (PNDesktop*) desktop {
+- (void) moveAllWindowsToDesktop: (PNDesktop*) desktop 
+{
 	// Update to ensure all our windows are listed and current
 	[self updateDesktop];
 	
@@ -372,7 +391,8 @@
  * @todo	Optimize a bit here
  *
  */
-- (void) updateDesktop {
+- (void) updateDesktop 
+{
 	if (mDesktopId < 0)
 		return;
 
@@ -421,6 +441,7 @@
 
 // get the window proxy
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
+
 // if the window is special, we do not include it in our list
 		if ([window isSpecial]) {
 			[window release];
@@ -598,7 +619,8 @@
  * kCGNormalWindowLevel window level
  *
  */
-- (PNWindow*) windowContainingPoint: (NSPoint) point {
+- (PNWindow*) windowContainingPoint: (NSPoint) point 
+{
 	// iterate windows until we find a window containing the passed
 	// point or we reached the end of the list. we will not consider
 	// windows that were marked as special
@@ -632,7 +654,8 @@
  *			if the desktop does not contain an application with the passed pid
  *
  */
-- (PNApplication*) applicationForPid: (pid_t) pid {
+- (PNApplication*) applicationForPid: (pid_t) pid 
+{
 	return [mApplications objectForKey: [NSNumber numberWithInt: pid]];
 }
 
@@ -645,7 +668,8 @@
  *			the desktop does not contain a window with the passed id
  *
  */
-- (PNWindow*) windowForId: (CGSWindow) window {
+- (PNWindow*) windowForId: (CGSWindow) window 
+{
 	return [self windowWithId: window];
 }
 
@@ -658,7 +682,8 @@
  * @todo	Remove and change over to windowForId
  *
  */
-- (PNWindow*) windowWithId: (CGSWindow) windowId {
+- (PNWindow*) windowWithId: (CGSWindow) windowId 
+{
 	// iterate through the list of windows until we find the passed window id
 	NSEnumerator*		windowIter	= [mWindows objectEnumerator];
 	PNWindow*		window		= nil;
@@ -671,7 +696,8 @@
 	return nil;
 }
 
-- (id) initWithId: (int) desktopId andName: (NSString*) name update: (BOOL) update {
+- (id) initWithId: (int) desktopId andName: (NSString*) name update: (BOOL) update 
+{
 	if (self = [super init]) {
 		// initialise attributes
 		mDesktopId		= desktopId;
@@ -693,7 +719,8 @@
 
 #pragma mark -
 @implementation PNDesktop (ApplicationList)
-- (void) detachApplication: (PNApplication*) application {
+- (void) detachApplication: (PNApplication*) application 
+{
 	if (application == nil)
 		return;
 	if ([application bundlePath] == nil)
@@ -710,19 +737,17 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application bundlePath] userInfo: userInfo];
 }
 
-- (void) attachApplication: (PNApplication*) application {
+- (void) attachApplication: (PNApplication*) application 
+{
 	if (application == nil)
 		return;
 	if ([application bundlePath] == nil)
 		return;
 
-	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-		application, PNApplicationInstanceParam,
-		self, PNApplicationDesktopParam,
-		nil];
+	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
 
 	[mApplications setObject: application forKey: [NSNumber numberWithInt: [application pid]]];
-
+	
 	// and post notification
 	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasAdded object: [application bundlePath] userInfo: userInfo];
 }

@@ -164,7 +164,6 @@
 #pragma mark Notification Sinks 
 
 - (void) onHotKeyPressed: (NSNotification*) notification {
-	NSLog(@"notification: %@", [notification name]);
 	// ignore if we are not enabled 
 	if (mIsEnabled == NO)
 		return;

@@ -201,7 +201,8 @@
 		E9D29C35073E3C8C00E0E6CE /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */; };
 		E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
-		EA3599DE09BD7E8800B55739 /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */; };
+		EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */; };
+		EA290E7A09FE0D8D00CAA1DA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABE639809CE9D0D00809063 /* Sparkle.framework */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
 		EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54635209AC9CD1002EDE9E /* WebKit.framework */; };
@@ -232,7 +233,6 @@
 		EABDFE9109AC94D400C523BA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE6609AC94D400C523BA /* CoreFoundation.framework */; };
 		EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE9209AC94E500C523BA /* Security.framework */; };
 		EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */; };
-		EABE639D09CE9D2900809063 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABE639809CE9D0D00809063 /* Sparkle.framework */; };
 		EABE639E09CE9D3200809063 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABE639809CE9D0D00809063 /* Sparkle.framework */; };
 		EAC2B689095E17EC00748870 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC2B687095E17EC00748870 /* Info.plist */; };
 		EAC2BF80095EA0E300748870 /* Virtue.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC2BF7A095EA0E300748870 /* Virtue.nib */; };
@@ -395,6 +395,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E9D29BE8073E345700E0E6CE;
 			remoteInfo = VTDesktopColorLabelPrimitive;
+		};
+		EA290D5C09FE0D3500CAA1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA3598F709BD74CE00B55739;
+			remoteInfo = DockCommunicator;
 		};
 		EA3599DC09BD7E7900B55739 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -576,13 +583,6 @@
 			containerPortal = EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8D01CCD20486CAD60068D4B7;
-			remoteInfo = DockExtension;
-		};
-		EA9AF735094444FA005D60CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7;
 			remoteInfo = DockExtension;
 		};
 		EAB7C03F0924F7DD0067CDFD /* PBXContainerItemProxy */ = {
@@ -1019,10 +1019,10 @@
 			files = (
 				EABDFE5D09AC947600C523BA /* SmartCrashReportsAPI.o in Frameworks */,
 				EABDFE4A09AC936700C523BA /* SmartCrashReportsInstall.o in Frameworks */,
-				EA3599DE09BD7E8800B55739 /* libDockCommunicator.a in Frameworks */,
+				EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */,
 				EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */,
-				EA9AFCCF094460B1005D60CB /* Carbon.framework in Frameworks */,
 				EAB7C0410924F7F50067CDFD /* Peony.framework in Frameworks */,
+				EA9AFCCF094460B1005D60CB /* Carbon.framework in Frameworks */,
 				E913F2E4076E47F300072617 /* VTInterface.framework in Frameworks */,
 				E98B83C00749E50400E8CE5C /* PreferencePanes.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
@@ -1032,7 +1032,7 @@
 				EABDFEC709AC94E500C523BA /* Security.framework in Frameworks */,
 				EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
 				EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */,
-				EABE639D09CE9D2900809063 /* Sparkle.framework in Frameworks */,
+				EA290E7A09FE0D8D00CAA1DA /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1162,13 +1162,13 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA54635209AC9CD1002EDE9E /* WebKit.framework */,
-				EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */,
-				EABDFE9209AC94E500C523BA /* Security.framework */,
-				EABDFE6609AC94D400C523BA /* CoreFoundation.framework */,
-				E958203B07198C88009583A0 /* PreferencePanes.framework */,
 				E9A4816506FF5D6F00A8AE3C /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				EABDFE6609AC94D400C523BA /* CoreFoundation.framework */,
+				EABDFEC909AC950C00C523BA /* libz.1.2.3.dylib */,
+				E958203B07198C88009583A0 /* PreferencePanes.framework */,
+				EABDFE9209AC94E500C523BA /* Security.framework */,
+				EA54635209AC9CD1002EDE9E /* WebKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -1177,9 +1177,9 @@
 			isa = PBXGroup;
 			children = (
 				EA9AF90F09445690005D60CB /* AppKit.framework */,
-				E91AD79B0703570400F69228 /* Foundation.framework */,
 				E91ACD9B0702ADA900F69228 /* AppKitScripting.framework */,
 				E91ACD970702AD9A00F69228 /* AppleScriptKit.framework */,
+				E91AD79B0703570400F69228 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -1906,9 +1906,9 @@
 				E913F1A0076E3DA500072617 /* PBXTargetDependency */,
 				EA8B300A09333FFF00477F42 /* PBXTargetDependency */,
 				EA8B300E09333FFF00477F42 /* PBXTargetDependency */,
-				EA9AF736094444FA005D60CB /* PBXTargetDependency */,
 				EA7CD179094AEE10008C738D /* PBXTargetDependency */,
 				EABE639C09CE9D1C00809063 /* PBXTargetDependency */,
+				EA290D5D09FE0D3500CAA1DA /* PBXTargetDependency */,
 			);
 			name = VirtueDesktops;
 			productInstallPath = "$(HOME)/Applications";
@@ -3032,6 +3032,11 @@
 			target = E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */;
 			targetProxy = E9D29C09073E3AF500E0E6CE /* PBXContainerItemProxy */;
 		};
+		EA290D5D09FE0D3500CAA1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DockCommunicator;
+			targetProxy = EA290D5C09FE0D3500CAA1DA /* PBXContainerItemProxy */;
+		};
 		EA7CD179094AEE10008C738D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Zen;
@@ -3151,11 +3156,6 @@
 			isa = PBXTargetDependency;
 			name = Peony;
 			targetProxy = EA8B300D09333FFF00477F42 /* PBXContainerItemProxy */;
-		};
-		EA9AF736094444FA005D60CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DockExtension;
-			targetProxy = EA9AF735094444FA005D60CB /* PBXContainerItemProxy */;
 		};
 		EABE639C09CE9D1C00809063 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

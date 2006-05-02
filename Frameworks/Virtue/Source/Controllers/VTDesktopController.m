@@ -678,8 +678,7 @@
 	}
 }
 
-// @TODO@ Modularise this into another time and place
-- (NSString *)applicationSupportFolder {
+- (NSString*) applicationSupportFolder {
 	NSString *applicationSupportFolder = nil;
 	FSRef foundRef;
 	OSErr err = FSFindFolder(kUserDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
@@ -687,7 +686,7 @@
 		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
 		[[NSApplication sharedApplication] terminate:self];
 	} else {
-		unsigned char path[1024];
+		unsigned char path[PATH_MAX];
 		FSRefMakePath(&foundRef, path, sizeof(path));
 		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
 		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];

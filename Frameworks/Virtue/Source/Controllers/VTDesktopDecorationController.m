@@ -198,7 +198,7 @@
 	[desktopNameWindow setDesktop: desktop];
 	[desktopNameWindow setIgnoredByExpose: YES];
 	[desktopNameWindow setSticky: NO];
-	[window setAlphaValue: 1.0];
+	[window setAlphaValue: 1.0f];
 	
 	return window; 
 }

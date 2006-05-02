@@ -5,7 +5,7 @@
 * A desktop extension for MacOS X
 *
 * Copyright 2004, Thomas Staller (playback@users.sourceforge.net)
-* Copyright 2006, Tony Arnold (tonyarnold@users.sourceforge.net)
+* Copyright 2006, Tony Arnold (tony@tonyarnold.com)
 *
 * See COPYING for licensing details
 * 

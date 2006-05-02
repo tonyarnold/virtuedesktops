@@ -31,8 +31,8 @@
 		E958EF9E06FDA227001DCB1E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E958EF9D06FDA220001DCB1E /* Carbon.framework */; };
 		E97C3AB8074DDA550025CD57 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AB6074DDA550025CD57 /* COPYING */; };
 		E97C3ABB074DDA690025CD57 /* GPL in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AB9074DDA690025CD57 /* GPL */; };
+		EA290D6209FE0D6B00CAA1DA /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A35D509453CF100A860B2 /* libDockCommunicator.a */; };
 		EA7B999A0945A89A00503865 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E6DDD0924CCF300AABD4D /* Zen.framework */; };
-		EA7B999D0945A89E00503865 /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A35D509453CF100A860B2 /* libDockCommunicator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -90,18 +90,18 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = Zen;
 		};
+		EA290E7609FE0D7800CAA1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA3598F709BD74CE00B55739 /* DockCommunicator */;
+			remoteInfo = DockCommunicator;
+		};
 		EA7A35D409453CF100A860B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E958EEDB06FDA03E001DCB1E;
-			remoteInfo = DockCommunicator;
-		};
-		EA87027809CD51820053D7B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EA3598F709BD74CE00B55739;
 			remoteInfo = DockCommunicator;
 		};
 		EA87027A09CD51820053D7B0 /* PBXContainerItemProxy */ = {
@@ -163,11 +163,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA290D6209FE0D6B00CAA1DA /* libDockCommunicator.a in Frameworks */,
 				E91AD80C0703571B00F69228 /* Foundation.framework in Frameworks */,
 				E958EF9E06FDA227001DCB1E /* Carbon.framework in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				EA7B999A0945A89A00503865 /* Zen.framework in Frameworks */,
-				EA7B999D0945A89E00503865 /* libDockCommunicator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,10 +185,11 @@
 		0867D691FE84028FC02AAC07 /* peony */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */,
+				EA1E6DD80924CCF300AABD4D /* Zen.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Sources */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
-				EA7B986D0945A80F00503865 /* Project Dependencies */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -319,15 +320,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA7B986D0945A80F00503865 /* Project Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */,
-				EA1E6DD80924CCF300AABD4D /* Zen.xcodeproj */,
-			);
-			name = "Project Dependencies";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -383,8 +375,8 @@
 				WRAPPER_EXTENSION = framework;
 			};
 			dependencies = (
-				EA87027909CD51820053D7B0 /* PBXTargetDependency */,
 				EA87027B09CD51820053D7B0 /* PBXTargetDependency */,
+				EA290E7709FE0D7800CAA1DA /* PBXTargetDependency */,
 			);
 			name = Peony;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -474,10 +466,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EA87027909CD51820053D7B0 /* PBXTargetDependency */ = {
+		EA290E7709FE0D7800CAA1DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DockCommunicator;
-			targetProxy = EA87027809CD51820053D7B0 /* PBXContainerItemProxy */;
+			targetProxy = EA290E7609FE0D7800CAA1DA /* PBXContainerItemProxy */;
 		};
 		EA87027B09CD51820053D7B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -573,6 +565,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				GENERATE_PROFILING_CODE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
@@ -599,7 +592,7 @@
 				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
-				GENERATE_MASTER_OBJECT_FILE = YES;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
 				PREBINDING = NO;
