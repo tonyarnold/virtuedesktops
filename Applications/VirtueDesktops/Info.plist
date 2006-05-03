@@ -57,8 +57,10 @@
 	<string>0.52</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleVersionString</key>
+	<string>0.52</string>
 	<key>CFBundleVersion</key>
-	<string>0.52r0000</string>
+	<string>0000</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSAppleScriptEnabled</key>

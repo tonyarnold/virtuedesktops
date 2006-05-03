@@ -252,6 +252,15 @@
 						<key>type</key>
 						<string>VTTriggerNotification</string>
 					</dict>
+				</array>
+				<key>type</key>
+				<string>VTTriggerGroup</string>
+			</dict>
+			<dict>
+				<key>groupKey</key>
+				<string>VTGroupApplications</string>
+				<key>items</key>
+				<array>
 					<dict>
 						<key>enabled</key>
 						<true/>

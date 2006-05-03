@@ -419,8 +419,8 @@
 				return kVtDirectionSoutheast; 
 			if (columnOfTarget < columnOfReference)
 				return kVtDirectionSouthwest;
-			
-			return kVtDirectionSouth;
+			else
+				return kVtDirectionSouth;
 		}
 		else
 		{
@@ -428,8 +428,8 @@
 				return kVtDirectionNortheast; 
 			if (columnOfTarget < columnOfReference)
 				return kVtDirectionNorthwest;
-			
-			return kVtDirectionNorth;
+			else
+				return kVtDirectionNorth;
 		}
 	}
 	

@@ -15,6 +15,9 @@ VTGroupDesktops_name = "Desktop manipulation";
 // Inspectors... 
 VTGroupInspection_name = "Inspectors";
 
+// Applications...
+VTGroupApplications_name = "Application manipulation";
+
 
 // Request to change the desktop to a named desktop. Name and Description take
 // the desktop name as the only format string parameter. 

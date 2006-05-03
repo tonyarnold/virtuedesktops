@@ -46,6 +46,7 @@ enum
 - (void) updateStatusItem; 
 - (void) updateDesktopsMenu; 
 - (void) updateActiveDesktopMenu; 
+- (void) updateVersionNumbers;
 #pragma mark -
 - (void) showDesktopInspectorForDesktop: (VTDesktop*) desktop;  
 - (void) invalidateQuitDialog:(NSNotification *)aNotification;
@@ -256,11 +257,15 @@ enum
 		
 	// Register private observers 
 	[self registerObservers];
-	
+	[self updateVersionNumbers];
 	mStartedUp = YES; 
 }
 
 - (NSString*) versionString {
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersionString"];
+}
+
+- (NSString*) revisionString {
 	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
@@ -848,6 +853,10 @@ enum
 		// get rid of temporary instance 
 		[menuItem release]; 
 	}
+}
+
+- (void) updateVersionNumbers {
+	[mVersionTextField setStringValue:[NSString stringWithFormat:@"Version %@ (%@)", [self versionString], [self revisionString]]];
 }
 
 #pragma mark -

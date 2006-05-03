@@ -26,6 +26,7 @@
                 mStatusItemActiveDesktopItem = NSMenu; 
                 mStatusItemMenu = NSMenu; 
                 mStatusItemRemoveActiveDesktopItem = NSMenuItem; 
+                mVersionTextField = NSTextField; 
             }; 
             SUPERCLASS = NSObject; 
         }, 

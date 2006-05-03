@@ -26,6 +26,7 @@
 	IBOutlet NSMenu*							mStatusItemMenu; 
 	IBOutlet NSMenu*							mStatusItemActiveDesktopItem; 
 	IBOutlet NSMenuItem*					mStatusItemRemoveActiveDesktopItem; 
+	IBOutlet NSTextField*					mVersionTextField;
 	
 	// Attributes 
 	BOOL							mStartedUp; 
@@ -48,6 +49,7 @@
 }
 
 - (NSString*) versionString;
+- (NSString*) revisionString;
 #pragma mark -
 #pragma mark Actions 
 - (IBAction) showPreferences: (id) sender; 
