@@ -4,8 +4,8 @@
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -276,7 +276,7 @@
 	}
 	
 	NSEnumerator*	cellIter	= [mMarkers objectEnumerator]; 
-	NSButtonCell*	cell		= nil; 
+	NSButtonCell*	cell			= nil; 
 	
 	while (cell = [cellIter nextObject]) {
 		if ([cell tag] == tag) {
@@ -287,8 +287,7 @@
 		}	
 	}
 	
-	// if we came here, we do not have a cell selected cell, so 
-	// we will unselect the previous one... 
+	// If we get to here, we do not have a cell that was selected by another cell, so we will deselect the previously selected cell 
 	if ([self selectedCell]) {
 		[[self selectedCell] setState: NSOffState]; 
 	}

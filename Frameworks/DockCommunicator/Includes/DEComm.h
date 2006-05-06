@@ -4,8 +4,8 @@
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
 *
 * Redistribution and use in source and binary forms, with or without modification, 
 * are permitted provided that the following conditions are met:

@@ -4,9 +4,9 @@
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+* 
 * See COPYING for licensing details
 * 
 *****************************************************************************/ 
@@ -53,25 +53,48 @@ enum
 		[self setDisplaysApplicationIcons: YES]; 
 		[self setDrawsWithoutDesktop: YES]; 
 		
-		// Desktopname text attributes 
+		// Desktop name text attributes 
 		NSShadow* textShadow = [[[NSShadow alloc] init] autorelease];
 		[textShadow setShadowColor: [NSColor blackColor]];
 		[textShadow setShadowBlurRadius: 1.0];
-		[textShadow setShadowOffset:NSMakeSize(1,-1)];
+		[textShadow setShadowOffset: NSMakeSize(1,-1)];
 		
 		mDesktopNameAttributes = [[NSMutableDictionary dictionaryWithObjectsAndKeys:
-			[NSColor whiteColor], NSForegroundColorAttributeName,
-			[NSFont systemFontOfSize: 11], NSFontAttributeName,
+			[NSColor whiteColor], 
+			NSForegroundColorAttributeName,
+			[NSFont systemFontOfSize: 11], 
+			NSFontAttributeName,
 			nil] retain];
 
-		// subcell array 
+		// Subcell array 
 		mAppletCells = [[NSMutableArray alloc] init]; 
 		
-		// colors 
-		[self setBackgroundColor: [NSColor colorWithCalibratedRed: 0.11 green: 0.05 blue: 0.25 alpha: 0.2]]; 
-		[self setBackgroundHighlightColor: [NSColor colorWithCalibratedRed: 0.7 green: 0.83 blue: 1 alpha: 0.5]]; 
-		[self setWindowColor: [NSColor colorWithCalibratedRed: 0.7 green: 0.7 blue: 0.7 alpha: 0.3]]; 
-		[self setWindowHighlightColor: [NSColor colorWithCalibratedRed: 0.7 green: 0.7 blue: 0.7 alpha: 0.3]]; 
+		
+		// @TODO: Check if this is where the green background colour is coming from in our prefs (and then set it to something more like the system highlight color.
+		// Set our default colours
+		[self setBackgroundColor: 
+			[NSColor colorWithCalibratedRed: 0.00 
+																green: 0.00 
+																 blue: 0.00 
+																alpha: 0.85]]; 
+		
+		[self setBackgroundHighlightColor: 
+			[NSColor colorWithCalibratedRed: 0.22
+																green: 0.46 
+																 blue: 0.84
+																alpha: 0.38]]; 
+		
+		[self setWindowColor: 
+			[NSColor colorWithCalibratedRed: 0.7 
+																green: 0.7 
+																 blue: 0.7 
+																alpha: 0.3]]; 
+		
+		[self setWindowHighlightColor: 
+			[NSColor colorWithCalibratedRed: 0.7 
+																green: 0.7 
+																 blue: 0.7 
+																alpha: 0.3]]; 
 		
 		return self; 
 	}

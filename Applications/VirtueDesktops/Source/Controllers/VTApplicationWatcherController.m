@@ -4,8 +4,8 @@
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -31,26 +31,37 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 
 - (id) init {
 	if (self = [super init]) {
-		// register for notifications of application focus changes 
-		//[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(onApplicationDidActivate:) name: @"com.apple.HIToolbox.menuBarShownNotification" object: nil]; 
-		[[NSNotificationCenter defaultCenter] 
-			addObserver:self selector:@selector(onApplicationDidActivate:) name: kPnApplicationDidActive object: nil]; 
+		// register for notifications of application focus changes  
+		[[NSNotificationCenter defaultCenter] addObserver:self 
+																						 selector:@selector(onApplicationDidActivate:) 
+																								 name: kPnApplicationDidActive 
+																							 object: nil]; 
 		
 		
 		[self setupAppChangeNotification];
+		
 		// register for notifications of application launches
-		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onApplicationDidLaunch:) name: @"NSWorkspaceDidLaunchApplicationNotification" object: nil]; 
-		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onApplicationWillLaunch:) name: @"NSWorkspaceWillLaunchApplicationNotification" object: nil]; 
+		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self 
+																													 selector:@selector(onApplicationDidLaunch:) 
+																															 name: @"NSWorkspaceDidLaunchApplicationNotification" 
+																														 object: nil]; 
+		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self 
+																													 selector:@selector(onApplicationWillLaunch:) 
+																															 name: @"NSWorkspaceWillLaunchApplicationNotification" 
+																														 object: nil]; 
 
-		[[NSNotificationCenter defaultCenter] 
-			addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
+		[[NSNotificationCenter defaultCenter] addObserver: self 
+																						 selector: @selector(onDesktopDidChange:) 
+																								 name: kPnOnDesktopDidActivate 
+																							 object: nil]; 
 	
-		// set finder PSN (mFinderPSN)
-		[self findFinderApplication]; 
-		// set our own PSN 
+		// Set finder PSN (mFinderPSN)
+		[self findFinderApplication];
+		
+		// Set our own PSN 
 		GetProcessForPID([[NSProcessInfo processInfo] processIdentifier], &mPSN); 
 
-		// and set our marker to NO initially 
+		// ..and now set our marker to NO (initially)
 		mFocusTriggeredSwitch = NO; 
 		
 		return self; 
@@ -60,13 +71,11 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 }
 
 - (void) setupAppChangeNotification {
-	
-	EventTypeSpec spec = { kEventClassApplication,  
-		kEventAppFrontSwitched };
+	EventTypeSpec spec = { kEventClassApplication, kEventAppFrontSwitched };
 	
 	OSStatus err = InstallApplicationEventHandler(NewEventHandlerUPP(handleAppFrontSwitched), 1, &spec, (void*)self, NULL);	
 	if (err) {
-		NSLog(@"Failed to install event handler 'handleAppFrontSwitched'");
+		NSLog(@"Failed to install event handler 'handleAppFrontSwitched' - application changes will not be detected.");
 	}
 }
 
@@ -85,34 +94,24 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 #pragma mark Notification sinks 
 
 /**
- * @brief	Called by the notification center if an application became active 
+ * @brief	Called by the notification center when an application becomes active 
  *
  * The method currently implements the following strategy: 
- * - Switch to the application if the application does not have windows open on 
- *   other windows 
+ * - Switch to the application if the application does not have windows open on other windows 
  * - If a modifier was specified, only switch if the modifier is pressed 
  * - If we do not know about the application, do not do anything 
  *
  * Bugs 
  *
- * - If we deactivate a window by clicking on the desktop, the Finder process 
- *   get the focus, which is bad if we got a Finder window open on another 
- *   desktop, as Virtue will think you want to activate this app and switch. 
- *   One workaround would be to deactivate Finder switching all together.. 
- * - We have to rely on the com.apple.HIToolbox.menuBarShownNotification
- *   notification, which is private and will go away in Tiger, so an alternative
- *   has to be found 
+ * - If we deactivate a window by clicking on the desktop, the Finder process get the focus, which is bad if we got a Finder window open on another desktop, as Virtue will think you want to activate this app and switch. One workaround would be to deactivate Finder switching all together.. 
  *
  * Workaround 
  * 
- * - We currently disable switches to the Finder process (com.apple.finder) 
- *   except in cases where they were triggered by a modifier key switch thus
- *   forced by the user. 
+ * - We currently disable switches to the Finder process (com.apple.finder) except in cases where they were triggered by a modifier key switch, thus forced by the user. 
  * 
  */
 - (void) onApplicationDidActivate: (NSNotification*) notification {
-	// first of all we check preferences, as this can save us some 
-	// work here 
+	// first of all we check preferences, as this can save us some work here 
 	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTDesktopFollowsApplicationFocus] == NO)
 		return; 
 	
@@ -143,8 +142,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		return;
 	}
 	
-	// as a dirty workaround, we will disable switches to the finder, except 
-	// a modifier was used 
+	// as a dirty workaround, we will disable switches to the finder, except a modifier was used 
 	if (neededModifiers == 0) {
 		Boolean same; 
 		
@@ -157,15 +155,14 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 			return; 
 		
 		// if this is Virtue itself, we also abort here 
-		// TODO: Move ignore list out of here 
+		// @TODO: Move ignore list out of here 
 		result = SameProcess(&mActivatedPSN, &mPSN, &same); 
 		
 		if (same == TRUE)
 			return; 
 	}
 	
-	// we will now walk all desktops to fetch their applications and 
-	// build up an array so we can then decide where to switch to 
+	// we will now walk all desktops to fetch their applications and build up an array so we can then decide where to switch to 
 	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	VTDesktop*		desktop		= nil; 
 	NSMutableArray*	desktops	= [NSMutableArray array]; 
@@ -184,8 +181,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 			
 			// got it...
 			if (same == TRUE) {
-				// check if this is the current desktop, and if it is, we will 
-				// abort immediately
+				// check if this is the current desktop, and if it is, we will abort immediately
 				if ([[[VTDesktopController sharedInstance] activeDesktop] isEqual: desktop])
 					return; 
 				
@@ -194,8 +190,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		}
 	}
 	
-	// if we did not find any desktops, something went wrong, so just 
-	// ignore 
+	// if we did not find any desktops, something went wrong, so just ignore 
 	if ([desktops count] == 0)
 		return; 
 	
@@ -211,19 +206,15 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 }
 
 - (void) onApplicationWillLaunch: (NSNotification*) notification {
-	// Ok, I am in a dilemma here. I want to send applications to a predefined 
-	// desktop upon launch, possibly before or really short after they appear 
-	// on the screen. but at the time I get this notification, I do not know about
-	// the applications windows. Hmm, we could offer switching to the desktop for 
-	// a start.. not really useful I guess..
+	// Ok, I am in a dilemma here. I want to send applications to a predefined desktop upon launch, possibly before or really short after they appear on the screen. However at the time of this notification, we do not know about the application's windows. We could offer switching to the desktop for a start.. not really useful I guess...
 }
 
 - (void) onApplicationDidLaunch: (NSNotification*) notification {
+	// Same here...
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
-	// if the switch was triggered via activation, give the activated process 
-	// front process status and abort 
+	// If the switch was triggered via activation, give the activated process front process status and abort 
 	if (mFocusTriggeredSwitch) {
 		mFocusTriggeredSwitch = NO; 
 		SetFrontProcess(&mActivatedPSN); 
@@ -234,18 +225,16 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	mFocusTriggeredSwitch = NO; 	
 
 	
-	// check if the new desktop has any applications, and if it does not, change to 
-	// the finder process 
+	// check if the new desktop has any applications, and if it does not, change to the finder process 
 	
-	VTDesktop*		desktop				= [notification object];
+	VTDesktop*			desktop							= [notification object];
 	PNApplication*	firstNonHiddenAppl	= nil; 
-	NSArray*		applications		= [desktop applications]; 
-	int				applicationCount	= [applications count]; 
-	int				i					= 0; 
-	int				realCount			= 0; 
+	NSArray*				applications				= [desktop applications]; 
+	int							applicationCount		= [applications count]; 
+	int							i										= 0; 
+	int							realCount						= 0; 
 	
-	// count non-hidden applications and remember the first non-hidden application
-	// we encounter for later use 
+	// count non-hidden applications and remember the first non-hidden application we encounter for later use 
 	for (i=0; i<applicationCount; i++) {
 		if ([[applications objectAtIndex: i] isHidden] == NO) {
 			realCount++; 
@@ -255,8 +244,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		}
 	}
 	
-	// more than one application means, we have at least one application but the 
-	// finder active, so lets return 
+	// more than one application means, we have at least one application but the finder active, so lets return 
 	if (realCount <= 1) {
 		if ((realCount > 0) && (firstNonHiddenAppl)) {
 			// we now have to check if the one non-application is the finder 
@@ -266,8 +254,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 			SameProcess(&applicationPSN, &mFinderPSN, &same); 
 			if (same == TRUE)
 				SetFrontProcess(&mFinderPSN); 
-		}
-		else {
+		} else {
 			// if we come here, we have to activate the Finder 
 			SetFrontProcess(&mFinderPSN); 
 			[firstNonHiddenAppl release]; 
@@ -278,16 +265,14 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		
 	[firstNonHiddenAppl release]; 
 	
-	// Now take care of activating the first non-hidden application showing the 
-	// topmost window 
+	// Now take care of activating the first non-hidden application showing the topmost window 
 	int count = [[desktop windows] count]; 
 	int index = 0; 
 	
 	if (count == 0)
 		return; 
 
-	// we will exclude applications that were set as "hidden", that is why we have to 
-	// loop here
+	// we will exclude applications that were set as "hidden", that is why we have to loop here
 	while (index < count) {
 		PNWindow*		frontWindow						= [[desktop windows] objectAtIndex: index];
 		PNApplication*	frontWindowOwner	= [desktop applicationForPid: [frontWindow ownerPid]]; 
@@ -315,25 +300,16 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 @implementation VTApplicationWatcherController(Private)
 
 - (void) findFinderApplication {
-	NSArray*		applications	= [[NSWorkspace sharedWorkspace] launchedApplications]; 
+	NSArray*		applications			= [[NSWorkspace sharedWorkspace] launchedApplications]; 
 	NSEnumerator*	applicationIter	= [applications objectEnumerator];  
-	NSDictionary*	application		= nil; 
-	
-	NSString*		finderBundleId	= [[NSUserDefaults standardUserDefaults] objectForKey: VTPrivateFinderBundleIdentifier]; 
-	if (finderBundleId == nil) 
-		finderBundleId = @"com.apple.finder"; 
+	NSDictionary*	application			= nil; 
 	
 	while (application = [applicationIter nextObject]) {
-		if ([[application objectForKey: @"NSApplicationBundleIdentifier"] isEqualToString: finderBundleId]) {
-			// fetch the finder psn 
-			NSNumber* psnHigh = [application objectForKey: @"NSApplicationProcessSerialNumberHigh"]; 
-			NSNumber* psnLow  = [application objectForKey: @"NSApplicationProcessSerialNumberLow"]; 
+		if ([[application objectForKey: @"NSApplicationBundleIdentifier"] isEqualToString: @"com.apple.finder"]) {
+			// Fetch the finder's PSN 
+			mFinderPSN.highLongOfPSN = [[application objectForKey: @"NSApplicationProcessSerialNumberHigh"] longValue]; 
+			mFinderPSN.lowLongOfPSN  = [[application objectForKey: @"NSApplicationProcessSerialNumberLow"] longValue]; 
 			
-			// hmm, is there a nice way of doing this? 
-			mFinderPSN.highLongOfPSN = [psnHigh longValue]; 
-			mFinderPSN.lowLongOfPSN  = [psnLow longValue]; 
-			
-			// done here 
 			return; 
 		}
 	}

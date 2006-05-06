@@ -73,23 +73,6 @@
 		};
 /* End PBXBuildStyle section */
 
-/* Begin PBXContainerItemProxy section */
-		EA6F5D1309B19C31005BE0EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76F8E0486A9BA00D96B5E;
-			remoteInfo = mach_inject;
-		};
-		EA6F5D1809B19C31005BE0EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76F8E0486A9BA00D96B5E;
-			remoteInfo = mach_inject;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -121,13 +104,8 @@
 		E9D2B61B0701E823008879E0 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DECCgsExt.h; path = Includes/DECCgsExt.h; sourceTree = "<group>"; };
 		E9D2B61D0701E833008879E0 /* DECCgsExt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = DECCgsExt.c; path = Source/DECCgsExt.c; sourceTree = "<group>"; };
 		EA3598F809BD74CE00B55739 /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA6F5D0509B19C31005BE0EF /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
-		EA6F5D0609B19C31005BE0EF /* doxygen.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = doxygen.command; sourceTree = "<group>"; };
 		EA6F5D0709B19C31005BE0EF /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = "<group>"; };
 		EA6F5D0809B19C31005BE0EF /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = "<group>"; };
-		EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mach_inject.xcode; sourceTree = "<group>"; };
-		EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mach_inject.xcodeproj; sourceTree = "<group>"; };
-		EA6F5D0F09B19C31005BE0EF /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,33 +201,12 @@
 		EA6F5D0409B19C31005BE0EF /* mach_inject */ = {
 			isa = PBXGroup;
 			children = (
-				EA6F5D0509B19C31005BE0EF /* Doxyfile */,
-				EA6F5D0609B19C31005BE0EF /* doxygen.command */,
 				EA6F5D0709B19C31005BE0EF /* mach_inject.c */,
 				EA6F5D0809B19C31005BE0EF /* mach_inject.h */,
-				EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */,
-				EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */,
-				EA6F5D0F09B19C31005BE0EF /* main.c */,
 			);
 			name = mach_inject;
 			path = ../../Shared/mach_inject;
 			sourceTree = SOURCE_ROOT;
-		};
-		EA6F5D0A09B19C31005BE0EF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA6F5D1409B19C31005BE0EF /* mach_inject */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EA6F5D0D09B19C31005BE0EF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA6F5D1909B19C31005BE0EF /* mach_inject */,
-			);
-			name = Products;
-			sourceTree = "<group>";
 		};
 		EAF1468309ADE34B00615A67 /* Other Sources */ = {
 			isa = PBXGroup;
@@ -310,38 +267,11 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* decomm */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = EA6F5D0A09B19C31005BE0EF /* Products */;
-					ProjectRef = EA6F5D0909B19C31005BE0EF /* mach_inject.xcode */;
-				},
-				{
-					ProductGroup = EA6F5D0D09B19C31005BE0EF /* Products */;
-					ProjectRef = EA6F5D0C09B19C31005BE0EF /* mach_inject.xcodeproj */;
-				},
-			);
 			targets = (
 				EA3598F709BD74CE00B55739 /* DockCommunicator */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		EA6F5D1409B19C31005BE0EF /* mach_inject */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = mach_inject;
-			remoteRef = EA6F5D1309B19C31005BE0EF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EA6F5D1909B19C31005BE0EF /* mach_inject */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = mach_inject;
-			remoteRef = EA6F5D1809B19C31005BE0EF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA3598F509BD74CE00B55739 /* Sources */ = {

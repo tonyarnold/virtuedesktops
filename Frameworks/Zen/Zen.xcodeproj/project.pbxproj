@@ -11,8 +11,6 @@
 		8DC2EF550486A6940098B216 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B4FE84181DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		E9127298072ADDD5006DC207 /* ZNImagePopUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9127299072ADDD5006DC207 /* ZNImagePopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */; };
-		E941D1F60746B38B007DF0D9 /* NSNumberBytes.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E941D1F70746B38B007DF0D9 /* NSNumberBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */; };
 		E941D2530746CC75007DF0D9 /* NSMethodSignatureArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E941D2540746CC75007DF0D9 /* NSMethodSignatureArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */; };
 		E9544CDA07553831009DA20D /* NSFileManagerAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = E9544CD807553831009DA20D /* NSFileManagerAlias.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +33,8 @@
 		E98DD9DE078DEB4C0059A0D3 /* ZNEffectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */; };
 		EA87028609CD51A70053D7B0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959D441076245DC00013EB2 /* Carbon.framework */; };
 		EA87028709CD51A70053D7B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		EAD78F1A0A0C696B00233FC7 /* NSNumberBytes.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD78F180A0C696B00233FC7 /* NSNumberBytes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAD78F1B0A0C696B00233FC7 /* NSNumberBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD78F190A0C696B00233FC7 /* NSNumberBytes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -97,8 +97,6 @@
 		8DC2EF5B0486A6940098B216 /* Zen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9127296072ADDD5006DC207 /* ZNImagePopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNImagePopUpButton.h; sourceTree = "<group>"; };
 		E9127297072ADDD5006DC207 /* ZNImagePopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNImagePopUpButton.m; sourceTree = "<group>"; };
-		E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberBytes.h; sourceTree = "<group>"; };
-		E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberBytes.m; sourceTree = "<group>"; };
 		E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
 		E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMethodSignatureArguments.m; sourceTree = "<group>"; };
 		E9544CD807553831009DA20D /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
@@ -120,6 +118,8 @@
 		E985E84F0760EEFF005CB196 /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNShading.m; sourceTree = "<group>"; };
 		E98DD9DB078DEB4C0059A0D3 /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNEffectWindow.h; sourceTree = "<group>"; };
 		E98DD9DC078DEB4C0059A0D3 /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNEffectWindow.m; sourceTree = "<group>"; };
+		EAD78F180A0C696B00233FC7 /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberBytes.h; sourceTree = "<group>"; };
+		EAD78F190A0C696B00233FC7 /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberBytes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +227,8 @@
 		E95B9A6F07409C9200231BC5 /* CocoaExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				EAD78F180A0C696B00233FC7 /* NSNumberBytes.h */,
+				EAD78F190A0C696B00233FC7 /* NSNumberBytes.m */,
 				E959D4350762448D00013EB2 /* ZenCocoaCategories.h */,
 				E959D4310762431400013EB2 /* NSStringWithModifiers.h */,
 				E959D4320762431400013EB2 /* NSStringWithModifiers.m */,
@@ -234,8 +236,6 @@
 				E9544CD907553831009DA20D /* NSFileManagerAlias.m */,
 				E941D2510746CC75007DF0D9 /* NSMethodSignatureArguments.h */,
 				E941D2520746CC75007DF0D9 /* NSMethodSignatureArguments.m */,
-				E941D1F40746B38B007DF0D9 /* NSNumberBytes.h */,
-				E941D1F50746B38B007DF0D9 /* NSNumberBytes.m */,
 			);
 			path = CocoaExtensions;
 			sourceTree = "<group>";
@@ -281,7 +281,6 @@
 				E95731DC0711B0320053E494 /* Zen.h in Headers */,
 				E9127298072ADDD5006DC207 /* ZNImagePopUpButton.h in Headers */,
 				E95C9F4F0733A32700148FA8 /* ZNUUID.h in Headers */,
-				E941D1F60746B38B007DF0D9 /* NSNumberBytes.h in Headers */,
 				E941D2530746CC75007DF0D9 /* NSMethodSignatureArguments.h in Headers */,
 				E9544CDA07553831009DA20D /* NSFileManagerAlias.h in Headers */,
 				E958AAF60760444300773392 /* ZNEdge.h in Headers */,
@@ -289,6 +288,7 @@
 				E959D4330762431400013EB2 /* NSStringWithModifiers.h in Headers */,
 				E959D4360762448D00013EB2 /* ZenCocoaCategories.h in Headers */,
 				E98DD9DD078DEB4C0059A0D3 /* ZNEffectWindow.h in Headers */,
+				EAD78F1A0A0C696B00233FC7 /* NSNumberBytes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,12 +387,12 @@
 				E95731D70711A4CA0053E494 /* ZNFilesystemWatcher.m in Sources */,
 				E9127299072ADDD5006DC207 /* ZNImagePopUpButton.m in Sources */,
 				E95C9F500733A32700148FA8 /* ZNUUID.m in Sources */,
-				E941D1F70746B38B007DF0D9 /* NSNumberBytes.m in Sources */,
 				E941D2540746CC75007DF0D9 /* NSMethodSignatureArguments.m in Sources */,
 				E9544CDB07553831009DA20D /* NSFileManagerAlias.m in Sources */,
 				E985E8510760EEFF005CB196 /* ZNShading.m in Sources */,
 				E959D4340762431400013EB2 /* NSStringWithModifiers.m in Sources */,
 				E98DD9DE078DEB4C0059A0D3 /* ZNEffectWindow.m in Sources */,
+				EAD78F1B0A0C696B00233FC7 /* NSNumberBytes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,10 +16,9 @@
 #import "VTTrigger.h"
 
 @interface VTHotkeyTrigger : VTTrigger {
-	EventHotKeyRef			mHotkeyRef;		//!< The native hot key ref
-	
-    int						mKeyCode;		//!< The keycode of the hotkey 
-    int						mKeyModifiers;  //!< Modifiers of the hotkey 
+	EventHotKeyRef	mHotkeyRef;			//!< The native hot key ref
+  int							mKeyCode;				//!< The keycode of the hotkey 
+	int							mKeyModifiers;	//!< Modifiers of the hotkey 
 }
 
 #pragma mark -

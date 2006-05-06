@@ -38,7 +38,7 @@
 	<key>CFBundleExecutable</key>
 	<string>VirtueDesktops</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Virtue version 0.52</string>
+	<string>0.52, Copyright 2006 Tony Arnold</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>Virtue Help</string>
 	<key>CFBundleHelpBookName</key>
@@ -56,13 +56,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>0.52</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>virt</string>
 	<key>CFBundleVersionString</key>
 	<string>0.52</string>
 	<key>CFBundleVersion</key>
 	<string>0000</string>
 	<key>LSUIElement</key>
 	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.4.0</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSMainNibFile</key>
