@@ -13,6 +13,7 @@
             CLASS = VTDesktopViewController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
+                mAddDesktopButton = NSButton; 
                 mAddPrimitiveButton = ZNImagePopUpButton; 
                 mAddPrimitiveMenu = NSMenu; 
                 mDecorationsController = NSArrayController; 
@@ -22,7 +23,6 @@
                 mDesktopController = NSObjectController; 
                 mDesktopsController = NSArrayController; 
                 mDesktopsTableView = NSTableView; 
-                mHotkeyField = VTHotkeyTextField; 
                 mImageView = VTImageViewFileDropper; 
                 mInspectPrimitiveButton = NSButton; 
                 mLabelButton = VTColorLabelButton; 
