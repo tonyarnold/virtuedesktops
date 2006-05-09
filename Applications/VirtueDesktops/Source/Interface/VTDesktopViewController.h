@@ -20,30 +20,27 @@
 #import "VTHotkeyCell.h"
 #import "VTColorLabelButton.h" 
 #import <Zen/ZNImagePopUpButton.h> 
+#import "VTMatrixDesktopLayout.h"
 
 @interface VTDesktopViewController : NSWindowController {
-	// outlets 
+	// Outlets 
 	IBOutlet NSArrayController*				mDesktopsController; 
 	IBOutlet NSObjectController*			mDesktopController; 
 	IBOutlet NSArrayController*				mDecorationsController; 
-	
-	IBOutlet VTHotkeyTextField*				mHotkeyField; 
 	IBOutlet VTImageViewFileDropper*	mImageView; 
-
 	IBOutlet VTColorLabelButton*			mLabelButton;
 	IBOutlet NSTableView*							mDesktopsTableView; 
 	IBOutlet NSTableView*							mDecorationsTableView; 
-	
 	IBOutlet NSButton*								mInspectPrimitiveButton; 
 	IBOutlet NSButton*								mDeletePrimitiveButton; 
+	IBOutlet NSButton*								mAddDesktopButton;
 	IBOutlet NSButton*								mDeleteDesktopButton; 
 	IBOutlet ZNImagePopUpButton*			mAddPrimitiveButton; 
 	IBOutlet NSMenu*									mAddPrimitiveMenu;
 	
-// ivars 
-	VTDesktop*					mDesktop;		//!< The model we are dealing with 
-	VTHotkeyTextView*		mFieldEditor;	//!< Used to edit the hotkey 
-
+	// Instance variables 
+	VTDesktop*														mDesktop;			//!< The model we are dealing with 
+	VTMatrixDesktopLayout*								mActiveDesktopLayout;
 	VTDecorationPrimitiveViewController*	mInspectorController; 
 	NSMutableDictionary*									mPrimitiveInspectors;
 	NSMutableDictionary*									mPrimitiveNames; 
@@ -56,11 +53,9 @@
 #pragma mark -
 #pragma mark Actions 
 - (IBAction) inspectPrimitive: (id) sender; 
-
 - (IBAction) addDesktop: (id) sender; 
 - (IBAction) deleteDesktop: (id) sender; 
 - (IBAction) deletePrimitive: (id) sender; 
-
 - (void) showWindowForDesktop: (VTDesktop*) desktop; 
 
 @end

@@ -47,10 +47,12 @@ typedef enum {
 - (NSObject<VTPager>*) pager; 
 - (NSArray*) desktops; 
 - (NSArray*) orderedDesktops; 
+- (unsigned int) maximumNumberOfDesktops;
 
 #pragma mark -
 #pragma mark Queries 
 - (VTDesktop*) desktopInDirection: (VTDirection) direction ofDesktop: (VTDesktop*) desktop; 
 - (VTDirection) directionFromDesktop: (VTDesktop*) referenceDesktop toDesktop: (VTDesktop*) desktop; 
+
 
 @end

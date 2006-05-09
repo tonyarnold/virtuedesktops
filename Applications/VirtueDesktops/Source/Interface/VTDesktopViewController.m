@@ -60,14 +60,9 @@
 #pragma mark Lifetime 
 
 - (id) init {
-	if (self = [super initWithWindowNibName: @"VTDesktopInspector"]) {
-		// create field editor 
-		mFieldEditor = [[VTHotkeyTextView alloc] initWithFrame: NSMakeRect(0, 0, 10, 10)]; 
-		[mFieldEditor setFieldEditor: YES]; 
-		// [mFieldEditor setHotkey: [mNotification hotkey]]; 
-		[mFieldEditor setTextContainerInset: NSMakeSize(0, -2)]; 
-		
+	if (self = [super initWithWindowNibName: @"VTDesktopInspector"]) {		
 		mPrimitiveInspectors = [[NSMutableDictionary alloc] init]; 
+		mActiveDesktopLayout = (VTMatrixDesktopLayout*)[[VTLayoutController sharedInstance] activeLayout];
 		[self createInspectors]; 
 				
 		return self; 
@@ -80,7 +75,6 @@
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 	
 	
 	ZEN_RELEASE(mDesktop); 
-	ZEN_RELEASE(mFieldEditor); 
 	ZEN_RELEASE(mInspectorController); 
 	ZEN_RELEASE(mPrimitiveInspectors); 
 	
@@ -98,7 +92,6 @@
 	
 	// and add it to our collection 
 	[[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]]; 
-	NSLog(@"Adding desktop with name: %@", [newDesktop name]);
 }
 
 - (IBAction) deleteDesktop: (id) sender {
@@ -180,20 +173,14 @@
 	[[self window] setHidesOnDeactivate: NO];
 	[[self window] setDelegate: self]; 
 	
-	// set up notifications 
-	[[NSNotificationCenter defaultCenter] addObserver: self 
-																					 selector: @selector(textDidEndEditing:) 
-																							 name: NSTextDidEndEditingNotification 
-																						 object: mFieldEditor];	
-	
 	// create inspector 
 	mInspectorController = [[VTDecorationPrimitiveViewController alloc] init]; 
-	
+		
 	// set up the desktop collection controller 
 	[mDesktopsController bind: @"contentArray" 
-									 toObject: [[VTLayoutController sharedInstance] activeLayout] 
+									 toObject: mActiveDesktopLayout
 								withKeyPath: @"orderedDesktops" 
-										options: nil]; 
+										options: nil];
 	
 	// set up delete button binding 
 	[mDeleteDesktopButton bind: @"enabled" 
@@ -201,9 +188,16 @@
 								 withKeyPath: @"canDelete" 
 										 options: nil]; 
 	
+	//Setup add button binding
+	[mAddDesktopButton bind: @"enabled"
+								 toObject: [VTDesktopController sharedInstance]
+							withKeyPath: @"canAdd"
+									options: nil];
+	
 	// and select a desktop 
 	[self showDesktop: [self selectedDesktop]]; 
 }
+
 
 #pragma mark -
 #pragma mark NSWindow delegate 
@@ -220,20 +214,6 @@
 	[[NSUserDefaults standardUserDefaults] synchronize]; 
 	// and also the desktop settings 
 	[[VTDesktopController sharedInstance] serializeDesktops]; 
-}
-
-- (id) windowWillReturnFieldEditor: (NSWindow*) sender toObject: (id) anObject {
-	if ([anObject isKindOfClass: [VTHotkeyTextField class]]) {
-			return mFieldEditor; 
-	}
-	
-	return nil;
-}
-
-- (void) textDidEndEditing: (NSNotification*) aNotification {
-	// check if we are dealing with our hotkey text field 
-	if ([[aNotification object] isEqual: mFieldEditor] == NO)
-		return; 
 }
 
 #pragma mark -

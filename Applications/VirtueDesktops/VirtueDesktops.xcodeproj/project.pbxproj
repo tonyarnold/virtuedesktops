@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		E9035C82077754EF00016B73 /* TODO.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9035C81077754EF00016B73 /* TODO.rtf */; };
 		E903F738071DB45D00A00F30 /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */; };
 		E903F73A071DB45D00A00F30 /* VTImageViewFileDropper.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F72E071DB45D00A00F30 /* VTImageViewFileDropper.m */; };
 		E903F73C071DB45D00A00F30 /* VTNotificationBezel.m in Sources */ = {isa = PBXBuildFile; fileRef = E903F730071DB45D00A00F30 /* VTNotificationBezel.m */; };
@@ -676,7 +675,6 @@
 			files = (
 				E9363A7906FCDDCD00E354DB /* COPYING in CopyFiles */,
 				E9363A7D06FCDDCD00E354DB /* GPL in CopyFiles */,
-				E9035C82077754EF00016B73 /* TODO.rtf in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

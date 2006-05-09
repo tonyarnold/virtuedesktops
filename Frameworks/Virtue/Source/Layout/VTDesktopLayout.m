@@ -69,6 +69,10 @@
 	return nil; 
 }
 
+- (unsigned int) maximumNumberOfDesktops {
+	return [[self desktops] count];
+}
+
 #pragma mark -
 #pragma mark Queries 
 

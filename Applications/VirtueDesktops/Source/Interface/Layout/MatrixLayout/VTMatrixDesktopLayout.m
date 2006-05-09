@@ -228,6 +228,11 @@
 }
 
 #pragma mark -
+- (unsigned int) maximumNumberOfDesktops {
+	return ([self numberOfDisplayedColumns] * [self numberOfDisplayedRows]);	
+}
+
+#pragma mark -
 - (BOOL) bindsNumberOfColumnsToRows {
 	return NO; 
 }

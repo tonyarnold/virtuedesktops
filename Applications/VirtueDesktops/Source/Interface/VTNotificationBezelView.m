@@ -15,7 +15,7 @@
 #import <Virtue/NSBezierPathPlate.h>
 #import <Zen/ZNMemoryManagementMacros.h>
 
-#define kDefaultText @"Virtue"
+#define kDefaultText @"VirtueDesktops"
 
 enum {
 	kRoundedRadius = 25,		//!< Used for our rounded rectangle background, 25 pixel radius is what apple likes here 

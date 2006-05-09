@@ -53,6 +53,9 @@
 - (void) setNumberOfColumns: (unsigned int) cols; 
 
 #pragma mark -
+- (unsigned int) maximumNumberOfDesktops;
+
+#pragma mark -
 - (BOOL) bindsNumberOfColumnsToRows; 
 - (void) setBindsNumberOfColumnsToRows: (BOOL) flag; 
 

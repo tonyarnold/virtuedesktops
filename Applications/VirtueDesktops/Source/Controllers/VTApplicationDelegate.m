@@ -298,7 +298,7 @@ enum
 
 #pragma mark -
 - (IBAction) showDesktopInspector: (id) sender {
-	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
+	//[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
 	[self showDesktopInspectorForDesktop: [[VTDesktopController sharedInstance] activeDesktop]]; 
 }
 

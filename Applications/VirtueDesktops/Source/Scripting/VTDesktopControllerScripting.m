@@ -29,7 +29,7 @@
 }
 
 - (VTDesktop*) valueInDesktopsWithUniqueID: (id) identifier {
-	NSEnumerator*	desktopIter = [mDesktops objectEnumerator]; 
+	NSEnumerator*	desktopIter = [_desktops objectEnumerator]; 
 	VTDesktop*		desktop		= nil; 
 	
 	while (desktop = [desktopIter nextObject])
@@ -42,13 +42,13 @@
 #pragma mark -
 
 - (VTDesktop*) valueInDesktopsAtIndex: (unsigned int) index {
-	return [mDesktops objectAtIndex: index]; 
+	return [_desktops objectAtIndex: index]; 
 }
 
 #pragma mark -
 
 - (void) insertInDesktops: (VTDesktop*) desktop {
-	[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
+	[self insertObject: desktop inDesktopsAtIndex: [_desktops count]]; 
 }
 
 - (void) removeFromDesktopsAtIndex: (unsigned int) index {

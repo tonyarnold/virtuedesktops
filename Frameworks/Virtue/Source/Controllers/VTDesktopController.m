@@ -57,10 +57,10 @@
 - (id) init {
 	if (self = [super init]) {
 		// init attributes 
-		mDesktops						= [[NSMutableArray alloc] init];
-		mPreviousDesktop				= nil; 
-		mSnapbackDesktop				= nil; 
-		mDecorationPrototype			= nil; 
+		_desktops											= [[NSMutableArray alloc] init];
+		mPreviousDesktop							= nil; 
+		mSnapbackDesktop							= nil; 
+		mDecorationPrototype					= nil; 
 		mNeedDesktopBackgroundUpdate	= NO; 
 		mExpectingBackgroundChange		= NO; 
 		
@@ -92,7 +92,7 @@
 	[[NSDistributedNotificationCenter defaultCenter] removeObserver: self]; 
 	
 	// get rid of attributes 
-	ZEN_RELEASE(mDesktops);
+	[_desktops release];
 	ZEN_RELEASE(mPreviousDesktop); 
 	ZEN_RELEASE(mSnapbackDesktop); 
 	ZEN_RELEASE(mDefaultDesktopBackgroundPath); 
@@ -123,27 +123,38 @@
 #pragma mark -
 #pragma mark Attributes 
 
-- (NSArray*) desktops {
-	return mDesktops;
+- (NSMutableArray*) desktops {
+	return _desktops;
+}
+
+- (void) setDesktops: (NSArray*)newDesktops {
+	if (_desktops != newDesktops)
+	{
+		[_desktops autorelease];
+		_desktops = [[NSMutableArray alloc] initWithArray: newDesktops];
+	}
 }
 
 - (void) addInDesktops: (VTDesktop*) desktop {
 	// and add 
-	[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
+	[self insertObject: desktop inDesktopsAtIndex: [_desktops count]]; 
 }
 
 - (void) insertObject: (VTDesktop*) desktop inDesktopsAtIndex: (unsigned int) index {
 	[[NSNotificationCenter defaultCenter] postNotificationName: VTDesktopWillAddNotification object: desktop]; 
 	// notification that canDelete will change 
+	[self willChangeValueForKey: @"canAdd"];
 	[self willChangeValueForKey: @"canDelete"]; 
 	
 	// and add 
-	[mDesktops insertObject: desktop atIndex: index]; 
-	// set up desktop
+	[_desktops insertObject: desktop atIndex: index]; 
 	
+	// set up desktop
 	[desktop setDefaultDesktopBackgroundPath: mDefaultDesktopBackgroundPath]; 
+	
 	// attach the decoration 
 	[[VTDesktopDecorationController sharedInstance] attachDecoration: [desktop decoration]]; 
+	
 	// and apply our default decoration if we should 
 	if (mUsesDecorationPrototype && mDecorationPrototype) {
 		[self applyDecorationPrototypeForDesktop: desktop overwrite: NO]; 
@@ -161,12 +172,13 @@
 	
 	[[VTPluginCollection sharedInstance] makePluginsOfType: @protocol(VTPluginScript) performInvocation: invocation];	
 	
-	// KVO notification for canDelete
+	// KVO notification for canAdd/canDelete
+	[self didChangeValueForKey: @"canAdd"];
 	[self didChangeValueForKey: @"canDelete"]; 	
 }
 
 - (void) removeObjectFromDesktopsAtIndex: (unsigned int) index {
-	VTDesktop* desktopToRemove = [[mDesktops objectAtIndex: index] retain]; 
+	VTDesktop* desktopToRemove = [[_desktops objectAtIndex: index] retain]; 
 	
 	// here we are sure we want to delete the desktop, so we will trigger some 
 	// notifications by hand to inform our plugins 
@@ -182,9 +194,9 @@
 	// check which desktop to move them to 
 	int targetIndex = index - 1; 
 	if (targetIndex < 0)
-		targetIndex = [mDesktops count] - 1; 
+		targetIndex = [_desktops count] - 1; 
 	
-	VTDesktop* target = [mDesktops objectAtIndex: targetIndex]; 
+	VTDesktop* target = [_desktops objectAtIndex: targetIndex]; 
 	
 	if ([[self activeDesktop] isEqual: desktopToRemove]) 
 		[self activateDesktop: target]; 
@@ -209,13 +221,15 @@
 	
 	// now check if we should move windows 
 	if (([[NSUserDefaults standardUserDefaults] boolForKey: VTWindowsCollectOnDelete]) && 
-			([mDesktops count] > 1)) {
+			([_desktops count] > 1)) {
 		[desktopToRemove moveAllWindowsToDesktop: target]; 
 	}
 	
 	// and remove the object 
+	[self willChangeValueForKey: @"canAdd"];
 	[self willChangeValueForKey: @"canDelete"]; 
-	[mDesktops removeObjectAtIndex: index]; 
+	[_desktops removeObjectAtIndex: index]; 
+	[self didChangeValueForKey: @"canAdd"];
 	[self didChangeValueForKey: @"canDelete"]; 
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName: VTDesktopDidRemoveNotification object: desktopToRemove]; 
@@ -223,14 +237,18 @@
 	
 	// check if we got any desktops left, and if we don't, we will create our
 	// default desktops 
-	if ([mDesktops count] == 0)
+	if ([_desktops count] == 0)
 		[self createDefaultDesktops]; 
 }
 
 #pragma mark -
+- (BOOL) canAdd {
+	NSLog(@"maximumNumberOfDesktops: %i, _desktops: %i", [[[VTLayoutController sharedInstance] activeLayout] maximumNumberOfDesktops], [_desktops count]);
+	return ([[[VTLayoutController sharedInstance] activeLayout] maximumNumberOfDesktops] > [_desktops count]);	
+}
 
 - (BOOL) canDelete {
-	return ([mDesktops count] > 1); 
+	return ([_desktops count] > 1); 
 }
 
 #pragma mark -
@@ -278,7 +296,7 @@
 #pragma mark -
 #pragma mark Querying 
 - (VTDesktop*) desktopWithUUID: (NSString*) uuid {
-	NSEnumerator*	desktopIter		= [mDesktops objectEnumerator]; 
+	NSEnumerator*	desktopIter		= [_desktops objectEnumerator]; 
 	VTDesktop*		desktop			= nil; 
 	
 	while (desktop = [desktopIter nextObject]) {
@@ -327,7 +345,7 @@
 
 - (void) serializeDesktops {
 	// iterate over all desktops and archive them 
-	NSEnumerator*		desktopIter		= [mDesktops objectEnumerator]; 
+	NSEnumerator*		desktopIter		= [_desktops objectEnumerator]; 
 	VTDesktop*			desktop				= nil;
 	NSMutableArray*	desktopsArray = [[NSMutableArray alloc] init];
 	
@@ -360,7 +378,7 @@
 		[desktop decodeFromDictionary: serialisedDesktopDictionary]; 
 		
 		// insert into our array of desktops 
-		[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
+		[self insertObject: desktop inDesktopsAtIndex: [_desktops count]]; 
 		
 		// and release temporary instance 
 		[desktop release]; 
@@ -370,7 +388,7 @@
 	
 	// if we still have zero desktops handy, we will trigger creation of 
 	// our default desktops 
-	if ([mDesktops count] == 0)
+	if ([_desktops count] == 0)
 		[self createDefaultDesktops]; 
 	
 	VTDesktop* activeDesktop = [[[self activeDesktop] retain] autorelease]; 
@@ -387,7 +405,7 @@
 - (void) applyDecorationPrototype: (BOOL) overwrite {
 	// we walk through all desktops and attach the decoration primitives from our 
 	// prototype if if is not included yet... 
-	NSEnumerator*	desktopIter		= [mDesktops objectEnumerator]; 
+	NSEnumerator*	desktopIter		= [_desktops objectEnumerator]; 
 	VTDesktop*		desktop			= nil; 
 	
 	while (desktop = [desktopIter nextObject]) {
@@ -414,7 +432,7 @@
 }
 
 - (void) onUpdateDesktops: (NSTimer*) timer {
-	[mDesktops makeObjectsPerformSelector: @selector(updateDesktop)]; 
+	[_desktops makeObjectsPerformSelector: @selector(updateDesktop)]; 
 	[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 }
 
@@ -497,7 +515,7 @@
 		// create a nice desktop
 		VTDesktop* desktop = [VTDesktop desktopWithName: desktopName identifier: desktopId];  
 		// add it 
-		[self insertObject: desktop inDesktopsAtIndex: [mDesktops count]]; 
+		[self insertObject: desktop inDesktopsAtIndex: [_desktops count]]; 
 		
 		// next id
 		desktopId++; 
@@ -508,7 +526,7 @@
 
 #pragma mark -
 - (VTDesktop*) desktopForId: (int) identifier {
-	NSEnumerator*	desktopIter	= [mDesktops objectEnumerator]; 
+	NSEnumerator*	desktopIter	= [_desktops objectEnumerator]; 
 	VTDesktop*		desktop		= nil; 
 	
 	while (desktop = [desktopIter nextObject]) {

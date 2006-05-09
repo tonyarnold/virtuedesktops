@@ -19,7 +19,7 @@
 
 
 @interface VTDesktopController : NSObject {
-	NSMutableArray*				mDesktops; 
+	NSMutableArray*				_desktops; 
 	NSMutableArray*				mApplications; 
 	NSMutableDictionary*	mDesktopWatchers; 
 	
@@ -49,7 +49,8 @@
 #pragma mark -
 #pragma mark Attributes 
 
-- (NSArray*) desktops; 
+- (NSMutableArray*) desktops;
+- (void) setDesktops: (NSArray*)newDesktops;
 - (void) addInDesktops: (VTDesktop*) desktop; 
 - (void) insertObject: (VTDesktop*) desktop inDesktopsAtIndex: (unsigned int) index; 
 - (void) removeObjectFromDesktopsAtIndex: (unsigned int) index; 
