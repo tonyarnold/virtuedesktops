@@ -124,6 +124,9 @@
 }
 
 - (NSString*) desktopBackground {
+	if (mDesktopBackgroundImagePath == mDefaultDesktopBackgroundImagePath) {
+		return nil;
+	}
 	return mDesktopBackgroundImagePath;
 }
 

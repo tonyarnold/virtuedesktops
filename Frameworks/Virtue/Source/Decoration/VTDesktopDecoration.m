@@ -91,7 +91,7 @@
 	while (primitive = [primitiveIter nextObject]) {
 		
 		// fetch the type of this primitive and persist it 
-		NSString*				primitiveType = NSStringFromClass([primitive class]); 
+		NSString*							primitiveType = NSStringFromClass([primitive class]); 
 		NSMutableDictionary*	primitiveDict = [NSMutableDictionary dictionary]; 
 		
 		[primitiveDict setObject: NSStringFromClass([primitive class]) forKey: kVtCodingPrimitiveType];

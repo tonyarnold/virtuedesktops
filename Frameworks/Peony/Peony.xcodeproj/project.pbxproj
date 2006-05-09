@@ -94,7 +94,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EA7A35CF09453CF100A860B2 /* DockCommunicator.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = EA3598F709BD74CE00B55739 /* DockCommunicator */;
+			remoteGlobalIDString = EA3598F709BD74CE00B55739;
 			remoteInfo = DockCommunicator;
 		};
 		EA7A35D409453CF100A860B2 /* PBXContainerItemProxy */ = {

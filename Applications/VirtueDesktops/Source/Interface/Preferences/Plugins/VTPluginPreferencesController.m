@@ -65,10 +65,7 @@
 		NSMutableAttributedString*	text = [[[NSMutableAttributedString alloc] init] autorelease];
 		
 		if (NULL == path)
-		{
-			NSLog(@"[VTPluginPreferencesController: 64] path was NULL.");
 			return nil;
-		}
 	
 		[text readFromURL: path options: nil documentAttributes: &attr]; 
 		data = [text RTFDFromRange: NSMakeRange(0, [text length]) documentAttributes: attr];

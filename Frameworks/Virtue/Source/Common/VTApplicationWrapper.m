@@ -54,7 +54,6 @@
 - (id) initWithBundlePath: (NSString*) bundlePath {
 	if (self = [self init]) {
 		if (bundlePath == nil) {
-			NSLog(@"Invalid bundlePath"); 
 			[self autorelease]; 
 		
 			return nil; 

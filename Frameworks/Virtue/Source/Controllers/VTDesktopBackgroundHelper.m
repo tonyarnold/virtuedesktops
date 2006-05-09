@@ -183,8 +183,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 // 
 // Based on an implementation by Brian Bergstrand, Copyright 2001-2004  
 // 
-// TODO: This one could certainly use some optimization, I guess. Development
-//		 build performs in 0.03 seconds on my machine..
+// TODO: This one could certainly use some optimization, I guess. Development build performs in 0.03 seconds on my machine..
 //  
 - (void) setBackgroundUsingFinder: (NSString*) file {
 	OSErr err;
@@ -196,11 +195,8 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	
 	// Get a URL to later convert to an alias
 	url = [NSURL fileURLWithPath: file];
-	if (NULL == url) {
-		// bail
-		NSLog(@"[VTDesktopBackgroundHelper: 192] url was NULL.");
-		return;
-	}
+	if (NULL == url)
+		return;	
 	
 	// Create an address descriptor
 	err = AECreateDesc (typeKernelProcessID, (char*)&mFinderPid, sizeof(pid_t), &addr);

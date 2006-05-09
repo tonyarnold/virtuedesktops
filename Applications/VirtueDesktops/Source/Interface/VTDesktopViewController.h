@@ -23,7 +23,7 @@
 #import "VTMatrixDesktopLayout.h"
 
 @interface VTDesktopViewController : NSWindowController {
-	// Outlets 
+	// Outlets
 	IBOutlet NSArrayController*				mDesktopsController; 
 	IBOutlet NSObjectController*			mDesktopController; 
 	IBOutlet NSArrayController*				mDecorationsController; 
@@ -44,6 +44,7 @@
 	VTDecorationPrimitiveViewController*	mInspectorController; 
 	NSMutableDictionary*									mPrimitiveInspectors;
 	NSMutableDictionary*									mPrimitiveNames; 
+	NSMutableArray*												desktops;
 }
 
 #pragma mark -

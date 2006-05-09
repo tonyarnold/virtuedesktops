@@ -243,7 +243,6 @@
 
 #pragma mark -
 - (BOOL) canAdd {
-	NSLog(@"maximumNumberOfDesktops: %i, _desktops: %i", [[[VTLayoutController sharedInstance] activeLayout] maximumNumberOfDesktops], [_desktops count]);
 	return ([[[VTLayoutController sharedInstance] activeLayout] maximumNumberOfDesktops] > [_desktops count]);	
 }
 
@@ -486,13 +485,18 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	if ([keyPath isEqualToString: @"showsBackground"] || [keyPath isEqualToString: @"desktopBackground"]) {
-		mExpectingBackgroundChange = YES; 
-		
+		 
 		// toggle background on and off 
-		if ([[self activeDesktop] showsBackground])
+		if ([[self activeDesktop] showsBackground]) 
+		{
+			mExpectingBackgroundChange = YES;
 			[[self activeDesktop] applyDesktopBackground]; 
+		}
 		else 
+		{
+			mExpectingBackgroundChange = NO;
 			[[self activeDesktop] applyDefaultDesktopBackground]; 
+		}
 	}
 }
 

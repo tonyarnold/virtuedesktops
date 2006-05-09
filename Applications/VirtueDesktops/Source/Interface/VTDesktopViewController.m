@@ -64,8 +64,7 @@
 		mPrimitiveInspectors = [[NSMutableDictionary alloc] init]; 
 		mActiveDesktopLayout = (VTMatrixDesktopLayout*)[[VTLayoutController sharedInstance] activeLayout];
 		[self createInspectors]; 
-				
-		return self; 
+		return self;
 	}
 	
 	return nil;
@@ -91,7 +90,7 @@
 	[newDesktop setName: [NSString stringWithFormat: @"Desktop %i", [newDesktop identifier]]]; 
 	
 	// and add it to our collection 
-	[[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]]; 
+	[[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]];
 }
 
 - (IBAction) deleteDesktop: (id) sender {
@@ -181,7 +180,7 @@
 									 toObject: mActiveDesktopLayout
 								withKeyPath: @"orderedDesktops" 
 										options: nil];
-	
+
 	// set up delete button binding 
 	[mDeleteDesktopButton bind: @"enabled" 
 										toObject: [VTDesktopController sharedInstance] 
