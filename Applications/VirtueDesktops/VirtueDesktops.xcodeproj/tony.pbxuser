@@ -143,8 +143,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 169221619;
-			PBXWorkspaceStateSaveDate = 169221619;
+			PBXPerProjectTemplateStateSaveDate = 169224726;
+			PBXWorkspaceStateSaveDate = 169224726;
 		};
 		perUserProjectItems = {
 			EA035BB909F8E2C600DCF53E /* PBXBookmark */ = EA035BB909F8E2C600DCF53E /* PBXBookmark */;
@@ -171,8 +171,8 @@
 			EA386B980A0CE77A00BEFD3F /* PBXTextBookmark */ = EA386B980A0CE77A00BEFD3F /* PBXTextBookmark */;
 			EA8C851209F927700080DDB6 /* PBXBookmark */ = EA8C851209F927700080DDB6 /* PBXBookmark */;
 			EA8C851409F927700080DDB6 /* PBXBookmark */ = EA8C851409F927700080DDB6 /* PBXBookmark */;
-			EA943CCD0A1628A40045AEBF /* PBXTextBookmark */ = EA943CCD0A1628A40045AEBF /* PBXTextBookmark */;
-			EA97496E0A161DE9008077B8 /* PBXTextBookmark */ = EA97496E0A161DE9008077B8 /* PBXTextBookmark */;
+			EA943E590A162A100045AEBF /* PBXTextBookmark */ = EA943E590A162A100045AEBF /* PBXTextBookmark */;
+			EA9441840A162B2D0045AEBF /* PBXTextBookmark */ = EA9441840A162B2D0045AEBF /* PBXTextBookmark */;
 			EAD78E630A0C661800233FC7 /* PBXTextBookmark */ = EAD78E630A0C661800233FC7 /* PBXTextBookmark */;
 			EAD78E650A0C661800233FC7 /* PBXTextBookmark */ = EAD78E650A0C661800233FC7 /* PBXTextBookmark */;
 		};
@@ -812,7 +812,7 @@
 		isa = PBXBookmark;
 		fRef = E9363AE606FCE64300E354DB /* imageMinus.png */;
 	};
-	EA943CCD0A1628A40045AEBF /* PBXTextBookmark */ = {
+	EA943E590A162A100045AEBF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E9363A6406FCDDCD00E354DB /* English */;
 		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
@@ -822,7 +822,7 @@
 		vrLen = 0;
 		vrLoc = 0;
 	};
-	EA97496E0A161DE9008077B8 /* PBXTextBookmark */ = {
+	EA9441840A162B2D0045AEBF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E9363A6406FCDDCD00E354DB /* English */;
 		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
@@ -840,8 +840,8 @@
 	EAC2B687095E17EC00748870 /* Info.plist */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 1376}}";
-			sepNavSelRange = "{1677, 22}";
-			sepNavVisRect = "{{0, 605}, {1046, 628}}";
+			sepNavSelRange = "{1715, 0}";
+			sepNavVisRect = "{{0, 351}, {1046, 628}}";
 			sepNavWindowFrame = "{{255, 129}, {1091, 742}}";
 		};
 	};

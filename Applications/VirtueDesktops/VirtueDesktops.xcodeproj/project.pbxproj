@@ -1898,6 +1898,7 @@
 				ZERO_LINK = NO;
 			};
 			dependencies = (
+				EABE639C09CE9D1C00809063 /* PBXTargetDependency */,
 				E903F985071E4A8C00A00F30 /* PBXTargetDependency */,
 				E91243DB07300B2300BD28CD /* PBXTargetDependency */,
 				E9D29C0A073E3AF500E0E6CE /* PBXTargetDependency */,
@@ -1910,7 +1911,6 @@
 				EA8B300A09333FFF00477F42 /* PBXTargetDependency */,
 				EA8B300E09333FFF00477F42 /* PBXTargetDependency */,
 				EA7CD179094AEE10008C738D /* PBXTargetDependency */,
-				EABE639C09CE9D1C00809063 /* PBXTargetDependency */,
 				EA290D5D09FE0D3500CAA1DA /* PBXTargetDependency */,
 				EA5A45E00A089A9D001EF27C /* PBXTargetDependency */,
 			);
@@ -2837,7 +2837,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `which svnversion`;\n   $SVN    = '/opt/darwinports/bin/svnversion' if ($SVN =~ m/no svnversion in/);\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy\t$version = $REV;\n\t$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\t\n$info =~ s/r0000/r$version/mg;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `which svnversion`;\n   $SVN    = '/opt/darwinports/bin/svnversion' if ($SVN =~ m/no svnversion in/);\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy\t$version = $REV;\n\t$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\t\n$info =~ s/0000/$version/mg;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
 		};
 /* End PBXShellScriptBuildPhase section */
 
