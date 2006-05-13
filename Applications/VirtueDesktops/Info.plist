@@ -53,14 +53,16 @@
 	<string>VirtueDesktops</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
+	<key>CFBundleDisplayedVersionString</key>
 	<string>0.52</string>
+	<key>CFBundleRevisionString</key>
+	<string>r0000</string>
 	<key>CFBundleSignature</key>
 	<string>virt</string>
 	<key>CFBundleVersionString</key>
-	<string>0.52</string>
+	<string>0.52r0000</string>
 	<key>CFBundleVersion</key>
-	<string>0000</string>
+	<string>0.52r0000</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
@@ -72,7 +74,7 @@
 	<key>NSPrincipalClass</key>
 	<string>VTApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://virtuedesktops.info/appcast/rss</string>
+	<string>http://www.virtuedesktops.info/appcast/rss</string>
 	<key>SmartCrashReports_CommentsTemplate</key>
 	<string>Please include your e-mail address if you wish to be contacted in regard to this crash.</string>
 	<key>SmartCrashReports_CompanyName</key>

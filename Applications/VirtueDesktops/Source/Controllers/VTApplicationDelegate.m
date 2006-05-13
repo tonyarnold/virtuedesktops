@@ -262,11 +262,11 @@ enum
 }
 
 - (NSString*) versionString {
-	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersionString"];
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayedVersionString"];
 }
 
 - (NSString*) revisionString {
-	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleRevisionString"];
 }
 
 #pragma mark -
