@@ -57,9 +57,9 @@
 		bundlePathIter = [[[NSFileManager defaultManager] directoryContentsAtPath: searchPath] objectEnumerator]; 
 		
 		while (currentBundlePath = [bundlePathIter nextObject]) {
-			if ([[currentBundlePath pathExtension] isEqualTo: @"plugin"] ||
-				[[currentBundlePath pathExtension] isEqualTo: @"scptd"]) 
-			[self loadPlugin: [searchPath stringByAppendingPathComponent: currentBundlePath]]; 
+			if ([[currentBundlePath pathExtension] isEqualTo: @"plugin"] || [[currentBundlePath pathExtension] isEqualTo: @"scptd"]) {
+				[self loadPlugin: [searchPath stringByAppendingPathComponent: currentBundlePath]]; 
+			}
 		}
 	}
 }
@@ -85,7 +85,7 @@
 		unsigned char path[1024];
 		FSRefMakePath(&foundRef, path, sizeof(path));
 		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
 	}
 	return applicationSupportFolder;
 }
@@ -101,7 +101,7 @@
 		unsigned char path[1024];
 		FSRefMakePath(&foundRef, path, sizeof(path));
 		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
 	}
 	return applicationSupportFolder;
 }
@@ -118,7 +118,7 @@
 - (void) ensurePluginSearchPaths {
 	// we will only handle the user specific paths here
 	NSString* rootPath	= [self applicationSupportFolder]; 
-	NSString* path			= [NSString stringWithFormat: @"%@/PlugIns", rootPath]; 
+	NSString* path			= [NSString stringWithFormat: @"%@", rootPath]; 
 	
 	// check if it exists and create it if necessary 
 	BOOL isDirectory = NO; 
@@ -140,8 +140,8 @@
 
 - (void) loadPlugin: (NSString*) path {
 	// load the bundle 
-	NSBundle* bundle = [NSBundle bundleWithPath: path];
-
+	NSBundle* bundle = [[NSBundle alloc] initWithPath: path];
+	
 	// create the wrapper instance 
 	VTPluginInstance* plugin = [[[VTPluginInstance alloc] initWithBundle: bundle] autorelease]; 
 	if (plugin == nil) 
@@ -149,7 +149,7 @@
 	
 	[plugin load]; 
 
-	// and attach 
+	// Éand attach 
 	[[VTPluginCollection sharedInstance] attachPlugin: plugin]; 
 }
 

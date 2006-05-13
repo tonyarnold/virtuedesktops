@@ -14,18 +14,18 @@
 #import <Cocoa/Cocoa.h>
 
 #pragma mark -
-#pragma mark Accessor keys 
-#define VTPluginInfoAuthor			@"author"
-#define VTPluginInfoName			@"name"
-#define VTPluginInfoDescription		@"description"
+#pragma mark Accessor keys
+#define VTPluginInfoAuthor					@"author"
+#define VTPluginInfoName						@"name"
+#define VTPluginInfoDescription			@"description"
 #define VTPluginInfoDescriptionPath	@"descriptionFile"
-#define VTPluginInfoIsHidden		@"hidden"
-#define VTPluginInfoType			@"type"
+#define VTPluginInfoIsHidden				@"hidden"
+#define VTPluginInfoType						@"type"
 
 #define VTPluginInfoTypeApplescript	@"VTApplescript"
-#define VTPluginInfoApplescript		@"source"
+#define VTPluginInfoApplescript			@"source"
 
-#define VTPluginInfoTypeClass		@"VTObjectiveC"
+#define VTPluginInfoTypeClass				@"VTObjectiveC"
 
 @interface NSBundle(VTPlugin)
 - (NSDictionary*) pluginInfoDictionary; 

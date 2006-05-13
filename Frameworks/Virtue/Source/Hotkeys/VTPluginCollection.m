@@ -71,7 +71,7 @@
 #pragma mark -
 - (void) attachPlugin: (VTPluginInstance*) plugin {
 	// fetch the identifier 
-	NSString* pluginIdentifier = [plugin pluginIdentifier]; 
+	NSString* pluginIdentifier = [plugin pluginIdentifier];
 	// and add it overwriting any other plugin we know by that name 
 	[mLoadedPlugins setObject: plugin forKey: pluginIdentifier]; 
 }

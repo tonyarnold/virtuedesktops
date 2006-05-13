@@ -143,68 +143,38 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 168871319;
-			PBXWorkspaceStateSaveDate = 168871319;
+			PBXPerProjectTemplateStateSaveDate = 169217884;
+			PBXWorkspaceStateSaveDate = 169217884;
 		};
 		perUserProjectItems = {
-			EA035BB909F8E2C600DCF53E = EA035BB909F8E2C600DCF53E /* PBXBookmark */;
-			EA035BBA09F8E2C600DCF53E = EA035BBA09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BBB09F8E2C600DCF53E = EA035BBB09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BBC09F8E2C600DCF53E = EA035BBC09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BBD09F8E2C600DCF53E = EA035BBD09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BBE09F8E2C600DCF53E = EA035BBE09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BBF09F8E2C600DCF53E = EA035BBF09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC009F8E2C600DCF53E = EA035BC009F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC109F8E2C600DCF53E = EA035BC109F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC309F8E2C600DCF53E = EA035BC309F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC409F8E2C600DCF53E = EA035BC409F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC609F8E2C600DCF53E = EA035BC609F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC709F8E2C600DCF53E = EA035BC709F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC809F8E2C600DCF53E = EA035BC809F8E2C600DCF53E /* PBXBookmark */;
-			EA035BC909F8E2C600DCF53E = EA035BC909F8E2C600DCF53E /* PBXBookmark */;
-			EA035BCA09F8E2C600DCF53E = EA035BCA09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BCB09F8E2C600DCF53E = EA035BCB09F8E2C600DCF53E /* PBXBookmark */;
-			EA035BCC09F8E2C600DCF53E = EA035BCC09F8E2C600DCF53E /* PBXBookmark */;
-			EA386B6D0A0CDE4A00BEFD3F = EA386B6D0A0CDE4A00BEFD3F /* PBXTextBookmark */;
-			EA386B6E0A0CDE4A00BEFD3F = EA386B6E0A0CDE4A00BEFD3F /* PBXTextBookmark */;
-			EA386B960A0CE77A00BEFD3F = EA386B960A0CE77A00BEFD3F /* PBXTextBookmark */;
-			EA386B980A0CE77A00BEFD3F = EA386B980A0CE77A00BEFD3F /* PBXTextBookmark */;
-			EA6867D10A10407C00046B21 = EA6867D10A10407C00046B21 /* PBXTextBookmark */;
-			EA73316F0A10C5AF00F78705 /* PBXTextBookmark */ = EA73316F0A10C5AF00F78705 /* PBXTextBookmark */;
-			EA7331770A10C77100F78705 /* PBXBookmark */ = EA7331770A10C77100F78705 /* PBXBookmark */;
-			EA7333DB0A10C79000F78705 /* PBXTextBookmark */ = EA7333DB0A10C79000F78705 /* PBXTextBookmark */;
-			EA7333DE0A10C7A600F78705 /* PBXTextBookmark */ = EA7333DE0A10C7A600F78705 /* PBXTextBookmark */;
-			EA7333E10A10C7A600F78705 /* PBXTextBookmark */ = EA7333E10A10C7A600F78705 /* PBXTextBookmark */;
-			EA7333E40A10C7A600F78705 /* PBXTextBookmark */ = EA7333E40A10C7A600F78705 /* PBXTextBookmark */;
-			EA7333EE0A10C7B100F78705 /* PBXTextBookmark */ = EA7333EE0A10C7B100F78705 /* PBXTextBookmark */;
-			EA7333EF0A10C7B100F78705 /* PBXTextBookmark */ = EA7333EF0A10C7B100F78705 /* PBXTextBookmark */;
-			EA7333F20A10C7B300F78705 /* PBXTextBookmark */ = EA7333F20A10C7B300F78705 /* PBXTextBookmark */;
-			EA7334F30A10C99900F78705 /* PBXTextBookmark */ = EA7334F30A10C99900F78705 /* PBXTextBookmark */;
-			EA7334F90A10CA4200F78705 /* PBXTextBookmark */ = EA7334F90A10CA4200F78705 /* PBXTextBookmark */;
-			EA7334FF0A10CA6300F78705 /* PBXTextBookmark */ = EA7334FF0A10CA6300F78705 /* PBXTextBookmark */;
-			EA7335020A10CA6300F78705 /* PBXTextBookmark */ = EA7335020A10CA6300F78705 /* PBXTextBookmark */;
-			EA7335070A10CAF100F78705 /* PBXTextBookmark */ = EA7335070A10CAF100F78705 /* PBXTextBookmark */;
-			EA7335090A10CAF100F78705 /* PBXTextBookmark */ = EA7335090A10CAF100F78705 /* PBXTextBookmark */;
-			EA73350C0A10CB0200F78705 /* PBXTextBookmark */ = EA73350C0A10CB0200F78705 /* PBXTextBookmark */;
-			EA73351A0A10CB2700F78705 /* PBXTextBookmark */ = EA73351A0A10CB2700F78705 /* PBXTextBookmark */;
-			EA73351C0A10CB2A00F78705 /* PBXTextBookmark */ = EA73351C0A10CB2A00F78705 /* PBXTextBookmark */;
-			EA73351F0A10CB4F00F78705 /* PBXTextBookmark */ = EA73351F0A10CB4F00F78705 /* PBXTextBookmark */;
-			EA7335310A10CB7F00F78705 /* PBXTextBookmark */ = EA7335310A10CB7F00F78705 /* PBXTextBookmark */;
-			EA7336290A10CBBF00F78705 /* PBXTextBookmark */ = EA7336290A10CBBF00F78705 /* PBXTextBookmark */;
-			EA73376D0A10CBF100F78705 /* PBXTextBookmark */ = EA73376D0A10CBF100F78705 /* PBXTextBookmark */;
-			EA73376E0A10CBF100F78705 /* PBXTextBookmark */ = EA73376E0A10CBF100F78705 /* PBXTextBookmark */;
-			EA73376F0A10CBF100F78705 /* PBXTextBookmark */ = EA73376F0A10CBF100F78705 /* PBXTextBookmark */;
-			EA7337710A10CBF600F78705 /* PBXTextBookmark */ = EA7337710A10CBF600F78705 /* PBXTextBookmark */;
-			EA7337720A10CBFC00F78705 /* PBXTextBookmark */ = EA7337720A10CBFC00F78705 /* PBXTextBookmark */;
-			EA7337750A10CCE400F78705 /* PBXTextBookmark */ = EA7337750A10CCE400F78705 /* PBXTextBookmark */;
-			EA7337780A10CCE600F78705 /* PBXTextBookmark */ = EA7337780A10CCE600F78705 /* PBXTextBookmark */;
-			EA73377C0A10CCEA00F78705 /* PBXTextBookmark */ = EA73377C0A10CCEA00F78705 /* PBXTextBookmark */;
-			EA73377F0A10CCEB00F78705 /* PBXTextBookmark */ = EA73377F0A10CCEB00F78705 /* PBXTextBookmark */;
-			EA8C851209F927700080DDB6 = EA8C851209F927700080DDB6 /* PBXBookmark */;
-			EA8C851409F927700080DDB6 = EA8C851409F927700080DDB6 /* PBXBookmark */;
-			EA94553B0A10961200541CA9 = EA94553B0A10961200541CA9 /* PBXTextBookmark */;
-			EAD78E630A0C661800233FC7 = EAD78E630A0C661800233FC7 /* PBXTextBookmark */;
-			EAD78E650A0C661800233FC7 = EAD78E650A0C661800233FC7 /* PBXTextBookmark */;
+			EA035BB909F8E2C600DCF53E /* PBXBookmark */ = EA035BB909F8E2C600DCF53E /* PBXBookmark */;
+			EA035BBA09F8E2C600DCF53E /* PBXBookmark */ = EA035BBA09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BBB09F8E2C600DCF53E /* PBXBookmark */ = EA035BBB09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BBC09F8E2C600DCF53E /* PBXBookmark */ = EA035BBC09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BBD09F8E2C600DCF53E /* PBXBookmark */ = EA035BBD09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BBE09F8E2C600DCF53E /* PBXBookmark */ = EA035BBE09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BBF09F8E2C600DCF53E /* PBXBookmark */ = EA035BBF09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC009F8E2C600DCF53E /* PBXBookmark */ = EA035BC009F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC109F8E2C600DCF53E /* PBXBookmark */ = EA035BC109F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC309F8E2C600DCF53E /* PBXBookmark */ = EA035BC309F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC409F8E2C600DCF53E /* PBXBookmark */ = EA035BC409F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC609F8E2C600DCF53E /* PBXBookmark */ = EA035BC609F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC709F8E2C600DCF53E /* PBXBookmark */ = EA035BC709F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC809F8E2C600DCF53E /* PBXBookmark */ = EA035BC809F8E2C600DCF53E /* PBXBookmark */;
+			EA035BC909F8E2C600DCF53E /* PBXBookmark */ = EA035BC909F8E2C600DCF53E /* PBXBookmark */;
+			EA035BCA09F8E2C600DCF53E /* PBXBookmark */ = EA035BCA09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BCB09F8E2C600DCF53E /* PBXBookmark */ = EA035BCB09F8E2C600DCF53E /* PBXBookmark */;
+			EA035BCC09F8E2C600DCF53E /* PBXBookmark */ = EA035BCC09F8E2C600DCF53E /* PBXBookmark */;
+			EA386B6D0A0CDE4A00BEFD3F /* PBXTextBookmark */ = EA386B6D0A0CDE4A00BEFD3F /* PBXTextBookmark */;
+			EA386B6E0A0CDE4A00BEFD3F /* PBXTextBookmark */ = EA386B6E0A0CDE4A00BEFD3F /* PBXTextBookmark */;
+			EA386B960A0CE77A00BEFD3F /* PBXTextBookmark */ = EA386B960A0CE77A00BEFD3F /* PBXTextBookmark */;
+			EA386B980A0CE77A00BEFD3F /* PBXTextBookmark */ = EA386B980A0CE77A00BEFD3F /* PBXTextBookmark */;
+			EA7337820A10CF5C00F78705 /* PBXTextBookmark */ = EA7337820A10CF5C00F78705 /* PBXTextBookmark */;
+			EA8C851209F927700080DDB6 /* PBXBookmark */ = EA8C851209F927700080DDB6 /* PBXBookmark */;
+			EA8C851409F927700080DDB6 /* PBXBookmark */ = EA8C851409F927700080DDB6 /* PBXBookmark */;
+			EA9740830A1619BB008077B8 /* PBXTextBookmark */ = EA9740830A1619BB008077B8 /* PBXTextBookmark */;
+			EAD78E630A0C661800233FC7 /* PBXTextBookmark */ = EAD78E630A0C661800233FC7 /* PBXTextBookmark */;
+			EAD78E650A0C661800233FC7 /* PBXTextBookmark */ = EAD78E650A0C661800233FC7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
@@ -283,10 +253,10 @@
 	};
 	E903F78E071DB56900A00F30 /* VTPluginController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 2544}}";
-			sepNavSelRange = "{2087, 19}";
-			sepNavVisRect = "{{0, 1008}, {1046, 628}}";
-			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1380, 2544}}";
+			sepNavSelRange = "{1590, 0}";
+			sepNavVisRect = "{{0, 651}, {1380, 634}}";
+			sepNavWindowFrame = "{{14, 127}, {1425, 748}}";
 		};
 	};
 	E903F7DD071DB65F00A00F30 /* VTPreferencesViewController.h */ = {
@@ -399,8 +369,8 @@
 	E9127209072A62C3006DC207 /* VTPluginPreferencesController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1157, 1264}}";
-			sepNavSelRange = "{1881, 0}";
-			sepNavVisRect = "{{0, 509}, {1157, 665}}";
+			sepNavSelRange = "{683, 16}";
+			sepNavVisRect = "{{0, 12}, {1157, 665}}";
 			sepNavWindowFrame = "{{38, 73}, {1202, 779}}";
 		};
 	};
@@ -834,314 +804,7 @@
 		objects = (
 		);
 	};
-	EA6867D10A10407C00046B21 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73316F0A10C5AF00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7331770A10C77100F78705 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */;
-	};
-	EA7333DB0A10C79000F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E913F34B076F733100072617 /* VTApplicationRunningCountTransformer.m */;
-		rLen = 32;
-		rLoc = 705;
-		rType = 0;
-	};
-	EA7333DE0A10C7A600F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7333E10A10C7A600F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E913F34B076F733100072617 /* VTApplicationRunningCountTransformer.m */;
-		name = count;
-		rLen = 5;
-		rLoc = 829;
-		rType = 0;
-		vrLen = 1127;
-		vrLoc = 250;
-	};
-	EA7333E40A10C7A600F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */;
-		name = "VTDesktopViewController.m: 143";
-		rLen = 0;
-		rLoc = 4477;
-		rType = 0;
-		vrLen = 1472;
-		vrLoc = 2420;
-	};
-	EA7333EE0A10C7B100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7333EF0A10C7B100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E903F72C071DB45D00A00F30 /* VTDesktopViewController.m */;
-		name = "VTDesktopViewController.m: 143";
-		rLen = 0;
-		rLoc = 4477;
-		rType = 0;
-		vrLen = 1472;
-		vrLoc = 2420;
-	};
-	EA7333F20A10C7B300F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7334F30A10C99900F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7334F80A10CA4200F78705 /* VTDesktopController.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = VTDesktopController.m;
-		path = /Users/tony/Documents/Development/Source/VirtueDesktops/frameworks/Virtue/Source/Controllers/VTDesktopController.m;
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1051, 11888}}";
-			sepNavSelRange = "{23903, 0}";
-			sepNavVisRect = "{{0, 0}, {0, 0}}";
-			sepNavWindowFrame = "{{15, 94}, {1202, 779}}";
-		};
-	};
-	EA7334F90A10CA4200F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "error: parse error before 'else'";
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		rLen = 1;
-		rLoc = 495;
-		rType = 1;
-	};
-	EA7334FF0A10CA6300F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7335020A10CA6300F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = applyDesktopBackground;
-		rLen = 22;
-		rLoc = 16325;
-		rType = 0;
-		vrLen = 1247;
-		vrLoc = 15558;
-	};
-	EA7335070A10CAF100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "error: parse error before 'else'";
-		fRef = EA7335080A10CAF100F78705 /* VTDesktopController.m */;
-		rLen = 1;
-		rLoc = 495;
-		rType = 1;
-	};
-	EA7335080A10CAF100F78705 /* VTDesktopController.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = VTDesktopController.m;
-		path = /Users/tony/Documents/Development/Source/VirtueDesktops/frameworks/Virtue/Source/Controllers/VTDesktopController.m;
-		sourceTree = "<absolute>";
-	};
-	EA7335090A10CAF100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 496";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73350C0A10CB0200F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 496";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73351A0A10CB2700F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73351C0A10CB2A00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73351F0A10CB4F00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7335310A10CB7F00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7336290A10CBBF00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73376D0A10CBF100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73376E0A10CBF100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73376F0A10CBF100F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 497";
-		rLen = 0;
-		rLoc = 16357;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7337710A10CBF600F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7337720A10CBFC00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E9363A6406FCDDCD00E354DB /* English */;
-		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
-		rLen = 240;
-		rLoc = 135;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7337750A10CCE400F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 731";
-		rLen = 0;
-		rLoc = 23903;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA7337780A10CCE600F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 731";
-		rLen = 0;
-		rLoc = 23903;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73377C0A10CCEA00F78705 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7334F80A10CA4200F78705 /* VTDesktopController.m */;
-		name = "VTDesktopController.m: 731";
-		rLen = 0;
-		rLoc = 23903;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EA73377F0A10CCEB00F78705 /* PBXTextBookmark */ = {
+	EA7337820A10CF5C00F78705 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E9363A6406FCDDCD00E354DB /* English */;
 		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";
@@ -1159,7 +822,7 @@
 		isa = PBXBookmark;
 		fRef = E9363AE606FCE64300E354DB /* imageMinus.png */;
 	};
-	EA94553B0A10961200541CA9 /* PBXTextBookmark */ = {
+	EA9740830A1619BB008077B8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E9363A6406FCDDCD00E354DB /* English */;
 		name = "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.";

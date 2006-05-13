@@ -21,7 +21,7 @@
 
 - (id) initWithBundle: (NSBundle*) bundle {
 	if (self = [super init]) {
-		ZEN_ASSIGN(mBundle, bundle); 
+		ZEN_ASSIGN(mBundle, bundle);
 		
 		return self; 
 	}
@@ -44,7 +44,6 @@
 		// read out names of applescripts 
 		NSString* script = [[mBundle pluginInfoDictionary] objectForKey: VTPluginInfoApplescript]; 
 		NSString* fullScriptPath = [mBundle pathForResource: script ofType: @"scpt" inDirectory: @"Scripts"]; 
-		
 		// ignore if not found 
 		if (fullScriptPath == nil) 
 			return; 
