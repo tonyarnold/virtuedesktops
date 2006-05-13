@@ -686,7 +686,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SYMROOT = "/Users/andym/Development/Build Products";
 			};
 			name = Debug;
 		};
@@ -702,7 +701,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SYMROOT = "/Users/andym/Development/Build Products";
 			};
 			name = Release;
 		};
