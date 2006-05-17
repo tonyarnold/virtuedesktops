@@ -31,8 +31,8 @@
 		E958EF9E06FDA227001DCB1E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E958EF9D06FDA220001DCB1E /* Carbon.framework */; };
 		E97C3AB8074DDA550025CD57 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AB6074DDA550025CD57 /* COPYING */; };
 		E97C3ABB074DDA690025CD57 /* GPL in Resources */ = {isa = PBXBuildFile; fileRef = E97C3AB9074DDA690025CD57 /* GPL */; };
-		EA290D6209FE0D6B00CAA1DA /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A35D509453CF100A860B2 /* libDockCommunicator.a */; };
 		EA7B999A0945A89A00503865 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E6DDD0924CCF300AABD4D /* Zen.framework */; };
+		EAB4E1AB0A1B58E000C88B4C /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A35D509453CF100A860B2 /* libDockCommunicator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -163,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA290D6209FE0D6B00CAA1DA /* libDockCommunicator.a in Frameworks */,
+				EAB4E1AB0A1B58E000C88B4C /* libDockCommunicator.a in Frameworks */,
 				E91AD80C0703571B00F69228 /* Foundation.framework in Frameworks */,
 				E958EF9E06FDA227001DCB1E /* Carbon.framework in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
@@ -348,10 +348,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAE822E10924A62C00239477 /* Build configuration list for PBXNativeTarget "Peony" */;
 			buildPhases = (
+				643F95850A120F5F001920DE /* ShellScript */,
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
 				8DC2EF560486A6940098B216 /* Frameworks */,
+				EAB4E1B50A1B590800C88B4C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -447,6 +449,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAB4E1B50A1B590800C88B4C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORKS=\\\"Zen\\\"\nLIBRARIES=\\\"DockCommunicator\\\"\n\n. ../../Virtue.build.command\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		643F95850A120F5F001920DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORKS=\"Zen\"\nLIBRARIES=\"DockCommunicator\"\n\n. ../../Virtue.build.command\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {

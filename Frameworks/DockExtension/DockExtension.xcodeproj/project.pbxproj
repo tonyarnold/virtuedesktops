@@ -234,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAF8CB4609077543003D54B1 /* Build configuration list for PBXNativeTarget "DockExtension" */;
 			buildPhases = (
+				643F95720A120B9E001920DE /* ShellScript */,
 				EA3B792D09BEC4390072151A /* Copy Bundle Frameworks */,
 				8D01CCC70486CAD60068D4B7 /* Headers */,
 				8D01CCC90486CAD60068D4B7 /* Resources */,
@@ -325,6 +326,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		643F95720A120B9E001920DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBRARIES=\"DockCommunicator\"\n\n. ../../Virtue.build.command\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D01CCCB0486CAD60068D4B7 /* Sources */ = {
