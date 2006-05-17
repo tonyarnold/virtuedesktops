@@ -1,8 +1,0 @@
-{
-    IBClasses = (
-        {CLASS = AppController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {CLASS = HUDWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
-    ); 
-    IBVersion = 1; 
-}
