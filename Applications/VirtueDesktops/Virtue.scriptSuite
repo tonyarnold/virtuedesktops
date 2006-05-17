@@ -19,7 +19,7 @@
 					<key>ReadOnly</key>
 					<string>YES</string>
 					<key>Type</key>
-					<string>String</string>
+					<string>NSString</string>
 				</dict>
 			</dict>
 			<key>DefaultSubcontainerAttribute</key>
@@ -184,7 +184,7 @@
 					<key>ReadOnly</key>
 					<string>NO</string>
 					<key>Type</key>
-					<string>Color</string>
+					<string>NSColor</string>
 				</dict>
 				<key>size</key>
 				<dict>
