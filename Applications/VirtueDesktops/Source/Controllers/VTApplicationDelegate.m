@@ -75,11 +75,12 @@ enum
 		mStatusItem = nil;
 		mStatusItemMenuDesktopNeedsUpdate = YES;
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
-
+		[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 		// Let's make sure that Unsanity's Smart Crash Reports is installed before we begin
 		Boolean authenticationWillBeRequired = NO;
-		if (UnsanitySCR_CanInstall(&authenticationWillBeRequired))
+		if (UnsanitySCR_CanInstall(&authenticationWillBeRequired)) {
 			UnsanitySCR_Install(authenticationWillBeRequired ? kUnsanitySCR_GlobalInstall : 0);
+		}
 
 		return self;
 	}
@@ -294,12 +295,13 @@ enum
 }
 
 - (IBAction) showHelp: (id) sender {
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 	[[NSApplication sharedApplication] showHelp: sender];
 }
 
 #pragma mark -
 - (IBAction) showDesktopInspector: (id) sender {
-	//[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 	[self showDesktopInspectorForDesktop: [[VTDesktopController sharedInstance] activeDesktop]];
 }
 
