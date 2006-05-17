@@ -3,7 +3,7 @@
 //  Sparkle
 //
 //  Created by Andy Matuschak on 3/12/06.
-//  Copyright __MyCompanyName__ 2006. All rights reserved.
+//  Copyright Andy Matuschak 2006. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

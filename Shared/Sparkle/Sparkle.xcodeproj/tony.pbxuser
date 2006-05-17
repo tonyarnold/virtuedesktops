@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeBuildStyle = 014CEA440018CDF011CA2923 /* Debug */;
 		activeExecutable = EA9744DF0A161C9D008077B8 /* Sparkle Test App */;
 		activeTarget = 8DC2EF4F0486A6940098B216 /* Sparkle */;
@@ -15,9 +15,9 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					280,
+					243,
 					20,
-					48,
+					48.1626,
 					43,
 					43,
 					20,
@@ -32,30 +32,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
-				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
-				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
-				PBXFileTableDataSourceColumnWidthsKey = (
-					20,
-					200,
-					100,
-					20,
-					48.1626,
-					43,
-					43,
-				);
-				PBXFileTableDataSourceColumnsKey = (
-					PBXFileDataSource_FiletypeID,
-					PBXFileDataSource_Filename_ColumnID,
-					PBXTargetDataSource_PrimaryAttribute,
-					PBXFileDataSource_Built_ColumnID,
-					PBXFileDataSource_ObjectSize_ColumnID,
-					PBXFileDataSource_Errors_ColumnID,
-					PBXFileDataSource_Warnings_ColumnID,
-				);
-			};
-			PBXPerProjectTemplateStateSaveDate = 169224587;
-			PBXWorkspaceStateSaveDate = 169224587;
+			PBXPerProjectTemplateStateSaveDate = 169221277;
+			PBXWorkspaceStateSaveDate = 169221277;
 		};
 		sourceControlManager = EA9744E40A161CBB008077B8 /* Source Control */;
 		userBuildSettings = {

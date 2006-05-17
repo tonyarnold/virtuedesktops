@@ -13,5 +13,7 @@ NSString *SUHostAppName();
 NSString *SUHostAppVersion();
 NSString *SUHostAppVersionString();
 
+NSComparisonResult SUStandardVersionComparison(NSString * versionA, NSString * versionB);
+
 // If running make localizable-strings for genstrings, ignore the error on this line.
-#define SULocalizedString(key, comment) NSLocalizedStringFromTable(key, @"Sparkle", comment)
+NSString *SULocalizedString(NSString *key, NSString *comment);
