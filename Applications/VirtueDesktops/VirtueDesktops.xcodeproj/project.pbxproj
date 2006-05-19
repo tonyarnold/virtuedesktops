@@ -1468,7 +1468,7 @@
 				E9363ADE06FCE64300E354DB /* images */,
 			);
 			name = Data;
-			path = data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		E9363ADC06FCE64300E354DB /* icons */ = {
