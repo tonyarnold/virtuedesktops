@@ -136,7 +136,7 @@
 		E93637DC06FCCC2200E354DB /* PNWindowList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindowList.m; path = Source/PNWindowList.m; sourceTree = "<group>"; };
 		E93637DD06FCCC2200E354DB /* PNWindowPool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PNWindowPool.h; path = Source/PNWindowPool.h; sourceTree = "<group>"; };
 		E93637DE06FCCC2200E354DB /* PNWindowPool.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PNWindowPool.m; path = Source/PNWindowPool.m; sourceTree = "<group>"; };
-		E936395706FCD31A00E354DB /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../../shared/CGS/CGSPrivate.h; sourceTree = SOURCE_ROOT; };
+		E936395706FCD31A00E354DB /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../../Shared/CGS/CGSPrivate.h; sourceTree = "<group>"; };
 		E9572C41070B32810053E494 /* PNDesktopScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNDesktopScripting.h; path = Source/Scripting/PNDesktopScripting.h; sourceTree = "<group>"; };
 		E9572C42070B32810053E494 /* PNDesktopScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNDesktopScripting.m; path = Source/Scripting/PNDesktopScripting.m; sourceTree = "<group>"; };
 		E958EF9D06FDA220001DCB1E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -451,22 +451,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EAB4E1B50A1B590800C88B4C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FRAMEWORKS=\\\"Zen\\\"\nLIBRARIES=\\\"DockCommunicator\\\"\n\n. ../../Virtue.build.command\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
 		643F95850A120F5F001920DE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +463,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "FRAMEWORKS=\"Zen\"\nLIBRARIES=\"DockCommunicator\"\n\n. ../../Virtue.build.command\n";
+		};
+		EAB4E1B50A1B590800C88B4C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORKS=\\\"Zen\\\"\nLIBRARIES=\\\"DockCommunicator\\\"\n\n. ../../Virtue.build.command\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

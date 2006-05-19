@@ -87,7 +87,7 @@
 		E936385506FCCD7500E354DB /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DEEventHandlers.h; path = Source/DEEventHandlers.h; sourceTree = "<group>"; };
 		E936385706FCCD7500E354DB /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = main.c; path = Source/main.c; sourceTree = "<group>"; };
 		E936385806FCCD7500E354DB /* main.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = main.h; path = Source/main.h; sourceTree = "<group>"; };
-		E936393106FCD18800E354DB /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../../shared/CGS/CGSPrivate.h; sourceTree = SOURCE_ROOT; };
+		E936393106FCD18800E354DB /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../../Shared/CGS/CGSPrivate.h; sourceTree = "<group>"; };
 		E97C3ACA074DDB090025CD57 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/COPYING.rtf; sourceTree = "<group>"; };
 		EA6CB5CB0924CF38004AC51D /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EA7A357909453BD000A860B2 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECCgsExt.h; sourceTree = "<group>"; };

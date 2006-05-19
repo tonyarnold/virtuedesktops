@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <peony/Peony.h> 
+#import <Peony/Peony.h> 
 
 
 @interface VTNotificationBezelView : NSView {
