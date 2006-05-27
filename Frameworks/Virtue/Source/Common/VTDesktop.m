@@ -17,11 +17,12 @@
 #import "NSColorString.h" 
 #import <Zen/Zen.h> 
 
-#define kVtCodingName									@"name"
-#define kVtCodingBackgroundImage			@"backgroundImage"
-#define kVtCodingDecoration						@"decoration" 
-#define kVtCodingUUID									@"UUID"
-#define kVtCodingColorLabel						@"colorLabel"
+#define kVtCodingName											@"name"
+#define kVtCodingBackgroundImage					@"backgroundImage"
+#define kVtCodingDefaultBackgroundImage		@"usesDefaultBackgroundImage"
+#define kVtCodingDecoration								@"decoration" 
+#define kVtCodingUUID											@"UUID"
+#define kVtCodingColorLabel								@"colorLabel"
 
 #pragma mark -
 @implementation VTDesktop
@@ -40,9 +41,10 @@
 #pragma mark -
 - (id) initWithName: (NSString*) name identifier: (int) identifier {
 	if (self = [super initWithId: identifier andName: name]) {
-		mDesktopBackgroundImagePath = nil;
-		mDecoration									= [[VTDesktopDecoration alloc] initWithDesktop: self]; 
-		mUUID												= [[ZNUUID uuid] retain];
+		mDesktopBackgroundImagePath					= nil;
+		mDefaultDesktopBackgroundImagePath	= nil;
+		mDecoration													= [[VTDesktopDecoration alloc] initWithDesktop: self]; 
+		mUUID																= [[ZNUUID uuid] retain];
 		
 		return self; 
 	}
@@ -64,10 +66,14 @@
 
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super init]) {
-		[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
+		if ([coder decodeBoolForKey: kVtCodingDefaultBackgroundImage] == FALSE)
+			[self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
+		else
+			[self setDesktopBackground: mDefaultDesktopBackgroundImagePath];
+		
 		[self setName: [coder decodeObjectForKey: kVtCodingName]];
 		mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain];
-
+		
 		return self; 
 	}
 	
@@ -75,18 +81,19 @@
 }
 
 - (void) encodeWithCoder: (NSCoder*) coder {
+	[coder encodeBool: [self showsDefaultBackground] forKey: kVtCodingDefaultBackgroundImage];
 	[coder encodeObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
 	[coder encodeObject: mDecoration forKey: kVtCodingDecoration];
 	[coder encodeObject: [self name] forKey: kVtCodingName];
 }
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
-	if (mDesktopBackgroundImagePath && [mDesktopBackgroundImagePath length] > 1 && mDesktopBackgroundImagePath != mDefaultDesktopBackgroundImagePath)
+	if ([self showsDefaultBackground] == FALSE && [self showsBackground])
 		[dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
-	
+		
+	[dictionary setObject: [NSNumber numberWithBool: [self showsDefaultBackground]] forKey: kVtCodingDefaultBackgroundImage];
 	[dictionary setObject: [self name] forKey: kVtCodingName];
 	[dictionary setObject: mUUID forKey: kVtCodingUUID]; 
-	
 	
 	if (mColorLabel)
 		[dictionary setObject: [mColorLabel stringValue] forKey: kVtCodingColorLabel]; 
@@ -97,7 +104,13 @@
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-	mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
+	NSNumber *mUseDefaultBG = [[dictionary objectForKey: kVtCodingDefaultBackgroundImage] copy];
+	if ([mUseDefaultBG boolValue] == YES) {
+		mDesktopBackgroundImagePath = [self defaultDesktopBackgroundPath];
+	} else {
+		mDesktopBackgroundImagePath = [[dictionary objectForKey: kVtCodingBackgroundImage] copy];
+	}
+	
 	mUUID												= [[dictionary objectForKey: kVtCodingUUID] copy];
 	NSColor* colorData					= [NSColor colorWithString: [dictionary objectForKey: kVtCodingColorLabel]];
 	
@@ -124,9 +137,6 @@
 }
 
 - (NSString*) desktopBackground {
-	if (mDesktopBackgroundImagePath == mDefaultDesktopBackgroundImagePath) {
-		return nil;
-	}
 	return mDesktopBackgroundImagePath;
 }
 
@@ -144,7 +154,11 @@
 }
 
 - (BOOL) showsBackground {
-	return (mDesktopBackgroundImagePath != nil && [mDesktopBackgroundImagePath length] > 1);
+	return (nil != mDesktopBackgroundImagePath && [mDesktopBackgroundImagePath length] > 1);
+}
+
+- (BOOL) showsDefaultBackground {
+	return [mDesktopBackgroundImagePath isEqualToString: mDefaultDesktopBackgroundImagePath];
 }
 
 #pragma mark -

@@ -414,8 +414,7 @@
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// and apply settings of active desktop 
-	mExpectingBackgroundChange = YES;
-	[activeDesktop applyDesktopBackground];
+	[self applyDesktopBackground];
 }
 
 #pragma mark -
@@ -513,18 +512,8 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	if ([keyPath isEqualToString: @"showsBackground"] || [keyPath isEqualToString: @"desktopBackground"]) {
-		 
-		// toggle background on and off 
-		if ([[self activeDesktop] showsBackground]) 
-		{
-			mExpectingBackgroundChange = YES;
-			[[self activeDesktop] applyDesktopBackground]; 
-		}
-		else 
-		{
-			mExpectingBackgroundChange = NO;
-			[[self activeDesktop] applyDefaultDesktopBackground]; 
-		}
+		
+		[self applyDesktopBackground];
 	}
 }
 
@@ -716,14 +705,13 @@
 }
 
 - (void) applyDesktopBackground {
-	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
-	mExpectingBackgroundChange = YES; 
-	
-	if ([desktop showsBackground]) {
+	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 	
+		
+	if ([desktop showsBackground] && [desktop showsDefaultBackground] == FALSE) {
+		mExpectingBackgroundChange = YES;
 		[desktop applyDesktopBackground]; 
-	}
-	else 
-	{
+	} else {
+		mExpectingBackgroundChange = NO;
 		[desktop applyDefaultDesktopBackground]; 
 	}
 }

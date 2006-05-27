@@ -19,9 +19,9 @@
 
 @interface VTDesktop : PNDesktop<NSCoding, VTCoding> {
 	// attributes 
-	NSString*							mDesktopBackgroundImagePath; 
-	NSString*							mDefaultDesktopBackgroundImagePath; 
-	NSColor*							mColorLabel; 
+	NSString*							mDesktopBackgroundImagePath;
+	NSString*							mDefaultDesktopBackgroundImagePath;
+	NSColor*							mColorLabel;
 	// decoration 
 	VTDesktopDecoration*	mDecoration; 
 	// unique identifier 
@@ -45,6 +45,7 @@
 - (void) setDefaultDesktopBackgroundPath: (NSString*) path;
 - (NSString*) defaultDesktopBackgroundPath;
 - (BOOL) showsBackground;
+- (BOOL) showsDefaultBackground;
 
 #pragma mark -
 - (void) setColorLabel: (NSColor*) color; 
