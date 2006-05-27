@@ -77,6 +77,24 @@
 									 name: VTBackgroundHelperDesktopChangedName
 								 object: VTBackgroundHelperDesktopChangedObject]; 
 		
+/* *  
+	 * Expose SwitchTo(Next|Prev)Workspace to the DistributedNotificationCenter. 
+	 * 
+	 * Initial patch to archive something similar to 
+	 * [http://blog.medallia.com/2006/05/smacbook_pro.html] 
+	 */ 
+// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
+																										selector: @selector(onNextEastDesktopRequest:) 
+																												name: @"SwitchToNextWorkspace" 
+																											object: nil]; 
+
+// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
+	[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
+																											selector: @selector(onNextWestDesktopRequest:) 
+																													name: @"SwitchToPrevWorkspace" 
+																												object: nil];
+		
 		// create timer loop to update desktops 
 		[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 		
@@ -434,6 +452,16 @@
 	[_desktops makeObjectsPerformSelector: @selector(updateDesktop)]; 
 	[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 }
+
+// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
+- (void) onNextEastDesktopRequest: (NSNotification*) notification { 
+	[self activateDesktopInDirection: kVtDirectionEast]; 
+} 
+	 
+// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
+- (void) onNextWestDesktopRequest: (NSNotification*) notification { 
+	[self activateDesktopInDirection: kVtDirectionWest]; 
+} 
 
 - (void) onDesktopWillChange: (NSNotification*) notification {
 	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
