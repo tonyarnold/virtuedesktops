@@ -124,9 +124,18 @@ enum
 	// This registers us to recieve NSWorkspace notifications, even though we are have LSUIElement enabled
 	[NSApplication sharedApplication];
 
-	// Inject dock extension code into the Dock process
-	dec_inject_code();
+	
+	int dockCodeIsInjected;
+	int dockCodeMajorVersion;
+	int dockCodeMinorVersion;
+	dec_info(&dockCodeIsInjected,&dockCodeMajorVersion,&dockCodeMinorVersion);
+	
+	NSLog(@"Dock code (version %i.%i) is injected: %i", dockCodeMajorVersion, dockCodeMinorVersion, dockCodeIsInjected);
+	// Inject dock extension code into the Dock process if it hasn't been already
+	if (dockCodeIsInjected != 1)
+		dec_inject_code();
 
+	// @TODO@ Remove this in 0.7
 	// Migrate old sourceforge identified preferences to new plist
 	[self migrateOldPreferences];
 
@@ -288,10 +297,7 @@ enum
 
 - (IBAction) showPreferences: (id) sender {
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
-	NSWindow *prefWindow = [mPreferenceController window];
 	[mPreferenceController showWindow: self];
-
-
 }
 
 - (IBAction) showHelp: (id) sender {
@@ -307,8 +313,6 @@ enum
 
 - (IBAction) showApplicationInspector: (id) sender {
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
-
-	[mApplicationInspector window];
 	[mApplicationInspector showWindow: sender];
 }
 
@@ -318,7 +322,7 @@ enum
 
 #pragma mark -
 - (IBAction) sendFeedback: (id) sender {
-	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:tony@tonyarnold.com?subject=VirtueDesktops%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:tony@tonyarnold.com?subject=VirtueDesktops%%20Feedback%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
 }
 
 - (IBAction) showWebsite: (id) sender {
@@ -362,7 +366,7 @@ enum
 	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueWarnBeforeQuitting] == YES && mConfirmQuitOverridden == NO) {
 		[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 
-		// Display an alert to make sure the user knows what he is doing
+		// Display an alert to make sure the user knows what they are doing
 		NSAlert* alertWindow = [[NSAlert alloc] init];
 
 		// Set-up
