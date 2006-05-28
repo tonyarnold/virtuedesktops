@@ -1,15 +1,13 @@
 /******************************************************************************
-* 
-* Peony.Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+ * 
+ * DockExtension bundle
+ *
+ * Copyright 2004, Thomas Staller playback@users.sourceforge.net
+ * Copyright 2006, Tony Arnold tony@tonyarnold.com
+ *
+ * See COPYING for licensing details
+ * 
+ *****************************************************************************/ 
 
 #ifndef __VT_DE_EVENT_HANDLERS_H__
 #define __VT_DE_EVENT_HANDLERS_H__ 
