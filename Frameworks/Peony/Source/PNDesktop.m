@@ -426,29 +426,21 @@
 	}
 	
 
-// copy the current list of windows for cross checking
+	// Copy the current list of windows for cross checking
 	NSMutableArray* previousWindows = [NSMutableArray arrayWithArray: mWindows];
 
 	int i									= 0;
 	int currentListIndex	= 0;
 
-// heya, now we can start synchronizing.. we will iterate over all windows and
-// check if we already know about them. If we find a window we do not know, we
-// will add it. we will also remove windows we found from the copy.
+	// heya, now we can start synchronizing.. we will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
 	for ( i = 0; i < iNumberOfWindows; i++ ) {
-// get entry from list of fetched windows
+		// get entry from list of fetched windows
 		CGSWindow iWindowId = ((int*)[oWindows mutableBytes])[i];
 
-// get the window proxy
+		// get the window proxy
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
 
-// if the window is special, we do not include it in our list
-		if ([window isSpecial]) {
-			[window release];
-			continue;
-		}
-
-// ignore menus
+		// ignore menus
 		if (([window level] == NSPopUpMenuWindowLevel) ||
 				([window level] == NSSubmenuWindowLevel) ||
 				([window level] == NSMainMenuWindowLevel)) {
@@ -458,6 +450,7 @@
 
 		// get application container
 		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];
+		
 		// if the application container does not contain a reference to the
 		// application, create a new one
 		if (application == nil) {
@@ -469,6 +462,14 @@
 			// and release application
 			[application release];
 		}
+		
+		// if the window is special, we do not include it in our list
+		if ([window isSpecial]) {
+			[window release];
+			continue;
+		}
+		
+		
 
 		// check if the window is in our list and add it if it isn't
 		if ([mWindows containsObject: window] == NO) {
@@ -505,8 +506,7 @@
 	PNWindow*				stickyWindow			= nil;
 
 	while (stickyWindow = [stickyIter nextObject]) {
-		// we take the chance and remove all the sticky windows that are no longer
-		// valid
+		// we take the chance and remove all the sticky windows that are no longer valid
 		if ([stickyWindow isValid] == NO)
 		{
 			// remove from the sticky window list as this window seems to be gone
@@ -555,15 +555,14 @@
 		}
 	}
 
-	// all windows that are still left in the copied window list
-	// were not touched by the loop above and are no longer on
-	// the desktop, so we will remove them from the list of windows
+	// All windows that are still left in the copied window list were not touched by the loop above and are no longer on the desktop, so we will remove them from the list of windows
 	NSEnumerator*		previousWindowsIter = [previousWindows objectEnumerator];
 	PNWindow*				checkWindow = nil;
 
 	while (checkWindow = [previousWindowsIter nextObject]) {
 		// remove...
 		didChangeWindows = YES;
+		
 
 		[mWindows removeObject: checkWindow];
 

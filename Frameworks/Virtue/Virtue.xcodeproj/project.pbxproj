@@ -102,53 +102,6 @@
 		EAF8CCE4090779C5003D54B1 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8CCE3090779C5003D54B1 /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		014CEA440018CDF011CA2923 /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		014CEA450018CDF011CA2923 /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-		E912457C073038E400BD28CD /* Development Private Framework */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				ZERO_LINK = YES;
-			};
-			name = "Development Private Framework";
-		};
-		E98B7FD507495FCA00E8CE5C /* Deployment Private Framework */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				ZERO_LINK = NO;
-			};
-			name = "Deployment Private Framework";
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
 		EAF8C83F09076898003D54B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -651,24 +604,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					../Zen/build,
-					../Peony/build,
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Virtue_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_STYLE = DYNAMIC;
-				PRODUCT_NAME = Virtue;
-				WRAPPER_EXTENSION = framework;
-			};
 			dependencies = (
 				EAF8C84A090768BA003D54B1 /* PBXTargetDependency */,
 				EAF8C84C090768BA003D54B1 /* PBXTargetDependency */,
@@ -685,14 +620,6 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EA609CB5090667D2003BD20D /* Build configuration list for PBXProject "Virtue" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				014CEA440018CDF011CA2923 /* Development */,
-				E912457C073038E400BD28CD /* Development Private Framework */,
-				014CEA450018CDF011CA2923 /* Deployment */,
-				E98B7FD507495FCA00E8CE5C /* Deployment Private Framework */,
-			);
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* Virtue */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;

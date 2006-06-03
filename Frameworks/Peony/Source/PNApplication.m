@@ -1,11 +1,8 @@
 /******************************************************************************
-* 
-* Virtue 
+* Peony framework
 *
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2006, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -140,14 +137,11 @@
 }
 
 /**
- * @todo	Move this method from separate window handling to handling a 
- *			window list, which should be much more effecient
+ * @todo	Move this method from separate window handling to handling a window list, which should be much more effecient
  *
  */ 
 - (void) setDesktop: (PNDesktop*) desktop {
-	// We will not modify the desktop we belong to but will just move 
-	// all the windows we know about to the passed desktop, a new application
-	// instance will be created there... 
+	// We will not modify the desktop we belong to but will just move all the windows we know about to the passed desktop, a new application instance will be created there... 
 	
 	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] init];
 	NSEnumerator*   windowIter					= [mWindows objectEnumerator];

@@ -17,7 +17,7 @@
 
 @interface VTDecorationPrimitiveTextInspector : VTInspector {
 	// outlets 
-	IBOutlet NSTextField*	mFontTextField; 
+	IBOutlet NSTextField*	mTextField; 
 	// ivars 
 	NSResponder*			mPreviousResponder; 
 }
@@ -29,6 +29,5 @@
 #pragma mark -
 #pragma mark Actions 
 - (IBAction) showFontPanel: (id) sender; 
-
 
 @end

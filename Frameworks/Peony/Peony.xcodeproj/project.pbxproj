@@ -35,53 +35,6 @@
 		EAB4E1AB0A1B58E000C88B4C /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A35D509453CF100A860B2 /* libDockCommunicator.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		014CEA440018CDF011CA2923 /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		014CEA450018CDF011CA2923 /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-		E958EDAB06FD88E3001DCB1E /* Development Private Framework */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				ZERO_LINK = YES;
-			};
-			name = "Development Private Framework";
-		};
-		E9D2B6570701F113008879E0 /* Deployment Private Framework */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				ZERO_LINK = NO;
-			};
-			name = "Deployment Private Framework";
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
 		EA1E6DDC0924CCF300AABD4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -357,25 +310,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					../decomm/build,
-					../Zen/build,
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = peony_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../decomm/includes;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = ../decomm/build;
-				LIBRARY_STYLE = DYNAMIC;
-				PRODUCT_NAME = Peony;
-				WRAPPER_EXTENSION = framework;
-			};
 			dependencies = (
 				EA87027B09CD51820053D7B0 /* PBXTargetDependency */,
 				EA290E7709FE0D7800CAA1DA /* PBXTargetDependency */,
@@ -392,14 +326,6 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAE822E70924A62C00239477 /* Build configuration list for PBXProject "Peony" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				014CEA440018CDF011CA2923 /* Development */,
-				E958EDAB06FD88E3001DCB1E /* Development Private Framework */,
-				014CEA450018CDF011CA2923 /* Deployment */,
-				E9D2B6570701F113008879E0 /* Deployment Private Framework */,
-			);
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* peony */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;

@@ -200,19 +200,19 @@ OSErr dec_kill_dock()
 {
 	mach_error_t oError = err_none;
 	
-	/* find the dock process by its signature   */
+	/* Find the Dock process by its signature   */
 	ProcessSerialNumber oSerial;
 	oError = dec_mac_to_mach_error(dec_find_process_by_signature('APPL', 'dock', &oSerial));
 	if (oError)
 		return oError; 
 	
-	/* convert PSN to PID. */
+	/* Convert PSN to PID. */
 	pid_t oDockPID;
 	oError = dec_mac_to_mach_error(GetProcessPID(&oSerial, &oDockPID));
 	if (oError)
 		return oError; 
 	
-	/* die dock, die... */
+	/* Die Dock, die... */
 	kill(oDockPID, SIGKILL);
 	
 	return oError; 

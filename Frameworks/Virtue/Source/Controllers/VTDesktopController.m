@@ -1,15 +1,13 @@
 /******************************************************************************
-* 
-* Virtue 
 *
-* A desktop extension for MacOS X
+* Virtue framework
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2006, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
-* 
-*****************************************************************************/ 
+*
+*****************************************************************************/
 
 #import "VTDesktopController.h"
 #import "VTDesktopDecorationController.h" 
@@ -434,16 +432,16 @@
 
 - (void) onDesktopBackgroundChanged: (NSNotification*) notification {	
 	// ignore if we expected it because we triggered the change 
-	if (mExpectingBackgroundChange) {
-		mExpectingBackgroundChange = NO; 
+	if (mExpectingBackgroundChange == YES) {
+		mExpectingBackgroundChange = NO;
 		return; 
 	}
 	
 	
-	// otherwise get the background picture and set it as the default 
-	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
+	// otherwise get the background picture and set it as the default
+	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]);
 	
-	// and propagate to existing desktops 
+	// and propagate to existing desktops
 	[[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundPath:) withObject: mDefaultDesktopBackgroundPath]; 
 }
 
@@ -487,7 +485,7 @@
 	else {
 		mNeedDesktopBackgroundUpdate = NO; 
 	}
-		
+  		
 	// unbind desktop 
 	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
 }
@@ -706,14 +704,9 @@
 
 - (void) applyDesktopBackground {
 	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 	
-		
-	if ([desktop showsBackground] && [desktop showsDefaultBackground] == FALSE) {
-		mExpectingBackgroundChange = YES;
-		[desktop applyDesktopBackground]; 
-	} else {
-		mExpectingBackgroundChange = NO;
-		[desktop applyDefaultDesktopBackground]; 
-	}
+  mExpectingBackgroundChange = YES;
+
+  [desktop applyDesktopBackground]; 
 }
 
 - (NSString*) applicationSupportFolder {

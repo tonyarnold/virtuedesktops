@@ -16,13 +16,11 @@
 
 
 @interface VTDecorationPrimitiveText : VTDecorationPrimitive {
-	NSString*	mText; 
-	// primitives 
-	NSFont*		mFont; 
-	NSColor*	mColor;
-	BOOL		mDisplaysShadow; 
-	// text attributes 
-	NSMutableDictionary* mTextAttributes; 
+	NSString*             mText;
+	NSFont*               mFont; 
+  NSMutableDictionary*  mFontAttributes;
+  NSShadow*             mFontShadow;
+  NSColor*              mFontColor;
 }
 
 #pragma mark -
@@ -42,14 +40,17 @@
 - (void) setFont: (NSFont*) font; 
 
 #pragma mark -
-- (float) fontSize; 
+- (NSDictionary*) fontAttributes;
 
 #pragma mark -
-- (NSColor*) color; 
-- (void) setColor: (NSColor*) color; 
+- (float) fontSize;
 
 #pragma mark -
-- (BOOL) displaysShadow; 
-- (void) setDisplaysShadow: (BOOL) flag; 
+- (NSShadow*) fontShadow;
+- (void) setFontShadow: (NSShadow*) fontShadow;
+
+#pragma mark -
+- (NSColor*) fontColor;
+- (void) setFontColor: (NSColor*) fontColor;
 
 @end

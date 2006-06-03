@@ -36,32 +36,33 @@
 
 - (id) init {
 	if (self = [super init]) {
-		// create the windows dictionary and update it immediately 
-		mWindows							= [[NSMutableDictionary dictionary] retain]; 
-		mDecorations					= [[NSMutableDictionary dictionary] retain]; 
+		// Create the window dictionary and update it immediately 
+		mWindows							= [[NSMutableDictionary dictionary] retain];
+		mDecorations					= [[NSMutableDictionary dictionary] retain];
 		mDesktopWindowLevel		= kCGMinimumWindowLevel + 25;
 		
-		// we are observing desktop changes, as we have to work around a nice 
-		// feature of the apple window manager... 
-		[[NSNotificationCenter defaultCenter]
-			addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
-		[[NSNotificationCenter defaultCenter]
-			addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
+		// We are observing desktop changes, see 'onDesktopWillChange' for more information on why 
+		[[NSNotificationCenter defaultCenter] addObserver: self 
+                                             selector: @selector(onDesktopWillChange:) 
+                                                 name: kPnOnDesktopWillActivate 
+                                               object: nil];
+    
+		[[NSNotificationCenter defaultCenter] addObserver: self 
+                                             selector: @selector(onDesktopDidChange:) 
+                                                 name: kPnOnDesktopDidActivate 
+                                               object: nil];
 
-		return self; 
+		return self;
 	}
 	
-	return nil; 
+	return nil;
 }
 
 - (void) dealloc
 {
-	// get rid of windows 
-	ZEN_RELEASE(mWindows); 
-	ZEN_RELEASE(mDecorations); 
-	
-	// super...
-	[super dealloc]; 
+	ZEN_RELEASE(mWindows);
+	ZEN_RELEASE(mDecorations);
+	[super dealloc];
 }
 
 + (VTDesktopDecorationController*) sharedInstance {
@@ -100,34 +101,22 @@
 #pragma mark -
 #pragma mark Operations 
 
-- (void) hide {
-}
+- (void) hide {}
 
-- (void) show {
-}
+- (void) show {}
  
 - (void) attachDecoration: (VTDesktopDecoration*) decoration {
 	VTDesktop* desktop = [decoration desktop]; 
-	
-	// create the decoration window 
-	NSWindow* window = [self createWindowForDesktop: desktop withDecoration: decoration];
-
-	// add the window and the decoration to our list 
+  NSWindow* window = [self createWindowForDesktop: desktop withDecoration: decoration];
 	[mWindows setObject: window forKey: [NSNumber numberWithInt: [desktop identifier]]]; 
 	[mDecorations setObject: decoration forKey: [NSNumber numberWithInt: [desktop identifier]]]; 
-
-	// initialize the decoration 
-	// set the decorations control view 
 	[decoration setControlView: [window contentView]]; 
 }
 
 - (void) detachDecorationForDesktop: (VTDesktop*) desktop {
 	NSWindow* window = [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]]; 
-	[window orderOut: self]; 
-	
-	// remove the window 
+  [window orderOut: self]; 
 	[mWindows removeObjectForKey: [NSNumber numberWithInt: [desktop identifier]]]; 
-	// remove the decoration 
 	[mDecorations removeObjectForKey: [NSNumber numberWithInt: [desktop identifier]]]; 
 }
 
@@ -135,25 +124,24 @@
 #pragma mark Notification Sink 
 
 - (void) onDesktopWillChange: (NSNotification*) notification {
-	// get the desktop that will deactivate and set its decoration window to our
-	// standard -5000 level. we have to set the window level higher, as a window
-	// with level INT_MIN+25 (the one used to put the window behind icons) will
-	// make the window sticky; seems to be a 'feature' of the apple window manager
+	// Get the desktop that will deactivate and set its decoration window to a more standard window level (in this case kVTNonActiveWindowLevel, or -5000). We need to set the window level higher, as windows with levels around kCGDesktopIconWindowLevel and lower will become the 'sticky', and appear on all desktops; this appears to be a 'feature' (nee 'bug') of the apple window manager -- rdar://4455434/ -- however, as Apple doesn't use the NSWorkspace switching for anything other than fast user switching (which will only ever have a single desktop picture per user), they see no reason to fix it. Seems fair, given that I seem to have managed a workaround ;)
 	VTDesktop*	desktop			= [[VTDesktopController sharedInstance] activeDesktop]; 
 	NSWindow*		window			= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
+  
 	[window setLevel: kVTNonActiveWindowLevel];
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
-	// see onDesktopWillChange: on why we are doing the stuff we are doing
-	VTDesktop*	desktopToActivate		= [notification object]; 
+	// See 'onDesktopWillChange' for an explanation of what is going on here
+	VTDesktop*  desktopToActivate		= [notification object]; 
 	NSWindow*		window							= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
-	PNWindow* peonyWindow						= [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
+	PNWindow*   pWindow             = [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
+  
 	[window orderWindow: NSWindowBelow relativeTo: 0];
 	[window setLevel: (kCGDesktopIconWindowLevel - 1)];
 	
-	[peonyWindow setIgnoredByExpose: YES];
-	[peonyWindow setSticky: NO];	
+	[pWindow setIgnoredByExpose: YES];
+	[pWindow setSticky: NO];	
 }
 
 @end 
@@ -165,11 +153,11 @@
 {
 	NSScreen* mainScreen = [NSScreen mainScreen];
 	
-	// the window 
+	// Create a new window 
 	NSWindow* window = [[[NSWindow alloc] initWithContentRect: [mainScreen frame] 
-																															styleMask: NSBorderlessWindowMask 
-																																backing: NSBackingStoreBuffered
-																																	defer: NO] autorelease];
+                                                  styleMask: NSBorderlessWindowMask 
+                                                    backing: NSBackingStoreBuffered
+                                                      defer: NO] autorelease];
 
 	if ([desktop visible])
 		[window setLevel: (kCGDesktopIconWindowLevel - 1)];
@@ -178,11 +166,12 @@
 	
 	[window setOpaque: NO];
 	
-	// create the view and set it to ignore mouse events 
+	// Create the view and tell it to ignore any mouse events 
 	NSRect frameRect = [window contentRectForFrameRect: [window frame]];
-	VTDesktopDecorationView* view = [[[VTDesktopDecorationView alloc] initWithFrame: frameRect withDecoration: decoration] autorelease];
+	VTDesktopDecorationView* view = [[[VTDesktopDecorationView alloc] initWithFrame: frameRect 
+                                                                   withDecoration: decoration] autorelease];
 	
-	// attach view to window 
+	// Attach the view to our window 
 	[window setContentView: view];
 	[window setBackgroundColor: [NSColor clearColor]]; 	
 	[window setIgnoresMouseEvents: YES];
@@ -191,15 +180,16 @@
 	[window display];
 	[window orderWindow: NSWindowBelow relativeTo: 0];
 	
+  // Now get a PeonyWindow reference to this window so we can do our magic with it
 	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];
 	
-	// By making it special, it will not show up in the window lists of the available desktops 
+	// By making the PNWindow/NSWindow 'special', the window will not show up in the window lists of the available desktops, and thus not appear in the pager or desktop application window lists
 	[desktopNameWindow setSpecial: YES]; 
 	[desktopNameWindow setDesktop: desktop];
 	[desktopNameWindow setIgnoredByExpose: YES];
 	[desktopNameWindow setSticky: NO];
 	[window setAlphaValue: 1.0f];
-	
+  
 	return window; 
 }
 

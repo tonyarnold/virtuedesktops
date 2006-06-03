@@ -19,8 +19,9 @@
 
 - (id) init {
 	if (self = [super init]) {
-		[NSBundle loadNibNamed: @"PrimitiveDesktopNameInspector" owner: self]; 
-		// and assign main view 
+		[NSBundle loadNibNamed: @"PrimitiveTextInspector" owner: self]; 
+		
+    // and assign main view 
 		mMainView = [[mWindow contentView] retain]; 
 		mPreviousResponder = nil; 
 		
@@ -37,30 +38,53 @@
 	[super dealloc]; 
 }
 
-- (void) awakeFromNib {
+- (void) awakeFromNib { 
+  // Desktop name is auto-populated, and should not be modifiable from here
+  [mTextField setEditable: NO];
+  [mTextField setEnabled: NO];
 }
 
 - (IBAction) showFontPanel: (id) sender {
-	if ([[[NSFontManager sharedFontManager] fontPanel: YES] isVisible]) 
-		return; 
-	
-	// set the selected font 
-	[[NSFontManager sharedFontManager] setSelectedFont: [(VTDesktopNamePrimitive*)mInspectedObject font] isMultiple: NO]; 
-	[[NSFontManager sharedFontManager] setDelegate: self]; 
+  NSFontManager *fontManager  = [NSFontManager sharedFontManager];
+  NSFontPanel   *fontPanel    = [fontManager fontPanel: YES];
+  
+	if ([fontPanel isVisible]) 
+		return;
+  
+	[fontManager setSelectedFont: [(VTDesktopNamePrimitive*)mInspectedObject font] isMultiple: NO];
+  [fontManager setSelectedAttributes: [(VTDesktopNamePrimitive*)mInspectedObject fontAttributes] isMultiple: NO];
+  [fontManager setDelegate: self];
+  
 	
 	mPreviousResponder = [[[mMainView window] firstResponder] retain]; 
 	[[mMainView window] makeFirstResponder: self]; 
 	
-	// and show the panel 
-	[[NSFontManager sharedFontManager] orderFrontFontPanel: sender]; 
+	// …and show the panel
+	[fontManager orderFrontFontPanel: sender];
 }
+
+- (unsigned int) validModesForFontPanel: (NSFontPanel *) fontPanel {
+  unsigned int  ret = NSFontPanelStandardModesMask;
+  ret ^= NSFontPanelUnderlineEffectModeMask;
+  ret ^= NSFontPanelStrikethroughEffectModeMask;
+  ret ^= NSFontPanelTextColorEffectModeMask;
+  ret ^= NSFontPanelDocumentColorEffectModeMask;
+  return ret;
+} 
 
 - (void) changeFont: (id) sender {
 	NSFont* oldFont = [(VTDesktopNamePrimitive*)mInspectedObject font]; 
 	NSFont* newFont = [sender convertFont: oldFont]; 
-	
-	// and set it in our object 
 	[(VTDesktopNamePrimitive*)mInspectedObject setFont: newFont]; 
+}
+
+- (void) changeAttributes: (id) sender {
+  NSDictionary* oldAttributes = [(VTDesktopNamePrimitive*)mInspectedObject fontAttributes];
+  NSDictionary* newAttributes = [sender convertAttributes: oldAttributes]; 
+  NSShadow *textShadow = [newAttributes objectForKey:@"NSShadow"];
+  if (nil != textShadow)
+    [(VTDesktopNamePrimitive*)mInspectedObject setFontShadow: textShadow];
+  
 }
 
 - (void) windowWillClose: (NSNotification*) aNotification {

@@ -16,9 +16,9 @@
 #import "VTDesktop.h"
 
 @interface VTDesktopDecorationController : NSObject {
-	NSMutableDictionary*	mWindows;							//!< Windows indexed by desktop id 
-	NSMutableDictionary*	mDecorations;					//!< Decorations indexed by desktop id 
-	int										mDesktopWindowLevel;	//!< The desktop window level 
+	NSMutableDictionary*	mWindows;							// Windows indexed by desktop id 
+	NSMutableDictionary*	mDecorations;					// Decorations indexed by desktop id 
+	int										mDesktopWindowLevel;	// The desktop window level 
 }
 
 #pragma mark -

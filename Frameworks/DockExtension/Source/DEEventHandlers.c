@@ -1,11 +1,9 @@
 /******************************************************************************
 * 
-* Peony.Virtue 
+* DockExtension Bundle
 *
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2006, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -18,9 +16,9 @@
 /* Decomm */ 
 #include "DEComm.h" 
 
-/* Current version is 1.0 */ 
+/* Current version is 1.1 */ 
 #define kDeVersionMajor	1
-#define kDeVersionMinor	0
+#define kDeVersionMinor	1
 
 
 void DEHandleAlphaEvent(DecEvent* event);
@@ -32,7 +30,8 @@ void DEHandleDesktopEvent(DecEvent* event);
 void DEHandleInfoEvent(DecEvent* event, AppleEvent* replyEvent); 
 
 
-void DEHandleAlphaEvent(DecEvent* event) {
+void DEHandleAlphaEvent(DecEvent* event)
+{
 	DecEventAlpha* eventAlpha = dec_event_alpha_new(event); 
 	if (eventAlpha == NULL)
 		return; 
@@ -96,7 +95,8 @@ void DEHandleAlphaEvent(DecEvent* event) {
 	dec_event_alpha_free(eventAlpha); 
 }
 
-void DEHandleLevelEvent(DecEvent* event) {	
+void DEHandleLevelEvent(DecEvent* event)
+{	
 	DecEventLevel* eventLevel = dec_event_level_new(event); 
 	if (eventLevel == NULL)
 		return; 
@@ -129,7 +129,8 @@ void DEHandleLevelEvent(DecEvent* event) {
 	dec_event_level_free(eventLevel); 
 }
 
-void DEHandleOrderEvent(DecEvent* event) {	
+void DEHandleOrderEvent(DecEvent* event)
+{	
 	DecEventOrder* eventOrder = dec_event_order_new(event); 
 	if (eventOrder == NULL)
 		return; 
@@ -164,7 +165,8 @@ void DEHandleOrderEvent(DecEvent* event) {
 	dec_event_order_free(eventOrder); 
 }
 
-void DEHandleTagsEvent(DecEvent* event) {
+void DEHandleTagsEvent(DecEvent* event)
+{
 	DecEventTags* eventTags = dec_event_tags_new(event); 
 	if (eventTags == NULL)
 		return; 
@@ -208,7 +210,8 @@ void DEHandleTagsEvent(DecEvent* event) {
 	dec_event_tags_free(eventTags); 
 }
 
-void DEHandlePropertyEvent(DecEvent* event) {
+void DEHandlePropertyEvent(DecEvent* event)
+{
 	DecEventProperty* eventProp = dec_event_property_new(event); 
 	if (eventProp == NULL)
 		return; 
@@ -253,7 +256,8 @@ void DEHandlePropertyEvent(DecEvent* event) {
 		CGSReleaseGenericObj(&valueObject); 
 }
 
-void DEHandleDesktopEvent(DecEvent* event) {
+void DEHandleDesktopEvent(DecEvent* event) 
+{
 	DecEventDesktop* desktopEvent = dec_event_desktop_new(event); 
 	if (desktopEvent == NULL)
 		return; 
@@ -294,7 +298,8 @@ void DEHandleInfoEvent(DecEvent* event, AppleEvent* appleReplyEvent)
 }
 
 
-OSErr DEHandleEvent(const AppleEvent* appleEvent, AppleEvent* appleReplyEvent, SInt32 handlerRefCon) {
+OSErr DEHandleEvent(const AppleEvent* appleEvent, AppleEvent* appleReplyEvent, SInt32 handlerRefCon)
+{
 	DecEvent* event = dec_event_new();
 
 	/* read the event from the received apple event */ 
@@ -326,7 +331,7 @@ OSErr DEHandleEvent(const AppleEvent* appleEvent, AppleEvent* appleReplyEvent, S
 		break; 
 		
 	default: 
-		printf("Virtue DockExtension invalid/unknown event type - ignoring [Type: %i]", eventType); 
+		printf("DockExtension invalid/unknown event type - ignoring [Type: %i]", eventType); 
 	};
 	
 	/* and free the event */ 

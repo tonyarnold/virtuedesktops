@@ -114,7 +114,8 @@
 - (NSArray*) notificationsWithName: (NSString*) name {
 	NSMutableArray*	notifications		= [NSMutableArray array]; 
 	NSArray*				allNotifications	= [mNotifications allNotifications]; 
-	// now filter for name and return 
+  
+	// Now filter for the name of the notification and return it
 	NSEnumerator*			notificationIter	= [allNotifications objectEnumerator]; 
 	VTTriggerNotification*	notification		= nil; 
 	
@@ -206,15 +207,13 @@
 	// get the notification that posted the event 
 	VTTriggerNotification* notification = [aNotification object]; 
 	
-	// now iterate over all notifications we know about and unset the hotkey there if 
-	// they are coincidally the same 
+	// now iterate over all notifications we know about and unset the hotkey there if they are the same 
 	NSEnumerator*			notificationIter	= [[mNotifications allNotifications] objectEnumerator]; 
 	VTTriggerNotification*	currentNotification	= nil; 
 	
 	while (currentNotification = [notificationIter nextObject]) {
 		// check if hotkeys are the same 
-		if ((currentNotification != notification) && 
-			([[currentNotification trigger] isEqual: [notification trigger]])) {
+		if ((currentNotification != notification) && ([[currentNotification trigger] isEqual: [notification trigger]])) {
 			// unset the notifications hotkey 
 			[currentNotification setTrigger: nil];
 			// continue just to be sure we find all duplicates at all times 
@@ -294,26 +293,25 @@
 
 - (void) registerObservers {
 	// register ourselves as an observer for key presses 
-	[[NSNotificationCenter defaultCenter] 
-		addObserver: self 
-		   selector: @selector(onHotKeyPressed:) 
-			   name: kVtNotificationOnKeyPress 
-			 object: nil]; 
-	[[NSNotificationCenter defaultCenter]
-		addObserver: self 
-		   selector: @selector(onHotKeyRegistered:) 
-			   name: kVtNotificationWasRegistered 
-			 object: nil]; 
-	[[NSNotificationCenter defaultCenter]
-		addObserver: self 
-		   selector: @selector(onHotKeyUnregistered:) 
-			   name: kVtNotificationWasRegistered 
-			 object: nil]; 
-	[[VTDesktopController sharedInstance] 
-		addObserver: self 
-		 forKeyPath: @"desktops" 
-			options: NSKeyValueObservingOptionNew 
-			context: NULL]; 
+	[[NSNotificationCenter defaultCenter] addObserver: self 
+                                           selector: @selector(onHotKeyPressed:) 
+                                               name: kVtNotificationOnKeyPress 
+                                             object: nil];
+  
+	[[NSNotificationCenter defaultCenter] addObserver: self 
+                                           selector: @selector(onHotKeyRegistered:) 
+                                               name: kVtNotificationWasRegistered 
+                                             object: nil];
+  
+	[[NSNotificationCenter defaultCenter] addObserver: self 
+                                           selector: @selector(onHotKeyUnregistered:) 
+                                               name: kVtNotificationWasRegistered 
+                                             object: nil];
+  
+	[[VTDesktopController sharedInstance] addObserver: self 
+                                         forKeyPath: @"desktops" 
+                                            options: NSKeyValueObservingOptionNew 
+                                            context: NULL];
 }
 
 @end 

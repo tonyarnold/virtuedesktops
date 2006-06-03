@@ -88,8 +88,7 @@
 	VTDecorationPrimitive*	primitive			= nil; 
 	NSMutableArray*					primitiveList	= [NSMutableArray array]; 
 	
-	while (primitive = [primitiveIter nextObject]) {
-		
+	while (primitive = [primitiveIter nextObject]) {    
 		// fetch the type of this primitive and persist it 
 		NSString*							primitiveType = NSStringFromClass([primitive class]); 
 		NSMutableDictionary*	primitiveDict = [NSMutableDictionary dictionary]; 
@@ -116,7 +115,7 @@
 	NSEnumerator*	primitiveIter	= [primitiveList objectEnumerator]; 
 	NSDictionary*	primitiveDict	= nil; 
 	
-	while (primitiveDict = [primitiveIter nextObject]) {
+	while (primitiveDict = [primitiveIter nextObject]) {    
 		// check type and try to create an instance of the primitive 
 		NSString*	type	= [primitiveDict objectForKey: kVtCodingPrimitiveType]; 
 		Class			primitiveClass	= NSClassFromString(type); 

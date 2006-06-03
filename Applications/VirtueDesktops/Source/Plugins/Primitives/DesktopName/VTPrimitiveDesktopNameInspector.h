@@ -16,7 +16,7 @@
 
 @interface VTPrimitiveDesktopNameInspector : VTInspector {
 	// outlets 
-	IBOutlet NSTextField*	mFontTextField; 
+	IBOutlet  NSTextField*  mTextField; 
 	// ivar 
 	NSResponder*			mPreviousResponder; 
 }

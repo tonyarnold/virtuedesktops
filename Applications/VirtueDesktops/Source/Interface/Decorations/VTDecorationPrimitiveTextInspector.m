@@ -22,8 +22,8 @@
 		[NSBundle loadNibNamed: @"PrimitiveTextInspector" owner: self]; 
 		// and assign main view 
 		mMainView = [[mWindow contentView] retain];
-		mPreviousResponder = nil; 
-		
+		mPreviousResponder = nil;
+    
 		return self; 
 	}
 	
@@ -36,34 +36,54 @@
 	[super dealloc]; 
 }
 
-- (void) awakeFromNib {
+- (void) awakeFromNib { 
+  // Ensure this field is modifiable
+  [mTextField setEditable: YES];
+  [mTextField setEnabled: YES];
 }
 
 - (IBAction) showFontPanel: (id) sender {
-	if ([[[NSFontManager sharedFontManager] fontPanel: YES] isVisible]) 
-		return; 
-	
-	// set the selected font 
-	[[NSFontManager sharedFontManager] setSelectedFont: [(VTDecorationPrimitiveText*)mInspectedObject font] isMultiple: NO]; 
-	[[NSFontManager sharedFontManager] setDelegate: self]; 
-	
+  NSFontManager *fontManager  = [NSFontManager sharedFontManager];
+  NSFontPanel   *fontPane     = [fontManager fontPanel: YES];
+	if ([fontPane isVisible]) 
+		return;
+  
+	[fontManager setSelectedFont: [(VTDecorationPrimitiveText*)mInspectedObject font] isMultiple: NO];
+  [fontManager setSelectedAttributes: [(VTDecorationPrimitiveText*)mInspectedObject fontAttributes] isMultiple: NO];
+	[fontManager setDelegate: self];
+  
 	mPreviousResponder = [[[mMainView window] firstResponder] retain]; 
-	[[mMainView window] makeFirstResponder: self]; 
+	[[mMainView window] makeFirstResponder: self];
 	
-	// and show the panel 
-	[[NSFontManager sharedFontManager] orderFrontFontPanel: sender]; 
+	// Éand show the panel
+	[fontManager orderFrontFontPanel: self];
 }
+
+- (unsigned int) validModesForFontPanel: (NSFontPanel *) fontPanel {
+  unsigned int  ret = NSFontPanelStandardModesMask;
+  ret ^= NSFontPanelUnderlineEffectModeMask;
+  ret ^= NSFontPanelStrikethroughEffectModeMask;
+  ret ^= NSFontPanelTextColorEffectModeMask;
+  ret ^= NSFontPanelDocumentColorEffectModeMask;
+  return ret;
+} 
 
 - (void) changeFont: (id) sender {
 	NSFont* oldFont = [(VTDecorationPrimitiveText*)mInspectedObject font]; 
-	NSFont* newFont = [sender convertFont: oldFont]; 
-	
-	// and set it in our object 
+	NSFont* newFont = [sender convertFont: oldFont];
 	[(VTDecorationPrimitiveText*)mInspectedObject setFont: newFont]; 
 }
 
+- (void) changeAttributes: (id) sender {
+  NSDictionary* oldAttributes = [(VTDecorationPrimitiveText*)mInspectedObject fontAttributes];
+  NSDictionary* newAttributes = [sender convertAttributes: oldAttributes]; 
+  NSShadow *textShadow = [newAttributes objectForKey:@"NSShadow"];
+  if (nil != textShadow)
+    [(VTDecorationPrimitiveText*)mInspectedObject setFontShadow: textShadow];
+}
+
 - (void) windowWillClose: (NSNotification*) aNotification {
-	// reset the first responder 
+	// Reset the first responder 
 	[[mMainView window] makeFirstResponder: mPreviousResponder]; 
 	ZEN_RELEASE(mPreviousResponder); 
 }

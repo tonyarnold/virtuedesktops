@@ -2,17 +2,17 @@
     IBClasses = (
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
-            ACTIONS = {showFontPanel = id; }; 
-            CLASS = VTDecorationPrimitiveTextInspector; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {mFontButton = NSButton; mFontTextField = NSTextField; }; 
-            SUPERCLASS = VTInspector; 
-        }, 
-        {
             CLASS = VTInspector; 
             LANGUAGE = ObjC; 
             OUTLETS = {mWindow = NSWindow; }; 
-            SUPERCLASS = NSObject; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {showFontPanel = id; }; 
+            CLASS = VTPrimitiveDesktopNameInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mFontButton = NSButton; mTextField = NSTextField; }; 
+            SUPERCLASS = VTInspector; 
         }
     ); 
     IBVersion = 1; 

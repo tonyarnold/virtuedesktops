@@ -117,7 +117,6 @@
 		E9363AFE06FCE64400E354DB /* imageVirtueHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AED06FCE64300E354DB /* imageVirtueHighlighted.png */; };
 		E9363AFF06FCE64400E354DB /* imageWindow.png in Resources */ = {isa = PBXBuildFile; fileRef = E9363AEE06FCE64300E354DB /* imageWindow.png */; };
 		E940C5E70733F03400C1642C /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E940C5E60733F03400C1642C /* DefaultHotkeys.plist */; };
-		E940C7380735139B00C1642C /* PrimitiveDesktopNameInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E940C7360735139B00C1642C /* PrimitiveDesktopNameInspector.nib */; };
 		E940C73D073513D700C1642C /* VTPrimitiveDesktopNameInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C73B073513D700C1642C /* VTPrimitiveDesktopNameInspector.m */; };
 		E941CCBA07460FA7007DF0D9 /* imageWidgetSticky.png in Resources */ = {isa = PBXBuildFile; fileRef = E941CCB607460FA7007DF0D9 /* imageWidgetSticky.png */; };
 		E941CCBB07460FA7007DF0D9 /* imageWidgetStickyPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E941CCB707460FA7007DF0D9 /* imageWidgetStickyPressed.png */; };
@@ -205,6 +204,7 @@
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
 		EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54635209AC9CD1002EDE9E /* WebKit.framework */; };
 		EA5A45F20A089AD8001EF27C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABE639809CE9D0D00809063 /* Sparkle.framework */; };
+		EA6FE7D70A31545C004CCC3F /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E913F21A076E3FF400072617 /* PrimitiveTextInspector.nib */; };
 		EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
 		EA9AFA6F09445764005D60CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -256,52 +256,6 @@
 		EAF8C9A709077016003D54B1 /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-		E958EE5906FD947D001DCB1E /* Development Private Framework */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = "Development Private Framework";
-		};
-		E98B7FF7074960E800E8CE5C /* Deployment Private Framework */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				ZERO_LINK = NO;
-			};
-			name = "Deployment Private Framework";
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
 		E903F984071E4A8C00A00F30 /* PBXContainerItemProxy */ = {
@@ -850,10 +804,8 @@
 		E9560C3F071DA9AE00D497BE /* VTDesktopNamePrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopNamePrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9560C40071DA9AE00D497BE /* VTDesktopNamePrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9560C4B071DAB6000D497BE /* VTPluginDesktopNamePrimitive.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTPluginDesktopNamePrimitive.m; path = Primitives/DesktopName/VTPluginDesktopNamePrimitive.m; sourceTree = "<group>"; };
-		E956B771078CACF5008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		E956B772078CAD02008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
 		E956B773078CAD10008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		E956B774078CAD1B008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
 		E956B775078CAD27008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
 		E956B778078CADD4008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E956B779078CADDE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
@@ -909,10 +861,8 @@
 		E95B996F07401FE700231BC5 /* VTDecorationPrimitiveScripting.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VTDecorationPrimitiveScripting.m; path = Source/Scripting/VTDecorationPrimitiveScripting.m; sourceTree = "<group>"; };
 		E95C9F3D0732E74600148FA8 /* DefaultDesktops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = DefaultDesktops.plist; path = Data/defaults/DefaultDesktops.plist; sourceTree = "<group>"; };
 		E96B2BC3077B3CE200EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/Operations.nib; sourceTree = "<group>"; };
-		E96B2BC4077B3D5000EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		E96B2BC5077B3D5A00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
 		E96B2BC6077B3D6400EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		E96B2BC7077B3D6D00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
 		E96B2BC8077B3D7900EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
 		E96B2BC9077B3D8600EFF051 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E96B2BCA077B3D9300EFF051 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Notifications.strings; sourceTree = "<group>"; };
@@ -1467,7 +1417,6 @@
 				E9363ADC06FCE64300E354DB /* icons */,
 				E9363ADE06FCE64300E354DB /* images */,
 			);
-			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -1876,28 +1825,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/decomm/build/,
-					../../frameworks/Peony/build/,
-					../../frameworks/dockExtension/build/,
-					../../frameworks/Zen/build,
-					../../frameworks/Virtue/build,
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = virtue_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../../frameworks/decomm/includes/;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = ../../frameworks/decomm/build/;
-				PREBINDING = YES;
-				PRODUCT_NAME = Virtue;
-				VERSIONING_SYSTEM = "";
-				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
-			};
 			dependencies = (
 				EABE639C09CE9D1C00809063 /* PBXTargetDependency */,
 				E903F985071E4A8C00A00F30 /* PBXTargetDependency */,
@@ -1931,32 +1858,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Virtue/build,
-					../../frameworks/Zen/build,
-					../../frameworks/Peony/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h";
-				HEADER_SEARCH_PATHS = ../Virtue/Source/Hotkeys;
-				INFOPLIST_FILE = "VTPluginPreferences-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTPluginPreferences;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
 			dependencies = (
 				EA8B2FF809333FE800477F42 /* PBXTargetDependency */,
 				EA8B2FFA09333FE800477F42 /* PBXTargetDependency */,
@@ -1965,29 +1866,6 @@
 			name = VTPluginPreferences;
 			productName = VTPluginPreferences;
 			productReference = E9127206072A6211006DC207 /* VTPluginPreferences.prefPane */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTPluginPreferences</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTPluginPreferences</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-	<key>CSResourcesFileMapped</key>
-	<string>yes</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E913F15C076E375500072617 /* VTDesktopTemplatePreferences */ = {
@@ -2000,33 +1878,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Virtue/build,
-					../../frameworks/Peony/build,
-					../../frameworks/Zen/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTDesktopTemplatePreferences-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTDesktopTemplatePreferences;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
 			dependencies = (
 				E913F199076E3D8100072617 /* PBXTargetDependency */,
 				EA8B2FDA09333FB500477F42 /* PBXTargetDependency */,
@@ -2036,27 +1887,6 @@
 			name = VTDesktopTemplatePreferences;
 			productName = VTDesktopTemplatePreferences;
 			productReference = E913F15D076E375500072617 /* VTDesktopTemplatePreferences.prefPane */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTDesktopTemplatePreferences</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTDesktopTemplatePreferences</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E913F26C076E411B00072617 /* VTInterface */ = {
@@ -2071,35 +1901,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Virtue/build,
-					../../frameworks/Peony/build,
-					../../frameworks/Zen/build,
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTInterface-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTInterface;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
 			dependencies = (
 				EA8B2FD409333FA700477F42 /* PBXTargetDependency */,
 				EA8B2FD609333FA700477F42 /* PBXTargetDependency */,
@@ -2108,27 +1909,6 @@
 			name = VTInterface;
 			productName = VTInterface;
 			productReference = E913F26D076E411B00072617 /* VTInterface.framework */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTInterface</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTInterface</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>FMWK</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.framework";
 		};
 		E9560C3E071DA9AE00D497BE /* VTDesktopNamePrimitive */ = {
@@ -2141,33 +1921,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Zen/build,
-					../../frameworks/Virtue/build,
-					../../frameworks/Peony/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTDesktopNamePrimitive-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTDesktopNamePrimitive;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = plugin;
-			};
 			dependencies = (
 				E912271707856A78005A3C10 /* PBXTargetDependency */,
 				EA8B300009333FF600477F42 /* PBXTargetDependency */,
@@ -2177,27 +1930,6 @@
 			name = VTDesktopNamePrimitive;
 			productName = VTDesktopNamePrimitive;
 			productReference = E9560C3F071DA9AE00D497BE /* VTDesktopNamePrimitive.plugin */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTDesktopNamePrimitive</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTDesktopNamePrimitive</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E958A872075EEEC200773392 /* VTLayoutPreferences */ = {
@@ -2210,59 +1942,11 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Virtue/build,
-					../../frameworks/Peony/build,
-					../../frameworks/Zen/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTLayoutPreferences-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTLayoutPreferences;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
 			dependencies = (
 			);
 			name = VTLayoutPreferences;
 			productName = VTLayoutPreferences;
 			productReference = E958A873075EEEC200773392 /* VTLayoutPreferences.prefPane */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTLayoutPreferences</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTLayoutPreferences</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E9C62991075A146C0072C1EF /* VTApplicationPreferences */ = {
@@ -2275,33 +1959,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Virtue/build,
-					../../frameworks/Peony/build,
-					../../frameworks/Zen/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTApplicationPreferences-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTApplicationPreferences;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
 			dependencies = (
 				EA8B2FE809333FD000477F42 /* PBXTargetDependency */,
 				EA8B2FEA09333FD000477F42 /* PBXTargetDependency */,
@@ -2310,27 +1967,6 @@
 			name = VTApplicationPreferences;
 			productName = VTApplicationPreferences;
 			productReference = E9C62992075A146C0072C1EF /* VTApplicationPreferences.prefPane */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTApplicationPreferences</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTApplicationPreferences</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E9C629B9075A35F00072C1EF /* VTAppearancePreferences */ = {
@@ -2343,54 +1979,11 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTAppearancePreferences-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTAppearancePreferences;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
 			dependencies = (
 			);
 			name = VTAppearancePreferences;
 			productName = VTAppearancePreferences;
 			productReference = E9C629BA075A35F00072C1EF /* VTAppearancePreferences.prefPane */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTAppearancePreferences</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTAppearancePreferences</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E9C629FD075A49B20072C1EF /* VTHotkeyPreferences */ = {
@@ -2403,33 +1996,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Virtue/build,
-					../../frameworks/Peony/build,
-					../../frameworks/Zen/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTHotkeyPreferences-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTHotkeyPreferences;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
 			dependencies = (
 				E9729DAA0772404E00B09C57 /* PBXTargetDependency */,
 				EA8B2FE009333FC200477F42 /* PBXTargetDependency */,
@@ -2439,27 +2005,6 @@
 			name = VTHotkeyPreferences;
 			productName = VTHotkeyPreferences;
 			productReference = E9C629FE075A49B20072C1EF /* VTHotkeyPreferences.prefPane */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTHotkeyPreferences</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTHotkeyPreferences</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		E9D29BE8073E345700E0E6CE /* VTDesktopColorLabelPrimitive */ = {
@@ -2472,33 +2017,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					../../frameworks/Zen/build,
-					../../frameworks/Peony/build,
-					../../frameworks/Virtue/build,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SDKROOT)/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTDesktopColorLabelPrimitive-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = VTDesktopColorLabelPrimitive;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = plugin;
-			};
 			dependencies = (
 				E912271907856A86005A3C10 /* PBXTargetDependency */,
 				EA8B2FF009333FDE00477F42 /* PBXTargetDependency */,
@@ -2508,27 +2026,6 @@
 			name = VTDesktopColorLabelPrimitive;
 			productName = VTDesktopColorLabelPrimitive;
 			productReference = E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>VTDesktopColorLabelPrimitive</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.VTDesktopColorLabelPrimitive</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -2537,14 +2034,6 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EA609C23090666C8003BD20D /* Build configuration list for PBXProject "VirtueDesktops" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				4A9504CCFFE6A4B311CA0CBA /* Development */,
-				E958EE5906FD947D001DCB1E /* Development Private Framework */,
-				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
-				E98B7FF7074960E800E8CE5C /* Deployment Private Framework */,
-			);
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -2760,7 +2249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E940C7380735139B00C1642C /* PrimitiveDesktopNameInspector.nib in Resources */,
+				EA6FE7D70A31545C004CCC3F /* PrimitiveTextInspector.nib in Resources */,
 				E912239107808A5B005A3C10 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3260,8 +2749,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E913F17B076E3C1200072617 /* English */,
-				E96B2BC7077B3D6D00EFF051 /* it */,
-				E956B774078CAD1B008B2571 /* fr */,
 			);
 			name = VTDecorationPrimitiveInspector.nib;
 			sourceTree = "<group>";
@@ -3270,8 +2757,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E913F21B076E3FF400072617 /* English */,
-				E96B2BC4077B3D5000EFF051 /* it */,
-				E956B771078CACF5008B2571 /* fr */,
 			);
 			name = PrimitiveTextInspector.nib;
 			sourceTree = "<group>";
