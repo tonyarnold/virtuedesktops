@@ -52,6 +52,10 @@ if ([[NSUserDefaults standardUserDefaults] colorForKey: prefName] == nil)		\
 		// Window collecting
 		@"YES", VTWindowsCollectOnQuit, 
 		@"YES", VTWindowsCollectOnDelete,
+    
+    // Motion sensor
+    @"NO", VTMotionSensorEnabled,
+    @"10", VTMotionSensorSensitivity,
 		
 		// the end 
 		nil

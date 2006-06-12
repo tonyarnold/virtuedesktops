@@ -58,6 +58,11 @@
 #define VTActiveEdgesHorizontalModifier		@"VTActiveEdgesHorizontalModifier"
 
 #pragma mark -
+#pragma mark Motion Sensor
+#define VTMotionSensorEnabled             @"VTMotionSensorEnabled"
+#define VTMotionSensorSensitivity         @"VTMotionSensorSensitivity"
+
+#pragma mark -
 #pragma mark Operations 
 #define VTOperationsTint										@"VTOperationsTintWindow"
 #define VTOperationsTintColor								@"VTOperationsTintWindowColor"

@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
+#import "VTMotionController.h"
 #import "VTNotificationBezel.h" 
 #import "VTPreferencesViewController.h"
 #import "VTOperationsViewController.h" 
@@ -46,6 +47,7 @@
 	VTNotificationBezel*					mNotificationBezel; 
 	VTDesktopViewController*			mDesktopInspector; 
 	VTApplicationViewController*	mApplicationInspector; 
+  VTMotionController*           mMotionController;
 }
 
 - (NSString*) versionString;

@@ -181,13 +181,13 @@
 	[window orderWindow: NSWindowBelow relativeTo: 0];
 	
   // Now get a PeonyWindow reference to this window so we can do our magic with it
-	PNWindow* desktopNameWindow = [PNWindow windowWithNSWindow: window];
+	PNWindow* pnWindow = [PNWindow windowWithNSWindow: window];
 	
 	// By making the PNWindow/NSWindow 'special', the window will not show up in the window lists of the available desktops, and thus not appear in the pager or desktop application window lists
-	[desktopNameWindow setSpecial: YES]; 
-	[desktopNameWindow setDesktop: desktop];
-	[desktopNameWindow setIgnoredByExpose: YES];
-	[desktopNameWindow setSticky: NO];
+	[pnWindow setSpecial: YES]; 
+	[pnWindow setDesktop: desktop];
+	[pnWindow setIgnoredByExpose: YES];
+	[pnWindow setSticky: NO];
 	[window setAlphaValue: 1.0f];
   
 	return window; 

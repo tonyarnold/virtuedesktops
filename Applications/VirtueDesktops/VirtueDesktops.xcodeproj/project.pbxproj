@@ -200,6 +200,10 @@
 		E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
 		EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */; };
+		EA3872810A3D4CFE004F4330 /* VTMotionController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA38727F0A3D4CFE004F4330 /* VTMotionController.h */; };
+		EA3872820A3D4CFE004F4330 /* VTMotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3872800A3D4CFE004F4330 /* VTMotionController.m */; };
+		EA387C930A3DB8CA004F4330 /* libUniMotion.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */; };
+		EA387C940A3DB8E4004F4330 /* libUniMotion.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
 		EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54635209AC9CD1002EDE9E /* WebKit.framework */; };
@@ -596,11 +600,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EA387C940A3DB8E4004F4330 /* libUniMotion.dylib in CopyFiles */,
 				EABE639E09CE9D3200809063 /* Sparkle.framework in CopyFiles */,
 				EAB7C0420924F7FB0067CDFD /* Peony.framework in CopyFiles */,
 				EAF8C93C09076ED5003D54B1 /* Virtue.framework in CopyFiles */,
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
+				EA3872810A3D4CFE004F4330 /* VTMotionController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,7 +788,6 @@
 		E9363AED06FCE64300E354DB /* imageVirtueHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageVirtueHighlighted.png; sourceTree = "<group>"; };
 		E9363AEE06FCE64300E354DB /* imageWindow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWindow.png; sourceTree = "<group>"; };
 		E940C5E60733F03400C1642C /* DefaultHotkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = DefaultHotkeys.plist; path = Data/defaults/DefaultHotkeys.plist; sourceTree = "<group>"; };
-		E940C7370735139B00C1642C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E940C73A073513D700C1642C /* VTPrimitiveDesktopNameInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTPrimitiveDesktopNameInspector.h; path = Primitives/DesktopName/VTPrimitiveDesktopNameInspector.h; sourceTree = "<group>"; };
 		E940C73B073513D700C1642C /* VTPrimitiveDesktopNameInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTPrimitiveDesktopNameInspector.m; path = Primitives/DesktopName/VTPrimitiveDesktopNameInspector.m; sourceTree = "<group>"; };
 		E941CCB607460FA7007DF0D9 /* imageWidgetSticky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetSticky.png; sourceTree = "<group>"; };
@@ -807,7 +812,6 @@
 		E956B772078CAD02008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
 		E956B773078CAD10008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
 		E956B775078CAD27008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		E956B778078CADD4008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E956B779078CADDE008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E956B77B078CADF5008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/Operations.nib; sourceTree = "<group>"; };
 		E956B77C078CADFF008B2571 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
@@ -866,7 +870,6 @@
 		E96B2BC8077B3D7900EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
 		E96B2BC9077B3D8600EFF051 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E96B2BCA077B3D9300EFF051 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Notifications.strings; sourceTree = "<group>"; };
-		E96B2BCC077B3DAE00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveDesktopNameInspector.nib; sourceTree = "<group>"; };
 		E96B2BCD077B3DB800EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E96B2BCF077B3DCF00EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
 		E96B2BD0077B3DD900EFF051 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
@@ -933,23 +936,15 @@
 		EA2108EC094541B5007BED41 /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEComm.h; sourceTree = "<group>"; };
 		EA2108ED094541B6007BED41 /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
 		EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EA38727F0A3D4CFE004F4330 /* VTMotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTMotionController.h; sourceTree = "<group>"; };
+		EA3872800A3D4CFE004F4330 /* VTMotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTMotionController.m; sourceTree = "<group>"; };
+		EA387B8A0A3DB488004F4330 /* UniMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "UniMotion-Info.plist"; sourceTree = "<group>"; };
+		EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libUniMotion.dylib; sourceTree = "<group>"; };
 		EA54635209AC9CD1002EDE9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		EA9141020A3D467A008BECF1 /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimotion.h; sourceTree = "<group>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Peony.xcodeproj; path = ../../Frameworks/Peony/Peony.xcodeproj; sourceTree = SOURCE_ROOT; };
-		EABDFE2F09AC935300C523BA /* CompositePage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = CompositePage.html; sourceTree = "<group>"; };
-		EABDFE3109AC935300C523BA /* Functions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = Functions.html; sourceTree = "<group>"; };
-		EABDFE3209AC935300C523BA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		EABDFE3309AC935300C523BA /* SmartCrashReportsAPI.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SmartCrashReportsAPI.html; sourceTree = "<group>"; };
-		EABDFE3409AC935300C523BA /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = toc.html; sourceTree = "<group>"; };
-		EABDFE3609AC935300C523BA /* CompositePage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = CompositePage.html; sourceTree = "<group>"; };
-		EABDFE3809AC935300C523BA /* Functions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = Functions.html; sourceTree = "<group>"; };
-		EABDFE3909AC935300C523BA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		EABDFE3A09AC935300C523BA /* SmartCrashReportsInstall.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SmartCrashReportsInstall.html; sourceTree = "<group>"; };
-		EABDFE3B09AC935300C523BA /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = toc.html; sourceTree = "<group>"; };
-		EABDFE3C09AC935300C523BA /* Smart Crash Reports For Developers.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = "Smart Crash Reports For Developers.rtfd"; sourceTree = "<group>"; };
-		EABDFE3D09AC935300C523BA /* Smart Crash Reports Webpage.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Smart Crash Reports Webpage.webloc"; sourceTree = "<group>"; };
-		EABDFE3E09AC935300C523BA /* smartcrashreports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartcrashreports.png; sourceTree = "<group>"; };
 		EABDFE3F09AC935300C523BA /* SmartCrashReportsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsAPI.h; sourceTree = "<group>"; };
 		EABDFE4009AC935300C523BA /* SmartCrashReportsAPI.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsAPI.o; sourceTree = "<group>"; };
 		EABDFE4109AC935300C523BA /* SmartCrashReportsInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsInstall.h; sourceTree = "<group>"; };
@@ -970,6 +965,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA387C930A3DB8CA004F4330 /* libUniMotion.dylib in Frameworks */,
 				EABDFE5D09AC947600C523BA /* SmartCrashReportsAPI.o in Frameworks */,
 				EABDFE4A09AC936700C523BA /* SmartCrashReportsInstall.o in Frameworks */,
 				EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */,
@@ -1162,6 +1158,7 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				EA387B8A0A3DB488004F4330 /* UniMotion-Info.plist */,
 			);
 			name = virtue;
 			sourceTree = "<group>";
@@ -1169,16 +1166,15 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EABDFE2C09AC935300C523BA /* Smart Crash Reports SDK */,
-				EA2108E1094541B5007BED41 /* DockCommunicator */,
-				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
 				EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */,
 				EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */,
-				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
+				EAB7C03B0924F7DD0067CDFD /* Peony.xcodeproj */,
 				EAF8C92A09076E8C003D54B1 /* Virtue.xcodeproj */,
-				EABE639209CE9D0D00809063 /* Sparkle.xcodeproj */,
+				EAF8C94D09076F38003D54B1 /* Zen.xcodeproj */,
+				EA2108E1094541B5007BED41 /* DockCommunicator */,
 				E9127278072AAA22006DC207 /* Property Lists */,
 				E91ADC3307057EFF00F69228 /* Scripting */,
+				EA5642990A3840DF006A706B /* Third Party */,
 				32CA4F630368D1EE00C91783 /* virtue_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -1198,7 +1194,6 @@
 				E913F21E076E3FF400072617 /* PrimitiveWatermarkInspector.nib */,
 				E913F17A076E3C1200072617 /* VTDecorationPrimitiveInspector.nib */,
 				E913F15F076E37B300072617 /* VTDesktopTemplatePreferences.nib */,
-				E940C7360735139B00C1642C /* PrimitiveDesktopNameInspector.nib */,
 				E9D29C06073E3AC400E0E6CE /* PrimitiveDesktopColorLabelInspector.nib */,
 				E9363A7106FCDDCD00E354DB /* Operations.nib */,
 				E958A879075EEFDA00773392 /* VTLayoutPreferences.nib */,
@@ -1387,6 +1382,8 @@
 				E903F75D071DB4EF00A00F30 /* VTApplication.m */,
 				E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */,
 				E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */,
+				EA38727F0A3D4CFE004F4330 /* VTMotionController.h */,
+				EA3872800A3D4CFE004F4330 /* VTMotionController.m */,
 			);
 			name = Controllers;
 			path = Source/Controllers;
@@ -1679,6 +1676,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EA5642990A3840DF006A706B /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				EABE639209CE9D0D00809063 /* Sparkle.xcodeproj */,
+				EABDFE2C09AC935300C523BA /* Smart Crash Reports SDK */,
+				EA913C9E0A3D4243008BECF1 /* UniMotion */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		EA913C9E0A3D4243008BECF1 /* UniMotion */ = {
+			isa = PBXGroup;
+			children = (
+				EA9141020A3D467A008BECF1 /* unimotion.h */,
+				EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */,
+			);
+			path = UniMotion;
+			sourceTree = "<group>";
+		};
 		EA9AF70E094444DC005D60CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1698,10 +1714,6 @@
 		EABDFE2C09AC935300C523BA /* Smart Crash Reports SDK */ = {
 			isa = PBXGroup;
 			children = (
-				EABDFE2D09AC935300C523BA /* API Documentation */,
-				EABDFE3C09AC935300C523BA /* Smart Crash Reports For Developers.rtfd */,
-				EABDFE3D09AC935300C523BA /* Smart Crash Reports Webpage.webloc */,
-				EABDFE3E09AC935300C523BA /* smartcrashreports.png */,
 				EABDFE3F09AC935300C523BA /* SmartCrashReportsAPI.h */,
 				EABDFE4009AC935300C523BA /* SmartCrashReportsAPI.o */,
 				EABDFE4109AC935300C523BA /* SmartCrashReportsInstall.h */,
@@ -1710,55 +1722,6 @@
 			name = "Smart Crash Reports SDK";
 			path = "../../Shared/Smart Crash Reports SDK";
 			sourceTree = SOURCE_ROOT;
-		};
-		EABDFE2D09AC935300C523BA /* API Documentation */ = {
-			isa = PBXGroup;
-			children = (
-				EABDFE2E09AC935300C523BA /* SmartCrashReportsAPI */,
-				EABDFE3509AC935300C523BA /* SmartCrashReportsInstall */,
-			);
-			path = "API Documentation";
-			sourceTree = "<group>";
-		};
-		EABDFE2E09AC935300C523BA /* SmartCrashReportsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				EABDFE2F09AC935300C523BA /* CompositePage.html */,
-				EABDFE3009AC935300C523BA /* Functions */,
-				EABDFE3209AC935300C523BA /* index.html */,
-				EABDFE3309AC935300C523BA /* SmartCrashReportsAPI.html */,
-				EABDFE3409AC935300C523BA /* toc.html */,
-			);
-			path = SmartCrashReportsAPI;
-			sourceTree = "<group>";
-		};
-		EABDFE3009AC935300C523BA /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				EABDFE3109AC935300C523BA /* Functions.html */,
-			);
-			path = Functions;
-			sourceTree = "<group>";
-		};
-		EABDFE3509AC935300C523BA /* SmartCrashReportsInstall */ = {
-			isa = PBXGroup;
-			children = (
-				EABDFE3609AC935300C523BA /* CompositePage.html */,
-				EABDFE3709AC935300C523BA /* Functions */,
-				EABDFE3909AC935300C523BA /* index.html */,
-				EABDFE3A09AC935300C523BA /* SmartCrashReportsInstall.html */,
-				EABDFE3B09AC935300C523BA /* toc.html */,
-			);
-			path = SmartCrashReportsInstall;
-			sourceTree = "<group>";
-		};
-		EABDFE3709AC935300C523BA /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				EABDFE3809AC935300C523BA /* Functions.html */,
-			);
-			path = Functions;
-			sourceTree = "<group>";
 		};
 		EABE639309CE9D0D00809063 /* Products */ = {
 			isa = PBXGroup;
@@ -2394,6 +2357,7 @@
 				E9558185076CA62B00401479 /* VTApplicationRunningColorTransformer.m in Sources */,
 				E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */,
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
+				EA3872820A3D4CFE004F4330 /* VTMotionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2892,16 +2856,6 @@
 				E956B77B078CADF5008B2571 /* fr */,
 			);
 			name = Operations.nib;
-			sourceTree = "<group>";
-		};
-		E940C7360735139B00C1642C /* PrimitiveDesktopNameInspector.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E940C7370735139B00C1642C /* English */,
-				E96B2BCC077B3DAE00EFF051 /* it */,
-				E956B778078CADD4008B2571 /* fr */,
-			);
-			name = PrimitiveDesktopNameInspector.nib;
 			sourceTree = "<group>";
 		};
 		E958A879075EEFDA00773392 /* VTLayoutPreferences.nib */ = {
@@ -3461,6 +3415,13 @@
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/Includes;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/UniMotion\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/UniMotion\"";
 				OTHER_LDFLAGS = "-fprofile-arcs";
 				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;
@@ -3479,6 +3440,13 @@
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/UniMotion\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/UniMotion\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;

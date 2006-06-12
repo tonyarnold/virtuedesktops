@@ -5,7 +5,7 @@
 	<key>IBDocumentLocation</key>
 	<string>17 405 356 240 0 0 1440 878 </string>
 	<key>IBFramework Version</key>
-	<string>443.0</string>
+	<string>446.1</string>
 	<key>IBLockedObjects</key>
 	<array>
 		<integer>18</integer>
@@ -15,6 +15,19 @@
 		<integer>5</integer>
 	</array>
 	<key>IBSystem Version</key>
-	<string>8G14</string>
+	<string>8J2115</string>
+	<key>IBUserGuides</key>
+	<dict>
+		<key>5</key>
+		<dict>
+			<key>guideLocations</key>
+			<array>
+				<string>Vertical:149.000000</string>
+				<string>Vertical:342.000000</string>
+			</array>
+			<key>guidesLocked</key>
+			<false/>
+		</dict>
+	</dict>
 </dict>
 </plist>

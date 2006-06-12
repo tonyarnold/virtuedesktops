@@ -12,6 +12,9 @@
 		activeBuildConfigurationName = Release;
 		activeExecutable = EA3F4E7309ECB542007358DC /* VirtueDesktops */;
 		activeTarget = 8D1107260486CEB800E47090 /* VirtueDesktops */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* VirtueDesktops */,
+		);
 		breakpoints = (
 		);
 		breakpointsGroup = EA3F4EC209ECB602007358DC /* XCBreakpointsBucket */;
@@ -94,7 +97,7 @@
 					43,
 					20,
 					20,
-					135,
+					192,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXFileDataSource_FiletypeID,
@@ -130,9 +133,9 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					20,
-					599,
+					578,
 					20,
-					48.1626,
+					48,
 					43,
 					43,
 					20,
@@ -170,8 +173,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 171005381;
-			PBXWorkspaceStateSaveDate = 171005381;
+			PBXPerProjectTemplateStateSaveDate = 171788803;
+			PBXWorkspaceStateSaveDate = 171788803;
 		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
@@ -208,6 +211,14 @@
 			sepNavWindowFrame = "{{31, 95}, {1225, 750}}";
 		};
 	};
+	E903F730071DB45D00A00F30 /* VTNotificationBezel.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {988, 3264}}";
+			sepNavSelRange = "{5504, 11}";
+			sepNavVisRect = "{{0, 2944}, {988, 278}}";
+			sepNavWindowFrame = "{{169, 59}, {1335, 819}}";
+		};
+	};
 	E903F732071DB45D00A00F30 /* VTNotificationBezelView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 2736}}";
@@ -226,26 +237,26 @@
 	};
 	E903F75D071DB4EF00A00F30 /* VTApplication.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1000, 368}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1245, 703}}";
 			sepNavSelRange = "{720, 0}";
-			sepNavVisRect = "{{0, 124}, {1000, 244}}";
+			sepNavVisRect = "{{0, 0}, {1245, 703}}";
 			sepNavWindowFrame = "{{143, 49}, {1290, 761}}";
 		};
 	};
 	E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1180, 1088}}";
-			sepNavSelRange = "{1504, 23}";
-			sepNavVisRect = "{{0, 291}, {1180, 636}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1180, 1120}}";
+			sepNavSelRange = "{1651, 0}";
+			sepNavVisRect = "{{0, 241}, {1180, 692}}";
 			sepNavWindowFrame = "{{120, 115}, {1225, 750}}";
 		};
 	};
 	E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1001, 15456}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1001, 640}}";
-			sepNavWindowFrame = "{{360, 102}, {1046, 754}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1246, 15568}}";
+			sepNavSelRange = "{3525, 19}";
+			sepNavVisRect = "{{0, 2657}, {1246, 682}}";
+			sepNavWindowFrame = "{{268, 105}, {1291, 740}}";
 		};
 	};
 	E903F78E071DB56900A00F30 /* VTPluginController.m */ = {
@@ -270,6 +281,22 @@
 			sepNavSelRange = "{2400, 0}";
 			sepNavVisRect = "{{0, 1176}, {1245, 647}}";
 			sepNavWindowFrame = "{{91, 108}, {1290, 761}}";
+		};
+	};
+	E903F8DE071DB88200A00F30 /* VTDesktopNamePrimitive.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1290, 761}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1290, 761}}";
+			sepNavWindowFrame = "{{15, 54}, {1335, 819}}";
+		};
+	};
+	E903F8DF071DB88200A00F30 /* VTDesktopNamePrimitive.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1290, 1264}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 503}, {1290, 761}}";
+			sepNavWindowFrame = "{{15, 54}, {1335, 819}}";
 		};
 	};
 	E912238E07808A4F005A3C10 /* English */ = {
@@ -348,15 +375,15 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 720}}";
 			sepNavSelRange = "{1222, 10}";
-			sepNavVisRect = "{{0, 73}, {1245, 647}}";
+			sepNavVisRect = "{{0, 17}, {1245, 703}}";
 			sepNavWindowFrame = "{{61, 70}, {1290, 761}}";
 		};
 	};
 	E9124F9C073201D200BD28CD /* VTApplicationWatcherController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 5232}}";
-			sepNavSelRange = "{10854, 0}";
-			sepNavVisRect = "{{0, 4585}, {1245, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {988, 5280}}";
+			sepNavSelRange = "{4154, 32}";
+			sepNavVisRect = "{{0, 1757}, {988, 278}}";
 			sepNavWindowFrame = "{{17, 94}, {1290, 761}}";
 		};
 	};
@@ -515,9 +542,9 @@
 	};
 	E940C73A073513D700C1642C /* VTPrimitiveDesktopNameInspector.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {919, 580}}";
+			sepNavIntBoundsRect = "{{0, 0}, {919, 636}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {919, 580}}";
+			sepNavVisRect = "{{0, 0}, {919, 636}}";
 			sepNavWindowFrame = "{{130, 74}, {964, 694}}";
 		};
 	};
@@ -525,7 +552,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {919, 1568}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 725}, {919, 580}}";
+			sepNavVisRect = "{{0, 932}, {919, 636}}";
 			sepNavWindowFrame = "{{107, 95}, {964, 694}}";
 		};
 	};
@@ -534,9 +561,9 @@
 	};
 	E9560C4B071DAB6000D497BE /* VTPluginDesktopNamePrimitive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {919, 580}}";
+			sepNavIntBoundsRect = "{{0, 0}, {919, 636}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {919, 580}}";
+			sepNavVisRect = "{{0, 0}, {919, 636}}";
 			sepNavWindowFrame = "{{15, 179}, {964, 694}}";
 		};
 	};
@@ -614,6 +641,14 @@
 			sepNavVisRect = "{{0, 13}, {734, 195}}";
 		};
 	};
+	E97105580747D445009CEAFD /* VTPreferenceKeys.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1237, 686}}";
+			sepNavSelRange = "{616, 0}";
+			sepNavVisRect = "{{0, 0}, {1237, 686}}";
+			sepNavWindowFrame = "{{38, 108}, {1282, 744}}";
+		};
+	};
 	E9832A09073B4D2200E6D99A /* VTMatrixPagerPreferences.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 647}}";
@@ -641,6 +676,22 @@
 	E9C62991075A146C0072C1EF /* VTApplicationPreferences */ = {
 		activeExec = 0;
 	};
+	E9C62997075A15330072C1EF /* VTApplicationPreferencesController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1290, 761}}";
+			sepNavSelRange = "{707, 50}";
+			sepNavVisRect = "{{0, 0}, {1290, 761}}";
+			sepNavWindowFrame = "{{15, 54}, {1335, 819}}";
+		};
+	};
+	E9C62998075A15330072C1EF /* VTApplicationPreferencesController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1237, 2512}}";
+			sepNavSelRange = "{1601, 32}";
+			sepNavVisRect = "{{0, 432}, {1237, 686}}";
+			sepNavWindowFrame = "{{69, 132}, {1282, 744}}";
+		};
+	};
 	E9C629B9075A35F00072C1EF /* VTAppearancePreferences */ = {
 		activeExec = 0;
 	};
@@ -661,8 +712,8 @@
 	E9D29BF2073E362300E0E6CE /* VTDesktopColorLabelPrimitive.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 1728}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 1100}, {1046, 628}}";
+			sepNavSelRange = "{1209, 15}";
+			sepNavVisRect = "{{0, 494}, {1046, 684}}";
 			sepNavWindowFrame = "{{38, 110}, {1091, 742}}";
 		};
 	};
@@ -670,15 +721,15 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 688}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1046, 628}}";
+			sepNavVisRect = "{{0, 4}, {1046, 684}}";
 			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
 		};
 	};
 	E9D29BFD073E37EE00E0E6CE /* VTPluginDesktopColorLabelPrimitive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 628}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 684}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1046, 628}}";
+			sepNavVisRect = "{{0, 0}, {1046, 684}}";
 			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
 		};
 	};
@@ -708,6 +759,22 @@
 		vrLen = 1202;
 		vrLoc = 5193;
 	};
+	EA38727F0A3D4CFE004F4330 /* VTMotionController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1290, 761}}";
+			sepNavSelRange = "{334, 0}";
+			sepNavVisRect = "{{0, 0}, {1290, 761}}";
+			sepNavWindowFrame = "{{6, 50}, {1335, 819}}";
+		};
+	};
+	EA3872800A3D4CFE004F4330 /* VTMotionController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1218, 1712}}";
+			sepNavSelRange = "{2413, 0}";
+			sepNavVisRect = "{{0, 996}, {1218, 716}}";
+			sepNavWindowFrame = "{{29, 100}, {1263, 774}}";
+		};
+	};
 	EA3F4E7309ECB542007358DC /* VirtueDesktops */ = {
 		isa = PBXExecutable;
 		activeArgIndex = 2147483647;
@@ -733,6 +800,8 @@
 		};
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
 	};
 	EA3F4EB409ECB544007358DC /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -749,26 +818,16 @@
 	};
 	EA3F4EC209ECB602007358DC /* XCBreakpointsBucket */ = {
 		isa = XCBreakpointsBucket;
-		name = "Project Breakpoints";
+		name = VirtueDesktops;
 		objects = (
 		);
 	};
-	EABDFE2F09AC935300C523BA /* CompositePage.html */ = {
+	EA9141020A3D467A008BECF1 /* unimotion.h */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{15, 131}, {1091, 742}}";
-		};
-	};
-	EABDFE3609AC935300C523BA /* CompositePage.html */ = {
-		uiCtxt = {
-			sepNavWindowFrame = "{{314, 110}, {807, 744}}";
-		};
-	};
-	EABDFE3C09AC935300C523BA /* Smart Crash Reports For Developers.rtfd */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {762, 2936}}";
-			sepNavSelRange = "{7180, 0}";
-			sepNavVisRect = "{{0, 0}, {762, 630}}";
-			sepNavWindowFrame = "{{38, 108}, {807, 744}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1246, 832}}";
+			sepNavSelRange = "{1038, 10}";
+			sepNavVisRect = "{{0, 0}, {1246, 682}}";
+			sepNavWindowFrame = "{{15, 133}, {1291, 740}}";
 		};
 	};
 	EAC2B687095E17EC00748870 /* Info.plist */ = {

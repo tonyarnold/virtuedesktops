@@ -44,6 +44,7 @@ enum
 - (void) unregisterObservers;
 #pragma mark -
 - (void) updateStatusItem;
+- (void) updateMotionSensor;
 - (void) updateDesktopsMenu;
 - (void) updateActiveDesktopMenu;
 - (void) updateVersionNumbers;
@@ -166,6 +167,10 @@ enum
 	mApplicationWatcher		= [[VTApplicationWatcherController alloc] init];
 	mDesktopInspector			= [[VTDesktopViewController alloc] init];
 	mApplicationInspector	= [[VTApplicationViewController alloc] init];
+  mMotionController     = [[VTMotionController alloc] init];
+  
+  [mMotionController setSensitivity: [[NSUserDefaults standardUserDefaults] floatForKey: VTMotionSensorSensitivity]];
+  [mMotionController setEnabled: [[NSUserDefaults standardUserDefaults] boolForKey: VTMotionSensorEnabled]];
   
 	// Interface controllers
 	mNotificationBezel = [[VTNotificationBezel alloc] init];
@@ -257,6 +262,16 @@ enum
   
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver: self
 																														forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]
+																															 options: NSKeyValueObservingOptionNew
+																															 context: NULL];
+  
+  [[NSUserDefaultsController sharedUserDefaultsController] addObserver: self
+																														forKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorEnabled]
+																															 options: NSKeyValueObservingOptionNew
+																															 context: NULL];
+  
+  [[NSUserDefaultsController sharedUserDefaultsController] addObserver: self
+																														forKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorSensitivity]
 																															 options: NSKeyValueObservingOptionNew
 																															 context: NULL];
   
@@ -607,6 +622,14 @@ enum
 	else if ([keyPath hasSuffix: VTVirtueShowStatusbarDesktopName]) {
 		[self updateStatusItem];
 	}
+  else if ([keyPath hasSuffix: VTMotionSensorEnabled]) {
+    [self updateMotionSensor];
+  }
+  else if ([keyPath hasSuffix: VTMotionSensorSensitivity]) {
+    [self updateMotionSensor];
+  }
+  
+  //[super observeValueForKeyPath: keyPath ofObject: anObject change: theChange context: theContext];
 }
 
 @end
@@ -731,6 +754,11 @@ enum
 			ZEN_RELEASE(mStatusItem);
 		}
 	}
+}
+
+- (void) updateMotionSensor {
+  [mMotionController setSensitivity: [[NSUserDefaults standardUserDefaults] floatForKey: VTMotionSensorSensitivity]];
+  [mMotionController setEnabled: [[NSUserDefaults standardUserDefaults] boolForKey: VTMotionSensorEnabled]];
 }
 
 - (void) updateDesktopsMenu {

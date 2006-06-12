@@ -24,6 +24,7 @@
   VTDesktopDecoration*  mDecoration;
   // unique identifier
   NSString*             mUUID;
+  BOOL                  mShowsBackground;
   BOOL                  mIsUsingDefaultDesktopImage;
 }
 
@@ -43,6 +44,7 @@
 #pragma mark -
 - (void) setDefaultDesktopBackgroundPath: (NSString*) path;
 - (NSString*) defaultDesktopBackgroundPath;
+- (void) setShowsBackground: (BOOL) showsBackground;
 - (BOOL) showsBackground;
 - (void) setShowsDefaultBackground: (BOOL) defaultBackground;
 - (BOOL) showsDefaultBackground;

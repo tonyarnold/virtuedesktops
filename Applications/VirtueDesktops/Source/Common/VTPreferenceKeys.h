@@ -14,9 +14,7 @@
 #define VTPreferencesVirtueVersionName					@"VTPreferencesVirtueVersionName"
 #define VTPreferencesDecorationTemplateName			@"VTPreferencesDecorationTemplate"
 #define VTPreferencesUsesDecorationTemplateName	@"VTPreferencesUsesDecorationTemplate"
-
 #define VTPreferencesApplicationsName						@"VTPreferencesApplications"
-
 #define VTPrivateFinderBundleIdentifier					@"VTPrivateFinderBundleIdentifier"
 #define VTPrivateFinderDesktopLayer							@"VTPrivateFinderDesktopLayer"
 #define VTPrivateHideSplashScreen								@"VTPrivateHideSplashScreen"

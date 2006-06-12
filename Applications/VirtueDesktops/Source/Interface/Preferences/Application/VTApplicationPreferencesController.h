@@ -19,7 +19,9 @@
 	IBOutlet NSButton*		mControlButton; 
 	IBOutlet NSButton*		mAlternateButton; 
 	IBOutlet NSButton*		mCommandButton; 
-	IBOutlet NSButton*		mShiftButton; 
+	IBOutlet NSButton*		mShiftButton;
+  IBOutlet NSButton*    mEnableMotionSensor;
+  IBOutlet NSSlider*    mMotionSensorSensitivity;
 }
 
 #pragma mark -
