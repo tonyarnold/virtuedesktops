@@ -4,8 +4,8 @@
 *
 * A desktop extension for MacOS X
 *
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -36,8 +36,8 @@
 - (id) initWithDesktop: (VTDesktop*) desktop {
 	if (self = [super init]) {
 		mDecorationPrimitives	= [[NSMutableArray alloc] init]; 
-		mControlView			= nil; 
-		mEnabled				= YES; 
+		mControlView          = nil; 
+		mEnabled              = YES; 
 		
 		ZEN_ASSIGN(mDesktop, desktop); 
 				
@@ -61,9 +61,9 @@
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super init]) {
 		// decode primitives 
-		mControlView			= nil; 
-		mDesktop				= [[coder decodeObjectForKey: kVtCodingDesktop] retain]; 
-		mEnabled				= [coder decodeBoolForKey: kVtCodingEnabled]; 
+		mControlView          = nil; 
+		mDesktop              = [[coder decodeObjectForKey: kVtCodingDesktop] retain]; 
+		mEnabled              = [coder decodeBoolForKey: kVtCodingEnabled]; 
 		mDecorationPrimitives	= [[coder decodeObjectForKey: kVtCodingPrimitives] retain]; 
 		
 		return self; 

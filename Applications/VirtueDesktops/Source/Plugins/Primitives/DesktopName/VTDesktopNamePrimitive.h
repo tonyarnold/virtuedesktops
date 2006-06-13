@@ -14,7 +14,6 @@
 #import <Cocoa/Cocoa.h>
 #import <Virtue/VTDecorationPrimitiveText.h>
 
-@interface VTDesktopNamePrimitive : VTDecorationPrimitiveText {
-}
+@interface VTDesktopNamePrimitive : VTDecorationPrimitiveText { }
 
 @end

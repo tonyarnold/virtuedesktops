@@ -133,7 +133,27 @@ enum
 	
 	// Inject dock extension code into the Dock process if it hasn't been already
 	if (dockCodeIsInjected != 1) {
-		dec_inject_code();
+    if (dec_inject_code() != 0) { 
+      // If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and 
+      // by setting the set-group-ID-on-execution bit 
+      if (fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]) == 0) { 
+        NSLog(@"Fixing VirtueDesktops' permissions so that we can execute as part of the procmod group.");
+        // If the fix is successfull (i.e. user entered his password), then we relaunch a new instance of ourself  
+        // and terminate the current instance 
+        // Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
+        setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
+        system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
+               "    /bin/sleep .2;\n"
+               "  done\n"
+               "  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
+               "    /usr/bin/open \"${LAUNCH_PATH}\"\n"
+               "  fi\n"
+               "} &>/dev/null &'");
+        [[NSApplication sharedApplication] terminate:self]; 
+      } else { 
+        NSLog(@"Installation of VirtueDesktops' dock extension has failed. Some of VirtueDesktops' features will not work as expected."); 
+      } 
+    } 
 	}
 	
 	// @TODO: Remove this transitional migration code in 0.7+
@@ -744,7 +764,7 @@ enum
 				[NSColor darkGrayColor], NSForegroundColorAttributeName,
 				nil];
       
-			NSString*			title			= [NSString stringWithFormat: @"[%@]", [[[VTDesktopController sharedInstance] activeDesktop] name]];
+			NSString*           title           = [NSString stringWithFormat: @"[%@]", [[[VTDesktopController sharedInstance] activeDesktop] name]];
 			NSAttributedString* attributedTitle = [[[NSAttributedString alloc] initWithString: title attributes: attributes] autorelease];
       
 			[mStatusItem setAttributedTitle: attributedTitle];

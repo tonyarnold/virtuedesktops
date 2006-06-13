@@ -208,6 +208,10 @@
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
 		EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54635209AC9CD1002EDE9E /* WebKit.framework */; };
 		EA5A45F20A089AD8001EF27C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABE639809CE9D0D00809063 /* Sparkle.framework */; };
+		EA63C39F0A3F0B7800EC66B1 /* authtool.c in Sources */ = {isa = PBXBuildFile; fileRef = EA63C39E0A3F0B7800EC66B1 /* authtool.c */; };
+		EA63C3AF0A3F0BD600EC66B1 /* fixExecutable.c in Sources */ = {isa = PBXBuildFile; fileRef = EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */; };
+		EA63C3B40A3F0BF200EC66B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE9209AC94E500C523BA /* Security.framework */; };
+		EA63C3EC0A3F0C1D00EC66B1 /* authtool in Resources */ = {isa = PBXBuildFile; fileRef = EA63C38B0A3F0AFD00EC66B1 /* authtool */; };
 		EA6FE7D70A31545C004CCC3F /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E913F21A076E3FF400072617 /* PrimitiveTextInspector.nib */; };
 		EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EA8AD5FD0A3E820D00737086 /* VTWindowPager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */; };
@@ -375,6 +379,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8D01CCC60486CAD60068D4B7;
 			remoteInfo = DockExtension;
+		};
+		EA63C3E70A3F0BF800EC66B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA63C38A0A3F0AFD00EC66B1;
+			remoteInfo = authtool;
 		};
 		EA7CD178094AEE10008C738D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -943,6 +954,10 @@
 		EA3872800A3D4CFE004F4330 /* VTMotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTMotionController.m; sourceTree = "<group>"; };
 		EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libUniMotion.dylib; sourceTree = "<group>"; };
 		EA54635209AC9CD1002EDE9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		EA63C38B0A3F0AFD00EC66B1 /* authtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = authtool; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA63C39D0A3F0B7800EC66B1 /* authtool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authtool.h; sourceTree = "<group>"; };
+		EA63C39E0A3F0B7800EC66B1 /* authtool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = authtool.c; sourceTree = "<group>"; };
+		EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fixExecutable.c; sourceTree = "<group>"; };
 		EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTWindowPager.h; sourceTree = "<group>"; };
 		EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTWindowPager.m; sourceTree = "<group>"; };
 		EA9141020A3D467A008BECF1 /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimotion.h; sourceTree = "<group>"; };
@@ -1096,6 +1111,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA63C3890A3F0AFD00EC66B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA63C3B40A3F0BF200EC66B1 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1108,6 +1131,7 @@
 				E9572C53070B3F630053E494 /* Interface */,
 				E93639A506FCD8D500E354DB /* Plugins */,
 				E91ADE0A070595A700F69228 /* Scripting */,
+				EA63C39C0A3F0B6900EC66B1 /* AuthTool */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1150,6 +1174,7 @@
 				E958A873075EEEC200773392 /* VTLayoutPreferences.prefPane */,
 				E913F15D076E375500072617 /* VTDesktopTemplatePreferences.prefPane */,
 				E913F26D076E411B00072617 /* VTInterface.framework */,
+				EA63C38B0A3F0AFD00EC66B1 /* authtool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1691,6 +1716,17 @@
 			name = "Third Party";
 			sourceTree = "<group>";
 		};
+		EA63C39C0A3F0B6900EC66B1 /* AuthTool */ = {
+			isa = PBXGroup;
+			children = (
+				EA63C39D0A3F0B7800EC66B1 /* authtool.h */,
+				EA63C39E0A3F0B7800EC66B1 /* authtool.c */,
+				EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */,
+			);
+			name = AuthTool;
+			path = Source/AuthTool;
+			sourceTree = "<group>";
+		};
 		EA913C9E0A3D4243008BECF1 /* UniMotion */ = {
 			isa = PBXGroup;
 			children = (
@@ -1809,6 +1845,7 @@
 				EA7CD179094AEE10008C738D /* PBXTargetDependency */,
 				EA290D5D09FE0D3500CAA1DA /* PBXTargetDependency */,
 				EA5A45E00A089A9D001EF27C /* PBXTargetDependency */,
+				EA63C3E80A3F0BF800EC66B1 /* PBXTargetDependency */,
 			);
 			name = VirtueDesktops;
 			productInstallPath = "$(HOME)/Applications";
@@ -1996,6 +2033,22 @@
 			productReference = E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
+		EA63C38A0A3F0AFD00EC66B1 /* authtool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA63C3920A3F0B0200EC66B1 /* Build configuration list for PBXNativeTarget "authtool" */;
+			buildPhases = (
+				EA63C3880A3F0AFD00EC66B1 /* Sources */,
+				EA63C3890A3F0AFD00EC66B1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = authtool;
+			productName = authtool;
+			productReference = EA63C38B0A3F0AFD00EC66B1 /* authtool */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2050,6 +2103,7 @@
 				E9C629FD075A49B20072C1EF /* VTHotkeyPreferences */,
 				E958A872075EEEC200773392 /* VTLayoutPreferences */,
 				E9127205072A6211006DC207 /* VTPluginPreferences */,
+				EA63C38A0A3F0AFD00EC66B1 /* authtool */,
 			);
 		};
 /* End PBXProject section */
@@ -2111,6 +2165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA63C3EC0A3F0C1D00EC66B1 /* authtool in Resources */,
 				EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */,
 				E959A0880767140A00543439 /* imageKeyboardTrigger.png in Resources */,
 				E959A0890767140A00543439 /* imageMouseTrigger.png in Resources */,
@@ -2364,6 +2419,7 @@
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
 				EA3872820A3D4CFE004F4330 /* VTMotionController.m in Sources */,
 				EA8AD5FE0A3E820D00737086 /* VTWindowPager.m in Sources */,
+				EA63C3AF0A3F0BD600EC66B1 /* fixExecutable.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2455,6 +2511,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA63C3880A3F0AFD00EC66B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA63C39F0A3F0B7800EC66B1 /* authtool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2532,6 +2596,11 @@
 			isa = PBXTargetDependency;
 			name = DockExtension;
 			targetProxy = EA5A45DF0A089A9D001EF27C /* PBXContainerItemProxy */;
+		};
+		EA63C3E80A3F0BF800EC66B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA63C38A0A3F0AFD00EC66B1 /* authtool */;
+			targetProxy = EA63C3E70A3F0BF800EC66B1 /* PBXContainerItemProxy */;
 		};
 		EA7CD179094AEE10008C738D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3498,6 +3567,36 @@
 			};
 			name = Release;
 		};
+		EA63C3930A3F0B0200EC66B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = authtool;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EA63C3940A3F0B0200EC66B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = authtool;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3596,6 +3695,15 @@
 			buildConfigurations = (
 				EA609C25090666C8003BD20D /* Debug */,
 				EA609C27090666C8003BD20D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA63C3920A3F0B0200EC66B1 /* Build configuration list for PBXNativeTarget "authtool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA63C3930A3F0B0200EC66B1 /* Debug */,
+				EA63C3940A3F0B0200EC66B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

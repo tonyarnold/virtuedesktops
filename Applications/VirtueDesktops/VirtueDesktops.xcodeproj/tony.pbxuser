@@ -21,6 +21,7 @@
 		codeSenseManager = EA3F4EB509ECB544007358DC /* Code sense */;
 		executables = (
 			EA3F4E7309ECB542007358DC /* VirtueDesktops */,
+			EA63C38C0A3F0AFD00EC66B1 /* authtool */,
 		);
 		perUserDictionary = {
 			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
@@ -173,12 +174,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 171897237;
-			PBXWorkspaceStateSaveDate = 171897237;
-		};
-		perUserProjectItems = {
-			EA6E40FB0A3EF441005D268B /* PBXTextBookmark */ = EA6E40FB0A3EF441005D268B /* PBXTextBookmark */;
-			EA6E41000A3EF446005D268B /* PBXTextBookmark */ = EA6E41000A3EF446005D268B /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 171904288;
+			PBXWorkspaceStateSaveDate = 171904288;
 		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
@@ -250,17 +247,17 @@
 	E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1180, 1120}}";
-			sepNavSelRange = "{1651, 0}";
+			sepNavSelRange = "{1100, 11}";
 			sepNavVisRect = "{{0, 241}, {1180, 692}}";
 			sepNavWindowFrame = "{{120, 115}, {1225, 750}}";
 		};
 	};
 	E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1246, 15664}}";
-			sepNavSelRange = "{24677, 27}";
-			sepNavVisRect = "{{0, 10355}, {1246, 682}}";
-			sepNavWindowFrame = "{{83, 95}, {1291, 740}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1246, 15984}}";
+			sepNavSelRange = "{5402, 0}";
+			sepNavVisRect = "{{0, 1897}, {1246, 682}}";
+			sepNavWindowFrame = "{{87, 105}, {1291, 740}}";
 		};
 	};
 	E903F78E071DB56900A00F30 /* VTPluginController.m */ = {
@@ -290,7 +287,7 @@
 	E903F8DE071DB88200A00F30 /* VTDesktopNamePrimitive.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1290, 761}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{506, 0}";
 			sepNavVisRect = "{{0, 0}, {1290, 761}}";
 			sepNavWindowFrame = "{{15, 54}, {1335, 819}}";
 		};
@@ -298,8 +295,8 @@
 	E903F8DF071DB88200A00F30 /* VTDesktopNamePrimitive.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1290, 1264}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 503}, {1290, 761}}";
+			sepNavSelRange = "{0, 370}";
+			sepNavVisRect = "{{0, 0}, {1290, 761}}";
 			sepNavWindowFrame = "{{15, 54}, {1335, 819}}";
 		};
 	};
@@ -564,7 +561,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 5152}}";
 			sepNavSelRange = "{4247, 0}";
-			sepNavVisRect = "{{0, 2273}, {1245, 703}}";
+			sepNavVisRect = "{{0, 0}, {1245, 703}}";
 			sepNavWindowFrame = "{{61, 70}, {1290, 761}}";
 		};
 	};
@@ -701,6 +698,14 @@
 			sepNavWindowFrame = "{{15, 112}, {1290, 761}}";
 		};
 	};
+	E9A2D06F07637265009CDAC5 /* VTTriggerToTypeImage.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 668}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1299, 668}}";
+			sepNavWindowFrame = "{{15, 147}, {1344, 726}}";
+		};
+	};
 	E9C62991075A146C0072C1EF /* VTApplicationPreferences */ = {
 		activeExec = 0;
 	};
@@ -726,11 +731,19 @@
 	E9C629FD075A49B20072C1EF /* VTHotkeyPreferences */ = {
 		activeExec = 0;
 	};
+	E9C62A02075A4A590072C1EF /* VTHotkeyPreferencesController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 1072}}";
+			sepNavSelRange = "{840, 23}";
+			sepNavVisRect = "{{0, 404}, {1299, 668}}";
+			sepNavWindowFrame = "{{84, 84}, {1344, 726}}";
+		};
+	};
 	E9C62A03075A4A590072C1EF /* VTHotkeyPreferencesController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 9376}}";
-			sepNavSelRange = "{5601, 0}";
-			sepNavVisRect = "{{0, 2768}, {1046, 628}}";
+			sepNavSelRange = "{15576, 0}";
+			sepNavVisRect = "{{0, 7464}, {1046, 684}}";
 			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
 		};
 	};
@@ -850,23 +863,58 @@
 		objects = (
 		);
 	};
-	EA6E40FB0A3EF441005D268B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "error: 'VTRequestSendWindowBackName' undeclared (first use in this function)";
-		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
-		rLen = 1;
-		rLoc = 664;
-		rType = 1;
+	EA63C38A0A3F0AFD00EC66B1 /* authtool */ = {
+		activeExec = 0;
+		executables = (
+			EA63C38C0A3F0AFD00EC66B1 /* authtool */,
+		);
 	};
-	EA6E41000A3EF446005D268B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
-		name = VTRequestSendWindowBackName;
-		rLen = 27;
-		rLoc = 24677;
-		rType = 0;
-		vrLen = 2757;
-		vrLoc = 23069;
+	EA63C38C0A3F0AFD00EC66B1 /* authtool */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = authtool;
+		sourceDirectories = (
+		);
+	};
+	EA63C39D0A3F0B7800EC66B1 /* authtool.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 668}}";
+			sepNavSelRange = "{146, 0}";
+			sepNavVisRect = "{{0, 0}, {1299, 668}}";
+			sepNavWindowFrame = "{{15, 147}, {1344, 726}}";
+		};
+	};
+	EA63C39E0A3F0B7800EC66B1 /* authtool.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 3344}}";
+			sepNavSelRange = "{164, 0}";
+			sepNavVisRect = "{{0, 0}, {1299, 668}}";
+			sepNavWindowFrame = "{{84, 84}, {1344, 726}}";
+		};
+	};
+	EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 2976}}";
+			sepNavSelRange = "{5134, 14}";
+			sepNavVisRect = "{{0, 1837}, {1299, 668}}";
+			sepNavWindowFrame = "{{14, 152}, {1344, 726}}";
+		};
 	};
 	EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {
 		uiCtxt = {

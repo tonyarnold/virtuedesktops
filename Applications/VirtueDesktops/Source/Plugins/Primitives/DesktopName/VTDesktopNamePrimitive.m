@@ -43,10 +43,11 @@
 
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super initWithCoder: coder]) {
-		// set up binding 
-		if (([self container]) && ([[self container] desktop]))
-			[self bind: @"text" toObject: [[self container] desktop] withKeyPath: @"name" options: nil]; 	
-				
+		// Set up binding 
+		if ([self container]) {
+     [self bind: @"text" toObject: [self container] withKeyPath: @"mDesktop.name" options: nil]; 	
+    }
+    
 		return self; 
 	}
 	
@@ -67,10 +68,9 @@
 	[super setContainer: container]; 
 	
 	// and attach to the desktop inside the container 
-	if ((container != nil) && ([container desktop] != nil))
-		[self bind: @"text" toObject: [[self container] desktop] withKeyPath: @"name" options: nil]; 	
-	else
-		[self setText: @""]; 
+	if (container) {
+    [self bind: @"text" toObject: container withKeyPath: @"mDesktop.name" options: nil]; 	
+  }
 }
 
 @end

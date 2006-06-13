@@ -480,7 +480,7 @@
 	if (trigger == nil)
 		return; 
 	
-	if ([trigger isKindOfClass: [w class]]) {
+	if ([trigger isKindOfClass: [VTHotkeyTrigger class]]) {
 		[mInspectorDrawer setContentView: mHotkeyInspectorView]; 
 	}
 	else if ([trigger isKindOfClass: [VTMouseTrigger class]]) {

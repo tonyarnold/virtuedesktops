@@ -141,7 +141,7 @@
 	[window setLevel: (kCGDesktopIconWindowLevel - 1)];
 	
 	[pWindow setIgnoredByExpose: YES];
-	[pWindow setSticky: NO];	
+	[pWindow setSticky: NO];
 }
 
 @end 

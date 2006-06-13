@@ -198,8 +198,8 @@
 	
 	// here we are sure we want to delete the desktop, so we will trigger some 
 	// notifications by hand to inform our plugins 
-	NSMethodSignature*	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
-	NSInvocation*		invocation	= [NSInvocation invocationWithMethodSignature: signature];
+	NSMethodSignature*	signature   = [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
+	NSInvocation*       invocation	= [NSInvocation invocationWithMethodSignature: signature];
 	
 	[invocation setSelector: @selector(onDesktopWillDeleteNotification:)];
 	[invocation setArgument: &desktopToRemove atIndex: 2];
@@ -700,7 +700,7 @@
 		// copy the primitive 
 		VTDecorationPrimitive* clonedPrimitive = [primitive copy]; 
 		// and add the clone to our desktop decoration primitives 
-		[[desktop decoration] addDecorationPrimitive: clonedPrimitive]; 
+		[[desktop decoration] addDecorationPrimitive: clonedPrimitive];
 	}
 	
 	[deskPrimitiveTypes release];

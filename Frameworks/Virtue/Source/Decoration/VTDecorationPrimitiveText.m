@@ -259,9 +259,11 @@
 #pragma mark Drawing 
 
 - (void) drawInView: (NSView*) view withRect: (NSRect) rect {
-	// if there is no name, return 
+  // if there is no name, return 
 	if (mText == nil)
 		return; 
+  
+  
 	
 	// draw the desktop name 
 	NSRect	screenFrame = [[NSScreen mainScreen] visibleFrame]; 
