@@ -128,6 +128,11 @@
 
 #pragma mark -
 #pragma mark Attributes 
+- (NSString*) name {
+  return @"Matrix";
+}
+
+#pragma mark -
 - (void) setDisplaysApplicationIcons: (BOOL) flag {
 	[[mWindow contentView] setDisplaysApplicationIcons: flag]; 
 }
@@ -306,7 +311,7 @@
 	[[view desktopCollectionMatrix] setAction: @selector(onDesktopSelected:)]; 
 	
 	// get the content rect from the view 
-	contentRect = [view frame]; 
+	contentRect = [view frame];
 	
 	// create the window 
 	mWindow = [[VTMatrixPagerWindow alloc] initWithContentRect: contentRect 

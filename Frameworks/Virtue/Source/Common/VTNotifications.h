@@ -77,6 +77,9 @@
 //
 #define VTRequestApplicationMoveToNorth			@"VTRequestApplicationMoveToNorth"
 
+// Request to send window behind other windows
+#define VTRequestSendWindowBackName         @"VTRequestSendWindowBack"
+
 #pragma mark -
 #pragma mark Window open Requests 
 

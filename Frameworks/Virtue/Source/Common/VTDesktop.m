@@ -96,7 +96,7 @@
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
   if (mIsUsingDefaultDesktopImage == FALSE)
     [dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
-  
+
   [dictionary setObject: [NSNumber numberWithBool: mShowsBackground] forKey: kVtCodingShowsBackgroundImage];
   [dictionary setObject: [NSNumber numberWithBool: mIsUsingDefaultDesktopImage] forKey: kVtCodingDefaultBackgroundImage];
   [dictionary setObject: [self name] forKey: kVtCodingName];
@@ -113,11 +113,11 @@
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
   mShowsBackground            = [[dictionary objectForKey: kVtCodingShowsBackgroundImage] boolValue];
   mIsUsingDefaultDesktopImage = [[dictionary objectForKey: kVtCodingDefaultBackgroundImage] boolValue];
-  
+
   [self setDefaultDesktopBackgroundPath: [[VTDesktopBackgroundHelper sharedInstance] background]];
   if (mIsUsingDefaultDesktopImage == NO)
     [self setDesktopBackground: [dictionary objectForKey: kVtCodingBackgroundImage]];
-  
+
   mUUID                       = [[dictionary objectForKey: kVtCodingUUID] copy];
   NSColor* colorData          = [NSColor colorWithString: [dictionary objectForKey: kVtCodingColorLabel]];
 
@@ -142,16 +142,16 @@
 - (void) setDesktopBackground: (NSString*) path {
   if (mShowsBackground == NO)
     return;
-  
+
   if (path == nil)
     path = [NSString stringWithString: [self defaultDesktopBackgroundPath]];
-    
+
   if ([mDefaultDesktopBackgroundImagePath isEqualToString: path]) {
     [self setShowsDefaultBackground: YES];
     ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, mDefaultDesktopBackgroundImagePath);
     return;
   }
-  
+
   [self setShowsDefaultBackground: NO];
   ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
@@ -165,12 +165,12 @@
 - (void) setDefaultDesktopBackgroundPath: (NSString*) path {
   if (path == nil)
     return;
-  
+
   ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundImagePath, path);
-  
+
   if ([self showsDefaultBackground])
     [self setDesktopBackground: mDefaultDesktopBackgroundImagePath];
-  
+
   return;
 }
 
@@ -181,7 +181,7 @@
 - (void) setShowsBackground: (BOOL) showsBackground {
   if (showsBackground == mShowsBackground)
     return;
-  
+
   mShowsBackground = showsBackground;
 }
 
@@ -192,7 +192,7 @@
 - (void) setShowsDefaultBackground: (BOOL) defaultBackground {
   if (defaultBackground == mIsUsingDefaultDesktopImage)
     return;
-  
+
   mIsUsingDefaultDesktopImage = defaultBackground;
 }
 

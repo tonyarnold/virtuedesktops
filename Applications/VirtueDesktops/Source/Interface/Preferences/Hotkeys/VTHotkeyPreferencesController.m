@@ -304,11 +304,11 @@
 #pragma mark -
 #pragma mark Actions 
 - (IBAction) showAvailableTriggers: (id) sender {
-	[[NSApplication sharedApplication] beginSheet: mAvailableTriggersPanel
-								   modalForWindow: [[self mainView] window]
-									modalDelegate: self
-								   didEndSelector: @selector(availableTriggersPanelEnded:returnCode:contextInfo:)
-									  contextInfo: NULL];
+	[[NSApplication sharedApplication] beginSheet: mAvailableTriggersPanel 
+                                 modalForWindow: [[self mainView] window] 
+                                  modalDelegate: self 
+                                 didEndSelector: @selector(availableTriggersPanelEnded:returnCode:contextInfo:) 
+                                    contextInfo: NULL];
 }
 
 #pragma mark -
@@ -480,7 +480,7 @@
 	if (trigger == nil)
 		return; 
 	
-	if ([trigger isKindOfClass: [VTHotkeyTrigger class]]) {
+	if ([trigger isKindOfClass: [w class]]) {
 		[mInspectorDrawer setContentView: mHotkeyInspectorView]; 
 	}
 	else if ([trigger isKindOfClass: [VTMouseTrigger class]]) {

@@ -15,8 +15,9 @@
 #import <Zen/Zen.h> 
 
 #pragma mark Coding keys 
-#define kVtCodingImagePath		@"imagePath"
+#define kVtCodingImagePath		@"path"
 #define kVtCodingIntensity		@"intensity"
+#define kVtCodingScaling      @"scaling"
 
 #pragma mark -
 @implementation VTDecorationPrimitiveWatermark

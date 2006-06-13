@@ -173,8 +173,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 171788803;
-			PBXWorkspaceStateSaveDate = 171788803;
+			PBXPerProjectTemplateStateSaveDate = 171897237;
+			PBXWorkspaceStateSaveDate = 171897237;
+		};
+		perUserProjectItems = {
+			EA6E40FB0A3EF441005D268B /* PBXTextBookmark */ = EA6E40FB0A3EF441005D268B /* PBXTextBookmark */;
+			EA6E41000A3EF446005D268B /* PBXTextBookmark */ = EA6E41000A3EF446005D268B /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
@@ -253,10 +257,10 @@
 	};
 	E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1246, 15568}}";
-			sepNavSelRange = "{3525, 19}";
-			sepNavVisRect = "{{0, 2657}, {1246, 682}}";
-			sepNavWindowFrame = "{{268, 105}, {1291, 740}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1246, 15664}}";
+			sepNavSelRange = "{24677, 27}";
+			sepNavVisRect = "{{0, 10355}, {1246, 682}}";
+			sepNavWindowFrame = "{{83, 95}, {1291, 740}}";
 		};
 	};
 	E903F78E071DB56900A00F30 /* VTPluginController.m */ = {
@@ -327,40 +331,56 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 1472}}";
 			sepNavSelRange = "{1286, 23}";
-			sepNavVisRect = "{{0, 538}, {1046, 628}}";
+			sepNavVisRect = "{{0, 538}, {1046, 684}}";
 			sepNavWindowFrame = "{{276, 123}, {1091, 742}}";
 		};
 	};
 	E9124D840730B92500BD28CD /* VTMatrixDesktopLayout.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 9472}}";
-			sepNavSelRange = "{1361, 21}";
-			sepNavVisRect = "{{0, 595}, {1046, 628}}";
-			sepNavWindowFrame = "{{84, 123}, {1091, 742}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 9488}}";
+			sepNavSelRange = "{1858, 13}";
+			sepNavVisRect = "{{0, 751}, {1046, 684}}";
+			sepNavWindowFrame = "{{156, 67}, {1091, 742}}";
 		};
 	};
 	E9124D850730B92500BD28CD /* VTMatrixPager.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 1184}}";
-			sepNavSelRange = "{824, 21}";
-			sepNavVisRect = "{{0, 556}, {1046, 628}}";
-			sepNavWindowFrame = "{{61, 89}, {1091, 742}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 1216}}";
+			sepNavSelRange = "{1019, 0}";
+			sepNavVisRect = "{{0, 270}, {1046, 684}}";
+			sepNavWindowFrame = "{{93, 108}, {1091, 742}}";
 		};
 	};
 	E9124D860730B92500BD28CD /* VTMatrixPager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 7472}}";
-			sepNavSelRange = "{4865, 19}";
-			sepNavVisRect = "{{0, 3212}, {1046, 628}}";
-			sepNavWindowFrame = "{{96, 107}, {1091, 742}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 7552}}";
+			sepNavSelRange = "{4558, 0}";
+			sepNavVisRect = "{{0, 1781}, {1046, 684}}";
+			sepNavWindowFrame = "{{183, 94}, {1091, 742}}";
+		};
+	};
+	E9124D870730B92500BD28CD /* VTMatrixPagerCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 1216}}";
+			sepNavSelRange = "{464, 0}";
+			sepNavVisRect = "{{0, 0}, {1299, 668}}";
+			sepNavWindowFrame = "{{44, 133}, {1344, 726}}";
 		};
 	};
 	E9124D880730B92500BD28CD /* VTMatrixPagerCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {815, 9184}}";
-			sepNavSelRange = "{2426, 0}";
-			sepNavVisRect = "{{0, 16}, {815, 694}}";
-			sepNavWindowFrame = "{{38, 91}, {1290, 761}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1245, 9040}}";
+			sepNavSelRange = "{6409, 6}";
+			sepNavVisRect = "{{0, 3721}, {1245, 703}}";
+			sepNavWindowFrame = "{{111, 107}, {1290, 761}}";
+		};
+	};
+	E9124D8A0730B92500BD28CD /* VTMatrixPagerView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 11488}}";
+			sepNavSelRange = "{11057, 0}";
+			sepNavVisRect = "{{0, 5946}, {1299, 668}}";
+			sepNavWindowFrame = "{{41, 144}, {1344, 726}}";
 		};
 	};
 	E9124EAB073140CE00BD28CD /* main.m */ = {
@@ -401,6 +421,14 @@
 	E913F15C076E375500072617 /* VTDesktopTemplatePreferences */ = {
 		activeExec = 0;
 	};
+	E913F189076E3D3500072617 /* VTColorLabelButton.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 4656}}";
+			sepNavSelRange = "{3354, 24}";
+			sepNavVisRect = "{{0, 1978}, {1299, 668}}";
+			sepNavWindowFrame = "{{84, 84}, {1344, 726}}";
+		};
+	};
 	E913F191076E3D4F00072617 /* VTPositionGrid.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 1536}}";
@@ -413,7 +441,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 4880}}";
 			sepNavSelRange = "{7596, 0}";
-			sepNavVisRect = "{{0, 0}, {1245, 647}}";
+			sepNavVisRect = "{{0, 519}, {1245, 703}}";
 			sepNavWindowFrame = "{{38, 91}, {1290, 761}}";
 		};
 	};
@@ -534,9 +562,9 @@
 	};
 	E940C5E60733F03400C1642C /* DefaultHotkeys.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 4992}}";
-			sepNavSelRange = "{4145, 17}";
-			sepNavVisRect = "{{0, 2293}, {1245, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1245, 5152}}";
+			sepNavSelRange = "{4247, 0}";
+			sepNavVisRect = "{{0, 2273}, {1245, 703}}";
 			sepNavWindowFrame = "{{61, 70}, {1290, 761}}";
 		};
 	};
@@ -628,9 +656,9 @@
 	};
 	E959A03807663D3600543439 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 1760}}";
-			sepNavSelRange = "{539, 0}";
-			sepNavVisRect = "{{0, 0}, {1245, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1245, 1808}}";
+			sepNavSelRange = "{5713, 0}";
+			sepNavVisRect = "{{0, 1105}, {1245, 703}}";
 			sepNavWindowFrame = "{{15, 112}, {1290, 761}}";
 		};
 	};
@@ -821,6 +849,40 @@
 		name = VirtueDesktops;
 		objects = (
 		);
+	};
+	EA6E40FB0A3EF441005D268B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'VTRequestSendWindowBackName' undeclared (first use in this function)";
+		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
+		rLen = 1;
+		rLoc = 664;
+		rType = 1;
+	};
+	EA6E41000A3EF446005D268B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E903F75F071DB4EF00A00F30 /* VTApplicationDelegate.m */;
+		name = VTRequestSendWindowBackName;
+		rLen = 27;
+		rLoc = 24677;
+		rType = 0;
+		vrLen = 2757;
+		vrLoc = 23069;
+	};
+	EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 1136}}";
+			sepNavSelRange = "{372, 7}";
+			sepNavVisRect = "{{0, 69}, {1299, 668}}";
+			sepNavWindowFrame = "{{377, 74}, {1344, 726}}";
+		};
+	};
+	EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 7472}}";
+			sepNavSelRange = "{4269, 0}";
+			sepNavVisRect = "{{0, 1765}, {1299, 668}}";
+			sepNavWindowFrame = "{{39, 135}, {1344, 726}}";
+		};
 	};
 	EA9141020A3D467A008BECF1 /* unimotion.h */ = {
 		uiCtxt = {

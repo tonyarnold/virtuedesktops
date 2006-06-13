@@ -210,6 +210,8 @@
 		EA5A45F20A089AD8001EF27C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABE639809CE9D0D00809063 /* Sparkle.framework */; };
 		EA6FE7D70A31545C004CCC3F /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E913F21A076E3FF400072617 /* PrimitiveTextInspector.nib */; };
 		EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
+		EA8AD5FD0A3E820D00737086 /* VTWindowPager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */; };
+		EA8AD5FE0A3E820D00737086 /* VTWindowPager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */; };
 		EA9AF91009445690005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
 		EA9AFA6F09445764005D60CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EA9AFB23094457F8005D60CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9AF90F09445690005D60CB /* AppKit.framework */; };
@@ -607,6 +609,7 @@
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
 				EA3872810A3D4CFE004F4330 /* VTMotionController.h in CopyFiles */,
+				EA8AD5FD0A3E820D00737086 /* VTWindowPager.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,9 +941,10 @@
 		EA3599D809BD7E7900B55739 /* DockCommunicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DockCommunicator.xcodeproj; path = ../../Frameworks/DockCommunicator/DockCommunicator.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EA38727F0A3D4CFE004F4330 /* VTMotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTMotionController.h; sourceTree = "<group>"; };
 		EA3872800A3D4CFE004F4330 /* VTMotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTMotionController.m; sourceTree = "<group>"; };
-		EA387B8A0A3DB488004F4330 /* UniMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "UniMotion-Info.plist"; sourceTree = "<group>"; };
 		EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libUniMotion.dylib; sourceTree = "<group>"; };
 		EA54635209AC9CD1002EDE9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTWindowPager.h; sourceTree = "<group>"; };
+		EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTWindowPager.m; sourceTree = "<group>"; };
 		EA9141020A3D467A008BECF1 /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimotion.h; sourceTree = "<group>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -1158,7 +1162,6 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				EA387B8A0A3DB488004F4330 /* UniMotion-Info.plist */,
 			);
 			name = virtue;
 			sourceTree = "<group>";
@@ -1259,6 +1262,8 @@
 				E9124D880730B92500BD28CD /* VTMatrixPagerCell.m */,
 				E9124D890730B92500BD28CD /* VTMatrixPagerView.h */,
 				E9124D8A0730B92500BD28CD /* VTMatrixPagerView.m */,
+				EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */,
+				EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */,
 			);
 			name = MatrixLayout;
 			sourceTree = "<group>";
@@ -2358,6 +2363,7 @@
 				E95581C8076CC7C200401479 /* VTWindowStickyStateTransformer.m in Sources */,
 				E913F34D076F733100072617 /* VTApplicationRunningCountTransformer.m in Sources */,
 				EA3872820A3D4CFE004F4330 /* VTMotionController.m in Sources */,
+				EA8AD5FE0A3E820D00737086 /* VTWindowPager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

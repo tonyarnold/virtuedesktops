@@ -389,11 +389,11 @@ enum
 	NSBezierPath* backgroundPath = [NSBezierPath bezierPathForRoundedRect: aRect withRadius: kRoundedRadius]; 
     [mBackgroundColor set];
     [backgroundPath fill];
-	[[NSGraphicsContext currentContext] restoreGraphicsState]; 
+	[[NSGraphicsContext currentContext] restoreGraphicsState];
 }
 
 - (void) resetCursorRects {
-	//[self rebuildTrackingRects]; 
+	[self rebuildTrackingRects]; 
 	// remove all tracking rects we got 
 	// remove all tracking rects 
 	while ([mTrackingRects count] > 0) 
@@ -447,7 +447,7 @@ enum
 			[mPagerCells removeColumn: 0]; 
 		
 		int numberOfColumns		= [mLayout isCompacted] ? [mLayout numberOfDisplayedColumns] : [mLayout numberOfColumns]; 
-		int numberOfRows		= [mLayout isCompacted] ? [mLayout numberOfDisplayedRows] : [mLayout numberOfRows]; 
+		int numberOfRows      = [mLayout isCompacted] ? [mLayout numberOfDisplayedRows] : [mLayout numberOfRows]; 
 		int numberOfDesktops	= [[mLayout desktopLayout] count]; 
 		
 		// create cell layout 
@@ -455,8 +455,8 @@ enum
 		
 		// iterate over all desktops and assign them the to the cells 
 		int desktopIndex	= 0; 
-		int row				= 0; 
-		int column			= 0;
+		int row           = 0; 
+		int column        = 0;
 		
 		for (desktopIndex = 0; desktopIndex < numberOfDesktops; desktopIndex++) {
 			VTMatrixPagerCell*	cell	= [mPagerCells cellAtRow: row column: column]; 

@@ -40,6 +40,8 @@
 
 #pragma mark -
 #pragma mark Attributes 
+- (NSString*) name;
+#pragma mark -
 - (void) setDisplaysApplicationIcons: (BOOL) flag; 
 - (BOOL) displaysApplicationIcons; 
 #pragma mark -

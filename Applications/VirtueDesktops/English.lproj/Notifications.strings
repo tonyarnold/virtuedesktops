@@ -104,3 +104,6 @@ VTRequestApplicationMoveToNorth_desc			= "Moves application to nort desktop";
 VTRequestApplicationMoveToSouth_name			= "Move application to south";
 VTRequestApplicationMoveToSouth_desc			= "Moves application to south desktop";
 
+// Request to send window behind other windows
+VTRequestSendWindowBack_name				= "Send Window Back";
+VTRequestSendWindowBack_desc				= "Send Window Under Point Back";

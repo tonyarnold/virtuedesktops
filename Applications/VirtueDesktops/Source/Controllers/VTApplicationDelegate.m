@@ -557,6 +557,10 @@ enum
 	}
 }
 
+- (void) onSendWindowBack: (NSNotification*) notification {
+  [[VTDesktopController sharedInstance] sendWindowUnderPointerBack];
+}
+
 #pragma mark -
 - (void) onShowPager: (NSNotification*) notification {
 	[[[[VTLayoutController sharedInstance] activeLayout] pager] display: NO];
@@ -657,6 +661,8 @@ enum
 		addObserver: self selector: @selector(onSwitchToDesktopWest:) name: VTRequestChangeDesktopToWestName object: nil];
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onSwitchToDesktop:) name: VTRequestChangeDesktopName object: nil];
+  [[NSNotificationCenter defaultCenter]
+		addObserver: self selector: @selector(onSendWindowBack:) name: VTRequestSendWindowBackName object: nil];
   
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onShowPager:) name: VTRequestShowPagerName object: nil];

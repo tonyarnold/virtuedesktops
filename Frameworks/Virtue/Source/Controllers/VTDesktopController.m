@@ -257,6 +257,10 @@
 		[self createDefaultDesktops]; 
 }
 
+- (void) sendWindowUnderPointerBack {
+  [[self activeDesktop] sendWindowUnderPointerBack];
+}
+
 #pragma mark -
 - (BOOL) canAdd {
 	return ([[[VTLayoutController sharedInstance] activeLayout] maximumNumberOfDesktops] > [_desktops count]);	

@@ -142,9 +142,11 @@ enum
 - (void) activateWithTransition: (PNTransitionType) transition option: (PNTransitionOption) option duration: (float) seconds;
 
 #pragma mark -
-#pragma mark Window operations 
+#pragma mark Window operations
 - (void) moveAllWindowsToDesktop: (PNDesktop*) desktop;
-- (void) orderWindowFront: (PNWindow*) window;  
+- (void) orderWindowFront: (PNWindow*) window;
+- (void) orderWindowBack: (PNWindow*) window;
+- (void) sendWindowUnderPointerBack;
 
 #pragma mark -
 #pragma mark Updating 
@@ -154,6 +156,7 @@ enum
 #pragma mark Queries 
 - (PNWindow*) windowContainingPoint: (NSPoint) point;
 - (PNWindow*) windowForId: (CGSWindow) window; 
-- (PNApplication*) applicationForPid: (pid_t) pid; 
+- (PNApplication*) applicationForPid: (pid_t) pid;
+- (PNWindow*) bottomMostWindow;
 
 @end 

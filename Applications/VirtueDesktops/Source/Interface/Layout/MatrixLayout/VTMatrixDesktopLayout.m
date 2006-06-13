@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTMatrixDesktopLayout.h"
+#import "VTWindowPager.h"
 #import "VTMatrixPager.h" 
 #import <Virtue/VTDesktopController.h>
 #import <Zen/Zen.h>

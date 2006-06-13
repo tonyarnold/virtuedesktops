@@ -370,6 +370,47 @@
 	[window orderAbove: referenceWindow];
 }
 
+/**
+ * @brief Orders the passed window to the back of the current desktop
+ *
+ * @param window	Window to bring to the back
+ *
+ */
+- (void) orderWindowBack: (PNWindow*) window {
+  if ([mWindows count] == 0)
+    return;
+  
+  PNWindow* bmWindow = [self bottomMostWindow];
+  
+  if (!bmWindow)
+    return;
+  
+  if (bmWindow == window)
+    return;
+  
+  [window orderBelow: bmWindow];
+}
+
+/**
+ * @brief Sends the window under point behind all windows on the desktop
+ *
+ */
+- (void) sendWindowUnderPointerBack
+{
+  if (![self visible])
+    return;
+  
+  NSPoint mouseLoc = [NSEvent mouseLocation];
+  NSSize screenSize = [[NSScreen mainScreen] frame].size;
+  mouseLoc.y = screenSize.height - mouseLoc.y;
+  PNWindow* wcpWindow = [self windowContainingPoint: mouseLoc];
+  if (!wcpWindow)
+    return;
+  
+  [self orderWindowBack: wcpWindow];
+}
+
+
 #pragma mark -
 #pragma mark Updating
 
@@ -672,10 +713,24 @@
 	return [self windowWithId: window];
 }
 
-@end
+/**
+ * @brief Searches for the bottom-most window
+ *
+ * @return	Returns the bottom-most window if any or nil
+ *
+ */
+- (PNWindow*) bottomMostWindow {
+  int nWindows = [mWindows count];
+  if (nWindows == 0)
+    return nil;
 
-#pragma mark -
-@implementation PNDesktop(Private)
+  PNWindow* window = (PNWindow*) [mWindows objectAtIndex: (nWindows - 1)];
+  
+  if (!window)
+    return nil;
+  
+  return window;
+}
 
 /**
  * @todo	Remove and change over to windowForId
