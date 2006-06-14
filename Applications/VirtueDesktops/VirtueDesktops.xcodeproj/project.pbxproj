@@ -958,8 +958,8 @@
 		EA63C39D0A3F0B7800EC66B1 /* authtool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authtool.h; sourceTree = "<group>"; };
 		EA63C39E0A3F0B7800EC66B1 /* authtool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = authtool.c; sourceTree = "<group>"; };
 		EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fixExecutable.c; sourceTree = "<group>"; };
-		EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTWindowPager.h; sourceTree = "<group>"; };
-		EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTWindowPager.m; sourceTree = "<group>"; };
+		EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTWindowPager.h; path = Source/Interface/Layout/MatrixLayout/VTWindowPager.h; sourceTree = "<group>"; };
+		EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTWindowPager.m; path = Source/Interface/Layout/MatrixLayout/VTWindowPager.m; sourceTree = "<group>"; };
 		EA9141020A3D467A008BECF1 /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimotion.h; sourceTree = "<group>"; };
 		EA9AF90F09445690005D60CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		EAB7BCCF0924DDAB0067CDFD /* DockExtension.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = DockExtension.xcodeproj; path = ../../Frameworks/DockExtension/DockExtension.xcodeproj; sourceTree = SOURCE_ROOT; };
