@@ -13,7 +13,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Virtue/VTDecorationPrimitive.h> 
-#import "VTPositionGrid.h" 
+#import "../Interface/Widgets/Position Grid/VTPositionGrid.h" 
 
 @interface VTDecorationPrimitive(VTPositionMarkers)
 

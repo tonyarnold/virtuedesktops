@@ -14,7 +14,7 @@
 #import <Cocoa/Cocoa.h>
 #import <Virtue/VTDecorationPrimitive.h> 
 #import <Virtue/VTInspector.h> 
-#import "VTPositionGrid.h" 
+#import "../Position Grid/VTPositionGrid.h" 
 
 @interface VTDecorationPrimitiveViewController : NSWindowController {
 // outlets 

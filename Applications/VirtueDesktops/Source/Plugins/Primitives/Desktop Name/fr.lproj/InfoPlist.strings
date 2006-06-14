@@ -1,0 +1,6 @@
+VTPlugin = {
+	author = "Thomas Staller, Virtue project"; 
+	hidden = 1; 
+	name = "Modèle de nom des bureaux";
+	type = VTObjectiveC; 
+}; 

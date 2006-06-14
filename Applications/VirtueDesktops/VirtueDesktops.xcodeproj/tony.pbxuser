@@ -98,7 +98,7 @@
 					43,
 					20,
 					20,
-					192,
+					179,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXFileDataSource_FiletypeID,
@@ -177,6 +177,10 @@
 			PBXPerProjectTemplateStateSaveDate = 171971966;
 			PBXWorkspaceStateSaveDate = 171971966;
 		};
+		perUserProjectItems = {
+			EA70274E0A40368500013869 /* PBXTextBookmark */ = EA70274E0A40368500013869 /* PBXTextBookmark */;
+			EA7027510A40368B00013869 /* PBXTextBookmark */ = EA7027510A40368B00013869 /* PBXTextBookmark */;
+		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
 		userBuildSettings = {
@@ -210,6 +214,14 @@
 			sepNavSelRange = "{5661, 0}";
 			sepNavVisRect = "{{0, 2602}, {1180, 636}}";
 			sepNavWindowFrame = "{{31, 95}, {1225, 750}}";
+		};
+	};
+	E903F72E071DB45D00A00F30 /* VTImageViewFileDropper.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 1232}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1299, 668}}";
+			sepNavWindowFrame = "{{84, 84}, {1344, 726}}";
 		};
 	};
 	E903F730071DB45D00A00F30 /* VTNotificationBezel.m */ = {
@@ -300,28 +312,12 @@
 			sepNavWindowFrame = "{{15, 54}, {1335, 819}}";
 		};
 	};
-	E912238E07808A4F005A3C10 /* English */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 647}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1245, 647}}";
-			sepNavWindowFrame = "{{61, 70}, {1290, 761}}";
-		};
-	};
 	E91223D807808DBC005A3C10 /* English */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 647}}";
 			sepNavSelRange = "{79, 5}";
 			sepNavVisRect = "{{0, 0}, {1245, 647}}";
 			sepNavWindowFrame = "{{15, 112}, {1290, 761}}";
-		};
-	};
-	E91224520781987E005A3C10 /* English */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 647}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1245, 647}}";
-			sepNavWindowFrame = "{{38, 91}, {1290, 761}}";
 		};
 	};
 	E9124D830730B92500BD28CD /* VTMatrixDesktopLayout.h */ = {
@@ -418,6 +414,14 @@
 	E913F15C076E375500072617 /* VTDesktopTemplatePreferences */ = {
 		activeExec = 0;
 	};
+	E913F183076E3CFE00072617 /* VTDecorationPrimitiveViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 704}}";
+			sepNavSelRange = "{496, 0}";
+			sepNavVisRect = "{{0, 13}, {1299, 668}}";
+			sepNavWindowFrame = "{{15, 147}, {1344, 726}}";
+		};
+	};
 	E913F189076E3D3500072617 /* VTColorLabelButton.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1299, 4656}}";
@@ -507,14 +511,6 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRect = "{{0, 0}, {1245, 647}}";
 			sepNavWindowFrame = "{{15, 112}, {1290, 761}}";
-		};
-	};
-	E917522107806E6B004F5633 /* English */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 647}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {1245, 647}}";
-			sepNavWindowFrame = "{{61, 70}, {1290, 761}}";
 		};
 	};
 	E91AD9B40703672900F69228 /* Virtue.scriptSuite */ = {
@@ -684,9 +680,9 @@
 	};
 	E98B8669074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 647}}";
-			sepNavSelRange = "{131, 118}";
-			sepNavVisRect = "{{0, 0}, {1245, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1245, 703}}";
+			sepNavSelRange = "{468, 0}";
+			sepNavVisRect = "{{0, 0}, {1245, 703}}";
 			sepNavWindowFrame = "{{15, 112}, {1290, 761}}";
 		};
 	};
@@ -915,6 +911,24 @@
 			sepNavVisRect = "{{0, 1837}, {1299, 668}}";
 			sepNavWindowFrame = "{{14, 152}, {1344, 726}}";
 		};
+	};
+	EA70274E0A40368500013869 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: ../Position Grid/VTPositionGrid.h: No such file or directory";
+		fRef = E98B8669074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.h */;
+		rLen = 1;
+		rLoc = 15;
+		rType = 1;
+	};
+	EA7027510A40368B00013869 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E98B8669074AB84500E8CE5C /* VTDecorationPrimitivePositionMarkers.h */;
+		name = "#import \"../Position Grid/VTPositionGrid.h\"";
+		rLen = 63;
+		rLoc = 438;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 0;
 	};
 	EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {
 		uiCtxt = {
