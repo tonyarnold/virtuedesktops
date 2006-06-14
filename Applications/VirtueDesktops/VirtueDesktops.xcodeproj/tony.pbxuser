@@ -803,7 +803,7 @@
 	EA38727F0A3D4CFE004F4330 /* VTMotionController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1290, 761}}";
-			sepNavSelRange = "{334, 0}";
+			sepNavSelRange = "{204, 0}";
 			sepNavVisRect = "{{0, 0}, {1290, 761}}";
 			sepNavWindowFrame = "{{6, 50}, {1335, 819}}";
 		};

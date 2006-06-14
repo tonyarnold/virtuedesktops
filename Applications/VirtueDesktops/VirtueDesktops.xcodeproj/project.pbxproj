@@ -202,7 +202,6 @@
 		EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */; };
 		EA3872810A3D4CFE004F4330 /* VTMotionController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA38727F0A3D4CFE004F4330 /* VTMotionController.h */; };
 		EA3872820A3D4CFE004F4330 /* VTMotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3872800A3D4CFE004F4330 /* VTMotionController.m */; };
-		EA387C930A3DB8CA004F4330 /* libUniMotion.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */; };
 		EA387C940A3DB8E4004F4330 /* libUniMotion.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */; };
 		EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E913F26D076E411B00072617 /* VTInterface.framework */; };
 		EA40409E0945B43500D81EC3 /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA9AF712094444DC005D60CB /* DockExtension.bundle */; };
@@ -213,6 +212,7 @@
 		EA63C3B40A3F0BF200EC66B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABDFE9209AC94E500C523BA /* Security.framework */; };
 		EA63C3EC0A3F0C1D00EC66B1 /* authtool in Resources */ = {isa = PBXBuildFile; fileRef = EA63C38B0A3F0AFD00EC66B1 /* authtool */; };
 		EA6FE7D70A31545C004CCC3F /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E913F21A076E3FF400072617 /* PrimitiveTextInspector.nib */; };
+		EA7024550A401C4000013869 /* libUniMotion.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */; };
 		EA7CD184094AEE3F008C738D /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8C95209076F38003D54B1 /* Zen.framework */; };
 		EA8AD5FD0A3E820D00737086 /* VTWindowPager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */; };
 		EA8AD5FE0A3E820D00737086 /* VTWindowPager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8AD5FC0A3E820D00737086 /* VTWindowPager.m */; };
@@ -984,7 +984,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA387C930A3DB8CA004F4330 /* libUniMotion.dylib in Frameworks */,
+				EA7024550A401C4000013869 /* libUniMotion.dylib in Frameworks */,
 				EABDFE5D09AC947600C523BA /* SmartCrashReportsAPI.o in Frameworks */,
 				EABDFE4A09AC936700C523BA /* SmartCrashReportsInstall.o in Frameworks */,
 				EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */,
@@ -3495,9 +3495,11 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_3)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/UniMotion\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/UniMotion\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/../../Shared/UniMotion\"";
 				OTHER_LDFLAGS = "-fprofile-arcs";
 				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;
@@ -3520,9 +3522,11 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_3)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/UniMotion\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/UniMotion\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/../../Shared/UniMotion\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;

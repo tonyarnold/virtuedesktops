@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "../../UniMotion/unimotion.h"
+#import "../../../../Shared/UniMotion/unimotion.h"
 
 @interface VTMotionController : NSObject {
   NSTimer   *sensorReadTimer;
