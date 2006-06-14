@@ -1733,7 +1733,8 @@
 				EA9141020A3D467A008BECF1 /* unimotion.h */,
 				EA387C920A3DB8CA004F4330 /* libUniMotion.dylib */,
 			);
-			path = UniMotion;
+			name = UniMotion;
+			path = ../../Shared/UniMotion;
 			sourceTree = "<group>";
 		};
 		EA9AF70E094444DC005D60CB /* Products */ = {
