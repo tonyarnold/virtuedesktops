@@ -738,7 +738,7 @@
 		E913F20F076E3FB400072617 /* VTDecorationPrimitiveWatermarkInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitiveWatermarkInspector.m; sourceTree = "<group>"; };
 		E913F216076E3FCD00072617 /* VTDecorationPrimitiveTintInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitiveTintInspector.h; sourceTree = "<group>"; };
 		E913F217076E3FCD00072617 /* VTDecorationPrimitiveTintInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitiveTintInspector.m; sourceTree = "<group>"; };
-		E913F21B076E3FF400072617 /* PrimitiveTextInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PrimitiveTextInspector.nib; sourceTree = "<group>"; };
+		E913F21B076E3FF400072617 /* PrimitiveTextInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = PrimitiveTextInspector.nib; path = English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		E913F21D076E3FF400072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
 		E913F21F076E3FF400072617 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
 		E913F26D076E411B00072617 /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
