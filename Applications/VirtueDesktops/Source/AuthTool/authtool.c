@@ -31,21 +31,21 @@ performOperation(const MyAuthorizedCommand * myCommand)
 	struct stat st;
 	
   IFDEBUG(fprintf(stderr, "Tool performing command on path %s.\n", myCommand->file);)
-    IFDEBUG(fprintf(stderr, "uid = %d, euid = %d\n", getuid(), geteuid());)
+  IFDEBUG(fprintf(stderr, "uid = %d, euid = %d\n", getuid(), geteuid());)
     
-    // Set group to procmod (9)
-    if (chown(myCommand->file, getuid(), 9)) {
-      snprintf(info, MAXPATHLEN, "chown %s", myCommand->file);
-      perror(info);
-      return false;
-    }
+  // Stat the file to get the uid and the mode
+  if (stat(myCommand->file, &st)) {
+    snprintf(info, MAXPATHLEN, "stat %s", myCommand->file);
+    perror(info);
+    return false;
+  }
 	
-	// Stat the file to get the mode
-	if (stat(myCommand->file, &st)) {
-		snprintf(info, MAXPATHLEN, "stat %s", myCommand->file);
+	// Set group to procmod (9)
+	if (chown(myCommand->file, st.st_uid, 9)) {
+		snprintf(info, MAXPATHLEN, "chown %s", myCommand->file);
 		perror(info);
 		return false;
-	}
+	}	
 	
 	// Set the set-group-ID-on-execution bit
 	if (chmod(myCommand->file, st.st_mode | S_ISGID)) {
