@@ -13,6 +13,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Virtue/VTDecorationPrimitiveText.h>
+#import <Virtue/VTDesktopDecoration.h>
+#import <Virtue/VTDesktop.h>
 
 @interface VTDesktopNamePrimitive : VTDecorationPrimitiveText { }
 

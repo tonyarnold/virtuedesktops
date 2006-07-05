@@ -27,6 +27,7 @@
 	IBOutlet NSArrayController*				mDesktopsController; 
 	IBOutlet NSObjectController*			mDesktopController; 
 	IBOutlet NSArrayController*				mDecorationsController; 
+  IBOutlet NSButton*                mShowsDesktopButton;
 	IBOutlet VTImageViewFileDropper*	mImageView; 
 	IBOutlet VTColorLabelButton*			mLabelButton;
 	IBOutlet NSTableView*							mDesktopsTableView; 

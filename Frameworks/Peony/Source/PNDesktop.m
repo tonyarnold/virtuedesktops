@@ -601,7 +601,7 @@
 	PNWindow*				checkWindow = nil;
 
 	while (checkWindow = [previousWindowsIter nextObject]) {
-		// remove...
+		// remove…
 		didChangeWindows = YES;
 		
 

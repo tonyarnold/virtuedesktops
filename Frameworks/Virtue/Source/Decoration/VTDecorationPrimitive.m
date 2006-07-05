@@ -33,8 +33,8 @@
 		mName = @"Decoration Primitive"; 
 		
 		mControlView	= nil; 
-		mEnabled		= YES; 
-		mPosition		= NSMakePoint(0, 0); 
+		mEnabled      = YES; 
+		mPosition     = NSMakePoint(0, 0); 
 		mPositionType	= kVtDecorationPositionAbsolute; 
 		mContainer		= nil; 
 		
@@ -199,7 +199,7 @@
 	// no view, no drawing 
 	if (mControlView == nil)
 		return; 
-	
+  
 	// invalidate our bounds 
 	[mControlView setNeedsDisplay: YES]; 
 }

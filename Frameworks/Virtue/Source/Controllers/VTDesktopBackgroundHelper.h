@@ -28,7 +28,8 @@ typedef enum VTBackgroundHelperMode {
 
 @interface VTDesktopBackgroundHelper : NSObject {
 	VTBackgroundHelperMode		mMode; 
-	pid_t						mFinderPid; 
+	pid_t                     mFinderPid; 
+  NSString*                 mDefaultDesktopBackgroundPath;
 }
 
 #pragma mark -
@@ -44,7 +45,9 @@ typedef enum VTBackgroundHelperMode {
 
 #pragma mark -
 #pragma mark Operations 
-- (void) setBackground: (NSString*) file;
+- (void) setBackground: (NSString*) path;
 - (NSString*) background;
+- (void) setDefaultBackground: (NSString*) path;
+- (NSString*) defaultBackground;
 
 @end

@@ -59,21 +59,25 @@
 		mPreviousDesktop							= nil; 
 		mSnapbackDesktop							= nil; 
 		mDecorationPrototype					= nil; 
-		mNeedDesktopBackgroundUpdate	= NO; 
 		mExpectingBackgroundChange		= NO; 
 		
-		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]); 
+		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]); 
 		
 		// Register as observer for desktop switches 
-		[[NSNotificationCenter defaultCenter] 
-			addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
-		[[NSNotificationCenter defaultCenter] 
-			addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
-		[[NSDistributedNotificationCenter defaultCenter]
-            addObserver: self
-							 selector: @selector(onDesktopBackgroundChanged:)
-									 name: VTBackgroundHelperDesktopChangedName
-								 object: VTBackgroundHelperDesktopChangedObject]; 
+		[[NSNotificationCenter defaultCenter] addObserver: self 
+                                             selector: @selector(onDesktopWillChange:) 
+                                                 name: kPnOnDesktopWillActivate 
+                                               object: nil];
+    
+		[[NSNotificationCenter defaultCenter] addObserver: self 
+                                             selector: @selector(onDesktopDidChange:) 
+                                                 name: kPnOnDesktopDidActivate 
+                                               object: nil];
+    
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
+                                             selector: @selector(onDesktopBackgroundChanged:) 
+                                                 name: VTBackgroundHelperDesktopChangedName 
+                                               object: VTBackgroundHelperDesktopChangedObject]; 
 		
 /* *  
 	 * Expose SwitchTo(Next|Prev)Workspace to the DistributedNotificationCenter. 
@@ -88,13 +92,17 @@
 																											object: nil]; 
 
 // Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
-	[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-																											selector: @selector(onNextWestDesktopRequest:) 
-																													name: @"SwitchToPrevWorkspace" 
-																												object: nil];
+    [[NSDistributedNotificationCenter defaultCenter] addObserver: self 
+                                                        selector: @selector(onNextWestDesktopRequest:) 
+                                                            name: @"SwitchToPrevWorkspace" 
+                                                          object: nil];
 		
 		// create timer loop to update desktops 
-		[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
+		[NSTimer scheduledTimerWithTimeInterval: 1.0 
+                                     target: self 
+                                   selector: @selector(onUpdateDesktops:) 
+                                   userInfo: nil 
+                                    repeats: NO]; 
 		
 		return self; 
 	}
@@ -164,10 +172,7 @@
 	
 	// and add 
 	[_desktops insertObject: desktop atIndex: index]; 
-	
-	// set up desktop
-	[desktop setDefaultDesktopBackgroundPath: mDefaultDesktopBackgroundPath]; 
-	
+		
 	// attach the decoration 
 	[[VTDesktopDecorationController sharedInstance] attachDecoration: [desktop decoration]]; 
 	
@@ -180,8 +185,8 @@
 	
 	// here we are sure we created the desktop, so we will trigger some 
 	// notifications by hand to inform our plugins 
-	NSMethodSignature*	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
-	NSInvocation*		invocation	= [NSInvocation invocationWithMethodSignature: signature];
+	NSMethodSignature*	signature   = [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
+	NSInvocation*       invocation	= [NSInvocation invocationWithMethodSignature: signature];
 	
 	[invocation setSelector: @selector(onDesktopDidCreateNotification:)];
 	[invocation setArgument: &desktop atIndex: 2];
@@ -415,7 +420,9 @@
 	// bind to active desktop 
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
+  
 	// and apply settings of active desktop 
+  mExpectingBackgroundChange = YES;
 	[self applyDesktopBackground];
 }
 
@@ -424,7 +431,7 @@
 	// we walk through all desktops and attach the decoration primitives from our 
 	// prototype if if is not included yet... 
 	NSEnumerator*	desktopIter		= [_desktops objectEnumerator]; 
-	VTDesktop*		desktop			= nil; 
+	VTDesktop*		desktop       = nil; 
 	
 	while (desktop = [desktopIter nextObject]) {
 		[self applyDecorationPrototypeForDesktop: desktop overwrite: overwrite]; 
@@ -434,19 +441,23 @@
 #pragma mark -
 #pragma mark Notification sinks
 
-- (void) onDesktopBackgroundChanged: (NSNotification*) notification {	
-	// ignore if we expected it because we triggered the change 
-	if (mExpectingBackgroundChange == YES) {
+- (void) onDesktopBackgroundChanged: (NSNotification*) notification {
+  // ignore if we expected it because we triggered the change 
+	if ( (mExpectingBackgroundChange == YES) || ([[self activeDesktop] showsBackground]) ) {
 		mExpectingBackgroundChange = NO;
 		return; 
 	}
-	
+  
+  if ([mDefaultDesktopBackgroundPath isLike: [[VTDesktopBackgroundHelper sharedInstance] background]] == YES)
+    return;
 	
 	// otherwise get the background picture and set it as the default
-	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [VTDesktop currentDesktopBackground]);
-	
-	// and propagate to existing desktops
-	[[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundPath:) withObject: mDefaultDesktopBackgroundPath]; 
+	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]);
+  [[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: mDefaultDesktopBackgroundPath];
+  
+  // Propagate 
+  [[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundIfNeeded:) withObject: mDefaultDesktopBackgroundPath];
+  NSLog(@"Changing default desktop to %@", mDefaultDesktopBackgroundPath);
 }
 
 - (void) onUpdateDesktops: (NSTimer*) timer {
@@ -476,45 +487,40 @@
 	
 	// propagate key change for previous desktop 
 	[self willChangeValueForKey: @"previousDesktop"]; 
+  
 	// remember the old desktop for the last desktop 
 	ZEN_ASSIGN(mPreviousDesktop, [self activeDesktop]); 
+  
 	// propagate key change for previous desktop completed 
-	[self didChangeValueForKey: @"previousDesktop"]; 
-	
-	// handle background image changes... if we are currently displaying a 
-	// custom image, next desktop has to overwrite it... 
-	if ([desktop showsBackground])  {
-		mNeedDesktopBackgroundUpdate = YES;
-	}
-	else {
-		mNeedDesktopBackgroundUpdate = NO; 
-	}
+	[self didChangeValueForKey: @"previousDesktop"];
+  
+  
+  // Ensure object consistency.
+  NSString* currentDesktopBackground = [[VTDesktopBackgroundHelper sharedInstance] background];
+  [[self activeDesktop] setDesktopBackground: currentDesktopBackground];
+  if ([[self activeDesktop] showsBackground] == NO) {
+    [[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: currentDesktopBackground];
+  }
   		
 	// unbind desktop 
 	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
-	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 
-	
-	// bind desktop 
-	[desktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
-	
-	// handle background picture 
-	if (mNeedDesktopBackgroundUpdate || [desktop showsBackground]) {
-		[self applyDesktopBackground]; 
-	}
-	mNeedDesktopBackgroundUpdate = NO; 
-		
+  // bind desktop 
+	[[self activeDesktop] addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL];
+  mExpectingBackgroundChange = YES;
+  [self applyDesktopBackground]; 		
 	[self didChangeValueForKey: @"activeDesktop"]; 
 }
+
 
 #pragma mark -
 #pragma mark KVO Sink 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	if ([keyPath isEqualToString: @"showsBackground"] || [keyPath isEqualToString: @"desktopBackground"]) {
-		
+    mExpectingBackgroundChange = YES;
 		[self applyDesktopBackground];
 	}
 }
@@ -644,8 +650,8 @@
 	
 	// here we are sure we want to switch desktops, so we will trigger some 
 	// notifications by hand to inform our plugins 
-	NSMethodSignature*	signature	= [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
-	NSInvocation*		invocation	= [NSInvocation invocationWithMethodSignature: signature];
+	NSMethodSignature*	signature   = [NSMethodSignature methodSignatureWithReturnAndArgumentTypes: @encode(void), @encode(VTDesktop*), nil];
+	NSInvocation*       invocation	= [NSInvocation invocationWithMethodSignature: signature];
 	
 	[invocation setSelector: @selector(onDesktopWillActivateNotification:)];
 	[invocation setArgument: &desktop atIndex: 2];
@@ -689,7 +695,7 @@
 			[deskPrimitiveTypes addObject: NSStringFromClass([deskPrimitive class])]; 
 	}
 	
-	NSEnumerator*					primitiveIter		= [[mDecorationPrototype decorationPrimitives] objectEnumerator]; 
+	NSEnumerator*           primitiveIter	= [[mDecorationPrototype decorationPrimitives] objectEnumerator]; 
 	VTDecorationPrimitive*	primitive			= nil; 
 	
 	while (primitive = [primitiveIter nextObject]) {
@@ -707,10 +713,8 @@
 }
 
 - (void) applyDesktopBackground {
-	VTDesktop* desktop = [[[self activeDesktop] retain] autorelease]; 	
   mExpectingBackgroundChange = YES;
-
-  [desktop applyDesktopBackground]; 
+  [[self activeDesktop] applyDesktopBackground]; 
 }
 
 - (NSString*) applicationSupportFolder {

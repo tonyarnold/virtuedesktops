@@ -12,8 +12,6 @@
 *****************************************************************************/ 
 
 #import "VTDesktopNamePrimitive.h"
-#import <Virtue/VTDesktopDecoration.h>
-#import <Virtue/VTDesktop.h>
 
 #pragma mark -
 @implementation VTDesktopNamePrimitive
@@ -23,19 +21,11 @@
 
 - (id) init {
 	if (self = [super init]) {
-		mName = @"Desktop Name Primitive"; 
-		
-		return self; 
+		mName = @"Desktop Name Decoration";
+    return self; 
 	}
 	
 	return nil; 
-}
-
-- (void) dealloc {
-	// bindings 
-	[self unbind: @"text"]; 
-	// super... 
-	[super dealloc]; 
 }
 
 #pragma mark -
@@ -43,36 +33,20 @@
 
 - (id) initWithCoder: (NSCoder*) coder {
 	if (self = [super initWithCoder: coder]) {
-		// Set up binding 
-		if ([self container]) {
-     [self bind: @"text" toObject: [self container] withKeyPath: @"mDesktop.name" options: nil]; 	
-    }
-    
-		return self; 
+    [self bind: @"text" toObject: [self container] withKeyPath: @"desktop.name" options: nil];
+    return self;
 	}
 	
 	return nil; 
-}
-
-- (void) encodeWithCoder: (NSCoder*) coder {
-	[super encodeWithCoder: coder]; 
 }
 
 #pragma mark -
 #pragma mark VTDecorationPrimitive overrides 
 
 - (void) setContainer: (VTDesktopDecoration*) container {
-	// first remove any existing binding
-	[self unbind: @"text"]; 
-	// trigger call to super 
-	[super setContainer: container]; 
-	
-	// and attach to the desktop inside the container 
-	if (container) {
-    [self bind: @"text" toObject: container withKeyPath: @"mDesktop.name" options: nil]; 	
-  }
+  [self unbind: @"text"];
+  [self bind: @"text" toObject: container withKeyPath: @"desktop.name" options: nil];
+  [super setContainer: container];
 }
 
 @end
-
-

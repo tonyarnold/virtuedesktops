@@ -11,6 +11,7 @@
 * 
 *****************************************************************************/ 
 
+#import <Virtue/VTDesktopBackgroundHelper.h>
 #import "VTDesktopViewController.h"
 #import "VTColorLabelButtonCell.h" 
 #import "VTApplicationRunningCountTransformer.h" 
@@ -205,6 +206,7 @@
 	// remove bindings 
 	[mImageView 					unbind: @"imagePath"];
 	[mLabelButton 				unbind: @"selectedColorLabel"]; 
+  [mDesktop             unbind: @"showsBackground"];
 	[mDesktop 						unbind: @"desktopBackground"];
 	[mDesktop 						unbind: @"colorLabel"]; 
 	[mDeleteDesktopButton unbind: @"enabled"]; 
@@ -324,35 +326,16 @@
 	// attributes 
 	ZEN_ASSIGN(mDesktop, desktop);
 		
-	if ([mDesktop desktopBackground] != nil) {
-		[mImageView setImagePath: [mDesktop desktopBackground]];
-	} else {
-		[mImageView setImagePath: [mDesktop defaultDesktopBackgroundPath]];
-	}
-
+  [mImageView   setImagePath:     [mDesktop desktopBackground]];
 	[mLabelButton selectColorLabel: [mDesktop colorLabel]];
-	
+  
 	// configure image view binding 
-	[mDesktop		bind: @"desktopBackground" 
-					toObject: mImageView 
-			 withKeyPath: @"imagePath" 
-					 options: nil];
-	
-	[mImageView bind: @"imagePath" 
-					toObject: mDesktop 
-			 withKeyPath: @"desktopBackground" 
-					 options: nil]; 
+	[mDesktop   bind: @"desktopBackground"  toObject: mImageView  withKeyPath: @"imagePath"         options: nil];
+	[mImageView bind: @"imagePath"          toObject: mDesktop    withKeyPath: @"desktopBackground" options: nil]; 
 	
 	// configure color label binding 
-	[mDesktop				bind: @"colorLabel" 
-							toObject: mLabelButton 
-					 withKeyPath: @"selectedColorLabel" 
-							 options: nil];
-	
-	[mLabelButton		bind: @"selectedColorLabel" 
-							toObject: mDesktop 
-					 withKeyPath: @"colorLabel" 
-							 options: nil]; 
+	[mDesktop     bind: @"colorLabel"         toObject: mLabelButton  withKeyPath: @"selectedColorLabel"  options: nil];
+	[mLabelButton	bind: @"selectedColorLabel" toObject: mDesktop      withKeyPath: @"colorLabel"          options: nil]; 
 }
 
 @end 

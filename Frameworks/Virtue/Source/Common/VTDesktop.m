@@ -41,10 +41,8 @@
 - (id) initWithName: (NSString*) name identifier: (int) identifier {
   if (self = [super initWithId: identifier andName: name]) {
     mDesktopBackgroundImagePath         = nil;
-    mDefaultDesktopBackgroundImagePath  = nil;
     mDecoration                         = [[VTDesktopDecoration alloc] initWithDesktop: self];
     mUUID                               = [[ZNUUID uuid] retain];
-    mIsUsingDefaultDesktopImage         = YES;
     mShowsBackground                    = NO;
 
     return self;
@@ -55,7 +53,6 @@
 
 - (void) dealloc {
   ZEN_RELEASE(mDesktopBackgroundImagePath);
-  ZEN_RELEASE(mDefaultDesktopBackgroundImagePath);
   ZEN_RELEASE(mUUID);
   ZEN_RELEASE(mDecoration);
 
@@ -68,13 +65,9 @@
 - (id) initWithCoder: (NSCoder*) coder {
   if (self = [super init]) {
     [self setShowsBackground: [coder decodeBoolForKey: kVtCodingShowsBackgroundImage]];
-    [self setShowsDefaultBackground: [coder decodeBoolForKey: kVtCodingDefaultBackgroundImage]];
 
-    [self setDefaultDesktopBackgroundPath: [[VTDesktopBackgroundHelper sharedInstance] background]];
-    if ( mIsUsingDefaultDesktopImage == FALSE)
+    if ([self showsBackground])
       [self setDesktopBackground: [coder decodeObjectForKey: kVtCodingBackgroundImage]];
-    else
-      [self setDesktopBackground: [self defaultDesktopBackgroundPath]];
 
     [self setName: [coder decodeObjectForKey: kVtCodingName]];
     mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain];
@@ -86,36 +79,36 @@
 }
 
 - (void) encodeWithCoder: (NSCoder*) coder {
-  [coder encodeBool: mShowsBackground forKey: kVtCodingShowsBackgroundImage];
-  [coder encodeBool: mIsUsingDefaultDesktopImage forKey: kVtCodingDefaultBackgroundImage];
-  [coder encodeObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
+  [coder encodeBool: [self showsBackground] forKey: kVtCodingShowsBackgroundImage];
+  if ([self showsBackground])
+    [coder encodeObject: [self desktopBackground] forKey: kVtCodingBackgroundImage];
+  
   [coder encodeObject: mDecoration forKey: kVtCodingDecoration];
   [coder encodeObject: [self name] forKey: kVtCodingName];
 }
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
-  if (mIsUsingDefaultDesktopImage == FALSE)
-    [dictionary setObject: mDesktopBackgroundImagePath forKey: kVtCodingBackgroundImage];
+  if ([self showsBackground] && [self desktopBackground])
+    [dictionary setObject: [self desktopBackground] forKey: kVtCodingBackgroundImage];
 
-  [dictionary setObject: [NSNumber numberWithBool: mShowsBackground] forKey: kVtCodingShowsBackgroundImage];
-  [dictionary setObject: [NSNumber numberWithBool: mIsUsingDefaultDesktopImage] forKey: kVtCodingDefaultBackgroundImage];
+  [dictionary setObject: [NSNumber numberWithBool: [self showsBackground]] forKey: kVtCodingShowsBackgroundImage];
   [dictionary setObject: [self name] forKey: kVtCodingName];
-  [dictionary setObject: mUUID forKey: kVtCodingUUID];
+  [dictionary setObject: [self uuid] forKey: kVtCodingUUID];
 
-  if (mColorLabel)
+  if ([self colorLabel])
     [dictionary setObject: [mColorLabel stringValue] forKey: kVtCodingColorLabel];
 
   NSMutableDictionary* decoration = [NSMutableDictionary dictionary];
   [mDecoration encodeToDictionary: decoration];
-  [dictionary setObject: decoration forKey: kVtCodingDecoration];
+  
+  if (decoration)
+    [dictionary setObject: decoration forKey: kVtCodingDecoration];
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-  mShowsBackground            = [[dictionary objectForKey: kVtCodingShowsBackgroundImage] boolValue];
-  mIsUsingDefaultDesktopImage = [[dictionary objectForKey: kVtCodingDefaultBackgroundImage] boolValue];
-
-  [self setDefaultDesktopBackgroundPath: [[VTDesktopBackgroundHelper sharedInstance] background]];
-  if (mIsUsingDefaultDesktopImage == NO)
+  [self setShowsBackground: [[dictionary objectForKey: kVtCodingShowsBackgroundImage] boolValue]];
+  
+  if ([self showsBackground])
     [self setDesktopBackground: [dictionary objectForKey: kVtCodingBackgroundImage]];
 
   mUUID                       = [[dictionary objectForKey: kVtCodingUUID] copy];
@@ -140,64 +133,37 @@
 #pragma mark Attributes
 
 - (void) setDesktopBackground: (NSString*) path {
-  if (mShowsBackground == NO)
+  if ([self showsBackground] == NO || path == nil)
     return;
-
-  if (path == nil)
-    path = [NSString stringWithString: [self defaultDesktopBackgroundPath]];
-
-  if ([mDefaultDesktopBackgroundImagePath isEqualToString: path]) {
-    [self setShowsDefaultBackground: YES];
-    ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, mDefaultDesktopBackgroundImagePath);
-    return;
-  }
-
-  [self setShowsDefaultBackground: NO];
+  
   ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
 
 - (NSString*) desktopBackground {
+  if (mDesktopBackgroundImagePath == nil) {
+    [self setShowsBackground: NO];
+    ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, [[VTDesktopBackgroundHelper sharedInstance] defaultBackground]);
+  }
   return [[mDesktopBackgroundImagePath copy] autorelease];
+}
+
+- (void) setDefaultDesktopBackgroundIfNeeded: (NSString*) path {
+  if ( ([self showsBackground] == YES) || path == nil )
+    return;
+  
+  NSLog(@"Setting default background on desktop %@ to %@", [self name], path);
+  ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, path);
 }
 
 #pragma mark -
 
-- (void) setDefaultDesktopBackgroundPath: (NSString*) path {
-  if (path == nil)
-    return;
-
-  ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundImagePath, path);
-
-  if ([self showsDefaultBackground])
-    [self setDesktopBackground: mDefaultDesktopBackgroundImagePath];
-
-  return;
-}
-
-- (NSString*) defaultDesktopBackgroundPath {
-  return [[mDefaultDesktopBackgroundImagePath copy] autorelease];
-}
-
 - (void) setShowsBackground: (BOOL) showsBackground {
-  if (showsBackground == mShowsBackground)
-    return;
-
   mShowsBackground = showsBackground;
+  [self applyDesktopBackground];
 }
 
 - (BOOL) showsBackground {
   return mShowsBackground;
-}
-
-- (void) setShowsDefaultBackground: (BOOL) defaultBackground {
-  if (defaultBackground == mIsUsingDefaultDesktopImage)
-    return;
-
-  mIsUsingDefaultDesktopImage = defaultBackground;
-}
-
-- (BOOL) showsDefaultBackground {
-  return mIsUsingDefaultDesktopImage;
 }
 
 #pragma mark -
@@ -207,8 +173,7 @@
 
 #pragma mark -
 - (void) setName: (NSString*) name {
-  // reject if name is empty or nil, or if we already have a name like the
-  // one provided
+  // reject if name is empty or nil, or if we already have a name like the one provided
   if ((name == nil) || ([name length] == 0))
     return;
 
@@ -234,18 +199,11 @@
 #pragma mark Desktop background
 
 - (void) applyDesktopBackground {
-  [[VTDesktopBackgroundHelper sharedInstance] setBackground: mDesktopBackgroundImagePath];
-}
-
-- (void) applyDefaultDesktopBackground {
-  [[VTDesktopBackgroundHelper sharedInstance] setBackground: mDefaultDesktopBackgroundImagePath];
-}
-
-#pragma mark -
-#pragma mark Class methods
-
-+ (NSString*) currentDesktopBackground {
-  return [[VTDesktopBackgroundHelper sharedInstance] background];
+  if (([self showsBackground] == NO) || ([self desktopBackground] == nil)) {
+    [[VTDesktopBackgroundHelper sharedInstance] setBackground: [[VTDesktopBackgroundHelper sharedInstance] defaultBackground]];
+  } else {
+    [[VTDesktopBackgroundHelper sharedInstance] setBackground: [self desktopBackground]];
+  }
 }
 
 @end

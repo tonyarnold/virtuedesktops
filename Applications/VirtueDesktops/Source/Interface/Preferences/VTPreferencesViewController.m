@@ -102,10 +102,10 @@
 	if (mCurrentPane) 
 		[mCurrentPane willSelect]; 
 	
-	
 	[super showWindow: sender];
+
 	if (mCurrentPane)
-		[mCurrentPane didSelect]; 
+		[mCurrentPane didSelect];
 }
 
 #pragma mark -

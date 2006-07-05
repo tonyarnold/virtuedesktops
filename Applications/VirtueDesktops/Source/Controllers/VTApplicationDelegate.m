@@ -10,6 +10,7 @@
 * See COPYING for licensing details
 *
 *****************************************************************************/
+#import <Virtue/VTDesktopBackgroundHelper.h>
 #import <Virtue/VTDesktopController.h>
 #import <Virtue/VTDesktopDecorationController.h>
 #import <Virtue/VTLayoutController.h>
@@ -175,6 +176,7 @@ enum
 	[mPluginController loadPlugins];
   
 	// Create controllers
+  [VTDesktopBackgroundHelper      sharedInstance];
 	[VTDesktopController						sharedInstance];
 	[VTDesktopDecorationController	sharedInstance];
 	[[VTDesktopController						sharedInstance] deserializeDesktops];
@@ -424,8 +426,7 @@ enum
 				continue;
       
 			[desktop moveAllWindowsToDesktop: target];
-			if ([desktop defaultDesktopBackgroundPath] != nil)
-				[desktop applyDefaultDesktopBackground];
+      [desktop applyDesktopBackground];
 		}
 	}
   
@@ -739,9 +740,7 @@ enum
 #pragma mark -
 
 - (void) updateStatusItem {
-	BOOL showStatusItem = [[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueShowStatusbarMenu];
-  
-	if (showStatusItem == YES) {
+	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueShowStatusbarMenu] == YES) {
 		// create if necessary
 		if (mStatusItem == nil) {
 			// set up the status bar and attach the menu
@@ -806,7 +805,7 @@ enum
 		}
 	}
   
-	// now we can readd the items
+	// now we can read the items
 	NSEnumerator*	desktopIter		= [[[[[VTLayoutController sharedInstance] activeLayout] desktops] objectEnumerator] retain];
 	NSString*			uuid					= nil;
 	VTDesktop*		desktop				= nil;
@@ -852,9 +851,9 @@ enum
 	mStatusItemMenuActiveDesktopNeedsUpdate = NO;
   
 	// first remove all items that have no associated object
-	NSArray*		menuItems		= [mStatusItemActiveDesktopItem itemArray];
+	NSArray*        menuItems     = [mStatusItemActiveDesktopItem itemArray];
 	NSEnumerator*   menuItemIter	= [menuItems objectEnumerator];
-	NSMenuItem*		menuItem		= nil;
+	NSMenuItem*     menuItem      = nil;
   
 	while (menuItem = [menuItemIter nextObject]) {
 		// check if the menu item is marked by us, and if so, we will remove it
@@ -862,13 +861,13 @@ enum
 			[mStatusItemActiveDesktopItem removeItem: menuItem];
 	}
   
-	NSArray*		applications	= [[[VTDesktopController sharedInstance] activeDesktop] applications];
+	NSArray*        applications    = [[[VTDesktopController sharedInstance] activeDesktop] applications];
 	NSEnumerator*   applicationIter = [applications objectEnumerator];
-	PNApplication*	application		= nil;
+	PNApplication*	application     = nil;
   
-	NSSize			iconSize;
-	iconSize.width	= 16;
-	iconSize.height = 16;
+	NSSize  iconSize;
+          iconSize.width	= 16;
+          iconSize.height = 16;
   
 	while (application = [applicationIter nextObject]) {
 		NSString*	applicationTitle	= [application name];

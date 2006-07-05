@@ -409,6 +409,10 @@
 					ppc,
 					i386,
 				);
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;

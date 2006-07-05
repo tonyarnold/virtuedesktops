@@ -95,7 +95,6 @@
 	
 	NSWindow* activeDesktopWindow = [mWindows objectForKey: [NSNumber numberWithInt: [[[VTDesktopController sharedInstance] activeDesktop] identifier]]]; 
 	[activeDesktopWindow setLevel: (mDesktopWindowLevel + 1)];
-	
 }
 
 #pragma mark -

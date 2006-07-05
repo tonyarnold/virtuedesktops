@@ -27,9 +27,7 @@
 	NSString*							mDefaultDesktopBackgroundPath;
 	
 	VTDesktopDecoration*	mDecorationPrototype; 
-	BOOL									mUsesDecorationPrototype; 
-	BOOL									mNeedDesktopBackgroundUpdate; 
-	
+	BOOL									mUsesDecorationPrototype;	
 	BOOL									mExpectingBackgroundChange; 
 }
 

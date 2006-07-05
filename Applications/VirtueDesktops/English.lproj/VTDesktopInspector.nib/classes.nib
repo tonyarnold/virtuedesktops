@@ -26,6 +26,7 @@
                 mImageView = VTImageViewFileDropper; 
                 mInspectPrimitiveButton = NSButton; 
                 mLabelButton = VTColorLabelButton; 
+                mShowsDesktopButton = NSButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 

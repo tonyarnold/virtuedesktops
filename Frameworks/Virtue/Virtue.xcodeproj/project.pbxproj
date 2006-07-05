@@ -69,9 +69,7 @@
 		E941D1B30746A368007DF0D9 /* VTPluginScript.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D1B20746A368007DF0D9 /* VTPluginScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E941D2140746C042007DF0D9 /* VTPluginCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = E941D2120746C042007DF0D9 /* VTPluginCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E941D2150746C042007DF0D9 /* VTPluginCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E941D2130746C042007DF0D9 /* VTPluginCollection.m */; };
-		E94339D40751C9570075ADF3 /* VTDesktopProtector.h in Headers */ = {isa = PBXBuildFile; fileRef = E94339D20751C9570075ADF3 /* VTDesktopProtector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E94339D50751C9570075ADF3 /* VTDesktopProtector.m in Sources */ = {isa = PBXBuildFile; fileRef = E94339D30751C9570075ADF3 /* VTDesktopProtector.m */; };
-		E9544C970753D6C8009DA20D /* VTDesktopBackgroundHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E9544C950753D6C8009DA20D /* VTDesktopBackgroundHelper.h */; };
+		E9544C970753D6C8009DA20D /* VTDesktopBackgroundHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E9544C950753D6C8009DA20D /* VTDesktopBackgroundHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9544C980753D6C8009DA20D /* VTDesktopBackgroundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9544C960753D6C8009DA20D /* VTDesktopBackgroundHelper.m */; };
 		E958A5F5075CFB5A00773392 /* NSBundlePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = E958A5F3075CFB5A00773392 /* NSBundlePlugin.h */; };
 		E958A5F6075CFB5A00773392 /* NSBundlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E958A5F4075CFB5A00773392 /* NSBundlePlugin.m */; };
@@ -571,7 +569,6 @@
 				E941D19307469B9C007DF0D9 /* VTScriptPlugin.h in Headers */,
 				E941D1B30746A368007DF0D9 /* VTPluginScript.h in Headers */,
 				E941D2140746C042007DF0D9 /* VTPluginCollection.h in Headers */,
-				E94339D40751C9570075ADF3 /* VTDesktopProtector.h in Headers */,
 				E9544C970753D6C8009DA20D /* VTDesktopBackgroundHelper.h in Headers */,
 				E9C74A7C07588AFB005EFD90 /* VTPluginProtocol.h in Headers */,
 				E9C74A8A07589001005EFD90 /* VTPluginInstance.h in Headers */,
@@ -714,7 +711,6 @@
 				E99B09DF073D07BE004B9D57 /* NSImageTint.m in Sources */,
 				E941D19407469B9C007DF0D9 /* VTScriptPlugin.m in Sources */,
 				E941D2150746C042007DF0D9 /* VTPluginCollection.m in Sources */,
-				E94339D50751C9570075ADF3 /* VTDesktopProtector.m in Sources */,
 				E9544C980753D6C8009DA20D /* VTDesktopBackgroundHelper.m in Sources */,
 				E9C74A8B07589001005EFD90 /* VTPluginInstance.m in Sources */,
 				E958A5F6075CFB5A00773392 /* NSBundlePlugin.m in Sources */,
@@ -825,6 +821,10 @@
 					i386,
 				);
 				FRAMEWORK_SEARCH_PATHS = /System/Library/Frameworks/ApplicationServices.framework/Frameworks;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};

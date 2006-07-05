@@ -15,7 +15,8 @@
 *****************************************************************************/ 
 
 #import "VTDesktopBackgroundHelper.h"
-#import <Zen/NSFileManagerAlias.h> 
+#import <Zen/NSFileManagerAlias.h>
+#import <Zen/Zen.h>
 
 enum {
 	kFinderSig					= 'FNDR',
@@ -56,11 +57,13 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 - (id) init {
 	if (self = [super init]) {
 		// init attributes 
-		mMode		= VTBackgroundHelperModeNone; 
-		mFinderPid	= 0; 
+		mMode       = VTBackgroundHelperModeNone; 
+		mFinderPid  = 0; 
 		
 		// find out which mode to use 
-		[self updateMode]; 
+		[self updateMode];
+    ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [self background]);
+    
 		return self; 
 	}
 	
@@ -90,18 +93,18 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 
 #pragma mark -
 #pragma mark Operations 
-- (void) setBackground: (NSString*) file {
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	if ([fileManager fileExistsAtPath: file] == NO)
+- (void) setBackground: (NSString*) path {
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+	if ([fileManager fileExistsAtPath: path] == NO)
 		return;
 	
 	
 	switch (mMode) {
 		case VTBackgroundHelperModeFinder: 
-			[self setBackgroundUsingFinder: file]; 
+			[self setBackgroundUsingFinder: path]; 
 			break; 
 		case VTBackgroundHelperModePList: 
-			[self setBackgroundUsingPList: file]; 
+			[self setBackgroundUsingPList: path]; 
 			break; 
 		case VTBackgroundHelperModeNone: 
 			// Fallthrough
@@ -111,8 +114,8 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 }
 
 - (NSString*) background {
-	// As a first implementatin we always query the PList for the desktop 
-	// TODO: Implement Finder querying 
+	// As a first implementation we always query the PList for the desktop 
+	// @TODO@ Implement Finder querying 
 #if 0	
 	switch (mMode) {
 		case VTBackgroundHelperModeFinder: 
@@ -129,6 +132,17 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	
 	return nil; 
 #endif 
+}
+
+- (void) setDefaultBackground: (NSString*) path {
+  if (path == nil)
+    return;
+
+  ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, path);
+}
+
+- (NSString*) defaultBackground {
+  return mDefaultDesktopBackgroundPath;
 }
 
 @end
