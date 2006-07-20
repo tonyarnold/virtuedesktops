@@ -195,6 +195,8 @@
 		E9D29C35073E3C8C00E0E6CE /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9D29BE9073E345700E0E6CE /* VTDesktopColorLabelPrimitive.plugin */; };
 		E9FD547B0713BF290006590F /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9FD547A0713BF290006590F /* iconDesktopFolder.icns */; };
 		E9FD54FF0715C6260006590F /* imageAction.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FD54FE0715C6260006590F /* imageAction.png */; };
+		EA12C57A0A6FC75F000611BF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA12C5720A6FC75F000611BF /* Growl.framework */; };
+		EA12C5A80A6FCB22000611BF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA12C5720A6FC75F000611BF /* Growl.framework */; };
 		EA290D5B09FE0D2900CAA1DA /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3599DD09BD7E7900B55739 /* libDockCommunicator.a */; };
 		EA3872810A3D4CFE004F4330 /* VTMotionController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA38727F0A3D4CFE004F4330 /* VTMotionController.h */; };
 		EA3872820A3D4CFE004F4330 /* VTMotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3872800A3D4CFE004F4330 /* VTMotionController.m */; };
@@ -616,6 +618,7 @@
 				EAF8C93C09076ED5003D54B1 /* Virtue.framework in CopyFiles */,
 				EA3BB468090BBD77007A7505 /* VTInterface.framework in CopyFiles */,
 				EAF8C9C509077071003D54B1 /* Zen.framework in CopyFiles */,
+				EA12C5A80A6FCB22000611BF /* Growl.framework in CopyFiles */,
 				EA3872810A3D4CFE004F4330 /* VTMotionController.h in CopyFiles */,
 				EA8AD5FD0A3E820D00737086 /* VTWindowPager.h in CopyFiles */,
 			);
@@ -924,6 +927,7 @@
 		E9D29C07073E3AC400E0E6CE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		E9FD547A0713BF290006590F /* iconDesktopFolder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconDesktopFolder.icns; sourceTree = "<group>"; };
 		E9FD54FE0715C6260006590F /* imageAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageAction.png; sourceTree = "<group>"; };
+		EA12C5720A6FC75F000611BF /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = ../../Shared/Frameworks/Growl.framework; sourceTree = SOURCE_ROOT; };
 		EA2108E2094541B5007BED41 /* DECCgsExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECCgsExt.h; sourceTree = "<group>"; };
 		EA2108E3094541B5007BED41 /* DECEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEvent.h; sourceTree = "<group>"; };
 		EA2108E4094541B5007BED41 /* DECEventAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECEventAlpha.h; sourceTree = "<group>"; };
@@ -988,6 +992,7 @@
 				EABDFECA09AC950C00C523BA /* libz.1.2.3.dylib in Frameworks */,
 				EA54638209AC9CD1002EDE9E /* WebKit.framework in Frameworks */,
 				EA5A45F20A089AD8001EF27C /* Sparkle.framework in Frameworks */,
+				EA12C57A0A6FC75F000611BF /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1127,6 +1132,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA12C5720A6FC75F000611BF /* Growl.framework */,
 				E9A4816506FF5D6F00A8AE3C /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				EABDFE6609AC94D400C523BA /* CoreFoundation.framework */,
@@ -3451,7 +3457,9 @@
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)",
 					"$(SRCROOT)/../../Shared",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Shared/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3483,7 +3491,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Shared/Frameworks\"";
 				GCC_PREFIX_HEADER = virtue_Prefix.pch;
 				HEADER_SEARCH_PATHS = ../../Frameworks/DockCommunicator/includes/;
 				INFOPLIST_FILE = Info.plist;

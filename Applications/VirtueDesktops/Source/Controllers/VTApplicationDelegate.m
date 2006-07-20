@@ -21,6 +21,7 @@
 #import <Virtue/NSUserDefaultsControllerKeyFactory.h>
 #import <Zen/Zen.h>
 #import <Sparkle/Sparkle.h>
+#import <Growl/Growl.h>
 
 #import "VTApplicationDelegate.h"
 #import "VTMatrixDesktopLayout.h"
@@ -296,6 +297,8 @@ enum
 																														forKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorSensitivity]
 																															 options: NSKeyValueObservingOptionNew
 																															 context: NULL];
+  
+  [GrowlApplicationBridge setGrowlDelegate:self];
   
 	// Register private observers
 	[self registerObservers];
@@ -630,13 +633,17 @@ enum
 		// unregister from the old desktop and reregister at the new one
 		if (oldDesktop)
 			[oldDesktop removeObserver: self forKeyPath: @"applications"];
-		[newDesktop addObserver: self
+		
+    [newDesktop addObserver: self
                  forKeyPath: @"applications"
                     options: NSKeyValueObservingOptionNew
                     context: NULL];
-    
+      
 		[self updateStatusItem];
-	}
+    [self performSelector: @selector(postGrowlNotification) 
+               withObject: nil 
+               afterDelay: 1.0];
+  }
 	else if ([keyPath isEqualToString: @"applications"]) {
 		mStatusItemMenuDesktopNeedsUpdate = YES;
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
@@ -655,6 +662,44 @@ enum
   }
   
   //[super observeValueForKeyPath: keyPath ofObject: anObject change: theChange context: theContext];
+}
+
+#pragma mark Growl
+
+/*!
+* @brief Returns the application name Growl will use
+ */
+- (NSString *)applicationNameForGrowl
+{
+	return @"VirtueDesktops";
+}
+
+/*!
+* @brief Registration information for Growl
+ *
+ * Returns information that Growl needs, like which notifications we will post and our application name.
+ */
+- (NSDictionary *)registrationDictionaryForGrowl
+{
+  NSMutableArray *allNotes = [NSMutableArray arrayWithObjects: @"Desktop changed", nil];
+	NSDictionary	*growlReg = [NSDictionary dictionaryWithObjectsAndKeys:
+		allNotes, GROWL_NOTIFICATIONS_ALL,
+		allNotes, GROWL_NOTIFICATIONS_DEFAULT,
+		nil];
+  
+	return growlReg;
+}
+
+- (void)postGrowlNotification {
+  [GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: @"Changed to desktop \"%@\"", [[[VTDesktopController sharedInstance] activeDesktop] name]] 
+                              description: nil
+                         notificationName: @"Desktop changed" 
+                                 iconData: nil 
+                                 priority: 0 
+                                 isSticky: NO 
+                             clickContext: nil];
+  
+  
 }
 
 @end

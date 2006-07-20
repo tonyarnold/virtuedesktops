@@ -22,7 +22,9 @@
 #import "VTDesktopViewController.h"
 #import "VTApplicationViewController.h" 
 
-@interface VTApplicationDelegate : NSObject {
+@protocol GrowlApplicationBridgeDelegate;
+
+@interface VTApplicationDelegate : NSObject <GrowlApplicationBridgeDelegate> {
 	// Outlets 
 	IBOutlet NSMenu*							mStatusItemMenu; 
 	IBOutlet NSMenu*							mStatusItemActiveDesktopItem; 
@@ -66,4 +68,6 @@
 - (IBAction) deleteActiveDesktop: (id) sender; 
 - (void) moveFrontApplicationToDirection: (VTDirection) direction;
 
+#pragma mark Growl
+- (void)postGrowlNotification;
 @end
