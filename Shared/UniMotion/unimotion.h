@@ -38,10 +38,17 @@ enum sms_hardware {
 int detect_sms();
 
 // use the value returned from detect_sms as the type
-// returns 1 on success and 0 on failure
-// modifies x, y and z if they are not 0
-int read_sms(int type, int *x, int *y, int *z);
+// these functinos return 1 on success and 0 on failure
+// they modify x, y and z if they are not 0
+
+// raw, unmodified values
 int read_sms_raw(int type, int *x, int *y, int *z);
+// "calibrated" values (same as raw if no calibration data exists)
+int read_sms(int type, int *x, int *y, int *z);
+// real (1.0 = 1G) values (requires calibration data)
+// note that this is the preferred API as it need not change with new machines
+// however, this API does not work if no "scale" calibration data exists
+int read_sms_real(int type, double *x, double *y, double *z);
 
 #ifdef __cplusplus
 }
