@@ -221,6 +221,7 @@
 			EA12C60F0A6FCED4000611BF /* PBXTextBookmark */ = EA12C60F0A6FCED4000611BF /* PBXTextBookmark */;
 			EA12C6130A6FCEF8000611BF /* PBXTextBookmark */ = EA12C6130A6FCEF8000611BF /* PBXTextBookmark */;
 			EA12C6140A6FCEF8000611BF /* PBXTextBookmark */ = EA12C6140A6FCEF8000611BF /* PBXTextBookmark */;
+			EA12C6170A6FCF44000611BF /* PBXTextBookmark */ = EA12C6170A6FCF44000611BF /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
@@ -310,7 +311,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1246, 18918}}";
 			sepNavSelRange = "{23947, 0}";
 			sepNavVisRect = "{{0, 11335}, {1246, 682}}";
-			sepNavWindowFrame = "{{25, 133}, {1291, 740}}";
+			sepNavWindowFrame = "{{191, 138}, {1291, 740}}";
 		};
 	};
 	E903F78E071DB56900A00F30 /* VTPluginController.m */ = {
@@ -843,7 +844,7 @@
 		isa = PBXTextBookmark;
 		fRef = EAC2B687095E17EC00748870 /* Info.plist */;
 		name = "http://www.virtuedesktops.info/appcast/rss";
-		rLen = 42;
+		rLen = 52;
 		rLoc = 2210;
 		rType = 0;
 		vrLen = 1204;
@@ -1126,6 +1127,16 @@
 		vrLen = 1207;
 		vrLoc = 1082;
 	};
+	EA12C6170A6FCF44000611BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E903F75E071DB4EF00A00F30 /* VTApplicationDelegate.h */;
+		name = "VTApplicationDelegate.h: postGrowlNotification";
+		rLen = 0;
+		rLoc = 2288;
+		rType = 0;
+		vrLen = 1207;
+		vrLoc = 1082;
+	};
 	EA2108E3094541B5007BED41 /* DECEvent.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {762, 1232}}";
@@ -1307,8 +1318,8 @@
 	EAC2B687095E17EC00748870 /* Info.plist */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 1548}}";
-			sepNavSelRange = "{2210, 42}";
-			sepNavVisRect = "{{0, 864}, {1046, 684}}";
+			sepNavSelRange = "{2214, 0}";
+			sepNavVisRect = "{{0, 0}, {1046, 684}}";
 			sepNavWindowFrame = "{{255, 129}, {1091, 742}}";
 		};
 	};
