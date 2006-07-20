@@ -4,11 +4,8 @@
  *
  * A desktop extension for MacOS X
  *
- * Copyright 2004, Thomas Staller
- * playback@users.sourceforge.net
- * 
- * Copyright 2006, Tony Arnold
- * tony@tonyarnold.com
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2006, Tony Arnold <tony@tonyarnold.com>
  *
  * See COPYING for licensing details
  *
@@ -455,12 +452,13 @@
 	}
 
 	// if the number of desktops is 0, we will skip fetching windows
-	if (iNumberOfWindows > 0) {
+	if (iNumberOfWindows > 0)
+  {
 		// query the list of windows in our workspace
-		oWindows = [NSMutableData dataWithCapacity: iNumberOfWindows * sizeof(int)];
-		oResult = CGSGetWorkspaceWindowList(oConnection, mDesktopId, iNumberOfWindows, [oWindows mutableBytes], &iNumberOfWindows);
-		if (oResult)
-		{
+		oWindows  = [NSMutableData dataWithCapacity: iNumberOfWindows * sizeof(int)];
+		oResult   = CGSGetWorkspaceWindowList(oConnection, mDesktopId, iNumberOfWindows, [oWindows mutableBytes], &iNumberOfWindows);
+		if (oResult) 
+    {
 			NSLog(@"[Desktop %i] CGSGetWorkspaceWindowList failed [%i]", mDesktopId, oResult);
 			return;
 		}
@@ -480,14 +478,14 @@
 
 		// get the window proxy
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
-
+    
 		// ignore menus
-		if (([window level] == NSPopUpMenuWindowLevel) ||
-				([window level] == NSSubmenuWindowLevel) ||
-				([window level] == NSMainMenuWindowLevel)) {
-			[window release];
-			continue;
-		}
+//		if (([window level] == NSPopUpMenuWindowLevel) ||
+//				([window level] == NSSubmenuWindowLevel) ||
+//				([window level] == NSMainMenuWindowLevel)) {
+//			[window release];
+//			continue;
+//		}
 
 		// get application container
 		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];

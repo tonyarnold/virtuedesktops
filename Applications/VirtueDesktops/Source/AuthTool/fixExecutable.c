@@ -136,8 +136,7 @@ fixVirtueDesktopsExecutable(const char *vdPath)
   AuthorizationRights rightSet = { 1, &right };
   OSStatus status;
   MyAuthorizedCommand myCommand;
-  AuthorizationFlags flags = kAuthorizationFlagDefaults | kAuthorizationFlagPreAuthorize
-    | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagExtendRights;
+  AuthorizationFlags flags = kAuthorizationFlagDefaults | kAuthorizationFlagPreAuthorize | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagExtendRights;
   
   
   /* Create a new authorization reference which will later be passed to the tool. */

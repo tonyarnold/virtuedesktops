@@ -186,8 +186,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 173793861;
-			PBXWorkspaceStateSaveDate = 173793861;
+			PBXPerProjectTemplateStateSaveDate = 175073178;
+			PBXWorkspaceStateSaveDate = 175073178;
+		};
+		perUserProjectItems = {
+			EA65294A0A6F679D000FC202 /* PBXTextBookmark */ = EA65294A0A6F679D000FC202 /* PBXTextBookmark */;
+			EAA565920A613C10002615E8 = EAA565920A613C10002615E8 /* PBXBookmark */;
+			EAA5659E0A613D70002615E8 = EAA5659E0A613D70002615E8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA3F4EB409ECB544007358DC /* Source Control */;
 		userBookmarkGroup = EAD789780A0B0E1B00233FC7 /* PBXBookmarkGroup */;
@@ -429,6 +434,14 @@
 	};
 	E913F15C076E375500072617 /* VTDesktopTemplatePreferences */ = {
 		activeExec = 0;
+	};
+	E913F163076E37CB00072617 /* VTDesktopTemplatePreferences.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1268, 5643}}";
+			sepNavSelRange = "{3804, 24}";
+			sepNavVisRect = "{{0, 1881}, {1268, 745}}";
+			sepNavWindowFrame = "{{15, 75}, {1313, 803}}";
+		};
 	};
 	E913F183076E3CFE00072617 /* VTDecorationPrimitiveViewController.h */ = {
 		uiCtxt = {
@@ -934,19 +947,29 @@
 	};
 	EA63C39E0A3F0B7800EC66B1 /* authtool.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1299, 3344}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 3971}}";
 			sepNavSelRange = "{164, 0}";
-			sepNavVisRect = "{{0, 0}, {1299, 668}}";
+			sepNavVisRect = "{{0, 2905}, {1299, 668}}";
 			sepNavWindowFrame = "{{84, 84}, {1344, 726}}";
 		};
 	};
 	EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1299, 2976}}";
-			sepNavSelRange = "{5134, 14}";
-			sepNavVisRect = "{{0, 1837}, {1299, 668}}";
-			sepNavWindowFrame = "{{14, 152}, {1344, 726}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1299, 3348}}";
+			sepNavSelRange = "{3938, 0}";
+			sepNavVisRect = "{{0, 793}, {1299, 668}}";
+			sepNavWindowFrame = "{{42, 137}, {1344, 726}}";
 		};
+	};
+	EA65294A0A6F679D000FC202 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */;
+		name = AuthorizationRights;
+		rLen = 19;
+		rLoc = 3751;
+		rType = 0;
+		vrLen = 1162;
+		vrLoc = 3243;
 	};
 	EA8AD5FB0A3E820D00737086 /* VTWindowPager.h */ = {
 		uiCtxt = {
@@ -971,6 +994,20 @@
 			sepNavVisRect = "{{0, 0}, {1246, 682}}";
 			sepNavWindowFrame = "{{15, 133}, {1291, 740}}";
 		};
+	};
+	EAA565920A613C10002615E8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */;
+	};
+	EAA5659E0A613D70002615E8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA63C3AE0A3F0BD600EC66B1 /* fixExecutable.c */;
+		name = AuthorizationRights;
+		rLen = 19;
+		rLoc = 3751;
+		rType = 0;
+		vrLen = 1162;
+		vrLoc = 3243;
 	};
 	EAC2B687095E17EC00748870 /* Info.plist */ = {
 		uiCtxt = {
