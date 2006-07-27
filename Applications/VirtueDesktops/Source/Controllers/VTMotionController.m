@@ -84,22 +84,23 @@
 }
 
 - (void) readFromSensor: (NSNotification*) notification {
-  if ( cooldown == 0) {
-    read_sms(sensor_type, &next_x_speed, &y_speed, &z_speed);
-    int difference = next_x_speed - x_speed;    
-    NSString *direction;
+  read_sms(sensor_type, &next_x_speed, &y_speed, &z_speed);
+  
+  
+  if (cooldown == 0) {
+    int difference = next_x_speed - x_speed;
     if ( abs(difference) > activation_speed ) {
       if (difference > 0) {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToPrevWorkspace" object: nil]; 
       } else {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToNextWorkspace" object: nil]; 
       }
-      cooldown = 5;
+      cooldown = 15; //(cooldown * sensor_speed is what you'll get in real time)
     }
-    x_speed = next_x_speed;
   } else {
     cooldown -= 1;
   }
+  x_speed = next_x_speed;
 }
 
 @end
