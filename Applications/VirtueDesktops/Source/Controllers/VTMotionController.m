@@ -95,7 +95,7 @@
       } else {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToNextWorkspace" object: nil]; 
       }
-      cooldown = 15; //(cooldown * sensor_speed is what you'll get in real time)
+      cooldown = 8; //(cooldown * sensor_speed is what you'll get in real time)
     }
   } else {
     cooldown -= 1;

@@ -138,7 +138,8 @@ enum
     if (dec_inject_code() != 0) { 
       // If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and 
       // by setting the set-group-ID-on-execution bit 
-      if (fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]) == 0) { 
+      int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);
+      if (fixExecutableStatus == 0) { 
         NSLog(@"Fixing VirtueDesktops' permissions so that we can execute as part of the procmod group.");
         // If the fix is successfull (i.e. user entered his password), then we relaunch a new instance of ourself  
         // and terminate the current instance 
