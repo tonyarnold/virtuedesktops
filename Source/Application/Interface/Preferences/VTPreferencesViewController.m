@@ -16,7 +16,7 @@
 #import <Virtue/NSUserDefaultsColor.h>
 #import <Virtue/VTTriggerController.h> 
 #import <Zen/Zen.h> 
-#import "../../../../Shared/CGS/CGSPrivate.h"
+#import "../../../../Shared/Headers/CGSPrivate.h"
 
 #define		VTPreferencePaneName					@"VTPreferencePaneName"
 #define		VTPreferencePaneHelpText			@"VTPreferencePaneHelpText"
