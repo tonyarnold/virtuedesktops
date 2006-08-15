@@ -419,7 +419,6 @@
 		EA7A69D80A870893000D6B5E /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */; };
 		EA7A6AB10A8709C2000D6B5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA7A6AB00A8709C2000D6B5E /* Localizable.strings */; };
 		EA7D76980A918A5500D36F0E /* VTAssignedTriggerArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */; };
-		EAB6033F0A89246E008053F0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EADC94000A88E583003BDC1A /* Sparkle.framework */; };
 		EAC060C80A8964F700020B92 /* VTLayoutPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC060C60A8964F700020B92 /* VTLayoutPreferences.nib */; };
 		EAC060F10A89679E00020B92 /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56640A86A70C000D6B5E /* imageCrossSmall.tif */; };
 		EAC060F20A89679E00020B92 /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56650A86A70C000D6B5E /* imageCrossSmallHover.tif */; };
@@ -428,8 +427,9 @@
 		EAC060F50A89679E00020B92 /* imageKeyboardTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56730A86A70C000D6B5E /* imageKeyboardTrigger.png */; };
 		EAC060F60A89679E00020B92 /* imageMouseTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56750A86A70C000D6B5E /* imageMouseTrigger.png */; };
 		EAC061060A89685D00020B92 /* imagePreferencesPagers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */; };
-		EADC94520A88E5AF003BDC1A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADC94000A88E583003BDC1A /* Sparkle.framework */; };
 		EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */; };
+		EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
+		EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -720,27 +720,6 @@
 			remoteGlobalIDString = EA7A63820A86FD3D000D6B5E;
 			remoteInfo = VTPluginPreferences;
 		};
-		EADC93FF0A88E583003BDC1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA7A55320A86A667000D6B5E /* Sparkle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = Sparkle;
-		};
-		EADC94010A88E583003BDC1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA7A55320A86A667000D6B5E /* Sparkle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 61B5F90209C4CEE200B25A18;
-			remoteInfo = "Sparkle Test App";
-		};
-		EADC94500A88E5A2003BDC1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA7A55320A86A667000D6B5E /* Sparkle.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Sparkle;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -760,8 +739,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */,
 				EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */,
-				EAB6033F0A89246E008053F0 /* Sparkle.framework in CopyFiles */,
 				EA7A69780A870874000D6B5E /* Peony.framework in CopyFiles */,
 				EA7A69790A870874000D6B5E /* Virtue.framework in CopyFiles */,
 				EA7A697A0A870874000D6B5E /* VTInterface.framework in CopyFiles */,
@@ -956,7 +935,7 @@
 		EA7A54830A86A629000D6B5E /* DECInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECInjector.h; sourceTree = "<group>"; };
 		EA7A54840A86A629000D6B5E /* DEComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEComm.h; sourceTree = "<group>"; };
 		EA7A54850A86A629000D6B5E /* DECVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECVersion.h; sourceTree = "<group>"; };
-		EA7A54890A86A663000D6B5E /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
+		EA7A54890A86A663000D6B5E /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGSPrivate.h; path = ../Headers/CGSPrivate.h; sourceTree = "<group>"; };
 		EA7A548B0A86A663000D6B5E /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		EA7A548F0A86A663000D6B5E /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = "<group>"; };
 		EA7A54900A86A663000D6B5E /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = "<group>"; };
@@ -964,7 +943,6 @@
 		EA7A54AC0A86A663000D6B5E /* SmartCrashReportsAPI.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsAPI.o; sourceTree = "<group>"; };
 		EA7A54AD0A86A663000D6B5E /* SmartCrashReportsInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsInstall.h; sourceTree = "<group>"; };
 		EA7A54AE0A86A663000D6B5E /* SmartCrashReportsInstall.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsInstall.o; sourceTree = "<group>"; };
-		EA7A55320A86A667000D6B5E /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = Sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
 		EA7A55700A86A668000D6B5E /* libUniMotion.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libUniMotion.dylib; sourceTree = "<group>"; };
 		EA7A55710A86A668000D6B5E /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimotion.h; sourceTree = "<group>"; };
 		EA7A558A0A86A6D0000D6B5E /* authtool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = authtool.c; sourceTree = "<group>"; };
@@ -1246,6 +1224,7 @@
 		EA7D76960A918A5500D36F0E /* VTAssignedTriggerArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAssignedTriggerArrayController.h; sourceTree = "<group>"; };
 		EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAssignedTriggerArrayController.m; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
+		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1410,7 +1389,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EADC94520A88E5AF003BDC1A /* Sparkle.framework in Frameworks */,
 				EA7A64D30A8701AA000D6B5E /* libUniMotion.dylib in Frameworks */,
 				EA7A64CB0A87017C000D6B5E /* SmartCrashReportsAPI.o in Frameworks */,
 				EA7A64CC0A87017C000D6B5E /* SmartCrashReportsInstall.o in Frameworks */,
@@ -1428,6 +1406,7 @@
 				EA7A65A40A870299000D6B5E /* WebKit.framework in Frameworks */,
 				EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */,
 				EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */,
+				EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1790,7 +1769,6 @@
 				EA7A548A0A86A663000D6B5E /* Frameworks */,
 				EA7A548C0A86A663000D6B5E /* mach_inject */,
 				EA7A54980A86A663000D6B5E /* Smart Crash Reports SDK */,
-				EA7A55320A86A667000D6B5E /* Sparkle.xcodeproj */,
 				EA7A556F0A86A668000D6B5E /* UniMotion */,
 			);
 			path = Shared;
@@ -1807,6 +1785,7 @@
 		EA7A548A0A86A663000D6B5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF823250A91F7ED008612A2 /* Sparkle.framework */,
 				EA7A548B0A86A663000D6B5E /* Growl.framework */,
 			);
 			path = Frameworks;
@@ -2470,15 +2449,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		EADC93FB0A88E583003BDC1A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EADC94000A88E583003BDC1A /* Sparkle.framework */,
-				EADC94020A88E583003BDC1A /* Sparkle Test App.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2926,7 +2896,6 @@
 				EA7A67BB0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67BD0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67BF0A87049A000D6B5E /* PBXTargetDependency */,
-				EADC94510A88E5A2003BDC1A /* PBXTargetDependency */,
 			);
 			name = VirtueDesktops;
 			productName = VirtueDesktops;
@@ -2939,7 +2908,6 @@
 		EAA9266D0A86A4E800D4674B /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */;
-			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -2976,14 +2944,7 @@
 			mainGroup = EAA9266B0A86A4E800D4674B;
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = EADC93FB0A88E583003BDC1A /* Products */;
-					ProjectRef = EA7A55320A86A667000D6B5E /* Sparkle.xcodeproj */;
-				},
-			);
 			projectRoot = "";
-			shouldCheckCompatibility = 1;
 			targets = (
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,
@@ -3004,23 +2965,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		EADC94000A88E583003BDC1A /* Sparkle.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Sparkle.framework;
-			remoteRef = EADC93FF0A88E583003BDC1A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EADC94020A88E583003BDC1A /* Sparkle Test App.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Sparkle Test App.app";
-			remoteRef = EADC94010A88E583003BDC1A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EA7A58F40A86B076000D6B5E /* Resources */ = {
@@ -3679,11 +3623,6 @@
 			isa = PBXTargetDependency;
 			target = EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */;
 			targetProxy = EA7A67BE0A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EADC94510A88E5A2003BDC1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Sparkle;
-			targetProxy = EADC94500A88E5A2003BDC1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -4480,9 +4419,11 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -4517,9 +4458,11 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;

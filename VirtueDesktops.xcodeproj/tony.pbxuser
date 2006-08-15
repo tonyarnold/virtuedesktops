@@ -542,7 +542,6 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -688,7 +687,6 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 0;
@@ -767,7 +765,7 @@
 		activeExecutable = EA7A63E10A86FE65000D6B5E /* VirtueDesktops */;
 		activeTarget = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
 		addToTargets = (
-			EA7A63350A86FB4F000D6B5E /* VTHotkeyPreferences */,
+			EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 		);
 		breakpoints = (
 		);
@@ -835,7 +833,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					484,
+					471,
 					20,
 					48,
 					43,
@@ -874,7 +872,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					444,
-					60,
+					30,
 					20,
 					48,
 					43,
@@ -890,8 +888,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 177336412;
-			PBXWorkspaceStateSaveDate = 177336412;
+			PBXPerProjectTemplateStateSaveDate = 177338028;
+			PBXWorkspaceStateSaveDate = 177338028;
 		};
 		sourceControlManager = EAA926710A86A4E800D4674B /* Source Control */;
 		userBookmarkGroup = EA2DB76D0A8BCDF80058D7BB /* PBXBookmarkGroup */;
