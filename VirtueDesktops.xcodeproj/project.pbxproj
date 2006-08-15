@@ -1220,7 +1220,7 @@
 		EA7A670C0A87043B000D6B5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		EA7A68860A870570000D6B5E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
-		EA7A6AB00A8709C2000D6B5E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Localisation/Localizable.strings; sourceTree = "<group>"; };
+		EA7A6AB00A8709C2000D6B5E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		EA7D76960A918A5500D36F0E /* VTAssignedTriggerArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAssignedTriggerArrayController.h; sourceTree = "<group>"; };
 		EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAssignedTriggerArrayController.m; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
@@ -1393,6 +1393,7 @@
 				EA7A64CB0A87017C000D6B5E /* SmartCrashReportsAPI.o in Frameworks */,
 				EA7A64CC0A87017C000D6B5E /* SmartCrashReportsInstall.o in Frameworks */,
 				EA7A64C00A870165000D6B5E /* libDockCommunicator.a in Frameworks */,
+				EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */,
 				EA7A64C50A870172000D6B5E /* Growl.framework in Frameworks */,
 				EA7A64C10A870165000D6B5E /* Peony.framework in Frameworks */,
 				EA7A64C20A870165000D6B5E /* Virtue.framework in Frameworks */,
@@ -1406,7 +1407,6 @@
 				EA7A65A40A870299000D6B5E /* WebKit.framework in Frameworks */,
 				EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */,
 				EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */,
-				EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1765,7 +1765,7 @@
 		EA7A54870A86A658000D6B5E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A54880A86A662000D6B5E /* CGS */,
+				EA7A54880A86A662000D6B5E /* Headers */,
 				EA7A548A0A86A663000D6B5E /* Frameworks */,
 				EA7A548C0A86A663000D6B5E /* mach_inject */,
 				EA7A54980A86A663000D6B5E /* Smart Crash Reports SDK */,
@@ -1774,12 +1774,12 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		EA7A54880A86A662000D6B5E /* CGS */ = {
+		EA7A54880A86A662000D6B5E /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				EA7A54890A86A663000D6B5E /* CGSPrivate.h */,
 			);
-			path = CGS;
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		EA7A548A0A86A663000D6B5E /* Frameworks */ = {
@@ -2125,33 +2125,35 @@
 		EA7A564E0A86A705000D6B5E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A564F0A86A70C000D6B5E /* defaults */,
-				EA7A56520A86A70C000D6B5E /* icons */,
-				EA7A56570A86A70C000D6B5E /* images */,
-				EA7A569B0A86A70C000D6B5E /* scripts */,
+				EA7A564F0A86A70C000D6B5E /* Defaults */,
+				EA7A56520A86A70C000D6B5E /* Icons */,
+				EA7A56570A86A70C000D6B5E /* Images */,
+				EA7A569B0A86A70C000D6B5E /* Scripts */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		EA7A564F0A86A70C000D6B5E /* defaults */ = {
+		EA7A564F0A86A70C000D6B5E /* Defaults */ = {
 			isa = PBXGroup;
 			children = (
 				EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */,
 				EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */,
 			);
+			name = Defaults;
 			path = defaults;
 			sourceTree = "<group>";
 		};
-		EA7A56520A86A70C000D6B5E /* icons */ = {
+		EA7A56520A86A70C000D6B5E /* Icons */ = {
 			isa = PBXGroup;
 			children = (
 				EA7A56540A86A70C000D6B5E /* iconDesktopFolder.icns */,
 				EA7A56560A86A70C000D6B5E /* iconVirtue.icns */,
 			);
+			name = Icons;
 			path = icons;
 			sourceTree = "<group>";
 		};
-		EA7A56570A86A70C000D6B5E /* images */ = {
+		EA7A56570A86A70C000D6B5E /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */,
@@ -2205,14 +2207,16 @@
 				EA7A56990A86A70C000D6B5E /* old_imagePositionMarkerPressed.png */,
 				EA7A569A0A86A70C000D6B5E /* old_imagePreferencesAppearance.tiff */,
 			);
+			name = Images;
 			path = images;
 			sourceTree = "<group>";
 		};
-		EA7A569B0A86A70C000D6B5E /* scripts */ = {
+		EA7A569B0A86A70C000D6B5E /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
 				EA7A569C0A86A70C000D6B5E /* DesktopManagementTest.scpt */,
 			);
+			name = Scripts;
 			path = scripts;
 			sourceTree = "<group>";
 		};
@@ -2431,6 +2435,7 @@
 		EA7A6AAF0A8709C2000D6B5E /* Localisation */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A6AB00A8709C2000D6B5E /* Localizable.strings */,
 			);
 			path = Localisation;
 			sourceTree = "<group>";
@@ -2442,7 +2447,6 @@
 				EA7A54870A86A658000D6B5E /* Shared */,
 				EA7A564E0A86A705000D6B5E /* Data */,
 				EA7A6AAF0A8709C2000D6B5E /* Localisation */,
-				EA7A6AB00A8709C2000D6B5E /* Localizable.strings */,
 				EA7A56A40A86A738000D6B5E /* Products */,
 				EA7A6A070A8708F2000D6B5E /* Property lists */,
 				EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */,
@@ -2877,6 +2881,7 @@
 				EA7A696D0A870826000D6B5E /* CopyFiles */,
 				EA7A697E0A870880000D6B5E /* CopyFiles */,
 				EA7A63DE0A86FE65000D6B5E /* Frameworks */,
+				EAF826A80A91FB26008612A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -3174,6 +3179,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAF826A80A91FB26008612A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env perl";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy\t$version = $REV;\n\t$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/0000/$version/mg;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA7A56A00A86A738000D6B5E /* Sources */ = {
@@ -4420,10 +4441,12 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_4)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -4459,10 +4482,12 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_4)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;

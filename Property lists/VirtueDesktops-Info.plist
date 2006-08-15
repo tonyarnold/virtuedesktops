@@ -48,7 +48,7 @@
 	<key>CFBundleIconFile</key>
 	<string>iconVirtue</string>
 	<key>CFBundleIdentifier</key>
-	<string>info.virtuedesktops.test.VirtueDesktops</string>
+	<string>info.virtuedesktops.VirtueDesktops</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
