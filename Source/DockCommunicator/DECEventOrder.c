@@ -1,0 +1,95 @@
+/******************************************************************************
+* 
+* DEComm.Peony.Virtue 
+*
+* A desktop extension for MacOS X
+*
+* Copyright 2004, Thomas Staller 
+* playback@users.sourceforge.net
+*
+* Redistribution and use in source and binary forms, with or without modification, 
+* are permitted provided that the following conditions are met:
+* 
+* - Redistributions of source code must retain the above copyright notice, this list 
+*   of conditions and the following disclaimer.
+* - Redistributions in binary form must reproduce the above copyright notice, this 
+*   list of conditions and the following disclaimer in the documentation and/or other 
+*   materials provided with the distribution.
+* - The name of the author may not be used to endorse or promote products derived 
+*   from this software without specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+* INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR 
+* A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY 
+* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+* BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+* PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER 
+* IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY 
+* WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+* 
+*****************************************************************************/ 
+
+#include "DECEventOrder.h"
+#include "DECPrivate.h"
+
+#define kDecEventOrderTypeKey		'type'
+#define kDecEventOrderReferenceKey	'refr'
+
+DecEventOrder* dec_event_order_new(DecEvent* event)
+{
+	if (event == NULL)
+		return NULL; 
+	
+	DecEventOrder* orderEvent = (DecEventOrder*)malloc(sizeof(DecEventOrder)); 
+	
+	orderEvent->event = event; 
+	orderEvent->event->type = kDecEventOrder; 
+	
+	return orderEvent; 
+}
+
+void dec_event_order_free(DecEventOrder* event)
+{
+	if (event == NULL)
+		return; 
+	
+	free(event); 
+}
+
+int dec_event_order_place_get(DecEventOrder* event)
+{
+	if (event == NULL)
+		return -2; 
+
+	int place; 
+	
+	AEGetParamPtr(event->event->appleEvent, kDecEventOrderTypeKey, typeSInt32, NULL, &place, sizeof(int), NULL); 
+	return place; 
+}
+
+void dec_event_order_place_set(DecEventOrder* event, int place)
+{
+	if (event == NULL)
+		return; 
+	
+	AEPutParamPtr(event->event->appleEvent, kDecEventOrderTypeKey, typeSInt32, &place, sizeof(int)); 	
+}
+
+int dec_event_order_reference_get(DecEventOrder* event)
+{
+	if (event == NULL)
+		return 0; 
+	
+	int reference; 
+	
+	AEGetParamPtr(event->event->appleEvent, kDecEventOrderReferenceKey, typeSInt32, NULL, &reference, sizeof(int), NULL); 
+	return reference; 
+}
+
+void dec_event_order_reference_set(DecEventOrder* event, int reference)
+{
+	if (event == NULL)
+		return; 
+	
+	AEPutParamPtr(event->event->appleEvent, kDecEventOrderReferenceKey, typeSInt32, &reference, sizeof(int)); 	
+}

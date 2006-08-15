@@ -1,0 +1,55 @@
+// Quit Dialog
+// Dialog displayed when Virtue was asked to die. There is no NIB file for this 
+// dialog, so localize here 
+
+// Short question if user wants to quit 
+VTQuitConfirmationDialogMessage			= "Are you sure you want to quit Virtue?";
+// Extensive description about what will happen 
+VTQuitConfirmationDialogDescription		= "By quitting Virtue all non-active desktops will be inaccessible until Virtue is restarted.";
+// Cancel Button cancels quitting
+VTQuitConfirmationDialogCancel			= "Do not quit"; 
+// OK Button quits Virtue
+VTQuitConfirmationDialogOK				= "Quit";
+
+
+// Statusbar Menu
+// Localizable strings in the Statusbar Menu 
+
+// No visible applications on the desktop 
+VTStatusbarMenuNoApplication			= "No Applications"; 
+
+
+// Trigger Preferences 
+// Localizable strings for the trigger settings 
+
+// Asks the user to press the key combination to set as the hotkey; please keep
+// this one short 
+VTTriggerPreferencesPressToSet			= "Press keys";
+
+// Application Inspector 
+// Localizable strings for the Application Inspector View 
+
+// The application is currently seen as running for Virtue 
+VTApplicationRunningStateYes			= "Application is running"; 
+// The application is currently not seen as running by Virtue 
+VTApplicationRunningStateNo				= "Application currently not running"; 
+
+// Desktop Inspector 
+// Localizable strings for the Desktop Inspector view 
+
+// None
+VTDesktopRunningApplicationCountNo		= "no"; 
+// Singluar
+VTDesktopRunningApplicationSingluar		= "application"; 
+// Plural 
+VTDesktopRunningApplicationPlural		= "applications";
+// The number of currently running applications per desktop
+// Param	1: number of applications or None
+// Param	2: multiplicty of application
+VTDesktopRunningApplicationCount		= "Showing %@ %@"; 
+
+// Matrix Layout 
+// Localizable strings for the matrix layout (this is handled in this special way as it is
+// a built-in layout)
+VTMatrixLayoutName						= "Matrix Layout"; 
+VTFixedMatrixLayoutName				= "Fixed Matrix Layout"; 

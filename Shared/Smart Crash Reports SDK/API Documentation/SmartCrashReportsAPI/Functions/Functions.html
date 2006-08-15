@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>Functions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1><br>
+<a name="HeaderDoc_functions"></a>
+<dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_IsMatchSpecifierRegistered" target="doc">UnsanitySCR_IsMatchSpecifierRegistered</a></tt></dt>
+<dd>Query whether the match specifier is registered with the Smart Crash Reports system.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_RegisterMatchSpecifier" target="doc">UnsanitySCR_RegisterMatchSpecifier</a></tt></dt>
+<dd>Registers your match specifier with the Smart Crash Reports system.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/UnsanitySCR_UnregisterMatchSpecifier" target="doc">UnsanitySCR_UnregisterMatchSpecifier</a></tt></dt>
+<dd>Unregisters your product(s) with the Smart Crash Reports system.
+</dd>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_IsMatchSpecifierRegistered;  name=UnsanitySCR_IsMatchSpecifierRegistered -->
+<a name="//apple_ref/c/func/UnsanitySCR_IsMatchSpecifierRegistered"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_IsMatchSpecifierRegistered">UnsanitySCR_IsMatchSpecifierRegistered</a></h3>
+</td></tr></table><hr><dl></dl><p>Query whether the match specifier is registered with the Smart Crash Reports system.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/econst/int //apple_ref/c/struct/int //apple_ref/c/clconst/int" --><font class="type">int</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_IsMatchSpecifierRegistered //apple_ref/c/clm/UnsanitySCR_IsMatchSpecifierRegistered //apple_ref/c/intfcm/UnsanitySCR_IsMatchSpecifierRegistered //apple_ref/c/func/UnsanitySCR_IsMatchSpecifierRegistered //apple_ref/c/ftmplt/UnsanitySCR_IsMatchSpecifierRegistered //apple_ref/c/defn/UnsanitySCR_IsMatchSpecifierRegistered //apple_ref/c/macro/UnsanitySCR_IsMatchSpecifierRegistered" --><font class="function">UnsanitySCR_IsMatchSpecifierRegistered</font><!-- /a -->(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inMatchString</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a -->*<font class="param">outOptionalRealMatchString</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inMatchString</i></code></dt><dd>The match string to query for. Note that SCR will perform partial matches search, too, so for example if you have
+"com.mycompany" registered, and you query against "com.mycompany.otherapp", this function will return positive result.</dd>
+<dt><code><i>outOptionalRealMatchString</i></code></dt><dd>If not NULL, this variable will contain the "real" match string that SCR contains in the database. You can
+use it in calls to UnsanitySCR_UnregisterProduct later, if you want. <i>Important</i>: You are responsible for releasing this
+value, if you have requested it, and the function returns 1.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd><ul>
+<li> 0:								The match string you have provided is not registered with SCR.
+<li> 1:								The match string you have provided is registered with SCR.
+<li> -1:							inMatchString is NULL
+</ul>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Queries whether the product is registered with the Smart Crash Reports system.
+</p>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_RegisterMatchSpecifier;  name=UnsanitySCR_RegisterMatchSpecifier -->
+<a name="//apple_ref/c/func/UnsanitySCR_RegisterMatchSpecifier"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_RegisterMatchSpecifier">UnsanitySCR_RegisterMatchSpecifier</a></h3>
+</td></tr></table><hr><dl></dl><p>Registers your match specifier with the Smart Crash Reports system.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_RegisterMatchSpecifier //apple_ref/c/clm/UnsanitySCR_RegisterMatchSpecifier //apple_ref/c/intfcm/UnsanitySCR_RegisterMatchSpecifier //apple_ref/c/func/UnsanitySCR_RegisterMatchSpecifier //apple_ref/c/ftmplt/UnsanitySCR_RegisterMatchSpecifier //apple_ref/c/defn/UnsanitySCR_RegisterMatchSpecifier //apple_ref/c/macro/UnsanitySCR_RegisterMatchSpecifier" --><font class="function">UnsanitySCR_RegisterMatchSpecifier</font><!-- /a -->(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inMatchString</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inCompanyName</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inSubmissionURL</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inSubmissionEmailTicket</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inOptionalCommentsTemplate</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inMatchString</i></code></dt><dd>The product ID string to match or NULL to use the current bundle identifier. Normally, this is a part of a CFBundleIdentifier of your product.
+For example, if your product CFBundleIdentifier is "com.mycompany.myapp", it is a good idea to set inProductIDMatchString
+to "com.mycompany.", since it will catch all of the products of your company. If you pass NULL to this argument, an attempt to use
+CFBundleIdentifier from the main bundle will be used, which is handy for most applications out there, but not acceptable for Contextual
+Menu Modules, Preference Panes and other plugins.</dd>
+<dt><code><i>inCompanyName</i></code></dt><dd>The company name in user-readable format. Smart Crash Reports will substitute "Apple" with this string, so make sure it's
+not too long. Example: "My Company"</dd>
+<dt><code><i>inSubmissionURL</i></code></dt><dd>The full URL to the script on your Web server that will handle the submissions, or NULL if you prefer the crash report to be sent
+to you via email (in this case, inSubmissionEmail must be not NULL). Example: "http://www.mycompany.com/cgi-bin/processor.cgi"</dd>
+<dt><code><i>inSubmissionEmailTicket</i></code></dt><dd>The email ticket for email you wish to receive crash report at, or NULL if you are handling it yourself on your web server. If this is set, 
+Unsanity server will handle the submission and email you the crash log. <i>Important:</i> this is NOT the email address. It is a unique
+email ticket that you have to register with Unsanity by going to
+<a href="http://www.unsanity.com/goto/email-ticket/" target="_top">http://www.unsanity.com/goto/email-ticket/</a>. This is done for email verification
+purposes, and also to not expose your real email to end users, if they peek inside of the SCR database somehow</dd>
+<dt><code><i>inOptionalCommentsTemplate</i></code></dt><dd>If this argument is not NULL, this string will be inserted into the "Description" field of the CrashReporter dialog.
+This can be useful if you want to put something like "Put your email here if you wish to be contacted by the developer regarding this
+crash log", or anything else.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>One of the following:
+<ul>
+<li> noErr:							Registration successful. If there is already such a match specifier registered, it is replaced with the fresh information
+supplied to this call.
+<li> paramErr:						inSubmissionURL and inSubmissionEmailTicket are NULL, or inMatchString is NULL, or inCompanyName is NULL
+<li> cNoMemErr:						Not enough memory to perform selected operation.
+<li> permErr:						Not enough permissions to write changes to disk.
+<li> bdNamErr:						The match string is malformed, or too wide to be accepted (don't try to register "com.", etc!)
+</ul>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Register your match specifier with the Smart Crash Reports system. Once this call is done, crash reports containing inMatchString in the crashed thread
+will be submitted to you, either to the submission URL (you have to implement the script on your web server), or to the submission email (Unsanity server will
+forward the report to you).
+</p>
+</dl>
+<hr><!-- headerDoc=func;  uid=//apple_ref/c/func/UnsanitySCR_UnregisterMatchSpecifier;  name=UnsanitySCR_UnregisterMatchSpecifier -->
+<a name="//apple_ref/c/func/UnsanitySCR_UnregisterMatchSpecifier"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="UnsanitySCR_UnregisterMatchSpecifier">UnsanitySCR_UnregisterMatchSpecifier</a></h3>
+</td></tr></table><hr><dl></dl><p>Unregisters your product(s) with the Smart Crash Reports system.
+</p>
+<blockquote><pre><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/instm/UnsanitySCR_UnregisterMatchSpecifier //apple_ref/c/clm/UnsanitySCR_UnregisterMatchSpecifier //apple_ref/c/intfcm/UnsanitySCR_UnregisterMatchSpecifier //apple_ref/c/func/UnsanitySCR_UnregisterMatchSpecifier //apple_ref/c/ftmplt/UnsanitySCR_UnregisterMatchSpecifier //apple_ref/c/defn/UnsanitySCR_UnregisterMatchSpecifier //apple_ref/c/macro/UnsanitySCR_UnregisterMatchSpecifier" --><font class="function">UnsanitySCR_UnregisterMatchSpecifier</font><!-- /a -->(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inMatchString</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inMatchString</i></code></dt><dd>The match string to unregister. This must be the same match string as used in the UnsanitySCR_RegisterProduct call before.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>One of the following:
+<ul>
+<li> noErr:							Unregistration successful.
+<li> paramErr:						inMatchString is NULL
+<li> cNoMemErr:						Not enough memory to perform selected operation.
+<li> permErr:						Not enough permissions to write changes to disk.
+<li> fnfErr:						The provided inMatchString was not found in the Smart Crash Reports database. You can safely ignore this error, as
+it means that the match string you've provided does not exist already.
+</ul>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Unregisters your product(s) with the Smart Crash Reports system. Performing this call will cause Smart Crash Reports to stop submitting bug reports for the
+inMatchString provided. Note that for this call to succeed, inMatchString must exactly match the one used in call to UnsanitySCR_RegisterProduct.
+</p>
+</dl>
+<p>(Last Updated February 09, 2006)
+</p></body></html>

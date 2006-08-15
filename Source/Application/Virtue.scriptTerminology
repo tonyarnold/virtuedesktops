@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+		<key>PNApplication</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>The application name</string>
+					<key>Name</key>
+					<string>name</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A single application on a desktop. </string>
+			<key>Name</key>
+			<string>desktop application</string>
+			<key>PluralName</key>
+			<string>desktop applications</string>
+		</dict>
+		<key>PNWindow</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>Window title</string>
+					<key>Name</key>
+					<string>title</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A single window on a specific desktop belonging to an application. </string>
+			<key>Name</key>
+			<string>desktop window</string>
+			<key>PluralName</key>
+			<string>desktop windows</string>
+		</dict>
+		<key>VTApplication</key>
+		<dict>
+			<key>Description</key>
+			<string>This class represents those, um, whatchamacallits.</string>
+			<key>Name</key>
+			<string>application</string>
+			<key>PluralName</key>
+			<string>applications</string>
+		</dict>
+		<key>VTDecorationPrimitive</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>enabled</key>
+				<dict>
+					<key>Description</key>
+					<string>Toggles visibility of the decoration primitive. The primitive will only be shown if this property is set to true. </string>
+					<key>Name</key>
+					<string>show on screen</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>Name of the decoration primitive. </string>
+					<key>Name</key>
+					<string>name</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A single decoration primitive of a desktop decoration. </string>
+			<key>Name</key>
+			<string>decoration primitive</string>
+			<key>PluralName</key>
+			<string>decoration primitives</string>
+		</dict>
+		<key>VTDecorationPrimitiveText</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>text</key>
+				<dict>
+					<key>Description</key>
+					<string>Text content of the primitive displayed on the desktop. </string>
+					<key>Name</key>
+					<string>content</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A decoration primitive displaying text. </string>
+			<key>Name</key>
+			<string>text primitive</string>
+			<key>PluralName</key>
+			<string>text primitives</string>
+		</dict>
+		<key>VTDecorationPrimitiveTint</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>color</key>
+				<dict>
+					<key>Description</key>
+					<string>The color of the primitive. </string>
+					<key>Name</key>
+					<string>color</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+				<key>size</key>
+				<dict>
+					<key>Description</key>
+					<string>Size of the tinted bar; this property will be ignored if the primitive is displayed full-screen.</string>
+					<key>Name</key>
+					<string>size</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A decoration primitive displaying a colored bar or colors the whole screen. </string>
+			<key>Name</key>
+			<string>tint primitive</string>
+			<key>PluralName</key>
+			<string>tint primitives</string>
+		</dict>
+		<key>VTDesktop</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>Name of the desktop. </string>
+					<key>Name</key>
+					<string>name</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+				<key>uuid</key>
+				<dict>
+					<key>Description</key>
+					<string>A unique identifier used to reference a desktop persistently. </string>
+					<key>Name</key>
+					<string>unique identifier</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+				<key>visible</key>
+				<dict>
+					<key>Description</key>
+					<string>Indicates if the desktop if currently visible. </string>
+					<key>Name</key>
+					<string>shown on screen</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A single visible desktop. </string>
+			<key>Name</key>
+			<string>desktop</string>
+			<key>PluralName</key>
+			<string>desktops</string>
+		</dict>
+		<key>VTDesktopController</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>activeDesktop</key>
+				<dict>
+					<key>Description</key>
+					<string>The currently shown desktop. </string>
+					<key>Name</key>
+					<string>active desktop</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Collection of desktops. </string>
+			<key>Name</key>
+			<string>desktop manager</string>
+			<key>PluralName</key>
+			<string>desktop managers</string>
+		</dict>
+		<key>VTDesktopDecoration</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>enabled</key>
+				<dict>
+					<key>Description</key>
+					<string>Indicates if the decoration is shown or not. </string>
+					<key>Name</key>
+					<string>show on screen</string>
+					<key>Sex</key>
+					<string>none</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Decoration container for all decoration primitives of a desktop</string>
+			<key>Name</key>
+			<string>decoration</string>
+			<key>PluralName</key>
+			<string>decorations</string>
+		</dict>
+	</dict>
+	<key>Commands</key>
+	<dict>
+		<key>activateDesktop</key>
+		<dict>
+			<key>Description</key>
+			<string>Shows the receiving desktop. </string>
+			<key>Name</key>
+			<string>show</string>
+		</dict>
+		<key>onDidActivateDesktop</key>
+		<dict>
+			<key>Arguments</key>
+			<dict/>
+			<key>Description</key>
+			<string>Sent to notify about a change of the shown desktop.</string>
+			<key>IsVerb</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>desktop did show</string>
+		</dict>
+		<key>onDidCreateDesktop</key>
+		<dict>
+			<key>Arguments</key>
+			<dict/>
+			<key>Description</key>
+			<string>Sent to notify about the creation of a new desktop passed as the unnamed argument. </string>
+			<key>IsVerb</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>desktop was created</string>
+		</dict>
+		<key>onWillActivateDesktop</key>
+		<dict>
+			<key>Arguments</key>
+			<dict/>
+			<key>Description</key>
+			<string>Sent to notify about a pending change of the shown desktop. The direct object is the desktop that is about to be shown. </string>
+			<key>IsVerb</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>desktop will show</string>
+		</dict>
+		<key>onWillDeleteDesktop</key>
+		<dict>
+			<key>Arguments</key>
+			<dict/>
+			<key>Description</key>
+			<string>Sent to notify about a pending deletion of the desktop passed as the unnamed argument. </string>
+			<key>IsVerb</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>desktop will be removed</string>
+		</dict>
+		<key>sendApplication</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>to</key>
+				<dict>
+					<key>Description</key>
+					<string>Sends the application to this desktop. </string>
+					<key>Name</key>
+					<string>to</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Sends the application and all of its windows to the passed desktop. </string>
+			<key>Name</key>
+			<string>warp</string>
+		</dict>
+		<key>sendWindow</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>to</key>
+				<dict>
+					<key>Description</key>
+					<string>Sends the window to this desktop. </string>
+					<key>Name</key>
+					<string>to</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Sends the window to the passed desktop. </string>
+			<key>Name</key>
+			<string>shift</string>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Virtue Description</string>
+	<key>Enumerations</key>
+	<dict>
+		<key>DirectionType</key>
+		<dict>
+			<key>East</key>
+			<dict>
+				<key>Description</key>
+				<string>Bunny direction. </string>
+				<key>Name</key>
+				<string>east</string>
+			</dict>
+			<key>Name</key>
+			<string>Direction</string>
+			<key>None</key>
+			<dict>
+				<key>Description</key>
+				<string>No direction. </string>
+				<key>Name</key>
+				<string>none</string>
+			</dict>
+			<key>North</key>
+			<dict>
+				<key>Description</key>
+				<string>Northern direction. </string>
+				<key>Name</key>
+				<string>north</string>
+			</dict>
+			<key>Northeast</key>
+			<dict>
+				<key>Description</key>
+				<string>Northeastern direction. </string>
+				<key>Name</key>
+				<string>northeast</string>
+			</dict>
+			<key>Northwest</key>
+			<dict>
+				<key>Description</key>
+				<string>Northwestern direction. </string>
+				<key>Name</key>
+				<string>northwest</string>
+			</dict>
+			<key>South</key>
+			<dict>
+				<key>Description</key>
+				<string>Southern direction. </string>
+				<key>Name</key>
+				<string>south</string>
+			</dict>
+			<key>Southeast</key>
+			<dict>
+				<key>Description</key>
+				<string>Southeastern direction. </string>
+				<key>Name</key>
+				<string>southeast</string>
+			</dict>
+			<key>Southwest</key>
+			<dict>
+				<key>Description</key>
+				<string>Southwestern direction. </string>
+				<key>Name</key>
+				<string>southwest</string>
+			</dict>
+			<key>West</key>
+			<dict>
+				<key>Description</key>
+				<string>Western direction. </string>
+				<key>Name</key>
+				<string>west</string>
+			</dict>
+		</dict>
+		<key>PositioningType</key>
+		<dict>
+			<key>Absolute</key>
+			<dict>
+				<key>Description</key>
+				<string>The position is determined by the x and y position coordinates. </string>
+				<key>Name</key>
+				<string>absolute</string>
+			</dict>
+			<key>LL</key>
+			<dict>
+				<key>Description</key>
+				<string>Positions the decoration primitive in the lower left corner of the screen. </string>
+				<key>Name</key>
+				<string>lower left</string>
+			</dict>
+			<key>LR</key>
+			<dict>
+				<key>Description</key>
+				<string>Positions the decoration primitive in the lower right corner of the screen. </string>
+				<key>Name</key>
+				<string>lower right</string>
+			</dict>
+			<key>Name</key>
+			<string>Positioning</string>
+			<key>TL</key>
+			<dict>
+				<key>Description</key>
+				<string>Positions the decoration primitive in the top left corner of the screen. </string>
+				<key>Name</key>
+				<string>top left</string>
+			</dict>
+			<key>TR</key>
+			<dict>
+				<key>Description</key>
+				<string>Positions the decoration primitive in the top right corner of the screen. </string>
+				<key>Name</key>
+				<string>top right</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Name</key>
+	<string>Virtue</string>
+</dict>
+</plist>

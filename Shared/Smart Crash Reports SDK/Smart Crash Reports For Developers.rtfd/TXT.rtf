@@ -1,0 +1,309 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf330
+\readonlydoc1{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fnil\fcharset77 Futura-Medium;\f2\fnil\fcharset77 Verdana-Bold;
+\f3\fnil\fcharset77 Verdana;\f4\fnil\fcharset77 Monaco;}
+{\colortbl;\red255\green255\blue255;\red255\green165\blue31;\red101\green101\blue101;\red36\green88\blue143;
+\red104\green56\blue33;\red12\green19\blue204;\red43\green44\blue232;}
+\vieww22080\viewh16340\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+\cf0 {{\NeXTGraphic smartcrashreports.png \width2560 \height2560
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+\cf0 \
+\pard\li540\qc
+
+\f1\fs48 \cf2 \shad\shadx20\shady-39\shadr0\shado44 \shadc0 SMART CRASH REPORTS
+\f0\fs24 \cf0 \shad0 \
+\pard\li540\qc
+
+\f2\b\fs18 \cf3 a free tool by unsanity\
+\pard\li540\ql\qnatural
+\cf3 \
+\pard\li540\ql\qnatural
+
+\fs24 \cf4 What is Smart Crash Reports?\
+\pard\li540\ql\qnatural
+
+\fs20 \cf4 \
+\pard\tx1160\li540\ql\qnatural
+
+\f3\b0 \cf0 Smart Crash Reports is an enhancement for the Apple's CrashReporter application introduced in Mac OS X 10.4. It allows 3rd party developers to register their products in manner so if the eligible application crashes, the crash log is being sent to the developer as well as Apple. This greatly enhances the user experience of the OS, and allows developers to receive crashes and improve their software in a timely manner. \
+\
+Smart Crash Reports requires no Application Enhancer or similar "patching" frameworks users have to install; they operate on the InputManager mechanism that is built-in Mac OS X. \
+\
+Smart Crash Reports is completely free to use for both users and developers; Unsanity is providing it as a service to the community being certain it will benefit all the users on the platform. \
+\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b\fs24 \cf4 Using Smart Crash Reports As A Developer
+\f3\b0 \cf0 \
+\pard\tx1160\li540\ql\qnatural
+
+\fs20 \cf0 \
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b \cf0 We strongly encourage you to use Smart Crash Reports functionality in your products
+\f3\b0 . You assume no obligations by adopting Smart Crash Reports keys in your application Info.plist file, yet if the user has Smart Crash Reports installed, and your application crashes, you will receive a crash report from the user when they decide to Report it to Apple.\
+\
+You can also 
+\f2\b install Smart Crash Reports
+\f3\b0  from within your product through the use of the provided Smart Crash Reports Install API, but this is completely up to you.\
+\
+Overall, there are 
+\f2\b two ways of receiving crash reports for your product
+\f3\b0 :\
+\
+	- 
+\f2\b By E-Mail
+\f3\b0  (you have to {\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/goto/email-ticket/"}}{\fldrslt register the email}} on the Unsanity server - we will keep it secure and will never disclose to anyone).\
+	- 
+\f2\b Through a CGI script on your web server
+\f3\b0  (this requires more effort but will eliminate Unsanity server processing the crash logs).\
+\
+No matter which way you choose to receive crash reports through, you 
+\f2\b have to let Smart Crash Reports know about your product
+\f3\b0 . This can be done in one of two ways.\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b\fs24 \cf4 \
+Registering Your Application With Smart Crash Reports\
+\pard\tx1160\li540\ql\qnatural
+
+\f3\b0\fs20 \cf0 \
+First way is the easiest if you're developing a stand-alone application. 
+\f2\b You simply have to add two new keys to your applications's Info.plist file
+\f3\b0 : E-mail ticket ID to send the crash reports to (or the URL to the CGI script on your site), and the colloquial name of your company that is used by users (for example, if the company is "Adobe Systems Incorporated", then "Adobe" is sufficient). The name of the company will be used in the Submit button and the static text explaining the problem, so keep it short:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+
+\f0\fs24 \cf0 {{\NeXTGraphic Crash Reporter_Picture002.jpg \width5840 \height5040
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+
+\f3\fs20 \cf0 \
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b \cf0 \
+List of available keys for Info.plist
+\f3\b0 :\
+\
+	
+\f4 \cf5 \CocoaLigature0 SmartCrashReports_CompanyName
+\f3 \cf0 \CocoaLigature1 : (string, required) The colloquial name of your company used by users ("Apple", "Adobe", "Unsanity", instead of "Apple Computer Inc", "Adobe Systems Incorporated", "Unsanity, LLC", etc).\
+	
+\f4 \cf5 \CocoaLigature0 SmartCrashReports_EmailTicket
+\f3 \cf0 \CocoaLigature1 : (string, required if no CGI URL is set) The unique E-mail ticket ID to send crash reports to. It is obtained at {\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/goto/email-ticket/"}}{\fldrslt http://www.unsanity.com/goto/email-ticket/}}\
+	
+\f4 \cf5 \CocoaLigature0 SmartCrashReports_URL
+\f3 \cf0 \CocoaLigature1 : (string, required if no email ticket is set) URL to the CGI script that will be accepting crash reports from the CrashReporter.app (if you choose to process them on your own).\
+	
+\f4 \cf5 \CocoaLigature0 SmartCrashReports_CommentsTemplate
+\f3 \cf0 \CocoaLigature1 : (string, optional) This string will be inserted in the optional comments field ("Please describe what you were doing when the problem happened" one). You can use this to insert messages to user, such as "Please leave your E-mail here if you wish to be contacted in regard to this crash", etc. \
+\
+Example of your Info.plist file addition for the Smart Crash Reports-enabled application (this will let Smart Crash Reports know your company name is "ABCSoft" and instruct it to send crash reports to an E-mail previously registered with Unsanity that has the E-mail Ticket ID SCR-12345ABCD:\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f4 \cf5 \CocoaLigature0 <key>\cf6 SmartCrashReports_CompanyName\cf5 </key>\
+<string>\cf0 ABCSoft\cf5 </string>\
+<key>\cf6 SmartCrashReports_EmailTicket\cf5 </key>\
+<string>\cf0 SCR-12345ABCD\cf5 </string>\
+\pard\tx1160\li540\ql\qnatural
+
+\f3 \cf0 \CocoaLigature1 \
+Advanced example that will submit the crash report to a CGI script on your web server and fill in the comments field for the user:\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f4 \cf5 \CocoaLigature0 <key>\cf6 SmartCrashReports_CompanyName\cf5 </key>\
+<string>\cf0 ABCSoft\cf5 </string>\
+<key>\cf6 SmartCrashReports_URL\cf5 </key>\
+<string>\cf0 http://www.abcsoft/cgi-bin/smartcrashreport.cgi\cf5 </string>\
+<key>\cf6 SmartCrashReports_CommentsTemplate\cf5 </key>\
+<string>\cf0 Please include your e-mail address if you wish to be contacted in regard to this crash.\cf5 </string>\
+\pard\tx1160\li540\ql\qnatural
+
+\f3 \cf0 \CocoaLigature1 \
+As you can see, adding Smart Crash Reports support to your application is pretty trivial.\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b\fs24 \cf4 \
+Registering Your Plugin With Smart Crash Reports\
+\pard\tx1160\li540\ql\qnatural
+
+\f3\b0\fs20 \cf0 \
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b \cf0 If you are developing a Contextual Menu Plugin, SIMBL module, QuickTime component or any other plugin
+\f3\b0  that may be operating under some other application, there still is a way to receive all related crash reports. You can register so-called "match specifier" (which is usually a Bundle ID of your plugin) with the Smart Crash Reports, and it will look for the match specifier in the crashed thread of the crash log.\
+\
+To register a match specifier, you have to download (if you haven't already) the Smart Crash Reports SDK from its homepage:\
+\pard\tx1160\li540\qc
+{\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/smartcrashreports/"}}{\fldrslt \cf0 http://www.unsanity.com/smartcrashreports/}}\
+\pard\tx1160\li540\ql\qnatural
+\cf0 \
+Once it is downloaded, you need to link the SmartCrashReportsAPI.o and SmartCrashReportsAPI.h with your project and call a single function at the initialization (or where appropriate) of your plugin:\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f4 \cf5 \CocoaLigature0 UnsanitySCR_RegisterMatchSpecifier(CFSTR("com.yourcompany."), CFSTR("Your Company Name"), NULL, CFSTR("SCR-XXXXXXXX"), NULL);
+\f3 \cf0 \CocoaLigature1 \
+\
+Replace "com.yourcompany." with the partial (or full) bundle identifier of your plugin (Smart Crash Reports will look for that string in the crashed thread), "Your Company Name" with a readable (short) company name, and "SCR-XXXXXXXX" with the Email Ticket ID you will receive in the E-mail after registering it at {\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/goto/email-ticket/"}}{\fldrslt http://www.unsanity.com/goto/email-ticket/}}. Once this is done, Smart Crash Reports will know about your product.\
+\
+Please refer to the "SmartCrashReportsAPI" folder in the Documentation folder for more detailed information on the available API calls.\
+\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b\fs24 \cf4 Installing Smart Crash Reports On User's Computer\
+\pard\tx1160\li540\ql\qnatural
+
+\f3\b0\fs20 \cf0 \
+It is possible to install the "client" part of Smart Crash Reports on the user's computer from within your application (if you don't want to tell users to download Smart Crash Reports installer from its home page). The Install API provides a streamlined, one-shot install interface so you can quickly deploy Smart Crash Reports from within your product with one function call.\
+\
+To implement the Smart Crash Reports install, download (if you haven't already) the Smart Crash Reports SDK from its homepage:\
+\pard\tx1160\li540\qc
+{\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/smartcrashreports/"}}{\fldrslt \cf0 http://www.unsanity.com/smartcrashreports/}}\
+\pard\tx1160\li540\ql\qnatural
+\cf0 \
+Once it is downloaded, you need to link the SmartCrashReportsInstall.o and SmartCrashReportsInstall.h with your project and call a single function when you want to install Smart Crash Reports:\
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f4 \cf5 \CocoaLigature0 Boolean authenticationWillBeRequired = FALSE;\
+if (UnsanitySCR_CanInstall(&authenticationWillBeRequired))\
+	UnsanitySCR_Install(authenticationWillBeRequired ? kUnsanitySCR_GlobalInstall : 0);
+\f3 \cf0 \CocoaLigature1 \
+\
+This will attempt to install Smart Crash Reports, if it was not installed on user's computer or if an older version was installed (presenting the dialog box unless specified by the developer otherwise).\
+\pard\tx1160\li540\ql\qnatural
+
+\f0\fs24 \cf0 \
+\pard\tx1160\li540\ql\qnatural
+
+\f3\fs20 \cf0 Please refer to the "SmartCrashReportsInstall" folder in the Documentation folder for more detailed information on the available API calls.\
+\pard\tx1160\li540\ql\qnatural
+
+\f0\fs24 \cf0 \
+\
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b \cf4 Implementing Your Own CGI Script To Receive Crash Reports\
+\pard\tx1160\li540\ql\qnatural
+
+\f3\b0\fs20 \cf0 \
+If you wish to receive crash reports on your Web site, you can implement the custom Submit URL script that user's CrashReporter.app will contact directly. However, keep in mind that the following criteria should be met:\
+\
+	- Your web server script has to be in the same place over next several years, at the very least, to allow delivery of crash reports to you.\
+	- You are responsible for adjusting the web script if the format CrashReporter.app sends crash reports in changes.\
+	- Your web server should be accessible 24/7 and be on a reasonably fast connection to not delay user's submission process.\
+\
+For the above reasons, it is recommended to {\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/goto/email-ticket/"}}{\fldrslt obtain the email ticket}} from Unsanity and use the E-mail feature of Smart Crash Reports. Unsanity will make sure the server is accessible, knows how to parse all formats of submissions, and will safely redirect the crash reports to the email you provide.\
+\
+If your own Web script is still the way you want to go, here is the list of keys currently known to be passed to the script by the CrashReporter.app in a POST form data:\
+\
+	
+\f4 \cf6 \CocoaLigature0 url_from
+\f3 \cf0 \CocoaLigature1 : contains the subject of the crash report, usually "<Some Application> crash"\
+	
+\f4 \cf6 \CocoaLigature0 feedback_comments
+\f3 \cf0 \CocoaLigature1 : user comments they entered in the additional info fields\
+	
+\f4 \cf6 \CocoaLigature0 bug_type
+\f3 \cf0 \CocoaLigature1 : unknown constant, probably determines which POST elements are available; presently 9.\
+	
+\f4 \cf6 \CocoaLigature0 app_name
+\f3 \cf0 \CocoaLigature1 : full crashed application name\
+	
+\f4 \cf6 \CocoaLigature0 app_version
+\f3 \cf0 \CocoaLigature1 : version of the crashed application\
+	
+\f4 \cf6 \CocoaLigature0 os_version
+\f3 \cf0 \CocoaLigature1 : Mac OS X version, in form 10.X.X:BUILD (for example, "10.4.2:8C46")\
+	
+\f4 \cf6 \CocoaLigature0 machine_config
+\f3 \cf0 \CocoaLigature1 : Computer configuration string, for example, "PowerMac7,2 (2048 MB)"\
+	
+\f4 \cf6 \CocoaLigature0 page_source
+\f3 \cf0 \CocoaLigature1 : Contains BASE64-encoded crash report\
+	
+\f4 \cf6 \CocoaLigature0 system_profile
+\f3 \cf0 \CocoaLigature1 : Contains BASE64-encoded property list with a brief system profile of the user's system.\
+\
+Please note that these form keys are subject to change by Apple, so it is your responsibility to adjust the scripts on your Web servers if such thing happens. \
+\
+\
+\pard\tx1080\li1080\fi-540\ql\qnatural
+
+\f2\b\fs24 \cf4 Distribution And License Agreement\
+\pard\tx1080\li1080\fi-540\ql\qnatural
+
+\f3\b0\fs20 \cf0 \
+\pard\tx1160\li540\ql\qnatural
+
+\f2\b \cf0 Smart Crash Reports is completely free.
+\f3\b0  It is provided as a courtesy to the user and developer community of Mac OS X. We will appreciate if you drop us a quick email at {\field{\*\fldinst{HYPERLINK "mailto:unsanity@unsanity.com"}}{\fldrslt unsanity@unsanity.com}} and tell that your product is Smart Crash Reports ready, or link to us from within your Web site.\
+\pard\tx1080\li1080\fi-540\ql\qnatural
+\cf0 \
+\pard\tx1160\li540\ql\qnatural
+\cf0 SMART CRASH REPORTS ("THE SOFTWARE") IS PROVIDED AS IS. USE THE SOFTWARE AT YOUR OWN RISK. UNSANITY LLC ("THE AUTHOR") MAKES NO WARRANTIES AS TO PERFORMANCE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED. NO ORAL OR WRITTEN COMMUNICATION FROM OR INFORMATION PROVIDED BY THE AUTHOR SHALL CREATE A WARRANTY. UNDER NO CIRCUMSTANCES SHALL THE AUTHOR BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES RESULTING FROM THE USE, MISUSE, OR INABILITY TO USE THE SOFTWARE, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THESE EXCLUSIONS AND LIMITATIONS MAY NOT APPLY IN ALL JURISDICTIONS. YOU MAY HAVE ADDITIONAL RIGHTS AND SOME OF THESE LIMITATIONS MAY NOT APPLY TO YOU.
+\f2\b\fs24 \cf4 \
+\pard\tx1440\li1640\fi-1100\ql\qnatural
+\cf4 \
+\
+Contacting Unsanity\
+
+\f3\b0\fs20 \cf0 \
+	You can always get the latest versions of our products, news, FAQ, and updates at Unsanity's Web Site:\
+\
+\pard\tx1080\li1080\fi-540\qc
+{\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/"}}{\fldrslt \cf7 \ul \ulc7 http://www.unsanity.com/}}\cf7 \ul \ulc7 \
+\pard\tx1440\li1640\fi-1100\ql\qnatural
+\cf0 \ulnone 	\
+	To jump directly to the Smart Crash Reports page, you can use this simple address:\
+\
+\pard\tx1080\li1080\fi-540\qc
+{\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/smartcrashreports/"}}{\fldrslt \cf7 \ul http://www.unsanity.com/smartcrashreports/}}\
+\pard\tx1440\li1640\fi-1100\ql\qnatural
+\cf0 \
+	To get support on Smart Crash Reports, either visit the online support database at:\
+\
+\pard\tx1080\li1080\fi-540\qc
+{\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/support/"}}{\fldrslt \cf7 \ul http://www.unsanity.com/support/}}\cf7 \ul \
+\pard\tx1440\li1640\fi-1100\ql\qnatural
+\cf0 \ulnone \
+	or email us at: \
+\pard\tx1080\li1080\fi-540\qc
+{\field{\*\fldinst{HYPERLINK "mailto:support@unsanity.com"}}{\fldrslt \cf7 \ul support@unsanity.com}}\cf7 \ul \
+\pard\tx1440\li1640\fi-1100\ql\qnatural
+\cf0 \ulnone \
+	To submit an idea or suggestion for this or future haxie, use this address:\
+\
+\pard\tx1080\li1080\fi-540\qc
+{\field{\*\fldinst{HYPERLINK "mailto:feedback@unsanity.com"}}{\fldrslt \cf7 \ul feedback@unsanity.com}}\cf7 \ul \
+\pard\tx1080\li1080\fi-540\qc
+\cf7 \ulnone \
+\pard\tx1160\li540\qc
+
+\f0\fs24 \cf0 \
+{{\NeXTGraphic unsanity_logo_small.png \width960 \height1260
+}¬}\pard\tx1160\li540\qc
+
+\f3\fs20 \cf0 \
+\pard\tqc\tx8420\li560\fi300\qc
+\cf0 \
+\pard\tx1440\li1640\fi-1100\qc
+
+\fs18 \cf3 Smart Crash Reports is Copyright \'a92005-2006, Unsanity, LLC.\
+Unsanity and Smart Crash Reports are  trademarks of Unsanity, LLC.\
+All other trademarks are property of their respective owners.
+\fs20 \cf0 \
+\pard\tx1080\li1080\fi-540\qc
+{\field{\*\fldinst{HYPERLINK "http://www.unsanity.com/"}}{\fldrslt \cf7 \ul http://www.unsanity.com/}}\cf7 \ul \
+}
