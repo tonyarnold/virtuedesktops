@@ -1,15 +1,15 @@
 /******************************************************************************
-* 
-* Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+ * 
+ * Virtue 
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller 
+ * playback@users.sourceforge.net
+ *
+ * See COPYING for licensing details
+ * 
+ *****************************************************************************/ 
 
 #import "VTTriggerController.h"
 #import "VTTriggerNotification.h" 
@@ -58,9 +58,9 @@
 - (void) dealloc {
 	// remove observer 
 	[[NSNotificationCenter defaultCenter]
-		removeObserver: self]; 
+	removeObserver: self]; 
 	[[VTDesktopController sharedInstance] 
-		removeObserver: self forKeyPath: @"desktops"]; 
+	removeObserver: self forKeyPath: @"desktops"]; 
 	
 	// free attributes 
 	ZEN_RELEASE(mNotifications); 
@@ -114,7 +114,7 @@
 - (NSArray*) notificationsWithName: (NSString*) name {
 	NSMutableArray*	notifications		= [NSMutableArray array]; 
 	NSArray*				allNotifications	= [mNotifications allNotifications]; 
-  
+	
 	// Now filter for the name of the notification and return it
 	NSEnumerator*			notificationIter	= [allNotifications objectEnumerator]; 
 	VTTriggerNotification*	notification		= nil; 
@@ -170,12 +170,12 @@
 		return;
 	
 	// fetch the object of the notification object 
-  NSValue* oValue = [notification object];
-  
+	NSValue* oValue = [notification object];
+	
 	// fetch the hot key reference for identifying the hotkey 
 	EventHotKeyRef hotKeyRef;
-  [oValue getValue: &hotKeyRef];
-
+	[oValue getValue: &hotKeyRef];
+	
 	// iterate over all notifications and try to find the hotkey ref 
 	// we just got passed in the notification 
 	NSEnumerator*						notificationIter		= [[mNotifications allNotifications] objectEnumerator]; 
@@ -185,7 +185,7 @@
 		// we have to iterate over all triggers in this notification object 
 		NSEnumerator*	triggerIter	= [[currentNotification triggers] objectEnumerator]; 
 		VTTrigger*		trigger			= nil; 
-				
+		
 		while (trigger = [triggerIter nextObject]) {
 			// ignore triggers other than hotkey triggers 
 			if ([trigger isKindOfClass: [VTHotkeyTrigger class]] == NO)
@@ -294,24 +294,24 @@
 - (void) registerObservers {
 	// register ourselves as an observer for key presses 
 	[[NSNotificationCenter defaultCenter] addObserver: self 
-                                           selector: @selector(onHotKeyPressed:) 
-                                               name: kVtNotificationOnKeyPress 
-                                             object: nil];
-  
+	selector: @selector(onHotKeyPressed:) 
+	name: kVtNotificationOnKeyPress 
+	object: nil];
+	
 	[[NSNotificationCenter defaultCenter] addObserver: self 
-                                           selector: @selector(onHotKeyRegistered:) 
-                                               name: kVtNotificationWasRegistered 
-                                             object: nil];
-  
+	selector: @selector(onHotKeyRegistered:) 
+	name: kVtNotificationWasRegistered 
+	object: nil];
+	
 	[[NSNotificationCenter defaultCenter] addObserver: self 
-                                           selector: @selector(onHotKeyUnregistered:) 
-                                               name: kVtNotificationWasRegistered 
-                                             object: nil];
-  
+	selector: @selector(onHotKeyUnregistered:) 
+	name: kVtNotificationWasRegistered 
+	object: nil];
+	
 	[[VTDesktopController sharedInstance] addObserver: self 
-                                         forKeyPath: @"desktops" 
-                                            options: NSKeyValueObservingOptionNew 
-                                            context: NULL];
+	forKeyPath: @"desktops" 
+	options: NSKeyValueObservingOptionNew 
+	context: NULL];
 }
 
 @end 
@@ -337,7 +337,7 @@
 			[self readLocalizedNamesForGroup: item]; 
 		else if ([item isKindOfClass: [VTTriggerNotification class]]) {
 			VTTriggerNotification* notification = (VTTriggerNotification*)item; 
-
+			
 			// get name and description for notification 
 			[notification setNotification: NSLocalizedStringFromTable([[notification name] stringByAppendingString: @"_name"], @"Notifications", @"Notification name")];  
 			[notification setDescription: NSLocalizedStringFromTable([[notification name] stringByAppendingString: @"_desc"], @"Notifications", @"Notification description")];
@@ -349,8 +349,8 @@
 - (void) readPreferences {
 	NSDictionary* dictionary = [[NSUserDefaults standardUserDefaults] objectForKey: VTHotkeys]; 
 	if (dictionary == nil) {
-			NSString* defaultHotkeysPath = [[NSBundle mainBundle] pathForResource: @"DefaultHotkeys" ofType: @"plist"]; 
-			dictionary = [NSDictionary dictionaryWithContentsOfFile: defaultHotkeysPath]; 
+		NSString* defaultHotkeysPath = [[NSBundle mainBundle] pathForResource: @"DefaultHotkeys" ofType: @"plist"]; 
+		dictionary = [NSDictionary dictionaryWithContentsOfFile: defaultHotkeysPath]; 
 	}
 	
 	[mNotifications decodeFromDictionary: dictionary]; 
@@ -379,7 +379,7 @@
 			[[self groupWithName: VTTriggerGroupNavigationName] addNotification: notification];
 		}
 	}
-
+	
 	// try to localize 
 	[self readLocalizedNamesForGroup: mNotifications]; 
 }

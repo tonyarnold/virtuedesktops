@@ -1,15 +1,15 @@
 /******************************************************************************
-* 
-* Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+ * 
+ * Virtue 
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller playback@users.sourceforge.net
+ * Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+ *
+ * See COPYING for licensing details
+ * 
+ *****************************************************************************/ 
 
 #import "VTHotkeyTextView.h"
 #import <Zen/Zen.h> 
@@ -29,22 +29,21 @@
 
 - (void) dealloc {
 	ZEN_RELEASE(mHotkey); 
-	
 	[super dealloc];
 }
 
 
-- (void) keyDown: (NSEvent*) event {
+- (void) keyDown: (NSEvent*) theEvent {
 	if (mHotkey == nil) {
-		[super keyDown: event]; 
-		return; 
+		[super keyDown: theEvent];
+		return;
 	}
 	
-	[mHotkey setKeyCode: [event keyCode]]; 
-	[mHotkey setKeyModifiers: [event modifierFlags]]; 
+	[mHotkey setKeyCode: [theEvent keyCode]]; 
+	[mHotkey setKeyModifiers: [theEvent modifierFlags]];
 	
 	// set responder 
-	[[self window] makeFirstResponder: [self superview]]; 
+	[[self window] makeFirstResponder: [self superview]];
 }
 
 - (BOOL) performKeyEquivalent: (NSEvent*) theEvent {
