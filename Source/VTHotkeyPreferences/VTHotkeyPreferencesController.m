@@ -143,14 +143,13 @@
 	
 	// and set the data cell 
 	VTHotkeyCell* hotkeyCell = [[[VTHotkeyCell alloc] init] autorelease]; 
-	[hotkeyCell setAlignment: NSLeftTextAlignment]; 
+	[hotkeyCell setAlignment: NSCenterTextAlignment]; 
 	
 	[[mTriggerTableView tableColumnWithIdentifier: @"trigger"] setDataCell: hotkeyCell]; 
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onEditEnded) name: NSTextDidEndEditingNotification object: mFieldEditor];
 	
 	// prepare controllers 
-	[mAssignedTriggerController setContent: 
-	[[[VTTriggerController sharedInstance] root] allNotifications]]; 
+	[mAssignedTriggerController setContent: [[[VTTriggerController sharedInstance] root] allNotifications]]; 
 	
 	NSBundle*	bundle		= [NSBundle bundleForClass: [self class]]; 
 	NSImage*	mouseImage	= [[[NSImage alloc] initByReferencingFile: [bundle pathForResource: @"imageMouseTrigger" ofType: @"png"]] autorelease]; 
@@ -201,8 +200,6 @@
 	VTHotkeyTrigger*		trigger				= [mFieldEditor hotkey];
 	VTHotkeyTrigger*		existingTrigger		= nil; 
 	
-	NSLog(@"[trigger keyCode]: %@", [trigger keyCode]);
-	
 	if ([trigger keyCode] < 0)
 		return; 
 	
@@ -222,7 +219,7 @@
 	// and register trigger 
 	[existingTrigger registerTrigger]; 
 	
-	// and we synch hotkeys (should not take too long) 
+	// and we sync hotkeys (should not take too long) 
 	[[VTTriggerController sharedInstance] synchronize]; 
 }
 
@@ -234,8 +231,7 @@
 	// prepare drawer 
 	[mInspectorDrawer setParentWindow: [[self mainView] window]]; 
 	// and set offsets 
-	int leadingOffset = 54; 
-	[mInspectorDrawer setLeadingOffset: leadingOffset]; 
+	[mInspectorDrawer setLeadingOffset: 54]; 
 	[mInspectorDrawer setTrailingOffset: 0]; 
 }
 
@@ -347,11 +343,10 @@
 	
 	// fetch notification and trigger 
 	VTTriggerNotification*	notification	= [mAssignedTriggerController valueForKeyPath: @"selection.notification"];
-	VTTrigger*							trigger				= [mAssignedTriggerController valueForKeyPath: @"selection.trigger"]; 
-	VTTrigger*							newTrigger		= nil; 
+	VTTrigger*				trigger			= [mAssignedTriggerController valueForKeyPath: @"selection.trigger"]; 
+	VTTrigger*				newTrigger		= nil; 
 	
-	int index = [[notification triggers] indexOfObject: trigger]; 
-	
+	int index = [[notification triggers] indexOfObject: trigger];
 	if (index == NSNotFound)
 		return; 
 	
