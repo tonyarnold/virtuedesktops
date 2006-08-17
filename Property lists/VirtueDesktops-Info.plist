@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayedVersionString</key>
-	<string>0.52</string>
+	<string>0.53</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -40,7 +40,7 @@
 	<key>CFBundleExecutable</key>
 	<string>VirtueDesktops</string>
 	<key>CFBundleGetInfoString</key>
-	<string>0.52, Copyright 2006 Tony Arnold</string>
+	<string>0.53, Copyright 2006 Tony Arnold</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>Virtue Help</string>
 	<key>CFBundleHelpBookName</key>
@@ -60,9 +60,9 @@
 	<key>CFBundleSignature</key>
 	<string>virt</string>
 	<key>CFBundleVersion</key>
-	<string>0.52r0000</string>
+	<string>0.53r0000</string>
 	<key>CFBundleVersionString</key>
-	<string>0.52r0000</string>
+	<string>0.53r0000</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.4.0</string>
 	<key>LSUIElement</key>
