@@ -65,6 +65,14 @@
 			sepNavWindowFrame = "{{38, 477}, {1007, 375}}";
 		};
 	};
+	EA7A54120A86A5D8000D6B5E /* VTApplicationWrapper.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1106, 3978}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 1415}, {1106, 592}}";
+			sepNavWindowFrame = "{{84, 104}, {1165, 706}}";
+		};
+	};
 	EA7A54140A86A5D8000D6B5E /* VTDesktop.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {992, 1024}}";
@@ -111,6 +119,14 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRect = "{{0, 916}, {1046, 647}}";
 			sepNavWindowFrame = "{{38, 91}, {1105, 761}}";
+		};
+	};
+	EA7A54290A86A5D9000D6B5E /* VTTriggerController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {993, 3418}}";
+			sepNavSelRange = "{8844, 25}";
+			sepNavVisRect = "{{0, 2776}, {993, 215}}";
+			sepNavWindowFrame = "{{61, 125}, {1165, 706}}";
 		};
 	};
 	EA7A542E0A86A5D9000D6B5E /* VTDecorationPrimitive.h */ = {
@@ -186,7 +202,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1118, 1440}}";
 			sepNavSelRange = "{285, 0}";
-			sepNavVisRect = "{{0, 0}, {1118, 602}}";
+			sepNavVisRect = "{{0, 838}, {1118, 602}}";
 			sepNavWindowFrame = "{{84, 94}, {1177, 716}}";
 		};
 	};
@@ -279,9 +295,9 @@
 	};
 	EA7A55940A86A6D0000D6B5E /* VTApplication.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1218, 596}}";
-			sepNavSelRange = "{719, 14}";
-			sepNavVisRect = "{{0, 0}, {1218, 596}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1218, 619}}";
+			sepNavSelRange = "{534, 14}";
+			sepNavVisRect = "{{0, 0}, {1218, 619}}";
 			sepNavWindowFrame = "{{15, 140}, {1277, 733}}";
 		};
 	};
@@ -327,9 +343,9 @@
 	};
 	EA7A55BF0A86A6D0000D6B5E /* VTBehaviourPreferencesController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1232, 3088}}";
-			sepNavSelRange = "{372, 45}";
-			sepNavVisRect = "{{0, 14}, {1232, 675}}";
+			sepNavIntBoundsRect = "{{0, 0}, {993, 2014}}";
+			sepNavSelRange = "{381, 32}";
+			sepNavVisRect = "{{0, 946}, {993, 238}}";
 			sepNavWindowFrame = "{{61, 98}, {1277, 733}}";
 		};
 	};
@@ -353,15 +369,15 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1027, 992}}";
 			sepNavSelRange = "{402, 17}";
-			sepNavVisRect = "{{0, 176}, {1027, 650}}";
+			sepNavVisRect = "{{0, 342}, {1027, 650}}";
 			sepNavWindowFrame = "{{711, 100}, {1086, 764}}";
 		};
 	};
 	EA7A55CD0A86A6D0000D6B5E /* VTHotkeyPreferencesController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1027, 7202}}";
-			sepNavSelRange = "{742, 0}";
-			sepNavVisRect = "{{0, 0}, {1027, 650}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1290, 2048}}";
+			sepNavSelRange = "{12582, 0}";
+			sepNavVisRect = "{{0, 394}, {1290, 621}}";
 			sepNavWindowFrame = "{{281, 111}, {1086, 764}}";
 		};
 	};
@@ -377,7 +393,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {691, 592}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 148}, {691, 444}}";
+			sepNavVisRect = "{{0, 0}, {691, 444}}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -435,11 +451,19 @@
 			sepNavVisRect = "{{0, 633}, {1332, 599}}";
 		};
 	};
+	EA7A560E0A86A6D1000D6B5E /* VTHotkeyCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1106, 592}}";
+			sepNavSelRange = "{424, 15}";
+			sepNavVisRect = "{{0, 0}, {1106, 592}}";
+			sepNavWindowFrame = "{{15, 167}, {1165, 706}}";
+		};
+	};
 	EA7A560F0A86A6D1000D6B5E /* VTHotkeyCell.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1106, 1200}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 631}, {1106, 569}}";
+			sepNavSelRange = "{623, 0}";
+			sepNavVisRect = "{{0, 0}, {1106, 569}}";
 			sepNavWindowFrame = "{{61, 125}, {1165, 706}}";
 		};
 	};
@@ -453,17 +477,25 @@
 	};
 	EA7A56110A86A6D1000D6B5E /* VTHotkeyTextField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {691, 421}}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 444}}";
 			sepNavSelRange = "{429, 34}";
-			sepNavVisRect = "{{0, 0}, {691, 421}}";
+			sepNavVisRect = "{{0, 0}, {691, 444}}";
 			sepNavWindowFrame = "{{84, 252}, {750, 558}}";
+		};
+	};
+	EA7A56120A86A6D1000D6B5E /* VTHotkeyTextView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1106, 592}}";
+			sepNavSelRange = "{431, 0}";
+			sepNavVisRect = "{{0, 0}, {1106, 592}}";
+			sepNavWindowFrame = "{{38, 146}, {1165, 706}}";
 		};
 	};
 	EA7A56130A86A6D1000D6B5E /* VTHotkeyTextView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1106, 1328}}";
-			sepNavSelRange = "{1616, 0}";
-			sepNavVisRect = "{{0, 759}, {1106, 569}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1106, 1344}}";
+			sepNavSelRange = "{784, 0}";
+			sepNavVisRect = "{{0, 752}, {1106, 592}}";
 			sepNavWindowFrame = "{{84, 104}, {1165, 706}}";
 		};
 	};
@@ -726,11 +758,11 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1232, 1376}}";
 			sepNavSelRange = "{1999, 0}";
-			sepNavVisRect = "{{0, 668}, {1232, 619}}";
+			sepNavVisRect = "{{0, 668}, {1232, 675}}";
 			sepNavWindowFrame = "{{38, 119}, {1277, 733}}";
 		};
 	};
-	EA7A640E0A86FF91000D6B5E /* English */ = {
+	EA7A640E0A86FF91000D6B5E /* DefaultPrimitiveNames.strings */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1232, 675}}";
 			sepNavSelRange = "{0, 0}";
@@ -754,9 +786,9 @@
 	};
 	EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1106, 784}}";
+			sepNavIntBoundsRect = "{{0, 0}, {993, 784}}";
 			sepNavSelRange = "{878, 0}";
-			sepNavVisRect = "{{0, 144}, {1106, 592}}";
+			sepNavVisRect = "{{0, 333}, {993, 238}}";
 			sepNavWindowFrame = "{{38, 146}, {1165, 706}}";
 		};
 	};
@@ -871,7 +903,7 @@
 					16,
 					200,
 					50,
-					336.2085,
+					336,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXSymbolsDataSource_SymbolTypeIconID,
@@ -902,8 +934,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 177339291;
-			PBXWorkspaceStateSaveDate = 177339291;
+			PBXPerProjectTemplateStateSaveDate = 177467610;
+			PBXWorkspaceStateSaveDate = 177467610;
 		};
 		sourceControlManager = EAA926710A86A4E800D4674B /* Source Control */;
 		userBookmarkGroup = EA2DB76D0A8BCDF80058D7BB /* PBXBookmarkGroup */;

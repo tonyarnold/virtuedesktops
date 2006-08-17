@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0EE4E30A93E8D1009F3FC1 /* VTApplicationPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE4E20A93E8D1009F3FC1 /* VTApplicationPreferences.nib */; };
+		EA0EE4E70A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE4E60A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib */; };
+		EA0EE4EB0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE4EA0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib */; };
+		EA0EE57C0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE57B0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */; };
+		EA0EE57E0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE57D0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */; };
+		EA0EE5800A93ECBC009F3FC1 /* PrimitiveTintInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */; };
+		EA0EE5820A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */; };
+		EA0EE5860A93ECC3009F3FC1 /* VTAppearancePreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5850A93ECC3009F3FC1 /* VTAppearancePreferences.nib */; };
+		EA0EE5880A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */; };
+		EA0EE58A0A93ECC3009F3FC1 /* VTPluginPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5890A93ECC3009F3FC1 /* VTPluginPreferences.nib */; };
+		EA0EE58E0A93ECCE009F3FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */; };
 		EA2852620A8A745D009DB65B /* Virtue.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852610A8A745D009DB65B /* Virtue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852670A8A75CC009DB65B /* VTInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA4039570A89CDDE00807BE2 /* imageWidgetAddPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */; };
@@ -191,12 +202,8 @@
 		EA7A5C5D0A86B915000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A5C960A86B92A000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A5C970A86B92A000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A60660A86CC9C000D6B5E /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A60650A86CC9C000D6B5E /* PrimitiveTextInspector.nib */; };
 		EA7A606D0A86CD13000D6B5E /* VTColorLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A606C0A86CD13000D6B5E /* VTColorLabelButton.m */; };
 		EA7A60760A86CD60000D6B5E /* VTColorLabelButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A60750A86CD60000D6B5E /* VTColorLabelButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A60D80A86EF2F000D6B5E /* PrimitiveTintInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A60D70A86EF2F000D6B5E /* PrimitiveTintInspector.nib */; };
-		EA7A60DF0A86F0A8000D6B5E /* PrimitiveWatermarkInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A60DE0A86F0A8000D6B5E /* PrimitiveWatermarkInspector.nib */; };
-		EA7A60E30A86F174000D6B5E /* VTDecorationPrimitiveInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A60E20A86F174000D6B5E /* VTDecorationPrimitiveInspector.nib */; };
 		EA7A618B0A86F490000D6B5E /* PrimitiveDesktopColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A61890A86F490000D6B5E /* PrimitiveDesktopColorLabelInspector.nib */; };
 		EA7A61A30A86F513000D6B5E /* VTDesktopColorLabelPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A562D0A86A6D1000D6B5E /* VTDesktopColorLabelPrimitive.m */; };
 		EA7A61A50A86F513000D6B5E /* VTPluginDesktopColorLabelPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A562F0A86A6D1000D6B5E /* VTPluginDesktopColorLabelPrimitive.m */; };
@@ -205,7 +212,6 @@
 		EA7A61CD0A86F566000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A62060A86F571000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A620B0A86F57D000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
-		EA7A622F0A86F60C000D6B5E /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A622E0A86F60C000D6B5E /* PrimitiveTextInspector.nib */; };
 		EA7A62400A86F696000D6B5E /* VTDesktopNamePrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56380A86A6D1000D6B5E /* VTDesktopNamePrimitive.m */; };
 		EA7A62410A86F696000D6B5E /* VTPluginDesktopNamePrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A563A0A86A6D1000D6B5E /* VTPluginDesktopNamePrimitive.m */; };
 		EA7A62420A86F696000D6B5E /* VTPrimitiveDesktopNameInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A563C0A86A6D1000D6B5E /* VTPrimitiveDesktopNameInspector.m */; };
@@ -213,10 +219,8 @@
 		EA7A62460A86F6C2000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A62470A86F6C2000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A62670A86F7BA000D6B5E /* imagePreferencesAppearance.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A567B0A86A70C000D6B5E /* imagePreferencesAppearance.tiff */; };
-		EA7A626B0A86F7CA000D6B5E /* VTAppearancePreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A626A0A86F7CA000D6B5E /* VTAppearancePreferences.nib */; };
 		EA7A62750A86F817000D6B5E /* VTAppearancePreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55B50A86A6D0000D6B5E /* VTAppearancePreferencesController.m */; };
 		EA7A62B90A86F8F9000D6B5E /* VTApplicationPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A629F0A86F89E000D6B5E /* VTApplicationPreferencesController.m */; };
-		EA7A62BE0A86F8FC000D6B5E /* VTApplicationPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A629D0A86F89E000D6B5E /* VTApplicationPreferences.nib */; };
 		EA7A62C30A86F945000D6B5E /* iconApplicationPreferences.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A62C20A86F945000D6B5E /* iconApplicationPreferences.icns */; };
 		EA7A62E60A86FA87000D6B5E /* VTDesktopTemplatePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55C60A86A6D0000D6B5E /* VTDesktopTemplatePreferences.m */; };
 		EA7A62EA0A86FA91000D6B5E /* imageWidgetAddPopup.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56870A86A70C000D6B5E /* imageWidgetAddPopup.png */; };
@@ -225,12 +229,10 @@
 		EA7A62ED0A86FA91000D6B5E /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A568B0A86A70C000D6B5E /* imageWidgetDeletePressed.png */; };
 		EA7A62EE0A86FA91000D6B5E /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A568E0A86A70C000D6B5E /* imageWidgetInfo.png */; };
 		EA7A62EF0A86FA91000D6B5E /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A568F0A86A70C000D6B5E /* imageWidgetInfoPressed.png */; };
-		EA7A62F60A86FAA4000D6B5E /* VTDesktopTemplatePreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A62F50A86FAA4000D6B5E /* VTDesktopTemplatePreferences.nib */; };
 		EA7A63130A86FB04000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A63140A86FB04000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A63150A86FB04000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A63160A86FB04000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
-		EA7A63420A86FC07000D6B5E /* VTHotkeyPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63410A86FC07000D6B5E /* VTHotkeyPreferences.nib */; };
 		EA7A63490A86FC24000D6B5E /* VTHotkeyPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55CD0A86A6D0000D6B5E /* VTHotkeyPreferencesController.m */; };
 		EA7A634A0A86FC24000D6B5E /* VTTriggerToTypeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55CF0A86A6D0000D6B5E /* VTTriggerToTypeImage.m */; };
 		EA7A634C0A86FC2E000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
@@ -249,7 +251,6 @@
 		EA7A639C0A86FDC3000D6B5E /* imageWidgetDeletePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63920A86FDC3000D6B5E /* imageWidgetDeletePressed.png */; };
 		EA7A639D0A86FDC3000D6B5E /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63930A86FDC3000D6B5E /* imageWidgetInfo.png */; };
 		EA7A639E0A86FDC3000D6B5E /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63940A86FDC3000D6B5E /* imageWidgetInfoPressed.png */; };
-		EA7A639F0A86FDC3000D6B5E /* VTPluginPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63950A86FDC3000D6B5E /* VTPluginPreferences.nib */; };
 		EA7A63A00A86FDC3000D6B5E /* VTPluginPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */; };
 		EA7A63A80A86FDEA000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A63A90A86FDEA000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
@@ -417,7 +418,6 @@
 		EA7A69D60A870893000D6B5E /* VTHotkeyPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63360A86FB4F000D6B5E /* VTHotkeyPreferences.prefPane */; };
 		EA7A69D70A870893000D6B5E /* VTLayoutPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */; };
 		EA7A69D80A870893000D6B5E /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */; };
-		EA7A6AB10A8709C2000D6B5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA7A6AB00A8709C2000D6B5E /* Localizable.strings */; };
 		EA7D76980A918A5500D36F0E /* VTAssignedTriggerArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */; };
 		EAC060C80A8964F700020B92 /* VTLayoutPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC060C60A8964F700020B92 /* VTLayoutPreferences.nib */; };
 		EAC060F10A89679E00020B92 /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56640A86A70C000D6B5E /* imageCrossSmall.tif */; };
@@ -1153,23 +1153,23 @@
 		EA7A5B490A86B7C4000D6B5E /* authtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = authtool; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B630A86B809000D6B5E /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B640A86B809000D6B5E /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTInterface-Info.plist"; sourceTree = "<group>"; };
-		EA7A60650A86CC9C000D6B5E /* PrimitiveTextInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PrimitiveTextInspector.nib; sourceTree = "<group>"; };
+		EA7A60650A86CC9C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		EA7A606C0A86CD13000D6B5E /* VTColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTColorLabelButton.m; sourceTree = "<group>"; };
 		EA7A60750A86CD60000D6B5E /* VTColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTColorLabelButtonCell.h; sourceTree = "<group>"; };
-		EA7A60D70A86EF2F000D6B5E /* PrimitiveTintInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PrimitiveTintInspector.nib; sourceTree = "<group>"; };
-		EA7A60DE0A86F0A8000D6B5E /* PrimitiveWatermarkInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		EA7A60E20A86F174000D6B5E /* VTDecorationPrimitiveInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
+		EA7A60D70A86EF2F000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
+		EA7A60DE0A86F0A8000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
+		EA7A60E20A86F174000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
 		EA7A61790A86F366000D6B5E /* VTDesktopColorLabelPrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopColorLabelPrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A617A0A86F366000D6B5E /* VTDesktopColorLabelPrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopColorLabelPrimitive-Info.plist"; sourceTree = "<group>"; };
-		EA7A61840A86F3EB000D6B5E /* PrimitiveDesktopColorLabelInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = PrimitiveDesktopColorLabelInspector.nib; path = ../VTDesktopColorLabelPrimitive/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA7A61890A86F490000D6B5E /* PrimitiveDesktopColorLabelInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
+		EA7A61840A86F3EB000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
+		EA7A61890A86F490000D6B5E /* PrimitiveDesktopColorLabelInspector.nib */ = {isa = PBXFileReference; explicitFileType = wrapper.nib; name = PrimitiveDesktopColorLabelInspector.nib; path = ../../Localisation/English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
 		EA7A62240A86F5C8000D6B5E /* VTDesktopNamePrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopNamePrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A62250A86F5C8000D6B5E /* VTDesktopNamePrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info.plist"; sourceTree = "<group>"; };
-		EA7A622E0A86F60C000D6B5E /* PrimitiveTextInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PrimitiveTextInspector.nib; sourceTree = "<group>"; };
+		EA7A622E0A86F60C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		EA7A62600A86F7AB000D6B5E /* VTAppearancePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTAppearancePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A62610A86F7AB000D6B5E /* VTAppearancePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTAppearancePreferences-Info.plist"; sourceTree = "<group>"; };
-		EA7A626A0A86F7CA000D6B5E /* VTAppearancePreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = VTAppearancePreferences.nib; sourceTree = "<group>"; };
-		EA7A629D0A86F89E000D6B5E /* VTApplicationPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = VTApplicationPreferences.nib; sourceTree = "<group>"; };
+		EA7A626A0A86F7CA000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
+		EA7A629D0A86F89E000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
 		EA7A629E0A86F89E000D6B5E /* VTApplicationPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationPreferencesController.h; sourceTree = "<group>"; };
 		EA7A629F0A86F89E000D6B5E /* VTApplicationPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationPreferencesController.m; sourceTree = "<group>"; };
 		EA7A62AE0A86F8D6000D6B5E /* VTApplicationPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTApplicationPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1177,10 +1177,10 @@
 		EA7A62C20A86F945000D6B5E /* iconApplicationPreferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconApplicationPreferences.icns; sourceTree = "<group>"; };
 		EA7A62D80A86F9AF000D6B5E /* VTDesktopTemplatePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopTemplatePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A62D90A86F9AF000D6B5E /* VTDesktopTemplatePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopTemplatePreferences-Info.plist"; sourceTree = "<group>"; };
-		EA7A62F50A86FAA4000D6B5E /* VTDesktopTemplatePreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
+		EA7A62F50A86FAA4000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
 		EA7A63360A86FB4F000D6B5E /* VTHotkeyPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTHotkeyPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63370A86FB4F000D6B5E /* VTHotkeyPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTHotkeyPreferences-Info.plist"; sourceTree = "<group>"; };
-		EA7A63410A86FC07000D6B5E /* VTHotkeyPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = VTHotkeyPreferences.nib; sourceTree = "<group>"; };
+		EA7A63410A86FC07000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
 		EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTLayoutPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A635D0A86FC58000D6B5E /* VTLayoutPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTLayoutPreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = imagePreferencesPagers.tiff; path = ../VTLayoutPreferences/imagePreferencesPagers.tiff; sourceTree = "<group>"; };
@@ -1195,19 +1195,19 @@
 		EA7A63920A86FDC3000D6B5E /* imageWidgetDeletePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetDeletePressed.png; sourceTree = "<group>"; };
 		EA7A63930A86FDC3000D6B5E /* imageWidgetInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetInfo.png; sourceTree = "<group>"; };
 		EA7A63940A86FDC3000D6B5E /* imageWidgetInfoPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetInfoPressed.png; sourceTree = "<group>"; };
-		EA7A63950A86FDC3000D6B5E /* VTPluginPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = VTPluginPreferences.nib; sourceTree = "<group>"; };
+		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
 		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VirtueDesktops-Info.plist"; sourceTree = "<group>"; };
-		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Operations.nib; sourceTree = "<group>"; };
-		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTPreferences.nib; sourceTree = "<group>"; };
-		EA7A64020A86FF23000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
-		EA7A64050A86FF39000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
-		EA7A64080A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
-		EA7A640A0A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		EA7A640E0A86FF91000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		EA7A64110A86FFA5000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Notifications.strings; sourceTree = "<group>"; };
+		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/Operations.nib; sourceTree = "<group>"; };
+		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPreferences.nib; sourceTree = "<group>"; };
+		EA7A64020A86FF23000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
+		EA7A64050A86FF39000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
+		EA7A64080A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
+		EA7A640A0A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
+		EA7A640E0A86FF91000D6B5E /* DefaultPrimitiveNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = DefaultPrimitiveNames.strings; path = ../../Localisation/English.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
+		EA7A64110A86FFA5000D6B5E /* Notifications.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Notifications.strings; path = ../../Localisation/English.lproj/Notifications.strings; sourceTree = "<group>"; };
 		EA7A645C0A870084000D6B5E /* Virtue.scriptSuite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Virtue.scriptSuite; sourceTree = "<group>"; };
 		EA7A645D0A870084000D6B5E /* Virtue.scriptTerminology */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Virtue.scriptTerminology; sourceTree = "<group>"; };
 		EA7A65970A870299000D6B5E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -1220,10 +1220,10 @@
 		EA7A670C0A87043B000D6B5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		EA7A68860A870570000D6B5E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
-		EA7A6AB00A8709C2000D6B5E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		EA7A6AB00A8709C2000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA7D76960A918A5500D36F0E /* VTAssignedTriggerArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAssignedTriggerArrayController.h; sourceTree = "<group>"; };
 		EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAssignedTriggerArrayController.m; sourceTree = "<group>"; };
-		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
+		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2270,11 +2270,11 @@
 				EA7A56160A86A6D1000D6B5E /* VTPositionGrid.m */,
 				EA7A56170A86A6D1000D6B5E /* VTPositionGridCell.h */,
 				EA7A56180A86A6D1000D6B5E /* VTPositionGridCell.m */,
-				EA7A60650A86CC9C000D6B5E /* PrimitiveTextInspector.nib */,
-				EA7A60D70A86EF2F000D6B5E /* PrimitiveTintInspector.nib */,
-				EA7A60DE0A86F0A8000D6B5E /* PrimitiveWatermarkInspector.nib */,
-				EA7A60E20A86F174000D6B5E /* VTDecorationPrimitiveInspector.nib */,
-				EA7A61840A86F3EB000D6B5E /* PrimitiveDesktopColorLabelInspector.nib */,
+				EA0EE57D0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */,
+				EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */,
+				EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */,
+				EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */,
+				EA0EE5780A93ECB5009F3FC1 /* PrimitiveDesktopColorLabelInspector.nib */,
 				EA2852670A8A75CC009DB65B /* VTInterface.h */,
 			);
 			path = VTInterface;
@@ -2303,7 +2303,7 @@
 				EA7A563A0A86A6D1000D6B5E /* VTPluginDesktopNamePrimitive.m */,
 				EA7A563B0A86A6D1000D6B5E /* VTPrimitiveDesktopNameInspector.h */,
 				EA7A563C0A86A6D1000D6B5E /* VTPrimitiveDesktopNameInspector.m */,
-				EA7A622E0A86F60C000D6B5E /* PrimitiveTextInspector.nib */,
+				EA0EE57B0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */,
 			);
 			path = VTDesktopNamePrimitive;
 			sourceTree = "<group>";
@@ -2313,7 +2313,7 @@
 			children = (
 				EA7A55B40A86A6D0000D6B5E /* VTAppearancePreferencesController.h */,
 				EA7A55B50A86A6D0000D6B5E /* VTAppearancePreferencesController.m */,
-				EA7A626A0A86F7CA000D6B5E /* VTAppearancePreferences.nib */,
+				EA0EE5850A93ECC3009F3FC1 /* VTAppearancePreferences.nib */,
 				EA7A567B0A86A70C000D6B5E /* imagePreferencesAppearance.tiff */,
 			);
 			path = VTAppearancePreferences;
@@ -2323,7 +2323,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7A62C20A86F945000D6B5E /* iconApplicationPreferences.icns */,
-				EA7A629D0A86F89E000D6B5E /* VTApplicationPreferences.nib */,
+				EA0EE4E20A93E8D1009F3FC1 /* VTApplicationPreferences.nib */,
 				EA7A629E0A86F89E000D6B5E /* VTApplicationPreferencesController.h */,
 				EA7A629F0A86F89E000D6B5E /* VTApplicationPreferencesController.m */,
 			);
@@ -2342,7 +2342,7 @@
 				EA7A568F0A86A70C000D6B5E /* imageWidgetInfoPressed.png */,
 				EA7A55C50A86A6D0000D6B5E /* VTDesktopTemplatePreferences.h */,
 				EA7A55C60A86A6D0000D6B5E /* VTDesktopTemplatePreferences.m */,
-				EA7A62F50A86FAA4000D6B5E /* VTDesktopTemplatePreferences.nib */,
+				EA0EE4E60A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib */,
 			);
 			path = VTDesktopTemplatePreferences;
 			sourceTree = "<group>";
@@ -2362,7 +2362,7 @@
 				EA7A566F0A86A70C000D6B5E /* imageHotkeyPreferences.tiff */,
 				EA7A56730A86A70C000D6B5E /* imageKeyboardTrigger.png */,
 				EA7A56750A86A70C000D6B5E /* imageMouseTrigger.png */,
-				EA7A63410A86FC07000D6B5E /* VTHotkeyPreferences.nib */,
+				EA0EE4EA0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib */,
 			);
 			path = VTHotkeyPreferences;
 			sourceTree = "<group>";
@@ -2387,7 +2387,7 @@
 				EA7A63920A86FDC3000D6B5E /* imageWidgetDeletePressed.png */,
 				EA7A63930A86FDC3000D6B5E /* imageWidgetInfo.png */,
 				EA7A63940A86FDC3000D6B5E /* imageWidgetInfoPressed.png */,
-				EA7A63950A86FDC3000D6B5E /* VTPluginPreferences.nib */,
+				EA0EE5890A93ECC3009F3FC1 /* VTPluginPreferences.nib */,
 				EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */,
 				EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */,
 			);
@@ -2435,7 +2435,7 @@
 		EA7A6AAF0A8709C2000D6B5E /* Localisation */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A6AB00A8709C2000D6B5E /* Localizable.strings */,
+				EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */,
 			);
 			path = Localisation;
 			sourceTree = "<group>";
@@ -2997,10 +2997,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A60660A86CC9C000D6B5E /* PrimitiveTextInspector.nib in Resources */,
-				EA7A60D80A86EF2F000D6B5E /* PrimitiveTintInspector.nib in Resources */,
-				EA7A60DF0A86F0A8000D6B5E /* PrimitiveWatermarkInspector.nib in Resources */,
-				EA7A60E30A86F174000D6B5E /* VTDecorationPrimitiveInspector.nib in Resources */,
+				EA0EE57E0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib in Resources */,
+				EA0EE5800A93ECBC009F3FC1 /* PrimitiveTintInspector.nib in Resources */,
+				EA0EE5820A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib in Resources */,
+				EA0EE5880A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3016,7 +3016,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A622F0A86F60C000D6B5E /* PrimitiveTextInspector.nib in Resources */,
+				EA0EE57C0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3025,7 +3025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7A62670A86F7BA000D6B5E /* imagePreferencesAppearance.tiff in Resources */,
-				EA7A626B0A86F7CA000D6B5E /* VTAppearancePreferences.nib in Resources */,
+				EA0EE5860A93ECC3009F3FC1 /* VTAppearancePreferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3033,7 +3033,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A62BE0A86F8FC000D6B5E /* VTApplicationPreferences.nib in Resources */,
+				EA0EE4E30A93E8D1009F3FC1 /* VTApplicationPreferences.nib in Resources */,
 				EA7A62C30A86F945000D6B5E /* iconApplicationPreferences.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3049,7 +3049,7 @@
 				EA7A62ED0A86FA91000D6B5E /* imageWidgetDeletePressed.png in Resources */,
 				EA7A62EE0A86FA91000D6B5E /* imageWidgetInfo.png in Resources */,
 				EA7A62EF0A86FA91000D6B5E /* imageWidgetInfoPressed.png in Resources */,
-				EA7A62F60A86FAA4000D6B5E /* VTDesktopTemplatePreferences.nib in Resources */,
+				EA0EE4E70A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3063,7 +3063,7 @@
 				EAC060F40A89679E00020B92 /* imageHotkeyPreferences.tiff in Resources */,
 				EAC060F50A89679E00020B92 /* imageKeyboardTrigger.png in Resources */,
 				EAC060F60A89679E00020B92 /* imageMouseTrigger.png in Resources */,
-				EA7A63420A86FC07000D6B5E /* VTHotkeyPreferences.nib in Resources */,
+				EA0EE4EB0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3087,7 +3087,7 @@
 				EA7A639C0A86FDC3000D6B5E /* imageWidgetDeletePressed.png in Resources */,
 				EA7A639D0A86FDC3000D6B5E /* imageWidgetInfo.png in Resources */,
 				EA7A639E0A86FDC3000D6B5E /* imageWidgetInfoPressed.png in Resources */,
-				EA7A639F0A86FDC3000D6B5E /* VTPluginPreferences.nib in Resources */,
+				EA0EE58A0A93ECC3009F3FC1 /* VTPluginPreferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3171,7 +3171,7 @@
 				EA7A64120A86FFA5000D6B5E /* Notifications.strings in Resources */,
 				EA7A645E0A870084000D6B5E /* Virtue.scriptSuite in Resources */,
 				EA7A645F0A870084000D6B5E /* Virtue.scriptTerminology in Resources */,
-				EA7A6AB10A8709C2000D6B5E /* Localizable.strings in Resources */,
+				EA0EE58E0A93ECCE009F3FC1 /* Localizable.strings in Resources */,
 				EA4039570A89CDDE00807BE2 /* imageWidgetAddPressed.png in Resources */,
 				EA4039580A89CDDE00807BE2 /* imageWidgetAdd.png in Resources */,
 				EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */,
@@ -3648,6 +3648,102 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EA0EE4E20A93E8D1009F3FC1 /* VTApplicationPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A629D0A86F89E000D6B5E /* English */,
+			);
+			name = VTApplicationPreferences.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE4E60A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A62F50A86FAA4000D6B5E /* English */,
+			);
+			name = VTDesktopTemplatePreferences.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE4EA0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A63410A86FC07000D6B5E /* English */,
+			);
+			name = VTHotkeyPreferences.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE5780A93ECB5009F3FC1 /* PrimitiveDesktopColorLabelInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A61840A86F3EB000D6B5E /* English */,
+			);
+			name = PrimitiveDesktopColorLabelInspector.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE57B0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A622E0A86F60C000D6B5E /* English */,
+			);
+			name = PrimitiveTextInspector.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE57D0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A60650A86CC9C000D6B5E /* English */,
+			);
+			name = PrimitiveTextInspector.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A60D70A86EF2F000D6B5E /* English */,
+			);
+			name = PrimitiveTintInspector.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A60DE0A86F0A8000D6B5E /* English */,
+			);
+			name = PrimitiveWatermarkInspector.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE5850A93ECC3009F3FC1 /* VTAppearancePreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A626A0A86F7CA000D6B5E /* English */,
+			);
+			name = VTAppearancePreferences.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A60E20A86F174000D6B5E /* English */,
+			);
+			name = VTDecorationPrimitiveInspector.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE5890A93ECC3009F3FC1 /* VTPluginPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A63950A86FDC3000D6B5E /* English */,
+			);
+			name = VTPluginPreferences.nib;
+			sourceTree = "<group>";
+		};
+		EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7A6AB00A8709C2000D6B5E /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		EA7A55D10A86A6D0000D6B5E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3709,7 +3805,7 @@
 		EA7A640D0A86FF90000D6B5E /* DefaultPrimitiveNames.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA7A640E0A86FF91000D6B5E /* English */,
+				EA7A640E0A86FF91000D6B5E /* DefaultPrimitiveNames.strings */,
 			);
 			name = DefaultPrimitiveNames.strings;
 			sourceTree = "<group>";
@@ -3717,7 +3813,7 @@
 		EA7A64100A86FFA5000D6B5E /* Notifications.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA7A64110A86FFA5000D6B5E /* English */,
+				EA7A64110A86FFA5000D6B5E /* Notifications.strings */,
 			);
 			name = Notifications.strings;
 			sourceTree = "<group>";
