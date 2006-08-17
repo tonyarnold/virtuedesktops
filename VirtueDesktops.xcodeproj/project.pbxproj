@@ -1153,7 +1153,7 @@
 		EA7A5B490A86B7C4000D6B5E /* authtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = authtool; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B630A86B809000D6B5E /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B640A86B809000D6B5E /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTInterface-Info.plist"; sourceTree = "<group>"; };
-		EA7A60650A86CC9C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
+		EA7A60650A86CC9C000D6B5E /* PrimitiveTextInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = PrimitiveTextInspector.nib; path = ../../Localisation/English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
 		EA7A606C0A86CD13000D6B5E /* VTColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTColorLabelButton.m; sourceTree = "<group>"; };
 		EA7A60750A86CD60000D6B5E /* VTColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTColorLabelButtonCell.h; sourceTree = "<group>"; };
 		EA7A60D70A86EF2F000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
@@ -3691,7 +3691,7 @@
 		EA0EE57D0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA7A60650A86CC9C000D6B5E /* English */,
+				EA7A60650A86CC9C000D6B5E /* PrimitiveTextInspector.nib */,
 			);
 			name = PrimitiveTextInspector.nib;
 			sourceTree = "<group>";
