@@ -63,6 +63,10 @@
 #define VTMotionSensorSensitivity         @"VTMotionSensorSensitivity"
 
 #pragma mark -
+#pragma mark Growl
+#define VTGrowlEnabled             @"VTGrowlEnabled"
+
+#pragma mark -
 #pragma mark Operations 
 #define VTOperationsTint										@"VTOperationsTintWindow"
 #define VTOperationsTintColor								@"VTOperationsTintWindowColor"
