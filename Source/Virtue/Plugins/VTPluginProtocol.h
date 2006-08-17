@@ -1,6 +1,6 @@
 /******************************************************************************
 * 
-* Virtue 
+* VirtueDesktops 
 *
 * A desktop extension for MacOS X
 *
@@ -14,15 +14,15 @@
 #import <Cocoa/Cocoa.h>
 
 /**
- * The formal Virtue Plugin protocol, that plugins need to implement to be loaded
+ * The formal VirtueDesktops Plugin protocol, that plugins need to implement to be loaded
  * by Virtues plugin loader. 
  *
  */ 
 @protocol VTPluginProtocol
 
 /**
- * Called by Virtue to signal the plugin that it should set its enabled state to 
- * the passed boolean value. Virtue expects its plugins to behave and carry out 
+ * Called by VirtueDesktops to signal the plugin that it should set its enabled state to 
+ * the passed boolean value. VirtueDesktops expects its plugins to behave and carry out 
  * the requested operation.
  *
  */ 
@@ -68,20 +68,20 @@
 @protocol VTPluginNotificationProtocol 
 
 /**
- * Called by Virtue at the time Virtue loads the plugin bundle. You can expect all
- * Virtue functionality to be initialized at the time this message is sent. 
+ * Called by VirtueDesktops at the time VirtueDesktops loads the plugin bundle. You can expect all
+ * VirtueDesktops functionality to be initialized at the time this message is sent. 
  *
  */ 
 - (void) pluginDidLoad; 
 
 /**
- * Message sent to a plugin just before Virtue is sending setEnabled: to the plugin. 
+ * Message sent to a plugin just before VirtueDesktops is sending setEnabled: to the plugin. 
  *
  */ 
 - (void) pluginWillEnable: (BOOL) flag; 
 
 /**
- * Message sent to a plugin just after Virtue sent setEnabled: to the plugin 
+ * Message sent to a plugin just after VirtueDesktops sent setEnabled: to the plugin 
  *
  */ 
 - (void) pluginDidEnable: (BOOL) flag; 

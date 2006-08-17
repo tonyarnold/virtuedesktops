@@ -1,6 +1,6 @@
 /******************************************************************************
 * 
-* Virtue 
+* VirtueDesktops 
 *
 * A desktop extension for MacOS X
 *
@@ -32,7 +32,7 @@
  * Decoration primitive type information
  *
  * Simple as that. Just return the class type of the decoration primitive 
- * provided by this plugin. Virtue will then instantiate objects of the
+ * provided by this plugin. VirtueDesktops will then instantiate objects of the
  * returned class and call the designated initializer initWithName:inContainer:. 
  *
  */

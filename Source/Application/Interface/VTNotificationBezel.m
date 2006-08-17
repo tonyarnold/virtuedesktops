@@ -1,6 +1,6 @@
 /******************************************************************************
 * 
-* Virtue 
+* VirtueDesktops 
 *
 * A desktop extension for MacOS X
 *
@@ -105,7 +105,7 @@
 #pragma mark Actions 
 
 - (IBAction) showNotificationBezel: (id) sender {
-	[self show: nil withText: @"Virtue"]; 
+	[self show: nil withText: @"VirtueDesktops"]; 
 }
 
 #pragma mark -

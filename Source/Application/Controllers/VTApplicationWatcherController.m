@@ -1,6 +1,6 @@
 /******************************************************************************
 * 
-* Virtue 
+* VirtueDesktops 
 *
 * A desktop extension for MacOS X
 *
@@ -103,7 +103,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
  *
  * Bugs 
  *
- * - If we deactivate a window by clicking on the desktop, the Finder process get the focus, which is bad if we got a Finder window open on another desktop, as Virtue will think you want to activate this app and switch. One workaround would be to deactivate Finder switching all together.. 
+ * - If we deactivate a window by clicking on the desktop, the Finder process get the focus, which is bad if we got a Finder window open on another desktop, as VirtueDesktops will think you want to activate this app and switch. One workaround would be to deactivate Finder switching all together.. 
  *
  * Workaround 
  * 
@@ -154,7 +154,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		if (same == TRUE)
 			return; 
 		
-		// if this is Virtue itself, we also abort here 
+		// if this is VirtueDesktops itself, we also abort here 
 		// @TODO: Move ignore list out of here 
 		result = SameProcess(&mActivatedPSN, &mPSN, &same); 
 		

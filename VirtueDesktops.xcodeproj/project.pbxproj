@@ -419,6 +419,7 @@
 		EA8F2E9D0A93F99E0047C92C /* Notifications.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E9C0A93F99E0047C92C /* Notifications.strings */; };
 		EA8F2ECB0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2ECA0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib */; };
 		EA8F2EE00A93FA660047C92C /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */; };
+		EA94B9730A9456A000647E8E /* NetInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA94B9710A9456A000647E8E /* NetInfo.framework */; };
 		EAC060C80A8964F700020B92 /* VTLayoutPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC060C60A8964F700020B92 /* VTLayoutPreferences.nib */; };
 		EAC060F10A89679E00020B92 /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56640A86A70C000D6B5E /* imageCrossSmall.tif */; };
 		EAC060F20A89679E00020B92 /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56650A86A70C000D6B5E /* imageCrossSmallHover.tif */; };
@@ -1198,7 +1199,7 @@
 		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
-		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VirtueDesktops-Info.plist"; sourceTree = "<group>"; };
 		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/Operations.nib; sourceTree = "<group>"; };
 		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPreferences.nib; sourceTree = "<group>"; };
@@ -1311,6 +1312,7 @@
 		EA8F2F1E0A93FAEF0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA8F2F1F0A93FAF20047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA8F2F200A93FAF40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
+		EA94B9710A9456A000647E8E /* NetInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetInfo.framework; path = /System/Library/PrivateFrameworks/NetInfo.framework; sourceTree = "<absolute>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1368,6 +1370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7A66A00A870329000D6B5E /* Security.framework in Frameworks */,
+				EA94B9730A9456A000647E8E /* NetInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2485,6 +2488,7 @@
 		EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				EA94B9710A9456A000647E8E /* NetInfo.framework */,
 				EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */,
 				EA7A68860A870570000D6B5E /* CoreFoundation.framework */,
 				EA7A670C0A87043B000D6B5E /* Foundation.framework */,
@@ -3001,6 +3005,7 @@
 		EAA9266D0A86A4E800D4674B /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -3041,6 +3046,7 @@
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
+			shouldCheckCompatibility = 1;
 			targets = (
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,
@@ -4244,6 +4250,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -4260,6 +4271,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;

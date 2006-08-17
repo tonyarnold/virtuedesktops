@@ -19,7 +19,7 @@
  * @defgroup Group_Virtue_DE_Events Events 
  * @ingroup  Group_Virtue_DE
  * 
- * Events provided by the Virtue Dock Extension
+ * Events provided by the VirtueDesktops Dock Extension
  *
  */ 
 

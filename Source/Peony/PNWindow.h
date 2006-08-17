@@ -49,7 +49,7 @@ enum
 	NSImage*	mIcon;							//!< Window icon 
 	
 	BOOL		mIsSticky;						//!< YES if the window is stickied 
-	BOOL		mIsSpecial;						//!< If YES, Virtue will not display this window 
+	BOOL		mIsSpecial;						//!< If YES, VirtueDesktops will not display this window 
 	BOOL		mIsIgnoredByExpose; 
 }
 

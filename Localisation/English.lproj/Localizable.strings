@@ -1,11 +1,11 @@
 // Quit Dialog
-// Dialog displayed when Virtue was asked to die. There is no NIB file for this 
+// Dialog displayed when VirtueDesktops was asked to die. There is no NIB file for this 
 // dialog, so localize here 
 
 // Short question if user wants to quit 
-VTQuitConfirmationDialogMessage			= "Are you sure you want to quit Virtue?";
+VTQuitConfirmationDialogMessage			= "Are you sure you want to quit VirtueDesktops?";
 // Extensive description about what will happen 
-VTQuitConfirmationDialogDescription		= "By quitting Virtue all non-active desktops will be inaccessible until Virtue is restarted.";
+VTQuitConfirmationDialogDescription		= "All non-active desktops will be inaccessible until VirtueDesktops is restarted.";
 // Cancel Button cancels quitting
 VTQuitConfirmationDialogCancel			= "Do not quit"; 
 // OK Button quits Virtue
@@ -29,9 +29,9 @@ VTTriggerPreferencesPressToSet			= "Press keys";
 // Application Inspector 
 // Localizable strings for the Application Inspector View 
 
-// The application is currently seen as running for Virtue 
+// The application is currently seen as running for VirtueDesktops 
 VTApplicationRunningStateYes			= "Application is running"; 
-// The application is currently not seen as running by Virtue 
+// The application is currently not seen as running by VirtueDesktops 
 VTApplicationRunningStateNo				= "Application currently not running"; 
 
 // Desktop Inspector 
@@ -51,5 +51,5 @@ VTDesktopRunningApplicationCount		= "Showing %@ %@";
 // Matrix Layout 
 // Localizable strings for the matrix layout (this is handled in this special way as it is
 // a built-in layout)
-VTMatrixLayoutName						= "Matrix Layout"; 
+VTMatrixLayoutName					= "Matrix Layout"; 
 VTFixedMatrixLayoutName				= "Fixed Matrix Layout"; 

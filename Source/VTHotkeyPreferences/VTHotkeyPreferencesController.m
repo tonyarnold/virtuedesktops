@@ -1,6 +1,6 @@
 /*
  * 
- * Virtue 
+ * VirtueDesktops 
  *
  * A desktop extension for MacOS X
  *
