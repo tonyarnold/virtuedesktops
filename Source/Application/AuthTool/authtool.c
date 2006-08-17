@@ -20,7 +20,6 @@
 #include <string.h>
 #include <mach-o/dyld.h>
 
-
 /* Perform the operation specified in myCommand. */
 static bool
 performOperation(const MyAuthorizedCommand * myCommand)
@@ -40,7 +39,8 @@ performOperation(const MyAuthorizedCommand * myCommand)
     return false;
   }
 	
-	// Set group to procmod (9)
+	
+	// Set group to procmod
 	if (chown(myCommand->file, st.st_uid, 9)) {
 		snprintf(info, MAXPATHLEN, "chown %s", myCommand->file);
 		perror(info);

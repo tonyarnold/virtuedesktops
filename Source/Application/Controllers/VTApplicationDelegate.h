@@ -27,30 +27,31 @@
 
 @interface VTApplicationDelegate : NSObject <GrowlApplicationBridgeDelegate> {
 	// Outlets 
-	IBOutlet NSMenu*							mStatusItemMenu; 
-	IBOutlet NSMenu*							mStatusItemActiveDesktopItem; 
-	IBOutlet NSMenuItem*					mStatusItemRemoveActiveDesktopItem; 
-	IBOutlet NSTextField*					mVersionTextField;
+	IBOutlet NSMenu*			mStatusItemMenu; 
+	IBOutlet NSMenu*			mStatusItemActiveDesktopItem; 
+	IBOutlet NSMenuItem*		mStatusItemRemoveActiveDesktopItem; 
+	IBOutlet NSTextField*		mVersionTextField;
+	IBOutlet NSWindow*			mAttentionPermissionsWindow;
 	
 	// Attributes 
-	BOOL							mStartedUp; 
-	BOOL							mConfirmQuitOverridden;
-	NSStatusItem*			mStatusItem; 
-	BOOL							mStatusItemMenuDesktopNeedsUpdate; 
-	BOOL							mStatusItemMenuActiveDesktopNeedsUpdate;
-	BOOL							mUpdatedDock;
+	BOOL						mStartedUp; 
+	BOOL						mConfirmQuitOverridden;
+	NSStatusItem*				mStatusItem; 
+	BOOL						mStatusItemMenuDesktopNeedsUpdate; 
+	BOOL						mStatusItemMenuActiveDesktopNeedsUpdate;
+	BOOL						mUpdatedDock;
 	
 	// Controllers 
 	VTPreferencesViewController*		mPreferenceController;
 	VTOperationsViewController*			mOperationsController; 
-	VTApplicationWatcherController*	mApplicationWatcher; 
-	VTPluginController*							mPluginController; 
+	VTApplicationWatcherController*		mApplicationWatcher; 
+	VTPluginController*					mPluginController; 
 	
 	// Interface
-	VTNotificationBezel*					mNotificationBezel; 
-	VTDesktopViewController*			mDesktopInspector; 
+	VTNotificationBezel*			mNotificationBezel; 
+	VTDesktopViewController*		mDesktopInspector; 
 	VTApplicationViewController*	mApplicationInspector; 
-  VTMotionController*           mMotionController;
+	VTMotionController*				mMotionController;
 }
 
 - (NSString*) versionString;
@@ -73,6 +74,7 @@
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 
+- (IBAction) fixExecutablePermissions: (id) sender;
 - (void) moveFrontApplicationInDirection: (VTDirection) direction;
 
 #pragma mark Growl

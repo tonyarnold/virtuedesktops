@@ -135,28 +135,10 @@ enum
 	
 	// Inject dock extension code into the Dock process if it hasn't been already
 	if (dockCodeIsInjected != 1) {
-    if (dec_inject_code() != 0) { 
-      // If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and 
-      // by setting the set-group-ID-on-execution bit 
-      int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);
-      if (fixExecutableStatus == 0) { 
-        NSLog(@"Fixing VirtueDesktops' permissions so that we can execute as part of the procmod group.");
-        // If the fix is successfull (i.e. user entered his password), then we relaunch a new instance of ourself  
-        // and terminate the current instance 
-        // Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
-        setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
-        system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
-               "    /bin/sleep .2;\n"
-               "  done\n"
-               "  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
-               "    /usr/bin/open \"${LAUNCH_PATH}\"\n"
-               "  fi\n"
-               "} &>/dev/null &'");
-        [[NSApplication sharedApplication] terminate:self]; 
-      } else { 
-        NSLog(@"Installation of VirtueDesktops' dock extension has failed. Some of VirtueDesktops' features will not work as expected."); 
-      } 
-    } 
+		if (dec_inject_code() != 0) {
+			// Show the attention panel
+			[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
+		}
 	}
 	
 	// @TODO: Remove this transitional migration code in 0.7+
@@ -387,6 +369,28 @@ enum
 	int index = [[[VTDesktopController sharedInstance] desktops] indexOfObject: [[VTDesktopController sharedInstance] activeDesktop]];
 	// and get rid of it
 	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: index];
+}
+
+- (IBAction) fixExecutablePermissions: (id) sender {	 
+	// If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and by setting the set-group-ID-on-execution bit
+	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);
+	if (fixExecutableStatus == 0) { 
+		NSLog(@"Fixing VirtueDesktops' permissions so that we can execute as part of the procmod group.");
+		// If the fix is successfull (i.e. user entered his password), then we relaunch a new instance of ourself  
+		// and terminate the current instance 
+		// Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
+		setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
+		system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
+		"    /bin/sleep .2;\n"
+		"  done\n"
+		"  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
+		"    /usr/bin/open \"${LAUNCH_PATH}\"\n"
+		"  fi\n"
+		"} &>/dev/null &'");
+		[[NSApplication sharedApplication] terminate:self]; 
+	} else { 
+		NSLog(@"Installation of VirtueDesktops' dock extension has failed. Some of VirtueDesktops' features will not work as expected."); 
+	} 
 }
 
 
