@@ -1,7 +1,0 @@
-[CHANGED] decomm optimised and re-named to DockCommunicator.
---This line, and those below, will be ignored--
-
-D    decomm.xcodeproj
-M    Info.plist
-M    src/DECInjector.c
-A    DockCommunicator_Prefix.pch
