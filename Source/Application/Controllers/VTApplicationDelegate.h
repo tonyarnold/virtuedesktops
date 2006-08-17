@@ -66,6 +66,12 @@
 - (IBAction) showStatusbarMenu: (id) sender; 
 
 #pragma mark -
+- (IBAction) sendFeedback: (id) sender; 
+- (IBAction) showWebsite: (id) sender; 
+- (IBAction) showForums: (id) sender; 
+- (IBAction) showDonationsPage: (id) sender; 
+
+#pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 
 - (void) moveFrontApplicationInDirection: (VTDirection) direction;
 

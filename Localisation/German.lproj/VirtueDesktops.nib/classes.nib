@@ -136,11 +136,15 @@
         {
             ACTIONS = {
                 deleteActiveDesktop = id; 
+                sendFeedback = id; 
                 showApplicationInspector = id; 
                 showDesktopInspector = id; 
+                showDonationsPage = id; 
+                showForums = id; 
                 showHelp = id; 
                 showPreferences = id; 
                 showStatusbarMenu = id; 
+                showWebsite = id; 
             }; 
             CLASS = VTApplicationDelegate; 
             LANGUAGE = ObjC; 

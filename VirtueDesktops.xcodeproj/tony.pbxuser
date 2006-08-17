@@ -1,5 +1,29 @@
 // !$*UTF8*$!
 {
+	EA1FCCB50A9401850074E0E7 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = EA7A55960A86A6D0000D6B5E /* VTApplicationDelegate.m */;
+	};
+	EA1FCCBF0A9402970074E0E7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA7A55960A86A6D0000D6B5E /* VTApplicationDelegate.m */;
+		name = "http://virtuedesktops.info/donations";
+		rLen = 36;
+		rLoc = 14038;
+		rType = 0;
+		vrLen = 1610;
+		vrLoc = 12869;
+	};
+	EA1FCCC00A9402A20074E0E7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA7A55960A86A6D0000D6B5E /* VTApplicationDelegate.m */;
+		name = "http://virtuedesktops.info/donations";
+		rLen = 36;
+		rLoc = 14038;
+		rType = 0;
+		vrLen = 1610;
+		vrLoc = 12869;
+	};
 	EA2852610A8A745D009DB65B /* Virtue.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {948, 400}}";
@@ -303,17 +327,17 @@
 	};
 	EA7A55950A86A6D0000D6B5E /* VTApplicationDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 1200}}";
-			sepNavSelRange = "{387, 5}";
-			sepNavVisRect = "{{0, 576}, {1046, 624}}";
-			sepNavWindowFrame = "{{38, 91}, {1105, 761}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1060, 1296}}";
+			sepNavSelRange = "{2312, 0}";
+			sepNavVisRect = "{{0, 0}, {1060, 703}}";
+			sepNavWindowFrame = "{{21, 111}, {1105, 761}}";
 		};
 	};
 	EA7A55960A86A6D0000D6B5E /* VTApplicationDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1218, 11210}}";
-			sepNavSelRange = "{6194, 0}";
-			sepNavVisRect = "{{0, 2166}, {1218, 619}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1232, 16752}}";
+			sepNavSelRange = "{14038, 36}";
+			sepNavVisRect = "{{0, 5698}, {1232, 675}}";
 			sepNavWindowFrame = "{{217, 140}, {1277, 733}}";
 		};
 	};
@@ -958,8 +982,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 177470218;
-			PBXWorkspaceStateSaveDate = 177470218;
+			PBXPerProjectTemplateStateSaveDate = 177471569;
+			PBXWorkspaceStateSaveDate = 177471569;
+		};
+		perUserProjectItems = {
+			EA1FCCB50A9401850074E0E7 /* PBXBookmark */ = EA1FCCB50A9401850074E0E7 /* PBXBookmark */;
+			EA1FCCBF0A9402970074E0E7 /* PBXTextBookmark */ = EA1FCCBF0A9402970074E0E7 /* PBXTextBookmark */;
+			EA1FCCC00A9402A20074E0E7 /* PBXTextBookmark */ = EA1FCCC00A9402A20074E0E7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EAA926710A86A4E800D4674B /* Source Control */;
 		userBookmarkGroup = EA2DB76D0A8BCDF80058D7BB /* PBXBookmarkGroup */;
