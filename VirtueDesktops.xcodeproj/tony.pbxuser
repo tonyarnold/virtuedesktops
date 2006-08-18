@@ -1,5 +1,7 @@
 // !$*UTF8*$!
 {
+<<<<<<< .mine
+=======
 	EA1D30D90A9533EE0006535A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = EA7A53F50A86A5C5000D6B5E /* PNWindow.m */;
@@ -46,6 +48,7 @@
 		vrLen = 876;
 		vrLoc = 2814;
 	};
+>>>>>>> .r202
 	EA1D30EB0A9534E90006535A /* PNWindow.m */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.objc;
@@ -552,9 +555,9 @@
 	};
 	EA7A558A0A86A6D0000D6B5E /* authtool.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 3344}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1060, 3344}}";
 			sepNavSelRange = "{3749, 0}";
-			sepNavVisRect = "{{0, 2697}, {1046, 647}}";
+			sepNavVisRect = "{{0, 297}, {1060, 703}}";
 			sepNavWindowFrame = "{{60, 106}, {1105, 761}}";
 		};
 	};
@@ -1354,9 +1357,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
+<<<<<<< .mine
+			PBXPerProjectTemplateStateSaveDate = 177551672;
+			PBXWorkspaceStateSaveDate = 177551672;
+=======
 			PBXPerProjectTemplateStateSaveDate = 177497294;
 			PBXWorkspaceStateSaveDate = 177497294;
+>>>>>>> .r202
 		};
+<<<<<<< .mine
+=======
 		perUserProjectItems = {
 			EA1D30D90A9533EE0006535A /* PBXTextBookmark */ = EA1D30D90A9533EE0006535A /* PBXTextBookmark */;
 			EA1D30DC0A9533F80006535A /* PBXTextBookmark */ = EA1D30DC0A9533F80006535A /* PBXTextBookmark */;
@@ -1378,6 +1388,7 @@
 			EA1D311D0A9537730006535A /* PBXTextBookmark */ = EA1D311D0A9537730006535A /* PBXTextBookmark */;
 			EA1D31210A9537B60006535A /* PBXTextBookmark */ = EA1D31210A9537B60006535A /* PBXTextBookmark */;
 		};
+>>>>>>> .r202
 		sourceControlManager = EAA926710A86A4E800D4674B /* Source Control */;
 		userBookmarkGroup = EA2DB76D0A8BCDF80058D7BB /* PBXBookmarkGroup */;
 		userBuildSettings = {

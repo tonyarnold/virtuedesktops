@@ -277,15 +277,18 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>EAA9266B0A86A4E800D4674B</string>
+								<string>EA7A53CA0A86A576000D6B5E</string>
+								<string>EA7A55880A86A6B7000D6B5E</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>EA1FCCCE0A94046F0074E0E7</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
 									<integer>9</integer>
-									<integer>8</integer>
+									<integer>2</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -308,7 +311,7 @@
 							<real>345</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>152 146 1077 719 0 0 1440 878 </string>
+						<string>58 142 1077 719 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -345,7 +348,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {710, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>152 146 1077 719 0 0 1440 878 </string>
+								<string>58 142 1077 719 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -365,7 +368,7 @@
 								<key>Frame</key>
 								<string>{{0, 5}, {710, 673}}</string>
 								<key>RubberWindowFrame</key>
-								<string>152 146 1077 719 0 0 1440 878 </string>
+								<string>58 142 1077 719 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -389,9 +392,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EA1FCB1D0A9400550074E0E7</string>
+				<string>EA4F78370A9539D300D9D6C4</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EA1FCB1E0A9400550074E0E7</string>
+				<string>EA4F78380A9539D300D9D6C4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -510,7 +513,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>177472623.526337</real>
+	<real>177551672.63644999</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -525,13 +528,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
-		<string>EA7A57780A86A7B8000D6B5E</string>
-		<string>EAF82ADD0A91FBAC008612A2</string>
 		<string>/Users/tony/Desktop/VirtueDesktops/VirtueDesktops.xcodeproj</string>
+		<string>EAF82ADD0A91FBAC008612A2</string>
 	</array>
 	<key>WindowString</key>
-	<string>152 146 1077 719 0 0 1440 878 </string>
+	<string>58 142 1077 719 0 0 1440 878 </string>
 	<key>WindowTools</key>
 	<array>
 		<dict>
@@ -1057,7 +1058,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>EAF82ADD0A91FBAC008612A2</string>
-				<string>EA1FCC9E0A9400610074E0E7</string>
+				<string>EA4F78390A9539D300D9D6C4</string>
 				<string>1C78EAB2065D492600B07095</string>
 				<string>1CD052920623707200166675</string>
 			</array>
@@ -1068,7 +1069,7 @@
 			<key>WindowToolGUID</key>
 			<string>EAF82ADD0A91FBAC008612A2</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
