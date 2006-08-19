@@ -938,10 +938,6 @@
 		EA7A548B0A86A663000D6B5E /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		EA7A548F0A86A663000D6B5E /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = "<group>"; };
 		EA7A54900A86A663000D6B5E /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = "<group>"; };
-		EA7A54AB0A86A663000D6B5E /* SmartCrashReportsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsAPI.h; sourceTree = "<group>"; };
-		EA7A54AC0A86A663000D6B5E /* SmartCrashReportsAPI.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsAPI.o; sourceTree = "<group>"; };
-		EA7A54AD0A86A663000D6B5E /* SmartCrashReportsInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartCrashReportsInstall.h; sourceTree = "<group>"; };
-		EA7A54AE0A86A663000D6B5E /* SmartCrashReportsInstall.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SmartCrashReportsInstall.o; sourceTree = "<group>"; };
 		EA7A55700A86A668000D6B5E /* libUniMotion.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libUniMotion.dylib; sourceTree = "<group>"; };
 		EA7A55710A86A668000D6B5E /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unimotion.h; sourceTree = "<group>"; };
 		EA7A558A0A86A6D0000D6B5E /* authtool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = authtool.c; sourceTree = "<group>"; };
@@ -1855,7 +1851,6 @@
 				EA7A54880A86A662000D6B5E /* Headers */,
 				EA7A548A0A86A663000D6B5E /* Frameworks */,
 				EA7A548C0A86A663000D6B5E /* mach_inject */,
-				EA7A54980A86A663000D6B5E /* Smart Crash Reports SDK */,
 				EA7A556F0A86A668000D6B5E /* UniMotion */,
 			);
 			path = Shared;
@@ -1885,17 +1880,6 @@
 				EA7A54900A86A663000D6B5E /* mach_inject.h */,
 			);
 			path = mach_inject;
-			sourceTree = "<group>";
-		};
-		EA7A54980A86A663000D6B5E /* Smart Crash Reports SDK */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A54AB0A86A663000D6B5E /* SmartCrashReportsAPI.h */,
-				EA7A54AC0A86A663000D6B5E /* SmartCrashReportsAPI.o */,
-				EA7A54AD0A86A663000D6B5E /* SmartCrashReportsInstall.h */,
-				EA7A54AE0A86A663000D6B5E /* SmartCrashReportsInstall.o */,
-			);
-			path = "Smart Crash Reports SDK";
 			sourceTree = "<group>";
 		};
 		EA7A556F0A86A668000D6B5E /* UniMotion */ = {
