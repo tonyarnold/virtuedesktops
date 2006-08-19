@@ -2985,7 +2985,6 @@
 		EAA9266D0A86A4E800D4674B /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */;
-			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -3026,7 +3025,6 @@
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			shouldCheckCompatibility = 1;
 			targets = (
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,
