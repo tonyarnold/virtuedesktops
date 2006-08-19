@@ -404,8 +404,13 @@
 	
 	NSEnumerator*	serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
 	NSDictionary*	serialisedDesktopDictionary;
-		
+	NSMutableArray*   uuidArray = [[NSMutableArray alloc] init];
+  
 	while (serialisedDesktopDictionary = [serialisedDesktopsIterator nextObject]) {
+    if ([uuidArray containsObject: [serialisedDesktopDictionary valueForKey: @"UUID"]]) {
+      continue;
+    }
+    [uuidArray addObject: [serialisedDesktopDictionary valueForKey: @"UUID"]];
 		VTDesktop*	desktop	= [[VTDesktop alloc] initWithName: [serialisedDesktopDictionary valueForKey: @"name"]  identifier: desktopId];  
 		[desktop decodeFromDictionary: serialisedDesktopDictionary]; 
 		
