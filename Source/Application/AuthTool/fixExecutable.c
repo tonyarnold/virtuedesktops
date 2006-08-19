@@ -1,3 +1,5 @@
+#define DEBUG
+
 #include "authtool.h"
 
 #include <Security/AuthorizationTags.h>

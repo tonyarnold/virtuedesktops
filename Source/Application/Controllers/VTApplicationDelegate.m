@@ -379,9 +379,11 @@ enum
 //		NSLog(@"Installation of VirtueDesktops' dock extension has failed. Some of VirtueDesktops' features will not work as expected.");
 //	}
 	[mAttentionPermissionsWindow orderOut: self];
+  
 	// We override asking us whether we want to quit, because the user really doesn't have any choice.
 	mConfirmQuitOverridden = YES;
-	// Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
+	
+  // Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
 	setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
 	system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
 	"    /bin/sleep .2;\n"
