@@ -158,7 +158,6 @@ enum
   [VTDesktopBackgroundHelper      sharedInstance];
 	[VTDesktopController						sharedInstance];
 	[VTDesktopDecorationController	sharedInstance];
-	[[VTDesktopController						sharedInstance] deserializeDesktops];
 	[VTTriggerController						sharedInstance];
 	[VTLayoutController							sharedInstance];
 	[VTApplicationController				sharedInstance];
@@ -173,7 +172,7 @@ enum
 	mNotificationBezel = [[VTNotificationBezel alloc] init];
   
 	// Make sure we have our default matrix layout created
-	NSArray*			layouts = [[VTLayoutController sharedInstance] layouts];
+	NSArray*          layouts = [[VTLayoutController sharedInstance] layouts];
 	VTDesktopLayout*	layout	= nil;
   
 	if (layouts) {

@@ -372,11 +372,19 @@
 	NSEnumerator*		desktopIter		= [_desktops objectEnumerator]; 
 	VTDesktop*			desktop				= nil;
 	NSMutableArray*	desktopsArray = [[NSMutableArray alloc] init];
-	
-	
-	while (desktop = [desktopIter nextObject]) 
+	NSMutableArray* desktopsUUIDs = [[NSMutableArray alloc] init];
+  
+	while (desktop = [desktopIter nextObject])
 	{
-		NSMutableDictionary* dictionary = [[NSMutableDictionary dictionary] retain];
+    // We ensure that preferences are not corrupt due to the bug in 0.53r210
+    if ([desktopsUUIDs containsObject: [desktop uuid]]) {
+      continue;
+    }
+    [desktopsUUIDs addObject: [desktop uuid]];
+
+    // ...and continue
+    [desktopsArray removeObjectIdenticalTo: desktop];
+    NSMutableDictionary* dictionary = [[NSMutableDictionary dictionary] retain];
 		[desktop encodeToDictionary: dictionary];
 		[desktopsArray insertObject: dictionary atIndex: [desktopsArray count]];
 		[dictionary release];
