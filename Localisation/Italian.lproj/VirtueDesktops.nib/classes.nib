@@ -136,6 +136,7 @@
         {
             ACTIONS = {
                 deleteActiveDesktop = id; 
+                fixExecutablePermissions = id; 
                 sendFeedback = id; 
                 showApplicationInspector = id; 
                 showDesktopInspector = id; 
@@ -149,6 +150,7 @@
             CLASS = VTApplicationDelegate; 
             LANGUAGE = ObjC; 
             OUTLETS = {
+                mAttentionPermissionsWindow = NSWindow; 
                 mStatusItemActiveDesktopItem = NSMenu; 
                 mStatusItemMenu = NSMenu; 
                 mStatusItemRemoveActiveDesktopItem = NSMenuItem; 
