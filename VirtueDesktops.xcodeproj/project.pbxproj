@@ -367,8 +367,6 @@
 		EA7A64C30A870165000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
 		EA7A64C40A870165000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A64C50A870172000D6B5E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
-		EA7A64CB0A87017C000D6B5E /* SmartCrashReportsAPI.o in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A54AC0A86A663000D6B5E /* SmartCrashReportsAPI.o */; };
-		EA7A64CC0A87017C000D6B5E /* SmartCrashReportsInstall.o in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A54AE0A86A663000D6B5E /* SmartCrashReportsInstall.o */; };
 		EA7A64D30A8701AA000D6B5E /* libUniMotion.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A55700A86A668000D6B5E /* libUniMotion.dylib */; };
 		EA7A659E0A870299000D6B5E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65970A870299000D6B5E /* AppKit.framework */; };
 		EA7A65A00A870299000D6B5E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65990A870299000D6B5E /* Carbon.framework */; };
@@ -1481,8 +1479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7A64D30A8701AA000D6B5E /* libUniMotion.dylib in Frameworks */,
-				EA7A64CB0A87017C000D6B5E /* SmartCrashReportsAPI.o in Frameworks */,
-				EA7A64CC0A87017C000D6B5E /* SmartCrashReportsInstall.o in Frameworks */,
 				EA7A64C00A870165000D6B5E /* libDockCommunicator.a in Frameworks */,
 				EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */,
 				EA7A64C50A870172000D6B5E /* Growl.framework in Frameworks */,
@@ -3005,6 +3001,7 @@
 		EAA9266D0A86A4E800D4674B /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -3045,6 +3042,7 @@
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
+			shouldCheckCompatibility = 1;
 			targets = (
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,

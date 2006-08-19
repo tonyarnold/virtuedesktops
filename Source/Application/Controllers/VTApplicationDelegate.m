@@ -31,11 +31,9 @@
 
 #import "DECInjector.h"
 
-#import "../../../Shared/Smart Crash Reports SDK/SmartCrashReportsInstall.h"
-
 enum
 {
-	kVtMenuItemMagicNumber				= 666,
+	kVtMenuItemMagicNumber			= 666,
 	kVtMenuItemRemoveMagicNumber	= 667,
 };
 
@@ -46,7 +44,6 @@ enum
 - (void) unregisterObservers;
 #pragma mark -
 - (void) updateStatusItem;
-//- (void) updateMotionSensor;
 - (void) updateDesktopsMenu;
 - (void) updateActiveDesktopMenu;
 - (void) updateVersionNumbers;
@@ -79,11 +76,6 @@ enum
 		mStatusItemMenuDesktopNeedsUpdate = YES;
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
 		[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
-		// Let's make sure that Unsanity's Smart Crash Reports is installed before we begin
-		Boolean authenticationWillBeRequired = NO;
-		if (UnsanitySCR_CanInstall(&authenticationWillBeRequired)) {
-			UnsanitySCR_Install(authenticationWillBeRequired ? kUnsanitySCR_GlobalInstall : 0);
-		}
     
 		return self;
 	}
@@ -166,7 +158,7 @@ enum
 	mPreferenceController	= [[VTPreferencesViewController alloc] init];
 	mOperationsController	= [[VTOperationsViewController alloc] init];
 	mApplicationWatcher		= [[VTApplicationWatcherController alloc] init];
-	mDesktopInspector			= [[VTDesktopViewController alloc] init];
+	mDesktopInspector		= [[VTDesktopViewController alloc] init];
 	mApplicationInspector	= [[VTApplicationViewController alloc] init];
   
 	// Interface controllers
@@ -371,26 +363,27 @@ enum
 	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: index];
 }
 
-- (IBAction) fixExecutablePermissions: (id) sender {	 
+- (IBAction) fixExecutablePermissions: (id) sender {
 	// If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and by setting the set-group-ID-on-execution bit
 	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);
-	if (fixExecutableStatus == 0) { 
-		NSLog(@"Fixing VirtueDesktops' permissions so that we can execute as part of the procmod group.");
-		// If the fix is successfull (i.e. user entered his password), then we relaunch a new instance of ourself  
-		// and terminate the current instance 
-		// Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
-		setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
-		system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
-		"    /bin/sleep .2;\n"
-		"  done\n"
-		"  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
-		"    /usr/bin/open \"${LAUNCH_PATH}\"\n"
-		"  fi\n"
-		"} &>/dev/null &'");
-		[[NSApplication sharedApplication] terminate:self]; 
-	} else { 
-		NSLog(@"Installation of VirtueDesktops' dock extension has failed. Some of VirtueDesktops' features will not work as expected."); 
-	} 
+//	if (fixExecutableStatus == 0) { 
+//		NSLog(@"Fixing VirtueDesktops' permissions so that we can execute as part of the procmod group.");
+//	} else { 
+//		NSLog(@"Installation of VirtueDesktops' dock extension has failed. Some of VirtueDesktops' features will not work as expected.");
+//	}
+	[mAttentionPermissionsWindow orderOut: self];
+	// We override asking us whether we want to quit, because the user really doesn't have any choice.
+	mConfirmQuitOverridden = YES;
+	// Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
+	setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
+	system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
+	"    /bin/sleep .2;\n"
+	"  done\n"
+	"  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
+	"    /usr/bin/open \"${LAUNCH_PATH}\"\n"
+	"  fi\n"
+	"} &>/dev/null &'");
+	[[NSApplication sharedApplication] terminate:self];
 }
 
 
