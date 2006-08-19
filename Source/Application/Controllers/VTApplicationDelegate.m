@@ -154,11 +154,19 @@ enum
 	// Read our desktops from disk (if they exist), otherwise populate the defaults
 	[[VTDesktopController			sharedInstance] deserializeDesktops];
 	
-  // Create our controllers
+  // Create/Instantiate our controllers
+  [VTDesktopBackgroundHelper      sharedInstance];
+	[VTDesktopController						sharedInstance];
+	[VTDesktopDecorationController	sharedInstance];
+	[[VTDesktopController						sharedInstance] deserializeDesktops];
+	[VTTriggerController						sharedInstance];
+	[VTLayoutController							sharedInstance];
+	[VTApplicationController				sharedInstance];
+  
 	mPreferenceController	= [[VTPreferencesViewController alloc] init];
 	mOperationsController	= [[VTOperationsViewController alloc] init];
 	mApplicationWatcher		= [[VTApplicationWatcherController alloc] init];
-	mDesktopInspector		= [[VTDesktopViewController alloc] init];
+	mDesktopInspector     = [[VTDesktopViewController alloc] init];
 	mApplicationInspector	= [[VTApplicationViewController alloc] init];
   
 	// Interface controllers
