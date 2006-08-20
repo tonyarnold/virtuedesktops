@@ -63,6 +63,8 @@
 	<string>0.53r0000</string>
 	<key>CFBundleVersionString</key>
 	<string>0.53r0000</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.53r0000</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.4.0</string>
 	<key>LSUIElement</key>
