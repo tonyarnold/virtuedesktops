@@ -1,18 +1,18 @@
 /******************************************************************************
-* 
-* VirtueDesktops 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller (playback@users.sourceforge.net)
-* Copyright 2006, Tony Arnold (tony@tonyarnold.com)
-*
-* See COPYING for licensing details
-* 
-* Copyright 2001-2004 Brian Bergstrand
-* See File Footer for information 
-* 
-*****************************************************************************/ 
+ * 
+ * VirtueDesktops 
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller (playback@users.sourceforge.net)
+ * Copyright 2006, Tony Arnold (tony@tonyarnold.com)
+ *
+ * See COPYING for licensing details
+ * 
+ * Copyright 2001-2004 Brian Bergstrand
+ * See File Footer for information 
+ * 
+ *****************************************************************************/ 
 
 #import "VTDesktopBackgroundHelper.h"
 #import <Zen/NSFileManagerAlias.h>
@@ -62,8 +62,8 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 		
 		// find out which mode to use 
 		[self updateMode];
-    ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [self background]);
-    
+		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [self background]);
+		
 		return self; 
 	}
 	
@@ -94,22 +94,22 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 #pragma mark -
 #pragma mark Operations 
 - (void) setBackground: (NSString*) path {
-  NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if ([fileManager fileExistsAtPath: path] == NO)
 		return;
 	
 	
 	switch (mMode) {
-		case VTBackgroundHelperModeFinder: 
-			[self setBackgroundUsingFinder: path]; 
-			break; 
-		case VTBackgroundHelperModePList: 
-			[self setBackgroundUsingPList: path]; 
-			break; 
-		case VTBackgroundHelperModeNone: 
-			// Fallthrough
-		default: 
-			break; 
+	case VTBackgroundHelperModeFinder: 
+		[self setBackgroundUsingFinder: path]; 
+		break; 
+	case VTBackgroundHelperModePList: 
+		[self setBackgroundUsingPList: path]; 
+		break; 
+	case VTBackgroundHelperModeNone: 
+		// Fallthrough
+	default: 
+		break; 
 	}; 
 }
 
@@ -118,16 +118,16 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	// @TODO@ Implement Finder querying 
 #if 0	
 	switch (mMode) {
-		case VTBackgroundHelperModeFinder: 
-			return [self backgroundUsingFinder]; 
-		case VTBackgroundHelperModePList: 
+	case VTBackgroundHelperModeFinder: 
+		return [self backgroundUsingFinder]; 
+	case VTBackgroundHelperModePList: 
 #endif 
-			return [self backgroundUsingPList]; 
+		return [self backgroundUsingPList]; 
 #if 0
-		case VTBackgroundHelperModeNone: 
-			// Fallthrough
-		default: 
-			break; 
+	case VTBackgroundHelperModeNone: 
+		// Fallthrough
+	default: 
+		break; 
 	}; 
 	
 	return nil; 
@@ -135,14 +135,14 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 }
 
 - (void) setDefaultBackground: (NSString*) path {
-  if (path == nil)
-    return;
-
-  ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, path);
+	if (path == nil)
+		return;
+	
+	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, path);
 }
 
 - (NSString*) defaultBackground {
-  return mDefaultDesktopBackgroundPath;
+	return mDefaultDesktopBackgroundPath;
 }
 
 @end
@@ -182,7 +182,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 		mMode = VTBackgroundHelperModePList; 
 		return; 
 	}
-
+	
 	// got no chance here, we cannot do any desktop background changes 
 	mMode = VTBackgroundHelperModeNone; 
 }
@@ -217,14 +217,14 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	if (noErr == err) {
 		// Create the event
 		err = AECreateAppleEvent (kAECoreSuite, kAESetData, &addr, kAutoGenerateReturnID,
-								  kAnyTransactionID, &ev);
+		kAnyTransactionID, &ev);
 		AEDisposeDesc(&addr);
 		if (noErr == err) {
 			AEDesc containerObj = {typeNull, nil};
 			AEDesc myDesc = {typeNull, nil};
 			AEDesc cmonDesc = {typeNull, nil};
 			AEDesc propertyObject = {typeNull, nil};
-				
+			
 			long displaysIndex = 1; 
 			err = AECreateDesc(typeSInt32, &displaysIndex, sizeof(long), &myDesc);
 			if (noErr == err) {
@@ -294,7 +294,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	NSArray*				screenKeys			= nil;
 	
 	NSUserDefaults* userDefaults = [[[NSUserDefaults alloc] init] autorelease];
-
+	
 	NSString*	mkey;
 	NSString*	tmp;
 	
@@ -312,7 +312,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	screenKeys = [bkgdDictionary allKeys];
 	if (screenKeys == nil)
 		return; 
-		
+	
 	done = YES;
 	
 	NSEnumerator*	screenKeyIter	= [screenKeys objectEnumerator]; 
@@ -323,7 +323,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	
 	fileAlias		= [[NSFileManager defaultManager] makeAlias: file];
 	fileAliasData	= [[NSData alloc] initWithBytes: (void*)*fileAlias length: GetHandleSize((Handle)fileAlias)];
-
+	
 	while (screenKey = [screenKeyIter nextObject]) {
 		screenDictionary = [[bkgdDictionary objectForKey: screenKey] mutableCopyWithZone: nil]; 
 		
@@ -335,15 +335,15 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 		// and get rid of this instance 
 		[screenDictionary release]; 
 	}
-		
+	
 	// kill data 
 	[fileAliasData release]; 
 	// kill handle 
 	DisposeHandle((Handle)fileAlias);
-
+	
 	// Replace with the modified dict
 	[rootDictionary setObject: bkgdDictionary forKey: VTBackgroundHelperPListDesktopName];
-		
+	
 	// Update the desktop domain on disk
 	[userDefaults removePersistentDomainForName: VTBackgroundHelperPListDomainName];
 	[userDefaults setPersistentDomain: rootDictionary forName: VTBackgroundHelperPListDomainName];
@@ -352,9 +352,9 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	// Plus we have to send a nice notification so clients know that we changed
 	// the desktop plist file so they update themselves 
 	[[NSDistributedNotificationCenter defaultCenter]
-            postNotificationName: VTBackgroundHelperDesktopChangedName
-						  object: VTBackgroundHelperDesktopChangedObject 
-						userInfo: nil];	
+	postNotificationName: VTBackgroundHelperDesktopChangedName
+	object: VTBackgroundHelperDesktopChangedObject 
+	userInfo: nil];	
 }
 
 - (NSString*) backgroundUsingPList {
@@ -410,41 +410,41 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result)
 	url = (CFURLRef)furl; // we don't own this, so don't release it
 	
 	switch(toType){
-		case cFile:
-		case typeFSRef: 
-		case typeFSS: 
-		case typeAlias:
-			
-			if (CFURLGetFSRef(url, &ref)) {
-				switch (toType) {
-					case typeFSRef:
-						err = AECreateDesc(typeFSRef, &ref, sizeof(FSRef), result);
-						break;
-						
-					case cFile:
-					case typeFSS:
-						err = FSGetCatalogInfo(&ref, kFSCatInfoNone, NULL, NULL, &spec, NULL);
-						if (noErr == err)
-							err = AECreateDesc(typeFSS, &spec, sizeof(FSSpec), result);
-							break;
-						
-					case typeAlias:
-						err = FSNewAliasMinimal(&ref, &alias);
-						if (noErr == err) {
-							// HLock((Handle)alias); // not needed on X
-							err = AECreateDesc(typeAlias, *alias, GetHandleSize((Handle)alias), result);
-							// HUnlock((Handle)alias); // ditto
-							DisposeHandle((Handle)alias);
-						}
-							break;
+	case cFile:
+	case typeFSRef: 
+	case typeFSS: 
+	case typeAlias:
+		
+		if (CFURLGetFSRef(url, &ref)) {
+			switch (toType) {
+			case typeFSRef:
+				err = AECreateDesc(typeFSRef, &ref, sizeof(FSRef), result);
+				break;
+				
+			case cFile:
+			case typeFSS:
+				err = FSGetCatalogInfo(&ref, kFSCatInfoNone, NULL, NULL, &spec, NULL);
+				if (noErr == err)
+					err = AECreateDesc(typeFSS, &spec, sizeof(FSSpec), result);
+				break;
+				
+			case typeAlias:
+				err = FSNewAliasMinimal(&ref, &alias);
+				if (noErr == err) {
+					// HLock((Handle)alias); // not needed on X
+					err = AECreateDesc(typeAlias, *alias, GetHandleSize((Handle)alias), result);
+					// HUnlock((Handle)alias); // ditto
+					DisposeHandle((Handle)alias);
 				}
-			} else {
-				err = coreFoundationUnknownErr;
+				break;
 			}
-			break;
-			
-		default:
-			break;
+		} else {
+			err = coreFoundationUnknownErr;
+		}
+		break;
+		
+	default:
+		break;
 	}
 	
 	return err;

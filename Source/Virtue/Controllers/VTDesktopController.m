@@ -1,13 +1,13 @@
 /******************************************************************************
-*
-* VirtueDesktops framework
-*
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2006, Tony Arnold tony@tonyarnold.com
-*
-* See COPYING for licensing details
-*
-*****************************************************************************/
+ *
+ * VirtueDesktops framework
+ *
+ * Copyright 2004, Thomas Staller playback@users.sourceforge.net
+ * Copyright 2006, Tony Arnold tony@tonyarnold.com
+ *
+ * See COPYING for licensing details
+ *
+ *****************************************************************************/
 
 #import "VTDesktopController.h"
 #import "VTDesktopDecorationController.h" 
@@ -65,44 +65,44 @@
 		
 		// Register as observer for desktop switches 
 		[[NSNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopWillChange:) 
-                                                 name: kPnOnDesktopWillActivate 
-                                               object: nil];
-    
+		selector: @selector(onDesktopWillChange:) 
+		name: kPnOnDesktopWillActivate 
+		object: nil];
+		
 		[[NSNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopDidChange:) 
-                                                 name: kPnOnDesktopDidActivate 
-                                               object: nil];
-    
+		selector: @selector(onDesktopDidChange:) 
+		name: kPnOnDesktopDidActivate 
+		object: nil];
+		
 		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopBackgroundChanged:) 
-                                                 name: VTBackgroundHelperDesktopChangedName 
-                                               object: VTBackgroundHelperDesktopChangedObject]; 
+		selector: @selector(onDesktopBackgroundChanged:) 
+		name: VTBackgroundHelperDesktopChangedName 
+		object: VTBackgroundHelperDesktopChangedObject]; 
 		
 /* *  
-	 * Expose SwitchTo(Next|Prev)Workspace to the DistributedNotificationCenter. 
-	 * 
-	 * Initial patch to archive something similar to 
-	 * [http://blog.medallia.com/2006/05/smacbook_pro.html] 
-	 */ 
-// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
+ * Expose SwitchTo(Next|Prev)Workspace to the DistributedNotificationCenter. 
+ * 
+ * Initial patch to archive something similar to 
+ * [http://blog.medallia.com/2006/05/smacbook_pro.html] 
+ */ 
+		// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
 		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-																										selector: @selector(onNextEastDesktopRequest:) 
-																												name: @"SwitchToNextWorkspace" 
-																											object: nil]; 
-
-// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
-    [[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-                                                        selector: @selector(onNextWestDesktopRequest:) 
-                                                            name: @"SwitchToPrevWorkspace" 
-                                                          object: nil];
+		selector: @selector(onNextEastDesktopRequest:) 
+		name: @"SwitchToNextWorkspace" 
+		object: nil]; 
+		
+		// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
+		selector: @selector(onNextWestDesktopRequest:) 
+		name: @"SwitchToPrevWorkspace" 
+		object: nil];
 		
 		// create timer loop to update desktops 
 		[NSTimer scheduledTimerWithTimeInterval: 1.0 
-                                     target: self 
-                                   selector: @selector(onUpdateDesktops:) 
-                                   userInfo: nil 
-                                    repeats: NO]; 
+		target: self 
+		selector: @selector(onUpdateDesktops:) 
+		userInfo: nil 
+		repeats: NO]; 
 		
 		return self; 
 	}
@@ -172,7 +172,7 @@
 	
 	// and add 
 	[_desktops insertObject: desktop atIndex: index]; 
-		
+	
 	// attach the decoration 
 	[[VTDesktopDecorationController sharedInstance] attachDecoration: [desktop decoration]]; 
 	
@@ -236,15 +236,15 @@
 		ZEN_RELEASE(mSnapbackDesktop); 
 		[self didChangeValueForKey: @"snapbackDesktop"]; 
 	}
-		
+	
 	// detach the decoration 
 	[[VTDesktopDecorationController sharedInstance] detachDecorationForDesktop: desktopToRemove];
 	
 	// now check if we should move windows 
 	if (([[NSUserDefaults standardUserDefaults] boolForKey: VTWindowsCollectOnDelete]) && 
-			([_desktops count] > 1)) {
-		[desktopToRemove moveAllWindowsToDesktop: target]; 
-	}
+		([_desktops count] > 1)) {
+			[desktopToRemove moveAllWindowsToDesktop: target]; 
+		}
 	
 	// and remove the object 
 	[self willChangeValueForKey: @"canAdd"];
@@ -263,7 +263,7 @@
 }
 
 - (void) sendWindowUnderPointerBack {
-  [[self activeDesktop] sendWindowUnderPointerBack];
+	[[self activeDesktop] sendWindowUnderPointerBack];
 }
 
 #pragma mark -
@@ -373,18 +373,18 @@
 	VTDesktop*			desktop				= nil;
 	NSMutableArray*	desktopsArray = [[NSMutableArray alloc] init];
 	NSMutableArray* desktopsUUIDs = [[NSMutableArray alloc] init];
-  
+	
 	while (desktop = [desktopIter nextObject])
 	{
-    // We ensure that preferences are not corrupt due to the bug in 0.53r210
-    if ([desktopsUUIDs containsObject: [desktop uuid]]) {
-      continue;
-    }
-    [desktopsUUIDs addObject: [desktop uuid]];
-
-    // ...and continue
-    [desktopsArray removeObjectIdenticalTo: desktop];
-    NSMutableDictionary* dictionary = [[NSMutableDictionary dictionary] retain];
+		// We ensure that preferences are not corrupt due to the bug in 0.53r210
+		if ([desktopsUUIDs containsObject: [desktop uuid]]) {
+			continue;
+		}
+		[desktopsUUIDs addObject: [desktop uuid]];
+		
+		// ...and continue
+		[desktopsArray removeObjectIdenticalTo: desktop];
+		NSMutableDictionary* dictionary = [[NSMutableDictionary dictionary] retain];
 		[desktop encodeToDictionary: dictionary];
 		[desktopsArray insertObject: dictionary atIndex: [desktopsArray count]];
 		[dictionary release];
@@ -405,12 +405,12 @@
 	NSEnumerator*	serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
 	NSDictionary*	serialisedDesktopDictionary;
 	NSMutableArray*   uuidArray = [[NSMutableArray alloc] init];
-  
+	
 	while (serialisedDesktopDictionary = [serialisedDesktopsIterator nextObject]) {
-    if ([uuidArray containsObject: [serialisedDesktopDictionary valueForKey: @"UUID"]]) {
-      continue;
-    }
-    [uuidArray addObject: [serialisedDesktopDictionary valueForKey: @"UUID"]];
+		if ([uuidArray containsObject: [serialisedDesktopDictionary valueForKey: @"UUID"]]) {
+			continue;
+		}
+		[uuidArray addObject: [serialisedDesktopDictionary valueForKey: @"UUID"]];
 		VTDesktop*	desktop	= [[VTDesktop alloc] initWithName: [serialisedDesktopDictionary valueForKey: @"name"]  identifier: desktopId];  
 		[desktop decodeFromDictionary: serialisedDesktopDictionary]; 
 		
@@ -433,9 +433,9 @@
 	// bind to active desktop 
 	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
-  
+	
 	// and apply settings of active desktop 
-  mExpectingBackgroundChange = YES;
+	mExpectingBackgroundChange = YES;
 	[self applyDesktopBackground];
 }
 
@@ -455,22 +455,19 @@
 #pragma mark Notification sinks
 
 - (void) onDesktopBackgroundChanged: (NSNotification*) notification {
-  // ignore if we expected it because we triggered the change 
-	if ( (mExpectingBackgroundChange == YES) || ([[self activeDesktop] showsBackground]) ) {
+	// ignore if we expected it because we triggered the change 
+	if ( (mExpectingBackgroundChange == YES) || ([[self activeDesktop] showsBackground] == YES) || ([mDefaultDesktopBackgroundPath isEqualToString: [[VTDesktopBackgroundHelper sharedInstance] background]] == YES)) {
 		mExpectingBackgroundChange = NO;
 		return; 
-	}
-  
-  if ([mDefaultDesktopBackgroundPath isLike: [[VTDesktopBackgroundHelper sharedInstance] background]] == YES)
-    return;
-	
+	}		
+		
 	// otherwise get the background picture and set it as the default
 	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]);
-  [[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: mDefaultDesktopBackgroundPath];
-  
-  // Propagate 
-  [[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundIfNeeded:) withObject: mDefaultDesktopBackgroundPath];
-  NSLog(@"Changing default desktop to %@", mDefaultDesktopBackgroundPath);
+	[[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: mDefaultDesktopBackgroundPath];
+	
+	
+	// Propagate 
+	[[self desktops] makeObjectsPerformSelector: @selector(setDefaultDesktopBackgroundIfNeeded:) withObject: mDefaultDesktopBackgroundPath];
 }
 
 - (void) onUpdateDesktops: (NSTimer*) timer {
@@ -482,7 +479,7 @@
 - (void) onNextEastDesktopRequest: (NSNotification*) notification { 
 	[self activateDesktopInDirection: kVtDirectionEast]; 
 } 
-	 
+
 // Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
 - (void) onNextWestDesktopRequest: (NSNotification*) notification { 
 	[self activateDesktopInDirection: kVtDirectionWest]; 
@@ -500,30 +497,27 @@
 	
 	// propagate key change for previous desktop 
 	[self willChangeValueForKey: @"previousDesktop"]; 
-  
+	
 	// remember the old desktop for the last desktop 
 	ZEN_ASSIGN(mPreviousDesktop, [self activeDesktop]); 
-  
+	
 	// propagate key change for previous desktop completed 
 	[self didChangeValueForKey: @"previousDesktop"];
-  
-  
-  // Ensure object consistency.
-  NSString* currentDesktopBackground = [[VTDesktopBackgroundHelper sharedInstance] background];
-  [[self activeDesktop] setDesktopBackground: currentDesktopBackground];
-  if ([[self activeDesktop] showsBackground] == NO) {
-    [[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: currentDesktopBackground];
-  }
+	
+	
+	// Ensure object consistency.
+	if ([[self activeDesktop] showsBackground] == NO) {
+		[[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: [[VTDesktopBackgroundHelper sharedInstance] background]];
+	}
   		
 	// unbind desktop 
 	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
-  // bind desktop 
+	// bind desktop 
 	[[self activeDesktop] addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL];
-  mExpectingBackgroundChange = YES;
-  [self applyDesktopBackground]; 		
+	[self applyDesktopBackground]; 		
 	[self didChangeValueForKey: @"activeDesktop"]; 
 }
 
@@ -533,7 +527,6 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	if ([keyPath isEqualToString: @"showsBackground"] || [keyPath isEqualToString: @"desktopBackground"]) {
-    mExpectingBackgroundChange = YES;
 		[self applyDesktopBackground];
 	}
 }
@@ -588,7 +581,7 @@
 	PNTransitionType type;
 	PNTransitionOption option;
 	float duration;
-		
+	
 	// Make sure transition is enabled
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:VTDesktopTransitionEnabled]) {
 		
@@ -601,33 +594,33 @@
 		//if (option == kPnOptionAny) {
 		// decide based on the direction 
 		switch (direction) {
-			case kVtDirectionNorth: 
-				option = kPnOptionDown; 
-				break; 
-			case kVtDirectionSouth: 
-				option = kPnOptionUp; 
-				break; 
-			case kVtDirectionWest: 
-				option = kPnOptionRight; 
-				break; 
-			case kVtDirectionEast: 
-				option = kPnOptionLeft; 
-				break;
-			case kVtDirectionNortheast: 
-				option = kPnOptionTopRight; 
-				break; 
-			case kVtDirectionSoutheast: 
-				option = kPnOptionBottomRight; 
-				break; 
-			case kVtDirectionSouthwest: 
-				option = kPnOptionBottomLeft; 
-				break; 
-			case kVtDirectionNorthwest: 
-				option = kPnOptionTopLeft; 
-				break; 
-				
-			default: 
-				option = kPnOptionLeft; 
+		case kVtDirectionNorth: 
+			option = kPnOptionDown; 
+			break; 
+		case kVtDirectionSouth: 
+			option = kPnOptionUp; 
+			break; 
+		case kVtDirectionWest: 
+			option = kPnOptionRight; 
+			break; 
+		case kVtDirectionEast: 
+			option = kPnOptionLeft; 
+			break;
+		case kVtDirectionNortheast: 
+			option = kPnOptionTopRight; 
+			break; 
+		case kVtDirectionSoutheast: 
+			option = kPnOptionBottomRight; 
+			break; 
+		case kVtDirectionSouthwest: 
+			option = kPnOptionBottomLeft; 
+			break; 
+		case kVtDirectionNorthwest: 
+			option = kPnOptionTopLeft; 
+			break; 
+			
+		default: 
+			option = kPnOptionLeft; 
 		}
 		
 		//}
@@ -642,11 +635,11 @@
 		duration = 0.0;
 	}
 	// now do it ;)
-
+	
 	[self doActivateDesktop: desktop 
-					usingTransition: type 
-							withOptions: option 
-							andDuration: duration];
+	usingTransition: type 
+	withOptions: option 
+	andDuration: duration];
 }
 
 - (void) doActivateDesktop: (VTDesktop*) desktop usingTransition: (PNTransitionType) type withOptions: (PNTransitionOption) option andDuration: (float) duration {
@@ -654,7 +647,7 @@
 	// same desktop 
 	if ([desktop isEqual: [self activeDesktop]])
 		return;
-		
+	
 	// we do not allow kPnOptionAny or kPnTransitionAny here (assuming we're donig any transition)
 	if (type == kPnTransitionAny)
 		return;
@@ -726,8 +719,8 @@
 }
 
 - (void) applyDesktopBackground {
-  mExpectingBackgroundChange = YES;
-  [[self activeDesktop] applyDesktopBackground]; 
+	mExpectingBackgroundChange = YES;
+	[[self activeDesktop] applyDesktopBackground]; 
 }
 
 - (NSString*) applicationSupportFolder {
@@ -747,14 +740,14 @@
 }
 
 - (NSString *) _pathForDataFile {
-  NSFileManager *fileManager = [NSFileManager defaultManager];
-  NSString *folder = [self applicationSupportFolder];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *folder = [self applicationSupportFolder];
 	NSString *file	 = [folder stringByAppendingPathComponent: @"Desktops.virtuedata"];
 	
-  if ([fileManager fileExistsAtPath: folder] == NO)
-    [fileManager createDirectoryAtPath: folder attributes: nil];	
+	if ([fileManager fileExistsAtPath: folder] == NO)
+		[fileManager createDirectoryAtPath: folder attributes: nil];	
 	
-  return file;    
+	return file;    
 }
 
 @end 
