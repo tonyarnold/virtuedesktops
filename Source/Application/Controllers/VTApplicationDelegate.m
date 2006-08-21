@@ -151,7 +151,8 @@ enum
 	[mPluginController loadPlugins];
 	
 	// Read our desktops from disk (if they exist), otherwise populate the defaults
-	[[VTDesktopController			sharedInstance] deserializeDesktops];
+	[VTDesktopController			sharedInstance];
+  [[VTDesktopController			sharedInstance] deserializeDesktops];
 	
 	// Create/Instantiate our controllers
 	[VTDesktopBackgroundHelper      sharedInstance];

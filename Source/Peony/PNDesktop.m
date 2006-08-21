@@ -480,12 +480,12 @@
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
     
 		// ignore menus
-//		if (([window level] == NSPopUpMenuWindowLevel) ||
-//				([window level] == NSSubmenuWindowLevel) ||
-//				([window level] == NSMainMenuWindowLevel)) {
-//			[window release];
-//			continue;
-//		}
+		if (([window level] == NSPopUpMenuWindowLevel) ||
+				([window level] == NSSubmenuWindowLevel) ||
+				([window level] == NSMainMenuWindowLevel)) {
+			[window release];
+			continue;
+		}
 
 		// get application container
 		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];
@@ -599,7 +599,7 @@
 	PNWindow*				checkWindow = nil;
 
 	while (checkWindow = [previousWindowsIter nextObject]) {
-		// remove…
+		// remove‚Ä¶
 		didChangeWindows = YES;
 		
 

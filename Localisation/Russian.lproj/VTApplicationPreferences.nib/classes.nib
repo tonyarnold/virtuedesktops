@@ -104,6 +104,17 @@
         {CLASS = NSFormatter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = NSNumberFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
         {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
             CLASS = PDFThumbnailView; 
             LANGUAGE = ObjC; 
             OUTLETS = {pdfView = PDFView; }; 
@@ -125,6 +136,20 @@
             CLASS = PDFView; 
             LANGUAGE = ObjC; 
             SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {toggleModifier = id; }; 
+            CLASS = VTApplicationPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAlternateButton = NSButton; 
+                mCommandButton = NSButton; 
+                mControlButton = NSButton; 
+                mEnableMotionSensor = NSButton; 
+                mMotionSensorSensitivity = NSSlider; 
+                mShiftButton = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
         }
     ); 
     IBVersion = 1; 
