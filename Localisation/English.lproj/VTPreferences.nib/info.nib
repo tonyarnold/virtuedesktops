@@ -6,6 +6,10 @@
 	<string>{{68, 0}, {305, 251}}</string>
 	<key>IBFramework Version</key>
 	<string>446.1</string>
+	<key>IBLockedObjects</key>
+	<array>
+		<integer>15</integer>
+	</array>
 	<key>IBOpenObjects</key>
 	<array>
 		<integer>6</integer>

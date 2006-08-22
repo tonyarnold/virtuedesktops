@@ -58,7 +58,7 @@
 		
 		while (currentBundlePath = [bundlePathIter nextObject]) {
 			if ([[currentBundlePath pathExtension] isEqualTo: @"plugin"] || [[currentBundlePath pathExtension] isEqualTo: @"scptd"]) {
-				[self loadPlugin: [searchPath stringByAppendingPathComponent: currentBundlePath]]; 
+				[self loadPlugin: [searchPath stringByAppendingPathComponent: currentBundlePath]];
 			}
 		}
 	}
@@ -147,9 +147,10 @@
 	if (plugin == nil) 
 		return; 
 	
-	[plugin load]; 
-
-	// Éand attach 
+	[plugin load];
+  [plugin setEnabled: YES];
+  
+	// â€¦and attach 
 	[[VTPluginCollection sharedInstance] attachPlugin: plugin]; 
 }
 

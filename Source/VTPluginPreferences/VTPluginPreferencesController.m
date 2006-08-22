@@ -15,11 +15,10 @@
 #import <Virtue/VTPluginCollection.h> 
 
 @implementation VTPluginsArrayController 
-
 - (NSArray*) arrangeObjects: (NSArray*) objects {
 	// we filter those objects to only include plugins that want to be shown 
-	NSEnumerator*			objectIter		= [objects objectEnumerator]; 
-	VTPluginInstance*		object			= nil; 
+	NSEnumerator*       objectIter      = [objects objectEnumerator]; 
+	VTPluginInstance*		object          = nil; 
 	NSMutableArray*			filteredObjects	= [[NSMutableArray alloc] init]; 
 	
 	while (object = [objectIter nextObject]) {
@@ -31,32 +30,26 @@
 	
 	return [filteredObjects autorelease]; 
 }
-
 @end 
 
 #pragma mark -
 @implementation VTPluginPreferencesController
-
 - (void) mainViewDidLoad {
 	[mPluginsController setContent: [[VTPluginCollection sharedInstance] plugins]]; 
 }
 
 #pragma mark -
 #pragma mark NSTableView delegate 
-
-- (void) tableViewSelectionDidChange: (NSNotification*) aNotification {
-}
-
+- (void) tableViewSelectionDidChange: (NSNotification*) aNotification { }
 @end
 
 #pragma mark -
 #pragma mark VTPluginInstance
-@interface VTPluginInstance (VTPreferencesDisplay) 
+@interface VTPluginInstance (VTPreferencesDisplay)
 - (NSData*) pluginDescriptionHelper; 
 @end
 
-@implementation VTPluginInstance (VTPreferencesDisplay) 
-
+@implementation VTPluginInstance (VTPreferencesDisplay)
 - (NSData*) pluginDescriptionHelper {
 	if ([self pluginDescriptionPath] != nil) {
 		NSDictionary*								attr;
@@ -75,5 +68,4 @@
 	
 	return [NSData dataWithData:[[self pluginDescription] dataUsingEncoding: NSUTF8StringEncoding]];
 }
-
-@end 
+@end

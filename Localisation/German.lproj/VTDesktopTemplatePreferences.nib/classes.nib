@@ -104,6 +104,17 @@
         {CLASS = NSFormatter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = NSNumberFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
         {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
             CLASS = PDFThumbnailView; 
             LANGUAGE = ObjC; 
             OUTLETS = {pdfView = PDFView; }; 
@@ -125,6 +136,25 @@
             CLASS = PDFView; 
             LANGUAGE = ObjC; 
             SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                applyPrototype = id; 
+                deletePrimitive = id; 
+                inspectPrimitive = id; 
+                replacePrototype = id; 
+            }; 
+            CLASS = VTDesktopTemplatePreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAddPrimitiveButton = ZNImagePopUpButton; 
+                mAddPrimitiveMenu = NSMenu; 
+                mDecorationsController = NSArrayController; 
+                mDecorationsTableView = NSTableView; 
+                mDeletePrimitiveButton = NSButton; 
+                mInspectPrimitiveButton = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
         }, 
         {CLASS = ZNImagePopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }
     ); 

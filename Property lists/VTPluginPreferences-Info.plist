@@ -21,11 +21,11 @@
 	<key>NSMainNibFile</key>
 	<string>VTPluginPreferences</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>Extensions</string>
+	<string>Plug-ins</string>
 	<key>NSPrincipalClass</key>
 	<string>VTPluginPreferencesController</string>
 	<key>VTPreferencePaneHelpText</key>
-	<string>Configure installed Extensions</string>
+	<string>Configure installed plug-ins</string>
 	<key>VTPreferencePaneRankingOrder</key>
 	<string>1</string>
 </dict>

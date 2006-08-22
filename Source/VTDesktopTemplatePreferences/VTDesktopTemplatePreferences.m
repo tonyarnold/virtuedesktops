@@ -277,7 +277,7 @@
 	// Plugins 
 	NSArray*				pluginDecorations	= [[VTPluginCollection sharedInstance] pluginsOfType: @protocol(VTPluginDecoration)]; 
 	NSEnumerator*			pluginIter			= [pluginDecorations objectEnumerator]; 
-	id<VTPluginDecoration>	plugin				= nil; 
+	id<VTPluginDecoration>	plugin		= nil; 
 	
 	while (plugin = [[pluginIter nextObject] instance]) {
 		inspector = [plugin decorationPrimitiveInspector]; 

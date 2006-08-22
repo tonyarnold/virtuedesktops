@@ -14,10 +14,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface VTPluginInstance : NSObject {
-	NSBundle*	mBundle; 
-	id			mPluginInstance; 
-	
-	BOOL		mEnabled; 
+	NSBundle*	mBundle;
+	id        mPluginInstance;
+	BOOL      mEnabled;
 }
 
 #pragma mark -
