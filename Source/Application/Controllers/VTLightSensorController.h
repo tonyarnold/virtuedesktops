@@ -17,6 +17,7 @@
   io_connect_t  dataPort;
   
   BOOL          enabled;
+  BOOL          canEnable;
   
   int           sensitivity;
   int           stable;
@@ -31,6 +32,8 @@
 - (void) startTimer;
 - (void) stopTimer;
 - (void) readFromSensor: (NSNotification*) notification;
+
+- (BOOL) hasALSHardware;
 
   // Getters and setters
 - (BOOL) isEnabled;

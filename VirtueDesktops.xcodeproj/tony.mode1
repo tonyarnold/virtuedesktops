@@ -204,48 +204,7 @@
 		</dict>
 	</array>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>EA36CF6F0A9C63790081417B</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>VTApplicationDelegate.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>EA36CF700A9C63790081417B</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>VTApplicationDelegate.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>EA36CF710A9C63790081417B</string>
-						<key>history</key>
-						<array>
-							<string>EA36CF6C0A9C63400081417B</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1148, 679}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>222 104 1148 720 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -306,7 +265,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>239</real>
+								<real>350</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -330,7 +289,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
+									<integer>28</integer>
 									<integer>16</integer>
 									<integer>2</integer>
 									<integer>1</integer>
@@ -338,7 +297,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 98}, {239, 638}}</string>
+							<string>{{0, 98}, {350, 638}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -350,11 +309,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {256, 656}}</string>
+						<string>{{0, 0}, {367, 656}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>239</real>
+							<real>350</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>202 159 956 697 0 0 1440 878 </string>
@@ -362,7 +321,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>256pt</string>
+					<string>367pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -392,7 +351,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {695, 0}}</string>
+								<string>{{0, 0}, {584, 0}}</string>
 								<key>RubberWindowFrame</key>
 								<string>202 159 956 697 0 0 1440 878 </string>
 							</dict>
@@ -412,7 +371,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 5}, {695, 651}}</string>
+								<string>{{0, 5}, {584, 651}}</string>
 								<key>RubberWindowFrame</key>
 								<string>202 159 956 697 0 0 1440 878 </string>
 							</dict>
@@ -423,7 +382,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>695pt</string>
+					<string>584pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -559,7 +518,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>178021241.02520099</real>
+	<real>178022119.72948501</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -574,11 +533,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>EA36CC890A9C4A770081417B</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Users/tony/Desktop/VirtueDesktops/VirtueDesktops.xcodeproj</string>
-		<string>EA36CF6F0A9C63790081417B</string>
 	</array>
 	<key>WindowString</key>
 	<string>202 159 956 697 0 0 1440 878 </string>
@@ -817,6 +775,8 @@
 							<string>110pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1016,7 +976,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

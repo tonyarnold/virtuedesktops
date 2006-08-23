@@ -58,27 +58,26 @@ enum {
     right_average = 0;
     sensor_speed = 0.1;
     dataPort = 0;
+    canEnable = NO;
       
    	kern_return_t kr;
     io_service_t serviceObject;
     
     // Look up a registered IOService object whose class is AppleLMUController  
     serviceObject = IOServiceGetMatchingService(kIOMasterPortDefault,  IOServiceMatching("AppleLMUController"));
-    if (!serviceObject) {  
-      fprintf(stderr, "failed to find ambient light sensor\n");
-    }  
-    
-    // Create a connection to the IOService object  
-    kr = IOServiceOpen(serviceObject, mach_task_self(), 0, &dataPort);
-    IOObjectRelease(serviceObject);
-    
-    if (kr != KERN_SUCCESS) {  
-      mach_error("IOServiceOpen:", kr);
-      exit(kr);
-    }  
-    
-    setbuf(stdout, NULL);
-		
+    if (serviceObject) {  
+      canEnable = YES;
+      // Create a connection to the IOService object  
+      kr = IOServiceOpen(serviceObject, mach_task_self(), 0, &dataPort);
+      IOObjectRelease(serviceObject);
+      
+      if (kr != KERN_SUCCESS) {  
+        mach_error("IOServiceOpen:", kr);
+        exit(kr);
+      }  
+      
+      setbuf(stdout, NULL);
+    }
     return self;
   }
   
@@ -101,14 +100,18 @@ enum {
   [coder encodeInt: sensitivity forKey: kVtCodingLightSensorSensitivity];
 }
 
+- (BOOL) hasALSHardware {
+  return canEnable;
+}
+
 #pragma mark Getters and setters
 
-- (BOOL) isEnabled { return enabled; }
+- (BOOL) isEnabled { return enabled && canEnable; }
 
 - (void) setIsEnabled: (BOOL) enableValue {
   enabled = enableValue;
   
-  if (enabled) {
+  if (enabled && canEnable) {
     [self startTimer];
   } else {
     [self stopTimer];

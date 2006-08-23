@@ -62,18 +62,18 @@
 	};
 	EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1189, 688}}";
-			sepNavSelRange = "{460, 11}";
-			sepNavVisRect = "{{0, 0}, {1189, 651}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1189, 736}}";
+			sepNavSelRange = "{457, 9}";
+			sepNavVisRect = "{{0, 27}, {1189, 651}}";
 			sepNavWindowFrame = "{{603, 148}, {1234, 709}}";
 		};
 	};
 	EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1189, 2976}}";
-			sepNavSelRange = "{160, 0}";
-			sepNavVisRect = "{{0, 0}, {1189, 651}}";
-			sepNavWindowFrame = "{{189, 120}, {1234, 709}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1189, 3024}}";
+			sepNavSelRange = "{2987, 9}";
+			sepNavVisRect = "{{0, 2373}, {1189, 651}}";
+			sepNavWindowFrame = "{{50, 123}, {1234, 709}}";
 		};
 	};
 	EA36CCA20A9C4E810081417B /* PBXTextBookmark */ = {
@@ -81,7 +81,7 @@
 		comments = "error: 'kVtCodingMotionSensorEnabled' undeclared (first use in this function)";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 91;
+		rLoc = 90;
 		rType = 1;
 	};
 	EA36CCA80A9C4E970081417B /* PBXTextBookmark */ = {
@@ -89,7 +89,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = sensor_speed;
 		rLen = 12;
-		rLoc = 3482;
+		rLoc = 3545;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 1281;
@@ -99,7 +99,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = _average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 873;
 		vrLoc = 0;
@@ -109,7 +109,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: average";
 		rLen = 0;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 0;
@@ -155,7 +155,7 @@
 		comments = "error: 'activation_speed' undeclared (first use in this function)";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 100;
+		rLoc = 99;
 		rType = 1;
 	};
 	EA36CCB60A9C4ED20081417B /* PBXTextBookmark */ = {
@@ -183,7 +183,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: average";
 		rLen = 0;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 0;
@@ -324,7 +324,7 @@
 		comments = "warning: passing argument 1 of 'printf' makes pointer from integer without a cast";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 180;
+		rLoc = 183;
 		rType = 1;
 	};
 	EA36CDC00A9C50DA0081417B /* PBXTextBookmark */ = {
@@ -362,7 +362,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 133";
 		rLen = 0;
-		rLoc = 4986;
+		rLoc = 5049;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 2237;
@@ -372,7 +372,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = dataPort;
 		rLen = 8;
-		rLoc = 3891;
+		rLoc = 3954;
 		rType = 0;
 		vrLen = 1306;
 		vrLoc = 1913;
@@ -382,7 +382,7 @@
 		comments = "error: parse error before 'kern_return_t'";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 61;
+		rLoc = 62;
 		rType = 1;
 	};
 	EA36CDDA0A9C52520081417B /* PBXTextBookmark */ = {
@@ -450,7 +450,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 45";
 		rLen = 0;
-		rLoc = 1797;
+		rLoc = 1817;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 738;
@@ -494,7 +494,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 45";
 		rLen = 0;
-		rLoc = 1797;
+		rLoc = 1817;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 738;
@@ -554,7 +554,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 132";
 		rLen = 0;
-		rLoc = 4076;
+		rLoc = 4139;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 2977;
@@ -594,7 +594,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 132";
 		rLen = 0;
-		rLoc = 4076;
+		rLoc = 4139;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 2977;
@@ -644,7 +644,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 144";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 2977;
@@ -684,7 +684,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 144";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 2977;
@@ -734,7 +734,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 132";
 		rLen = 0;
-		rLoc = 4076;
+		rLoc = 4139;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 2977;
@@ -804,7 +804,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 139";
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4349;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 3006;
@@ -854,7 +854,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 139";
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4349;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 3006;
@@ -864,7 +864,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 139";
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4349;
 		rType = 0;
 		vrLen = 1145;
 		vrLoc = 3006;
@@ -873,7 +873,7 @@
 		isa = PBXTextBookmark;
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		rLen = 0;
-		rLoc = 957;
+		rLoc = 1010;
 		rType = 0;
 	};
 	EA36CE2A0A9C53870081417B /* PBXTextBookmark */ = {
@@ -931,7 +931,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 144";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1213;
 		vrLoc = 2977;
@@ -941,7 +941,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 148";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1405;
 		vrLoc = 2977;
@@ -1021,7 +1021,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1031,7 +1031,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: sensorSensitivity";
 		rLen = 0;
-		rLoc = 3276;
+		rLoc = 3339;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 2109;
@@ -1081,7 +1081,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 146";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1319;
 		vrLoc = 3063;
@@ -1091,7 +1091,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1111,7 +1111,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 146";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1319;
 		vrLoc = 3063;
@@ -1121,7 +1121,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1161,7 +1161,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1201,7 +1201,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 106";
 		rLen = 0;
-		rLoc = 3297;
+		rLoc = 3360;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 2093;
@@ -1221,7 +1221,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1281,7 +1281,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 149";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 3110;
@@ -1301,7 +1301,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1341,7 +1341,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 140";
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4349;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 3110;
@@ -1361,7 +1361,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1371,7 +1371,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = NSLog;
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4349;
 		rType = 0;
 		vrLen = 1564;
 		vrLoc = 2802;
@@ -1381,7 +1381,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = "VTLightSensorController.h: setSensorSensitivity:";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1391,7 +1391,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1411,7 +1411,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 149";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 2802;
@@ -1421,7 +1421,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1471,7 +1471,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 149";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 2802;
@@ -1481,7 +1481,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1531,7 +1531,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 136";
 		rLen = 0;
-		rLoc = 4101;
+		rLoc = 4164;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 2802;
@@ -1541,7 +1541,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1591,7 +1591,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 134";
 		rLen = 0;
-		rLoc = 4076;
+		rLoc = 4139;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 2802;
@@ -1601,7 +1601,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1611,7 +1611,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1665,7 +1665,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 148";
 		rLen = 0;
-		rLoc = 4433;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 3203;
@@ -1685,7 +1685,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1735,7 +1735,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 143";
 		rLen = 438;
-		rLoc = 4429;
+		rLoc = 4492;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 3203;
@@ -1755,7 +1755,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1805,7 +1805,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = right;
 		rLen = 0;
-		rLoc = 4101;
+		rLoc = 4164;
 		rType = 0;
 		vrLen = 1416;
 		vrLoc = 2966;
@@ -1825,7 +1825,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1845,7 +1845,7 @@
 		comments = "error: 'average' undeclared (first use in this function)";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 158;
+		rLoc = 161;
 		rType = 1;
 	};
 	EA36CECF0A9C5DDE0081417B /* PBXTextBookmark */ = {
@@ -1853,7 +1853,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 143";
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4349;
 		rType = 0;
 		vrLen = 1366;
 		vrLoc = 3016;
@@ -1863,7 +1863,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = average;
 		rLen = 7;
-		rLoc = 578;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -1873,7 +1873,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = right_average;
 		rLen = 13;
-		rLoc = 587;
+		rLoc = 614;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 0;
@@ -1903,7 +1903,7 @@
 		comments = "error: 'average' undeclared (first use in this function)";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 168;
+		rLoc = 171;
 		rType = 1;
 	};
 	EA36CED80A9C5DEE0081417B /* PBXTextBookmark */ = {
@@ -1911,7 +1911,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 152";
 		rLen = 0;
-		rLoc = 4840;
+		rLoc = 4903;
 		rType = 0;
 		vrLen = 1366;
 		vrLoc = 3016;
@@ -1921,7 +1921,7 @@
 		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
 		name = right_average;
 		rLen = 13;
-		rLoc = 587;
+		rLoc = 614;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 0;
@@ -1981,7 +1981,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 141";
 		rLen = 0;
-		rLoc = 4202;
+		rLoc = 4265;
 		rType = 0;
 		vrLen = 942;
 		vrLoc = 3440;
@@ -2011,7 +2011,7 @@
 		comments = "error: 'sum' undeclared (first use in this function)";
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		rLen = 1;
-		rLoc = 146;
+		rLoc = 149;
 		rType = 1;
 	};
 	EA36CEEE0A9C5E6D0081417B /* PBXTextBookmark */ = {
@@ -2049,7 +2049,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 142";
 		rLen = 0;
-		rLoc = 4232;
+		rLoc = 4295;
 		rType = 0;
 		vrLen = 1532;
 		vrLoc = 2815;
@@ -2109,7 +2109,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 154";
 		rLen = 0;
-		rLoc = 4718;
+		rLoc = 4781;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 3101;
@@ -2169,7 +2169,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 159";
 		rLen = 0;
-		rLoc = 4718;
+		rLoc = 4781;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 3162;
@@ -2229,7 +2229,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 152";
 		rLen = 0;
-		rLoc = 4429;
+		rLoc = 4492;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 3162;
@@ -2289,7 +2289,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 152";
 		rLen = 0;
-		rLoc = 4429;
+		rLoc = 4492;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 3162;
@@ -2339,7 +2339,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = left_difference;
 		rLen = 15;
-		rLoc = 4303;
+		rLoc = 4366;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 3162;
@@ -2399,7 +2399,7 @@
 		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
 		name = "VTLightSensorController.m: 108";
 		rLen = 0;
-		rLoc = 3297;
+		rLoc = 3360;
 		rType = 0;
 		vrLen = 973;
 		vrLoc = 2162;
@@ -2672,6 +2672,213 @@
 		vrLen = 2154;
 		vrLoc = 7501;
 	};
+	EA36CF740A9C64930081417B /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+	};
+	EA36CF7D0A9C64C80081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 105";
+		rLen = 0;
+		rLoc = 2997;
+		rType = 0;
+		vrLen = 911;
+		vrLoc = 2498;
+	};
+	EA36CF800A9C64C80081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
+		rLen = 0;
+		rLoc = "-2147483596";
+		rType = 0;
+	};
+	EA36CF810A9C64C80081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
+		name = "- (BOOL) hasALSHardware";
+		rLen = 23;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 945;
+		vrLoc = 33;
+	};
+	EA36CF840A9C65460081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 66";
+		rLen = 0;
+		rLoc = 2107;
+		rType = 0;
+		vrLen = 885;
+		vrLoc = 1352;
+	};
+	EA36CF850A9C65460081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
+		name = "- (BOOL) hasALSHardware";
+		rLen = 23;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 945;
+		vrLoc = 33;
+	};
+	EA36CF880A9C65730081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 103";
+		rLen = 0;
+		rLoc = 2997;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 1827;
+	};
+	EA36CF890A9C65730081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
+		name = "- (BOOL) hasALSHardware";
+		rLen = 23;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 945;
+		vrLoc = 33;
+	};
+	EA36CF8D0A9C65980081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'serviceObject' undeclared (first use in this function)";
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		rLen = 0;
+		rLoc = 103;
+		rType = 1;
+	};
+	EA36CF8E0A9C65B00081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 72";
+		rLen = 334;
+		rLoc = 2105;
+		rType = 0;
+		vrLen = 941;
+		vrLoc = 1557;
+	};
+	EA36CF8F0A9C65B00081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */;
+		name = "- (BOOL) hasALSHardware";
+		rLen = 23;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 945;
+		vrLoc = 33;
+	};
+	EA36CF940A9C66090081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 104";
+		rLen = 0;
+		rLoc = 2997;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 1557;
+	};
+	EA36CF970A9C66400081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 37";
+		rLen = 0;
+		rLoc = 1309;
+		rType = 0;
+		vrLen = 1398;
+		vrLoc = 0;
+	};
+	EA36CF9A0A9C667D0081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */;
+		name = VTMotionSensorSensitivity;
+		rLen = 25;
+		rLoc = 2334;
+		rType = 0;
+		vrLen = 196;
+		vrLoc = 2217;
+	};
+	EA36CF9B0A9C667E0081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: kVtCodingLightSensorSensitivity";
+		rLen = 0;
+		rLoc = 1308;
+		rType = 0;
+		vrLen = 910;
+		vrLoc = 2506;
+	};
+	EA36CF9F0A9C669F0081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: parse error before 'kr'";
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		rLen = 1;
+		rLoc = 70;
+		rType = 1;
+	};
+	EA36CFA30A9C66AB0081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 69";
+		rLen = 0;
+		rLoc = 2127;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 1603;
+	};
+	EA36CFA40A9C66B00081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */;
+		name = VTMotionSensorSensitivity;
+		rLen = 25;
+		rLoc = 2334;
+		rType = 0;
+		vrLen = 196;
+		vrLoc = 2217;
+	};
+	EA36CFA50A9C66B00081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */;
+		name = VTMotionSensorSensitivity;
+		rLen = 25;
+		rLoc = 2334;
+		rType = 0;
+		vrLen = 196;
+		vrLoc = 2217;
+	};
+	EA36CFA60A9C66B00081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */;
+		name = VTMotionSensorSensitivity;
+		rLen = 25;
+		rLoc = 2334;
+		rType = 0;
+		vrLen = 196;
+		vrLoc = 2217;
+	};
+	EA36CFA70A9C66B00081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = "VTLightSensorController.m: 69";
+		rLen = 0;
+		rLoc = 2127;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 1603;
+	};
+	EA36CFAA0A9C66D60081417B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */;
+		name = canEnable;
+		rLen = 9;
+		rLoc = 2987;
+		rType = 0;
+		vrLen = 924;
+		vrLoc = 2467;
+	};
 	EA7A53EF0A86A5C5000D6B5E /* PNDesktop.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {954, 13200}}";
@@ -2706,9 +2913,9 @@
 	};
 	EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1189, 1408}}";
-			sepNavSelRange = "{2490, 20}";
-			sepNavVisRect = "{{0, 507}, {1189, 651}}";
+			sepNavIntBoundsRect = "{{0, 0}, {734, 1424}}";
+			sepNavSelRange = "{2334, 25}";
+			sepNavVisRect = "{{0, 960}, {734, 93}}";
 			sepNavWindowFrame = "{{15, 164}, {1234, 709}}";
 		};
 	};
@@ -2978,7 +3185,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					456,
+					345,
 					20,
 					48,
 					43,
@@ -3284,6 +3491,28 @@
 			EA36CF6B0A9C633B0081417B /* PBXTextBookmark */ = EA36CF6B0A9C633B0081417B /* PBXTextBookmark */;
 			EA36CF6C0A9C63400081417B /* PBXBookmark */ = EA36CF6C0A9C63400081417B /* PBXBookmark */;
 			EA36CF710A9C63790081417B /* PBXTextBookmark */ = EA36CF710A9C63790081417B /* PBXTextBookmark */;
+			EA36CF740A9C64930081417B /* PBXBookmark */ = EA36CF740A9C64930081417B /* PBXBookmark */;
+			EA36CF7D0A9C64C80081417B /* PBXTextBookmark */ = EA36CF7D0A9C64C80081417B /* PBXTextBookmark */;
+			EA36CF800A9C64C80081417B /* PBXTextBookmark */ = EA36CF800A9C64C80081417B /* PBXTextBookmark */;
+			EA36CF810A9C64C80081417B /* PBXTextBookmark */ = EA36CF810A9C64C80081417B /* PBXTextBookmark */;
+			EA36CF840A9C65460081417B /* PBXTextBookmark */ = EA36CF840A9C65460081417B /* PBXTextBookmark */;
+			EA36CF850A9C65460081417B /* PBXTextBookmark */ = EA36CF850A9C65460081417B /* PBXTextBookmark */;
+			EA36CF880A9C65730081417B /* PBXTextBookmark */ = EA36CF880A9C65730081417B /* PBXTextBookmark */;
+			EA36CF890A9C65730081417B /* PBXTextBookmark */ = EA36CF890A9C65730081417B /* PBXTextBookmark */;
+			EA36CF8D0A9C65980081417B /* PBXTextBookmark */ = EA36CF8D0A9C65980081417B /* PBXTextBookmark */;
+			EA36CF8E0A9C65B00081417B /* PBXTextBookmark */ = EA36CF8E0A9C65B00081417B /* PBXTextBookmark */;
+			EA36CF8F0A9C65B00081417B /* PBXTextBookmark */ = EA36CF8F0A9C65B00081417B /* PBXTextBookmark */;
+			EA36CF940A9C66090081417B /* PBXTextBookmark */ = EA36CF940A9C66090081417B /* PBXTextBookmark */;
+			EA36CF970A9C66400081417B /* PBXTextBookmark */ = EA36CF970A9C66400081417B /* PBXTextBookmark */;
+			EA36CF9A0A9C667D0081417B /* PBXTextBookmark */ = EA36CF9A0A9C667D0081417B /* PBXTextBookmark */;
+			EA36CF9B0A9C667E0081417B /* PBXTextBookmark */ = EA36CF9B0A9C667E0081417B /* PBXTextBookmark */;
+			EA36CF9F0A9C669F0081417B /* PBXTextBookmark */ = EA36CF9F0A9C669F0081417B /* PBXTextBookmark */;
+			EA36CFA30A9C66AB0081417B /* PBXTextBookmark */ = EA36CFA30A9C66AB0081417B /* PBXTextBookmark */;
+			EA36CFA40A9C66B00081417B /* PBXTextBookmark */ = EA36CFA40A9C66B00081417B /* PBXTextBookmark */;
+			EA36CFA50A9C66B00081417B /* PBXTextBookmark */ = EA36CFA50A9C66B00081417B /* PBXTextBookmark */;
+			EA36CFA60A9C66B00081417B /* PBXTextBookmark */ = EA36CFA60A9C66B00081417B /* PBXTextBookmark */;
+			EA36CFA70A9C66B00081417B /* PBXTextBookmark */ = EA36CFA70A9C66B00081417B /* PBXTextBookmark */;
+			EA36CFAA0A9C66D60081417B /* PBXTextBookmark */ = EA36CFAA0A9C66D60081417B /* PBXTextBookmark */;
 		};
 		sourceControlManager = EA1C8AC00A96B07200AEFBCD /* Source Control */;
 		userBuildSettings = {
