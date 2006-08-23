@@ -127,8 +127,10 @@ enum
 	// Inject dock extension code into the Dock process if it hasn't been already
 	if (dockCodeIsInjected != 1) {
 		if (dec_inject_code() != 0) {
-			// Show the attention panel
+#if defined(__i386__)      
+			// Show the attention panel on intel macs
 			[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
+#endif /* __i386__ */
 		}
 	}
 	
