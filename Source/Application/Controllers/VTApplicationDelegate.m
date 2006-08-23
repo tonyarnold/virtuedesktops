@@ -213,6 +213,8 @@ enum
 			 withKeyPath: [NSUserDefaultsController pathForKey: VTPreferencesUsesDecorationTemplateName] 
 	options: nil];
 	
+  
+  //Motion Sensor
 	[[NSUserDefaults standardUserDefaults] setBool: [[NSUserDefaults standardUserDefaults] boolForKey: VTMotionSensorEnabled] forKey: VTMotionSensorEnabled];
 	// Bind the motion sensitivity preferences to the motion controller object
 	[[VTMotionController sharedInstance] 
@@ -227,6 +229,15 @@ enum
 	toObject: [NSUserDefaultsController sharedUserDefaultsController] 
 			 withKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorSensitivity] 
 	options: nil];
+  
+  
+  // ALSensor
+  [[NSUserDefaults standardUserDefaults] setBool: [[NSUserDefaults standardUserDefaults] boolForKey: VTLightSensorEnabled] forKey: VTLightSensorEnabled];
+	// Bind the motion sensitivity preferences to the motion controller object
+	[[VTLightSensorController sharedInstance] bind: @"isEnabled" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTLightSensorEnabled] options: nil];
+	
+	[[NSUserDefaults standardUserDefaults] setFloat: [[NSUserDefaults standardUserDefaults] floatForKey: VTLightSensorSensitivity] forKey: VTLightSensorSensitivity];
+	[[VTLightSensorController sharedInstance] bind: @"sensorSensitivity" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTLightSensorSensitivity] options: nil];
 	
 	// Decode application preferences…
 	NSDictionary* applicationDict = [[NSUserDefaults standardUserDefaults] objectForKey: VTPreferencesApplicationsName];

@@ -19,6 +19,9 @@
 		EA0EE58E0A93ECCE009F3FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */; };
 		EA2852620A8A745D009DB65B /* Virtue.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852610A8A745D009DB65B /* Virtue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852670A8A75CC009DB65B /* VTInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */; };
+		EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */; };
+		EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36CCE90A9C4F6B0081417B /* IOKit.framework */; };
 		EA4039570A89CDDE00807BE2 /* imageWidgetAddPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */; };
 		EA4039580A89CDDE00807BE2 /* imageWidgetAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */; };
 		EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56540A86A70C000D6B5E /* iconDesktopFolder.icns */; };
@@ -745,6 +748,7 @@
 				EA7A697A0A870874000D6B5E /* VTInterface.framework in CopyFiles */,
 				EA7A697B0A870874000D6B5E /* Zen.framework in CopyFiles */,
 				EA7A69720A870848000D6B5E /* libUniMotion.dylib in CopyFiles */,
+				EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +774,9 @@
 /* Begin PBXFileReference section */
 		EA2852610A8A745D009DB65B /* Virtue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtue.h; sourceTree = "<group>"; };
 		EA2852670A8A75CC009DB65B /* VTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTInterface.h; sourceTree = "<group>"; };
+		EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTLightSensorController.h; sourceTree = "<group>"; };
+		EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTLightSensorController.m; sourceTree = "<group>"; };
+		EA36CCE90A9C4F6B0081417B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAddPressed.png; sourceTree = "<group>"; };
 		EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAdd.png; sourceTree = "<group>"; };
 		EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
@@ -1490,6 +1497,7 @@
 				EA7A65A40A870299000D6B5E /* WebKit.framework in Frameworks */,
 				EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */,
 				EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */,
+				EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,6 +1963,8 @@
 				EA7A559A0A86A6D0000D6B5E /* VTMotionController.m */,
 				EA7A559B0A86A6D0000D6B5E /* VTPluginController.h */,
 				EA7A559C0A86A6D0000D6B5E /* VTPluginController.m */,
+				EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */,
+				EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2468,6 +2478,7 @@
 		EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				EA36CCE90A9C4F6B0081417B /* IOKit.framework */,
 				EA94B9710A9456A000647E8E /* NetInfo.framework */,
 				EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */,
 				EA7A68860A870570000D6B5E /* CoreFoundation.framework */,
@@ -3509,6 +3520,7 @@
 				EA7A64890A8700E5000D6B5E /* VTWindowPager.m in Sources */,
 				EA7A648A0A8700E7000D6B5E /* VTTriggerViewController.m in Sources */,
 				EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */,
+				EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

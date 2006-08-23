@@ -14,6 +14,7 @@
 #import <Growl/Growl.h>
 #import <Cocoa/Cocoa.h>
 #import "VTMotionController.h"
+#import "VTLightSensorController.h"
 #import "VTNotificationBezel.h" 
 #import "VTPreferencesViewController.h"
 #import "VTOperationsViewController.h" 
@@ -52,6 +53,7 @@
 	VTDesktopViewController*		mDesktopInspector; 
 	VTApplicationViewController*	mApplicationInspector; 
 	VTMotionController*				mMotionController;
+  VTLightSensorController*  mLightSensorController;
 }
 
 - (NSString*) versionString;

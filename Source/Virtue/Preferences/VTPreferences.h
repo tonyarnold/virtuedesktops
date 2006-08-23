@@ -63,6 +63,11 @@
 #define VTMotionSensorSensitivity         @"VTMotionSensorSensitivity"
 
 #pragma mark -
+#pragma mark Ambient Light Sensor
+#define VTLightSensorEnabled             @"VTLightSensorEnabled"
+#define VTLightSensorSensitivity         @"VTLightSensorSensitivity"
+
+#pragma mark -
 #pragma mark Growl
 #define VTGrowlEnabled             @"VTGrowlEnabled"
 
