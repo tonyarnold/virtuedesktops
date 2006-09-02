@@ -14,6 +14,7 @@
 #import "VTPluginController.h"
 #import <Virtue/VTPluginInstance.h>
 #import <Virtue/VTPluginCollection.h> 
+#import <Virtue/VTFileSystemExtensions.h>
 #import <Zen/Zen.h> 
 #import <Zen/NSNumberBytes.h> 
 
@@ -73,51 +74,18 @@
 #pragma mark -
 @implementation VTPluginController(PluginLoading) 
 
-/* Change this path/code to point to your App's data store. */
-- (NSString *)applicationSupportFolder {
-	NSString *applicationSupportFolder = nil;
-	FSRef foundRef;
-	OSErr err = FSFindFolder(kUserDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
-	if (err != noErr) {
-		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
-		[[NSApplication sharedApplication] terminate:self];
-	} else {
-		unsigned char path[1024];
-		FSRefMakePath(&foundRef, path, sizeof(path));
-		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
-	}
-	return applicationSupportFolder;
-}
-
-- (NSString *)globalApplicationSupportFolder {
-	NSString *applicationSupportFolder = nil;
-	FSRef foundRef;
-	OSErr err = FSFindFolder(kLocalDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
-	if (err != noErr) {
-		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
-		[[NSApplication sharedApplication] terminate:self];
-	} else {
-		unsigned char path[1024];
-		FSRefMakePath(&foundRef, path, sizeof(path));
-		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
-	}
-	return applicationSupportFolder;
-}
-
 - (NSArray*) pluginSearchPaths {
 	return [NSArray arrayWithObjects:
 			[[NSBundle mainBundle] builtInPlugInsPath], 
-			[self applicationSupportFolder], 
-			[self globalApplicationSupportFolder],
+			[VTFileSystemExtensions applicationSupportFolder], 
+			[VTFileSystemExtensions globalApplicationSupportFolder],
 			nil
 		]; 
 }
 
 - (void) ensurePluginSearchPaths {
 	// we will only handle the user specific paths here
-	NSString* rootPath	= [self applicationSupportFolder]; 
+	NSString* rootPath	= [VTFileSystemExtensions applicationSupportFolder]; 
 	NSString* path			= [NSString stringWithFormat: @"%@", rootPath]; 
 	
 	// check if it exists and create it if necessary 
@@ -152,6 +120,23 @@
   
 	// …and attach 
 	[[VTPluginCollection sharedInstance] attachPlugin: plugin]; 
+}
+
+- (void) unloadPlugin: (NSString*) path {
+  // load the bundle 
+	NSBundle* bundle = [[NSBundle alloc] initWithPath: path];
+	
+	// create the wrapper instance 
+	VTPluginInstance* plugin = [[[VTPluginInstance alloc] initWithBundle: bundle] autorelease]; 
+	if (plugin == nil) 
+		return; 
+	
+	[plugin load];
+  [plugin setEnabled: NO];
+  
+	// …and detach 
+	[[VTPluginCollection sharedInstance] detachPlugin: plugin];
+  [plugin release];
 }
 
 @end 

@@ -19,6 +19,7 @@
 #import <Virtue/VTPreferences.h>
 #import <Virtue/VTNotifications.h>
 #import <Virtue/NSUserDefaultsControllerKeyFactory.h>
+#import <Virtue/VTFileSystemExtensions.h>
 #import <Zen/Zen.h>
 #import <Sparkle/Sparkle.h>
 #import <Growl/Growl.h>
@@ -50,18 +51,10 @@ enum
 #pragma mark -
 - (void) showDesktopInspectorForDesktop: (VTDesktop*) desktop;
 - (void) invalidateQuitDialog:(NSNotification *)aNotification;
-- (NSString*) preferencesFolder;
-- (NSString*) applicationSupportFolder;
 - (void) migrateOldPreferences;
 @end
 
 @implementation VTApplicationDelegate
-
-#pragma mark -
-#pragma mark Initialize
-
-+ (void) initialize { }
-
 
 #pragma mark -
 #pragma mark Lifetime
@@ -104,7 +97,7 @@ enum
 	[[NSUserDefaultsController sharedUserDefaultsController]
 	removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
 	
-	//[mPluginController unloadPlugins];
+	[mPluginController unloadPlugins];
 	ZEN_RELEASE(mPluginController);
 	
 	[self unregisterObservers];
@@ -1001,43 +994,12 @@ enum
 
 
 #pragma mark -
-
-- (NSString *)preferencesFolder {
-	NSString *preferencesFolder = nil;
-	FSRef foundRef;
-	OSErr err = FSFindFolder(kUserDomain, kPreferencesFolderType, kDontCreateFolder, &foundRef);
-	if (err != noErr) {
-		NSRunAlertPanel(@"Alert", @"Can't find preferences folder", @"Quit", nil, nil);
-		[[NSApplication sharedApplication] terminate:self];
-	} else {
-		unsigned char path[PATH_MAX];
-		FSRefMakePath(&foundRef, path, sizeof(path));
-		preferencesFolder = [NSString stringWithUTF8String:(char *)path];
-	}
-	return preferencesFolder;
-}
-
-- (NSString*) applicationSupportFolder {
-	NSString *applicationSupportFolder = nil;
-	FSRef foundRef;
-	OSErr err = FSFindFolder(kUserDomain, kApplicationSupportFolderType, kDontCreateFolder, &foundRef);
-	if (err != noErr) {
-		NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
-		[[NSApplication sharedApplication] terminate:self];
-	} else {
-		unsigned char path[PATH_MAX];
-		FSRefMakePath(&foundRef, path, sizeof(path));
-		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-	}
-	return applicationSupportFolder;
-}
-
 - (void) migrateOldPreferences
 {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	
-	NSString *oldPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"net.sourceforge.virtue.Virtue.plist"];
-	NSString *newPlist = [[self preferencesFolder] stringByAppendingPathComponent:@"info.virtuedesktops.VirtueDesktops.plist"];
+	NSString *oldPlist = [[VTFileSystemExtensions preferencesFolder] stringByAppendingPathComponent:@"net.sourceforge.virtue.Virtue.plist"];
+	NSString *newPlist = [[VTFileSystemExtensions preferencesFolder] stringByAppendingPathComponent:@"info.virtuedesktops.VirtueDesktops.plist"];
 	
 	if	(![fileManager fileExistsAtPath: newPlist] && [fileManager fileExistsAtPath: oldPlist])
 	{
@@ -1046,8 +1008,8 @@ enum
 		handler: nil];
 	}
 	
-	NSString *oldAppSupportFolder = [[self applicationSupportFolder] stringByAppendingPathComponent:@"Virtue"];
-	NSString *newAppSupportFolder = [[self applicationSupportFolder] stringByAppendingPathComponent:@"VirtueDesktops"];
+	NSString *oldAppSupportFolder = [[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent:@"Virtue"];
+	NSString *newAppSupportFolder = [[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent:@"VirtueDesktops"];
 	
 	if	(![fileManager fileExistsAtPath: newAppSupportFolder] && [fileManager fileExistsAtPath: oldAppSupportFolder])
 	{

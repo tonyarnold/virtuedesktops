@@ -31,6 +31,7 @@
 - (NSArray*) pluginsOfType: (Protocol*) type; 
 
 - (void) attachPlugin: (VTPluginInstance*) plugin; 
+- (void) detachPlugin: (VTPluginInstance*) plugin;
 
 #pragma mark -
 #pragma mark Actions 

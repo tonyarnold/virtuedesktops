@@ -70,10 +70,17 @@
 
 #pragma mark -
 - (void) attachPlugin: (VTPluginInstance*) plugin {
-	// fetch the identifier 
+	// Fetch our plugin's UID 
 	NSString* pluginIdentifier = [plugin pluginIdentifier];
 	// and add it overwriting any other plugin we know by that name 
 	[mLoadedPlugins setObject: plugin forKey: pluginIdentifier]; 
+}
+
+- (void) detachPlugin: (VTPluginInstance*) plugin {
+  // Fetch our plugin's UID
+  NSString* pluginIdentifier = [plugin pluginIdentifier];
+  // Now remove the plugin from out loaded plugin list
+  [mLoadedPlugins removeObjectForKey: pluginIdentifier];
 }
 
 #pragma mark -

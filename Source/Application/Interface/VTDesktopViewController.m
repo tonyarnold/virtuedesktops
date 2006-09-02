@@ -179,7 +179,7 @@
 									 toObject: mActiveDesktopLayout
 								withKeyPath: @"orderedDesktops" 
 										options: nil];
-
+  
 	// set up delete button binding 
 	[mDeleteDesktopButton bind: @"enabled" 
 										toObject: [VTDesktopController sharedInstance] 
@@ -228,7 +228,7 @@
 	if ([tv isEqual: mDecorationsTableView]) {
 		NSArray* typesArray = [NSArray arrayWithObjects: kVtMovedRowsDropType, nil];
 		[pboard declareTypes: typesArray owner: self];
-	
+    
 		// add rows array for local move
 		[pboard setPropertyList: rows forType: kVtMovedRowsDropType];
 		
@@ -247,10 +247,10 @@
 		if ([info draggingSource] == mDecorationsTableView) {
 			dragOp = NSDragOperationMove;
 		}
-	
+    
 		// we want to put the object at, not over, the current row (contrast NSTableViewDropOn) 
 		[tv setDropRow: row dropOperation: NSTableViewDropAbove];
-	
+    
 		return dragOp;
 	}
 	
@@ -267,18 +267,18 @@
 		if ([info draggingSource] == mDecorationsTableView) {
 			NSArray*	rows				= [[info draggingPasteboard] propertyListForType: kVtMovedRowsDropType];
 			int				fromIndex   = [[rows objectAtIndex: 0] intValue]; 
-		
+      
 			// if the index would not change, we do not do anything 
 			if (fromIndex == row)
 				return NO; 
-		
+      
 			[mDecorationsController setSelectionIndex: -1]; 
 			[[mDesktop decoration] moveObjectAtIndex: fromIndex toIndex: row]; 
 			[mDecorationsController setSelectionIndex: row]; 
-		
+      
 			return YES;
 		}
-	
+    
 		return NO;
 	}
 	
@@ -403,6 +403,8 @@
 	
 	while (plugin = [pluginIter nextObject]) {
 		id<VTPluginDecoration> pluginInstance = [plugin instance]; 
+    if ([plugin enabled] == NO)
+      continue;
 		
 		item = [[[NSMenuItem alloc] initWithTitle: [plugin pluginName] action: @selector(onAddPrimitive:) keyEquivalent: @""] autorelease]; 
 		[item setRepresentedObject: NSStringFromClass([pluginInstance decorationPrimitiveClass])]; 
@@ -435,10 +437,10 @@
 	
 	while (plugin = [[pluginIter nextObject] instance]) {
 		inspector = [plugin decorationPrimitiveInspector]; 
-		
+    
 		if (inspector == nil)
 			continue; 
-		
+    
 		[mPrimitiveInspectors setObject: inspector forKey: NSStringFromClass([plugin decorationPrimitiveClass])]; 
 	}	
 }

@@ -49,34 +49,33 @@
 			return; 
 			
 		// create the instance 
-		VTScriptPlugin* instance = [[[VTScriptPlugin alloc] initWithScript: fullScriptPath] autorelease];
-		if (instance == nil) 
+		VTScriptPlugin* pluginInstance = [[[VTScriptPlugin alloc] initWithScript: fullScriptPath] autorelease];
+		if (pluginInstance == nil) 
 			return; 
 			
-		ZEN_ASSIGN(mPluginInstance, instance); 
+		ZEN_ASSIGN(mPluginInstance, pluginInstance); 
 		return; 
 	}
 	if ([[[mBundle pluginInfoDictionary] objectForKey: VTPluginInfoType] isEqualToString: VTPluginInfoTypeClass]) {
 		// load the class 
-		Class klass = [mBundle principalClass]; 
-		if (klass == nil)
+		Class pluginClass = [mBundle principalClass]; 
+		if (pluginClass == nil)
 			return; 
 		
 		// instantiate 
-		id instance = [[[klass alloc] init] autorelease]; 
-		if (instance == nil)
+		id pluginInstance = [[[pluginClass alloc] init] autorelease]; 
+		if (pluginInstance == nil)
 			return; 
 		
-		ZEN_ASSIGN(mPluginInstance, instance); 
+		ZEN_ASSIGN(mPluginInstance, pluginInstance); 
 		return; 
 	}
 }
 
-
 #pragma mark -
 #pragma mark Attributes 
 - (void) setEnabled: (BOOL) flag {
-	mEnabled = flag; 
+	mEnabled = flag;
 }
 
 - (BOOL) enabled {
