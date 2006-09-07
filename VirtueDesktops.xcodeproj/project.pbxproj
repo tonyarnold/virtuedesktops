@@ -421,6 +421,8 @@
 		EA8F2ECB0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2ECA0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib */; };
 		EA8F2EE00A93FA660047C92C /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */; };
 		EA94B9730A9456A000647E8E /* NetInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA94B9710A9456A000647E8E /* NetInfo.framework */; };
+		EAB0FBB40AA9BA210005C11C /* VTFileSystemExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB0FBB20AA9BA210005C11C /* VTFileSystemExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAB0FBB50AA9BA210005C11C /* VTFileSystemExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB0FBB30AA9BA210005C11C /* VTFileSystemExtensions.m */; };
 		EAC060C80A8964F700020B92 /* VTLayoutPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC060C60A8964F700020B92 /* VTLayoutPreferences.nib */; };
 		EAC060F10A89679E00020B92 /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56640A86A70C000D6B5E /* imageCrossSmall.tif */; };
 		EAC060F20A89679E00020B92 /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56650A86A70C000D6B5E /* imageCrossSmallHover.tif */; };
@@ -1314,6 +1316,8 @@
 		EA8F2F1F0A93FAF20047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA8F2F200A93FAF40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA94B9710A9456A000647E8E /* NetInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetInfo.framework; path = /System/Library/PrivateFrameworks/NetInfo.framework; sourceTree = "<absolute>"; };
+		EAB0FBB20AA9BA210005C11C /* VTFileSystemExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTFileSystemExtensions.h; sourceTree = "<group>"; };
+		EAB0FBB30AA9BA210005C11C /* VTFileSystemExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTFileSystemExtensions.m; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1664,6 +1668,8 @@
 				EA7A540B0A86A5D8000D6B5E /* NSUserDefaultsColor.m */,
 				EA7A540C0A86A5D8000D6B5E /* NSUserDefaultsControllerKeyFactory.h */,
 				EA7A540D0A86A5D8000D6B5E /* NSUserDefaultsControllerKeyFactory.m */,
+				EAB0FBB20AA9BA210005C11C /* VTFileSystemExtensions.h */,
+				EAB0FBB30AA9BA210005C11C /* VTFileSystemExtensions.m */,
 			);
 			path = CocoaExtensions;
 			sourceTree = "<group>";
@@ -2645,6 +2651,7 @@
 				EA7A5A7D0A86B651000D6B5E /* VTTriggerGroup.h in Headers */,
 				EA7A5A7E0A86B651000D6B5E /* VTTriggerNotification.h in Headers */,
 				EA2852620A8A745D009DB65B /* Virtue.h in Headers */,
+				EAB0FBB40AA9BA210005C11C /* VTFileSystemExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3381,6 +3388,7 @@
 				EA7A5AAB0A86B68E000D6B5E /* VTTriggerDesktopNotification.m in Sources */,
 				EA7A5AAC0A86B68E000D6B5E /* VTTriggerGroup.m in Sources */,
 				EA7A5AAD0A86B68E000D6B5E /* VTTriggerNotification.m in Sources */,
+				EAB0FBB50AA9BA210005C11C /* VTFileSystemExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

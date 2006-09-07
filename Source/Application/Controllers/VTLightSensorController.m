@@ -50,7 +50,7 @@ enum {
   if (self = [super init]) {
     enabled = NO;
     sensitivity = 25;
-    stable = 7;
+    stable = 14;
     left_sum = 0;
     right_sum = 0;
     count = 0;
@@ -150,20 +150,20 @@ enum {
 		left_sum = left_sum + left;
     right_sum = right_sum + right;
     
-		// yya: update average
+		// Update averages
     if ( count % stable == 0 ) {
-			left_average = left_sum / stable;
+			left_average  = left_sum / stable;
       right_average = right_sum / stable;
-      left_sum = 0;
+      left_sum  = 0;
 			right_sum = 0;
 		}
     
     if (count > stable) {
       
-      int left_difference = left_average * (1-sensitivity/100);
-      int right_difference = right_average * (1-sensitivity/100);
+      int left_difference   = left_average  * (1-sensitivity/100);
+      int right_difference  = right_average * (1-sensitivity/100);
             
-      // yya: now stable. on touch, do something and reset count
+      // We're now stable. Whenever we fire, reset the count
       if ( left < left_difference) {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToPrevWorkspace" object: nil];
         count = -1;
