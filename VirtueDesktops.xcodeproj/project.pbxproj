@@ -19,6 +19,8 @@
 		EA0EE58E0A93ECCE009F3FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */; };
 		EA2852620A8A745D009DB65B /* Virtue.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852610A8A745D009DB65B /* Virtue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852670A8A75CC009DB65B /* VTInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA28A40B0AB16E0500EC10E5 /* VTFileSystemExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA28A40C0AB16E0500EC10E5 /* VTFileSystemExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */; };
 		EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */; };
 		EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */; };
 		EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36CCE90A9C4F6B0081417B /* IOKit.framework */; };
@@ -775,6 +777,8 @@
 /* Begin PBXFileReference section */
 		EA2852610A8A745D009DB65B /* Virtue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtue.h; sourceTree = "<group>"; };
 		EA2852670A8A75CC009DB65B /* VTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTInterface.h; sourceTree = "<group>"; };
+		EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTFileSystemExtensions.h; sourceTree = "<group>"; };
+		EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTFileSystemExtensions.m; sourceTree = "<group>"; };
 		EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTLightSensorController.h; sourceTree = "<group>"; };
 		EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTLightSensorController.m; sourceTree = "<group>"; };
 		EA36CCE90A9C4F6B0081417B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
@@ -1651,6 +1655,8 @@
 		EA7A53FD0A86A5D8000D6B5E /* CocoaExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */,
+				EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */,
 				EA7A53FE0A86A5D8000D6B5E /* NSBezierPathPlate.h */,
 				EA7A53FF0A86A5D8000D6B5E /* NSBezierPathPlate.m */,
 				EA7A54000A86A5D8000D6B5E /* NSBundlePlugin.h */,
@@ -2649,6 +2655,7 @@
 				EA7A5A7D0A86B651000D6B5E /* VTTriggerGroup.h in Headers */,
 				EA7A5A7E0A86B651000D6B5E /* VTTriggerNotification.h in Headers */,
 				EA2852620A8A745D009DB65B /* Virtue.h in Headers */,
+				EA28A40B0AB16E0500EC10E5 /* VTFileSystemExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3387,6 +3394,7 @@
 				EA7A5AAB0A86B68E000D6B5E /* VTTriggerDesktopNotification.m in Sources */,
 				EA7A5AAC0A86B68E000D6B5E /* VTTriggerGroup.m in Sources */,
 				EA7A5AAD0A86B68E000D6B5E /* VTTriggerNotification.m in Sources */,
+				EA28A40C0AB16E0500EC10E5 /* VTFileSystemExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

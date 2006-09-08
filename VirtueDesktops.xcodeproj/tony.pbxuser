@@ -1,42 +1,5 @@
 // !$*UTF8*$!
 {
-	EA289E050AB15D4D00EC10E5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7A55A20A86A6D0000D6B5E /* VTMatrixDesktopLayout.m */;
-		rLen = 4;
-		rLoc = 6441;
-		rType = 0;
-	};
-	EA289E090AB15D6100EC10E5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7A55A20A86A6D0000D6B5E /* VTMatrixDesktopLayout.m */;
-		name = "VTMatrixDesktopLayout.m: 62";
-		rLen = 0;
-		rLoc = 1733;
-		rType = 0;
-		vrLen = 856;
-		vrLoc = 1155;
-	};
-	EA289E150AB15D9C00EC10E5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7A55A20A86A6D0000D6B5E /* VTMatrixDesktopLayout.m */;
-		name = "VTMatrixDesktopLayout.m: 225";
-		rLen = 4;
-		rLoc = 6441;
-		rType = 0;
-		vrLen = 286;
-		vrLoc = 12010;
-	};
-	EA289E170AB15D9D00EC10E5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7A55A20A86A6D0000D6B5E /* VTMatrixDesktopLayout.m */;
-		name = "VTMatrixDesktopLayout.m: 225";
-		rLen = 4;
-		rLoc = 6441;
-		rType = 0;
-		vrLen = 286;
-		vrLoc = 12010;
-	};
 	EA575B760A9DE57C0020F318 /* VirtueDesktops */ = {
 		isa = PBXExecutable;
 		activeArgIndex = 2147483647;
@@ -251,7 +214,7 @@
 		activeExecutable = EA575B760A9DE57C0020F318 /* VirtueDesktops */;
 		activeTarget = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
 		addToTargets = (
-			EA7A58150A86AD7B000D6B5E /* DockExtension */,
+			EA7A5A250A86B5E6000D6B5E /* Virtue */,
 		);
 		breakpoints = (
 		);
@@ -320,14 +283,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 179395709;
-			PBXWorkspaceStateSaveDate = 179395709;
-		};
-		perUserProjectItems = {
-			EA289E050AB15D4D00EC10E5 /* PBXTextBookmark */ = EA289E050AB15D4D00EC10E5 /* PBXTextBookmark */;
-			EA289E090AB15D6100EC10E5 /* PBXTextBookmark */ = EA289E090AB15D6100EC10E5 /* PBXTextBookmark */;
-			EA289E150AB15D9C00EC10E5 /* PBXTextBookmark */ = EA289E150AB15D9C00EC10E5 /* PBXTextBookmark */;
-			EA289E170AB15D9D00EC10E5 /* PBXTextBookmark */ = EA289E170AB15D9D00EC10E5 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 179406937;
+			PBXWorkspaceStateSaveDate = 179406937;
 		};
 		sourceControlManager = EA575BB20A9DE59C0020F318 /* Source Control */;
 		userBuildSettings = {
