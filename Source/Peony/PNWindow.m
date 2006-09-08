@@ -130,16 +130,16 @@
 	CGSConnection oConnection = _CGSDefaultConnection();
 	OSStatus		iResult;
 
-	CGSValue		oKey = CGSCreateCStringNoCopy([key cString]);
+	CGSValue		oKey = (int)CFStringCreateCopy(kCFAllocatorDefault, (CFStringRef)key);
 	CGSValue		oValue;
 
 	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue);
+	
 	if (iResult)
 		return nil;
 
-	char* acValueString = CGSCStringValue(oValue);
-	if (acValueString)
-		return [NSString stringWithUTF8String: acValueString];
+	if (oValue)
+		return (NSString*)oValue;
 
 	return nil;
 }
@@ -149,7 +149,7 @@
 
 - (int) desktopId {
 	// fetch the desktop this window resides on
-	CGSConnection		oConnection = _CGSDefaultConnection();
+	CGSConnection	oConnection = _CGSDefaultConnection();
 	int				iDesktopId	= -1;
 
 	OSStatus oResult = CGSGetWindowWorkspace(oConnection, mNativeWindow, &iDesktopId);
@@ -203,14 +203,15 @@
 
 - (NSString*) name {
 	static CGSValue kCGSWindowTitle = (int)NULL;
-
+	
 	// we have to create the private constant
 	if (kCGSWindowTitle == (int)NULL)
-		kCGSWindowTitle = CGSCreateCStringNoCopy("kCGSWindowTitle");
-
+		kCGSWindowTitle = (int)CFSTR("kCGSWindowTitle");
+	
 	CGSValue oWindowTitle = (int)NULL;
 	OSStatus oResult;
 
+	
 	// get connection
 	CGSConnection oConnection = _CGSDefaultConnection();
 
@@ -219,11 +220,10 @@
 	if (oResult) {
 		return nil;
 	}
+	
+	if (oWindowTitle)
+		return (NSString*)oWindowTitle;
 
-	char* acStrVal = CGSCStringValue(oWindowTitle);
-	if (acStrVal) {
-		return [NSString stringWithUTF8String: acStrVal];
-	}
 
 	return nil;
 }

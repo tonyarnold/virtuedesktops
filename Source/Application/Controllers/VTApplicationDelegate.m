@@ -116,14 +116,21 @@ enum
 	int dockCodeMajorVersion	= 0;
 	int dockCodeMinorVersion	= 0;
 	dec_info(&dockCodeIsInjected,&dockCodeMajorVersion,&dockCodeMinorVersion);
+	[[NSUserDefaults standardUserDefaults] setBool: NO forKey: @"DockExtensionLoaded"];
 	
 	// Inject dock extension code into the Dock process if it hasn't been already
 	if (dockCodeIsInjected != 1) {
 		if (dec_inject_code() != 0) {
+			if ([[NSUserDefaults standardUserDefaults] boolForKey: @"PermissionsFixed"] == NO) {
 #if defined(__i386__)      
-			// Show the attention panel on intel macs
-			[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
+				// Show the attention panel on intel macs
+				[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
 #endif /* __i386__ */
+			} else {
+				[FixFailedPanel makeKeyAndOrderFront: self];
+			}
+		} else {
+			[[NSUserDefaults standardUserDefaults] setBool: YES forKey: @"DockExtensionLoaded"];
 		}
 	}
 	
@@ -386,6 +393,8 @@ enum
 		NSLog(@"Installation of the VirtueDesktops dock extension has failed. Some of the VirtueDesktops features will not work as expected.");
 	}
 	
+	
+	[[NSUserDefaults standardUserDefaults] setBool: YES	forKey: @"PermissionsFixed"];
 	// We override asking us whether we want to quit, because the user really doesn't have any choice.
 	mConfirmQuitOverridden = YES;
 	

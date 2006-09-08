@@ -58,9 +58,9 @@
 	
 	if (self = [super initWithName: name]) {
 		// attributes 
-		mRows				= 2; 
-		mColumns		= 2; 
-		mWraps			= YES;
+		mRows		= 1; 
+		mColumns	= 3; 
+		mWraps		= YES;
 		mJumpsGaps	= YES;
 		mCompacted	= NO; 
 		mContinous	= NO; 

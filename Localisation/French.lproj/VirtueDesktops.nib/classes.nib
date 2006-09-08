@@ -150,6 +150,7 @@
             CLASS = VTApplicationDelegate; 
             LANGUAGE = ObjC; 
             OUTLETS = {
+                FixFailedPanel = NSWindow; 
                 mAttentionPermissionsWindow = NSWindow; 
                 mStatusItemActiveDesktopItem = NSMenu; 
                 mStatusItemMenu = NSMenu; 

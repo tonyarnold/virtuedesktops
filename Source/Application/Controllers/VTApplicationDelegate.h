@@ -33,6 +33,7 @@
 	IBOutlet NSMenuItem*		mStatusItemRemoveActiveDesktopItem; 
 	IBOutlet NSTextField*		mVersionTextField;
 	IBOutlet NSWindow*			mAttentionPermissionsWindow;
+	IBOutlet NSWindow*			FixFailedPanel;
 	
 	// Attributes 
 	BOOL						mStartedUp; 

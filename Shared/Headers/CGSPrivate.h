@@ -176,8 +176,8 @@ extern OSStatus CGSMoveWorkspaceWindowList(const CGSConnection connection, CGSWi
 
 // extern OSStatus CGSConnectionGetPID(const CGSConnection cid, pid_t *pid, CGSConnection b);
 
-extern OSStatus CGSGetWindowProperty(const CGSConnection cid, CGSWindow wid, CGSValue key,CGSValue *outValue);
-extern OSStatus CGSSetWindowProperty(const CGSConnection cid, CGSWindow wid, CGSValue key,CGSValue *outValue);
+extern OSStatus CGSGetWindowProperty(const CGSConnection cid, CGSWindow wid, CGSValue key, CGSValue *outValue);
+extern OSStatus CGSSetWindowProperty(const CGSConnection cid, CGSWindow wid, CGSValue key, CGSValue *outValue);
 
 //extern OSStatus CGSWindowAddRectToDirtyShape(const CGSConnection cid, const CGSWindow wid, CGRect *rect);
 extern OSStatus CGSUncoverWindow(const CGSConnection cid, const CGSWindow wid);
@@ -186,9 +186,12 @@ extern OSStatus CGSFlushWindow(const CGSConnection cid, const CGSWindow wid, int
 extern OSStatus CGSGetWindowOwner(const CGSConnection cid, const CGSWindow wid, CGSConnection *ownerCid);
 extern OSStatus CGSConnectionGetPID(const CGSConnection cid, pid_t *pid, const CGSConnection ownerCid);
 
-// Values
-extern CGSValue CGSCreateCStringNoCopy(const char *str);
-extern CGSValue CGSCreateCString(const char* str);
-extern char* CGSCStringValue(CGSValue string);
+// Values 
+
 extern int CGSIntegerValue(CGSValue intVal);
 extern void *CGSReleaseGenericObj(void*);
+
+// Deprecated
+// extern CGSValue CGSCreateCStringNoCopy(const char *str);
+// extern CGSValue CGSCreateCString(const char* str);
+// extern char* CGSCStringValue(CGSValue string);

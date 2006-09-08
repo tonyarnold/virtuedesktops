@@ -228,12 +228,12 @@ void DEHandlePropertyEvent(DecEvent* event)
 	char*			value	= dec_event_property_value_get(eventProp); 
 	DecPropertyType	type	= dec_event_property_type_get(eventProp); 
 	
-	//CGSValue keyObject		= CGSCreateCStringNoCopy(key);
-	CGSValue keyObject		= (int)key;
+	
+	CGSValue keyObject		= (int)CFStringCreateCopy(kCFAllocatorDefault, (CFStringRef)key);
 	CGSValue valueObject	= (int)NULL; 
 	if (value)
 		valueObject = (int)value;
-		//valueObject = CGSCreateCStringNoCopy(value); 
+		valueObject = (int)CFStringCreateCopy(kCFAllocatorDefault, (CFStringRef)value);
 	
 	CGSConnection iConnection = _CGSDefaultConnection(); 
 	OSErr iError = noErr; 
