@@ -77,6 +77,7 @@
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 
+- (BOOL) checkExecutablePermissions;
 - (IBAction) fixExecutablePermissions: (id) sender;
 - (void) moveFrontApplicationInDirection: (VTDirection) direction;
 

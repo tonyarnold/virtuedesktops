@@ -110,25 +110,24 @@ enum
 - (void) bootstrap {
 	// This registers us to recieve NSWorkspace notifications, even though we are have LSUIElement enabled
 	[NSApplication sharedApplication];
+
+#if defined(__i386__) 
+	if ([self checkExecutablePermissions] == NO) {
+		[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
+	}
+#endif /* __i386__ */
 	
 	// Retrieve the current version of the DockExtension, and whether it is currently loaded into the Dock process
 	int dockCodeIsInjected		= 0;
 	int dockCodeMajorVersion	= 0;
 	int dockCodeMinorVersion	= 0;
 	dec_info(&dockCodeIsInjected,&dockCodeMajorVersion,&dockCodeMinorVersion);
-	[[NSUserDefaults standardUserDefaults] setBool: NO forKey: @"DockExtensionLoaded"];
 	
 	// Inject dock extension code into the Dock process if it hasn't been already
 	if (dockCodeIsInjected != 1) {
 		if (dec_inject_code() != 0) {
-			if ([[NSUserDefaults standardUserDefaults] boolForKey: @"PermissionsFixed"] == NO) {
-#if defined(__i386__)      
-				// Show the attention panel on intel macs
-				[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
-#endif /* __i386__ */
-			} else {
-				[FixFailedPanel makeKeyAndOrderFront: self];
-			}
+			[FixFailedPanel makeKeyAndOrderFront: self];
+			[[NSUserDefaults standardUserDefaults] setBool: NO forKey: @"DockExtensionLoaded"];
 		} else {
 			[[NSUserDefaults standardUserDefaults] setBool: YES forKey: @"DockExtensionLoaded"];
 		}
@@ -142,9 +141,7 @@ enum
 	[VTPreferences registerDefaults];
 	
 	// and ensure we have our version information in there
-	[[NSUserDefaults standardUserDefaults] 
-	setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
-	forKey:@"VTPreferencesVirtueVersionName"];
+	[[NSUserDefaults standardUserDefaults] setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"VTPreferencesVirtueVersionName"];
 	
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	
@@ -381,6 +378,13 @@ enum
 	int index = [[[VTDesktopController sharedInstance] desktops] indexOfObject: [[VTDesktopController sharedInstance] activeDesktop]];
 	// and get rid of it
 	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: index];
+}
+
+- (BOOL) checkExecutablePermissions {
+	NSDictionary	*applicationAttributes = [[NSFileManager defaultManager] fileAttributesAtPath:[[NSBundle mainBundle] executablePath] traverseLink: YES];
+	
+	// We expect 2755 as octal (1517 as decimal, -rwxr-sr-x as extended notation)
+	return ([applicationAttributes filePosixPermissions] == 1517 && [[applicationAttributes fileGroupOwnerAccountName] isEqualToString: @"procmod"]);
 }
 
 - (IBAction) fixExecutablePermissions: (id) sender {
