@@ -14,7 +14,6 @@
 #import <Virtue/VTDesktopBackgroundHelper.h>
 #import "VTDesktopViewController.h"
 #import "VTColorLabelButtonCell.h" 
-#import "VTApplicationRunningCountTransformer.h" 
 #import <Virtue/VTDecorationPrimitiveText.h>
 #import "VTDecorationPrimitiveTextInspector.h" 
 #import <Virtue/VTDecorationPrimitiveTint.h> 
@@ -35,7 +34,6 @@
 
 @interface VTDesktopViewController (Selection) 
 - (VTDesktop*) selectedDesktop; 
-- (void) setSelectedDesktop: (VTDesktop*) desktop; 
 - (void) showDesktop: (VTDesktop*) desktop; 
 @end 
 
@@ -49,13 +47,6 @@
 
 #pragma mark -
 @implementation VTDesktopViewController
-
-+ (void) initialize {
-	NSValueTransformer* transformer = nil; 
-	
-	transformer = [[[VTApplicationRunningCountTransformer alloc] init] autorelease]; 
-	[NSValueTransformer setValueTransformer: transformer forName: @"VTApplicationRunningCount"]; 
-}
 
 #pragma mark -
 #pragma mark Lifetime 
@@ -110,7 +101,7 @@
 }
 
 - (IBAction) inspectPrimitive: (id) sender {
-	VTDecorationPrimitive* selectedPrimitive = [self selectedPrimitive]; 
+	VTDecorationPrimitive* selectedPrimitive = [self selectedPrimitive];
 	
 	// if there is no primitive, return 
 	if (selectedPrimitive == nil)
@@ -135,8 +126,14 @@
 }
 
 - (void) showWindowForDesktop: (VTDesktop*) desktop {
-	[self setSelectedDesktop: desktop]; 
 	[super showWindow: self]; 
+}
+
+#pragma mark -
+#pragma mark Accessors 
+
+- (VTMatrixDesktopLayout*) activeDesktopLayout {
+  return mActiveDesktopLayout;
 }
 
 #pragma mark -
@@ -173,24 +170,6 @@
 	
 	// create inspector 
 	mInspectorController = [[VTDecorationPrimitiveViewController alloc] init]; 
-		
-	// set up the desktop collection controller 
-	[mDesktopsController bind: @"contentArray" 
-									 toObject: mActiveDesktopLayout
-								withKeyPath: @"orderedDesktops" 
-										options: nil];
-  
-	// set up delete button binding 
-	[mDeleteDesktopButton bind: @"enabled" 
-										toObject: [VTDesktopController sharedInstance] 
-								 withKeyPath: @"canDelete" 
-										 options: nil]; 
-	
-	//Setup add button binding
-	[mAddDesktopButton bind: @"enabled"
-								 toObject: [VTDesktopController sharedInstance]
-							withKeyPath: @"canAdd"
-									options: nil];
 	
 	// and select a desktop 
 	[self showDesktop: [self selectedDesktop]]; 
@@ -202,12 +181,8 @@
 
 - (void) windowWillClose: (NSNotification*) notification {	
 	// remove bindings 
-	[mImageView 					unbind: @"imagePath"];
 	[mLabelButton 				unbind: @"selectedColorLabel"]; 
-  [mDesktop             unbind: @"showsBackground"];
-	[mDesktop 						unbind: @"desktopBackground"];
 	[mDesktop 						unbind: @"colorLabel"]; 
-	[mDeleteDesktopButton unbind: @"enabled"]; 
 	
 	// and write out preferences to be sure 
 	[[NSUserDefaults standardUserDefaults] synchronize]; 
@@ -217,11 +192,6 @@
 
 #pragma mark -
 #pragma mark NSTableView delegate 
-- (void) tableViewSelectionDidChange: (NSNotification*) notification {
-	// Desktops table view
-	if ([[notification object] isEqual: mDesktopsTableView]) 
-		[self showDesktop: [self selectedDesktop]];
-}
 
 - (BOOL) tableView: (NSTableView*) tv writeRows: (NSArray*) rows toPasteboard: (NSPasteboard*) pboard {
 	// Decorations table view
@@ -306,31 +276,16 @@
 	return [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] objectAtIndex: selectedIndex]; 
 }
 
-- (void) setSelectedDesktop: (VTDesktop*) desktop {
-	// get index of passed desktop 
-	unsigned int index = [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] indexOfObject: desktop]; 
-	// and select it in the table view 
-	[mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index] 
-									byExtendingSelection: NO];
-}
-
 - (void) showDesktop: (VTDesktop*) desktop {
 	// remove bindings 
-	[mImageView		unbind: @"imagePath"];
 	[mLabelButton unbind: @"selectedColorLabel"]; 
-	[mDesktop			unbind: @"desktopBackground"];
 	[mDesktop			unbind: @"colorLabel"]; 
 	
 	// attributes 
 	ZEN_ASSIGN(mDesktop, desktop);
 		
-  [mImageView	setImagePath: [mDesktop desktopBackground]];
 	[mLabelButton selectColorLabel: [mDesktop colorLabel]];
-  
-	// configure image view binding 
-	[mDesktop   bind: @"desktopBackground"  toObject: mImageView  withKeyPath: @"imagePath"         options: nil];
-	[mImageView bind: @"imagePath"          toObject: mDesktop    withKeyPath: @"desktopBackground" options: nil]; 
-	
+  	
 	// configure color label binding 
 	[mDesktop     bind: @"colorLabel"         toObject: mLabelButton  withKeyPath: @"selectedColorLabel"  options: nil];
 	[mLabelButton	bind: @"selectedColorLabel" toObject: mDesktop      withKeyPath: @"colorLabel"          options: nil]; 

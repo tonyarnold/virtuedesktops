@@ -134,13 +134,11 @@
 	CGSValue		oValue;
 
 	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue);
-	
-	if (iResult)
-		return nil;
-
-	if (oValue)
-		return (NSString*)oValue;
-
+  
+	if (iResult == nil && oValue) {
+    return (NSString*)oValue;
+  }
+  
 	return nil;
 }
 

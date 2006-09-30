@@ -99,12 +99,6 @@
 	return nil; 
 }
 
-- (void) outlineView: (NSOutlineView*) outlineView setObjectValue: (id) object forTableColumn: (NSTableColumn*) tableColumn byItem: (id) item {
-}
-
-- (void) outlineView: (NSOutlineView*) outlineView willDisplayCell: (id) cell forTableColumn: (NSTableColumn*) tableColumn item: (id) item {
-}
-
 - (void) outlineViewSelectionDidChange: (NSNotification*) notification {
 	id selectedItem = [mAvailableTriggersView itemAtRow: [mAvailableTriggersView selectedRow]]; 
 	[mSelectAndCloseButton setEnabled: [selectedItem isKindOfClass: [VTTriggerNotification class]]];
@@ -136,16 +130,14 @@
 #pragma mark NSPreferencePane 
 
 - (void) mainViewDidLoad {
+	VTHotkeyCell* hotkeyCell = [[[VTHotkeyCell alloc] init] autorelease]; 
+	[hotkeyCell setAlignment: NSLeftTextAlignment]; 
+	
 	// create field editor 
 	mFieldEditor = [[VTHotkeyTextView alloc] initWithFrame: NSMakeRect(0, 0, 10, 10)]; 
 	[mFieldEditor setFieldEditor: YES]; 
 	[mFieldEditor setTextContainerInset: NSMakeSize(0, 0)]; 
-	
-	// and set the data cell 
-	VTHotkeyCell* hotkeyCell = [[[VTHotkeyCell alloc] init] autorelease]; 
-	[hotkeyCell setAlignment: NSCenterTextAlignment]; 
-	
-	[[mTriggerTableView tableColumnWithIdentifier: @"trigger"] setDataCell: hotkeyCell]; 
+
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onEditEnded) name: NSTextDidEndEditingNotification object: mFieldEditor];
 	
 	// prepare controllers 
@@ -189,21 +181,21 @@
 	
 	// and start observing desktop collection changes 
 	[[VTDesktopController sharedInstance] 
-	addObserver: self 
-	forKeyPath: @"desktops" 
-	options: NSKeyValueObservingOptionNew 
-	context: NULL]; 	
+		addObserver: self 
+		forKeyPath: @"desktops" 
+		options: NSKeyValueObservingOptionNew 
+		context: NULL]; 	
 }
 
 #pragma mark -
 - (void) onEditEnded {
 	VTHotkeyTrigger*		trigger				= [mFieldEditor hotkey];
-	VTHotkeyTrigger*		existingTrigger		= nil; 
+	VTHotkeyTrigger*		existingTrigger		= nil;
 	
 	if ([trigger keyCode] < 0)
 		return; 
 	
-	int selectionIndex = [mAssignedTriggerController selectionIndex]; 
+	int selectionIndex = [mAssignedTriggerController selectionIndex];
 	if (selectionIndex == NSNotFound) 
 		return; 
 	

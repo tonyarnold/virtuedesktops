@@ -30,15 +30,15 @@
 	// Outlets 
 	IBOutlet NSMenu*			mStatusItemMenu; 
 	IBOutlet NSMenu*			mStatusItemActiveDesktopItem; 
-	IBOutlet NSMenuItem*		mStatusItemRemoveActiveDesktopItem; 
-	IBOutlet NSTextField*		mVersionTextField;
-	IBOutlet NSWindow*			mAttentionPermissionsWindow;
-	IBOutlet NSWindow*			FixFailedPanel;
+	IBOutlet NSMenuItem*	mStatusItemRemoveActiveDesktopItem; 
+	IBOutlet NSTextField*	mVersionTextField;
+	IBOutlet NSWindow*		mAttentionPermissionsWindow;
+	IBOutlet NSWindow*		FixFailedPanel;
 	
 	// Attributes 
 	BOOL						mStartedUp; 
 	BOOL						mConfirmQuitOverridden;
-	NSStatusItem*				mStatusItem; 
+	NSStatusItem*		mStatusItem; 
 	BOOL						mStatusItemMenuDesktopNeedsUpdate; 
 	BOOL						mStatusItemMenuActiveDesktopNeedsUpdate;
 	BOOL						mUpdatedDock;

@@ -34,6 +34,10 @@
 
 
 - (void) keyDown: (NSEvent*) theEvent {
+	NSLog(@"mHotkey: %@", mHotkey);
+	NSLog(@"[theEvent keyCode]: %i", [theEvent keyCode]);
+	NSLog(@"[theEvent modifierFlags]: %i", [theEvent modifierFlags]);
+	
 	if (mHotkey == nil) {
 		[super keyDown: theEvent];
 		return;
@@ -63,6 +67,7 @@
 
 #pragma mark -
 - (void) setHotkey: (VTHotkeyTrigger*) hotkey {
+	NSLog(@"Assigning hotkey: %@", [hotkey description]);
 	ZEN_ASSIGN(mHotkey, hotkey); 
 }
 

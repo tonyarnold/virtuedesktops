@@ -14,7 +14,6 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface VTHotkeyCell : NSTextFieldCell {
-}
+@interface VTHotkeyCell : NSTextFieldCell { }
 
 @end

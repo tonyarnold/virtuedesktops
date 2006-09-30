@@ -17,10 +17,10 @@
 #import <Virtue/VTMouseTrigger.h> 
 
 @implementation VTHotkeyCell
-
-- (void) setObjectValue: (id) object {
+- (void) setObjectValue: (id) object {	
+	
 	if ([object isKindOfClass: [VTHotkeyTrigger class]]) {
-		[self setFocusRingType: NSFocusRingTypeNone]; 
+		[self setFocusRingType: NSFocusRingTypeNone];
 		
 		if ((object == nil) || ([(VTHotkeyTrigger*)object keyCode] < 0)) {
 			NSDictionary* textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -37,11 +37,9 @@
 				[NSColor blackColor], NSForegroundColorAttributeName, 
 				nil];
 			
-			NSAttributedString* attributedObject = [[[NSAttributedString alloc] initWithString: [object stringValue] attributes: textAttributes] autorelease];
-			[super setObjectValue: attributedObject]; 
-			
+			NSAttributedString* attributedObject = [[[NSAttributedString alloc] initWithString: [(VTHotkeyTrigger*)object stringValue] attributes: textAttributes] autorelease];
+			[super setObjectValue: attributedObject];
 		}
-		
 		[self setRepresentedObject: object]; 
 		[self setEditable: YES]; 
 	}
@@ -55,6 +53,8 @@
 		[self setRepresentedObject: nil];
 		[self setEditable: YES];
 	}
+	
+	
 }
 
 - (NSText*) setUpFieldEditorAttributes: (NSText*) textObj {

@@ -137,20 +137,15 @@
             CLASS = VTDesktopViewController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
-                mAddDesktopButton = NSButton; 
                 mAddPrimitiveButton = ZNImagePopUpButton; 
                 mAddPrimitiveMenu = NSMenu; 
                 mDecorationsController = NSArrayController; 
                 mDecorationsTableView = NSTableView; 
-                mDeleteDesktopButton = NSButton; 
                 mDeletePrimitiveButton = NSButton; 
                 mDesktopController = NSObjectController; 
                 mDesktopsController = NSArrayController; 
-                mDesktopsTableView = NSTableView; 
-                mImageView = VTImageViewFileDropper; 
                 mInspectPrimitiveButton = NSButton; 
                 mLabelButton = VTColorLabelButton; 
-                mShowsDesktopButton = NSButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 

@@ -12,32 +12,25 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import "VTDecorationPrimitiveViewController.h" 
 #import <Virtue/VTDesktop.h>
+#import <Zen/ZNImagePopUpButton.h>
+#import "VTDecorationPrimitiveViewController.h" 
 #import "VTImageViewFileDropper.h" 
 #import "VTHotkeyTextField.h" 
 #import "VTHotkeyTextView.h" 
 #import "VTHotkeyCell.h"
 #import "VTColorLabelButton.h" 
-#import <Zen/ZNImagePopUpButton.h> 
 #import "VTMatrixDesktopLayout.h"
 
 @interface VTDesktopViewController : NSWindowController {
 	// Outlets
-	IBOutlet NSArrayController*			mDesktopsController; 
-	IBOutlet NSObjectController*		mDesktopController; 
-	IBOutlet NSArrayController*			mDecorationsController; 
-	IBOutlet NSButton*					mShowsDesktopButton;
-	IBOutlet VTImageViewFileDropper*	mImageView; 
-	IBOutlet VTColorLabelButton*		mLabelButton;
-	IBOutlet NSTableView*				mDesktopsTableView; 
-	IBOutlet NSTableView*				mDecorationsTableView; 
-	IBOutlet NSButton*					mInspectPrimitiveButton; 
-	IBOutlet NSButton*					mDeletePrimitiveButton; 
-	IBOutlet NSButton*					mAddDesktopButton;
-	IBOutlet NSButton*					mDeleteDesktopButton; 
-	IBOutlet ZNImagePopUpButton*		mAddPrimitiveButton; 
-	IBOutlet NSMenu*					mAddPrimitiveMenu;
+	IBOutlet NSArrayController*       mDesktopsController; 
+	IBOutlet NSObjectController*      mDesktopController; 
+	IBOutlet NSArrayController*       mDecorationsController; 
+	IBOutlet VTColorLabelButton*      mLabelButton;
+	IBOutlet NSTableView*             mDecorationsTableView; 
+	IBOutlet NSButton*                mInspectPrimitiveButton; 
+	IBOutlet NSMenu*                  mAddPrimitiveMenu;
 	
 	// Instance variables 
 	VTDesktop*														mDesktop;			//!< The model we are dealing with 
@@ -59,5 +52,9 @@
 - (IBAction) deleteDesktop: (id) sender; 
 - (IBAction) deletePrimitive: (id) sender; 
 - (void) showWindowForDesktop: (VTDesktop*) desktop; 
+
+#pragma mark -
+#pragma mark Accessors
+- (VTMatrixDesktopLayout*) activeDesktopLayout;
 
 @end

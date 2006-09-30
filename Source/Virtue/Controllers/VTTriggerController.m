@@ -294,24 +294,24 @@
 - (void) registerObservers {
 	// register ourselves as an observer for key presses 
 	[[NSNotificationCenter defaultCenter] addObserver: self 
-	selector: @selector(onHotKeyPressed:) 
-	name: kVtNotificationOnKeyPress 
-	object: nil];
+                                           selector: @selector(onHotKeyPressed:) 
+                                               name: kVtNotificationOnKeyPress 
+                                             object: nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver: self 
-	selector: @selector(onHotKeyRegistered:) 
-	name: kVtNotificationWasRegistered 
-	object: nil];
+                                           selector: @selector(onHotKeyRegistered:) 
+                                               name: kVtNotificationWasRegistered 
+                                             object: nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver: self 
-	selector: @selector(onHotKeyUnregistered:) 
-	name: kVtNotificationWasRegistered 
-	object: nil];
+                                           selector: @selector(onHotKeyUnregistered:) 
+                                               name: kVtNotificationWasRegistered 
+                                             object: nil];
 	
 	[[VTDesktopController sharedInstance] addObserver: self 
-	forKeyPath: @"desktops" 
-	options: NSKeyValueObservingOptionNew 
-	context: NULL];
+                                         forKeyPath: @"desktops" 
+                                            options: NSKeyValueObservingOptionNew 
+                                            context: NULL];
 }
 
 @end 

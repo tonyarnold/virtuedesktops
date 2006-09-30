@@ -165,7 +165,7 @@
 	else	
 		[hotkeyNotification setHotkey: hotkey]; 
 	
-	// and we synch hotkeys (should not take too long) 
+	// and we sync hotkeys (should not take too long) 
 	[[VTHotKeyController sharedInstance] synchronize]; 
 }
 

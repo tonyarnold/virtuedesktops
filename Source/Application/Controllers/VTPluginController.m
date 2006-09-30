@@ -116,7 +116,7 @@
 		return; 
 	
 	[plugin load];
-  [plugin setEnabled: YES];
+	[plugin setEnabled: YES];
   
 	// …and attach 
 	[[VTPluginCollection sharedInstance] attachPlugin: plugin]; 
