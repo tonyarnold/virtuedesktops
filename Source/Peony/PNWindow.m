@@ -130,7 +130,7 @@
 	CGSConnection oConnection = _CGSDefaultConnection();
 	OSStatus		iResult;
 
-	CGSValue		oKey = (int)CFStringCreateCopy(kCFAllocatorDefault, (CFStringRef)key);
+	CGSValue		oKey = (int)CFStringCreateWithCStringNoCopy(kCFAllocatorDefault, [key UTF8String], kCFStringEncodingUTF8, kCFAllocatorNull);
 	CGSValue		oValue;
 
 	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue);
@@ -203,10 +203,10 @@
 
 - (NSString*) name {
 	static CGSValue kCGSWindowTitle = (int)NULL;
-	
+	NSString *tmpCStr = [[NSString alloc] initWithString: @"kCGSWindowTitle"];
 	// we have to create the private constant
 	if (kCGSWindowTitle == (int)NULL)
-		kCGSWindowTitle = (int)CFSTR("kCGSWindowTitle");
+		kCGSWindowTitle = (int)CFStringCreateWithCStringNoCopy(kCFAllocatorDefault, [tmpCStr UTF8String], kCFStringEncodingUTF8, kCFAllocatorNull);
 	
 	CGSValue oWindowTitle = (int)NULL;
 	OSStatus oResult;
@@ -221,9 +221,9 @@
 		return nil;
 	}
 	
-	if (oWindowTitle)
-		return (NSString*)oWindowTitle;
-
+	if (oWindowTitle) {
+    return (NSString*)oWindowTitle;
+  }
 
 	return nil;
 }
