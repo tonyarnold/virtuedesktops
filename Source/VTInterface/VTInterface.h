@@ -8,7 +8,6 @@
  */
 
 #import "VTInterface.h"
-#import "VTColorLabelButtonCell.h"
 #import "VTDecorationPrimitiveTextInspector.h"
 #import "VTDecorationPrimitiveTintInspector.h"
 #import "VTDecorationPrimitiveWatermarkInspector.h"

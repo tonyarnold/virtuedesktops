@@ -17,10 +17,16 @@
 		EA0EE5880A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */; };
 		EA0EE58A0A93ECC3009F3FC1 /* VTPluginPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5890A93ECC3009F3FC1 /* VTPluginPreferences.nib */; };
 		EA0EE58E0A93ECCE009F3FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */; };
+		EA121DEE0AD15DD40086403E /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA121DD60AD15DD40086403E /* InterfaceBuilder.framework */; };
 		EA2852620A8A745D009DB65B /* Virtue.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852610A8A745D009DB65B /* Virtue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852670A8A75CC009DB65B /* VTInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA28A40B0AB16E0500EC10E5 /* VTFileSystemExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA28A40C0AB16E0500EC10E5 /* VTFileSystemExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */; };
+		EA2CECD70AD0B4F3002D32DA /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
+		EA2CECD80AD0B4F3002D32DA /* imageColorLabelMask.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56610A86A70C000D6B5E /* imageColorLabelMask.png */; };
+		EA2CECD90AD0B4F3002D32DA /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56620A86A70C000D6B5E /* imageColorLabelMaskBar.png */; };
+		EA2CECDA0AD0B4F3002D32DA /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56630A86A70C000D6B5E /* imageColorLabelMaskComposite.png */; };
+		EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56620A86A70C000D6B5E /* imageColorLabelMaskBar.png */; };
 		EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */; };
 		EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */; };
 		EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36CCE90A9C4F6B0081417B /* IOKit.framework */; };
@@ -182,7 +188,6 @@
 		EA7A5AB10A86B6AF000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A5ABB0A86B6B1000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A5B510A86B7D2000D6B5E /* authtool.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A558A0A86A6D0000D6B5E /* authtool.c */; };
-		EA7A5B6E0A86B885000D6B5E /* VTColorLabelButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56080A86A6D1000D6B5E /* VTColorLabelButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A5B700A86B885000D6B5E /* VTDecorationPrimitiveBindings.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A561A0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A5B710A86B885000D6B5E /* VTDecorationPrimitiveTextInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A561C0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A5B720A86B885000D6B5E /* VTDecorationPrimitiveTintInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A561E0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -193,7 +198,6 @@
 		EA7A5B770A86B885000D6B5E /* VTPositionGridCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56170A86A6D1000D6B5E /* VTPositionGridCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A5B780A86B8C8000D6B5E /* VTHotkeyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56100A86A6D1000D6B5E /* VTHotkeyTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A5B790A86B8C8000D6B5E /* VTHotkeyTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56120A86A6D1000D6B5E /* VTHotkeyTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B7D0A86B8EF000D6B5E /* VTColorLabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A560B0A86A6D1000D6B5E /* VTColorLabelButtonCell.m */; };
 		EA7A5B7E0A86B8EF000D6B5E /* VTDecorationPrimitiveBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */; };
 		EA7A5B7F0A86B8EF000D6B5E /* VTDecorationPrimitiveTextInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561D0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.m */; };
 		EA7A5B800A86B8EF000D6B5E /* VTDecorationPrimitiveTintInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561F0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.m */; };
@@ -207,8 +211,6 @@
 		EA7A5C5D0A86B915000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A5C960A86B92A000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A5C970A86B92A000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A606D0A86CD13000D6B5E /* VTColorLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A606C0A86CD13000D6B5E /* VTColorLabelButton.m */; };
-		EA7A60760A86CD60000D6B5E /* VTColorLabelButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A60750A86CD60000D6B5E /* VTColorLabelButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A61A30A86F513000D6B5E /* VTDesktopColorLabelPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A562D0A86A6D1000D6B5E /* VTDesktopColorLabelPrimitive.m */; };
 		EA7A61A50A86F513000D6B5E /* VTPluginDesktopColorLabelPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A562F0A86A6D1000D6B5E /* VTPluginDesktopColorLabelPrimitive.m */; };
 		EA7A61A70A86F513000D6B5E /* VTPrimitiveDesktopColorLabelInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56310A86A6D1000D6B5E /* VTPrimitiveDesktopColorLabelInspector.m */; };
@@ -283,10 +285,6 @@
 		EA7A641F0A87004E000D6B5E /* imageActionPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A565C0A86A70C000D6B5E /* imageActionPressed.png */; };
 		EA7A64200A87004E000D6B5E /* imageAssistantUpdateDesktop.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A565E0A86A70C000D6B5E /* imageAssistantUpdateDesktop.png */; };
 		EA7A64210A87004E000D6B5E /* imageAssistantUpdateDock.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A565F0A86A70C000D6B5E /* imageAssistantUpdateDock.png */; };
-		EA7A64220A87004E000D6B5E /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
-		EA7A64230A87004E000D6B5E /* imageColorLabelMask.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56610A86A70C000D6B5E /* imageColorLabelMask.png */; };
-		EA7A64240A87004E000D6B5E /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56620A86A70C000D6B5E /* imageColorLabelMaskBar.png */; };
-		EA7A64250A87004E000D6B5E /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56630A86A70C000D6B5E /* imageColorLabelMaskComposite.png */; };
 		EA7A64260A87004E000D6B5E /* imageDesktopAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56680A86A70C000D6B5E /* imageDesktopAdd.png */; };
 		EA7A64270A87004E000D6B5E /* imageDesktopDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56690A86A70C000D6B5E /* imageDesktopDelete.png */; };
 		EA7A64280A87004E000D6B5E /* imageDesktopEdit_old.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A566A0A86A70C000D6B5E /* imageDesktopEdit_old.png */; };
@@ -423,6 +421,25 @@
 		EA8F2EE00A93FA660047C92C /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */; };
 		EA94B9730A9456A000647E8E /* NetInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA94B9710A9456A000647E8E /* NetInfo.framework */; };
 		EAB6F67E0A9DE94E00B9B0E8 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65980A870299000D6B5E /* ApplicationServices.framework */; };
+		EAC00E3B0AD1072800389BDB /* VTUIColorLabelButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E390AD1072800389BDB /* VTUIColorLabelButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAC00E3C0AD1072800389BDB /* VTUIColorLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E3A0AD1072800389BDB /* VTUIColorLabelButton.m */; };
+		EAC00E440AD1075D00389BDB /* VTUIColorLabelButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E420AD1075D00389BDB /* VTUIColorLabelButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAC00E450AD1075D00389BDB /* VTUIColorLabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E430AD1075D00389BDB /* VTUIColorLabelButtonCell.m */; };
+		EAC00E6E0AD1088700389BDB /* NSBezierPathPlate.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */; };
+		EAC00E6F0AD1088700389BDB /* NSBezierPathPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */; };
+		EAC00E910AD108F700389BDB /* VTUserInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* VTUserInterface.framework */; };
+		EAC00E920AD108FC00389BDB /* VTUserInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* VTUserInterface.framework */; };
+		EAC00EA70AD109AC00389BDB /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
+		EAC00EA80AD109AC00389BDB /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56630A86A70C000D6B5E /* imageColorLabelMaskComposite.png */; };
+		EAC013B70AD10C2800389BDB /* ColorLabelInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */; };
+		EAC013B80AD10C2800389BDB /* ColorLabelPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC013B60AD10C2800389BDB /* ColorLabelPalette.m */; };
+		EAC013BA0AD10C4700389BDB /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = EAC013B90AD10C4700389BDB /* palette.table */; };
+		EAC013C70AD10C7400389BDB /* ColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC013BB0AD10C7400389BDB /* ColorLabelInspector.nib */; };
+		EAC013C80AD10C7400389BDB /* ColorLabelPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC013BD0AD10C7400389BDB /* ColorLabelPalette.nib */; };
+		EAC013CA0AD10C8200389BDB /* ColorLabel.ibclassdescription in Resources */ = {isa = PBXBuildFile; fileRef = EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */; };
+		EAC013FF0AD10D2600389BDB /* VTUserInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* VTUserInterface.framework */; };
+		EAC014020AD10D3D00389BDB /* VTUserInterface.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* VTUserInterface.framework */; };
+		EAC014370AD10E5F00389BDB /* iconVirtue.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56560A86A70C000D6B5E /* iconVirtue.icns */; };
 		EAC060C80A8964F700020B92 /* VTLayoutPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EAC060C60A8964F700020B92 /* VTLayoutPreferences.nib */; };
 		EAC060F10A89679E00020B92 /* imageCrossSmall.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56640A86A70C000D6B5E /* imageCrossSmall.tif */; };
 		EAC060F20A89679E00020B92 /* imageCrossSmallHover.tif in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56650A86A70C000D6B5E /* imageCrossSmallHover.tif */; };
@@ -432,6 +449,8 @@
 		EAC060F60A89679E00020B92 /* imageMouseTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56750A86A70C000D6B5E /* imageMouseTrigger.png */; };
 		EAC061060A89685D00020B92 /* imagePreferencesPagers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */; };
 		EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */; };
+		EAF52D450ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */; };
+		EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */; };
 		EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
 		EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
 		EAFCF63E0AB65D35005882DB /* LightSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCF63D0AB65D35005882DB /* LightSensor.m */; };
@@ -440,7 +459,7 @@
 		EAFCF69E0AB65E78005882DB /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EAFCF69F0AB65E7E005882DB /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EAFCF6AE0AB65F19005882DB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36CCE90A9C4F6B0081417B /* IOKit.framework */; };
-		EAFCF75B0AB65F3E005882DB /* Light Sensor.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAFCF62F0AB65C43005882DB /* Light Sensor.bundle */; };
+		EAFCF75B0AB65F3E005882DB /* Light Sensor.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -731,6 +750,27 @@
 			remoteGlobalIDString = EA7A63820A86FD3D000D6B5E;
 			remoteInfo = VTPluginPreferences;
 		};
+		EAC00EA40AD1098100389BDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC00E240AD1065C00389BDB;
+			remoteInfo = VTUserInterface;
+		};
+		EAC014030AD10D4800389BDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC00E240AD1065C00389BDB;
+			remoteInfo = VTUserInterface;
+		};
+		EAC015BB0AD12B4200389BDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC0139D0AD10BA400389BDB;
+			remoteInfo = "Virtue Interface Palette";
+		};
 		EAFCF7590AB65F25005882DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
@@ -757,6 +797,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EAC00E920AD108FC00389BDB /* VTUserInterface.framework in CopyFiles */,
 				EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */,
 				EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */,
 				EA7A69780A870874000D6B5E /* Peony.framework in CopyFiles */,
@@ -765,6 +806,7 @@
 				EA7A697B0A870874000D6B5E /* Zen.framework in CopyFiles */,
 				EA7A69720A870848000D6B5E /* libUniMotion.dylib in CopyFiles */,
 				EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */,
+				EAF52D450ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +816,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				EAFCF75B0AB65F3E005882DB /* Light Sensor.bundle in CopyFiles */,
+				EAFCF75B0AB65F3E005882DB /* Light Sensor.plugin in CopyFiles */,
 				EA7A69D10A870893000D6B5E /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */,
 				EA7A69D20A870893000D6B5E /* VTDesktopNamePrimitive.plugin in CopyFiles */,
 				EA7A69D30A870893000D6B5E /* VTAppearancePreferences.prefPane in CopyFiles */,
@@ -786,9 +828,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAC014000AD10D2B00389BDB /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAC014020AD10D3D00389BDB /* VTUserInterface.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA121DD60AD15DD40086403E /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
 		EA2852610A8A745D009DB65B /* Virtue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtue.h; sourceTree = "<group>"; };
 		EA2852670A8A75CC009DB65B /* VTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTInterface.h; sourceTree = "<group>"; };
 		EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTFileSystemExtensions.h; sourceTree = "<group>"; };
@@ -1044,8 +1098,6 @@
 		EA7A56030A86A6D1000D6B5E /* VTOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTOperationsViewController.m; sourceTree = "<group>"; };
 		EA7A56040A86A6D1000D6B5E /* VTTriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerViewController.h; sourceTree = "<group>"; };
 		EA7A56050A86A6D1000D6B5E /* VTTriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerViewController.m; sourceTree = "<group>"; };
-		EA7A56080A86A6D1000D6B5E /* VTColorLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTColorLabelButton.h; sourceTree = "<group>"; };
-		EA7A560B0A86A6D1000D6B5E /* VTColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTColorLabelButtonCell.m; sourceTree = "<group>"; };
 		EA7A560E0A86A6D1000D6B5E /* VTHotkeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTHotkeyCell.h; sourceTree = "<group>"; };
 		EA7A560F0A86A6D1000D6B5E /* VTHotkeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTHotkeyCell.m; sourceTree = "<group>"; };
 		EA7A56100A86A6D1000D6B5E /* VTHotkeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTHotkeyTextField.h; sourceTree = "<group>"; };
@@ -1173,8 +1225,6 @@
 		EA7A5B630A86B809000D6B5E /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B640A86B809000D6B5E /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTInterface-Info.plist"; sourceTree = "<group>"; };
 		EA7A60650A86CC9C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA7A606C0A86CD13000D6B5E /* VTColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTColorLabelButton.m; sourceTree = "<group>"; };
-		EA7A60750A86CD60000D6B5E /* VTColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTColorLabelButtonCell.h; sourceTree = "<group>"; };
 		EA7A60D70A86EF2F000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
 		EA7A60DE0A86F0A8000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
 		EA7A60E20A86F174000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
@@ -1332,9 +1382,29 @@
 		EA8F2F200A93FAF40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA94B9710A9456A000647E8E /* NetInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetInfo.framework; path = /System/Library/PrivateFrameworks/NetInfo.framework; sourceTree = "<absolute>"; };
 		EAB6F4EA0A9DE83200B9B0E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
+		EAC00E250AD1065C00389BDB /* VTUserInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTUserInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC00E260AD1065C00389BDB /* VTUserInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTUserInterface-Info.plist"; sourceTree = "<group>"; };
+		EAC00E390AD1072800389BDB /* VTUIColorLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTUIColorLabelButton.h; sourceTree = "<group>"; };
+		EAC00E3A0AD1072800389BDB /* VTUIColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTUIColorLabelButton.m; sourceTree = "<group>"; };
+		EAC00E420AD1075D00389BDB /* VTUIColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTUIColorLabelButtonCell.h; sourceTree = "<group>"; };
+		EAC00E430AD1075D00389BDB /* VTUIColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTUIColorLabelButtonCell.m; sourceTree = "<group>"; };
+		EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
+		EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
+		EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtue Interface Palette.palette"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0139F0AD10BA400389BDB /* Virtue Interface Palette-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Virtue Interface Palette-Info.plist"; sourceTree = "<group>"; };
+		EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelInspector.h; sourceTree = "<group>"; };
+		EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelInspector.m; sourceTree = "<group>"; };
+		EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelPalette.h; sourceTree = "<group>"; };
+		EAC013B60AD10C2800389BDB /* ColorLabelPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelPalette.m; sourceTree = "<group>"; };
+		EAC013B90AD10C4700389BDB /* palette.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = palette.table; sourceTree = "<group>"; };
+		EAC013BC0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ColorLabelInspector.nib; sourceTree = "<group>"; };
+		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
+		EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorLabel.ibclassdescription; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
+		EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
+		EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		EAFCF62F0AB65C43005882DB /* Light Sensor.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Light Sensor.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Light Sensor.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFCF6300AB65C43005882DB /* Light Sensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Light Sensor-Info.plist"; sourceTree = "<group>"; };
 		EAFCF63C0AB65D35005882DB /* LightSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightSensor.h; sourceTree = "<group>"; };
 		EAFCF63D0AB65D35005882DB /* LightSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightSensor.m; sourceTree = "<group>"; };
@@ -1504,6 +1574,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC00E910AD108F700389BDB /* VTUserInterface.framework in Frameworks */,
 				EAB6F67E0A9DE94E00B9B0E8 /* ApplicationServices.framework in Frameworks */,
 				EA7A64D30A8701AA000D6B5E /* libUniMotion.dylib in Frameworks */,
 				EA7A64C00A870165000D6B5E /* libDockCommunicator.a in Frameworks */,
@@ -1521,6 +1592,22 @@
 				EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */,
 				EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */,
 				EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC00E230AD1065C00389BDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC0139C0AD10BA400389BDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC013FF0AD10D2600389BDB /* VTUserInterface.framework in Frameworks */,
+				EA121DEE0AD15DD40086403E /* InterfaceBuilder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1547,6 +1634,7 @@
 				EA7A54660A86A604000D6B5E /* DockExtension */,
 				EA7A53CD0A86A5A4000D6B5E /* Peony */,
 				EAFCF63A0AB65D1C005882DB /* Plugins */,
+				EAC013A80AD10BCA00389BDB /* Virtue Interface Palette */,
 				EA7A61880A86F490000D6B5E /* VTDesktopColorLabelPrimitive */,
 				EA7A622D0A86F60C000D6B5E /* VTDesktopNamePrimitive */,
 				EA7A5B6D0A86B83E000D6B5E /* VTInterface */,
@@ -1556,6 +1644,7 @@
 				EA7A632D0A86FB39000D6B5E /* VTHotkeyPreferences */,
 				EA7A636B0A86FCFA000D6B5E /* VTLayoutPreferences */,
 				EA7A638D0A86FD5F000D6B5E /* VTPluginPreferences */,
+				EAC00E310AD106D100389BDB /* VTUserInterface */,
 				EA7A53CE0A86A5A4000D6B5E /* Virtue */,
 				EA7A53CF0A86A5A4000D6B5E /* Zen */,
 			);
@@ -2150,6 +2239,8 @@
 			children = (
 				EA7A55E40A86A6D1000D6B5E /* VTApplicationRunningColorTransformer.h */,
 				EA7A55E50A86A6D1000D6B5E /* VTApplicationRunningColorTransformer.m */,
+				EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */,
+				EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */,
 				EA7A55E80A86A6D1000D6B5E /* VTApplicationRunningTransformer.h */,
 				EA7A55E90A86A6D1000D6B5E /* VTApplicationRunningTransformer.m */,
 				EA7A55EA0A86A6D1000D6B5E /* VTDesktopIdTransformer.h */,
@@ -2300,7 +2391,9 @@
 				EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */,
 				EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */,
 				EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */,
-				EAFCF62F0AB65C43005882DB /* Light Sensor.bundle */,
+				EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */,
+				EAC00E250AD1065C00389BDB /* VTUserInterface.framework */,
+				EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.palette */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2308,10 +2401,6 @@
 		EA7A5B6D0A86B83E000D6B5E /* VTInterface */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A56080A86A6D1000D6B5E /* VTColorLabelButton.h */,
-				EA7A606C0A86CD13000D6B5E /* VTColorLabelButton.m */,
-				EA7A60750A86CD60000D6B5E /* VTColorLabelButtonCell.h */,
-				EA7A560B0A86A6D1000D6B5E /* VTColorLabelButtonCell.m */,
 				EA7A561A0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.h */,
 				EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */,
 				EA7A561C0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.h */,
@@ -2459,6 +2548,7 @@
 		EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				EA121DD60AD15DD40086403E /* InterfaceBuilder.framework */,
 				EAB6F4EA0A9DE83200B9B0E8 /* CoreGraphics.framework */,
 				EA36CCE90A9C4F6B0081417B /* IOKit.framework */,
 				EA94B9710A9456A000647E8E /* NetInfo.framework */,
@@ -2479,6 +2569,8 @@
 		EA7A6A070A8708F2000D6B5E /* Property lists */ = {
 			isa = PBXGroup;
 			children = (
+				EAC0139F0AD10BA400389BDB /* Virtue Interface Palette-Info.plist */,
+				EAC00E260AD1065C00389BDB /* VTUserInterface-Info.plist */,
 				EAFCF6300AB65C43005882DB /* Light Sensor-Info.plist */,
 				EA7A58170A86AD7B000D6B5E /* DockExtension-Info.plist */,
 				EA7A59570A86B4D3000D6B5E /* Peony-Info.plist */,
@@ -2517,6 +2609,34 @@
 				EA7A6A070A8708F2000D6B5E /* Property lists */,
 				EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */,
 			);
+			sourceTree = "<group>";
+		};
+		EAC00E310AD106D100389BDB /* VTUserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EAC00E390AD1072800389BDB /* VTUIColorLabelButton.h */,
+				EAC00E3A0AD1072800389BDB /* VTUIColorLabelButton.m */,
+				EAC00E420AD1075D00389BDB /* VTUIColorLabelButtonCell.h */,
+				EAC00E430AD1075D00389BDB /* VTUIColorLabelButtonCell.m */,
+				EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */,
+				EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */,
+			);
+			path = VTUserInterface;
+			sourceTree = "<group>";
+		};
+		EAC013A80AD10BCA00389BDB /* Virtue Interface Palette */ = {
+			isa = PBXGroup;
+			children = (
+				EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */,
+				EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */,
+				EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */,
+				EAC013B60AD10C2800389BDB /* ColorLabelPalette.m */,
+				EAC013B90AD10C4700389BDB /* palette.table */,
+				EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */,
+				EAC013BB0AD10C7400389BDB /* ColorLabelInspector.nib */,
+				EAC013BD0AD10C7400389BDB /* ColorLabelPalette.nib */,
+			);
+			path = "Virtue Interface Palette";
 			sourceTree = "<group>";
 		};
 		EAFCF63A0AB65D1C005882DB /* Plugins */ = {
@@ -2653,7 +2773,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A5B6E0A86B885000D6B5E /* VTColorLabelButton.h in Headers */,
 				EA7A5B700A86B885000D6B5E /* VTDecorationPrimitiveBindings.h in Headers */,
 				EA7A5B710A86B885000D6B5E /* VTDecorationPrimitiveTextInspector.h in Headers */,
 				EA7A5B720A86B885000D6B5E /* VTDecorationPrimitiveTintInspector.h in Headers */,
@@ -2664,8 +2783,17 @@
 				EA7A5B750A86B885000D6B5E /* VTHotkeyCell.h in Headers */,
 				EA7A5B780A86B8C8000D6B5E /* VTHotkeyTextField.h in Headers */,
 				EA7A5B790A86B8C8000D6B5E /* VTHotkeyTextView.h in Headers */,
-				EA7A60760A86CD60000D6B5E /* VTColorLabelButtonCell.h in Headers */,
 				EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC00E200AD1065C00389BDB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC00E3B0AD1072800389BDB /* VTUIColorLabelButton.h in Headers */,
+				EAC00E440AD1075D00389BDB /* VTUIColorLabelButtonCell.h in Headers */,
+				EAC00E6E0AD1088700389BDB /* NSBezierPathPlate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2986,11 +3114,51 @@
 				EA7A67BD0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67BF0A87049A000D6B5E /* PBXTargetDependency */,
 				EAFCF75A0AB65F25005882DB /* PBXTargetDependency */,
+				EAC00EA50AD1098100389BDB /* PBXTargetDependency */,
+				EAC015BC0AD12B4200389BDB /* PBXTargetDependency */,
 			);
 			name = VirtueDesktops;
 			productName = VirtueDesktops;
 			productReference = EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EAC00E240AD1065C00389BDB /* VTUserInterface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC00E270AD1065D00389BDB /* Build configuration list for PBXNativeTarget "VTUserInterface" */;
+			buildPhases = (
+				EAC00E200AD1065C00389BDB /* Headers */,
+				EAC00E210AD1065C00389BDB /* Resources */,
+				EAC00E220AD1065C00389BDB /* Sources */,
+				EAC00E230AD1065C00389BDB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VTUserInterface;
+			productName = VTUserInterface;
+			productReference = EAC00E250AD1065C00389BDB /* VTUserInterface.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAC0139D0AD10BA400389BDB /* Virtue Interface Palette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC013A00AD10BA500389BDB /* Build configuration list for PBXNativeTarget "Virtue Interface Palette" */;
+			buildPhases = (
+				EAC0139A0AD10BA400389BDB /* Resources */,
+				EAC0139B0AD10BA400389BDB /* Sources */,
+				EAC0139C0AD10BA400389BDB /* Frameworks */,
+				EAC014000AD10D2B00389BDB /* Copy Frameworks */,
+				EAC013FC0AD10D0C00389BDB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAC014040AD10D4800389BDB /* PBXTargetDependency */,
+			);
+			name = "Virtue Interface Palette";
+			productName = "Virtue Interface Palette";
+			productReference = EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.palette */;
+			productType = "com.apple.product-type.bundle";
 		};
 		EAFCF62E0AB65C43005882DB /* Light Sensor */ = {
 			isa = PBXNativeTarget;
@@ -3006,7 +3174,7 @@
 			);
 			name = "Light Sensor";
 			productName = "Light Sensor";
-			productReference = EAFCF62F0AB65C43005882DB /* Light Sensor.bundle */;
+			productReference = EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -3073,6 +3241,8 @@
 				EA7A635B0A86FC58000D6B5E /* VTLayoutPreferences */,
 				EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */,
 				EAFCF62E0AB65C43005882DB /* Light Sensor */,
+				EAC00E240AD1065C00389BDB /* VTUserInterface */,
+				EAC0139D0AD10BA400389BDB /* Virtue Interface Palette */,
 			);
 		};
 /* End PBXProject section */
@@ -3103,6 +3273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2CECD70AD0B4F3002D32DA /* imageColorLabelClear.png in Resources */,
+				EA2CECD80AD0B4F3002D32DA /* imageColorLabelMask.png in Resources */,
+				EA2CECD90AD0B4F3002D32DA /* imageColorLabelMaskBar.png in Resources */,
+				EA2CECDA0AD0B4F3002D32DA /* imageColorLabelMaskComposite.png in Resources */,
 				EA8F2EE00A93FA660047C92C /* PrimitiveTextInspector.nib in Resources */,
 				EA0EE5800A93ECBC009F3FC1 /* PrimitiveTintInspector.nib in Resources */,
 				EA0EE5820A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib in Resources */,
@@ -3201,6 +3375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */,
 				EA7A64330A87004E000D6B5E /* imageWidgetAddPopup.png in Resources */,
 				EA7A64340A87004E000D6B5E /* imageWidgetAddPopupPressed.png in Resources */,
 				EA7A644C0A87005C000D6B5E /* imageAction.tiff in Resources */,
@@ -3221,10 +3396,6 @@
 				EA7A641F0A87004E000D6B5E /* imageActionPressed.png in Resources */,
 				EA7A64200A87004E000D6B5E /* imageAssistantUpdateDesktop.png in Resources */,
 				EA7A64210A87004E000D6B5E /* imageAssistantUpdateDock.png in Resources */,
-				EA7A64220A87004E000D6B5E /* imageColorLabelClear.png in Resources */,
-				EA7A64230A87004E000D6B5E /* imageColorLabelMask.png in Resources */,
-				EA7A64240A87004E000D6B5E /* imageColorLabelMaskBar.png in Resources */,
-				EA7A64250A87004E000D6B5E /* imageColorLabelMaskComposite.png in Resources */,
 				EA7A64180A87000E000D6B5E /* imageDesktopActive.png in Resources */,
 				EA7A64260A87004E000D6B5E /* imageDesktopAdd.png in Resources */,
 				EA7A64270A87004E000D6B5E /* imageDesktopDelete.png in Resources */,
@@ -3284,6 +3455,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAC00E210AD1065C00389BDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC00EA70AD109AC00389BDB /* imageColorLabelClear.png in Resources */,
+				EAC00EA80AD109AC00389BDB /* imageColorLabelMaskComposite.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC0139A0AD10BA400389BDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC014370AD10E5F00389BDB /* iconVirtue.icns in Resources */,
+				EAC013BA0AD10C4700389BDB /* palette.table in Resources */,
+				EAC013C70AD10C7400389BDB /* ColorLabelInspector.nib in Resources */,
+				EAC013C80AD10C7400389BDB /* ColorLabelPalette.nib in Resources */,
+				EAC013CA0AD10C8200389BDB /* ColorLabel.ibclassdescription in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAFCF62B0AB65C43005882DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3294,6 +3486,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EAC013FC0AD10D0C00389BDB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env perl";
+			shellScript = "foreach my $name ('VTUserInterface') {\n  my $exec_cmd = '/usr/bin/install_name_tool -change \"@executable_path/../Frameworks/' . $name . '.framework/Versions/A/' . $name . '\" \"@loader_path/../Frameworks/' . $name . '.framework/Versions/A/' . $name . '\" \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/MacOS/${PRODUCT_NAME}\"';\n  my $exec_cmd_result = `$exec_cmd`;\n}";
+		};
 		EAF826A80A91FB26008612A2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3424,7 +3629,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A5B7D0A86B8EF000D6B5E /* VTColorLabelButtonCell.m in Sources */,
 				EA7A5B7E0A86B8EF000D6B5E /* VTDecorationPrimitiveBindings.m in Sources */,
 				EA7A5B7F0A86B8EF000D6B5E /* VTDecorationPrimitiveTextInspector.m in Sources */,
 				EA7A5B800A86B8EF000D6B5E /* VTDecorationPrimitiveTintInspector.m in Sources */,
@@ -3435,7 +3639,6 @@
 				EA7A5B850A86B8EF000D6B5E /* VTHotkeyTextView.m in Sources */,
 				EA7A5B860A86B8EF000D6B5E /* VTPositionGrid.m in Sources */,
 				EA7A5B870A86B8EF000D6B5E /* VTPositionGridCell.m in Sources */,
-				EA7A606D0A86CD13000D6B5E /* VTColorLabelButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3548,6 +3751,26 @@
 				EA7A648A0A8700E7000D6B5E /* VTTriggerViewController.m in Sources */,
 				EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */,
 				EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */,
+				EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC00E220AD1065C00389BDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC00E3C0AD1072800389BDB /* VTUIColorLabelButton.m in Sources */,
+				EAC00E450AD1075D00389BDB /* VTUIColorLabelButtonCell.m in Sources */,
+				EAC00E6F0AD1088700389BDB /* NSBezierPathPlate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC0139B0AD10BA400389BDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC013B70AD10C2800389BDB /* ColorLabelInspector.m in Sources */,
+				EAC013B80AD10C2800389BDB /* ColorLabelPalette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3766,6 +3989,21 @@
 			isa = PBXTargetDependency;
 			target = EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */;
 			targetProxy = EA7A67BE0A87049A000D6B5E /* PBXContainerItemProxy */;
+		};
+		EAC00EA50AD1098100389BDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC00E240AD1065C00389BDB /* VTUserInterface */;
+			targetProxy = EAC00EA40AD1098100389BDB /* PBXContainerItemProxy */;
+		};
+		EAC014040AD10D4800389BDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC00E240AD1065C00389BDB /* VTUserInterface */;
+			targetProxy = EAC014030AD10D4800389BDB /* PBXContainerItemProxy */;
+		};
+		EAC015BC0AD12B4200389BDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC0139D0AD10BA400389BDB /* Virtue Interface Palette */;
+			targetProxy = EAC015BB0AD12B4200389BDB /* PBXContainerItemProxy */;
 		};
 		EAFCF75A0AB65F25005882DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4035,6 +4273,22 @@
 				EA8F2EE40A93FA740047C92C /* Russian */,
 			);
 			name = PrimitiveTextInspector.nib;
+			sourceTree = "<group>";
+		};
+		EAC013BB0AD10C7400389BDB /* ColorLabelInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC013BC0AD10C7400389BDB /* English */,
+			);
+			name = ColorLabelInspector.nib;
+			sourceTree = "<group>";
+		};
+		EAC013BD0AD10C7400389BDB /* ColorLabelPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC013BE0AD10C7400389BDB /* English */,
+			);
+			name = ColorLabelPalette.nib;
 			sourceTree = "<group>";
 		};
 		EAC060C60A8964F700020B92 /* VTLayoutPreferences.nib */ = {
@@ -4781,11 +5035,13 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_4)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_5)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_5 = "\"$(SRCROOT)/build/Release\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -4822,11 +5078,13 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_4)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_5)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_5 = "\"$(SRCROOT)/build/Release\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -4870,6 +5128,122 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_OBJC_GC = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		EAC00E280AD1065D00389BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "VTUserInterface-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTUserInterface;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EAC00E290AD1065D00389BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTUserInterface-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTUserInterface;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		EAC013A10AD10BA500389BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Virtue Interface Palette-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Virtue Interface Palette";
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EAC013A20AD10BA500389BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/Virtue Interface Palette-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Palettes";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Virtue Interface Palette";
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -5077,6 +5451,24 @@
 			buildConfigurations = (
 				EAA9266F0A86A4E800D4674B /* Debug */,
 				EAA926700A86A4E800D4674B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC00E270AD1065D00389BDB /* Build configuration list for PBXNativeTarget "VTUserInterface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC00E280AD1065D00389BDB /* Debug */,
+				EAC00E290AD1065D00389BDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC013A00AD10BA500389BDB /* Build configuration list for PBXNativeTarget "Virtue Interface Palette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC013A10AD10BA500389BDB /* Debug */,
+				EAC013A20AD10BA500389BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

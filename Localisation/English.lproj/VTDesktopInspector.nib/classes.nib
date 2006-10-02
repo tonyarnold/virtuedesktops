@@ -137,20 +137,20 @@
             CLASS = VTDesktopViewController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
-                mAddPrimitiveButton = ZNImagePopUpButton; 
                 mAddPrimitiveMenu = NSMenu; 
+                mColorLabelButton = VTUIColorLabelButton; 
                 mDecorationsController = NSArrayController; 
                 mDecorationsTableView = NSTableView; 
-                mDeletePrimitiveButton = NSButton; 
                 mDesktopController = NSObjectController; 
                 mDesktopsController = NSArrayController; 
+                mDesktopsTableView = NSTableView; 
                 mInspectPrimitiveButton = NSButton; 
-                mLabelButton = VTColorLabelButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 
         {CLASS = VTHotkeyTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {CLASS = VTImageViewFileDropper; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = VTUIColorLabelButton; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
         {CLASS = ZNImagePopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }
     ); 
     IBVersion = 1; 

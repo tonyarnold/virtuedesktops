@@ -189,6 +189,7 @@
 
 #pragma mark -
 - (void) setColorLabel: (NSColor*) color {
+  NSLog(@"VTDesktop: setColorLabel: %@", [color stringValue]);
 	ZEN_ASSIGN(mColorLabel, color);
 }
 

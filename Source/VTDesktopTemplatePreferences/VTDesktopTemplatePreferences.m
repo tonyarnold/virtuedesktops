@@ -14,7 +14,6 @@
 #import "VTDesktopTemplatePreferences.h"
 #import "VTPreferenceKeys.h" 
 
-#import <VTInterface/VTColorLabelButtonCell.h>
 #import <Virtue/VTDecorationPrimitiveText.h>
 #import <VTInterface/VTDecorationPrimitiveTextInspector.h>
 #import <Virtue/VTDecorationPrimitiveTint.h> 

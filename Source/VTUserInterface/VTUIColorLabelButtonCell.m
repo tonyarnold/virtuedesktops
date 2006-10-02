@@ -1,31 +1,23 @@
-/******************************************************************************
-* 
-* VirtueDesktops 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+//
+//  VTUIColorLabelButtonCell.m
+//  VirtueDesktops
+//
+//  Created by Tony on 2/10/06.
+//  Copyright 2006 boomBalada! Productions. All rights reserved.
+//
 
-#import "VTColorLabelButtonCell.h"
-#import <Virtue/NSBezierPathPlate.h> 
-#import <Virtue/NSImageTint.h> 
-#import <Zen/Zen.h> 
+#import "VTUIColorLabelButtonCell.h"
+#import "../Zen/Macros/ZNMemoryManagementMacros.h"
+#import "NSBezierPathPlate.h"
 
+@implementation VTUIColorLabelButtonCell
 
-@implementation VTColorLabelButtonCell
-
-#pragma mark -
 - (id) init {
 	if (self = [super initImageCell: nil]) {
 		mColor			= [[NSColor clearColor] retain]; 
 		mMouseInside	= NO; 
 		
-		[self setType: VTColorLabelType];  
+		[self setType: VTUIColorLabelType];  
 		
 		return self; 
 	}
@@ -38,6 +30,61 @@
 	ZEN_RELEASE(mImage); 
 	
 	[super dealloc]; 
+}
+
+#pragma mark -
+#pragma mark Coders 
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+  [super initWithCoder:coder];  
+  
+  if ([coder respondsToSelector:@selector(allowsKeyedCoding)]
+      && [coder allowsKeyedCoding]) {
+    [self setColor:     [coder decodeObjectForKey: @"color"]];
+    [self setSelected:  [coder decodeBoolForKey: @"selected"]];
+  } else {
+    [self setColor: [coder decodeObject]];
+    BOOL mTmpSelected = NO;
+    [coder decodeValueOfObjCType: @encode(BOOL) 
+                              at: &mTmpSelected];
+    [self setSelected: mTmpSelected];
+  }
+  VTUIColorLabelButtonType mTmpType;
+  [coder decodeValueOfObjCType: @encode(VTUIColorLabelButtonType) 
+                            at: &mTmpType];
+  [self setLabelType: mTmpType];
+  
+  return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+  [super encodeWithCoder:coder];
+  if ([coder allowsKeyedCoding]){
+    [coder encodeObject:  [self color] forKey: @"color"];
+    [coder encodeBool:    [self selected] forKey: @"selected"];
+  } else {
+    [coder encodeObject: [self color]];
+    [coder encodeValueOfObjCType: @encode(BOOL) 
+                              at: &mSelected];
+  }
+  
+  [coder encodeValueOfObjCType: @encode(VTUIColorLabelButtonType) 
+                            at: &mType];
+  
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+  VTUIColorLabelButtonCell *copy;
+  
+  copy = [[VTUIColorLabelButtonCell allocWithZone:zone] init];
+  
+  [copy setColor: [self color]];
+  [copy setSelected: [self selected]];
+  [copy setLabelType: [self labelType]];
+  return copy;
 }
 
 #pragma mark -
@@ -56,25 +103,26 @@
 	[[self controlView] setNeedsDisplay: YES]; 
 }
 
-- (BOOL) isSelected {
+- (BOOL) selected {
 	return mSelected; 
 }
 
 #pragma mark -
-- (void) setLabelType: (VTColorLabelButtonType) type {
-	mType = type; 
+- (void) setLabelType: (VTUIColorLabelButtonType) type {
+	mType = type;
+  NSBundle *bundle = [NSBundle bundleForClass:[VTUIColorLabelButtonCell class]];
 	
 	// set image to display 
 	ZEN_RELEASE(mImage); 
-	if (mType == VTClearLabelType) 
-		mImage = [[NSImage imageNamed: @"imageColorLabelClear.png"] retain]; 
+	if (mType == VTClearLabelType)
+    mImage = [[NSImage alloc] initByReferencingFile: [[NSBundle pathForResource:@"imageColorLabelClear" ofType:@"png" inDirectory: [bundle resourcePath]] retain]];
 	else
-		mImage = [[NSImage imageNamed: @"imageColorLabelMaskComposite.png"] retain]; 
+    mImage = [[NSImage alloc] initByReferencingFile: [[NSBundle pathForResource:@"imageColorLabelMaskComposite" ofType:@"png" inDirectory: [bundle resourcePath]] retain]];
 	
 	[[self controlView] setNeedsDisplay: YES]; 
 }
 
-- (VTColorLabelButtonType) labelType {
+- (VTUIColorLabelButtonType) labelType {
 	return mType; 
 }
 
@@ -108,7 +156,7 @@
 		
 		// and continue with innards
 		[super drawWithFrame: cellFrame inView: controlView]; 	
-
+    
 		return; 
 	}
 	
@@ -118,22 +166,22 @@
 	frame.size.width -= 0.5; 
 	frame.size.height -= 0.5; 
 	NSBezierPath* backgroundPath = [NSBezierPath bezierPathForRoundedRect: frame withRadius: 3]; 
-
+  
 	// draw background 
 	if (([self isHighlighted]) || ([self state] == NSOnState)) {
-		if (mType == VTColorLabelType) 
+		if (mType == VTUIColorLabelType) 
 			[[NSColor colorWithCalibratedWhite: 1.0 alpha: 1.0] set]; 
 		else
 			[[NSColor clearColor] set]; 
 	}
 	else
 		[[NSColor colorWithCalibratedWhite: 0.8 alpha: 1.0] set];
-
+  
 	[backgroundPath fill]; 
 	
 	// draw border 
 	if (([self isHighlighted]) || ([self state] == NSOnState)) {
-		if (mType == VTColorLabelType) 
+		if (mType == VTUIColorLabelType) 
 			[[NSColor colorWithCalibratedWhite: 0.8 alpha: 1.0] set]; 
 		else
 			[[NSColor clearColor] set]; 
@@ -152,7 +200,7 @@
 	if (mType == VTClearLabelType) {
 		NSPoint imagePosition = cellFrame.origin; 
 		imagePosition.x += 3; 
-		imagePosition.y += 3 + [mImage size].height; 
+		imagePosition.y += 2.5 + [mImage size].height;     
 		
 		[mImage compositeToPoint: imagePosition operation: NSCompositeSourceOver fraction: 1.0]; 
 		
@@ -162,25 +210,31 @@
 	NSRect			blobPathRect; 
 	NSPoint			blobImagePosition; 
 	blobPathRect.origin = NSMakePoint(cellFrame.origin.x + 3, cellFrame.origin.y + 3); 
-	blobPathRect.size	= [mImage size]; 
+	blobPathRect.size	= NSMakeSize(9,9);
 	blobImagePosition	= NSMakePoint(blobPathRect.origin.x, blobPathRect.origin.y + [mImage size].height); 
-
+  
 	NSBezierPath* blobPath = [NSBezierPath bezierPathWithOvalInRect: blobPathRect]; 
 		
 	NSShadow* shadow = [[[NSShadow alloc] init] autorelease];
-	[shadow setShadowColor: [mColor shadowWithLevel: 0.6]];
+  
+	[shadow setShadowColor: [[NSColor shadowColor] colorWithAlphaComponent: 0.2]];
 	[shadow setShadowBlurRadius: 1];
-	[shadow setShadowOffset:NSMakeSize(1,-1)];
+	[shadow setShadowOffset:NSMakeSize(0,-1.2)];
 	
 	[NSGraphicsContext saveGraphicsState]; 	
 	[shadow set]; 
 	// draw the blob
-	[mColor set]; 
-	[blobPath fill]; 
+	[mColor set];
+	[blobPath fill];
+  [[[NSColor whiteColor] colorWithAlphaComponent: 0.1] set];
+  [blobPath fill];
+  [[[NSColor shadowColor] colorWithAlphaComponent: 0.2] set];
+  [blobPath setLineWidth: 0.5];
+  [blobPath stroke];
 	[NSGraphicsContext restoreGraphicsState]; 
 	
 	// draw our specular highlight and border with shadow 
-	[mImage dissolveToPoint: blobImagePosition fraction: 0.7]; 
+	[mImage dissolveToPoint: blobImagePosition fraction: 0.55];
+  
 }
-
 @end

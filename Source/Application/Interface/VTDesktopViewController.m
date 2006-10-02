@@ -13,13 +13,13 @@
 
 #import <Virtue/VTDesktopBackgroundHelper.h>
 #import "VTDesktopViewController.h"
-#import "VTColorLabelButtonCell.h" 
 #import <Virtue/VTDecorationPrimitiveText.h>
 #import "VTDecorationPrimitiveTextInspector.h" 
 #import <Virtue/VTDecorationPrimitiveTint.h> 
 #import "VTDecorationPrimitiveTintInspector.h" 
 #import <Virtue/VTDecorationPrimitiveWatermark.h>
 #import "VTDecorationPrimitiveWatermarkInspector.h"
+#import "Transformers/VTApplicationRunningCountTransformer.h"
 
 #import <Virtue/VTPlugin.h> 
 #import <Virtue/VTPluginCollection.h> 
@@ -34,6 +34,7 @@
 
 @interface VTDesktopViewController (Selection) 
 - (VTDesktop*) selectedDesktop; 
+- (void) setSelectedDesktop: (VTDesktop*) desktop;
 - (void) showDesktop: (VTDesktop*) desktop; 
 @end 
 
@@ -47,6 +48,12 @@
 
 #pragma mark -
 @implementation VTDesktopViewController
+
++ (void) initialize {
+  NSValueTransformer* transformer = [[[VTApplicationRunningCountTransformer alloc] init] autorelease];
+  [NSValueTransformer setValueTransformer: transformer
+                                  forName: @"VTApplicationRunningCountTransformer"];
+}
 
 #pragma mark -
 #pragma mark Lifetime 
@@ -126,6 +133,7 @@
 }
 
 - (void) showWindowForDesktop: (VTDesktop*) desktop {
+  [self setSelectedDesktop: desktop];
 	[super showWindow: self]; 
 }
 
@@ -147,19 +155,6 @@
 #pragma mark NSWindowController overrides 
 
 - (void) windowDidLoad {
-	// color labels 
-	NSArray* colors = [NSArray arrayWithObjects: 
-		[NSColor redColor], 
-		[NSColor orangeColor],
-		[NSColor yellowColor],
-		[NSColor greenColor], 
-		[NSColor blueColor],
-		[NSColor magentaColor],
-		[NSColor lightGrayColor],
-		nil]; 
-	[mLabelButton setDisplaysClearButton: YES]; 
-	[mLabelButton setColorLabels: colors]; 
-	
 	// Decorations table view 
 	[mDecorationsTableView registerForDraggedTypes: [NSArray arrayWithObjects: kVtMovedRowsDropType, nil]];	
 	[self createDecorationAddMenu]; 
@@ -169,21 +164,17 @@
 	[[self window] setDelegate: self]; 
 	
 	// create inspector 
-	mInspectorController = [[VTDecorationPrimitiveViewController alloc] init]; 
+	mInspectorController = [[VTDecorationPrimitiveViewController alloc] init];
 	
 	// and select a desktop 
-	[self showDesktop: [self selectedDesktop]]; 
+	[self showDesktop: [self selectedDesktop]];
 }
 
 
 #pragma mark -
 #pragma mark NSWindow delegate 
 
-- (void) windowWillClose: (NSNotification*) notification {	
-	// remove bindings 
-	[mLabelButton 				unbind: @"selectedColorLabel"]; 
-	[mDesktop 						unbind: @"colorLabel"]; 
-	
+- (void) windowWillClose: (NSNotification*) notification { 
 	// and write out preferences to be sure 
 	[[NSUserDefaults standardUserDefaults] synchronize]; 
 	// and also the desktop settings 
@@ -192,6 +183,12 @@
 
 #pragma mark -
 #pragma mark NSTableView delegate 
+
+- (void) tableViewSelectionDidChange: (NSNotification*) notification {
+	// Desktops table view
+	if ([[notification object] isEqual: mDesktopsTableView]) 
+		[self showDesktop: [self selectedDesktop]];
+}
 
 - (BOOL) tableView: (NSTableView*) tv writeRows: (NSArray*) rows toPasteboard: (NSPasteboard*) pboard {
 	// Decorations table view
@@ -269,26 +266,38 @@
 
 - (VTDesktop*) selectedDesktop {
 	int selectedIndex = [mDesktopsController selectionIndex]; 
-	
 	if (selectedIndex == NSNotFound)
 		return nil; 
 	
 	return [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] objectAtIndex: selectedIndex]; 
 }
 
+- (void) setSelectedDesktop: (VTDesktop*) desktop {
+  // get index of passed desktop
+  unsigned int index = [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] indexOfObject: desktop];
+  // and select it in the table view
+  [mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index]
+                  byExtendingSelection: NO];
+}
+
 - (void) showDesktop: (VTDesktop*) desktop {
-	// remove bindings 
-	[mLabelButton unbind: @"selectedColorLabel"]; 
-	[mDesktop			unbind: @"colorLabel"]; 
-	
+  [mColorLabelButton unbind: @"selectedColorLabel"];
+  [mDesktop unbind: @"colorLabel"];
+  
 	// attributes 
 	ZEN_ASSIGN(mDesktop, desktop);
-		
-	[mLabelButton selectColorLabel: [mDesktop colorLabel]];
-  	
-	// configure color label binding 
-	[mDesktop     bind: @"colorLabel"         toObject: mLabelButton  withKeyPath: @"selectedColorLabel"  options: nil];
-	[mLabelButton	bind: @"selectedColorLabel" toObject: mDesktop      withKeyPath: @"colorLabel"          options: nil]; 
+  
+  [mColorLabelButton setSelectedColorLabel: [mDesktop colorLabel]];
+  
+  [mDesktop bind: @"colorLabel"
+        toObject: mColorLabelButton
+     withKeyPath: @"selectedColorLabel"
+         options: nil];
+  
+  [mColorLabelButton bind: @"selectedColorLabel"
+                 toObject: mDesktop
+              withKeyPath: @"colorLabel"
+                  options: nil];
 }
 
 @end 
