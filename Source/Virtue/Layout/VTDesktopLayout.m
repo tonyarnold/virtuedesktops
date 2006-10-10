@@ -59,6 +59,10 @@
 	return nil; 
 }
 
+- (NSArray*) availablePagers {
+  return nil;
+}
+
 - (NSArray*) desktops { 
 	// please override me to return all desktops in the correct order
 	return nil; 

@@ -36,4 +36,5 @@
 - (void) removeObserver: (NSObject*) observer forEdge: (ZNEdge) edge; 
 - (void) removeObserver: (NSObject*) observer; 
 
+
 @end

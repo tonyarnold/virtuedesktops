@@ -31,10 +31,13 @@
 	if (self = [super init]) {
 		mModifiers		= 0; 
 		mClickCount		= 0; 
-		mDelay			= 0; 
-		mEdge			= ZNEdgeAny;
-		mTimer			= nil; 
-		
+		mDelay        = 0; 
+		mEdge         = ZNEdgeAny;
+		mTimer        = nil; 
+    [[NSNotificationCenter defaultCenter] addObserver: self 
+                                             selector: @selector(resetOnScreenChanged:) 
+                                                 name: NSApplicationDidChangeScreenParametersNotification
+                                               object: nil];
 		return self; 
 	}
 	
@@ -42,6 +45,7 @@
 }
 
 - (void) dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver: self];
 	[super dealloc]; 
 }
 
@@ -184,11 +188,11 @@
 	if (mRegistered)
 		return; 
 	// check if we have all the necessary information handy 
-	if (mEdge == ZNEdgeAny)
+	if ([self edge] == ZNEdgeAny)
 		return; 
 	
-	// we attach to the mouse watcher as an observer for our edge 
-	[[VTMouseWatcher sharedInstance] addObserver: self forEdge: mEdge]; 
+	// we attach to the mouse watcher as an observer for our edge
+	[[VTMouseWatcher sharedInstance] addObserver: self forEdge: [self edge]]; 
 	mRegistered = YES; 
 }
 
@@ -202,6 +206,11 @@
 
 - (BOOL) canRegister {
 	return (mEdge != ZNEdgeAny); 
+}
+
+- (void) resetOnScreenChanged: (id) sender {
+  [self unregisterTrigger];
+  [self registerTrigger];
 }
 
 #pragma mark -

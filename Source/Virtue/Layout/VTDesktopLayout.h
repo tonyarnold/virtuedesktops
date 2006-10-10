@@ -32,7 +32,7 @@ typedef enum {
 
 #pragma mark -
 @interface VTDesktopLayout : NSObject<VTCoding> {
-	NSString*	mName; 
+	NSString* mName; 
 }
 
 #pragma mark -
@@ -45,6 +45,7 @@ typedef enum {
 - (NSString*) name; 
 #pragma mark -
 - (NSObject<VTPager>*) pager; 
+- (NSArray*) availablePagers;
 - (NSArray*) desktops; 
 - (NSArray*) orderedDesktops; 
 - (unsigned int) maximumNumberOfDesktops;

@@ -146,7 +146,7 @@
 		mWindows				= [[NSMutableDictionary alloc] init]; 
 		mTrackingRects	= [[NSMutableDictionary alloc] init]; 
 		mObservers			= [[NSMutableDictionary alloc] init]; 
-		mCurrentEdge		= ZNEdgeAny; 
+		mCurrentEdge		= ZNEdgeAny;
 		
 		return self; 
 	}
@@ -154,7 +154,7 @@
 	return nil; 
 }
 
-- (void) dealloc {	
+- (void) dealloc {
 	ZEN_RELEASE(mWindows); 
 	ZEN_RELEASE(mTrackingRects); 
 	ZEN_RELEASE(mObservers);
@@ -185,7 +185,7 @@
 		[mObservers setObject: observersForEdge forKey: [NSNumber numberWithInt: edge]]; 
 	}
 	[observersForEdge addObject: observer];
-	}
+}
 
 - (void) removeObserver: (NSObject*) observer {
 	[self removeObserver: observer forEdge: ZNEdgeAny]; 
@@ -368,11 +368,15 @@
 	ZNEffectWindow* window = nil; 
 	
 	// first, check if we already have the window handy and just return it in this case 
-	window = [mWindows objectForKey: [NSNumber numberWithInt: edge]]; 
-	if (window != nil)
-		return window; 
+	window = [mWindows objectForKey: [NSNumber numberWithInt: edge]];
 	
 	NSRect frame = [self frameForEdge: edge]; 
+    
+  if (window != nil) {
+    [window setFrame: frame display: NO];
+    return window;
+  }
+
 	// otherwise we will have to create it... 
 	window = [[ZNEffectWindow alloc] initWithContentRect: frame
 																						 styleMask: NSBorderlessWindowMask
@@ -476,7 +480,7 @@
 	if (flag) 
 		[window orderFront: self]; 
 	else
-		[window orderOut: self]; 
+		[window orderOut: self];
 }
 
 @end 

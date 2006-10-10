@@ -17,12 +17,12 @@
 #import <Zen/ZNEdge.h> 
 
 @interface VTMouseTrigger : VTTrigger<VTMouseWatcherProtocol> {
-    int				mModifiers;			//!< Modifiers of the hotkey 
+  int           mModifiers;			//!< Modifiers of the hotkey 
 	unsigned int	mClickCount;		//!< Click count needed
-	float			mDelay;				//!< Delay in ms. Only considered if mClickCount is 0
-	ZNEdge			mEdge;				//!< The edge for our trigger 
+	float         mDelay;         //!< Delay in ms. Only considered if mClickCount is 0
+	ZNEdge        mEdge;          //!< The edge for our trigger 
 	
-	NSTimer*		mTimer; 
+	NSTimer*      mTimer; 
 }
 
 #pragma mark -
@@ -40,5 +40,7 @@
 
 - (void) setModifiers: (int) modifiers; 
 - (int) modifiers; 
+
+- (void) resetOnScreenChanged: (id) sender;
 
 @end

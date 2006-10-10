@@ -71,6 +71,7 @@
 		
 		[self setName: [coder decodeObjectForKey: kVtCodingName]];
 		mDecoration = [[coder decodeObjectForKey: kVtCodingDecoration] retain];
+    mColorLabel = [[coder decodeObjectForKey: kVtCodingColorLabel] retain];
 		
 		return self;
 	}
@@ -86,6 +87,7 @@
 	
 	[coder encodeObject: mDecoration forKey: kVtCodingDecoration];
 	[coder encodeObject: [self name] forKey: kVtCodingName];
+  [coder encodeObject: mColorLabel forKey: kVtCodingColorLabel];
 }
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
@@ -107,8 +109,9 @@
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
+  [self setName: [dictionary objectForKey: kVtCodingName]];
 	[self setShowsBackground: [[dictionary objectForKey: kVtCodingShowsBackgroundImage] boolValue]];
-		
+
 	if ([self showsBackground]) {
 		[self setDesktopBackground: [dictionary objectForKey: kVtCodingBackgroundImage]];
 	}
@@ -116,7 +119,7 @@
 	mUUID				= [[dictionary objectForKey: kVtCodingUUID] copy];
 	NSColor* colorData	= [NSColor colorWithString: [dictionary objectForKey: kVtCodingColorLabel]];
 	
-	[self setName: [dictionary objectForKey: kVtCodingName]];
+	
 	
 	if (colorData)
 		mColorLabel = [colorData retain];
@@ -189,7 +192,6 @@
 
 #pragma mark -
 - (void) setColorLabel: (NSColor*) color {
-  NSLog(@"VTDesktop: setColorLabel: %@", [color stringValue]);
 	ZEN_ASSIGN(mColorLabel, color);
 }
 
