@@ -283,12 +283,10 @@
 - (void) showDesktop: (VTDesktop*) desktop {
   [mColorLabelButton unbind: @"selectedColorLabel"];
   [mDesktop unbind: @"colorLabel"];
-  
 	// attributes 
 	ZEN_ASSIGN(mDesktop, desktop);
-  
+
   [mColorLabelButton setSelectedColorLabel: [mDesktop colorLabel]];
-  
   [mDesktop bind: @"colorLabel"
         toObject: mColorLabelButton
      withKeyPath: @"selectedColorLabel"
