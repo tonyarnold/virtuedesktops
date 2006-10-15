@@ -37,7 +37,6 @@
 #pragma mark -
 @interface VTWindowPager (Private) 
 - (void) createWindow; 
-
 - (void) doDisplayWindow; 
 - (void) doHideWindow; 
 @end 
@@ -221,14 +220,27 @@
 #pragma mark -
 #pragma mark VTPager 
 
-- (void) display: (BOOL) stick {
-	mStick = stick; 
+- (IBAction) displayMe: (id) sender {
+  if (mWindow) {
+    [self doDisplayWindow];
+  } else {
+    [self createWindow];
+    [self doDisplayWindow];
+  }
+}
+
+- (IBAction) hideMe: (id) sender {
+	[self doHideWindow];
+}
+
+- (void) display: (BOOL) sticky {
+	mStick = sticky; 
   
 	[self doDisplayWindow]; 
 }
 
 - (void) hide {
-	[self doHideWindow];
+  [self doHideWindow];
 }
 
 #pragma mark -
@@ -236,20 +248,13 @@
 
 - (void) windowDidResignKey: (NSNotification*) aNotification {
 	// as soon as the window resigned key focus, we will close it 
-	[self doHideWindow];
-		
-	// if we got a selected desktop, switch to it
-	if ([(VTMatrixPagerView*)[mWindow contentView] selectedDesktop] == nil)
-		return; 
-	
-	VTDesktop* desktop = [(VTMatrixPagerView*)[mWindow contentView] selectedDesktop]; 
-	[[VTDesktopController sharedInstance] activateDesktop: desktop]; 
+//	[self doHideWindow];
 }
 
 #pragma mark -
 - (void) flagsChanged: (NSEvent*) event {
-	if (mStick == NO)
-		[self doHideWindow];
+	//if (mStick == NO)
+		//[self doHideWindow];
 }
 
 - (void) keyDown: (NSEvent*) event {
@@ -260,7 +265,7 @@
       ([characters characterAtIndex: 0] == NSCarriageReturnCharacter) ||
       ([characters characterAtIndex: 0] == 0x0020)) {
     
-		[self doHideWindow];
+		//[self doHideWindow];
 		return; 
 	}
 	// Escape: Will trigger closing without switch, by setting the selected 
@@ -278,7 +283,21 @@
 
 - (void) onDesktopSelected: (id) sender {
 	// order out window, we will do the rest then... 
-	[self doHideWindow];
+	//[self doHideWindow];
+  
+  //mShowing = NO; 
+  
+	// reactivate hotkeys 
+	//[[VTTriggerController sharedInstance] setEnabled: YES]; 
+  
+	VTDesktop* selectedDesktop = [(VTMatrixPagerView*)[mWindow contentView] selectedDesktop];
+  
+  // if we got a selected desktop, switch to it
+	if (!selectedDesktop)
+		return; 
+	
+	VTDesktop* desktop = [(VTMatrixPagerView*)[mWindow contentView] selectedDesktop]; 
+	[[VTDesktopController sharedInstance] activateDesktop: desktop]; 
 }
 
 #pragma mark -
@@ -297,9 +316,7 @@
 
 - (void) createWindow {
 	// create our view 
-	NSRect contentRect = NSZeroRect; 
-  
-  
+	NSRect contentRect = NSZeroRect;
 	
 	// create our view 
 	VTMatrixPagerView* view = [[[VTMatrixPagerView alloc] initWithFrame: contentRect forLayout: mLayout] autorelease];
@@ -329,7 +346,7 @@
 	[mWindow setInitialFirstResponder: view]; 
 	
 	// now set alpha to 1 and level accordingly 
-	[mWindow setAlphaValue: 1.0f]; 
+	[mWindow setAlphaValue: 0.0f]; 
 	[mWindow setLevel: kCGUtilityWindowLevel]; 
 	// set ourselves as the delegate 
 	[mWindow setDelegate: self]; 
@@ -387,15 +404,14 @@
 	[(VTMatrixPagerView*)[mWindow contentView] setSelectedDesktop: [[VTDesktopController sharedInstance] activeDesktop]]; 
 	// force redisplay to be sure we are displaying the latest snapshot
 	[[mWindow contentView] setNeedsDisplay: YES]; 
-	
 	// make our window the key window; we are being rude here and take away 
 	// key from other applications and make ourselves the active application
-	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES]; 
-	[(ZNEffectWindow*) mWindow setFadingAnimationTime: 0.0f]; 
-	[(ZNEffectWindow*) mWindow fadeIn]; 
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+	[(ZNEffectWindow*)mWindow setFadingAnimationTime: 0.5f];
+	[(ZNEffectWindow*)mWindow fadeIn]; 
 	
 	// and disable all hotkeys 
-	[[VTTriggerController sharedInstance] setEnabled: NO]; 
+	//[[VTTriggerController sharedInstance] setEnabled: NO]; 
 }
 
 - (void) doHideWindow {

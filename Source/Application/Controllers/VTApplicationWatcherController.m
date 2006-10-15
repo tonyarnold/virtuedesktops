@@ -53,7 +53,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		[[NSNotificationCenter defaultCenter] addObserver: self 
 																						 selector: @selector(onDesktopDidChange:) 
 																								 name: kPnOnDesktopDidActivate 
-																							 object: nil]; 
+																							 object: nil];
 	
 		// Set finder PSN (mFinderPSN)
 		[self findFinderApplication];
@@ -216,7 +216,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// If the switch was triggered via activation, give the activated process front process status and abort 
 	if (mFocusTriggeredSwitch) {
-		mFocusTriggeredSwitch = NO; 
+		mFocusTriggeredSwitch = NO;
 		SetFrontProcess(&mActivatedPSN); 
 		
 		return; 
@@ -226,9 +226,8 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 
 	
 	// check if the new desktop has any applications, and if it does not, change to the finder process 
-	
 	VTDesktop*			desktop							= [notification object];
-	PNApplication*	firstNonHiddenAppl	= nil; 
+	PNApplication*	firstNonHiddenApp   = nil; 
 	NSArray*				applications				= [desktop applications]; 
 	int							applicationCount		= [applications count]; 
 	int							i										= 0; 
@@ -239,16 +238,16 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		if ([[applications objectAtIndex: i] isHidden] == NO) {
 			realCount++; 
 			
-			if (firstNonHiddenAppl == nil)
-				firstNonHiddenAppl = [[applications objectAtIndex: i] retain]; 
+			if (firstNonHiddenApp == nil)
+				firstNonHiddenApp = [[applications objectAtIndex: i] retain]; 
 		}
 	}
 	
 	// more than one application means, we have at least one application but the finder active, so lets return 
 	if (realCount <= 1) {
-		if ((realCount > 0) && (firstNonHiddenAppl)) {
+		if ((realCount > 0) && (firstNonHiddenApp)) {
 			// we now have to check if the one non-application is the finder 
-			ProcessSerialNumber applicationPSN = [firstNonHiddenAppl psn]; 
+			ProcessSerialNumber applicationPSN = [firstNonHiddenApp psn]; 
 			Boolean				same; 
 		
 			SameProcess(&applicationPSN, &mFinderPSN, &same); 
@@ -257,13 +256,13 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		} else {
 			// if we come here, we have to activate the Finder 
 			SetFrontProcess(&mFinderPSN); 
-			[firstNonHiddenAppl release]; 
+			[firstNonHiddenApp release]; 
 			
 			return; 
 		}
 	}
 		
-	[firstNonHiddenAppl release]; 
+	[firstNonHiddenApp release]; 
 	
 	// Now take care of activating the first non-hidden application showing the topmost window 
 	int count = [[desktop windows] count]; 
@@ -274,11 +273,11 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 
 	// we will exclude applications that were set as "hidden", that is why we have to loop here
 	while (index < count) {
-		PNWindow*		frontWindow						= [[desktop windows] objectAtIndex: index];
+		PNWindow*       frontWindow				= [[desktop windows] objectAtIndex: index];
 		PNApplication*	frontWindowOwner	= [desktop applicationForPid: [frontWindow ownerPid]]; 
 		
 		if ([frontWindowOwner isHidden] == NO) {
-			ProcessSerialNumber frontWindowOwnerPsn = [frontWindow ownerPsn]; 
+			ProcessSerialNumber frontWindowOwnerPsn = [frontWindow ownerPsn];
 			SetFrontProcess(&frontWindowOwnerPsn); 		
 			
 			break; 
@@ -286,6 +285,8 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		
 		index++; 
 	}
+  
+  
 }
 
 - (void) appDidChange {

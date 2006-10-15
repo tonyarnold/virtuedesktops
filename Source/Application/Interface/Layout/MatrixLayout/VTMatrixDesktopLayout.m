@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import "VTMatrixDesktopLayout.h"
-#import "VTWindowPager.h"
 #import "VTMatrixPager.h" 
+#import "VTWindowPager.h"
 #import <Virtue/VTDesktopController.h>
 #import <Zen/Zen.h>
 
@@ -66,8 +66,11 @@
 		mContinous	= NO; 
 		mDraggable	= YES;
 		
-		// pager 
-		mPager		= [[VTMatrixPager alloc] initWithLayout: self]; 
+		// pagers
+    mMatrixPager = [[VTMatrixPager alloc] initWithLayout: self];
+    mWindowPager = [[VTWindowPager alloc] initWithLayout: self];
+		ZEN_ASSIGN(mPager, mMatrixPager); 
+    
 		
 		// set up desktop layout 
 		[self resizeDesktopLayout]; 
@@ -86,6 +89,7 @@
 	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"]; 
 	
 	ZEN_RELEASE(mPager); 
+  ZEN_RELEASE(mPagers);
 	ZEN_RELEASE(mDesktopLayout); 
 	
 	[super dealloc]; 
@@ -161,8 +165,21 @@
 
 #pragma mark -
 #pragma mark Attributes 
+- (void) setPager: (NSObject<VTPager>*) newPager {
+  if (newPager != nil)
+    ZEN_ASSIGN(mPager, newPager);
+}
+
 - (NSObject<VTPager>*) pager {
 	return mPager;
+}
+
+- (NSArray*) availablePagers {
+  NSMutableArray* _pagers = [[NSMutableArray alloc] init];
+  [_pagers addObject: mMatrixPager];
+  [_pagers addObject: mWindowPager];
+  ZEN_ASSIGN(mPagers, _pagers);
+  return mPagers;
 }
 
 - (NSArray*) desktops {

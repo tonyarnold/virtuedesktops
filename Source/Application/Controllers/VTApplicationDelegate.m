@@ -109,14 +109,8 @@ enum
 - (void) bootstrap {
 	// This registers us to recieve NSWorkspace notifications, even though we are have LSUIElement enabled
 	[NSApplication sharedApplication];
-	
-#if defined(__i386__) 
-	if ([self checkExecutablePermissions] == NO) {
-		[mAttentionPermissionsWindow makeKeyAndOrderFront: self];
-	}
-#endif /* __i386__ */
-	
-	// Retrieve the current version of the DockExtension, and whether it is currently loaded into the Dock process
+  
+  // Retrieve the current version of the DockExtension, and whether it is currently loaded into the Dock process
 	int dockCodeIsInjected		= 0;
 	int dockCodeMajorVersion	= 0;
 	int dockCodeMinorVersion	= 0;
@@ -125,7 +119,11 @@ enum
 	// Inject dock extension code into the Dock process if it hasn't been already
 	if (dockCodeIsInjected != 1) {
 		if (dec_inject_code() != 0) {
-			[FixFailedPanel makeKeyAndOrderFront: self];
+#if defined(__i386__) 
+      if ([self checkExecutablePermissions] == NO) {
+        [mAttentionPermissionsWindow makeKeyAndOrderFront: self];
+      }
+#endif /* __i386__ */
 			[[NSUserDefaults standardUserDefaults] setBool: NO
 			forKey: @"DockExtensionLoaded"];
 		} else {
@@ -397,9 +395,9 @@ enum
 	// If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and by setting the set-group-ID-on-execution bit
 	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);
 	if (fixExecutableStatus == 0) { 
-		NSLog(@"Fixing the VirtueDesktops executable's permissions so that we can execute as part of the procmod group.");
+//		NSLog(@"Fixing the VirtueDesktops executable's permissions so that we can execute as part of the procmod group.");
 	} else { 
-		NSLog(@"Installation of the VirtueDesktops dock extension has failed. Some of the VirtueDesktops features will not work as expected.");
+//		NSLog(@"Installation of the VirtueDesktops dock extension has failed. Some of the VirtueDesktops features will not work as expected.");
 	}
 	
 	
@@ -672,9 +670,7 @@ enum
 		
 		VTDesktop* newDesktop = [theChange objectForKey: NSKeyValueChangeNewKey];
 		VTDesktop* oldDesktop = [theChange objectForKey: NSKeyValueChangeOldKey];
-    
-    NSLog(@"Detected desktop change from %@ to %@", [oldDesktop name], [newDesktop name]);
-		
+    		
 		// unregister from the old desktop and reregister at the new one
 		if (oldDesktop)
 			[oldDesktop removeObserver: self 

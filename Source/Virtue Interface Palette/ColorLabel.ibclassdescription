@@ -1,7 +1,0 @@
-{
-	ColorLabel = {
-		SuperClass = NSView;
-		Attributes = {
-		};
-	};
-}

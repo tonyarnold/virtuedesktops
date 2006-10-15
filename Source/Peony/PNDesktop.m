@@ -483,7 +483,7 @@
 		if (([window level] == NSPopUpMenuWindowLevel) ||
 				([window level] == NSSubmenuWindowLevel) ||
 				([window level] == NSMainMenuWindowLevel)) {
-			[window release];
+			ZEN_RELEASE(window);
 			continue;
 		}
 
@@ -499,12 +499,12 @@
 			// and attach
 			[self attachApplication: application];
 			// and release application
-			[application release];
+			ZEN_RELEASE(application);
 		}
 		
 		// if the window is special, we do not include it in our list
 		if ([window isSpecial]) {
-			[window release];
+			ZEN_RELEASE(window);
 			continue;
 		}
 		
@@ -533,7 +533,7 @@
 			}
 		}
 
-		[window release];
+		ZEN_RELEASE(window);
 		// increment the list index
 		currentListIndex++;
 	}
@@ -586,7 +586,7 @@
 					// and attach application
 					[self attachApplication: application];
 					// safe to release it now
-					[application release];
+					ZEN_RELEASE(application);
 				}
 
 				[application bindWindow: stickyWindow];

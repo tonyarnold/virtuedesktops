@@ -174,6 +174,11 @@ extern OSStatus CGSSetWindowTransforms(const CGSConnection cid, CGSWindow *wids,
 extern OSStatus CGSMoveWorkspaceWindows(const CGSConnection connection, int toWorkspace, int fromWorkspace);
 extern OSStatus CGSMoveWorkspaceWindowList(const CGSConnection connection, CGSWindow *wids, int count, int toWorkspace);
 
+// Shadow from Austin Sarner/Jason Harris:
+extern OSStatus CGSSetWindowShadowAndRimParameters(const CGSConnection cid, CGSWindow wid, float standardDeviation, float density, int offsetX, int offsetY, unsigned int flags);
+extern OSStatus CGSGetWindowShadowAndRimParameters(const CGSConnection cid, CGSWindow wid, float* standardDeviation, float* density, int *offsetX, int *offsetY, unsigned int *flags);
+
+
 // extern OSStatus CGSConnectionGetPID(const CGSConnection cid, pid_t *pid, CGSConnection b);
 
 extern OSStatus CGSGetWindowProperty(const CGSConnection cid, CGSWindow wid, CGSValue key, CGSValue *outValue);

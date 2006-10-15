@@ -30,8 +30,10 @@
 
 #pragma mark -
 #pragma mark Operations 
-- (void) display: (BOOL) stick; 
-- (void) hide; 
+- (IBAction) displayMe: (id) sender; 
+- (IBAction) hideMe: (id) sender; 
+- (void) display: (BOOL) sticky;
+- (void) hide;
 
 #pragma mark -
 #pragma mark Attributes 

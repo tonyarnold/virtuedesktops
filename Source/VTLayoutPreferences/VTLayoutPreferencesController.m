@@ -63,41 +63,41 @@
 
 - (void) prepareSelectables {
 	// set up available layout button 
-	[mLayoutList removeAllItems]; 
-	
-	NSMenuItem* menuItem; 
-	
-	NSEnumerator*			layoutIter	= [[[VTLayoutController sharedInstance] layouts] objectEnumerator]; 
-	VTDesktopLayout*	layout			= nil; 
-	int								activeIndex	= -1; 
-	
-	while (layout = [layoutIter nextObject]) {
-		menuItem = [[[NSMenuItem alloc] initWithTitle: [layout name] action: @selector(onPagerSelected:) keyEquivalent: @""] autorelease]; 
-		[menuItem setRepresentedObject: layout]; 
-		[[mLayoutList menu] insertItem: menuItem atIndex: [mLayoutList numberOfItems]]; 
-		
-		if ([layout isEqual: [[VTLayoutController sharedInstance] activeLayout]]) 
-			activeIndex = [mLayoutList numberOfItems] - 1; 
-	}	
-	
-	// and set up 
-	[mLayoutList selectItemAtIndex: activeIndex];
+//	[mLayoutList removeAllItems]; 
+//	
+//	NSMenuItem* menuItem; 
+//	
+//	NSEnumerator*			layoutIter	= [[[VTLayoutController sharedInstance] layouts] objectEnumerator]; 
+//	VTDesktopLayout*	layout			= nil; 
+//	int								activeIndex	= -1; 
+//	
+//	while (layout = [layoutIter nextObject]) {
+//		menuItem = [[[NSMenuItem alloc] initWithTitle: [layout name] action: @selector(onPagerSelected:) keyEquivalent: @""] autorelease]; 
+//		[menuItem setRepresentedObject: layout]; 
+//		[[mLayoutList menu] insertItem: menuItem atIndex: [mLayoutList numberOfItems]]; 
+//		
+//		if ([layout isEqual: [[VTLayoutController sharedInstance] activeLayout]]) 
+//			activeIndex = [mLayoutList numberOfItems] - 1; 
+//	}	
+//	
+//	// and set up 
+//	[mLayoutList selectItemAtIndex: activeIndex];
 }
 
 - (void) selectLayout: (VTDesktopLayout*) layout {
 	// check for selected pager item and update content views accordingly
-	if ([NSStringFromClass([[[mLayoutList selectedItem] representedObject] class]) isEqualToString: @"VTMatrixDesktopLayout"]) {
+	//if ([NSStringFromClass([[[mLayoutList selectedItem] representedObject] class]) isEqualToString: @"VTMatrixDesktopLayout"]) {
 		// this is our built-in pager 
 		[mLayoutContainer setContentView: mMatrixLayoutView]; 
 		
-		return; 
-	}
+	//	return; 
+	//}
 	
 	// else check views and set them for the plugin 	
 }
 
 - (VTDesktopLayout*) selectedLayout {
-	return [[mLayoutList selectedItem] representedObject]; 
+//	return [[mLayoutList selectedItem] representedObject]; 
 }
 
 @end 

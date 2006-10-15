@@ -126,7 +126,12 @@
             LANGUAGE = ObjC; 
             SUPERCLASS = NSView; 
         }, 
-        {CLASS = VTColorLabelButton; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {doAction = id; }; 
+            CLASS = TAUIColorLabelButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSControl; 
+        }, 
         {
             ACTIONS = {
                 addDesktop = id; 
@@ -138,7 +143,7 @@
             LANGUAGE = ObjC; 
             OUTLETS = {
                 mAddPrimitiveMenu = NSMenu; 
-                mColorLabelButton = VTUIColorLabelButton; 
+                mColorLabelButton = TAUIColorLabelButton; 
                 mDecorationsController = NSArrayController; 
                 mDecorationsTableView = NSTableView; 
                 mDesktopController = NSObjectController; 
@@ -150,7 +155,6 @@
         }, 
         {CLASS = VTHotkeyTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {CLASS = VTImageViewFileDropper; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
-        {CLASS = VTUIColorLabelButton; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
         {CLASS = ZNImagePopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }
     ); 
     IBVersion = 1; 

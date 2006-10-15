@@ -142,8 +142,8 @@
             CLASS = VTLayoutPreferencesController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
+                mFixedMatrixLayoutView = NSView; 
                 mLayoutContainer = NSBox; 
-                mLayoutList = NSPopUpButton; 
                 mMatrixLayoutView = NSView; 
             }; 
             SUPERCLASS = NSPreferencePane; 

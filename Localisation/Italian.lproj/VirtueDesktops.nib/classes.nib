@@ -100,6 +100,8 @@
             OUTLETS = {draggedView = NSView; representedObject = NSObject; }; 
             SUPERCLASS = NSView; 
         }, 
+        {CLASS = NFHUDWindow; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
+        {CLASS = NFIWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
         {CLASS = NSDateFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
         {CLASS = NSFormatter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = NSNumberFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
@@ -150,7 +152,6 @@
             CLASS = VTApplicationDelegate; 
             LANGUAGE = ObjC; 
             OUTLETS = {
-                FixFailedPanel = NSWindow; 
                 mAttentionPermissionsWindow = NSWindow; 
                 mStatusItemActiveDesktopItem = NSMenu; 
                 mStatusItemMenu = NSMenu; 
@@ -175,6 +176,12 @@
                 mStatusBarDesktopsItem = NSMenu; 
                 mStatusBarMenu = NSMenu; 
             }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {displayMe = id; hideMe = id; }; 
+            CLASS = VTWindowPager; 
+            LANGUAGE = ObjC; 
             SUPERCLASS = NSObject; 
         }
     ); 

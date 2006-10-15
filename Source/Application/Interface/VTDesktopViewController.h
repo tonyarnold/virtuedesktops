@@ -20,7 +20,7 @@
 #import "VTHotkeyTextView.h" 
 #import "VTHotkeyCell.h"
 #import "VTMatrixDesktopLayout.h"
-#import <VTUserInterface/VTUIColorLabelButton.h>
+#import <TAUserInterfaceElements/TAUIColorLabelButton.h>
 
 @interface VTDesktopViewController : NSWindowController {
 	// Outlets
@@ -31,7 +31,7 @@
 	IBOutlet NSTableView*             mDecorationsTableView; 
 	IBOutlet NSButton*                mInspectPrimitiveButton; 
 	IBOutlet NSMenu*                  mAddPrimitiveMenu;
-  IBOutlet VTUIColorLabelButton*    mColorLabelButton;
+  IBOutlet TAUIColorLabelButton*    mColorLabelButton;
 	
 	// Instance variables 
 	VTDesktop*														mDesktop;			//!< The model we are dealing with 

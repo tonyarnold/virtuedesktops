@@ -18,7 +18,6 @@
 @interface VTLayoutPreferencesController : NSPreferencePane {
 // outlets 
 	IBOutlet NSBox*					mLayoutContainer; 
-	IBOutlet NSPopUpButton*	mLayoutList; 
 	IBOutlet NSView*				mMatrixLayoutView; 
 	IBOutlet NSView*				mFixedMatrixLayoutView;
 }

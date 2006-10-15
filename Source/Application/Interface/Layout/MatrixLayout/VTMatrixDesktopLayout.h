@@ -28,7 +28,12 @@
 	BOOL			mContinous; 
 	BOOL			mDraggable;
 	
+  
+  NSObject<VTPager>*  mMatrixPager;
+  NSObject<VTPager>*  mWindowPager;
+  
 	NSObject<VTPager>*	mPager; 
+  NSArray*            mPagers;
 	NSMutableArray*			mDesktopLayout; 
 }
 
@@ -40,7 +45,9 @@
 
 #pragma mark -
 #pragma mark Attributes 
+- (void) setPager: (NSObject<VTPager>*) newPager;
 - (NSObject<VTPager>*) pager;
+- (NSArray*) availablePagers;
 
 #pragma mark -
 - (unsigned int) numberOfRows; 
