@@ -4322,7 +4322,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA5D5FE80AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FE80AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4334,9 +4334,9 @@
 				PRODUCT_NAME = DockCommunicator;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FE90AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FE90AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -4361,9 +4361,9 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FEA0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FEA0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4385,9 +4385,9 @@
 				PRODUCT_NAME = Zen;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FEB0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FEB0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4409,9 +4409,9 @@
 				PRODUCT_NAME = Peony;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FEC0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FEC0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4435,9 +4435,9 @@
 				PRODUCT_NAME = Virtue;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FED0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FED0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4454,9 +4454,9 @@
 				PRODUCT_NAME = authtool;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FEE0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FEE0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4480,9 +4480,9 @@
 				PRODUCT_NAME = VTInterface;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FEF0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FEF0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4504,9 +4504,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF00AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF00AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4528,9 +4528,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF10AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF10AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4552,9 +4552,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF20AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF20AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4576,9 +4576,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF30AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF30AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4600,9 +4600,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF40AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF40AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4624,9 +4624,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF50AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF50AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4648,9 +4648,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF60AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF60AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4672,9 +4672,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF70AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF70AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4697,9 +4697,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF80AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF80AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4723,9 +4723,9 @@
 				PRODUCT_NAME = TAUserInterfaceElements;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FF90AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FF90AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4750,9 +4750,9 @@
 				WRAPPER_EXTENSION = palette;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FFA0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FFA0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4794,17 +4794,17 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
-		EA5D5FFB0AECB2EE002B9A3C /* Release (Intel only) */ = {
+		EA5D5FFB0AECB2EE002B9A3C /* Native Architecture Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
+				ARCHS = "$(NATIVE_ARCH)";
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_OBJC_GC = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Release (Intel only)";
+			name = "Native Architecture Release";
 		};
 		EA7A56A60A86A739000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5807,7 +5807,7 @@
 			buildConfigurations = (
 				EA7A56A60A86A739000D6B5E /* Debug */,
 				EA7A56A70A86A739000D6B5E /* Release */,
-				EA5D5FE80AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FE80AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5817,7 +5817,7 @@
 			buildConfigurations = (
 				EA7A58190A86AD7C000D6B5E /* Debug */,
 				EA7A581A0A86AD7C000D6B5E /* Release */,
-				EA5D5FE90AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FE90AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5827,7 +5827,7 @@
 			buildConfigurations = (
 				EA7A58FB0A86B076000D6B5E /* Debug */,
 				EA7A58FC0A86B076000D6B5E /* Release */,
-				EA5D5FEA0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FEA0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5837,7 +5837,7 @@
 			buildConfigurations = (
 				EA7A59590A86B4D4000D6B5E /* Debug */,
 				EA7A595A0A86B4D4000D6B5E /* Release */,
-				EA5D5FEB0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FEB0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5847,7 +5847,7 @@
 			buildConfigurations = (
 				EA7A5A290A86B5E6000D6B5E /* Debug */,
 				EA7A5A2A0A86B5E6000D6B5E /* Release */,
-				EA5D5FEC0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FEC0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5857,7 +5857,7 @@
 			buildConfigurations = (
 				EA7A5B550A86B7E5000D6B5E /* Debug */,
 				EA7A5B560A86B7E5000D6B5E /* Release */,
-				EA5D5FED0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FED0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5867,7 +5867,7 @@
 			buildConfigurations = (
 				EA7A5B660A86B809000D6B5E /* Debug */,
 				EA7A5B670A86B809000D6B5E /* Release */,
-				EA5D5FEE0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FEE0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5877,7 +5877,7 @@
 			buildConfigurations = (
 				EA7A617C0A86F366000D6B5E /* Debug */,
 				EA7A617D0A86F366000D6B5E /* Release */,
-				EA5D5FEF0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FEF0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5887,7 +5887,7 @@
 			buildConfigurations = (
 				EA7A62270A86F5C8000D6B5E /* Debug */,
 				EA7A62280A86F5C8000D6B5E /* Release */,
-				EA5D5FF00AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF00AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5897,7 +5897,7 @@
 			buildConfigurations = (
 				EA7A62630A86F7AB000D6B5E /* Debug */,
 				EA7A62640A86F7AB000D6B5E /* Release */,
-				EA5D5FF10AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF10AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5907,7 +5907,7 @@
 			buildConfigurations = (
 				EA7A62B10A86F8D7000D6B5E /* Debug */,
 				EA7A62B20A86F8D7000D6B5E /* Release */,
-				EA5D5FF20AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF20AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5917,7 +5917,7 @@
 			buildConfigurations = (
 				EA7A62DB0A86F9AF000D6B5E /* Debug */,
 				EA7A62DC0A86F9AF000D6B5E /* Release */,
-				EA5D5FF30AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF30AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5927,7 +5927,7 @@
 			buildConfigurations = (
 				EA7A63390A86FB4F000D6B5E /* Debug */,
 				EA7A633A0A86FB4F000D6B5E /* Release */,
-				EA5D5FF40AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF40AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5937,7 +5937,7 @@
 			buildConfigurations = (
 				EA7A635F0A86FC59000D6B5E /* Debug */,
 				EA7A63600A86FC59000D6B5E /* Release */,
-				EA5D5FF50AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF50AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5947,7 +5947,7 @@
 			buildConfigurations = (
 				EA7A63860A86FD3D000D6B5E /* Debug */,
 				EA7A63870A86FD3D000D6B5E /* Release */,
-				EA5D5FF60AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF60AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5957,7 +5957,7 @@
 			buildConfigurations = (
 				EA7A63E40A86FE65000D6B5E /* Debug */,
 				EA7A63E50A86FE65000D6B5E /* Release */,
-				EA5D5FFA0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FFA0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5967,7 +5967,7 @@
 			buildConfigurations = (
 				EAA9266F0A86A4E800D4674B /* Debug */,
 				EAA926700A86A4E800D4674B /* Release */,
-				EA5D5FFB0AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FFB0AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5977,7 +5977,7 @@
 			buildConfigurations = (
 				EAC00E280AD1065D00389BDB /* Debug */,
 				EAC00E290AD1065D00389BDB /* Release */,
-				EA5D5FF80AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF80AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5987,7 +5987,7 @@
 			buildConfigurations = (
 				EAC013A10AD10BA500389BDB /* Debug */,
 				EAC013A20AD10BA500389BDB /* Release */,
-				EA5D5FF90AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF90AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5997,7 +5997,7 @@
 			buildConfigurations = (
 				EAFCF6320AB65C44005882DB /* Debug */,
 				EAFCF6330AB65C44005882DB /* Release */,
-				EA5D5FF70AECB2EE002B9A3C /* Release (Intel only) */,
+				EA5D5FF70AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
