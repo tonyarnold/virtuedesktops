@@ -130,14 +130,16 @@
 	CGSConnection oConnection = _CGSDefaultConnection();
 	OSStatus		iResult;
 
-	CGSValue		oKey = (int)CFStringCreateWithCStringNoCopy(kCFAllocatorDefault, [key UTF8String], kCFStringEncodingUTF8, kCFAllocatorNull);
+  CGSValue		oKey = CGSCreateCStringNoCopy([key cString]);
 	CGSValue		oValue;
-
-	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue);
   
-	if (iResult == nil && oValue) {
-    return (NSString*)oValue;
-  }
+	iResult = CGSGetWindowProperty(oConnection, mNativeWindow, oKey, &oValue);
+	if (iResult)
+		return nil;
+  
+	char* acValueString = CGSCStringValue(oValue);
+	if (acValueString)
+		return [NSString stringWithUTF8String: acValueString];
   
 	return nil;
 }
@@ -201,28 +203,27 @@
 
 - (NSString*) name {
 	static CGSValue kCGSWindowTitle = (int)NULL;
-	NSString *tmpCStr = [[NSString alloc] initWithString: @"kCGSWindowTitle"];
-	// we have to create the private constant
+		// we have to create the private constant
 	if (kCGSWindowTitle == (int)NULL)
-		kCGSWindowTitle = (int)CFStringCreateWithCStringNoCopy(kCFAllocatorDefault, [tmpCStr UTF8String], kCFStringEncodingUTF8, kCFAllocatorNull);
-	
+		kCGSWindowTitle = CGSCreateCStringNoCopy("kCGSWindowTitle");
+  
 	CGSValue oWindowTitle = (int)NULL;
 	OSStatus oResult;
-
-	
+  
 	// get connection
 	CGSConnection oConnection = _CGSDefaultConnection();
-
+  
 	// get the window title
 	oResult = CGSGetWindowProperty(oConnection, mNativeWindow, kCGSWindowTitle, &oWindowTitle);
 	if (oResult) {
 		return nil;
 	}
-	
-	if (oWindowTitle) {
-    return (NSString*)oWindowTitle;
-  }
-
+  
+	char* acStrVal = CGSCStringValue(oWindowTitle);
+	if (acStrVal) {
+		return [NSString stringWithUTF8String: acStrVal];
+	}
+  
 	return nil;
 }
 
