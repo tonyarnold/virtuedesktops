@@ -4322,6 +4322,490 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA5D5FE80AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = DockCommunicator;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FE90AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "Property lists/DockExtension-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DockExtension;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FEA0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "Property lists/Zen-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Zen;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FEB0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "Property lists/Peony-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Peony;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FEC0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/Virtue-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Virtue;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FED0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = authtool;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FEE0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTInterface-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTInterface;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FEF0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTDesktopColorLabelPrimitive-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTDesktopColorLabelPrimitive;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF00AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTDesktopNamePrimitive-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTDesktopNamePrimitive;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF10AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTAppearancePreferences-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTAppearancePreferences;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF20AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTApplicationPreferences-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTApplicationPreferences;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF30AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTDesktopTemplatePreferences-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTDesktopTemplatePreferences;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF40AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTHotkeyPreferences-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTHotkeyPreferences;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF50AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTLayoutPreferences-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTLayoutPreferences;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF60AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/VTPluginPreferences-Info.plist";
+				INSTALL_PATH = "@executable_path/../PlugIns";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VTPluginPreferences;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF70AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property Lists/Light Sensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Light Sensor";
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF80AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/TAUserInterfaceElements-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TAUserInterfaceElements;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FF90AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Property lists/TA Interface Palette-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Palettes";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "TA Interface Palette";
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FFA0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_4)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_5)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_6)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_5 = "\"$(SRCROOT)/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_6 = "\"$(SRCROOT)/Shared/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Property lists/VirtueDesktops-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/UniMotion\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = VirtueDesktops;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Intel only)";
+		};
+		EA5D5FFB0AECB2EE002B9A3C /* Release (Intel only) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_OBJC_GC = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = "Release (Intel only)";
+		};
 		EA7A56A60A86A739000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5165,7 +5649,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "VTUserInterface-Info.plist";
+				INFOPLIST_FILE = "Property lists/TAUserInterfaceElements-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -5221,7 +5705,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Virtue Interface Palette-Info.plist";
+				INFOPLIST_FILE = "Property lists/TA Interface Palette-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -5323,6 +5807,7 @@
 			buildConfigurations = (
 				EA7A56A60A86A739000D6B5E /* Debug */,
 				EA7A56A70A86A739000D6B5E /* Release */,
+				EA5D5FE80AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5332,6 +5817,7 @@
 			buildConfigurations = (
 				EA7A58190A86AD7C000D6B5E /* Debug */,
 				EA7A581A0A86AD7C000D6B5E /* Release */,
+				EA5D5FE90AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5341,6 +5827,7 @@
 			buildConfigurations = (
 				EA7A58FB0A86B076000D6B5E /* Debug */,
 				EA7A58FC0A86B076000D6B5E /* Release */,
+				EA5D5FEA0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5350,6 +5837,7 @@
 			buildConfigurations = (
 				EA7A59590A86B4D4000D6B5E /* Debug */,
 				EA7A595A0A86B4D4000D6B5E /* Release */,
+				EA5D5FEB0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5359,6 +5847,7 @@
 			buildConfigurations = (
 				EA7A5A290A86B5E6000D6B5E /* Debug */,
 				EA7A5A2A0A86B5E6000D6B5E /* Release */,
+				EA5D5FEC0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5368,6 +5857,7 @@
 			buildConfigurations = (
 				EA7A5B550A86B7E5000D6B5E /* Debug */,
 				EA7A5B560A86B7E5000D6B5E /* Release */,
+				EA5D5FED0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5377,6 +5867,7 @@
 			buildConfigurations = (
 				EA7A5B660A86B809000D6B5E /* Debug */,
 				EA7A5B670A86B809000D6B5E /* Release */,
+				EA5D5FEE0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5386,6 +5877,7 @@
 			buildConfigurations = (
 				EA7A617C0A86F366000D6B5E /* Debug */,
 				EA7A617D0A86F366000D6B5E /* Release */,
+				EA5D5FEF0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5395,6 +5887,7 @@
 			buildConfigurations = (
 				EA7A62270A86F5C8000D6B5E /* Debug */,
 				EA7A62280A86F5C8000D6B5E /* Release */,
+				EA5D5FF00AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5404,6 +5897,7 @@
 			buildConfigurations = (
 				EA7A62630A86F7AB000D6B5E /* Debug */,
 				EA7A62640A86F7AB000D6B5E /* Release */,
+				EA5D5FF10AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5413,6 +5907,7 @@
 			buildConfigurations = (
 				EA7A62B10A86F8D7000D6B5E /* Debug */,
 				EA7A62B20A86F8D7000D6B5E /* Release */,
+				EA5D5FF20AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5422,6 +5917,7 @@
 			buildConfigurations = (
 				EA7A62DB0A86F9AF000D6B5E /* Debug */,
 				EA7A62DC0A86F9AF000D6B5E /* Release */,
+				EA5D5FF30AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5431,6 +5927,7 @@
 			buildConfigurations = (
 				EA7A63390A86FB4F000D6B5E /* Debug */,
 				EA7A633A0A86FB4F000D6B5E /* Release */,
+				EA5D5FF40AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5440,6 +5937,7 @@
 			buildConfigurations = (
 				EA7A635F0A86FC59000D6B5E /* Debug */,
 				EA7A63600A86FC59000D6B5E /* Release */,
+				EA5D5FF50AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5449,6 +5947,7 @@
 			buildConfigurations = (
 				EA7A63860A86FD3D000D6B5E /* Debug */,
 				EA7A63870A86FD3D000D6B5E /* Release */,
+				EA5D5FF60AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5458,6 +5957,7 @@
 			buildConfigurations = (
 				EA7A63E40A86FE65000D6B5E /* Debug */,
 				EA7A63E50A86FE65000D6B5E /* Release */,
+				EA5D5FFA0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5467,6 +5967,7 @@
 			buildConfigurations = (
 				EAA9266F0A86A4E800D4674B /* Debug */,
 				EAA926700A86A4E800D4674B /* Release */,
+				EA5D5FFB0AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5476,6 +5977,7 @@
 			buildConfigurations = (
 				EAC00E280AD1065D00389BDB /* Debug */,
 				EAC00E290AD1065D00389BDB /* Release */,
+				EA5D5FF80AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5485,6 +5987,7 @@
 			buildConfigurations = (
 				EAC013A10AD10BA500389BDB /* Debug */,
 				EAC013A20AD10BA500389BDB /* Release */,
+				EA5D5FF90AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5494,6 +5997,7 @@
 			buildConfigurations = (
 				EAFCF6320AB65C44005882DB /* Debug */,
 				EAFCF6330AB65C44005882DB /* Release */,
+				EA5D5FF70AECB2EE002B9A3C /* Release (Intel only) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
