@@ -14,7 +14,7 @@
 #import <Cocoa/Cocoa.h>
 
 #pragma mark Virte Application
-#define VTVirtueFirstRun									@"VTVirtueFirstRun"
+#define VTVirtueWelcomeShown							@"VTVirtueWelcomeShown"
 #define VTVirtueWarnBeforeQuitting				@"VTVirtueWarnBeforeQuitting"
 #define VTVirtueShowStatusbarMenu					@"VTVirtueShowStatusbarMenu"
 #define VTVirtueShowStatusbarDesktopName	@"VTVirtueShowStatusbarDesktopName"

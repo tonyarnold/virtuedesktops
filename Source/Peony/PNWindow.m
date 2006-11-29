@@ -219,7 +219,7 @@
 		return nil;
 	}
   
-	char* acStrVal = CGSCStringValue(oWindowTitle);
+	char *acStrVal = CGSCStringValue(oWindowTitle);
 	if (acStrVal) {
 		return [NSString stringWithUTF8String: acStrVal];
 	}

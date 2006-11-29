@@ -227,7 +227,7 @@
 #pragma mark VTPager 
 
 - (void) display: (BOOL) stick {
-	mStick = stick; 
+	mStick = stick;
 
 	[self doDisplayWindow]; 
 }
@@ -351,9 +351,11 @@
 		
 	// decide on the position to display the overlay... 
 	if (mDisplayUnderMouse == NO) {
+    [mWindow center];
+    windowFrame = [mWindow frame];
 		// we do not bind the pager to the mouse position, so we just center it
-		windowFrame.origin.x	= (int)(0.5f * (screenFrame.size.width - windowFrame.size.width));  
-		windowFrame.origin.y	= (int)(0.5f * (screenFrame.size.height - windowFrame.size.height));  
+		//windowFrame.origin.x	= (int)(0.5f * (screenFrame.size.width - windowFrame.size.width));  
+		//windowFrame.origin.y	= (int)(0.5f * (screenFrame.size.height - windowFrame.size.height));  
 	}
 	else {
 		if (mWarpMousePointer == YES) {

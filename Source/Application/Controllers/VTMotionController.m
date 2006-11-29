@@ -18,7 +18,8 @@
 
 @implementation VTMotionController
 
-+ (VTMotionController*) sharedInstance {
++ (VTMotionController*) sharedInstance 
+{
 	static VTMotionController* ms_INSTANCE = nil; 
 	
 	if (ms_INSTANCE == nil)
@@ -26,8 +27,10 @@
 	return ms_INSTANCE; 
 }
 
-- (id) init {
-  if (self = [super init]) {
+- (id) init 
+{
+  if (self = [super init]) 
+  {
     enabled = NO;
     sensor_speed = 0.1;
     activation_speed = 10;
@@ -42,8 +45,10 @@
 
 #pragma mark Coding
 
-- (id) initWithCoder: (NSCoder*) coder {
-	if (self = [super init]) {
+- (id) initWithCoder: (NSCoder*) coder 
+{
+	if (self = [super init]) 
+  {
 		enabled           = [coder decodeBoolForKey: kVtCodingMotionSensorEnabled]; 
     activation_speed  = [coder decodeFloatForKey: kVtCodingMotionSensorSensitivity];
 		return self; 
@@ -51,28 +56,40 @@
 	return nil; 
 }
 
-- (void) encodeWithCoder: (NSCoder*) coder {
+- (void) encodeWithCoder: (NSCoder*) coder 
+{
   [coder encodeBool: enabled forKey: kVtCodingMotionSensorEnabled];
   [coder encodeFloat: activation_speed forKey: kVtCodingMotionSensorSensitivity];
 }
 
 #pragma mark Getters and setters
 
-- (BOOL) isEnabled { return enabled; }
+- (BOOL) isEnabled 
+{ 
+  return enabled; 
+}
 
-- (void) setIsEnabled: (BOOL) enableValue {
+- (void) setIsEnabled: (BOOL) enableValue 
+{
   enabled = enableValue;
   
-  if (enabled) {
+  if (enabled) 
+  {
     [self startTimer];
-  } else {
+  } 
+  else 
+  {
     [self stopTimer];
   }
 }
 
-- (float) sensorSensitivity { return activation_speed; }
+- (float) sensorSensitivity 
+{ 
+  return activation_speed; 
+}
 
-- (void) setSensorSensitivity: (float) sensitivityValue {
+- (void) setSensorSensitivity: (float) sensitivityValue 
+{
   if (sensitivityValue == nil)
     return;
   
@@ -81,25 +98,37 @@
 
 
 #pragma mark -
-- (void) startTimer {  
+- (void) startTimer 
+{  
   read_sms(sensor_type, &x_speed, &y_speed, &z_speed);
-  sensorReadTimer = [[NSTimer scheduledTimerWithTimeInterval: sensor_speed target: self selector: @selector(readFromSensor:) userInfo: nil repeats: YES] retain];
+  sensorReadTimer = [[NSTimer scheduledTimerWithTimeInterval: sensor_speed 
+                                                      target: self 
+                                                    selector: @selector(readFromSensor:) 
+                                                    userInfo: nil 
+                                                     repeats: YES] retain];
 }
 
-- (void) stopTimer {
+- (void) stopTimer 
+{
   [sensorReadTimer invalidate];
   [sensorReadTimer release];
 }
 
-- (void) readFromSensor: (NSNotification*) notification {
+- (void) readFromSensor: (NSNotification*) notification 
+{
   read_sms(sensor_type, &next_x_speed, &y_speed, &z_speed);
   
-  if (cooldown == 0) {
+  if (cooldown == 0) 
+  {
     int difference = next_x_speed - x_speed;
-    if ( abs(difference) > activation_speed ) {
-      if (difference > 0) {
+    if ( abs(difference) > activation_speed ) 
+    {
+      if (difference > 0) 
+      {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToPrevWorkspace" object: nil]; 
-      } else {
+      } 
+      else 
+      {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToNextWorkspace" object: nil]; 
       }
       // This prevents recoil when the sensor gets a positive hit.
@@ -107,7 +136,9 @@
       cooldown = 8; 
       
     }
-  } else {
+  } 
+  else 
+  {
     // To prevent recoil
     cooldown -= 1;
   }

@@ -89,7 +89,9 @@
 	[newDesktop setName: [NSString stringWithFormat: @"Desktop %i", [newDesktop identifier]]]; 
 	
 	// and add it to our collection 
-	[[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]];
+  [[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]];
+
+  [[VTDesktopController sharedInstance] addInDesktops: newDesktop];
 }
 
 - (IBAction) deleteDesktop: (id) sender {
@@ -265,7 +267,7 @@
 @implementation VTDesktopViewController (Selection) 
 
 - (VTDesktop*) selectedDesktop {
-	int selectedIndex = [mDesktopsController selectionIndex]; 
+	int selectedIndex = [mDesktopsController selectionIndex];
 	if (selectedIndex == NSNotFound)
 		return nil; 
 	

@@ -24,7 +24,8 @@
 #include <IOKit/IOKitLib.h>
 #include <CoreFoundation/CoreFoundation.h>
 
-enum {
+enum 
+{
   kGetSensorReadingID   = 0,  // getSensorReading(int *, int *)
   kGetLEDBrightnessID   = 1,  // getLEDBrightness(int, int *)
   kSetLEDBrightnessID   = 2,  // setLEDBrightness(int, int, int *)
@@ -38,7 +39,8 @@ enum {
 
 @implementation VTLightSensorController
 
-+ (VTLightSensorController*) sharedInstance {
++ (VTLightSensorController*) sharedInstance 
+{
 	static VTLightSensorController* ms_INSTANCE = nil; 
 	
 	if (ms_INSTANCE == nil)
@@ -46,11 +48,13 @@ enum {
 	return ms_INSTANCE; 
 }
 
-- (id) init {
-  if (self = [super init]) {
+- (id) init 
+{
+  if (self = [super init]) 
+  {
     enabled = NO;
     sensitivity = 25;
-    stable = 14;
+    stable = 10;
     left_sum = 0;
     right_sum = 0;
     count = 0;
@@ -65,13 +69,15 @@ enum {
     
     // Look up a registered IOService object whose class is AppleLMUController  
     serviceObject = IOServiceGetMatchingService(kIOMasterPortDefault,  IOServiceMatching("AppleLMUController"));
-    if (serviceObject) {  
+    if (serviceObject) 
+    {  
       canEnable = YES;
       // Create a connection to the IOService object  
       kr = IOServiceOpen(serviceObject, mach_task_self(), 0, &dataPort);
       IOObjectRelease(serviceObject);
       
-      if (kr != KERN_SUCCESS) {  
+      if (kr != KERN_SUCCESS) 
+      {  
         mach_error("IOServiceOpen:", kr);
         exit(kr);
       }  
@@ -86,8 +92,10 @@ enum {
 
 #pragma mark Coding
 
-- (id) initWithCoder: (NSCoder*) coder {
-	if (self = [super init]) {
+- (id) initWithCoder: (NSCoder*) coder 
+{
+	if (self = [super init]) 
+  {
 		enabled      = [coder decodeBoolForKey: kVtCodingLightSensorEnabled]; 
     sensitivity  = [coder decodeIntForKey: kVtCodingLightSensorSensitivity];
 		return self; 
@@ -95,32 +103,45 @@ enum {
 	return nil; 
 }
 
-- (void) encodeWithCoder: (NSCoder*) coder {
+- (void) encodeWithCoder: (NSCoder*) coder 
+{
   [coder encodeBool: enabled forKey: kVtCodingLightSensorEnabled];
   [coder encodeInt: sensitivity forKey: kVtCodingLightSensorSensitivity];
 }
 
-- (BOOL) hasALSHardware {
+- (BOOL) hasALSHardware 
+{
   return canEnable;
 }
 
 #pragma mark Getters and setters
 
-- (BOOL) isEnabled { return enabled && canEnable; }
+- (BOOL) isEnabled 
+{ 
+  return enabled && canEnable; 
+}
 
-- (void) setIsEnabled: (BOOL) enableValue {
+- (void) setIsEnabled: (BOOL) enableValue 
+{
   enabled = enableValue;
   
-  if (enabled && canEnable) {
+  if (enabled && canEnable) 
+  {
     [self startTimer];
-  } else {
+  } 
+  else 
+  {
     [self stopTimer];
   }
 }
 
-- (int) sensorSensitivity { return sensitivity; }
+- (int) sensorSensitivity 
+{ 
+  return sensitivity; 
+}
 
-- (void) setSensorSensitivity: (int) sensitivityValue {
+- (void) setSensorSensitivity: (int) sensitivityValue 
+{
   if (sensitivityValue == nil)
     return;
   
@@ -129,45 +150,54 @@ enum {
 
 
 #pragma mark -
-- (void) startTimer {  
+- (void) startTimer 
+{  
   sensorReadTimer = [[NSTimer scheduledTimerWithTimeInterval: sensor_speed target: self selector: @selector(readFromSensor:) userInfo: nil repeats: YES] retain];
 }
 
-- (void) stopTimer {
+- (void) stopTimer 
+{
   [sensorReadTimer invalidate];
   [sensorReadTimer release];
 }
 
-- (void) readFromSensor: (NSNotification*) notification {
+- (void) readFromSensor: (NSNotification*) notification 
+{
   kern_return_t kr;
   IOItemCount scalarInputCount = 0;
   IOItemCount scalarOutputCount = 2;
   SInt32 left = 0, right = 0;
   
-  kr = IOConnectMethodScalarIScalarO(dataPort, kGetSensorReadingID,  scalarInputCount, scalarOutputCount, &left, &right);
+  kr = IOConnectMethodScalarIScalarO(dataPort, kGetSensorReadingID, scalarInputCount, scalarOutputCount, &left, &right);
   
-	if (kr == KERN_SUCCESS) {
+	if (kr == KERN_SUCCESS) 
+  {
 		left_sum = left_sum + left;
     right_sum = right_sum + right;
     
 		// Update averages
-    if ( count % stable == 0 ) {
+    if ( count % stable == 0 ) 
+    {
 			left_average  = left_sum / stable;
       right_average = right_sum / stable;
       left_sum  = 0;
 			right_sum = 0;
 		}
     
-    if (count > stable) {
+    if (count > stable) 
+    {
       
       int left_difference   = left_average  * (1-sensitivity/100);
       int right_difference  = right_average * (1-sensitivity/100);
             
       // We're now stable. Whenever we fire, reset the count
-      if ( left < left_difference) {
+      if ( left < left_difference ) 
+      {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToPrevWorkspace" object: nil];
         count = -1;
-      } else if ( right < right_difference) {
+      } 
+      else if ( right < right_difference) 
+      {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToNextWorkspace" object: nil];
         count = -1;
       }

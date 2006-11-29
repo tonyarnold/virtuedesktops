@@ -51,7 +51,7 @@
 		// attributes 
 		mToolbar		= nil; 
 		mToolbarItems	= [[NSMutableDictionary alloc] init]; 
-
+    
 		// caches 
 		mApplicationCache = [[NSMutableDictionary alloc] init]; 
 		// bindings to our desktops to update the outline view 
@@ -84,7 +84,7 @@
 	// observers 
 	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"]; 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
-
+  
 	// all desktops.. 
 	NSEnumerator*	desktopIter = [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	VTDesktop*		desktop		= nil; 
@@ -106,7 +106,7 @@
 	// set up the desktop 
 	[newDesktop setName: [NSString stringWithFormat: @"Desktop %i", [newDesktop identifier]]]; 
 	// and add it to our collection 
-	[[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]]; 
+	[[VTDesktopController sharedInstance] addInDesktops: newDesktop]; 
 }
 
 - (void) onDesktopDelete: (id) sender {
@@ -116,10 +116,10 @@
 		return; 
 	
 	VTDesktop*	desktop			= (VTDesktop*) selectedItem; 
-	int			desktopIndex	= [[[VTDesktopController sharedInstance] desktops] indexOfObject: desktop]; 
-
-	// remove the selected desktop 
-	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex]; 
+  int                     desktopIndex    = [[[VTDesktopController sharedInstance] desktops] indexOfObject: desktop];
+  
+  // remove the selected desktop
+  [[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex];
 }
 
 - (void) onDesktopInspect: (id) sender {
@@ -219,10 +219,10 @@
 #pragma mark NSOutlineView DataSource implementation 
 
 - (id) outlineView: (NSOutlineView*) outlineView child: (int) index ofItem: (id) item {
-	if (item == nil) {
-		// fetch desktop as the top-level item 
-		return [[[VTDesktopController sharedInstance] desktops] objectAtIndex: index]; 
-	}
+  //	if (item == nil) {
+  //		// fetch desktop as the top-level item 
+  //		return [[[VTDesktopController sharedInstance] desktops] objectAtIndex: index]; 
+  //	}
 	
 	// we are dealing with a desktop item here 
 	if ([item isKindOfClass: [VTDesktop class]]) {
@@ -236,7 +236,7 @@
 	// we are dealing with an application item here 
 	if ([item isKindOfClass: [PNApplication class]]) {
 		PNApplication*	application	= (PNApplication*)item; 
-
+    
 		// fetch all of its windows and return the correct window instance 
 		NSArray* applicationWindows	= [application windows];
 		
@@ -296,7 +296,7 @@
 	if ([item isKindOfClass: [PNWindow class]]) {
 		return [self windowDescription: (PNWindow*)item]; 
 	}
-
+  
 	// nothing to display here 
 	return nil; 
 }
@@ -317,8 +317,8 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	if ([keyPath isEqualToString: @"desktops"] ||
-		[keyPath isEqualToString: @"name"] ||
-		[keyPath isEqualToString: @"applications"]) {
+      [keyPath isEqualToString: @"name"] ||
+      [keyPath isEqualToString: @"applications"]) {
 		// update the outline view 
 		[mCollectionOutline reloadData]; 
 	} 
@@ -409,34 +409,34 @@
 		[applicationDescriptor appendAttributedString: [NSAttributedString attributedStringWithAttachment: attachment]];
 #endif 
 		
-	// description 
-	NSMutableAttributedString* description = [[[NSMutableAttributedString alloc] init] autorelease]; 
-	[description appendAttributedString: [[[NSAttributedString alloc] initWithString: [NSString stringWithFormat: @"%@\n", [application name]]] autorelease]]; 
-	
-	NSNumber* windowCount		= [NSNumber numberWithInt: [[application windows] count]]; 
-	NSString* windowCountString	= [windowCount intValue] == 0 ? @"no" : [windowCount stringValue]; 
-	NSString* windowString		= [windowCount intValue] == 1 ? @"window" : @"windows"; 
-	
-	NSString* windowDescription	= [NSMutableString stringWithFormat: @"Showing %@ %@", windowCountString, windowString]; 
-	
-	// assemble attributed string describing windows open 
-	NSDictionary* windowDescriptorAttr = [NSDictionary dictionaryWithObjectsAndKeys: 
-		[NSFont labelFontOfSize: [NSFont labelFontSize]], NSFontAttributeName,
-		[NSColor lightGrayColor], NSForegroundColorAttributeName, 
-		nil]; 
-	NSAttributedString* windowDescriptor = [[[NSMutableAttributedString alloc] initWithString: windowDescription attributes: windowDescriptorAttr] autorelease]; 
-	
-	[description appendAttributedString: windowDescriptor]; 
+    // description 
+    NSMutableAttributedString* description = [[[NSMutableAttributedString alloc] init] autorelease]; 
+    [description appendAttributedString: [[[NSAttributedString alloc] initWithString: [NSString stringWithFormat: @"%@\n", [application name]]] autorelease]]; 
+    
+    NSNumber* windowCount		= [NSNumber numberWithInt: [[application windows] count]]; 
+    NSString* windowCountString	= [windowCount intValue] == 0 ? @"no" : [windowCount stringValue]; 
+    NSString* windowString		= [windowCount intValue] == 1 ? @"window" : @"windows"; 
+    
+    NSString* windowDescription	= [NSMutableString stringWithFormat: @"Showing %@ %@", windowCountString, windowString]; 
+    
+    // assemble attributed string describing windows open 
+    NSDictionary* windowDescriptorAttr = [NSDictionary dictionaryWithObjectsAndKeys: 
+      [NSFont labelFontOfSize: [NSFont labelFontSize]], NSFontAttributeName,
+      [NSColor lightGrayColor], NSForegroundColorAttributeName, 
+      nil]; 
+    NSAttributedString* windowDescriptor = [[[NSMutableAttributedString alloc] initWithString: windowDescription attributes: windowDescriptorAttr] autorelease]; 
+    
+    [description appendAttributedString: windowDescriptor]; 
 		
-	// attach to final string 
-	[applicationDescriptor appendAttributedString: description]; 
-	
-	return applicationDescriptor; 
+    // attach to final string 
+    [applicationDescriptor appendAttributedString: description]; 
+    
+    return applicationDescriptor; 
 }
 
 - (NSAttributedString*) windowDescription: (PNWindow*) window {
 	return [[[NSAttributedString alloc] initWithString: [window name]] autorelease]; 
 }
-	
+
 
 @end 

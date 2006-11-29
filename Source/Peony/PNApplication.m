@@ -24,7 +24,7 @@
 		mWindows	= [[NSMutableArray array] retain]; 
 		
 		mName				= nil; 
-		mIcon				= nil; 
+		mIcon				= [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain]; 
 		mBundlePath	= nil; 
 		
 		mIsSticky	= NO; 
@@ -74,7 +74,7 @@
 
 #pragma mark -
 - (NSArray*) windows {
-	return mWindows; 
+  return mWindows; 
 }
 
 #pragma mark -
@@ -141,11 +141,12 @@
  *
  */ 
 - (void) setDesktop: (PNDesktop*) desktop {
-	// We will not modify the desktop we belong to but will just move all the windows we know about to the passed desktop, a new application instance will be created there... 
+	// We will not modify the desktop we belong to but will just move all the windows we know about to the passed desktop, a new application instance will be created there...
 	
 	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] init];
 	NSEnumerator*   windowIter					= [mWindows objectEnumerator];
 	PNWindow*       window							= nil;
+  
 	       
 	while (window = [windowIter nextObject]) {
 		if ([window isSticky] == 0)
@@ -158,8 +159,7 @@
 #pragma mark -
 
 - (NSString*) name {
-	if (mName != nil)
-		return mName; 
+	ZEN_RELEASE(mName);
 
 	if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) {
 		mName = @""; 
@@ -177,11 +177,11 @@
 
 #pragma mark -
 - (NSImage*) icon {
-	if (mIcon != nil)
-		return mIcon; 
-	
-	if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) {
-		return nil; 
+  ZEN_RELEASE(mIcon);
+
+  if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) 
+  {
+		mIcon = [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
 	}
 	
 	// get the application bundle location
@@ -193,7 +193,7 @@
 
 	// get the icon
 	mIcon = [[[NSWorkspace sharedWorkspace] iconForFile: [NSString stringWithCString: string]] retain];
-	
+  
 	return mIcon; 
 }
 

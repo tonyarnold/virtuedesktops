@@ -19,7 +19,7 @@
 
 @interface VTMatrixDesktopLayout : VTDesktopLayout<VTCoding> {
 	unsigned int	mRows; 
-	unsigned int	mColumns; 
+	unsigned int	mColumns;
 	
 	BOOL			mBindColumnsToRows; 
 	BOOL			mWraps;
@@ -34,7 +34,7 @@
   
 	NSObject<VTPager>*	mPager; 
   NSArray*            mPagers;
-	NSMutableArray*			mDesktopLayout; 
+	NSMutableArray*       mDesktopLayout; 
 }
 
 #pragma mark -

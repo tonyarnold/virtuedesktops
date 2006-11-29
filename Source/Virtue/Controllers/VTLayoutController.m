@@ -146,7 +146,7 @@
 
 - (void) readPreferences {
 	// read information back in 
-	NSDictionary*	layoutsDict		= [[NSUserDefaults standardUserDefaults] objectForKey: VTLayouts]; 
+	NSDictionary*	layoutsDict	= [[NSUserDefaults standardUserDefaults] objectForKey: VTLayouts]; 
 	NSString*		activeLayout	= [layoutsDict objectForKey: kVtCodingActiveLayout]; 
 	
 	if (layoutsDict == nil) 

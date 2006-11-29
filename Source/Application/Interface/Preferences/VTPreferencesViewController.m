@@ -177,10 +177,12 @@
 
 - (NSString*) iconForBundle: (NSBundle*) bundle {
 	NSString* iconFile = [bundle objectForInfoDictionaryKey: @"NSPrefPaneIconFile"];
+  
 	if (!iconFile)
 		iconFile = [bundle objectForInfoDictionaryKey: @"CFBundleIconFile"];
-	if (!iconFile)
-		iconFile = @""; 
+  
+  if (!iconFile)
+    iconFile = @"";
 	
 	return [bundle pathForImageResource: iconFile];
 }

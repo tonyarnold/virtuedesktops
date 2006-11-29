@@ -191,12 +191,11 @@ extern OSStatus CGSFlushWindow(const CGSConnection cid, const CGSWindow wid, int
 extern OSStatus CGSGetWindowOwner(const CGSConnection cid, const CGSWindow wid, CGSConnection *ownerCid);
 extern OSStatus CGSConnectionGetPID(const CGSConnection cid, pid_t *pid, const CGSConnection ownerCid);
 
-// Values 
-
+// Values
 extern int CGSIntegerValue(CGSValue intVal);
 extern void *CGSReleaseGenericObj(void*);
 
-// Deprecated
-// extern CGSValue CGSCreateCStringNoCopy(const char *str);
-// extern CGSValue CGSCreateCString(const char* str);
-// extern char* CGSCStringValue(CGSValue string);
+// Deprecated in 10.5
+extern CGSValue CGSCreateCStringNoCopy(const char *str);
+extern CGSValue CGSCreateCString(const char* str);
+extern char* CGSCStringValue(CGSValue string);

@@ -85,7 +85,7 @@
 #pragma mark NSObject 
 - (void) windowDidLoad {
 	// prepare application controller 
-	[mApplicationsController bind: @"contentArray" toObject: [VTApplicationController sharedInstance] withKeyPath: @"applications" options: nil]; 
+	[mApplicationsController bind: @"contentArray" toObject: [VTApplicationController sharedInstance] withKeyPath: @"applications" options: nil];
 	// register for changes to the desktops collection 
 	[[[VTLayoutController sharedInstance] activeLayout] addObserver: self 
 														 forKeyPath: @"orderedDesktops"

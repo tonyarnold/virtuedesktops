@@ -17,10 +17,10 @@
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 
 
-#define kVtCodingBundle			@"bundle"
-#define kVtCodingSticky			@"sticky"
-#define kVtCodingHidden			@"hidden"
-#define kVtCodingDesktop		@"desktop"
+#define kVtCodingBundle         @"bundle"
+#define kVtCodingSticky         @"sticky"
+#define kVtCodingHidden         @"hidden"
+#define kVtCodingDesktop        @"desktop"
 #define kVtCodingDesktopEnabled	@"desktopEnabled"
 
 @interface VTApplicationWrapper (Binding) 
@@ -169,14 +169,13 @@
 #pragma mark -
 - (void) setBindingToDesktop: (BOOL) flag {
 	mBindDesktop = flag;
-	
+  	
 	if ((mBindDesktop == NO) || (mSticky == YES))
 		return; 
-	
+  
+  ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] activeDesktop]);
 	// and move all of our windows there 
-	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
-	
-	
+	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];	
 }
 
 - (BOOL) isBindingToDesktop {
@@ -188,7 +187,7 @@
 	
 	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES))
 		return; 
-
+    
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
 	
@@ -338,7 +337,7 @@
 	if ([keyPath isEqualToString: @"windows"]) {
 		// note change of our windows path
 		[self willChangeValueForKey: @"windows"];
-		
+    		
 		// iterate all windows and move them if necessary 
 		if ((mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
@@ -411,7 +410,7 @@
 	// bundle itself 
 	mPid = 0; 
 
-	NSBundle* bundle		= [NSBundle bundleWithPath: mBundle]; 
+	NSBundle* bundle		= [NSBundle bundleWithPath: mBundle];
 	NSString* imageFile = [bundle objectForInfoDictionaryKey: @"CFBundleIconFile"];
 	NSString* imagePath	= [bundle pathForResource: [imageFile stringByDeletingPathExtension] ofType: [imageFile pathExtension]];
 	

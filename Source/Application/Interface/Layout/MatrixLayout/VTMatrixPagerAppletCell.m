@@ -50,9 +50,7 @@
 - (void) setApplication: (PNApplication*) application {
 	ZEN_ASSIGN(mApplication, application); 
 	
-	NSImage*	image		= [mApplication icon];//[[[mApplication icon] copy] autorelease];  
-	NSSize		imageSize	= NSMakeSize(16, 16); 
-	[image setSize: imageSize]; 
+	NSImage*	image		= [mApplication icon];
 	
 	[self setImage: image]; 
 	[[self controlView] setNeedsDisplay: YES]; 

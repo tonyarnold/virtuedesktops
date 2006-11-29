@@ -33,6 +33,7 @@
 	IBOutlet NSMenuItem*	mStatusItemRemoveActiveDesktopItem; 
 	IBOutlet NSTextField*	mVersionTextField;
 	IBOutlet NSWindow*		mAttentionPermissionsWindow;
+  IBOutlet NSPanel*     mWelcomePanel;
 	
 	// Attributes 
 	BOOL						mStartedUp; 
@@ -73,6 +74,7 @@
 - (IBAction) showWebsite: (id) sender; 
 - (IBAction) showForums: (id) sender; 
 - (IBAction) showDonationsPage: (id) sender; 
+- (IBAction) showWelcomePanel: (id) sender;
 
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender; 

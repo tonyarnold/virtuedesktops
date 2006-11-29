@@ -435,12 +435,11 @@
 		return;
 
 	// get connection
-	CGSConnection		oConnection						= _CGSDefaultConnection();
-	OSStatus				oResult;
+	CGSConnection oConnection = _CGSDefaultConnection();
+	OSStatus oResult;
 
 	int							iNumberOfWindows			= 0;
 	NSMutableData*	oWindows							= NULL;
-
 	BOOL						didChangeWindows			= NO;
 	BOOL						didChangeApplications = NO;
 
@@ -480,18 +479,22 @@
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
     
 		// ignore menus
-		if (([window level] == NSPopUpMenuWindowLevel) ||
-				([window level] == NSSubmenuWindowLevel) ||
-				([window level] == NSMainMenuWindowLevel)) {
+		if (([window level] != kCGBaseWindowLevelKey) &&
+        ([window level] != kCGMinimumWindowLevelKey) &&
+        ([window level] != kCGNormalWindowLevelKey) &&
+				([window level] != kCGFloatingWindowLevelKey) &&
+				([window level] != kCGStatusWindowLevelKey) &&
+        ([window level] != kCGModalPanelWindowLevelKey) &&
+        ([window level] != kCGMaximumWindowLevelKey) &&
+        ([window level] != kCGUtilityWindowLevelKey)) {
 			ZEN_RELEASE(window);
 			continue;
 		}
-
+    
 		// get application container
-		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];
+		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];    
 		
-		// if the application container does not contain a reference to the
-		// application, create a new one
+		// if the application container does not contain a reference to the application, create a new one
 		if (application == nil) {
 			didChangeApplications = YES;
 
@@ -507,19 +510,16 @@
 			ZEN_RELEASE(window);
 			continue;
 		}
-		
-		
-
+    
+    
 		// check if the window is in our list and add it if it isn't
 		if ([mWindows containsObject: window] == NO) {
 			// add the window to the list of known windows and mark ourselves as dirty
 			didChangeWindows = YES;
 			[mWindows insertObject: window atIndex: currentListIndex];
-			[application bindWindow: window];
 		}
 		else {
-			// we already knew about this window, and it apparently still exists, so
-			// we will remove it from the list of previous windows
+			// we already knew about this window, and it apparently still exists, so we will remove it from the list of previous windows
 			[previousWindows removeObject: window];
 
 			// and check if the position of the window changed
@@ -532,19 +532,22 @@
 				[mWindows insertObject: window atIndex: currentListIndex];
 			}
 		}
+    
+    // Bind the window to it's parent application
+    [application bindWindow: window];
 
 		ZEN_RELEASE(window);
 		// increment the list index
 		currentListIndex++;
 	}
-
-	// now handle sticky windows, this will only change the window
-	// list, if we are not the active desktop
+  
+	// now handle sticky windows, this will only change the window list, if we are not the active desktop
 	NSArray*				stickyWindowsCopy = [NSMutableArray arrayWithArray: [[PNStickyWindowCollection stickyWindowCollection] windows]];
 	NSEnumerator*		stickyIter				= [stickyWindowsCopy objectEnumerator];
 	PNWindow*				stickyWindow			= nil;
 
 	while (stickyWindow = [stickyIter nextObject]) {
+
 		// we take the chance and remove all the sticky windows that are no longer valid
 		if ([stickyWindow isValid] == NO)
 		{
@@ -593,7 +596,7 @@
 			}
 		}
 	}
-
+  
 	// All windows that are still left in the copied window list were not touched by the loop above and are no longer on the desktop, so we will remove them from the list of windows
 	NSEnumerator*		previousWindowsIter = [previousWindows objectEnumerator];
 	PNWindow*				checkWindow = nil;
@@ -601,7 +604,6 @@
 	while (checkWindow = [previousWindowsIter nextObject]) {
 		// remove…
 		didChangeWindows = YES;
-		
 
 		[mWindows removeObject: checkWindow];
 

@@ -58,9 +58,9 @@
 	
 	if (self = [super initWithName: name]) {
 		// attributes 
-		mRows		= 1; 
-		mColumns	= 3; 
-		mWraps		= YES;
+		mRows       = 1; 
+		mColumns    = 3; 
+		mWraps      = YES;
 		mJumpsGaps	= YES;
 		mCompacted	= NO; 
 		mContinous	= NO; 
@@ -187,20 +187,19 @@
 }
 
 - (NSArray*) orderedDesktops {
-	// assemble new array containing our desktops in the correct order and 
-	// excluding empty slots 
+	// assemble new array containing our desktops in the correct order and excluding empty slots 
 	NSMutableArray* orderedDesktops = [NSMutableArray array]; 
-	NSEnumerator*	desktopIter		= [mDesktopLayout objectEnumerator]; 
-	NSString*		desktopUUID		= nil; 
+	NSEnumerator*   desktopIter     = [mDesktopLayout objectEnumerator]; 
+	NSString*       desktopUUID     = nil; 
 	
 	while (desktopUUID = [desktopIter nextObject]) {
 		// jump over empty slots 
 		if ([desktopUUID isEqualToString: kFreeDesktopSlotIdentifier]) 
-			continue; 
-		
-		// and add the desktop instance 
-		[orderedDesktops addObject: [[VTDesktopController sharedInstance] desktopWithUUID: desktopUUID]]; 
-	}
+			continue;
+      
+    // and add the desktop instance
+    [orderedDesktops addObject: [[VTDesktopController sharedInstance] desktopWithUUID: desktopUUID]];
+  }
 
 	return orderedDesktops; 
 }
@@ -590,11 +589,13 @@
 		
 		// now we are dealing with a new desktop, find us a free slot 
 		int index = [mDesktopLayout indexOfObject: kFreeDesktopSlotIdentifier]; 
-		// if there are no more free slots, we will ignore this desktop
-		if (index == NSNotFound) 
-			continue; 
-		
-		[mDesktopLayout replaceObjectAtIndex: index withObject: [desktop uuid]]; 
+		// if there are no more free slots, we will add this desktop, otherwise    
+		if (index == NSNotFound) {
+      [self setNumberOfRows: ([self numberOfRows] + 1)];
+      [mDesktopLayout addObject: [desktop uuid]];
+    } else {
+      [mDesktopLayout replaceObjectAtIndex: index withObject: [desktop uuid]];
+    }
 	}
 	
 	[self didChangeValueForKey: @"orderedDesktops"];

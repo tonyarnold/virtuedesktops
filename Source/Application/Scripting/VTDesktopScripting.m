@@ -22,11 +22,9 @@
 	return [NSNumber numberWithUnsignedInt: (unsigned int)self]; 
 }
 
-- (NSScriptObjectSpecifier*) objectSpecifier {	
-	int index = [[[VTDesktopController sharedInstance] desktops] indexOfObject: self]; 
-	
+- (NSScriptObjectSpecifier*) objectSpecifier {
 	NSScriptObjectSpecifier* containerRef = [[VTDesktopController sharedInstance] objectSpecifier]; 
-	return [[[NSIndexSpecifier alloc] initWithContainerClassDescription: [containerRef keyClassDescription] containerSpecifier: containerRef key: @"desktops" index: index] autorelease]; 
+  return [[[NSUniqueIDSpecifier alloc] initWithContainerClassDescription:[containerRef keyClassDescription] containerSpecifier: containerRef key:@"desktops" uniqueID:[self uuid]] autorelease];
 }
 
 #pragma mark -

@@ -41,18 +41,14 @@
 
 #pragma mark -
 
-- (VTDesktop*) valueInDesktopsAtIndex: (unsigned int) index {
-	return [_desktops objectAtIndex: index]; 
+- (void) insertInDesktops: (VTDesktop*) desktop 
+{
+  [self insertObject: desktop inDesktopsAtIndex: [_desktops count]];
 }
 
-#pragma mark -
-
-- (void) insertInDesktops: (VTDesktop*) desktop {
-	[self insertObject: desktop inDesktopsAtIndex: [_desktops count]]; 
-}
-
-- (void) removeFromDesktopsAtIndex: (unsigned int) index {
-	[self removeObjectFromDesktopsAtIndex: index]; 
+- (void) removeFromDesktopsAtIndex: (unsigned int) index 
+{
+  [self removeObjectFromDesktopsAtIndex: index];
 }
 
 @end
