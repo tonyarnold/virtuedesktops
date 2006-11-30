@@ -99,7 +99,7 @@
                                                           object: nil];
 		
 		// create timer loop to update desktops 
-		[NSTimer scheduledTimerWithTimeInterval: 0.5 
+		[NSTimer scheduledTimerWithTimeInterval: 1.0 
                                      target: self 
                                    selector: @selector(onUpdateDesktops:) 
                                    userInfo: nil 

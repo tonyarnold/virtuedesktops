@@ -198,7 +198,7 @@
 }
 
 - (NSImage*) icon {
-	return mImage; 
+	return mImage;
 }
 
 - (NSArray*) windows {
@@ -407,15 +407,11 @@
 	}
 	
 	// if the application is not running, we fetch the information from the
-	// bundle itself 
+	// bundle itself
 	mPid = 0; 
-
-	NSBundle* bundle		= [NSBundle bundleWithPath: mBundle];
-	NSString* imageFile = [bundle objectForInfoDictionaryKey: @"CFBundleIconFile"];
-	NSString* imagePath	= [bundle pathForResource: [imageFile stringByDeletingPathExtension] ofType: [imageFile pathExtension]];
-	
-	mImage	= [[NSImage alloc] initByReferencingFile: imagePath];
-	mTitle	= [[bundle objectForInfoDictionaryKey: @"CFBundleName"] retain]; 
+	NSBundle* bundle = [NSBundle bundleWithPath: mBundle];
+  ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: mBundle]);
+	ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]); 
 }
 
 @end 

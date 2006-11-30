@@ -17,20 +17,23 @@
 
 #pragma mark -
 #pragma mark Lifetime 
-- (id) initWithPid: (pid_t) pid onDesktop: (PNDesktop*) desktop {
-	if (self = [super init]) {
+- (id) initWithPid: (pid_t) pid onDesktop: (PNDesktop*) desktop 
+{
+	if (self = [super init])
+  {
 		mPid			= pid; 
 		mDesktop	= [desktop retain]; 
 		mWindows	= [[NSMutableArray array] retain]; 
 		
-		mName				= nil; 
-		mIcon				= [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain]; 
+		mName			= nil; 
+		mIcon			= [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain]; 
 		mBundlePath	= nil; 
 		
 		mIsSticky	= NO; 
 		mIsHidden	= NO; 
 		
-		if (mPid == 0) {
+		if (mPid == 0)
+    {
 			// oops, no can do with this pid 
 			[self autorelease]; 
 			return nil; 
@@ -38,9 +41,12 @@
 		
 		// Create psn out of the pid
 		OSStatus oResult = GetProcessForPID(mPid, &mPsn); 
-		if (!oResult) {
+		if (!oResult)
+    {
 			return self;
-		} else {
+		}
+    else
+    {
 			[self autorelease]; 
 			return nil;
 		}
@@ -49,7 +55,8 @@
 	return nil; 
 }
 
-- (void) dealloc {
+- (void) dealloc
+{
 	// attributes 
 	ZEN_RELEASE(mWindows); 
 	ZEN_RELEASE(mName); 
@@ -64,43 +71,48 @@
 #pragma mark -
 #pragma mark Attributes 
 
-- (pid_t) pid {
+- (pid_t) pid
+{
 	return mPid; 
 }
 
-- (ProcessSerialNumber) psn {
+- (ProcessSerialNumber) psn
+{
 	return mPsn; 
 }
 
 #pragma mark -
-- (NSArray*) windows {
+- (NSArray*) windows
+{
   return mWindows; 
 }
 
 #pragma mark -
-- (void) setHidden: (BOOL) hidden {
+- (void) setHidden: (BOOL) hidden
+{
 	mIsHidden = hidden; 
 }
 
-- (BOOL) isHidden {
+- (BOOL) isHidden
+{
 	return mIsHidden; 
 }
 
 
 #pragma mark -
-- (void) setSticky: (BOOL) stickyState {
-	NSEnumerator*   windowIterator			= [mWindows objectEnumerator];
-	PNWindow*       window							= nil;
+- (void) setSticky: (BOOL) stickyState
+{
+  PNWindowList*   windowList = [PNWindowList windowListWithArray: mWindows];
+  [windowList setSticky: stickyState];
 	
-	while (window = [windowIterator nextObject]) {
-		[window setSticky: stickyState];
-	}
-	
-	if (stickyState == YES) {
+	if (stickyState == YES) 
+  {
 		// post notification about the window becoming sticky 
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: mWindows]; 
-	} else {
+	}
+  else
+  {
 		// post notification about the window being no longer sticky 
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: mWindows];		
@@ -108,19 +120,25 @@
 	mIsSticky = stickyState;
 }
 
-- (BOOL) isSticky {
+- (BOOL) isSticky 
+{
 	return mIsSticky; 
 }
 
 #pragma mark -
 
-- (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration {
+- (void) setAlphaValue: (float) alpha animate: (BOOL) flag withDuration: (float) duration 
+{
+  
 }
 
-- (void) setAlphaValue: (float) alpha {
+- (void) setAlphaValue: (float) alpha 
+{
+  
 }
 
-- (float) alphaValue {
+- (float) alphaValue 
+{
 	// currently we return 1.0 here, as there is no meaningful value to return 
 	// for a collection of windows... 
 	return 1.0f; 
@@ -176,35 +194,41 @@
 }
 
 #pragma mark -
-- (NSImage*) icon {
+- (NSImage*) icon 
+{
   ZEN_RELEASE(mIcon);
-
-  if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) 
+    
+	if ((mPsn.highLongOfPSN != 0) || (mPsn.lowLongOfPSN != 0))
   {
-		mIcon = [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
-	}
-	
-	// get the application bundle location
-	FSRef fsRef;
-	GetProcessBundleLocation(&mPsn, &fsRef); 
-	
-	char string[512];
-	FSRefMakePath(&fsRef, (UInt8 *)string, 512);
+    // get the application bundle location
+    FSRef fsRef;
+    GetProcessBundleLocation(&mPsn, &fsRef); 
+    
+    char string[512];
+    FSRefMakePath(&fsRef, (UInt8 *)string, 512);
 
-	// get the icon
-	mIcon = [[[NSWorkspace sharedWorkspace] iconForFile: [NSString stringWithCString: string]] retain];
+    // get the icon
+    mIcon = [[[NSWorkspace sharedWorkspace] iconForFile: [NSString stringWithCString: string]] retain];
+  }
+  
+  
+  // This doesn't seem to work
+  if (mIcon == nil)
+  {
+    mIcon = [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
+  }
   
 	return mIcon; 
 }
 
 #pragma mark -
-- (NSString*) bundlePath {
+- (NSString*) bundlePath 
+{
 	if (mBundlePath != nil)
 		return mBundlePath; 
 	
-	if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) {
+	if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) 
 		return nil; 
-	}	
 	
 	// get the application bundle location
 	FSRef fsRef;
@@ -222,7 +246,8 @@
 
 #pragma mark -
 
-- (BOOL) isValid {
+- (BOOL) isValid 
+{
 	ProcessSerialNumber psn; 
 	
 	// check if we can retrieve information about the process, and if
@@ -235,7 +260,8 @@
 #pragma mark -
 #pragma mark Binding windows 
 
-- (void) bindWindow: (PNWindow*) window {
+- (void) bindWindow: (PNWindow*) window 
+{
 	// check if we already know about this window, and if we do, return 
 	if ([mWindows containsObject: window])
 		return; 
@@ -250,7 +276,8 @@
 	[self didChangeValueForKey: @"windows"]; 
 }
 
-- (void) unbindWindow: (PNWindow*) window {
+- (void) unbindWindow: (PNWindow*) window 
+{
 	// check if we know about this window and return if we dont 
 	if ([mWindows containsObject: window] == NO)
 		return; 

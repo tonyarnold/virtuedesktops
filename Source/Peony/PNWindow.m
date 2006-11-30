@@ -1,15 +1,15 @@
 /******************************************************************************
- *
- * Peony framework
- *
- * A desktop extension for Mac OS X
- *
- * Copyright 2006, Tony Arnold tony@tonyarnold.com
- * Copyright 2004, Thomas Staller playback@users.sourceforge.net
- *
- * See COPYING for licensing details
- *
- *****************************************************************************/
+*
+* Peony framework
+*
+* A desktop extension for Mac OS X
+*
+* Copyright 2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2004, Thomas Staller playback@users.sourceforge.net
+*
+* See COPYING for licensing details
+*
+*****************************************************************************/
 #import <syslog.h>
 #import "PNWindow.h"
 #import "PNStickyWindowCollection.h"
@@ -36,7 +36,7 @@
 
 #pragma mark -
 /**
- * @brief Designated initializer for PNWindow instances
+* @brief Designated initializer for PNWindow instances
  *
  * @param windowId	The native CGSWindow id that is wrapped by the initialized instance
  *
@@ -55,7 +55,7 @@
 }
 
 /**
- * @brief Initializer for PNWindow instances
+* @brief Initializer for PNWindow instances
  *
  * @param window	The native NSWindow instance that should be wrapped by the initialized instance
  *
@@ -63,14 +63,14 @@
 - (id) initWithNSWindow: (NSWindow*) window {
 	// ask the passed window for its CGSWindow
 	CGSWindow nativeWindow = [window windowNumber];
-
+  
 	// pass on initialization using the CGSWindow id
 	return [self initWithWindowId: nativeWindow];
 }
 
 - (void) dealloc {
 	ZEN_RELEASE(mIcon);
-
+  
 	[super dealloc];
 }
 
@@ -80,7 +80,7 @@
 - (BOOL) isEqual: (id) toObject {
 	if ([toObject isKindOfClass: [PNWindow class]] == NO)
 		return NO;
-
+  
 	return (((PNWindow*)toObject)->mNativeWindow == mNativeWindow);
 }
 
@@ -112,12 +112,12 @@
 	CGSConnection	oConnection = _CGSDefaultConnection();
 	OSStatus			oResult;
 	int						iLevel;
-
+  
 	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel);
 	if (oResult) {
 		return NO;
 	}
-
+  
 	return YES;
 }
 
@@ -129,7 +129,7 @@
 - (NSString*) propertyForKey: (NSString*) key {
 	CGSConnection oConnection = _CGSDefaultConnection();
 	OSStatus		iResult;
-
+  
   CGSValue		oKey = CGSCreateCStringNoCopy([key cString]);
 	CGSValue		oValue;
   
@@ -151,20 +151,20 @@
 	// fetch the desktop this window resides on
 	CGSConnection	oConnection = _CGSDefaultConnection();
 	int				iDesktopId	= -1;
-
+  
 	OSStatus oResult = CGSGetWindowWorkspace(oConnection, mNativeWindow, &iDesktopId);
 	if (oResult) {
 		NSLog(@"[Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult);
 		return kPnDesktopInvalidId;
 	}
-
+  
 	return iDesktopId;
 }
 
 - (void) setDesktopId: (int) desktopId {
 	if ([self isSticky])
 		return;
-
+  
 	// notification parameters
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithInt: [self desktopId]], PNWindowChangeDesktopSourceParam,
@@ -183,7 +183,7 @@
 }
 
 /**
- * @brief Attaches the window to the passed desktop
+* @brief Attaches the window to the passed desktop
  *
  * @param desktop The desktop that will become the owner of this window
  *
@@ -192,7 +192,7 @@
 	// we won't allow setting a nil desktop
 	if (desktop == nil)
 		return;
-
+  
 	[self setDesktopId: [desktop identifier]];
 }
 
@@ -241,11 +241,11 @@
 	CGSConnection		oConnection = _CGSDefaultConnection();
 	OSStatus				oResult;
 	int							iLevel;
-
+  
 	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel);
 	if (oResult)
 		return kPnWindowInvalidLevel;
-
+  
 	return iLevel;
 }
 
@@ -258,11 +258,11 @@
 	CGSConnection		oConnection = _CGSDefaultConnection();
 	OSStatus				oResult;
 	float						fAlpha;
-
+  
 	oResult = CGSGetWindowAlpha(oConnection, mNativeWindow, &fAlpha);
 	if (oResult)
 		return 1.0;
-
+  
 	return fAlpha;
 }
 
@@ -276,7 +276,7 @@
 
 #pragma mark -
 /**
- * @brief Sets the window to be stickied according to the passed flag
+* @brief Sets the window to be stickied according to the passed flag
  *
  * @param stickyState If set ot @c YES, the window will be stickied, if
  *						set to @c NO, the window will become nonsticky.
@@ -291,28 +291,29 @@
  * @distnotify	kPnOnWindowUnstickied
  *					'window'	self.mNativeWindow
  */
-- (void) setSticky: (BOOL) stickyState {
-	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys:
-												[NSNumber numberWithInt: mNativeWindow], @"window",
-												nil];
-
-	if (stickyState == YES) {
+- (void) setSticky: (BOOL) stickyState
+{
+	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt: mNativeWindow], @"window", nil];
+  
+	if (stickyState == YES)
+  {
 		// post notification about the window becoming sticky
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowStickied object: nil userInfo: infoDict];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowStickied object: self];
 	}
-	else {
+	else
+  {
 		// post notification about the window being no longer sticky
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowUnstickied object: nil userInfo: infoDict];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowUnstickied object: self];
 	}
-
+  
 	// set sticky state
 	mIsSticky = stickyState;
 }
 
 /**
- * @brief		Query the sticky state of the window
+* @brief		Query the sticky state of the window
  *
  * @return	Returns @c YES if the window is sticky.
  *
@@ -320,15 +321,17 @@
  * windowing system. We trust ourselves to be consistent there.
  *
  */
-- (BOOL) isSticky {
+- (BOOL) isSticky
+{
 	return mIsSticky;
 }
 
 #pragma mark -
-- (void) setIgnoredByExpose: (BOOL) flag {
+- (void) setIgnoredByExpose: (BOOL) flag
+{
 	// first set our flag
 	mIsIgnoredByExpose = flag;
-
+  
 	// now set the window tag accordingly
 	if (flag)
 		CGSExtClearWindowTags(mNativeWindow, CGSTagExposeFade);
@@ -336,7 +339,8 @@
 		CGSExtSetWindowTags(mNativeWindow, CGSTagExposeFade);
 }
 
-- (BOOL) isIgnoredByExpose {
+- (BOOL) isIgnoredByExpose
+{
 	return mIsIgnoredByExpose;
 }
 
@@ -356,11 +360,11 @@
 	NSRect			rect;
 	OSStatus		oResult;
 	CGSConnection		oConnection = _CGSDefaultConnection();
-
+  
 	oResult = CGSGetScreenRectForWindow(oConnection, mNativeWindow, (CGRect*)&rect);
 	if (oResult)
 		return NSMakeRect(0, 0, 0, 0);
-
+  
 	return rect;
 }
 
@@ -369,7 +373,7 @@
 	if (mIcon == nil) {
 		mIcon = [[NSImage imageNamed: @"imageWindow.png"] retain];
 	}
-
+  
 	return mIcon;
 }
 
@@ -377,41 +381,41 @@
 - (pid_t) ownerPid {
 	if (mOwnerPid != kPnWindowInvalidPid)
 		return mOwnerPid;
-
+  
 	OSStatus		oResult;
-
+  
 	CGSConnection		oConnection = _CGSDefaultConnection();
 	CGSConnection		oOwnerCID;
-
+  
 	if (oResult = CGSGetWindowOwner(oConnection, mNativeWindow, &oOwnerCID)) {
-//		NSLog(@"[Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
+    //		NSLog(@"[Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
 		return 0;
 	}
-
+  
 	if (oResult = CGSConnectionGetPID(oOwnerCID, &mOwnerPid, oOwnerCID)) {
-//		NSLog(@"[Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
+    //		NSLog(@"[Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
 		mOwnerPid = kPnWindowInvalidPid;
 	}
-
+  
 	return mOwnerPid;
 }
 
 - (ProcessSerialNumber) ownerPsn {
 		ProcessSerialNumber oOwnerPsn;
 		OSStatus			oResult;
-
-	oOwnerPsn.highLongOfPSN = 0;
-	oOwnerPsn.lowLongOfPSN = 0;
-
-	if ([self ownerPid] == kPnWindowInvalidPid)
-		return oOwnerPsn;
-
-	oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
-	if (oResult) {
-		NSLog(@"PNWindow:442 - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
-	}
-
-	return oOwnerPsn;
+    
+    oOwnerPsn.highLongOfPSN = 0;
+    oOwnerPsn.lowLongOfPSN = 0;
+    
+    if ([self ownerPid] == kPnWindowInvalidPid)
+      return oOwnerPsn;
+    
+    oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
+    if (oResult) {
+      NSLog(@"PNWindow:442 - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
+    }
+    
+    return oOwnerPsn;
 }
 
 @end

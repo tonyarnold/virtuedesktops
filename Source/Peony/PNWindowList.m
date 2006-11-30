@@ -105,21 +105,25 @@
 }
 
 #pragma mark -
-- (void) setSticky: (BOOL) stickyState {
+- (void) setSticky: (BOOL) stickyState
+{
 	int* windows; 
 	int  windowsCount = [self nativeWindowsInCArray: &windows]; 
 		
-	if (stickyState == YES) {
+	if (stickyState == YES)
+  {
 		CGSExtSetWindowListTags(windows, windowsCount, CGSTagSticky); 
 	}
-	else {
+	else
+  {
 		CGSExtClearWindowListTags(windows, windowsCount, CGSTagSticky); 
 	}
 	
 	free(windows);
 }
 
-- (BOOL) isSticky {
+- (BOOL) isSticky 
+{
 	// cannot return anything useful here, think we should throw an exception 
 	return NO; 
 }
