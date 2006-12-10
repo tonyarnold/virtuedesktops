@@ -50,7 +50,7 @@
 	ZEN_ASSIGN_COPY(mPath, path); 
 	
 	// setting the image
-	[super setImage: [[[NSImage alloc] initByReferencingFile: mPath] autorelease]]; 
+	[super setImage: [[[NSImage alloc] initByReferencingFile: mPath] autorelease]];
 }
 
 - (NSString*) imagePath {

@@ -203,10 +203,10 @@
 #pragma mark Desktop background
 
 - (void) applyDesktopBackground {
-	if ([self showsBackground] == NO) {
-		[[VTDesktopBackgroundHelper sharedInstance] setBackground: [[VTDesktopBackgroundHelper sharedInstance] defaultBackground]];
-	} else {
+	if ([self showsBackground]) {
 		[[VTDesktopBackgroundHelper sharedInstance] setBackground: [self desktopBackground]];
+	} else {
+    [[VTDesktopBackgroundHelper sharedInstance] setBackground: [[VTDesktopBackgroundHelper sharedInstance] defaultBackground]];
 	}
 }
 

@@ -283,21 +283,19 @@
 }
 
 - (void) showDesktop: (VTDesktop*) desktop {
+  [mImageView	unbind: @"imagePath"];
+  [mDesktop unbind: @"desktopBackground"];
   [mColorLabelButton unbind: @"selectedColorLabel"];
   [mDesktop unbind: @"colorLabel"];
 	// attributes 
 	ZEN_ASSIGN(mDesktop, desktop);
 
-  [mColorLabelButton setSelectedColorLabel: [mDesktop colorLabel]];
-  [mDesktop bind: @"colorLabel"
-        toObject: mColorLabelButton
-     withKeyPath: @"selectedColorLabel"
-         options: nil];
+  [mImageView bind: @"imagePath" toObject: mDesktop withKeyPath: @"desktopBackground" options: nil];
+  [mDesktop bind: @"desktopBackground" toObject: mImageView withKeyPath: @"imagePath" options: nil];
   
-  [mColorLabelButton bind: @"selectedColorLabel"
-                 toObject: mDesktop
-              withKeyPath: @"colorLabel"
-                  options: nil];
+  [mColorLabelButton setSelectedColorLabel: [mDesktop colorLabel]];
+  [mDesktop bind: @"colorLabel" toObject: mColorLabelButton withKeyPath: @"selectedColorLabel" options: nil];
+  [mColorLabelButton bind: @"selectedColorLabel" toObject: mDesktop withKeyPath: @"colorLabel" options: nil];
 }
 
 @end 

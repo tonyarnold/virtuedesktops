@@ -26,13 +26,13 @@
 	// Outlets
   IBOutlet NSTableView*             mDesktopsTableView;
 	IBOutlet NSArrayController*       mDesktopsController; 
-	IBOutlet NSObjectController*      mDesktopController; 
 	IBOutlet NSArrayController*       mDecorationsController; 
 	IBOutlet NSTableView*             mDecorationsTableView; 
 	IBOutlet NSButton*                mInspectPrimitiveButton; 
 	IBOutlet NSMenu*                  mAddPrimitiveMenu;
   IBOutlet TAUIColorLabelButton*    mColorLabelButton;
-	
+	IBOutlet VTImageViewFileDropper*  mImageView;
+  
 	// Instance variables 
 	VTDesktop*														mDesktop;			//!< The model we are dealing with 
 	VTMatrixDesktopLayout*								mActiveDesktopLayout;

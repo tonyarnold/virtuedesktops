@@ -128,7 +128,6 @@
   
 	VTDesktop*	desktop			= [[VTDesktopController sharedInstance] activeDesktop]; 
 	NSWindow*		window			= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
-  NSLog(@"'%@' got notice we are about to switch away from it",[desktop name]);
 	[window setLevel: kVTNonActiveWindowLevel];
 }
 
@@ -143,8 +142,6 @@
 	
 	[pWindow setIgnoredByExpose: YES];
 	[pWindow setSticky: NO];
-  
-  NSLog(@"'%@' got notice we are going to switch to it",[desktopToActivate name]);
 }
 
 @end 
