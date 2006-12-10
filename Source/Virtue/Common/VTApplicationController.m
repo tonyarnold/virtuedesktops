@@ -78,7 +78,7 @@
 	
 	while (application = [applicationIter nextObject]) {
 		// decide if we want to code this application 
-		if (([application isSticky] == NO) && ([application isHidden] == NO) && ([application boundDesktop] == nil))
+		if (([application isSticky] == NO) && ([application isHidden] == NO) && ([application isUnfocused] == NO) && ([application boundDesktop] == nil))
 			continue; 
 		
 		NSMutableDictionary* applicationDict = [[NSMutableDictionary alloc] init]; 
@@ -183,7 +183,7 @@
 		return; 
 	
 	// check if we need to keep the application in our list
-	if (([wrapper isSticky]) || ([wrapper isHidden]) || ([wrapper isBindingToDesktop]))
+	if (([wrapper isSticky]) || ([wrapper isHidden]) || ([wrapper isUnfocused]) || ([wrapper isBindingToDesktop]))
 		return; 
 	
 	// if the application died, we will potentially remove it from our list 

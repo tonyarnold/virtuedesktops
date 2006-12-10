@@ -20,6 +20,7 @@
 #define kVtCodingBundle         @"bundle"
 #define kVtCodingSticky         @"sticky"
 #define kVtCodingHidden         @"hidden"
+#define kVtCodingUnfocused      @"unfocused"
 #define kVtCodingDesktop        @"desktop"
 #define kVtCodingDesktopEnabled	@"desktopEnabled"
 
@@ -40,7 +41,8 @@
 		mImage			= nil;
 		mBundle			= nil; 
 		mSticky			= NO; 
-		mBindDesktop	= NO; 
+		mBindDesktop	= NO;
+    mUnfocused		= NO;
 				
 		// and register our interest in desktop collection changes 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillRemove:) name: VTDesktopWillRemoveNotification object: nil]; 
@@ -89,8 +91,9 @@
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
 	[dictionary setObject: mBundle forKey: kVtCodingBundle]; 
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
-	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden]; 
-	[dictionary setObject: [NSNumber numberWithBool: mBindDesktop] forKey: kVtCodingDesktopEnabled]; 
+	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
+  [dictionary setObject: [NSNumber numberWithBool: mUnfocused] forKey: kVtCodingUnfocused];
+	[dictionary setObject: [NSNumber numberWithBool: mBindDesktop] forKey: kVtCodingDesktopEnabled];
 	if (mDesktop)
 		[dictionary setObject: [mDesktop uuid] forKey: kVtCodingDesktop]; 
 }
@@ -100,6 +103,7 @@
 	mBundle			= [[dictionary objectForKey: kVtCodingBundle] retain]; 
 	mSticky			= [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
 	mHidden			= [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
+  mUnfocused		= [[dictionary objectForKey: kVtCodingUnfocused] boolValue];
 	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue]; 
 	
 	// try to read the desktop
@@ -137,7 +141,7 @@
 		[application setSticky: flag]; 
 	}
 	
-	if ((mSticky == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
+	if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 		// and move all of our windows to the bound desktop 
 		[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
 	}
@@ -167,10 +171,30 @@
 }
 
 #pragma mark -
+- (void) setUnfocused: (BOOL) flag {
+	if (mUnfocused == flag)
+		return;
+	
+	mUnfocused = flag;
+	
+	// if we are running, tell all application objects to sticky 
+	NSEnumerator*	applicationIter	= [mApplications objectEnumerator]; 
+	PNApplication*	application		= nil; 
+	
+	while (application = [applicationIter nextObject]) {
+		[application setUnfocused: flag]; 
+	}
+}
+
+- (BOOL) isUnfocused {
+	return mUnfocused;
+}
+
+#pragma mark -
 - (void) setBindingToDesktop: (BOOL) flag {
 	mBindDesktop = flag;
   	
-	if ((mBindDesktop == NO) || (mSticky == YES))
+	if ((mBindDesktop == NO) || (mUnfocused == YES) || (mSticky == YES))
 		return; 
   
   ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] activeDesktop]);
@@ -185,7 +209,7 @@
 - (void) setBoundDesktop: (VTDesktop*) desktop {
 	ZEN_ASSIGN(mDesktop, desktop);
 	
-	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES))
+	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES) || (mUnfocused == YES))
 		return; 
     
 	// and move all of our windows there 
@@ -276,9 +300,10 @@
 	// now apply attributes 
 	[application setSticky: mSticky]; 
 	[application setHidden: mHidden];
+  [application setUnfocused: mUnfocused];
 	
 	// check if we should move this application to another desktop 
-	if ((mSticky == NO) && (mBindDesktop == YES) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
+	if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 		[application setDesktop: mDesktop];
 	}
 	
@@ -374,6 +399,7 @@
 				// now apply attributes 
 				[application setSticky: mSticky]; 
 				[application setHidden: mHidden]; 
+        [application setUnfocused: mUnfocused];
 				
 				// plus we are now officially interested in changes of the windows of this 
 				// application 
@@ -399,7 +425,7 @@
 		[application release]; 
 		
 		// check if we should move this application to another desktop 
-		if ((mSticky == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
+		if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
 		}
 		

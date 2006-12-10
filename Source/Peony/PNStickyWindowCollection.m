@@ -35,7 +35,7 @@
 		
 		// register observers 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillActivate:) name: kPnOnDesktopWillActivate object: nil]; 
-		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidActivate:) name: kPnOnDesktopDidActivate object: nil]; 		
+//		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidActivate:) name: kPnOnDesktopDidActivate object: nil]; 		
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowUnstickied:) name: kPnOnWindowUnstickied object: nil];
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
@@ -82,13 +82,11 @@
 	[mWindows setSticky: YES]; 
 }
 
-- (void) onDesktopDidActivate: (NSNotification*) aNotification
-{
-	// unsticky all windows to have them show up in the window lists
-	// returned by the CGSGetWorkspaceWindowList functions (is this
-	// intended behaviour or a bug in that function?)
-	[mWindows setSticky: NO]; 
-}
+//- (void) onDesktopDidActivate: (NSNotification*) aNotification
+//{
+	// unsticky all windows to have them show up in the window lists returned by the CGSGetWorkspaceWindowList functions (is this intended behaviour or a bug in that function?)
+//	[mWindows setSticky: NO];
+//}
 
 - (void) onWindowStickied: (NSNotification*) aNotification
 {

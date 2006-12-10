@@ -124,9 +124,11 @@
 
 - (void) onDesktopWillChange: (NSNotification*) notification {
 	// Get the desktop that will deactivate and set its decoration window to a more standard window level (in this case kVTNonActiveWindowLevel, or -5000). We need to set the window level higher, as windows with levels around kCGDesktopIconWindowLevel and lower will become the 'sticky', and appear on all desktops; this appears to be a 'feature' (nee 'bug') of the apple window manager -- rdar://4455434/ -- however, as Apple doesn't use the NSWorkspace switching for anything other than fast user switching (which will only ever have a single desktop picture per user), they see no reason to fix it. Seems fair, given that I seem to have managed a workaround ;)
+  
+  
 	VTDesktop*	desktop			= [[VTDesktopController sharedInstance] activeDesktop]; 
 	NSWindow*		window			= [mWindows objectForKey: [NSNumber numberWithInt: [desktop identifier]]];
-  
+  NSLog(@"'%@' got notice we are about to switch away from it",[desktop name]);
 	[window setLevel: kVTNonActiveWindowLevel];
 }
 
@@ -141,6 +143,8 @@
 	
 	[pWindow setIgnoredByExpose: YES];
 	[pWindow setSticky: NO];
+  
+  NSLog(@"'%@' got notice we are going to switch to it",[desktopToActivate name]);
 }
 
 @end 

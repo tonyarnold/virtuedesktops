@@ -26,7 +26,8 @@
 	VTDesktop*	mDesktop; 
 	BOOL		mSticky; 
 	BOOL		mHidden; 
-	BOOL		mBindDesktop; 
+	BOOL		mBindDesktop;
+  BOOL		mUnfocused;
 	
 	NSMutableArray*	mApplications; 
 }
@@ -49,6 +50,10 @@
 #pragma mark -
 - (void) setBindingToDesktop: (BOOL) flag; 
 - (BOOL) isBindingToDesktop; 
+
+#pragma mark -
+- (void) setUnfocused: (BOOL) flag;
+- (BOOL) isUnfocused;
 
 #pragma mark -
 - (void) setBoundDesktop: (VTDesktop*) desktop; 

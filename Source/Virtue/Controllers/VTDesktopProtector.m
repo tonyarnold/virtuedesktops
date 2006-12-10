@@ -99,8 +99,7 @@
 		[self createWindowForDesktop: desktop]; 
 	}
 	
-	// we are observing desktop changes, as we have to work around a nice 
-	// feature of the apple window manager... 
+	// we are observing desktop changes, as we have to work around a nice feature of the apple window manager... 
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
 	[[NSNotificationCenter defaultCenter]
@@ -121,9 +120,9 @@
 	// and create a nice view 
 	window = [[[NSWindow alloc] 
 						initWithContentRect: [[NSScreen mainScreen] visibleFrame] 
-								  styleMask: NSBorderlessWindowMask 
-									backing: NSBackingStoreBuffered
-									  defer: NO] autorelease];
+                      styleMask: NSBorderlessWindowMask 
+                        backing: NSBackingStoreBuffered
+                          defer: NO] autorelease];
 	
 	// create view 
 	view = [[[VTDesktopProtectorView alloc] initWithFrame: [window contentRectForFrameRect: [window frame]]] autorelease];    
@@ -138,7 +137,7 @@
 	[window setReleasedWhenClosed: NO]; 
 	[window display]; 
 	[window orderFront: self]; 
-
+  
 	// and make the window special to hide it 
 	PNWindow* windowWrapper = [PNWindow windowWithNSWindow: window]; 
 	[windowWrapper setSpecial: YES]; 

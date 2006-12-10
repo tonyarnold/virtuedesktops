@@ -35,7 +35,8 @@
 	PNDesktop*			mDesktop;		//!< Desktop this application is on 
 	
 	BOOL				mIsSticky;		//!< Is the application stickied?  
-	BOOL				mIsHidden;		//!< Is the application hidden from display? 
+	BOOL				mIsHidden;		//!< Is the application hidden from display?
+  BOOL				mIsUnfocused;	//!< Is the application unfocused?
 	NSMutableArray*		mWindows;		//!< All windows of the application 
 }
 
@@ -60,6 +61,11 @@
 // sticky 
 - (void) setSticky: (BOOL) stickyState; 
 - (BOOL) isSticky; 
+
+#pragma mark -
+// focus
+- (void) setUnfocused: (BOOL) unfocused;
+- (BOOL) isUnfocused;
 
 #pragma mark -
 // alphaValue 

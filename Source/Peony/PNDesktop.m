@@ -1,15 +1,15 @@
 /******************************************************************************
- *
- * Peony.Virtue
- *
- * A desktop extension for MacOS X
- *
- * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
- * Copyright 2006, Tony Arnold <tony@tonyarnold.com>
- *
- * See COPYING for licensing details
- *
- *****************************************************************************/
+*
+* Peony.Virtue
+*
+* A desktop extension for MacOS X
+*
+* Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+* Copyright 2006, Tony Arnold <tony@tonyarnold.com>
+*
+* See COPYING for licensing details
+*
+*****************************************************************************/
 
 #import "PNDesktop.h"
 #import "PNWindow.h"
@@ -36,7 +36,7 @@
 #pragma mark Lifetime
 
 /**
- * @brief		Factory for a desktop with passed id
+* @brief		Factory for a desktop with passed id
  *
  * @param		desktopId		The workspace id that should be wrapped
  *
@@ -50,7 +50,7 @@
 }
 
 /**
- * @brief		Factory for a desktop with passed id and name
+* @brief		Factory for a desktop with passed id and name
  *
  * @param		desktopId		The workspace id that should be wrapped
  * @param		andName			The desktop name
@@ -65,7 +65,7 @@
 #pragma mark -
 
 /**
- * @brief We do not allow initialisation of a non-connected desktop proxy
+* @brief We do not allow initialisation of a non-connected desktop proxy
  *
  */
 - (id) init 
@@ -74,7 +74,7 @@
 }
 
 /**
- * @brief Initialiser for a desktop
+* @brief Initialiser for a desktop
  *
  * @param desktopId The workspace id that is wrapped
  *
@@ -91,7 +91,7 @@
 }
 
 /**
- * @brief Designated initialiser for a desktop
+* @brief Designated initialiser for a desktop
  *
  * @param desktopId The workspace id that is wrapped
  * @param andName		The desktop name
@@ -108,7 +108,7 @@
 	ZEN_RELEASE(mDesktopName);
 	ZEN_RELEASE(mWindows);
 	ZEN_RELEASE(mApplications);
-
+  
 	// Delegate deallocation to superclass
 	[super dealloc];
 }
@@ -118,10 +118,10 @@
 - (id) copyWithZone: (NSZone*) zone 
 {
 	PNDesktop* desktop = [[PNDesktop alloc] initWithId: mDesktopId andName: mDesktopName update: NO];
-
+  
 	desktop->mWindows				= [mWindows retain];
 	desktop->mApplications	= [mApplications retain];
-
+  
 	return desktop;
 }
 
@@ -129,7 +129,7 @@
 #pragma mark Attributes
 
 /**
- * @brief		Returns the id of the desktop that is currently shown
+* @brief		Returns the id of the desktop that is currently shown
  *
  * @return	The workspace id of the currently shown desktop or kPnDesktopInvalidId if there was an error.
  */
@@ -140,19 +140,19 @@
 	
 	// Fetch the active desktop id and return nil in case of an error
 	int iWorkspaceId;
-
+  
 	OSStatus oResult = CGSGetWorkspace(oConnection, &iWorkspaceId);
 	if (oResult)
 	{
 		NSLog(@"PNDesktop cannot access current workspace [Error: %i]", oResult);
 		return kPnDesktopInvalidId;
 	}
-
+  
 	return iWorkspaceId;
 }
 
 /**
- * @brief Returns the lowest possible valid desktop id
+* @brief Returns the lowest possible valid desktop id
  *
  */
 + (int) firstDesktopIdentifier 
@@ -169,7 +169,7 @@
 - (void) setIdentifier: (int) identifier 
 {
 	mDesktopId = identifier;
-
+  
 	[self updateDesktop];
 }
 
@@ -183,7 +183,7 @@
 - (void) setName: (NSString*) name 
 {
 	[mDesktopName autorelease];
-
+  
 	if (name && ([name length] > 0))
 		mDesktopName = [name copy];
 	else
@@ -194,7 +194,7 @@
 #pragma mark -
 
 /**
- * @brief KVO compliant list of windows contained in the desktop
+* @brief KVO compliant list of windows contained in the desktop
  *
  */
 - (NSArray*) windows 
@@ -203,7 +203,7 @@
 }
 
 /**
- * @brief KVO compliant list of applications contained in the desktop
+* @brief KVO compliant list of applications contained in the desktop
  *
  */
 - (NSArray*) applications 
@@ -214,7 +214,7 @@
 #pragma mark -
 
 /**
- * @brief Checks if the desktop is currently shown to the user
+* @brief Checks if the desktop is currently shown to the user
  *
  * @return	Returns @c YES if the desktop is the one the user is currently working on, @c NO if it is not.
  *
@@ -222,14 +222,14 @@
 - (BOOL) visible 
 {
 	CGSConnection oConnection = _CGSDefaultConnection();
-
+  
 	int iActiveWorkspace;
 	OSStatus oResult = CGSGetWorkspace(oConnection, &iActiveWorkspace);
 	if (oResult) {
 		NSLog(@"[Desktop %i] Failed getting active workspace [Error: %i]", mDesktopId, oResult);
 		return NO;
 	}
-
+  
 	return (mDesktopId == iActiveWorkspace);
 }
 
@@ -240,7 +240,7 @@
 {
 	if ([other isKindOfClass: [PNDesktop class]] == NO)
 		return NO;
-
+  
 	return (mDesktopId == [(PNDesktop*)other identifier]);
 }
 
@@ -253,7 +253,7 @@
 #pragma mark Activation
 
 /**
- * @brief Activates the desktop using the default transition and duration settings
+* @brief Activates the desktop using the default transition and duration settings
  *
  */
 - (void) activate 
@@ -263,7 +263,7 @@
 }
 
 /**
- * @brief Activates the desktop using the passed transition and duration
+* @brief Activates the desktop using the passed transition and duration
  *
  * @param transition	The transition to use while switching
  * @param option		Option parameterizing the transition
@@ -292,13 +292,16 @@
 		transition = CGSNone;
 		seconds = 0;
 	}
-
+  
 	// Set-up the transition "effect" first
 	int handle;
+  
+  // Set the colour of the backdrop for the CGSTransition
 	float rgb[3];
-				rgb[0] = 0.0;
-				rgb[1] = 0.0;
-				rgb[2] = 0.0;
+  rgb[0] = 0.0;
+  rgb[1] = 0.0;
+  rgb[2] = 0.0;
+  
 	CGSTransitionSpec spec;
 	spec.unknown1		= 0;
 	spec.type				= transition;
@@ -306,17 +309,16 @@
 	spec.wid				= 0;
 	spec.backColour	= rgb;
 		
-		
-	// Create the transition, freezing all on-screen activity		
-	CGSNewTransition(cgs, &spec, &handle);
-
 	// Notify clients that we will soon be the active desktop
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
-
-	// Now switch the workspace while the screen is frozen, setting up the transition target
+	
+	// Create the transition, freezing all on-screen activity		
+	CGSNewTransition(cgs, &spec, &handle);
+  
+  // Now switch the workspace while the screen is frozen, setting up the transition target
 	CGSSetWorkspace(cgs, mDesktopId);
-
+  
 	// Notify listeners that we are now the active desktop
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: self];
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
@@ -331,6 +333,8 @@
 		
 	// Now release the transition from memory
 	CGSReleaseTransition(cgs, handle);
+  
+  handle = 0;
 }
 
 #pragma mark -
@@ -344,7 +348,7 @@
 	// Now go through the window list and move them to the new desktop
 	NSEnumerator*		windowIter = [mWindows objectEnumerator];
 	PNWindow*				window		 = nil;
-
+  
 	// TODO: Move functionality to use a PNWindowList for mass-window operations
 	while (window = [windowIter nextObject]) {
 		[window setDesktop: desktop];
@@ -352,7 +356,7 @@
 }
 
 /**
- * @brief Orders the passed window to the front of the current desktop
+* @brief Orders the passed window to the front of the current desktop
  *
  * @param window	Window to bring to the front
  *
@@ -362,13 +366,13 @@
 		return;
 	if ([mWindows objectAtIndex: 0] == window)
 		return;
-
+  
 	PNWindow* referenceWindow = [mWindows objectAtIndex: 0];
 	[window orderAbove: referenceWindow];
 }
 
 /**
- * @brief Orders the passed window to the back of the current desktop
+* @brief Orders the passed window to the back of the current desktop
  *
  * @param window	Window to bring to the back
  *
@@ -389,7 +393,7 @@
 }
 
 /**
- * @brief Sends the window under point behind all windows on the desktop
+* @brief Sends the window under point behind all windows on the desktop
  *
  */
 - (void) sendWindowUnderPointerBack
@@ -412,7 +416,7 @@
 #pragma mark Updating
 
 /**
- * @brief Clear the list of windows and fetch all windows in the workspace
+* @brief Clear the list of windows and fetch all windows in the workspace
  *
  * Queries windows for the wrapped desktop and adds new windows not yet contained
  * in the internal list of windows. Windows that are contained in the internal list
@@ -433,23 +437,23 @@
 {
 	if (mDesktopId < 0)
 		return;
-
+  
 	// get connection
 	CGSConnection oConnection = _CGSDefaultConnection();
 	OSStatus oResult;
-
+  
 	int							iNumberOfWindows			= 0;
 	NSMutableData*	oWindows							= NULL;
 	BOOL						didChangeWindows			= NO;
 	BOOL						didChangeApplications = NO;
-
+  
 	// first we have to query for the number of windows in our workspace
 	oResult = CGSGetWorkspaceWindowCount(oConnection, mDesktopId, &iNumberOfWindows);
 	if (oResult) {
 		NSLog(@"[Desktop %i] CGSGetWorkspaceWindowCount failed [%i]", mDesktopId, oResult);
 		return;
 	}
-
+  
 	// if the number of desktops is 0, we will skip fetching windows
 	if (iNumberOfWindows > 0)
   {
@@ -463,18 +467,18 @@
 		}
 	}
 	
-
+  
 	// Copy the current list of windows for cross checking
 	NSMutableArray* previousWindows = [NSMutableArray arrayWithArray: mWindows];
-
+  
 	int i									= 0;
 	int currentListIndex	= 0;
-
+  
 	// heya, now we can start synchronizing.. we will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
 	for ( i = 0; i < iNumberOfWindows; i++ ) {
 		// get entry from list of fetched windows
 		CGSWindow iWindowId = ((int*)[oWindows mutableBytes])[i];
-
+    
 		// get the window proxy
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
     
@@ -486,7 +490,8 @@
 				([window level] != kCGStatusWindowLevelKey) &&
         ([window level] != kCGModalPanelWindowLevelKey) &&
         ([window level] != kCGMaximumWindowLevelKey) &&
-        ([window level] != kCGUtilityWindowLevelKey)) {
+        ([window level] != kCGUtilityWindowLevelKey) &&
+        ([window level] != kCGBackstopMenuLevelKey)) {
 			ZEN_RELEASE(window);
 			continue;
 		}
@@ -497,7 +502,7 @@
 		// if the application container does not contain a reference to the application, create a new one
 		if (application == nil) {
 			didChangeApplications = YES;
-
+      
 			application = [[PNApplication alloc] initWithPid: [window ownerPid] onDesktop: self];
 			// and attach
 			[self attachApplication: application];
@@ -512,6 +517,14 @@
 		}
     
     
+    // If it is a utility palette, we should make it sticky, so palettes don't get lost across desktops
+    if (([window level] == kCGUtilityWindowLevelKey) ||
+        ([window level] == kCGBackstopMenuLevelKey) ||
+        ([window level] == kCGFloatingWindowLevelKey))
+    {
+      [window setSticky: YES];
+    }
+    
 		// check if the window is in our list and add it if it isn't
 		if ([mWindows containsObject: window] == NO) {
 			// add the window to the list of known windows and mark ourselves as dirty
@@ -521,12 +534,12 @@
 		else {
 			// we already knew about this window, and it apparently still exists, so we will remove it from the list of previous windows
 			[previousWindows removeObject: window];
-
+      
 			// and check if the position of the window changed
 			if (currentListIndex != [mWindows indexOfObject: window])
 			{
 				didChangeWindows = YES;
-
+        
 				// now we move the window to the new index
 				[mWindows removeObject: window];
 				[mWindows insertObject: window atIndex: currentListIndex];
@@ -535,7 +548,7 @@
     
     // Bind the window to it's parent application
     [application bindWindow: window];
-
+    
 		ZEN_RELEASE(window);
 		// increment the list index
 		currentListIndex++;
@@ -545,9 +558,9 @@
 	NSArray*				stickyWindowsCopy = [NSMutableArray arrayWithArray: [[PNStickyWindowCollection stickyWindowCollection] windows]];
 	NSEnumerator*		stickyIter				= [stickyWindowsCopy objectEnumerator];
 	PNWindow*				stickyWindow			= nil;
-
+  
 	while (stickyWindow = [stickyIter nextObject]) {
-
+    
 		// we take the chance and remove all the sticky windows that are no longer valid
 		if ([stickyWindow isValid] == NO)
 		{
@@ -564,7 +577,7 @@
 					[self detachApplication: application];
 				}
 			}
-
+      
 			if ([previousWindows containsObject: stickyWindow] == NO) {
 				// and post notification that the window was removed
 				[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowRemoved object: stickyWindow];
@@ -574,24 +587,24 @@
 		{
 			// remove from previous list if it is there
 			[previousWindows removeObject: stickyWindow];
-
+      
 			if (([stickyWindow isSpecial] == NO) && ([mWindows containsObject: stickyWindow] == NO)) {
 				didChangeWindows = YES;
 				[mWindows addObject: stickyWindow];
-
+        
 				PNApplication*	application = [mApplications objectForKey: [NSNumber numberWithInt: [stickyWindow ownerPid]]];
 				// if the application container does not contain a reference to the
 				// application, create a new one
 				if (application == nil) {
 					didChangeApplications = YES;
-
+          
 					application = [[PNApplication alloc] initWithPid: [stickyWindow ownerPid] onDesktop: self];
 					// and attach application
 					[self attachApplication: application];
 					// safe to release it now
 					ZEN_RELEASE(application);
 				}
-
+        
 				[application bindWindow: stickyWindow];
 			}
 		}
@@ -600,13 +613,13 @@
 	// All windows that are still left in the copied window list were not touched by the loop above and are no longer on the desktop, so we will remove them from the list of windows
 	NSEnumerator*		previousWindowsIter = [previousWindows objectEnumerator];
 	PNWindow*				checkWindow = nil;
-
+  
 	while (checkWindow = [previousWindowsIter nextObject]) {
 		// remove…
 		didChangeWindows = YES;
-
+    
 		[mWindows removeObject: checkWindow];
-
+    
 		// handle application windows
 		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [checkWindow ownerPid]]];
 		if (application != nil) {
@@ -625,14 +638,14 @@
 				[self detachApplication: application];
 			}
 		}
-
+    
 		// and post notification that the window was removed
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowRemoved object: checkWindow];
 	}
-
+  
 	// clear the list of previous windows
 	[previousWindows removeAllObjects];
-
+  
 	// now post KVO notification
 	if (didChangeWindows == YES) {
 		// should not get performance issues as i doubt someone will have 1000 windows
@@ -651,7 +664,7 @@
 #pragma mark Queries
 
 /**
- * @brief Finds the topmost window in the hierarchy containing the passed point
+* @brief Finds the topmost window in the hierarchy containing the passed point
  *
  * @param point Point to search for
  *
@@ -664,29 +677,29 @@
 	// iterate windows until we find a window containing the passed
 	// point or we reached the end of the list. we will not consider
 	// windows that were marked as special
-
+  
 	NSEnumerator*		windowIter	= [mWindows objectEnumerator];
 	PNWindow*				window			= nil;
-
+  
 	while (window = [windowIter nextObject]) {
 		//if ([window isSpecial])
 		//	continue;
 		//if ([window level] != kCGNormalWindowLevel)
 		//	continue;
-
+    
 		// fetch the screen rect to check
 		NSRect	windowRect = [window screenRectangle];
-
+    
 		if (NSMouseInRect(point, windowRect, NO)) {
 			return window;
 		}
 	}
-
+  
 	return nil;
 }
 
 /**
- * @brief Searches for the application with the passed pid
+* @brief Searches for the application with the passed pid
  *
  * @param pid Process id for the application to return
  *
@@ -700,7 +713,7 @@
 }
 
 /**
- * @brief Searches for the window with the passed window id
+* @brief Searches for the window with the passed window id
  *
  * @param window	Window to search for
  *
@@ -714,7 +727,7 @@
 }
 
 /**
- * @brief Searches for the bottom-most window
+* @brief Searches for the bottom-most window
  *
  * @return	Returns the bottom-most window if any or nil
  *
@@ -723,7 +736,7 @@
   int nWindows = [mWindows count];
   if (nWindows == 0)
     return nil;
-
+  
   PNWindow* window = (PNWindow*) [mWindows objectAtIndex: (nWindows - 1)];
   
   if (!window)
@@ -733,7 +746,7 @@
 }
 
 /**
- * @todo	Remove and change over to windowForId
+* @todo	Remove and change over to windowForId
  *
  */
 - (PNWindow*) windowWithId: (CGSWindow) windowId 
@@ -741,12 +754,12 @@
 	// iterate through the list of windows until we find the passed window id
 	NSEnumerator*		windowIter	= [mWindows objectEnumerator];
 	PNWindow*		window		= nil;
-
+  
 	while (window = [windowIter nextObject]) {
 		if ([window nativeWindow] == windowId)
 			return window;
 	}
-
+  
 	return nil;
 }
 
@@ -758,14 +771,14 @@
 		mDesktopName	= [name copy];
 		mWindows		= [[NSMutableArray array] retain];
 		mApplications = [[NSMutableDictionary dictionary] retain];
-
+    
 		// build up list of windows we got in our workspace
 		if (update == YES)
 			[self updateDesktop];
-
+    
 		return self;
 	}
-
+  
 	return nil;
 }
 
@@ -779,14 +792,14 @@
 		return;
 	if ([application bundlePath] == nil)
 		return;
-
+  
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
 		application, PNApplicationInstanceParam,
 		self, PNApplicationDesktopParam,
 		nil];
-
+  
 	[mApplications removeObjectForKey: [NSNumber numberWithInt: [application pid]]];
-
+  
 	// and post notification
 	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application bundlePath] userInfo: userInfo];
 }
@@ -797,9 +810,9 @@
 		return;
 	if ([application bundlePath] == nil)
 		return;
-
+  
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
-
+  
 	[mApplications setObject: application forKey: [NSNumber numberWithInt: [application pid]]];
 	
 	// and post notification

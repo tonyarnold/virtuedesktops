@@ -30,7 +30,8 @@
 		mBundlePath	= nil; 
 		
 		mIsSticky	= NO; 
-		mIsHidden	= NO; 
+		mIsHidden	= NO;
+    mIsUnfocused = NO;
 		
 		if (mPid == 0)
     {
@@ -123,6 +124,17 @@
 - (BOOL) isSticky 
 {
 	return mIsSticky; 
+}
+
+#pragma mark -
+- (void) setUnfocused: (BOOL) unfocused
+{
+  mIsUnfocused = unfocused; 
+}
+
+- (BOOL) isUnfocused
+{
+  return mIsUnfocused; 
 }
 
 #pragma mark -

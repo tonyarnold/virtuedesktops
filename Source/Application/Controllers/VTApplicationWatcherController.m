@@ -184,6 +184,10 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 				// check if this is the current desktop, and if it is, we will abort immediately
 				if ([[[VTDesktopController sharedInstance] activeDesktop] isEqual: desktop])
 					return; 
+        
+        // Don't want to switch on new window, just like finder
+        if (neededModifiers == 0 && [application isUnfocused])
+          return;
 				
 				[desktops addObject: desktop]; 
 			}
@@ -215,7 +219,8 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// If the switch was triggered via activation, give the activated process front process status and abort 
-	if (mFocusTriggeredSwitch) {
+	if (mFocusTriggeredSwitch) 
+  {
 		mFocusTriggeredSwitch = NO;
 		SetFrontProcess(&mActivatedPSN); 
 		
