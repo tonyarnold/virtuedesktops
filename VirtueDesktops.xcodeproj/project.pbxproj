@@ -35,7 +35,13 @@
 		EA4039570A89CDDE00807BE2 /* imageWidgetAddPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */; };
 		EA4039580A89CDDE00807BE2 /* imageWidgetAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */; };
 		EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56540A86A70C000D6B5E /* iconDesktopFolder.icns */; };
-		EA4D9D330B2D9B92009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
+		EA4B683A0B2E0CAB0079CE21 /* Virtue-menu-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4B68390B2E0CAB0079CE21 /* Virtue-menu-highlighted.png */; };
+		EA4B68420B2E0D8D0079CE21 /* OAGradientTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4B68400B2E0D8D0079CE21 /* OAGradientTableView.h */; };
+		EA4B68430B2E0D8D0079CE21 /* OAGradientTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */; };
+		EA4B68480B2E0D970079CE21 /* VTScalingImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4B68440B2E0D970079CE21 /* VTScalingImageCell.h */; };
+		EA4B68490B2E0D970079CE21 /* VTScalingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */; };
+		EA4B684A0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4B68460B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h */; };
+		EA4B684B0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */; };
 		EA4D9D3E0B2D9BBC009B8605 /* preferences-system-windows.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */; };
 		EA4D9D440B2D9BDB009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
 		EA4D9D610B2D9BEA009B8605 /* dialog-information.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */; };
@@ -847,6 +853,13 @@
 		EA36CCE90A9C4F6B0081417B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAddPressed.png; sourceTree = "<group>"; };
 		EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAdd.png; sourceTree = "<group>"; };
+		EA4B68390B2E0CAB0079CE21 /* Virtue-menu-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Virtue-menu-highlighted.png"; sourceTree = "<group>"; };
+		EA4B68400B2E0D8D0079CE21 /* OAGradientTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAGradientTableView.h; sourceTree = "<group>"; };
+		EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAGradientTableView.m; sourceTree = "<group>"; };
+		EA4B68440B2E0D970079CE21 /* VTScalingImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTScalingImageCell.h; sourceTree = "<group>"; };
+		EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTScalingImageCell.m; sourceTree = "<group>"; };
+		EA4B68460B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTVerticallyCentredTextFieldCell.h; sourceTree = "<group>"; };
+		EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTVerticallyCentredTextFieldCell.m; sourceTree = "<group>"; };
 		EA4D9D2C0B2D9B88009B8605 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog-information.png"; sourceTree = "<group>"; };
 		EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-system-windows.png"; sourceTree = "<group>"; };
@@ -2355,6 +2368,7 @@
 				EA7A56980A86A70C000D6B5E /* old_imagePositionMarker.png */,
 				EA7A56990A86A70C000D6B5E /* old_imagePositionMarkerPressed.png */,
 				EA7A569A0A86A70C000D6B5E /* old_imagePreferencesAppearance.tiff */,
+				EA4B68390B2E0CAB0079CE21 /* Virtue-menu-highlighted.png */,
 				EA4D9D2B0B2D9B88009B8605 /* Tango */,
 			);
 			name = Images;
@@ -2398,6 +2412,8 @@
 		EA7A5B6D0A86B83E000D6B5E /* VTInterface */ = {
 			isa = PBXGroup;
 			children = (
+				EA4B68400B2E0D8D0079CE21 /* OAGradientTableView.h */,
+				EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */,
 				EA7A561A0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.h */,
 				EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */,
 				EA7A561C0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.h */,
@@ -2418,6 +2434,10 @@
 				EA7A56160A86A6D1000D6B5E /* VTPositionGrid.m */,
 				EA7A56170A86A6D1000D6B5E /* VTPositionGridCell.h */,
 				EA7A56180A86A6D1000D6B5E /* VTPositionGridCell.m */,
+				EA4B68440B2E0D970079CE21 /* VTScalingImageCell.h */,
+				EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */,
+				EA4B68460B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h */,
+				EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */,
 				EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */,
 				EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */,
 				EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */,
@@ -2766,6 +2786,9 @@
 				EA7A5B780A86B8C8000D6B5E /* VTHotkeyTextField.h in Headers */,
 				EA7A5B790A86B8C8000D6B5E /* VTHotkeyTextView.h in Headers */,
 				EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */,
+				EA4B68420B2E0D8D0079CE21 /* OAGradientTableView.h in Headers */,
+				EA4B68480B2E0D970079CE21 /* VTScalingImageCell.h in Headers */,
+				EA4B684A0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3342,7 +3365,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA4D9D330B2D9B92009B8605 /* COPYING in Resources */,
 				EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */,
 				EA7A64330A87004E000D6B5E /* imageWidgetAddPopup.png in Resources */,
 				EA7A64340A87004E000D6B5E /* imageWidgetAddPopupPressed.png in Resources */,
@@ -3421,6 +3443,7 @@
 				EA4039580A89CDDE00807BE2 /* imageWidgetAdd.png in Resources */,
 				EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */,
 				EA99F6B40AE236090055D5D5 /* COPYING in Resources */,
+				EA4B683A0B2E0CAB0079CE21 /* Virtue-menu-highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3601,6 +3624,9 @@
 				EA7A5B850A86B8EF000D6B5E /* VTHotkeyTextView.m in Sources */,
 				EA7A5B860A86B8EF000D6B5E /* VTPositionGrid.m in Sources */,
 				EA7A5B870A86B8EF000D6B5E /* VTPositionGridCell.m in Sources */,
+				EA4B68430B2E0D8D0079CE21 /* OAGradientTableView.m in Sources */,
+				EA4B68490B2E0D970079CE21 /* VTScalingImageCell.m in Sources */,
+				EA4B684B0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
