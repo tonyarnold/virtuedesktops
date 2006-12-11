@@ -458,13 +458,6 @@
 		EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */; };
 		EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
 		EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
-		EAFCF63E0AB65D35005882DB /* LightSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCF63D0AB65D35005882DB /* LightSensor.m */; };
-		EAFCF64B0AB65E61005882DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
-		EAFCF6500AB65E69005882DB /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
-		EAFCF69E0AB65E78005882DB /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EAFCF69F0AB65E7E005882DB /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EAFCF6AE0AB65F19005882DB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36CCE90A9C4F6B0081417B /* IOKit.framework */; };
-		EAFCF75B0AB65F3E005882DB /* Light Sensor.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -776,13 +769,6 @@
 			remoteGlobalIDString = EAC0139D0AD10BA400389BDB;
 			remoteInfo = "Virtue Interface Palette";
 		};
-		EAFCF7590AB65F25005882DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAFCF62E0AB65C43005882DB;
-			remoteInfo = "Light Sensor";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -821,7 +807,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				EAFCF75B0AB65F3E005882DB /* Light Sensor.plugin in CopyFiles */,
 				EA7A69D10A870893000D6B5E /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */,
 				EA7A69D20A870893000D6B5E /* VTDesktopNamePrimitive.plugin in CopyFiles */,
 				EA7A69D30A870893000D6B5E /* VTAppearancePreferences.prefPane in CopyFiles */,
@@ -1412,10 +1397,7 @@
 		EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
 		EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Light Sensor.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFCF6300AB65C43005882DB /* Light Sensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Light Sensor-Info.plist"; sourceTree = "<group>"; };
-		EAFCF63C0AB65D35005882DB /* LightSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightSensor.h; sourceTree = "<group>"; };
-		EAFCF63D0AB65D35005882DB /* LightSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightSensor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1621,18 +1603,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAFCF62D0AB65C43005882DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAFCF6AE0AB65F19005882DB /* IOKit.framework in Frameworks */,
-				EAFCF69F0AB65E7E005882DB /* Virtue.framework in Frameworks */,
-				EAFCF69E0AB65E78005882DB /* Peony.framework in Frameworks */,
-				EAFCF6500AB65E69005882DB /* Zen.framework in Frameworks */,
-				EAFCF64B0AB65E61005882DB /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1643,7 +1613,6 @@
 				EA7A54650A86A604000D6B5E /* DockCommunicator */,
 				EA7A54660A86A604000D6B5E /* DockExtension */,
 				EA7A53CD0A86A5A4000D6B5E /* Peony */,
-				EAFCF63A0AB65D1C005882DB /* Plugins */,
 				EAC013A80AD10BCA00389BDB /* TA Interface Palette */,
 				EA7A61880A86F490000D6B5E /* VTDesktopColorLabelPrimitive */,
 				EA7A622D0A86F60C000D6B5E /* VTDesktopNamePrimitive */,
@@ -2402,7 +2371,6 @@
 				EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */,
 				EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */,
 				EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */,
-				EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */,
 				EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */,
 				EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */,
 			);
@@ -2650,23 +2618,6 @@
 				EAC013BD0AD10C7400389BDB /* ColorLabelPalette.nib */,
 			);
 			path = "TA Interface Palette";
-			sourceTree = "<group>";
-		};
-		EAFCF63A0AB65D1C005882DB /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				EAFCF63B0AB65D1C005882DB /* Light Sensor */,
-			);
-			path = Plugins;
-			sourceTree = "<group>";
-		};
-		EAFCF63B0AB65D1C005882DB /* Light Sensor */ = {
-			isa = PBXGroup;
-			children = (
-				EAFCF63C0AB65D35005882DB /* LightSensor.h */,
-				EAFCF63D0AB65D35005882DB /* LightSensor.m */,
-			);
-			path = "Light Sensor";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3127,7 +3078,6 @@
 				EA7A67BB0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67BD0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67BF0A87049A000D6B5E /* PBXTargetDependency */,
-				EAFCF75A0AB65F25005882DB /* PBXTargetDependency */,
 				EAC00EA50AD1098100389BDB /* PBXTargetDependency */,
 				EAC015BC0AD12B4200389BDB /* PBXTargetDependency */,
 			);
@@ -3172,23 +3122,6 @@
 			name = "TA Interface Palette";
 			productName = "Virtue Interface Palette";
 			productReference = EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */;
-			productType = "com.apple.product-type.bundle";
-		};
-		EAFCF62E0AB65C43005882DB /* Light Sensor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAFCF6310AB65C44005882DB /* Build configuration list for PBXNativeTarget "Light Sensor" */;
-			buildPhases = (
-				EAFCF62B0AB65C43005882DB /* Resources */,
-				EAFCF62C0AB65C43005882DB /* Sources */,
-				EAFCF62D0AB65C43005882DB /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Light Sensor";
-			productName = "Light Sensor";
-			productReference = EAFCF62F0AB65C43005882DB /* Light Sensor.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -3254,7 +3187,6 @@
 				EA7A63350A86FB4F000D6B5E /* VTHotkeyPreferences */,
 				EA7A635B0A86FC58000D6B5E /* VTLayoutPreferences */,
 				EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */,
-				EAFCF62E0AB65C43005882DB /* Light Sensor */,
 				EAC00E240AD1065C00389BDB /* TAUserInterfaceElements */,
 				EAC0139D0AD10BA400389BDB /* TA Interface Palette */,
 			);
@@ -3488,13 +3420,6 @@
 				EAC013C70AD10C7400389BDB /* ColorLabelInspector.nib in Resources */,
 				EAC013C80AD10C7400389BDB /* ColorLabelPalette.nib in Resources */,
 				EAC013CA0AD10C8200389BDB /* ColorLabel.ibclassdescription in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAFCF62B0AB65C43005882DB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3790,14 +3715,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAFCF62C0AB65C43005882DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAFCF63E0AB65D35005882DB /* LightSensor.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -4020,11 +3937,6 @@
 			isa = PBXTargetDependency;
 			target = EAC0139D0AD10BA400389BDB /* TA Interface Palette */;
 			targetProxy = EAC015BB0AD12B4200389BDB /* PBXContainerItemProxy */;
-		};
-		EAFCF75A0AB65F25005882DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EAFCF62E0AB65C43005882DB /* Light Sensor */;
-			targetProxy = EAFCF7590AB65F25005882DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -4670,31 +4582,6 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = VTPluginPreferences;
 				WRAPPER_EXTENSION = prefPane;
-				ZERO_LINK = NO;
-			};
-			name = "Native Architecture Release";
-		};
-		EA5D5FF70AECB2EE002B9A3C /* Native Architecture Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property Lists/Light Sensor-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Light Sensor";
-				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
 			name = "Native Architecture Release";
@@ -5747,58 +5634,6 @@
 			};
 			name = Release;
 		};
-		EAFCF6320AB65C44005882DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/Light Sensor-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Light Sensor";
-				WRAPPER_EXTENSION = bundle;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		EAFCF6330AB65C44005882DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property Lists/Light Sensor-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Light Sensor";
-				WRAPPER_EXTENSION = plugin;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -5988,16 +5823,6 @@
 				EAC013A10AD10BA500389BDB /* Debug */,
 				EAC013A20AD10BA500389BDB /* Release */,
 				EA5D5FF90AECB2EE002B9A3C /* Native Architecture Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAFCF6310AB65C44005882DB /* Build configuration list for PBXNativeTarget "Light Sensor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAFCF6320AB65C44005882DB /* Debug */,
-				EAFCF6330AB65C44005882DB /* Release */,
-				EA5D5FF70AECB2EE002B9A3C /* Native Architecture Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
