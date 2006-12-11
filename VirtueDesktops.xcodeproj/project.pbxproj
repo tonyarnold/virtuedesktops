@@ -35,6 +35,11 @@
 		EA4039570A89CDDE00807BE2 /* imageWidgetAddPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */; };
 		EA4039580A89CDDE00807BE2 /* imageWidgetAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */; };
 		EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56540A86A70C000D6B5E /* iconDesktopFolder.icns */; };
+		EA4D9D330B2D9B92009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
+		EA4D9D3E0B2D9BBC009B8605 /* preferences-system-windows.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */; };
+		EA4D9D440B2D9BDB009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
+		EA4D9D610B2D9BEA009B8605 /* dialog-information.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */; };
+		EA4D9D620B2D9BEC009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
 		EA575BD00A9DE7720020F318 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65980A870299000D6B5E /* ApplicationServices.framework */; };
 		EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
 		EA7A56AA0A86A74E000D6B5E /* DECCgsExt.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546C0A86A623000D6B5E /* DECCgsExt.c */; };
@@ -247,7 +252,6 @@
 		EA7A634D0A86FC2E000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A634E0A86FC2E000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A634F0A86FC2E000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
-		EA7A636F0A86FCFA000D6B5E /* imagePreferencesPagers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */; };
 		EA7A63700A86FCFA000D6B5E /* VTLayoutPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A636E0A86FCFA000D6B5E /* VTLayoutPreferencesController.m */; };
 		EA7A63730A86FD17000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A63740A86FD17000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
@@ -843,6 +847,9 @@
 		EA36CCE90A9C4F6B0081417B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAddPressed.png; sourceTree = "<group>"; };
 		EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetAdd.png; sourceTree = "<group>"; };
+		EA4D9D2C0B2D9B88009B8605 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog-information.png"; sourceTree = "<group>"; };
+		EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-system-windows.png"; sourceTree = "<group>"; };
 		EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
 		EA7A53D20A86A5B4000D6B5E /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
 		EA7A53D30A86A5B4000D6B5E /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
@@ -1606,6 +1613,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA4D9D2B0B2D9B88009B8605 /* Tango */ = {
+			isa = PBXGroup;
+			children = (
+				EA4D9D2C0B2D9B88009B8605 /* COPYING */,
+				EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */,
+				EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */,
+			);
+			path = Tango;
+			sourceTree = "<group>";
+		};
 		EA7A53CA0A86A576000D6B5E /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -2338,6 +2355,7 @@
 				EA7A56980A86A70C000D6B5E /* old_imagePositionMarker.png */,
 				EA7A56990A86A70C000D6B5E /* old_imagePositionMarkerPressed.png */,
 				EA7A569A0A86A70C000D6B5E /* old_imagePreferencesAppearance.tiff */,
+				EA4D9D2B0B2D9B88009B8605 /* Tango */,
 			);
 			name = Images;
 			path = images;
@@ -3268,6 +3286,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4D9D620B2D9BEC009B8605 /* COPYING in Resources */,
+				EA4D9D610B2D9BEA009B8605 /* dialog-information.png in Resources */,
 				EAC061060A89685D00020B92 /* imagePreferencesPagers.tiff in Resources */,
 				EA7A62EA0A86FA91000D6B5E /* imageWidgetAddPopup.png in Resources */,
 				EA7A62EB0A86FA91000D6B5E /* imageWidgetAddPopupPressed.png in Resources */,
@@ -3297,7 +3317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A636F0A86FCFA000D6B5E /* imagePreferencesPagers.tiff in Resources */,
+				EA4D9D440B2D9BDB009B8605 /* COPYING in Resources */,
+				EA4D9D3E0B2D9BBC009B8605 /* preferences-system-windows.png in Resources */,
 				EAC060C80A8964F700020B92 /* VTLayoutPreferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3321,6 +3342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4D9D330B2D9B92009B8605 /* COPYING in Resources */,
 				EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */,
 				EA7A64330A87004E000D6B5E /* imageWidgetAddPopup.png in Resources */,
 				EA7A64340A87004E000D6B5E /* imageWidgetAddPopupPressed.png in Resources */,
