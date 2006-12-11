@@ -106,6 +106,17 @@
         {CLASS = NSFormatter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = NSNumberFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
         {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
             CLASS = PDFThumbnailView; 
             LANGUAGE = ObjC; 
             OUTLETS = {pdfView = PDFView; }; 
@@ -148,6 +159,7 @@
                 showPreferences = id; 
                 showStatusbarMenu = id; 
                 showWebsite = id; 
+                showWelcomePanel = id; 
             }; 
             CLASS = VTApplicationDelegate; 
             LANGUAGE = ObjC; 
@@ -157,8 +169,23 @@
                 mStatusItemMenu = NSMenu; 
                 mStatusItemRemoveActiveDesktopItem = NSMenuItem; 
                 mVersionTextField = NSTextField; 
+                mWelcomePanel = NSPanel; 
             }; 
             SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {toggleModifier = id; }; 
+            CLASS = VTApplicationPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAlternateButton = NSButton; 
+                mCommandButton = NSButton; 
+                mControlButton = NSButton; 
+                mEnableMotionSensor = NSButton; 
+                mMotionSensorSensitivity = NSSlider; 
+                mShiftButton = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
         }, 
         {
             ACTIONS = {
@@ -176,12 +203,6 @@
                 mStatusBarDesktopsItem = NSMenu; 
                 mStatusBarMenu = NSMenu; 
             }; 
-            SUPERCLASS = NSObject; 
-        }, 
-        {
-            ACTIONS = {displayMe = id; hideMe = id; }; 
-            CLASS = VTWindowPager; 
-            LANGUAGE = ObjC; 
             SUPERCLASS = NSObject; 
         }
     ); 
