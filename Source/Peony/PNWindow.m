@@ -150,11 +150,11 @@
 - (int) desktopId {
 	// fetch the desktop this window resides on
 	CGSConnection	oConnection = _CGSDefaultConnection();
-	int				iDesktopId	= -1;
+	int iDesktopId	= -1;
   
 	OSStatus oResult = CGSGetWindowWorkspace(oConnection, mNativeWindow, &iDesktopId);
 	if (oResult) {
-		NSLog(@"[Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult);
+		NSLog(@"PNWindow.m - [Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult);
 		return kPnDesktopInvalidId;
 	}
   
@@ -172,14 +172,12 @@
 		nil];
 	
 	// send notification about the upcoming change
-	[[NSNotificationCenter defaultCenter]
-		postNotificationName: PNWindowWillChangeDesktop object: self userInfo: userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNWindowWillChangeDesktop object: self userInfo: userInfo];
 	
 	CGSExtSetWindowWorkspace(mNativeWindow, desktopId);
 	
 		// post notification about the change
-	[[NSNotificationCenter defaultCenter]
-		postNotificationName: PNWindowDidChangeDesktop object: self userInfo: userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNWindowDidChangeDesktop object: self userInfo: userInfo];
 }
 
 /**
@@ -219,7 +217,7 @@
 		return nil;
 	}
   
-	char *acStrVal = CGSCStringValue(oWindowTitle);
+	char* acStrVal = CGSCStringValue(oWindowTitle);
 	if (acStrVal) {
 		return [NSString stringWithUTF8String: acStrVal];
 	}
@@ -298,13 +296,13 @@
 	if (stickyState == YES)
   {
 		// post notification about the window becoming sticky
-		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowStickied object: nil userInfo: infoDict];
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnWindowStickied object: nil userInfo: infoDict];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowStickied object: self];
 	}
 	else
   {
 		// post notification about the window being no longer sticky
-		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kPnOnWindowUnstickied object: nil userInfo: infoDict];
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnWindowUnstickied object: nil userInfo: infoDict];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowUnstickied object: self];
 	}
   
@@ -388,12 +386,12 @@
 	CGSConnection		oOwnerCID;
   
 	if (oResult = CGSGetWindowOwner(oConnection, mNativeWindow, &oOwnerCID)) {
-    //		NSLog(@"[Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
+    NSLog(@"PNWindow.m - [Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
 		return 0;
 	}
   
 	if (oResult = CGSConnectionGetPID(oOwnerCID, &mOwnerPid, oOwnerCID)) {
-    //		NSLog(@"[Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
+    NSLog(@"PNWindow.m - [Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
 		mOwnerPid = kPnWindowInvalidPid;
 	}
   
@@ -412,7 +410,7 @@
     
     oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
     if (oResult) {
-      NSLog(@"PNWindow:442 - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
+      NSLog(@"PNWindow.m - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
     }
     
     return oOwnerPsn;

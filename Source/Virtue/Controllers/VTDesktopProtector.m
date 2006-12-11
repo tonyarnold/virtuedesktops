@@ -100,14 +100,10 @@
 	}
 	
 	// we are observing desktop changes, as we have to work around a nice feature of the apple window manager... 
-	[[NSNotificationCenter defaultCenter]
-		addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
-	[[NSNotificationCenter defaultCenter]
-		addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
-	[[NSNotificationCenter defaultCenter]
-		addObserver: self selector: @selector(onDesktopCreated:) name: VTDesktopDidAddNotification object: nil]; 
-	[[NSNotificationCenter defaultCenter]
-		addObserver: self selector: @selector(onDesktopDeleted:) name: VTDesktopDidRemoveNotification object: nil]; 
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil]; 
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil]; 
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopCreated:) name: VTDesktopDidAddNotification object: nil]; 
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDeleted:) name: VTDesktopDidRemoveNotification object: nil]; 
 }
 
 - (void) createWindowForDesktop: (VTDesktop*) desktop {
@@ -118,11 +114,7 @@
 	NSString* desktopUUID = [desktop uuid]; 
 	
 	// and create a nice view 
-	window = [[[NSWindow alloc] 
-						initWithContentRect: [[NSScreen mainScreen] visibleFrame] 
-                      styleMask: NSBorderlessWindowMask 
-                        backing: NSBackingStoreBuffered
-                          defer: NO] autorelease];
+	window = [[[NSWindow alloc] initWithContentRect: [[NSScreen mainScreen] visibleFrame] styleMask: NSBorderlessWindowMask backing: NSBackingStoreBuffered defer: NO] autorelease];
 	
 	// create view 
 	view = [[[VTDesktopProtectorView alloc] initWithFrame: [window contentRectForFrameRect: [window frame]]] autorelease];    

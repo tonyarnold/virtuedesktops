@@ -42,15 +42,9 @@
 		mDesktopWindowLevel		= kCGMinimumWindowLevel + 25;
 		
 		// We are observing desktop changes, see 'onDesktopWillChange' for more information on why 
-		[[NSNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopWillChange:) 
-                                                 name: kPnOnDesktopWillActivate 
-                                               object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil];
     
-		[[NSNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopDidChange:) 
-                                                 name: kPnOnDesktopDidActivate 
-                                               object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil];
 
 		return self;
 	}

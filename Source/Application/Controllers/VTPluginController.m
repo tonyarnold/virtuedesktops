@@ -77,8 +77,8 @@
 - (NSArray*) pluginSearchPaths {
 	return [NSArray arrayWithObjects:
 			[[NSBundle mainBundle] builtInPlugInsPath], 
-			[VTFileSystemExtensions applicationSupportFolder], 
-			[VTFileSystemExtensions globalApplicationSupportFolder],
+      [[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent: @"PlugIns"], 
+			[[VTFileSystemExtensions globalApplicationSupportFolder] stringByAppendingPathComponent: @"PlugIns"],
 			nil
 		]; 
 }
@@ -86,7 +86,7 @@
 - (void) ensurePluginSearchPaths {
 	// we will only handle the user specific paths here
 	NSString* rootPath	= [VTFileSystemExtensions applicationSupportFolder]; 
-	NSString* path			= [NSString stringWithFormat: @"%@", rootPath]; 
+	NSString* path			= [rootPath stringByAppendingPathComponent: @"PlugIns"]; 
 	
 	// check if it exists and create it if necessary 
 	BOOL isDirectory = NO; 
@@ -94,15 +94,13 @@
 	if (([[NSFileManager defaultManager] fileExistsAtPath: rootPath isDirectory: &isDirectory] == NO) ||
 		(isDirectory == NO))
 	{
-		[[NSFileManager defaultManager] createDirectoryAtPath: rootPath 
-																							 attributes: nil]; 
+		[[NSFileManager defaultManager] createDirectoryAtPath: rootPath attributes: nil]; 
 	}
 	
 	if (([[NSFileManager defaultManager] fileExistsAtPath: path isDirectory: &isDirectory] == NO) ||
 		(isDirectory == NO))
 	{
-		[[NSFileManager defaultManager] createDirectoryAtPath: path 
-																							 attributes: nil]; 
+		[[NSFileManager defaultManager] createDirectoryAtPath: path attributes: nil]; 
 	}
 }
 

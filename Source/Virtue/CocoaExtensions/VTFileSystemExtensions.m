@@ -36,7 +36,7 @@
 		unsigned char path[PATH_MAX];
 		FSRefMakePath(&foundRef, path, sizeof(path));
 		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
 	}
 	return applicationSupportFolder;
 }
@@ -52,7 +52,7 @@
 		unsigned char path[PATH_MAX];
 		FSRefMakePath(&foundRef, path, sizeof(path));
 		applicationSupportFolder = [NSString stringWithUTF8String:(char *)path];
-		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@/PlugIns", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
+		applicationSupportFolder = [applicationSupportFolder stringByAppendingPathComponent:[NSString stringWithFormat: @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]];
 	}
 	return applicationSupportFolder;
 }

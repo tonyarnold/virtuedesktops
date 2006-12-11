@@ -41,19 +41,10 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		[self setupAppChangeNotification];
 		
 		// register for notifications of application launches
-		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self 
-																													 selector:@selector(onApplicationDidLaunch:) 
-																															 name: @"NSWorkspaceDidLaunchApplicationNotification" 
-																														 object: nil]; 
-		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self 
-																													 selector:@selector(onApplicationWillLaunch:) 
-																															 name: @"NSWorkspaceWillLaunchApplicationNotification" 
-																														 object: nil]; 
+		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onApplicationDidLaunch:) name: @"NSWorkspaceDidLaunchApplicationNotification" object: nil]; 
+		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onApplicationWillLaunch:) name: @"NSWorkspaceWillLaunchApplicationNotification" object: nil]; 
 
-		[[NSNotificationCenter defaultCenter] addObserver: self 
-																						 selector: @selector(onDesktopDidChange:) 
-																								 name: kPnOnDesktopDidActivate 
-																							 object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil];
 	
 		// Set finder PSN (mFinderPSN)
 		[self findFinderApplication];

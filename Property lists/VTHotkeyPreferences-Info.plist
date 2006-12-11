@@ -20,10 +20,10 @@
 	<string>1.0</string>
 	<key>NSMainNibFile</key>
 	<string>VTHotkeyPreferences</string>
-	<key>NSPrincipalClass</key>
-	<string>VTHotkeyPreferencesController</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>Triggers</string>
+	<key>NSPrincipalClass</key>
+	<string>VTHotkeyPreferencesController</string>
 	<key>VTPreferencePaneHelpText</key>
 	<string>Keyboard and Mouse Trigger settings</string>
 	<key>VTPreferencePaneRankingOrder</key>

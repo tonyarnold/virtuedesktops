@@ -106,10 +106,10 @@
 
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState
-{
-	int* windows; 
+{  
+  int* windows; 
 	int  windowsCount = [self nativeWindowsInCArray: &windows]; 
-		
+  
 	if (stickyState == YES)
   {
 		CGSExtSetWindowListTags(windows, windowsCount, CGSTagSticky); 
@@ -124,7 +124,7 @@
 
 - (BOOL) isSticky 
 {
-	// cannot return anything useful here, think we should throw an exception 
+	// cannot return anything useful here, think we should throw an exception
 	return NO; 
 }
 

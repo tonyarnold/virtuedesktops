@@ -65,20 +65,11 @@
 		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]); 
 		
 		// Register as observer for desktop switches 
-		[[NSNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopWillChange:) 
-                                                 name: kPnOnDesktopWillActivate 
-                                               object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil];
 		
-		[[NSNotificationCenter defaultCenter] addObserver: self 
-                                             selector: @selector(onDesktopDidChange:) 
-                                                 name: kPnOnDesktopDidActivate 
-                                               object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: kPnOnDesktopDidActivate object: nil];
 		
-		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-                                                        selector: @selector(onDesktopBackgroundChanged:) 
-                                                            name: VTBackgroundHelperDesktopChangedName 
-                                                          object: VTBackgroundHelperDesktopChangedObject]; 
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopBackgroundChanged:) name: VTBackgroundHelperDesktopChangedName object: VTBackgroundHelperDesktopChangedObject]; 
 		
     /* *  
       * Expose SwitchTo(Next|Prev)Workspace to the DistributedNotificationCenter. 
@@ -87,23 +78,13 @@
       * [http://blog.medallia.com/2006/05/smacbook_pro.html] 
         */ 
 		// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
-		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-                                                        selector: @selector(onNextEastDesktopRequest:) 
-                                                            name: @"SwitchToNextWorkspace" 
-                                                          object: nil]; 
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self selector: @selector(onNextEastDesktopRequest:) name: @"SwitchToNextWorkspace" object: nil]; 
 		
 		// Added 2006-05-25 Moritz Angermann - for the Apple Motion Sensor triggered DesktopSwitching 
-		[[NSDistributedNotificationCenter defaultCenter] addObserver: self 
-                                                        selector: @selector(onNextWestDesktopRequest:) 
-                                                            name: @"SwitchToPrevWorkspace" 
-                                                          object: nil];
+		[[NSDistributedNotificationCenter defaultCenter] addObserver: self selector: @selector(onNextWestDesktopRequest:) name: @"SwitchToPrevWorkspace" object: nil];
 		
 		// create timer loop to update desktops 
-		[NSTimer scheduledTimerWithTimeInterval: 1.0 
-                                     target: self 
-                                   selector: @selector(onUpdateDesktops:) 
-                                   userInfo: nil 
-                                    repeats: NO]; 
+		[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 		
 		return self; 
 	}
@@ -510,14 +491,14 @@
 	}
   
 	// unbind desktop 
-	[desktop removeObserver: self forKeyPath: @"desktopBackground"]; 
+	[desktop removeObserver: self forKeyPath: @"desktopBackground"];
 }
 
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// bind desktop 
 	[[self activeDesktop] addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL];
 	[self applyDesktopBackground]; 		
-	[self didChangeValueForKey: @"activeDesktop"]; 
+	[self didChangeValueForKey: @"activeDesktop"];
 }
 
 

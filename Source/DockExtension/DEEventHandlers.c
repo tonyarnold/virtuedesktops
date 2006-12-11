@@ -182,7 +182,7 @@ void DEHandleTagsEvent(DecEvent* event)
 	int i; 
 	
 	CGSConnection	cgConnection = _CGSDefaultConnection(); 
-	CGSWindowTag	cgWindowTags[2];
+	CGSWindowTag	cgWindowTags[2] = { 0, 0 };
 	
 	int					tags = dec_event_tags_value_get(eventTags); 
 	DecTagsType	type = dec_event_tags_type_get(eventTags); 
@@ -190,16 +190,14 @@ void DEHandleTagsEvent(DecEvent* event)
 	/* I would not feel good about setting the tags for all windows at 
 	   once as I do not know what [1] = 0 means for clearing / setting 
 	 */ 
+  
 	for (i = 0; i < eventTargetsSize; i++) {
-		cgWindowTags[0] = 0; 
-		cgWindowTags[1] = 0;
-
 		OSStatus oResult = CGSGetWindowTags(cgConnection, eventTargets[i], cgWindowTags, 32);
 		if (oResult) 
 			continue; 
 	
-		cgWindowTags[0] = tags; 
-	
+		cgWindowTags[0] = tags;
+        
 		if (type == kDecTagsClear) {
 			CGSClearWindowTags( cgConnection, eventTargets[i], cgWindowTags, 32 );
 		} else {

@@ -102,9 +102,13 @@
 
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState
-{
-  PNWindowList*   windowList = [PNWindowList windowListWithArray: mWindows];
-  [windowList setSticky: stickyState];
+{  
+  NSEnumerator*   windowIterator			= [[self windows] objectEnumerator];
+	PNWindow*       window							= nil;
+	
+	while (window = [windowIterator nextObject]) {
+		[window setSticky: stickyState];
+	}
 	
 	if (stickyState == YES) 
   {

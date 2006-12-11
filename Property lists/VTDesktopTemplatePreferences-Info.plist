@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>imagePreferencesPagers.tiff</string>
+	<string>dialog-information.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>info.virtuedesktops.preferences.${EXECUTABLE_NAME}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

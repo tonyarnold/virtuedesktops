@@ -103,6 +103,8 @@
         {CLASS = NSDateFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
         {CLASS = NSFormatter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = NSNumberFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
+        {CLASS = NSValueTransformer; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OAGradientTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
         {
             CLASS = PDFThumbnailView; 
             LANGUAGE = ObjC; 
@@ -133,6 +135,16 @@
             SUPERCLASS = NSControl; 
         }, 
         {
+            CLASS = VTApplicationRunningCountTransformer; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSValueTransformer; 
+        }, 
+        {
+            CLASS = VTApplicationRunningTransformer; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSValueTransformer; 
+        }, 
+        {
             ACTIONS = {
                 addDesktop = id; 
                 deleteDesktop = id; 
@@ -146,15 +158,21 @@
                 mColorLabelButton = TAUIColorLabelButton; 
                 mDecorationsController = NSArrayController; 
                 mDecorationsTableView = NSTableView; 
-                mDesktopController = NSObjectController; 
                 mDesktopsController = NSArrayController; 
                 mDesktopsTableView = NSTableView; 
+                mImageView = VTImageViewFileDropper; 
                 mInspectPrimitiveButton = NSButton; 
             }; 
             SUPERCLASS = NSWindowController; 
         }, 
         {CLASS = VTHotkeyTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {CLASS = VTImageViewFileDropper; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = VTScalingImageCell; LANGUAGE = ObjC; SUPERCLASS = NSImageCell; }, 
+        {
+            CLASS = VTVerticallyCentredTextFieldCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextFieldCell; 
+        }, 
         {CLASS = ZNImagePopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }
     ); 
     IBVersion = 1; 

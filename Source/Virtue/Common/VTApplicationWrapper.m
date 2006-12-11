@@ -222,7 +222,17 @@
 }
 
 - (NSImage*) icon {
-	return mImage;
+  if ([self isRunning] == NO)
+  {
+    NSImage* fadedImage = [[NSImage alloc] initWithSize: [mImage size]];
+    [fadedImage lockFocus];
+    [mImage setFlipped: YES];
+    [mImage dissolveToPoint: NSZeroPoint fraction: 0.4];
+    [fadedImage unlockFocus];
+    return fadedImage;
+  } 
+  
+  return mImage;
 }
 
 - (NSArray*) windows {

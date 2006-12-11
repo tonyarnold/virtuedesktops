@@ -203,10 +203,9 @@ enum
       }
     }
 		count++;
+    return;
+  }
     
-  	return;
-  }  
-  
 	if (kr == kIOReturnBusy)
 	  return;
   

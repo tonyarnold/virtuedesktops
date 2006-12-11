@@ -114,6 +114,7 @@
             }; 
             SUPERCLASS = NSObject; 
         }, 
+        {CLASS = OAGradientTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
         {
             CLASS = PDFThumbnailView; 
             LANGUAGE = ObjC; 
@@ -148,6 +149,11 @@
                 mPreferencePanesTable = NSTableView; 
             }; 
             SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            CLASS = VTVerticallyCentredTextFieldCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextFieldCell; 
         }
     ); 
     IBVersion = 1; 

@@ -297,10 +297,7 @@
 	int handle;
   
   // Set the colour of the backdrop for the CGSTransition
-	float rgb[3];
-  rgb[0] = 0.0;
-  rgb[1] = 0.0;
-  rgb[2] = 0.0;
+	float rgb[3] = { 0.0, 0.0, 0.0 };
   
 	CGSTransitionSpec spec;
 	spec.unknown1		= 0;
@@ -308,13 +305,13 @@
 	spec.option			= option;
 	spec.wid				= 0;
 	spec.backColour	= rgb;
-		
-	// Notify clients that we will soon be the active desktop
-	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
 	
 	// Create the transition, freezing all on-screen activity		
 	CGSNewTransition(cgs, &spec, &handle);
+  
+  // Notify clients that we will soon be the active desktop
+	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
   
   // Now switch the workspace while the screen is frozen, setting up the transition target
 	CGSSetWorkspace(cgs, mDesktopId);
@@ -483,15 +480,9 @@
 		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
     
 		// ignore menus
-		if (([window level] != kCGBaseWindowLevelKey) &&
-        ([window level] != kCGMinimumWindowLevelKey) &&
-        ([window level] != kCGNormalWindowLevelKey) &&
-				([window level] != kCGFloatingWindowLevelKey) &&
-				([window level] != kCGStatusWindowLevelKey) &&
-        ([window level] != kCGModalPanelWindowLevelKey) &&
-        ([window level] != kCGMaximumWindowLevelKey) &&
-        ([window level] != kCGUtilityWindowLevelKey) &&
-        ([window level] != kCGBackstopMenuLevelKey)) {
+    if (([window level] == NSPopUpMenuWindowLevel) ||
+				([window level] == NSSubmenuWindowLevel) ||
+				([window level] == NSMainMenuWindowLevel)) {
 			ZEN_RELEASE(window);
 			continue;
 		}
@@ -524,6 +515,8 @@
     {
       [window setSticky: YES];
     }
+    
+    
     
 		// check if the window is in our list and add it if it isn't
 		if ([mWindows containsObject: window] == NO) {

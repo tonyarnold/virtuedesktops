@@ -113,8 +113,8 @@
 	PNWindow* window = [self selectedWindow]; 
 	
 	if (window == nil)
-		return; 
-	
+		return;
+  
 	// toggle window state 
 	[window setSticky: ![window isSticky]]; 
 }

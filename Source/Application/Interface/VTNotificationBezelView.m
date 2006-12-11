@@ -128,9 +128,9 @@ enum {
     NSSize	textSize = [mText sizeWithAttributes: mTextAttributes];
     NSPoint	textPosition; 
 	// the text will be centered horizontally and vertically below the image 
-	textPosition.x = 0.5 * (aRect.size.width - textSize.width);
-    textPosition.y = 0.5 * (backgroundImagePosition.y - textSize.height);
-    [mText drawAtPoint: textPosition withAttributes: mTextAttributes];
+  textPosition.x = 0.5 * (aRect.size.width - textSize.width);
+  textPosition.y = 0.5 * (backgroundImagePosition.y - textSize.height);
+  [mText drawAtPoint: textPosition withAttributes: mTextAttributes];
 	
 	// draw application icons if we should do that 
 	if (mDrawApplets == NO || mDesktop == nil)

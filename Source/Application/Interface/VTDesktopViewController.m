@@ -170,6 +170,13 @@
 	
 	// and select a desktop 
 	[self showDesktop: [self selectedDesktop]];
+  
+  [mImageView bind: @"imagePath" toObject: mDesktop withKeyPath: @"desktopBackground" options: nil];
+  [mDesktop bind: @"desktopBackground" toObject: mImageView withKeyPath: @"imagePath" options: nil];
+  
+  [mColorLabelButton setSelectedColorLabel: [mDesktop colorLabel]];
+  [mDesktop bind: @"colorLabel" toObject: mColorLabelButton withKeyPath: @"selectedColorLabel" options: nil];
+  [mColorLabelButton bind: @"selectedColorLabel" toObject: mDesktop withKeyPath: @"colorLabel" options: nil];
 }
 
 
