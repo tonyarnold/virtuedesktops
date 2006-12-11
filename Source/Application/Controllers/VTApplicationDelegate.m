@@ -146,7 +146,7 @@ enum
 	
 	// Set-up default preferences
 	[VTPreferences registerDefaults];
-	
+
 	// and ensure we have our version information in there
 	[[NSUserDefaults standardUserDefaults] setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"VTPreferencesVirtueVersionName"];
 	
@@ -212,45 +212,25 @@ enum
 	// and bind setting
 	[[NSUserDefaults standardUserDefaults] setBool: [[VTDesktopController sharedInstance] usesDecorationPrototype] forKey: VTPreferencesUsesDecorationTemplateName];
 	
-	[[VTDesktopController sharedInstance] bind: @"usesDecorationPrototype"
-                                    toObject: [NSUserDefaultsController sharedUserDefaultsController]
-                                 withKeyPath: [NSUserDefaultsController pathForKey: VTPreferencesUsesDecorationTemplateName]
-                                     options: nil];
+	[[VTDesktopController sharedInstance] bind: @"usesDecorationPrototype" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTPreferencesUsesDecorationTemplateName] options: nil];
 	
 	
 	//Motion Sensor
-	[[NSUserDefaults standardUserDefaults] setBool: [[NSUserDefaults standardUserDefaults] boolForKey: VTMotionSensorEnabled]
-                                          forKey: VTMotionSensorEnabled];
+	[[NSUserDefaults standardUserDefaults] setBool: [[NSUserDefaults standardUserDefaults] boolForKey: VTMotionSensorEnabled] forKey: VTMotionSensorEnabled];
 	// Bind the motion sensitivity preferences to the motion controller object
-	[[VTMotionController sharedInstance] bind: @"isEnabled"
-                                   toObject: [NSUserDefaultsController sharedUserDefaultsController]
-                                withKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorEnabled]
-                                    options: nil];
+	[[VTMotionController sharedInstance] bind: @"isEnabled" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorEnabled] options: nil];
 	
-	[[NSUserDefaults standardUserDefaults] setFloat: [[NSUserDefaults standardUserDefaults] floatForKey: VTMotionSensorSensitivity]
-                                           forKey: VTMotionSensorSensitivity];
-	[[VTMotionController sharedInstance] bind: @"sensorSensitivity"
-                                   toObject: [NSUserDefaultsController
-                                     sharedUserDefaultsController]
-                                withKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorSensitivity]
-                                    options: nil];
+	[[NSUserDefaults standardUserDefaults] setFloat: [[NSUserDefaults standardUserDefaults] floatForKey: VTMotionSensorSensitivity] forKey: VTMotionSensorSensitivity];
+	[[VTMotionController sharedInstance] bind: @"sensorSensitivity" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTMotionSensorSensitivity] options: nil];
 	
 	
 	// ALSensor
-	[[NSUserDefaults standardUserDefaults] setBool: [[NSUserDefaults standardUserDefaults] boolForKey: VTLightSensorEnabled]
-                                          forKey: VTLightSensorEnabled];
+	[[NSUserDefaults standardUserDefaults] setBool: [[NSUserDefaults standardUserDefaults] boolForKey: VTLightSensorEnabled] forKey: VTLightSensorEnabled];
 	// Bind the motion sensitivity preferences to the motion controller object
-	[[VTLightSensorController sharedInstance] bind: @"isEnabled"
-                                        toObject: [NSUserDefaultsController sharedUserDefaultsController]
-                                     withKeyPath: [NSUserDefaultsController pathForKey: VTLightSensorEnabled]
-                                         options: nil];
+	[[VTLightSensorController sharedInstance] bind: @"isEnabled" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTLightSensorEnabled] options: nil];
 	
-	[[NSUserDefaults standardUserDefaults] setFloat: [[NSUserDefaults standardUserDefaults] floatForKey: VTLightSensorSensitivity]
-                                           forKey: VTLightSensorSensitivity];
-	[[VTLightSensorController sharedInstance] bind: @"sensorSensitivity"
-                                        toObject: [NSUserDefaultsController sharedUserDefaultsController]
-                                     withKeyPath: [NSUserDefaultsController pathForKey: VTLightSensorSensitivity]
-                                         options: nil];
+	[[NSUserDefaults standardUserDefaults] setFloat: [[NSUserDefaults standardUserDefaults] floatForKey: VTLightSensorSensitivity] forKey: VTLightSensorSensitivity];
+	[[VTLightSensorController sharedInstance] bind: @"sensorSensitivity" toObject: [NSUserDefaultsController sharedUserDefaultsController] withKeyPath: [NSUserDefaultsController pathForKey: VTLightSensorSensitivity] options: nil];
 	
 	// Decode application preferences…
 	NSDictionary* applicationDict = [[NSUserDefaults standardUserDefaults] objectForKey: VTPreferencesApplicationsName];
@@ -274,25 +254,13 @@ enum
 	
 	[[VTDesktopController sharedInstance] addObserver: self forKeyPath: @"desktops" options: NSKeyValueObservingOptionNew context: NULL];
 	
-	[[VTDesktopController sharedInstance] addObserver: self
-                                         forKeyPath: @"activeDesktop"
-                                            options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                                            context: NULL];
+	[[VTDesktopController sharedInstance] addObserver: self forKeyPath: @"activeDesktop" options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context: NULL];
 	
-	[[[VTDesktopController sharedInstance] activeDesktop] addObserver: self
-                                                         forKeyPath: @"applications"
-                                                            options: NSKeyValueObservingOptionNew
-                                                            context: NULL];
+	[[[VTDesktopController sharedInstance] activeDesktop] addObserver: self forKeyPath: @"applications" options: NSKeyValueObservingOptionNew context: NULL];
 	
-	[[NSUserDefaultsController sharedUserDefaultsController] addObserver: self
-                                                            forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]
-                                                               options: NSKeyValueObservingOptionNew
-                                                               context: NULL];
+	[[NSUserDefaultsController sharedUserDefaultsController] addObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName] options: NSKeyValueObservingOptionNew context: NULL];
 	
-	[[NSUserDefaultsController sharedUserDefaultsController] addObserver: self
-                                                            forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]
-                                                               options: NSKeyValueObservingOptionNew
-                                                               context: NULL];
+	[[NSUserDefaultsController sharedUserDefaultsController] addObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu] options: NSKeyValueObservingOptionNew context: NULL];
 	
 	// Enable Growl ( http://growl.info )
 	[GrowlApplicationBridge setGrowlDelegate:self];
@@ -676,7 +644,6 @@ enum
 {
 	if ([keyPath isEqualToString: @"desktops"] || [keyPath isEqualToString: @"activeLayout"] || [keyPath isEqualToString: @"activeLayout.desktops"]) {
 		mStatusItemMenuDesktopNeedsUpdate = YES;
-    [self updateStatusItem];
 	}
 	else if ([keyPath isEqualToString: @"activeDesktop"]) {
 		mStatusItemMenuDesktopNeedsUpdate = YES;
@@ -687,18 +654,12 @@ enum
     
 		// unregister from the old desktop and reregister at the new one
 		if (oldDesktop)
-			[oldDesktop removeObserver: self 
-                      forKeyPath: @"applications"];
+			[oldDesktop removeObserver: self forKeyPath: @"applications"];
 		
-		[newDesktop addObserver: self
-                 forKeyPath: @"applications"
-                    options: NSKeyValueObservingOptionNew
-                    context: NULL];
+		[newDesktop addObserver: self forKeyPath: @"applications" options: NSKeyValueObservingOptionNew context: NULL];
 		
 		[self updateStatusItem];
-		[self performSelector: @selector(postGrowlNotification) 
-               withObject: nil 
-               afterDelay: 1.0];
+		[self performSelector: @selector(postGrowlNotification) withObject: nil  afterDelay: 1.0];
     
 	}
 	else if ([keyPath isEqualToString: @"applications"]) {
@@ -737,13 +698,7 @@ enum
 }
 
 - (void)postGrowlNotification {
-	[GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: @"Changed to desktop \"%@\"", [[[VTDesktopController sharedInstance] activeDesktop] name]] 
-                              description: nil
-                         notificationName: @"Desktop changed" 
-                                 iconData: nil 
-                                 priority: 0 
-                                 isSticky: NO 
-                             clickContext: nil];
+	[GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: @"Changed to desktop \"%@\"", [[[VTDesktopController sharedInstance] activeDesktop] name]] description: nil notificationName: @"Desktop changed" iconData: nil priority: 0 isSticky: NO clickContext: nil];
 }
 
 @end
@@ -753,86 +708,32 @@ enum
 
 - (void) registerObservers {
 	// register observers for requests
-	[[NSNotificationCenter defaultCenter] addObserver: self 
-                                           selector: @selector(onSwitchToDesktopNorth:) 
-                                               name: VTRequestChangeDesktopToNorthName 
-                                             object: nil];
-  
-	[[NSNotificationCenter defaultCenter]	addObserver: self 
-                                           selector: @selector(onSwitchToDesktopNortheast:) 
-                                               name: VTRequestChangeDesktopToNortheastName 
-                                             object: nil];
-	[[NSNotificationCenter defaultCenter] addObserver: self 
-                                           selector: @selector(onSwitchToDesktopNorthwest:) 
-                                               name: VTRequestChangeDesktopToNorthwestName 
-                                             object: nil];
-  
-	[[NSNotificationCenter defaultCenter] addObserver: self 
-                                           selector: @selector(onSwitchToDesktopEast:) 
-                                               name: VTRequestChangeDesktopToEastName 
-                                             object: nil];
-  
-	[[NSNotificationCenter defaultCenter]	addObserver: self 
-                                           selector: @selector(onSwitchToDesktopSouth:) 
-                                               name: VTRequestChangeDesktopToSouthName 
-                                             object: nil];
-  
-	[[NSNotificationCenter defaultCenter]	addObserver: self
-                                           selector: @selector(onSwitchToDesktopSoutheast:) 
-                                               name: VTRequestChangeDesktopToSoutheastName 
-                                             object: nil];
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onSwitchToDesktopSouthwest:) name: VTRequestChangeDesktopToSouthwestName object: nil];
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onSwitchToDesktopWest:) name: VTRequestChangeDesktopToWestName object: nil];
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onSwitchToDesktop:) name: VTRequestChangeDesktopName object: nil];
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onSendWindowBack:) name: VTRequestSendWindowBackName object: nil];
-	
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onShowPager:) name: VTRequestShowPagerName object: nil];
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onShowPagerSticky:) name: VTRequestShowPagerAndStickName object: nil];
-	
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onShowOperations:) name: VTRequestDisplayOverlayName object: nil];
-	
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onShowDesktopInspector:) name: VTRequestInspectDesktopName object: nil];
-	
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self selector: @selector(onShowPreferences:) name: VTRequestInspectPreferencesName object: nil];
-	
-	[[[NSWorkspace sharedWorkspace] notificationCenter]
-	addObserver: self selector: @selector(invalidateQuitDialog:) name: NSWorkspaceWillPowerOffNotification object: [NSWorkspace sharedWorkspace]];
-	
-	[[NSNotificationCenter defaultCenter]
-	addObserver:self selector: @selector(invalidateQuitDialog:) name: SUUpdaterWillRestartNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktopNorth:) name: VTRequestChangeDesktopToNorthName object: nil];
+	[[NSNotificationCenter defaultCenter]	addObserver: self selector: @selector(onSwitchToDesktopNortheast:) name: VTRequestChangeDesktopToNortheastName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktopNorthwest:) name: VTRequestChangeDesktopToNorthwestName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktopEast:) name: VTRequestChangeDesktopToEastName object: nil];
+	[[NSNotificationCenter defaultCenter]	addObserver: self selector: @selector(onSwitchToDesktopSouth:) name: VTRequestChangeDesktopToSouthName object: nil];
+	[[NSNotificationCenter defaultCenter]	addObserver: self selector: @selector(onSwitchToDesktopSoutheast:) name: VTRequestChangeDesktopToSoutheastName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktopSouthwest:) name: VTRequestChangeDesktopToSouthwestName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktopWest:) name: VTRequestChangeDesktopToWestName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktop:) name: VTRequestChangeDesktopName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSendWindowBack:) name: VTRequestSendWindowBackName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPager:) name: VTRequestShowPagerName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPagerSticky:) name: VTRequestShowPagerAndStickName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowOperations:) name: VTRequestDisplayOverlayName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowDesktopInspector:) name: VTRequestInspectDesktopName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPreferences:) name: VTRequestInspectPreferencesName object: nil];
+	[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self selector: @selector(invalidateQuitDialog:) name: NSWorkspaceWillPowerOffNotification object: [NSWorkspace sharedWorkspace]];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(invalidateQuitDialog:) name: SUUpdaterWillRestartNotification object:nil];
 	
 	/** observers for moving applications */
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self
-     selector: @selector(onMoveApplicationToDesktopEast:)
-         name: VTRequestApplicationMoveToEast
-       object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onMoveApplicationToDesktopEast:) name: VTRequestApplicationMoveToEast object: nil];
 	
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self
-     selector: @selector(onMoveApplicationToDesktopWest:)
-         name: VTRequestApplicationMoveToWest
-       object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onMoveApplicationToDesktopWest:) name: VTRequestApplicationMoveToWest object: nil];
 	
-	[[NSNotificationCenter defaultCenter]
-	addObserver: self
-     selector: @selector(onMoveApplicationToDesktopSouth:)
-         name: VTRequestApplicationMoveToSouth
-       object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onMoveApplicationToDesktopSouth:) name: VTRequestApplicationMoveToSouth object: nil];
 	
-	[[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector: @selector(onMoveApplicationToDesktopNorth:)
-                                               name: VTRequestApplicationMoveToNorth 
-                                             object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onMoveApplicationToDesktopNorth:) name: VTRequestApplicationMoveToNorth  object: nil];
 	/** end of moving applications */
 }
 
@@ -918,10 +819,7 @@ enum
 		if (desktop == nil)
 			continue;
 		
-		NSMenuItem* menuItem = [[NSMenuItem alloc]
-		initWithTitle: ([desktop name] == nil ? @" " : [desktop name])
-           action: @selector(onMenuDesktopSelected:)
-		keyEquivalent: @""];
+		NSMenuItem* menuItem = [[NSMenuItem alloc] initWithTitle: ([desktop name] == nil ? @" " : [desktop name]) action: @selector(onMenuDesktopSelected:) keyEquivalent: @""];
 		[menuItem setRepresentedObject: desktop];
 		[menuItem setEnabled: YES];
 		
@@ -972,10 +870,7 @@ enum
 		if ((applicationTitle == nil) || ([applicationTitle length] == 0))
 			continue;
 		
-		NSMenuItem* menuItem = [[NSMenuItem alloc]
-		initWithTitle: applicationTitle
-           action: nil
-		keyEquivalent: @""];
+		NSMenuItem* menuItem = [[NSMenuItem alloc] initWithTitle: applicationTitle action: nil keyEquivalent: @""];
 		[menuItem setRepresentedObject: application];
 		[menuItem setEnabled: YES];
 		[menuItem setImage: applicationIcon];
@@ -1033,9 +928,7 @@ enum
 	
 	if	(![fileManager fileExistsAtPath: newPlist] && [fileManager fileExistsAtPath: oldPlist])
 	{
-		[fileManager movePath: oldPlist
-                   toPath: newPlist
-                  handler: nil];
+		[fileManager movePath: oldPlist toPath: newPlist handler: nil];
 	}
 	
 	NSString *oldAppSupportFolder = [[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent:@"Virtue"];
@@ -1043,10 +936,25 @@ enum
 	
 	if	(![fileManager fileExistsAtPath: newAppSupportFolder] && [fileManager fileExistsAtPath: oldAppSupportFolder])
 	{
-		[fileManager movePath: oldAppSupportFolder
-                   toPath: newAppSupportFolder
-                  handler: nil];
+		[fileManager movePath: oldAppSupportFolder toPath: newAppSupportFolder handler: nil];
 	}
+  
+  // Check for VTDesktops in standard prefs - if it doesn't exist, read in the data from the old virtuedata file (if that exists)
+  if ([[[NSUserDefaults standardUserDefaults] objectForKey: @"VTDesktops"] count] == 0) {
+    NSString *file = [[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent: @"Desktops.virtuedata"];
+    if ([fileManager fileExistsAtPath: file]) {
+      NSArray *serialisedDesktops = [[NSArray alloc] initWithContentsOfFile: file];
+      // write to preferences 
+      [[NSUserDefaults standardUserDefaults] setObject: serialisedDesktops forKey: @"VTDesktops"]; 
+      
+      // and sync 
+      [[NSUserDefaults standardUserDefaults] synchronize];
+      
+      // Now release our unnecessary objects
+      [serialisedDesktops release];
+    }
+    [file release];
+  }
 }
 
 @end
