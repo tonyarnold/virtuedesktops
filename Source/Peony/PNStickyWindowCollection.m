@@ -19,7 +19,7 @@
 + (id) stickyWindowCollection
 {
 	static PNStickyWindowCollection* msINSTANCE = nil; 
-
+  
 	if (msINSTANCE == nil)
 		msINSTANCE = [[PNStickyWindowCollection  alloc] init]; 
 	
@@ -35,7 +35,7 @@
 		
 		// register observers 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillActivate:) name: kPnOnDesktopWillActivate object: nil]; 
-//		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidActivate:) name: kPnOnDesktopDidActivate object: nil]; 		
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidActivate:) name: kPnOnDesktopDidActivate object: nil]; 		
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowUnstickied:) name: kPnOnWindowUnstickied object: nil];
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
@@ -62,7 +62,7 @@
 {
 	[mWindows addWindow: window]; 
 }
- 
+
 - (void) delWindow: (PNWindow*) window
 {
 	[mWindows delWindow: window]; 
@@ -77,16 +77,18 @@
 
 - (void) onDesktopWillActivate: (NSNotification*) aNotification
 {
-	// sticky all windows in our list to transfer them over to the 
-	// next desktop 
-	[mWindows setSticky: YES]; 
+	// sticky all windows in our list to transfer them over to the next desktop 
+	[mWindows setSticky: YES];
 }
 
-//- (void) onDesktopDidActivate: (NSNotification*) aNotification
-//{
+- (void) onDesktopDidActivate: (NSNotification*) aNotification
+{
+  // Ensure that our window will actually show up given that we're switching sticky windows off after the switch
+  [mWindows setDesktop: (PNDesktop*)[aNotification object]];
+  
 	// unsticky all windows to have them show up in the window lists returned by the CGSGetWorkspaceWindowList functions (is this intended behaviour or a bug in that function?)
-//	[mWindows setSticky: NO];
-//}
+  [mWindows setSticky: NO];
+}
 
 - (void) onWindowStickied: (NSNotification*) aNotification
 {
