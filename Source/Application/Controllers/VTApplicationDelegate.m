@@ -83,18 +83,12 @@ enum
 	ZEN_RELEASE(mDesktopInspector);
 	ZEN_RELEASE(mApplicationInspector);
 	
-	[[VTLayoutController sharedInstance] removeObserver: self
-                                           forKeyPath: @"activeLayout"];
-	[[VTLayoutController sharedInstance] removeObserver: self
-                                           forKeyPath: @"activeLayout.desktops"];
-	[[VTDesktopController sharedInstance] removeObserver: self
-                                            forKeyPath: @"desktops"];
-	[[VTDesktopController sharedInstance] removeObserver: self
-                                            forKeyPath: @"activeDesktop"];
-	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self
-                                                               forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]];
-	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self
-                                                               forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
+	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout"];
+	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout.desktops"];
+	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"];
+	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"activeDesktop"];
+	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]];
+	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
 	
 	[mPluginController unloadPlugins];
 	ZEN_RELEASE(mPluginController);
@@ -123,11 +117,11 @@ enum
         
         // @TODO@ Localise this alert
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-        [alert setMessageText: @"VirtueDesktops needs your attention"];
-        [alert addButtonWithTitle: @"OK"];
-        [alert addButtonWithTitle: @"Ignore"];
-        [alert setInformativeText: @"In order to function properly, VirtueDesktops needs to change the permissions it has on your computer. If you select OK, you will be asked for an administrative login and password.\n\nIn you choose not to allow this, VirtueDesktops will not function correctly.\n\nFor more information about why this is necessary, please refer to the documentation that came with VirtueDesktops."];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText: NSLocalizedString(@"VTPermsNeedsAttention", @"Alert title")];
+        [alert addButtonWithTitle: NSLocalizedString(@"VTPermsOKButton", @"Go ahead and fix permissions")];
+        [alert addButtonWithTitle: NSLocalizedString(@"VTPermsIgnoreButton", @"Ignore the alert and continue without fixing permissions")];
+        [alert setInformativeText: NSLocalizedString(@"VTPermsMessage", @"Longer description about what will happen")];
+        [alert setAlertStyle: NSWarningAlertStyle];
         [alert setDelegate: self];
         if ([alert runModal] == NSAlertFirstButtonReturn) {
           [self fixExecutablePermissions: self];
@@ -698,7 +692,7 @@ enum
 }
 
 - (void)postGrowlNotification {
-	[GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: @"Changed to desktop \"%@\"", [[[VTDesktopController sharedInstance] activeDesktop] name]] description: nil notificationName: @"Desktop changed" iconData: nil priority: 0 isSticky: NO clickContext: nil];
+	[GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: NSLocalizedString(@"VTGrowlDesktopChangedMessage", @"Message shown when changing desktops"), [[[VTDesktopController sharedInstance] activeDesktop] name]] description: nil notificationName: NSLocalizedString(@"VTGrowlDesktopChangedTitle", @"Title shown when changing desktops") iconData: nil priority: 0 isSticky: NO clickContext: nil];
 }
 
 @end
