@@ -863,6 +863,71 @@
 		EA4D9D2C0B2D9B88009B8605 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog-information.png"; sourceTree = "<group>"; };
 		EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-system-windows.png"; sourceTree = "<group>"; };
+		EA564FA90B2ED049004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Localisation/Portuguese.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB30B2ED05F004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Norwegian; path = Localisation/Norwegian.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB40B2ED06A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localisation/Japanese.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB50B2ED072004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localisation/Japanese.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB60B2ED07A004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Norwegian; path = Localisation/Norwegian.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB70B2ED080004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Localisation/Portuguese.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB80B2ED092004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA564FB90B2ED09D004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBA0B2ED0B4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBB0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBC0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBD0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBE0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBF0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC00B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC10B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC20B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC30B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC40B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC50B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC60B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC70B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC80B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC90B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCA0B2ED137004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCB0B2ED142004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCC0B2ED14D004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCD0B2ED15C004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCE0B2ED165004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCF0B2ED190004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD00B2ED199004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD10B2ED1A0004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD20B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD30B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD40B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD50B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD60B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD70B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD80B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD90B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDA0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDB0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDC0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDD0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDF0B2ED209004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE00B2ED210004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE10B2ED214004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE20B2ED21E004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE30B2ED224004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE40B2ED22A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE50B2ED234004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE60B2ED23A004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE70B2ED243004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE80B2ED24E004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE90B2ED253004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEA0B2ED25A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEB0B2ED266004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEC0B2ED26F004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FED0B2ED275004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEE0B2ED27C004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEF0B2ED282004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FF00B2ED287004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FF20B2ED2D2004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA564FF30B2ED2D8004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Norwegian; path = Norwegian.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA564FF40B2ED2E5004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Portuguese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
 		EA7A53D20A86A5B4000D6B5E /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
 		EA7A53D30A86A5B4000D6B5E /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
@@ -1093,8 +1158,6 @@
 		EA7A55F30A86A6D1000D6B5E /* VTDesktopCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopCollectionViewController.m; sourceTree = "<group>"; };
 		EA7A55F40A86A6D1000D6B5E /* VTDesktopDecorationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopDecorationViewController.h; sourceTree = "<group>"; };
 		EA7A55F50A86A6D1000D6B5E /* VTDesktopDecorationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopDecorationViewController.m; sourceTree = "<group>"; };
-		EA7A55F60A86A6D1000D6B5E /* VTDesktopViewApplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopViewApplicationsController.h; sourceTree = "<group>"; };
-		EA7A55F70A86A6D1000D6B5E /* VTDesktopViewApplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopViewApplicationsController.m; sourceTree = "<group>"; };
 		EA7A55F80A86A6D1000D6B5E /* VTDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopViewController.h; sourceTree = "<group>"; };
 		EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopViewController.m; sourceTree = "<group>"; };
 		EA7A55FA0A86A6D1000D6B5E /* VTDesktopViewDecorationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopViewDecorationsController.h; sourceTree = "<group>"; };
@@ -1278,7 +1341,7 @@
 		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
-		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VirtueDesktops-Info.plist"; sourceTree = "<group>"; };
 		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/Operations.nib; sourceTree = "<group>"; };
 		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPreferences.nib; sourceTree = "<group>"; };
@@ -2118,8 +2181,6 @@
 				EA7A55F30A86A6D1000D6B5E /* VTDesktopCollectionViewController.m */,
 				EA7A55F40A86A6D1000D6B5E /* VTDesktopDecorationViewController.h */,
 				EA7A55F50A86A6D1000D6B5E /* VTDesktopDecorationViewController.m */,
-				EA7A55F60A86A6D1000D6B5E /* VTDesktopViewApplicationsController.h */,
-				EA7A55F70A86A6D1000D6B5E /* VTDesktopViewApplicationsController.m */,
 				EA7A55F80A86A6D1000D6B5E /* VTDesktopViewController.h */,
 				EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */,
 				EA7A55FA0A86A6D1000D6B5E /* VTDesktopViewDecorationsController.h */,
@@ -3206,6 +3267,8 @@
 				Italian,
 				Russian,
 				Itlian,
+				Norwegian,
+				Portuguese,
 			);
 			mainGroup = EAA9266B0A86A4E800D4674B;
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
@@ -3997,6 +4060,9 @@
 				EA8F2F060A93FABB0047C92C /* German */,
 				EA8F2F070A93FABF0047C92C /* Italian */,
 				EA8F2F080A93FAC10047C92C /* Russian */,
+				EA564FE20B2ED21E004BF37F /* Portuguese */,
+				EA564FE30B2ED224004BF37F /* Norwegian */,
+				EA564FE40B2ED22A004BF37F /* Japanese */,
 			);
 			name = VTApplicationPreferences.nib;
 			sourceTree = "<group>";
@@ -4009,6 +4075,9 @@
 				EA8F2F0C0A93FAC80047C92C /* German */,
 				EA8F2F0D0A93FACE0047C92C /* Italian */,
 				EA8F2F0E0A93FAD00047C92C /* Russian */,
+				EA564FE50B2ED234004BF37F /* Japanese */,
+				EA564FE60B2ED23A004BF37F /* Norwegian */,
+				EA564FE70B2ED243004BF37F /* Portuguese */,
 			);
 			name = VTDesktopTemplatePreferences.nib;
 			sourceTree = "<group>";
@@ -4021,6 +4090,9 @@
 				EA8F2F120A93FAD60047C92C /* German */,
 				EA8F2F130A93FAD80047C92C /* Italian */,
 				EA8F2F140A93FADA0047C92C /* Russian */,
+				EA564FE80B2ED24E004BF37F /* Portuguese */,
+				EA564FE90B2ED253004BF37F /* Norwegian */,
+				EA564FEA0B2ED25A004BF37F /* Japanese */,
 			);
 			name = VTHotkeyPreferences.nib;
 			sourceTree = "<group>";
@@ -4033,6 +4105,9 @@
 				EA8F2EFA0A93FAA30047C92C /* German */,
 				EA8F2EFB0A93FAA70047C92C /* Italian */,
 				EA8F2EFC0A93FAA90047C92C /* Russian */,
+				EA564FD20B2ED1B2004BF37F /* Portuguese */,
+				EA564FD60B2ED1CF004BF37F /* Norwegian */,
+				EA564FDA0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveDesktopColorLabelInspector.nib;
 			sourceTree = "<group>";
@@ -4045,6 +4120,8 @@
 				EA8F2ED30A93FA510047C92C /* German */,
 				EA8F2ED40A93FA540047C92C /* Italian */,
 				EA8F2ED50A93FA560047C92C /* Russian */,
+				EA564FCD0B2ED15C004BF37F /* Japanese */,
+				EA564FCE0B2ED165004BF37F /* Norwegian */,
 			);
 			name = PrimitiveTextInspector.nib;
 			sourceTree = "<group>";
@@ -4057,6 +4134,9 @@
 				EA8F2EE80A93FA7D0047C92C /* German */,
 				EA8F2EE90A93FA810047C92C /* Italian */,
 				EA8F2EEA0A93FA830047C92C /* Russian */,
+				EA564FD30B2ED1B2004BF37F /* Portuguese */,
+				EA564FD70B2ED1CF004BF37F /* Norwegian */,
+				EA564FDB0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveTintInspector.nib;
 			sourceTree = "<group>";
@@ -4069,6 +4149,9 @@
 				EA8F2EEE0A93FA8B0047C92C /* German */,
 				EA8F2EEF0A93FA8E0047C92C /* Italian */,
 				EA8F2EF00A93FA900047C92C /* Russian */,
+				EA564FD40B2ED1B2004BF37F /* Portuguese */,
+				EA564FD80B2ED1CF004BF37F /* Norwegian */,
+				EA564FDC0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveWatermarkInspector.nib;
 			sourceTree = "<group>";
@@ -4081,6 +4164,9 @@
 				EA8F2F000A93FAAF0047C92C /* German */,
 				EA8F2F010A93FAB10047C92C /* Italian */,
 				EA8F2F020A93FAB40047C92C /* Russian */,
+				EA564FDF0B2ED209004BF37F /* Japanese */,
+				EA564FE00B2ED210004BF37F /* Norwegian */,
+				EA564FE10B2ED214004BF37F /* Portuguese */,
 			);
 			name = VTAppearancePreferences.nib;
 			sourceTree = "<group>";
@@ -4093,6 +4179,9 @@
 				EA8F2EF40A93FA970047C92C /* German */,
 				EA8F2EF50A93FA9B0047C92C /* Italian */,
 				EA8F2EF60A93FA9D0047C92C /* Russian */,
+				EA564FD50B2ED1B2004BF37F /* Portuguese */,
+				EA564FD90B2ED1CF004BF37F /* Norwegian */,
+				EA564FDD0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = VTDecorationPrimitiveInspector.nib;
 			sourceTree = "<group>";
@@ -4105,6 +4194,9 @@
 				EA8F2F1E0A93FAEF0047C92C /* German */,
 				EA8F2F1F0A93FAF20047C92C /* Italian */,
 				EA8F2F200A93FAF40047C92C /* Russian */,
+				EA564FEE0B2ED27C004BF37F /* Portuguese */,
+				EA564FEF0B2ED282004BF37F /* Norwegian */,
+				EA564FF00B2ED287004BF37F /* Japanese */,
 			);
 			name = VTPluginPreferences.nib;
 			sourceTree = "<group>";
@@ -4117,6 +4209,9 @@
 				EA8F2E7D0A93F91A0047C92C /* German */,
 				EA8F2E7E0A93F91E0047C92C /* Italian */,
 				EA8F2E7F0A93F9240047C92C /* Russian */,
+				EA564FF20B2ED2D2004BF37F /* Japanese */,
+				EA564FF30B2ED2D8004BF37F /* Norwegian */,
+				EA564FF40B2ED2E5004BF37F /* Portuguese */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -4139,6 +4234,9 @@
 				EA8F2EBF0A93FA150047C92C /* German */,
 				EA8F2EC00A93FA190047C92C /* Italian */,
 				EA8F2EC10A93FA1C0047C92C /* Russian */,
+				EA564FBB0B2ED0D4004BF37F /* Japanese */,
+				EA564FC00B2ED0F1004BF37F /* Norwegian */,
+				EA564FC50B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = Operations.nib;
 			sourceTree = "<group>";
@@ -4151,6 +4249,9 @@
 				EA8F2EC50A93FA2A0047C92C /* German */,
 				EA8F2EC60A93FA2D0047C92C /* Italian */,
 				EA8F2EC70A93FA300047C92C /* Russian */,
+				EA564FBE0B2ED0D4004BF37F /* Japanese */,
+				EA564FC30B2ED0F1004BF37F /* Norwegian */,
+				EA564FC80B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTPreferences.nib;
 			sourceTree = "<group>";
@@ -4163,6 +4264,9 @@
 				EA8F2EB90A93FA080047C92C /* German */,
 				EA8F2EBA0A93FA0A0047C92C /* Italian */,
 				EA8F2EBB0A93FA0C0047C92C /* Russian */,
+				EA564FBC0B2ED0D4004BF37F /* Japanese */,
+				EA564FC10B2ED0F1004BF37F /* Norwegian */,
+				EA564FC60B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTApplicationInspector.nib;
 			sourceTree = "<group>";
@@ -4175,6 +4279,9 @@
 				EA8F2EB30A93F9FA0047C92C /* German */,
 				EA8F2EB40A93F9FC0047C92C /* Italian */,
 				EA8F2EB50A93FA000047C92C /* Russian */,
+				EA564FBD0B2ED0D4004BF37F /* Japanese */,
+				EA564FC20B2ED0F1004BF37F /* Norwegian */,
+				EA564FC70B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTDesktopInspector.nib;
 			sourceTree = "<group>";
@@ -4187,6 +4294,9 @@
 				EA8F2EA50A93F9D70047C92C /* German */,
 				EA8F2EA60A93F9DB0047C92C /* Italian */,
 				EA8F2EA70A93F9DE0047C92C /* Russian */,
+				EA564FB80B2ED092004BF37F /* Portuguese */,
+				EA564FB90B2ED09D004BF37F /* Norwegian */,
+				EA564FBA0B2ED0B4004BF37F /* Japanese */,
 			);
 			name = VirtueDesktops.nib;
 			sourceTree = "<group>";
@@ -4199,6 +4309,9 @@
 				EA8F2EAD0A93F9EB0047C92C /* German */,
 				EA8F2EAE0A93F9EE0047C92C /* Italian */,
 				EA8F2EAF0A93F9F00047C92C /* Russian */,
+				EA564FBF0B2ED0D4004BF37F /* Japanese */,
+				EA564FC40B2ED0F1004BF37F /* Norwegian */,
+				EA564FC90B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTTriggerInspector.nib;
 			sourceTree = "<group>";
@@ -4211,6 +4324,9 @@
 				EA8F2E8C0A93F9740047C92C /* German */,
 				EA8F2E8D0A93F9770047C92C /* Italian */,
 				EA8F2E8E0A93F97A0047C92C /* Russian */,
+				EA564FB50B2ED072004BF37F /* Japanese */,
+				EA564FB60B2ED07A004BF37F /* Norwegian */,
+				EA564FB70B2ED080004BF37F /* Portuguese */,
 			);
 			name = DefaultPrimitiveNames.strings;
 			sourceTree = "<group>";
@@ -4223,6 +4339,9 @@
 				EA8F2E9F0A93F9AA0047C92C /* German */,
 				EA8F2EA00A93F9AD0047C92C /* Italian */,
 				EA8F2EA10A93F9AF0047C92C /* Russian */,
+				EA564FA90B2ED049004BF37F /* Portuguese */,
+				EA564FB30B2ED05F004BF37F /* Norwegian */,
+				EA564FB40B2ED06A004BF37F /* Japanese */,
 			);
 			name = Notifications.strings;
 			sourceTree = "<group>";
@@ -4235,6 +4354,9 @@
 				EA8F2ECD0A93FA3D0047C92C /* German */,
 				EA8F2ECE0A93FA400047C92C /* Italian */,
 				EA8F2ECF0A93FA430047C92C /* Russian */,
+				EA564FCA0B2ED137004BF37F /* Portuguese */,
+				EA564FCB0B2ED142004BF37F /* Norwegian */,
+				EA564FCC0B2ED14D004BF37F /* Japanese */,
 			);
 			name = PrimitiveDesktopColorLabelInspector.nib;
 			sourceTree = "<group>";
@@ -4247,6 +4369,9 @@
 				EA8F2EE20A93FA6E0047C92C /* German */,
 				EA8F2EE30A93FA710047C92C /* Italian */,
 				EA8F2EE40A93FA740047C92C /* Russian */,
+				EA564FCF0B2ED190004BF37F /* Japanese */,
+				EA564FD00B2ED199004BF37F /* Norwegian */,
+				EA564FD10B2ED1A0004BF37F /* Portuguese */,
 			);
 			name = PrimitiveTextInspector.nib;
 			sourceTree = "<group>";
@@ -4275,6 +4400,9 @@
 				EA8F2F180A93FAE20047C92C /* German */,
 				EA8F2F190A93FAE40047C92C /* Italian */,
 				EA8F2F1A0A93FAE70047C92C /* Russian */,
+				EA564FEB0B2ED266004BF37F /* Japanese */,
+				EA564FEC0B2ED26F004BF37F /* Norwegian */,
+				EA564FED0B2ED275004BF37F /* Portuguese */,
 			);
 			name = VTLayoutPreferences.nib;
 			sourceTree = "<group>";
@@ -4282,7 +4410,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA5D5FE80AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FE80AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4294,9 +4422,9 @@
 				PRODUCT_NAME = DockCommunicator;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FE90AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FE90AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -4321,9 +4449,9 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FEA0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FEA0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4345,9 +4473,9 @@
 				PRODUCT_NAME = Zen;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FEB0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FEB0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4369,9 +4497,9 @@
 				PRODUCT_NAME = Peony;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FEC0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FEC0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4395,9 +4523,9 @@
 				PRODUCT_NAME = Virtue;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FED0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FED0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4414,9 +4542,9 @@
 				PRODUCT_NAME = authtool;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FEE0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FEE0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4440,9 +4568,9 @@
 				PRODUCT_NAME = VTInterface;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FEF0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FEF0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4464,9 +4592,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF00AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF00AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4488,9 +4616,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF10AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF10AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4512,9 +4640,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF20AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF20AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4536,9 +4664,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF30AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF30AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4560,9 +4688,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF40AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF40AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4584,9 +4712,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF50AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF50AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4608,9 +4736,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF60AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF60AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4632,9 +4760,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF80AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF80AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4658,9 +4786,9 @@
 				PRODUCT_NAME = TAUserInterfaceElements;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FF90AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FF90AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4685,9 +4813,9 @@
 				WRAPPER_EXTENSION = palette;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FFA0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FFA0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4729,9 +4857,9 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
-		EA5D5FFB0AECB2EE002B9A3C /* Native Architecture Release */ = {
+		EA5D5FFB0AECB2EE002B9A3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
@@ -4739,7 +4867,7 @@
 				GCC_ENABLE_OBJC_GC = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Native Architecture Release";
+			name = Release;
 		};
 		EA7A56A60A86A739000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4757,7 +4885,7 @@
 			};
 			name = Debug;
 		};
-		EA7A56A70A86A739000D6B5E /* Release */ = {
+		EA7A56A70A86A739000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4769,7 +4897,7 @@
 				PRODUCT_NAME = DockCommunicator;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A58190A86AD7C000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4800,7 +4928,7 @@
 			};
 			name = Debug;
 		};
-		EA7A581A0A86AD7C000D6B5E /* Release */ = {
+		EA7A581A0A86AD7C000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -4825,7 +4953,7 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A58FB0A86B076000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4853,7 +4981,7 @@
 			};
 			name = Debug;
 		};
-		EA7A58FC0A86B076000D6B5E /* Release */ = {
+		EA7A58FC0A86B076000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4875,7 +5003,7 @@
 				PRODUCT_NAME = Zen;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A59590A86B4D4000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4903,7 +5031,7 @@
 			};
 			name = Debug;
 		};
-		EA7A595A0A86B4D4000D6B5E /* Release */ = {
+		EA7A595A0A86B4D4000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4925,7 +5053,7 @@
 				PRODUCT_NAME = Peony;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A5A290A86B5E6000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4949,7 +5077,7 @@
 			};
 			name = Debug;
 		};
-		EA7A5A2A0A86B5E6000D6B5E /* Release */ = {
+		EA7A5A2A0A86B5E6000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4973,7 +5101,7 @@
 				PRODUCT_NAME = Virtue;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A5B550A86B7E5000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4996,7 +5124,7 @@
 			};
 			name = Debug;
 		};
-		EA7A5B560A86B7E5000D6B5E /* Release */ = {
+		EA7A5B560A86B7E5000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5013,7 +5141,7 @@
 				PRODUCT_NAME = authtool;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A5B660A86B809000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5038,7 +5166,7 @@
 			};
 			name = Debug;
 		};
-		EA7A5B670A86B809000D6B5E /* Release */ = {
+		EA7A5B670A86B809000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5062,7 +5190,7 @@
 				PRODUCT_NAME = VTInterface;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A617C0A86F366000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5085,7 +5213,7 @@
 			};
 			name = Debug;
 		};
-		EA7A617D0A86F366000D6B5E /* Release */ = {
+		EA7A617D0A86F366000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5107,7 +5235,7 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A62270A86F5C8000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5135,7 +5263,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62280A86F5C8000D6B5E /* Release */ = {
+		EA7A62280A86F5C8000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5157,7 +5285,7 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A62630A86F7AB000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5185,7 +5313,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62640A86F7AB000D6B5E /* Release */ = {
+		EA7A62640A86F7AB000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5207,7 +5335,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A62B10A86F8D7000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5235,7 +5363,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62B20A86F8D7000D6B5E /* Release */ = {
+		EA7A62B20A86F8D7000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5257,7 +5385,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A62DB0A86F9AF000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5285,7 +5413,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62DC0A86F9AF000D6B5E /* Release */ = {
+		EA7A62DC0A86F9AF000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5307,7 +5435,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A63390A86FB4F000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5335,7 +5463,7 @@
 			};
 			name = Debug;
 		};
-		EA7A633A0A86FB4F000D6B5E /* Release */ = {
+		EA7A633A0A86FB4F000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5357,7 +5485,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A635F0A86FC59000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5385,7 +5513,7 @@
 			};
 			name = Debug;
 		};
-		EA7A63600A86FC59000D6B5E /* Release */ = {
+		EA7A63600A86FC59000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5407,7 +5535,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A63860A86FD3D000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5435,7 +5563,7 @@
 			};
 			name = Debug;
 		};
-		EA7A63870A86FD3D000D6B5E /* Release */ = {
+		EA7A63870A86FD3D000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5457,7 +5585,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EA7A63E40A86FE65000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5505,7 +5633,7 @@
 			};
 			name = Debug;
 		};
-		EA7A63E50A86FE65000D6B5E /* Release */ = {
+		EA7A63E50A86FE65000D6B5E /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5547,7 +5675,7 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EAA9266F0A86A4E800D4674B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5557,7 +5685,7 @@
 			};
 			name = Debug;
 		};
-		EAA926700A86A4E800D4674B /* Release */ = {
+		EAA926700A86A4E800D4674B /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
@@ -5568,7 +5696,7 @@
 				GCC_ENABLE_OBJC_GC = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EAC00E280AD1065D00389BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5598,7 +5726,7 @@
 			};
 			name = Debug;
 		};
-		EAC00E290AD1065D00389BDB /* Release */ = {
+		EAC00E290AD1065D00389BDB /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5622,7 +5750,7 @@
 				PRODUCT_NAME = TAUserInterfaceElements;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 		EAC013A10AD10BA500389BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5655,7 +5783,7 @@
 			};
 			name = Debug;
 		};
-		EAC013A20AD10BA500389BDB /* Release */ = {
+		EAC013A20AD10BA500389BDB /* Release (Universal Binary) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5680,7 +5808,7 @@
 				WRAPPER_EXTENSION = palette;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Release (Universal Binary)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -5689,191 +5817,191 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A56A60A86A739000D6B5E /* Debug */,
-				EA7A56A70A86A739000D6B5E /* Release */,
-				EA5D5FE80AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A56A70A86A739000D6B5E /* Release (Universal Binary) */,
+				EA5D5FE80AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A58180A86AD7C000D6B5E /* Build configuration list for PBXNativeTarget "DockExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A58190A86AD7C000D6B5E /* Debug */,
-				EA7A581A0A86AD7C000D6B5E /* Release */,
-				EA5D5FE90AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A581A0A86AD7C000D6B5E /* Release (Universal Binary) */,
+				EA5D5FE90AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A58FA0A86B076000D6B5E /* Build configuration list for PBXNativeTarget "Zen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A58FB0A86B076000D6B5E /* Debug */,
-				EA7A58FC0A86B076000D6B5E /* Release */,
-				EA5D5FEA0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A58FC0A86B076000D6B5E /* Release (Universal Binary) */,
+				EA5D5FEA0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A59580A86B4D4000D6B5E /* Build configuration list for PBXNativeTarget "Peony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A59590A86B4D4000D6B5E /* Debug */,
-				EA7A595A0A86B4D4000D6B5E /* Release */,
-				EA5D5FEB0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A595A0A86B4D4000D6B5E /* Release (Universal Binary) */,
+				EA5D5FEB0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A5A280A86B5E6000D6B5E /* Build configuration list for PBXNativeTarget "Virtue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5A290A86B5E6000D6B5E /* Debug */,
-				EA7A5A2A0A86B5E6000D6B5E /* Release */,
-				EA5D5FEC0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A5A2A0A86B5E6000D6B5E /* Release (Universal Binary) */,
+				EA5D5FEC0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A5B540A86B7E5000D6B5E /* Build configuration list for PBXNativeTarget "authtool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5B550A86B7E5000D6B5E /* Debug */,
-				EA7A5B560A86B7E5000D6B5E /* Release */,
-				EA5D5FED0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A5B560A86B7E5000D6B5E /* Release (Universal Binary) */,
+				EA5D5FED0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A5B650A86B809000D6B5E /* Build configuration list for PBXNativeTarget "VTInterface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5B660A86B809000D6B5E /* Debug */,
-				EA7A5B670A86B809000D6B5E /* Release */,
-				EA5D5FEE0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A5B670A86B809000D6B5E /* Release (Universal Binary) */,
+				EA5D5FEE0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A617B0A86F366000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopColorLabelPrimitive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A617C0A86F366000D6B5E /* Debug */,
-				EA7A617D0A86F366000D6B5E /* Release */,
-				EA5D5FEF0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A617D0A86F366000D6B5E /* Release (Universal Binary) */,
+				EA5D5FEF0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A62260A86F5C8000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopNamePrimitive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62270A86F5C8000D6B5E /* Debug */,
-				EA7A62280A86F5C8000D6B5E /* Release */,
-				EA5D5FF00AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A62280A86F5C8000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF00AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A62620A86F7AB000D6B5E /* Build configuration list for PBXNativeTarget "VTAppearancePreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62630A86F7AB000D6B5E /* Debug */,
-				EA7A62640A86F7AB000D6B5E /* Release */,
-				EA5D5FF10AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A62640A86F7AB000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF10AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A62B00A86F8D7000D6B5E /* Build configuration list for PBXNativeTarget "VTApplicationPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62B10A86F8D7000D6B5E /* Debug */,
-				EA7A62B20A86F8D7000D6B5E /* Release */,
-				EA5D5FF20AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A62B20A86F8D7000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF20AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A62DA0A86F9AF000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopTemplatePreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62DB0A86F9AF000D6B5E /* Debug */,
-				EA7A62DC0A86F9AF000D6B5E /* Release */,
-				EA5D5FF30AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A62DC0A86F9AF000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF30AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A63380A86FB4F000D6B5E /* Build configuration list for PBXNativeTarget "VTHotkeyPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A63390A86FB4F000D6B5E /* Debug */,
-				EA7A633A0A86FB4F000D6B5E /* Release */,
-				EA5D5FF40AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A633A0A86FB4F000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF40AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A635E0A86FC59000D6B5E /* Build configuration list for PBXNativeTarget "VTLayoutPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A635F0A86FC59000D6B5E /* Debug */,
-				EA7A63600A86FC59000D6B5E /* Release */,
-				EA5D5FF50AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A63600A86FC59000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF50AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A63850A86FD3D000D6B5E /* Build configuration list for PBXNativeTarget "VTPluginPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A63860A86FD3D000D6B5E /* Debug */,
-				EA7A63870A86FD3D000D6B5E /* Release */,
-				EA5D5FF60AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A63870A86FD3D000D6B5E /* Release (Universal Binary) */,
+				EA5D5FF60AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EA7A63E30A86FE65000D6B5E /* Build configuration list for PBXNativeTarget "VirtueDesktops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A63E40A86FE65000D6B5E /* Debug */,
-				EA7A63E50A86FE65000D6B5E /* Release */,
-				EA5D5FFA0AECB2EE002B9A3C /* Native Architecture Release */,
+				EA7A63E50A86FE65000D6B5E /* Release (Universal Binary) */,
+				EA5D5FFA0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAA9266F0A86A4E800D4674B /* Debug */,
-				EAA926700A86A4E800D4674B /* Release */,
-				EA5D5FFB0AECB2EE002B9A3C /* Native Architecture Release */,
+				EAA926700A86A4E800D4674B /* Release (Universal Binary) */,
+				EA5D5FFB0AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EAC00E270AD1065D00389BDB /* Build configuration list for PBXNativeTarget "TAUserInterfaceElements" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAC00E280AD1065D00389BDB /* Debug */,
-				EAC00E290AD1065D00389BDB /* Release */,
-				EA5D5FF80AECB2EE002B9A3C /* Native Architecture Release */,
+				EAC00E290AD1065D00389BDB /* Release (Universal Binary) */,
+				EA5D5FF80AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 		EAC013A00AD10BA500389BDB /* Build configuration list for PBXNativeTarget "TA Interface Palette" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAC013A10AD10BA500389BDB /* Debug */,
-				EAC013A20AD10BA500389BDB /* Release */,
-				EA5D5FF90AECB2EE002B9A3C /* Native Architecture Release */,
+				EAC013A20AD10BA500389BDB /* Release (Universal Binary) */,
+				EA5D5FF90AECB2EE002B9A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Universal Binary)";
 		};
 /* End XCConfigurationList section */
 	};
