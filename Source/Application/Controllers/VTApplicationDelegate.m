@@ -360,13 +360,7 @@ enum
 - (IBAction) fixExecutablePermissions: (id) sender {
 	[mAttentionPermissionsWindow orderOut: self];
 	// If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and by setting the set-group-ID-on-execution bit
-	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);
-	if (fixExecutableStatus == 0) { 
-    //		NSLog(@"Fixing the VirtueDesktops executable's permissions so that we can execute as part of the procmod group.");
-	} else { 
-    //		NSLog(@"Installation of the VirtueDesktops dock extension has failed. Some of the VirtueDesktops features will not work as expected.");
-	}
-	
+	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);	
 	
 	[[NSUserDefaults standardUserDefaults] setBool: YES	forKey: @"PermissionsFixed"];
 	// We override asking us whether we want to quit, because the user really doesn't have any choice.
@@ -880,7 +874,7 @@ enum
 	// if there were no entries to be made, we will add a placeholder
 	if ([applications count] == 0) {
 		NSMenuItem* menuItem = [[NSMenuItem alloc]
-		initWithTitle: NSLocalizedString(@"VTStatusbarMenuNoApplication", @"No Applications placeholder")
+		initWithTitle: NSLocalizedString(@"VTStatusbarMenuNoApplication", @"No applications placeholder")
            action: nil
 		keyEquivalent: @""];
 		[menuItem setEnabled: NO];
@@ -939,13 +933,10 @@ enum
     if ([fileManager fileExistsAtPath: file]) {
       NSArray *serialisedDesktops = [[NSArray alloc] initWithContentsOfFile: file];
       // write to preferences 
-      [[NSUserDefaults standardUserDefaults] setObject: serialisedDesktops forKey: @"VTDesktops"]; 
+      [[NSUserDefaults standardUserDefaults] setObject: [serialisedDesktops copy] forKey: @"VTDesktops"]; 
       
       // and sync 
       [[NSUserDefaults standardUserDefaults] synchronize];
-      
-      // Now release our unnecessary objects
-      [serialisedDesktops release];
     }
     [file release];
   }
