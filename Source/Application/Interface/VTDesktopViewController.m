@@ -90,8 +90,6 @@
 	
 	// and add it to our collection 
   [[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]];
-
-  [[VTDesktopController sharedInstance] addInDesktops: newDesktop];
 }
 
 - (IBAction) deleteDesktop: (id) sender {
