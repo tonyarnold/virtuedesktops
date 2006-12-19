@@ -52,7 +52,7 @@
 		
 		// create the cell matrix 
 		NSRect labelFrame = [self frame]; 
-           labelFrame.origin = NSZeroPoint; 
+    labelFrame.origin = NSZeroPoint; 
 		mColorLabels = [[NSMatrix alloc] initWithFrame: labelFrame]; 
 		
 		[mColorLabels setCellClass: [TAUIColorLabelButtonCell class]]; 
@@ -75,7 +75,11 @@
 	// remove all tracking rects 
 	while ([mTrackingRects count] > 0) 
 		[self removeTrackingRect: [[mTrackingRects objectAtIndex: 0] intValue]]; 
-	[mTrackingRects removeAllObjects]; 
+	[mTrackingRects removeAllObjects];
+  
+  [mTrackingRects release];
+  [mColorLabels release];
+  [mColorLabelColor release];
   
 	// delegate to super
 	[super dealloc]; 
@@ -86,24 +90,24 @@
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-  [super initWithCoder:coder];
-  [self registerForDraggedTypes: [NSArray arrayWithObject: NSStringPboardType]];
+  if (self = [super initWithCoder:coder]) {
+    [self registerForDraggedTypes: [NSArray arrayWithObject: NSStringPboardType]];
     
-  [self bootstrapView];
-  if ([coder respondsToSelector:@selector(allowsKeyedCoding)]
-      && [coder allowsKeyedCoding]) {
-    [self setSelectedColorLabel: [coder decodeObjectForKey: @"selectedColorLabel"]];
-    [self setDisplaysClearButton: [coder decodeBoolForKey: @"displaysClearButton"]];
-  } else {
-    [self setSelectedColorLabel: [coder decodeObject]];
-    BOOL mTmpDisplaysClearButton = NO;
-    [coder decodeValueOfObjCType: @encode(BOOL)
-                              at: &mTmpDisplaysClearButton];
-    [self setDisplaysClearButton: mTmpDisplaysClearButton];
+    [self bootstrapView];
+    if ([coder respondsToSelector:@selector(allowsKeyedCoding)]
+        && [coder allowsKeyedCoding]) {
+      [self setSelectedColorLabel: [coder decodeObjectForKey: @"selectedColorLabel"]];
+      [self setDisplaysClearButton: [coder decodeBoolForKey: @"displaysClearButton"]];
+    } else {
+      [self setSelectedColorLabel: [coder decodeObject]];
+      BOOL mTmpDisplaysClearButton = NO;
+      [coder decodeValueOfObjCType: @encode(BOOL)
+                                at: &mTmpDisplaysClearButton];
+      [self setDisplaysClearButton: mTmpDisplaysClearButton];
+    }
+    return self;
   }
- 
-  
-  return self;
+  return nil;
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder

@@ -38,25 +38,25 @@
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-  [super initWithCoder:coder];  
-  
-  if ([coder respondsToSelector:@selector(allowsKeyedCoding)]
-      && [coder allowsKeyedCoding]) {
-    [self setColor:     [coder decodeObjectForKey: @"color"]];
-    [self setSelected:  [coder decodeBoolForKey: @"selected"]];
-  } else {
-    [self setColor: [coder decodeObject]];
-    BOOL mTmpSelected = NO;
-    [coder decodeValueOfObjCType: @encode(BOOL) 
-                              at: &mTmpSelected];
-    [self setSelected: mTmpSelected];
+  if (self = [super initWithCoder:coder]) {
+    if ([coder respondsToSelector:@selector(allowsKeyedCoding)]
+        && [coder allowsKeyedCoding]) {
+      [self setColor:     [coder decodeObjectForKey: @"color"]];
+      [self setSelected:  [coder decodeBoolForKey: @"selected"]];
+    } else {
+      [self setColor: [coder decodeObject]];
+      BOOL mTmpSelected = NO;
+      [coder decodeValueOfObjCType: @encode(BOOL) 
+                                at: &mTmpSelected];
+      [self setSelected: mTmpSelected];
+    }
+    TAUIColorLabelButtonType mTmpType;
+    [coder decodeValueOfObjCType: @encode(TAUIColorLabelButtonType) 
+                              at: &mTmpType];
+    [self setLabelType: mTmpType];
+    return self;
   }
-  TAUIColorLabelButtonType mTmpType;
-  [coder decodeValueOfObjCType: @encode(TAUIColorLabelButtonType) 
-                            at: &mTmpType];
-  [self setLabelType: mTmpType];
-  
-  return self;
+  return nil;
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder
