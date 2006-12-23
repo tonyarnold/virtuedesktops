@@ -24,9 +24,10 @@ typedef enum {
 	kVtDecorationPositionTL			= FOUR_CHAR_CODE('PTtl'),
 	kVtDecorationPositionTR			= FOUR_CHAR_CODE('PTtr'),
 	kVtDecorationPositionLeft		= FOUR_CHAR_CODE('PTl '),
-	kVtDecorationPositionRight		= FOUR_CHAR_CODE('PTr '), 
+	kVtDecorationPositionRight	= FOUR_CHAR_CODE('PTr '), 
 	kVtDecorationPositionTop		= FOUR_CHAR_CODE('PTt '),
-	kVtDecorationPositionBottom		= FOUR_CHAR_CODE('PTb '), 
+	kVtDecorationPositionBottom	= FOUR_CHAR_CODE('PTb '), 
+  kVtDecorationPositionCenter = FOUR_CHAR_CODE('PTc '),
 } VTDecorationPosition; 
 
 @interface VTDecorationPrimitive : NSObject<NSCoding, NSCopying, VTCoding> {

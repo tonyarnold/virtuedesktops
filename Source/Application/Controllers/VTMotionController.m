@@ -131,8 +131,7 @@
       {
         [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"SwitchToNextWorkspace" object: nil]; 
       }
-      // This prevents recoil when the sensor gets a positive hit.
-      // (cooldown * sensor_speed is what you'll get in real time -- seconds)
+      // This prevents recoil when the sensor gets a positive hit (cooldown * sensor_speed is what you'll get in real time -- seconds)
       cooldown = 8; 
       
     }

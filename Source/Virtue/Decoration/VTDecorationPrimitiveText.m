@@ -252,6 +252,7 @@
 		[NSNumber numberWithInt: kVtDecorationPositionTR],
 		[NSNumber numberWithInt: kVtDecorationPositionLL], 
 		[NSNumber numberWithInt: kVtDecorationPositionLR],
+    [NSNumber numberWithInt: kVtDecorationPositionCenter],
 		nil]; 
 }
 
@@ -282,6 +283,11 @@
 			location.y = screenFrame.size.height + screenFrame.origin.y - textSize.height - 10; 
 		else 
 			location.y = 10 + screenFrame.origin.y; 
+    
+    if (mPositionType == kVtDecorationPositionCenter) {
+      location.x = (screenFrame.size.width/2) - (textSize.width/2);
+      location.y = (screenFrame.size.height/2) - (textSize.height/2);
+    }
 	}
 	
   

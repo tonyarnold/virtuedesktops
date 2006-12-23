@@ -37,6 +37,8 @@
 			return 7; 
 		case kVtDecorationPositionRight: 
 			return 8; 
+    case kVtDecorationPositionCenter:
+      return 9;
 	}
 	
 	return 0; 
@@ -74,6 +76,8 @@
 		case 8: 
 			[self setPositionType: kVtDecorationPositionRight]; 
 			break; 
+    case 9:
+      [self setPositionType: kVtDecorationPositionCenter];
 	}
 	
 	[self didChangeValueForKey: @"positionType"]; 

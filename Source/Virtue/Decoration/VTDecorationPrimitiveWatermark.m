@@ -134,6 +134,7 @@
 		[NSNumber numberWithInt: kVtDecorationPositionTR],
 		[NSNumber numberWithInt: kVtDecorationPositionLL], 
 		[NSNumber numberWithInt: kVtDecorationPositionLR],
+    [NSNumber numberWithInt: kVtDecorationPositionCenter],
 		nil]; 
 }
 
@@ -161,6 +162,11 @@
 			location.y = rect.size.height + rect.origin.y - imageSize.height - 10; 
 		else 
 			location.y = 10 + rect.origin.y; 
+    
+    if (mPositionType == kVtDecorationPositionCenter) {
+      location.x = (rect.size.width/2) - (imageSize.width/2);
+      location.y = (rect.size.height/2) - (imageSize.height/2);
+    }
 	}
 	
 	// draw desktopname 

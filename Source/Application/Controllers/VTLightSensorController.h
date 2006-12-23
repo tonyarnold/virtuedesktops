@@ -19,7 +19,7 @@
   BOOL          enabled;
   BOOL          canEnable;
   
-  int           sensitivity;
+  float           sensitivity;
   int           stable;
   int           left_sum, right_sum;
   int           count;
@@ -38,8 +38,8 @@
   // Getters and setters
 - (BOOL) isEnabled;
 - (void) setIsEnabled: (BOOL) enableValue;
-- (int) sensorSensitivity;
-- (void) setSensorSensitivity: (int) sensitivityValue;
+- (float) sensorSensitivity;
+- (void) setSensorSensitivity: (float) sensitivityValue;
 
 
 @end

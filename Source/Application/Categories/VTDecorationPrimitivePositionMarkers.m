@@ -56,7 +56,9 @@
 		case VTPositionMarkerBottomLeft: 
 			return kVtDecorationPositionLL; 
 		case VTPositionMarkerBottomRight: 
-			return kVtDecorationPositionLR; 
+			return kVtDecorationPositionLR;
+    case VTPositionMarkerCenter:
+      return kVtDecorationPositionCenter;
 	}; 
 	
 	// interpret none of the above as an absolute position 
@@ -80,7 +82,9 @@
 		case kVtDecorationPositionLL: 
 			return VTPositionMarkerBottomLeft; 
 		case kVtDecorationPositionLR: 
-			return VTPositionMarkerBottomRight; 
+			return VTPositionMarkerBottomRight;
+    case kVtDecorationPositionCenter:
+      return VTPositionMarkerCenter;
 	}
 	
 	// interpret none of the above as no marker 

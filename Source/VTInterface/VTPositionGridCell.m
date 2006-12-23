@@ -19,14 +19,24 @@
 #define kCellSizeSpacer			6
 #define kCellSizeWidth(total)	(total - 2 * kCellSizeHeight - 2 * kCellSizeSpacer)
 
-#define kTopPosition(cellFrame)			NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeWidth(cellFrame.size.width)) / 2.0, cellFrame.origin.y + (cellFrame.size.height - kCellSizeHeight), kCellSizeWidth(cellFrame.size.width), kCellSizeHeight)
-#define kTopLeftPosition(cellFrame)		NSMakeRect(cellFrame.origin.x, cellFrame.origin.y + cellFrame.size.height - kCellSizeHeight, kCellSizeHeight, kCellSizeHeight)
-#define kLeftPosition(cellFrame)		NSMakeRect(cellFrame.origin.x, cellFrame.origin.y + (cellFrame.size.height - kCellSizeWidth(cellFrame.size.height)) / 2.0, kCellSizeHeight, kCellSizeWidth(cellFrame.size.height))
-#define kBottomLeftPosition(cellFrame)	NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, kCellSizeHeight, kCellSizeHeight)
-#define kBottomPosition(cellFrame)		NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeWidth(cellFrame.size.width)) / 2.0, cellFrame.origin.y, kCellSizeWidth(cellFrame.size.width), kCellSizeHeight)
-#define kBottomRightPosition(cellFrame)	NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeHeight), cellFrame.origin.y, kCellSizeHeight, kCellSizeHeight)
-#define kRightPosition(cellFrame)		NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeHeight), cellFrame.origin.y + (cellFrame.size.height - kCellSizeWidth(cellFrame.size.height)) / 2.0, kCellSizeHeight, kCellSizeWidth(cellFrame.size.height))
-#define kTopRightPosition(cellFrame)	NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeHeight), cellFrame.origin.y + cellFrame.size.height - kCellSizeHeight, kCellSizeHeight, kCellSizeHeight)
+#define kTopPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeWidth(cellFrame.size.width)) / 2.0, cellFrame.origin.y + (cellFrame.size.height - kCellSizeHeight), kCellSizeWidth(cellFrame.size.width), kCellSizeHeight)
+#define kTopLeftPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x, cellFrame.origin.y + cellFrame.size.height - kCellSizeHeight, kCellSizeHeight, kCellSizeHeight)
+#define kLeftPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x, cellFrame.origin.y + (cellFrame.size.height - kCellSizeWidth(cellFrame.size.height)) / 2.0, kCellSizeHeight, kCellSizeWidth(cellFrame.size.height))
+#define kBottomLeftPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, kCellSizeHeight, kCellSizeHeight)
+#define kBottomPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeWidth(cellFrame.size.width)) / 2.0, cellFrame.origin.y, kCellSizeWidth(cellFrame.size.width), kCellSizeHeight)
+#define kBottomRightPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeHeight), cellFrame.origin.y, kCellSizeHeight, kCellSizeHeight)
+#define kRightPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeHeight), cellFrame.origin.y + (cellFrame.size.height - kCellSizeWidth(cellFrame.size.height)) / 2.0, kCellSizeHeight, kCellSizeWidth(cellFrame.size.height))
+#define kTopRightPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeHeight), cellFrame.origin.y + cellFrame.size.height - kCellSizeHeight, kCellSizeHeight, kCellSizeHeight)
+#define kCenterPosition(cellFrame) \
+  NSMakeRect(cellFrame.origin.x + (cellFrame.size.width - kCellSizeWidth(cellFrame.size.width)) / 2.0, cellFrame.origin.y + (cellFrame.size.height - kCellSizeWidth(cellFrame.size.height)) / 2.0, kCellSizeWidth(cellFrame.size.width), kCellSizeHeight)
 
 #pragma mark -
 @interface VTPositionGridCell (Private) 
@@ -163,6 +173,9 @@
 			case VTPositionMarkerTopRight: 
 				subcellFrame = kTopRightPosition(cellFrame); 
 				break; 
+      case VTPositionMarkerCenter:
+        subcellFrame = kCenterPosition(cellFrame);
+        break;
 		}
 		
 		if (NSMouseInRect(locationInCell, subcellFrame, FALSE)) {
@@ -182,12 +195,12 @@
 
 - (void) setEnabled: (BOOL) flag {
 	NSEnumerator*	markerIter	= [mMarkers objectEnumerator]; 
-	NSButton*		marker		= nil; 
+	NSButton*     marker      = nil; 
 	
 	while (marker = [markerIter nextObject]) {
 		[marker setEnabled: flag]; 
 	}
-
+  
 	[super setEnabled: flag]; 
 }
 
@@ -231,6 +244,9 @@
 			case VTPositionMarkerTopRight: 
 				subcellFrame = kTopRightPosition(cellFrame); 
 				break; 
+      case VTPositionMarkerCenter:
+        subcellFrame = kCenterPosition(cellFrame);
+        break;
 		}
 	
 		[marker drawWithFrame: subcellFrame inView: controlView]; 

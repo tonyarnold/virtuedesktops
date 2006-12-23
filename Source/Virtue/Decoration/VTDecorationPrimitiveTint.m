@@ -171,6 +171,7 @@
 		[NSNumber numberWithInt: kVtDecorationPositionLeft],
 		[NSNumber numberWithInt: kVtDecorationPositionRight], 
 		[NSNumber numberWithInt: kVtDecorationPositionBottom],
+    [NSNumber numberWithInt: kVtDecorationPositionCenter],
 		nil]; 
 }
 

@@ -11,7 +11,7 @@
 	<key>ToolTips</key> <string>ColorLabel</string>
 	<key>ExportClasses</key>
 	<array>
-    <string>VTColorLabelButton</string>
+    <string>TAUIColorLabelButton</string>
 	</array>
 </dict>
 </plist>

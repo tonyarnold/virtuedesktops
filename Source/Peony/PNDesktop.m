@@ -285,6 +285,10 @@
 {
 	NSDictionary* infoDict = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt: mDesktopId], @"desktop", nil];
 	
+  // Notify clients that we will soon be the active desktop
+	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
+  
 	// Get the connection to the CoreGraphics server
 	CGSConnection cgs = _CGSDefaultConnection();
 	
@@ -309,17 +313,13 @@
 	// Create the transition, freezing all on-screen activity		
 	CGSNewTransition(cgs, &spec, &handle);
   
-  // Notify clients that we will soon be the active desktop
-	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: self];
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopWillActivate object: nil userInfo: infoDict];
-  
   // Now switch the workspace while the screen is frozen, setting up the transition target
 	CGSSetWorkspace(cgs, mDesktopId);
-  
-	// Notify listeners that we are now the active desktop
+	
+  // Notify listeners that we are now the active desktop
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: self];
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: nil userInfo: infoDict];
-	
+  
 	// tony@tonyarnold.com: Previously, I would insert a usleep(100000); here, so that the desktop picture had time to update before the transition was released. I think we need to find a faster way to set the desktop picture and get it onscreen - or accept the fact that desktop picture transitions are something that will only display properly on fast machines.
 		
 	// Run the transition	

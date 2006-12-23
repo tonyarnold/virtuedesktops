@@ -54,7 +54,7 @@ enum
   {
     enabled = NO;
     sensitivity = 25;
-    stable = 10;
+    stable = 8;  // stable * sensor speed == seconds to wait before re-enabling sensor
     left_sum = 0;
     right_sum = 0;
     count = 0;
@@ -97,7 +97,7 @@ enum
 	if (self = [super init]) 
   {
 		enabled      = [coder decodeBoolForKey: kVtCodingLightSensorEnabled]; 
-    sensitivity  = [coder decodeIntForKey: kVtCodingLightSensorSensitivity];
+    sensitivity  = [coder decodeFloatForKey: kVtCodingLightSensorSensitivity];
 		return self; 
 	}
 	return nil; 
@@ -106,7 +106,7 @@ enum
 - (void) encodeWithCoder: (NSCoder*) coder 
 {
   [coder encodeBool: enabled forKey: kVtCodingLightSensorEnabled];
-  [coder encodeInt: sensitivity forKey: kVtCodingLightSensorSensitivity];
+  [coder encodeFloat: sensitivity forKey: kVtCodingLightSensorSensitivity];
 }
 
 - (BOOL) hasALSHardware 
@@ -135,17 +135,15 @@ enum
   }
 }
 
-- (int) sensorSensitivity 
+- (float) sensorSensitivity 
 { 
   return sensitivity; 
 }
 
-- (void) setSensorSensitivity: (int) sensitivityValue 
+- (void) setSensorSensitivity: (float) sensitivityValue 
 {
-  if (sensitivityValue == nil)
-    return;
-  
-  sensitivity = sensitivityValue;
+  if (sensitivityValue > 0)
+    sensitivity = sensitivityValue;
 }
 
 
@@ -186,10 +184,9 @@ enum
     
     if (count > stable) 
     {
-      
-      int left_difference   = left_average  * (1-sensitivity/100);
-      int right_difference  = right_average * (1-sensitivity/100);
-            
+      float left_difference   = left_average  * ( sensitivity / 100 );
+      float right_difference  = right_average * ( sensitivity / 100 );
+
       // We're now stable. Whenever we fire, reset the count
       if ( left < left_difference ) 
       {

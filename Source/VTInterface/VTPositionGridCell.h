@@ -23,6 +23,7 @@ typedef enum {
 	VTPositionMarkerRight		=  5,
 	VTPositionMarkerTopRight	=  6,
 	VTPositionMarkerTop			=  7, 
+  VTPositionMarkerCenter    = 9,
 } VTPositionGridMarker; 
 
 @interface VTPositionGridCell : NSActionCell {
