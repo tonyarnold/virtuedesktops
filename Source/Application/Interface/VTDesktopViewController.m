@@ -90,6 +90,7 @@
 	
 	// and add it to our collection 
   [[VTDesktopController sharedInstance] insertObject: newDesktop inDesktopsAtIndex: [[[VTDesktopController sharedInstance] desktops] count]];
+  [mDesktopsController setSelectionIndex: [[[VTDesktopController sharedInstance] desktops] indexOfObject: newDesktop]];
 }
 
 - (IBAction) deleteDesktop: (id) sender {
@@ -97,8 +98,17 @@
 	int desktopIndex		= [[[VTDesktopController sharedInstance] desktops] indexOfObject: desktop]; 
 	
 	// remove the selected desktop 
-	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex]; 
-	[mDesktopsController rearrangeObjects]; 
+	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex];
+	[mDesktopsController rearrangeObjects];
+  
+  if ([[[VTDesktopController sharedInstance] desktops] count] > desktopIndex)
+  {
+    [mDesktopsController setSelectionIndex: desktopIndex];
+  }
+  else
+  {
+    [mDesktopsController setSelectionIndex: [[[VTDesktopController sharedInstance] desktops] count] - 1];
+  }
 }
 
 - (IBAction) deletePrimitive: (id) sender {

@@ -144,7 +144,8 @@
             OUTLETS = {mWindow = NSWindow; }; 
             SUPERCLASS = NSResponder; 
         }, 
-        {CLASS = VTPositionGrid; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+        {CLASS = VTPositionGrid; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = VTPositionGridCell; LANGUAGE = ObjC; SUPERCLASS = NSActionCell; }
     ); 
     IBVersion = 1; 
 }

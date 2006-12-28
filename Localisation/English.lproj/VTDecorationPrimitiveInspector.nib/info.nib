@@ -4,11 +4,13 @@
 <dict>
 	<key>IBDocumentLocation</key>
 	<string>{{152, 547}, {305, 251}}</string>
+	<key>IBFramework Version</key>
+	<string>446.1</string>
 	<key>IBOpenObjects</key>
 	<array>
-		<integer>8</integer>
+		<integer>7</integer>
 	</array>
 	<key>IBSystem Version</key>
-	<string>9A241</string>
+	<string>8L2127</string>
 </dict>
 </plist>

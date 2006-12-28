@@ -1599,6 +1599,10 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>67</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>38</integer>
 				</dict>
 				<dict>
@@ -1607,11 +1611,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>49</integer>
+					<integer>61</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>61</integer>
+					<integer>49</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1628,10 +1632,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>71</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>67</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1658,6 +1658,10 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>31</integer>
 				</dict>
 				<dict>
@@ -1671,10 +1675,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1700,15 +1700,19 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>67</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>38</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>49</integer>
+					<integer>61</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>61</integer>
+					<integer>49</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1729,10 +1733,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>71</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>67</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1782,15 +1782,15 @@
 				</dict>
 			</array>
 		</dict>
+		<string>NSTextField112</string>
 		<string>NSTextField11</string>
-		<string>NSButton1</string>
 		<string>2</string>
+		<string>NSButton1</string>
 		<string>File's Owner</string>
 		<string>Inspector</string>
 		<string>NSTextField111</string>
 		<string>NSTextField2</string>
 		<string>NSTextField</string>
-		<string>NSTextField112</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1817,14 +1817,6 @@
 			</dict>
 			<key>NS.objects</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>107</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>71</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>61</integer>
@@ -1904,6 +1896,14 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>113</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>107</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>71</integer>
 				</dict>
 			</array>
 		</dict>
@@ -2005,8 +2005,6 @@
 				</dict>
 			</array>
 		</dict>
-		<integer>54</integer>
-		<integer>51</integer>
 		<integer>41</integer>
 		<integer>1</integer>
 		<integer>44</integer>
@@ -2027,6 +2025,8 @@
 		<integer>26</integer>
 		<integer>38</integer>
 		<integer>58</integer>
+		<integer>54</integer>
+		<integer>51</integer>
 		<dict>
 			<key>$class</key>
 			<dict>

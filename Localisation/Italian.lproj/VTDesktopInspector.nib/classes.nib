@@ -128,6 +128,8 @@
             LANGUAGE = ObjC; 
             SUPERCLASS = NSView; 
         }, 
+        {CLASS = RoundedBox; LANGUAGE = ObjC; SUPERCLASS = NSBox; }, 
+        {CLASS = StyledWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
         {
             ACTIONS = {doAction = id; }; 
             CLASS = TAUIColorLabelButton; 
