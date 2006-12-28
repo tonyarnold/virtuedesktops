@@ -929,7 +929,7 @@ enum
   
   // Check for VTDesktops in standard prefs - if it doesn't exist, read in the data from the old virtuedata file (if that exists)
   if ([[[NSUserDefaults standardUserDefaults] objectForKey: @"VTDesktops"] count] == 0) {
-    NSString *file = [[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent: @"Desktops.virtuedata"];
+    NSString *file = [[[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent: @"Desktops.virtuedata"] retain];
     if ([fileManager fileExistsAtPath: file]) {
       NSArray *serialisedDesktops = [[NSArray alloc] initWithContentsOfFile: file];
       // write to preferences 
