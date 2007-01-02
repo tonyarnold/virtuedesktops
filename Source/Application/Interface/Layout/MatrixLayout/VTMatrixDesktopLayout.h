@@ -34,7 +34,7 @@
   
 	NSObject<VTPager>*	mPager; 
   NSArray*            mPagers;
-	NSMutableArray*       mDesktopLayout; 
+	NSMutableArray*     mDesktopLayout; 
 }
 
 #pragma mark -
@@ -89,6 +89,7 @@
 #pragma mark -
 - (NSArray*) desktopLayout; 
 - (void) swapDesktopAtIndex: (unsigned int) index withIndex: (unsigned int) otherIndex;
+- (void) moveDesktopAtIndex: (unsigned int) index toIndex: (unsigned int) newIndex;
 
 #pragma mark -
 #pragma mark VTDesktopLayout implementation 

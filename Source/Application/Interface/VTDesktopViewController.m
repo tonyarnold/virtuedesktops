@@ -165,6 +165,9 @@
 #pragma mark NSWindowController overrides 
 
 - (void) windowDidLoad {
+  // Desktop table view
+  [mDesktopsTableView registerForDraggedTypes: [NSArray arrayWithObjects: kVtMovedRowsDropType, nil]];	
+  
 	// Decorations table view 
 	[mDecorationsTableView registerForDraggedTypes: [NSArray arrayWithObjects: kVtMovedRowsDropType, nil]];	
 	[self createDecorationAddMenu]; 
@@ -176,7 +179,7 @@
 	// create inspector 
 	mInspectorController = [[VTDecorationPrimitiveViewController alloc] init];
 	
-	// and select a desktop 
+	// and select a desktop
 	[self showDesktop: [self selectedDesktop]];
   
   [mImageView bind: @"imagePath" toObject: mDesktop withKeyPath: @"desktopBackground" options: nil];
@@ -218,6 +221,17 @@
 		
 		return YES; 
 	}
+  
+  // Desktops table view
+	if ([tv isEqual: mDesktopsTableView]) {
+		NSArray* typesArray = [NSArray arrayWithObjects: kVtMovedRowsDropType, nil];
+		[pboard declareTypes: typesArray owner: self];
+    
+		// add rows array for local move
+		[pboard setPropertyList: rows forType: kVtMovedRowsDropType];
+		
+		return YES; 
+	}
 	
 	return NO; 
 }
@@ -237,6 +251,22 @@
     
 		return dragOp;
 	}
+  
+  // Desktops table view
+	if ([tv isEqual: mDesktopsTableView]) {
+		NSDragOperation dragOp = NSDragOperationCopy;
+    
+		// if drag source is self, it's a move
+		if ([info draggingSource] == mDesktopsTableView) {
+			dragOp = NSDragOperationMove;
+		}
+    
+		// we want to put the object on, not above or below the current row (contrast NSTableViewDropOn) 
+		[tv setDropRow: row dropOperation: NSTableViewDropAbove];
+    
+		return dragOp;
+	}
+  
 	
 	return NSDragOperationNone; 
 }
@@ -255,17 +285,37 @@
 			// if the index would not change, we do not do anything 
 			if (fromIndex == row)
 				return NO; 
-      
+            
 			[mDecorationsController setSelectionIndex: -1]; 
 			[[mDesktop decoration] moveObjectAtIndex: fromIndex toIndex: row]; 
 			[mDecorationsController setSelectionIndex: row]; 
       
 			return YES;
 		}
+  }
+  
+  // Desktops table view
+  if ([delegateTableView isEqual: mDesktopsTableView]) {   
+    if (row < 0)
+      row = 0;
     
-		return NO;
-	}
-	
+    // if drag source is self, it's a move
+    if ([info draggingSource] == mDesktopsTableView) {
+      NSArray*	rows				= [[info draggingPasteboard] propertyListForType: kVtMovedRowsDropType];
+      int				fromIndex   = [[rows objectAtIndex: 0] intValue]; 
+
+      // if the index would not change, we do not do anything 
+      if (fromIndex == row)
+        return NO; 
+            
+      [mDesktopsController setSelectionIndex: -1]; 
+      [mActiveDesktopLayout moveDesktopAtIndex: fromIndex toIndex: row];
+      [mDesktopsController setSelectionIndex: row]; 
+      
+      return YES;
+    }
+  }    
+    
 	return NO; 
 }
 

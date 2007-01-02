@@ -63,7 +63,7 @@ enum
 		mPagerCells = [[VTMatrixPagerMatrix alloc] initWithFrame: frame]; 
 		
 		[mPagerCells setCellClass: [VTMatrixPagerCell class]]; 
-        [mPagerCells setIntercellSpacing: cellSpacing]; 
+    [mPagerCells setIntercellSpacing: cellSpacing]; 
 		[mPagerCells setMode: NSRadioModeMatrix];
 		[mPagerCells setAllowsEmptySelection: YES]; 
 		[mPagerCells setSelectionByRect: NO];  
@@ -84,10 +84,10 @@ enum
 		mDisplaysColorLabels		= YES; 
 		mDisplaysApplicationIcons	= YES; 
 		mCurrentDraggingTarget		= nil; 
-			
+    
 		// and build up initial pager cells 
 		[self synchronizeDesktopLayout: YES]; 
-	
+    
 		[self registerForDraggedTypes: [NSArray arrayWithObjects: kVtDragTypeSource, nil]]; 
 		
 		return self; 
@@ -217,7 +217,7 @@ enum
 #pragma mark -
 - (void) setDisplaysApplicationIcons: (BOOL) flag {
 	mDisplaysApplicationIcons = flag; 
-
+  
 	NSEnumerator*		cellIter	= [[mPagerCells cells] objectEnumerator]; 
 	VTMatrixPagerCell*	cell		= nil; 
 	
@@ -337,7 +337,7 @@ enum
 #pragma mark -
 
 /**
- * TODO: Fixme 
+* TODO: Fixme 
  * Note that this is a workaround, as I thought events not handled by an NSResponder 
  * walk up the responder chain automagically. Did I do something in here to break the
  * chain? I suspect the keyDown: method is swallowing our flag keys, but I am not 
@@ -387,8 +387,8 @@ enum
 	// draw background 
 	[[NSGraphicsContext currentContext] saveGraphicsState]; 
 	NSBezierPath* backgroundPath = [NSBezierPath bezierPathForRoundedRect: aRect withRadius: kRoundedRadius]; 
-    [mBackgroundColor set];
-    [backgroundPath fill];
+  [mBackgroundColor set];
+  [backgroundPath fill];
 	[[NSGraphicsContext currentContext] restoreGraphicsState];
 }
 
@@ -461,7 +461,7 @@ enum
 		for (desktopIndex = 0; desktopIndex < numberOfDesktops; desktopIndex++) {
 			VTMatrixPagerCell*	cell	= [mPagerCells cellAtRow: row column: column]; 
 			VTDesktop*			desktop	= [[VTDesktopController sharedInstance] desktopWithUUID: [[mLayout desktopLayout] objectAtIndex: desktopIndex]]; 
-
+      
 			[cell setDesktop: desktop]; 
 			[cell setBackgroundColor: mBackgroundColor]; 
 			[cell setBackgroundHighlightColor: mBackgroundHighlightColor]; 
@@ -480,9 +480,9 @@ enum
 		
 		// and select the first cell
 		[mPagerCells selectCellAtRow: 0 column: 0]; 
-    }
+  }
 	
-    [mPagerCells sizeToFit];
+  [mPagerCells sizeToFit];
 	
 	// now we get the size, the pager needs to display 
 	NSSize pagerSize = [mPagerCells frame].size;
@@ -502,7 +502,7 @@ enum
 	
 	[[self window] setContentSize: viewSize];
 	[self setNeedsDisplay: YES]; 
-
+  
 }
 
 - (void) rebuildTrackingRects {
@@ -519,7 +519,7 @@ enum
 	while (cell = [cellIter nextObject]) {
 		if ([cell desktop] == nil)
 			continue; 
-			
+    
 		int row; 
 		int col; 
 				
@@ -538,48 +538,47 @@ enum
 #pragma mark -
 #pragma mark Dragging 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
-	return NSDragOperationCopy; 
+  return NSDragOperationCopy; 
 }
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender {
 }
 
 - (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender {
-	int row			= -1;
-	int column	= -1; 
-	
-	if ([mPagerCells getRow: &row column: &column forPoint: [mPagerCells convertPoint: [sender draggingLocation] fromView: nil]] && 
-		[[mPagerCells cellAtRow: row column: column] isEnabled]) { 
-		
-		VTMatrixPagerCell* cell = [mPagerCells cellAtRow: row column: column]; 
-		if ([cell isEqual: mCurrentDraggingTarget]) 
-			return NSDragOperationCopy; 
-		
-		if (mCurrentDraggingTarget) {
-			[mCurrentDraggingTarget setDraggingTarget: NO];
-			[mPagerCells updateCell: mCurrentDraggingTarget]; 
-		}
-		
-		if ([cell isEqual: [(VTMatrixPagerMatrix*)mPagerCells mouseDownCell]]) {
-			ZEN_RELEASE(mCurrentDraggingTarget); 
-			return NSDragOperationNone; 
-		}
-		
-		[cell setDraggingTarget: YES]; 
-		[mPagerCells updateCell: cell]; 
-		
-		ZEN_ASSIGN(mCurrentDraggingTarget, cell); 
-		
-		return NSDragOperationCopy; 
-	}
-	
-	if (mCurrentDraggingTarget) {
-		[mCurrentDraggingTarget setDraggingTarget: NO]; 
-		[mPagerCells updateCell: mCurrentDraggingTarget]; 
-		
-		ZEN_RELEASE(mCurrentDraggingTarget); 
-	}
-	
+  int row			= -1;
+  int column	= -1; 
+  
+  if ([mPagerCells getRow: &row column: &column forPoint: [mPagerCells convertPoint: [sender draggingLocation] fromView: nil]] && 
+      [[mPagerCells cellAtRow: row column: column] isEnabled]) { 
+    
+    VTMatrixPagerCell* cell = [mPagerCells cellAtRow: row column: column]; 
+    if ([cell isEqual: mCurrentDraggingTarget]) 
+      return NSDragOperationCopy; 
+    
+    if (mCurrentDraggingTarget) {
+      [mCurrentDraggingTarget setDraggingTarget: NO];
+      [mPagerCells updateCell: mCurrentDraggingTarget]; 
+    }
+    
+    if ([cell isEqual: [(VTMatrixPagerMatrix*)mPagerCells mouseDownCell]]) {
+      ZEN_RELEASE(mCurrentDraggingTarget); 
+      return NSDragOperationNone; 
+    }
+    
+    [cell setDraggingTarget: YES]; 
+    [mPagerCells updateCell: cell]; 
+    
+    ZEN_ASSIGN(mCurrentDraggingTarget, cell); 
+    
+    return NSDragOperationCopy; 
+  }
+  
+  if (mCurrentDraggingTarget) {
+    [mCurrentDraggingTarget setDraggingTarget: NO]; 
+    [mPagerCells updateCell: mCurrentDraggingTarget]; 
+    
+    ZEN_RELEASE(mCurrentDraggingTarget); 
+  }
 	return NSDragOperationNone; 
 }
 
@@ -590,7 +589,7 @@ enum
 	int col; 
 	
 	[mPagerCells getRow: &row column: &col ofCell: mCurrentDraggingTarget]; 
-
+  
 	// we will fetch indices of dragged cell and the target cell and exchange them 
 	NSString*	sourceUUID	= [dataDictionary objectForKey: kVtDragDataSourceUUID]; 
 	int			sourceIndex	= [[dataDictionary objectForKey: kVtDragDataSourceIndex] intValue]; 
@@ -602,12 +601,12 @@ enum
 	[mLayout swapDesktopAtIndex: sourceIndex withIndex: targetIndex]; 
 }
 
-- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {	
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
 	return YES; 
 }
 
 - (NSDragOperation) draggingSourceOperationMarkForLocal: (BOOL) flag {
-	return NSDragOperationCopy; 
+  return NSDragOperationCopy; 
 } 
 
 @end 
@@ -638,34 +637,33 @@ enum
 }
 
 - (void) mouseDown: (NSEvent*) event {
-	int row			= -1;
-	int column	= -1; 
+  int row			= -1;
+  int column	= -1; 
 	
-	if ([self getRow: &row column: &column forPoint: [self convertPoint: [event locationInWindow] fromView: nil]] && 
-			[[self cellAtRow: row column: column] isEnabled]) { 
-			[self selectCellAtRow: row column: column]; 
-		
-		ZEN_ASSIGN(mMouseDownCell, [self cellAtRow: row column: column]); 
-		
-		return; 
-	}
-	
-	[super mouseDown: event]; 
+  if ([self getRow: &row column: &column forPoint: [self convertPoint: [event locationInWindow] fromView: nil]] && 
+      [[self cellAtRow: row column: column] isEnabled]) { 
+    [self selectCellAtRow: row column: column]; 
+    
+    ZEN_ASSIGN(mMouseDownCell, [self cellAtRow: row column: column]); 
+    
+    return; 
+  }
+  
+  [super mouseDown: event]; 
 }
 
 - (void) mouseUp: (NSEvent*) event {
-	int row		= -1;
-	int column	= -1; 
-	
-	if ([self getRow: &row column: &column forPoint: [self convertPoint: [event locationInWindow] fromView: nil]] && 
-		[[self cellAtRow: row column: column] isEqual: mMouseDownCell]) { 
-		
-		ZEN_RELEASE(mMouseDownCell); 
-		[[self cellAtRow: row column: column] performClick: self]; 
-		
-		return; 
+  int row		= -1;
+  int column	= -1; 
+  
+  if ([self getRow: &row column: &column forPoint: [self convertPoint: [event locationInWindow] fromView: nil]] && 
+      [[self cellAtRow: row column: column] isEqual: mMouseDownCell]) { 
+    
+    ZEN_RELEASE(mMouseDownCell); 
+    [[self cellAtRow: row column: column] performClick: self]; 
+    
+    return; 
 	}
-	
 }
 
 - (void) copyToPasteboard: (NSPasteboard*) pasteboard { 
@@ -706,12 +704,12 @@ enum
 	[translucent unlockFocus]; 
 	
 	[self dragImage: translucent 
-				 at: dragPoint 
-			 offset: NSZeroSize 
-			  event: event 
-		 pasteboard: pboard 
-			 source: [self superview] 
-		  slideBack: YES];
+               at: dragPoint 
+           offset: NSZeroSize 
+            event: event 
+       pasteboard: pboard 
+           source: [self superview] 
+        slideBack: YES];
 }
 
 @end 

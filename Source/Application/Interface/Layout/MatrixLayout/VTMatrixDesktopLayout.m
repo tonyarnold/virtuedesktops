@@ -305,7 +305,8 @@
 }
 
 - (void) setDraggable: (BOOL) flag {
-	mDraggable = flag; 
+	mDraggable = flag;
+  NSLog(@"Draggable set to %i", flag);
 }
 
 #pragma mark -
@@ -327,6 +328,25 @@
 	[mDesktopLayout replaceObjectAtIndex: index withObject: uuidOfSecond]; 
 	[mDesktopLayout replaceObjectAtIndex: otherIndex withObject: uuidOfFirst]; 
 	
+	[self didChangeValueForKey: @"orderedDesktops"]; 
+	[self didChangeValueForKey: @"desktops"]; 
+	[self didChangeValueForKey: @"desktopLayout"]; 
+}
+
+- (void) moveDesktopAtIndex: (unsigned int) index toIndex: (unsigned int) newIndex {	
+	[self willChangeValueForKey: @"desktopLayout"];
+	[self willChangeValueForKey: @"desktops"]; 
+	[self willChangeValueForKey: @"orderedDesktops"]; 
+  
+  VTDesktop* desktopToMove = [[mDesktopLayout objectAtIndex: index] retain];
+  
+  // Correct insertion index
+  if (index < newIndex)
+    newIndex--;
+	
+  [mDesktopLayout removeObjectAtIndex: index];
+  [mDesktopLayout insertObject: desktopToMove atIndex: newIndex];
+  
 	[self didChangeValueForKey: @"orderedDesktops"]; 
 	[self didChangeValueForKey: @"desktops"]; 
 	[self didChangeValueForKey: @"desktopLayout"]; 
