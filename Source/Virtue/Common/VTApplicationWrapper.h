@@ -17,6 +17,7 @@
 
 @interface VTApplicationWrapper : NSObject<VTCoding> {
 	NSString*	mBundle; 
+  NSString* mBundleId;
 	
 	// running applications 
 	pid_t		mPid; 
@@ -35,7 +36,7 @@
 #pragma mark -
 #pragma mark Lifetime 
 - (id) init; 
-- (id) initWithBundlePath: (NSString*) bundlePath; 
+- (id) initWithBundleId: (NSString*) bundleId;
 - (void) dealloc; 
 
 #pragma mark -
@@ -69,6 +70,7 @@
 
 #pragma mark -
 - (NSString*) bundlePath; 
+- (NSString*) bundleId;
 
 #pragma mark -
 #pragma mark Notification delegate 

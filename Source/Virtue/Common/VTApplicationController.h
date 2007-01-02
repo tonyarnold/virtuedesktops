@@ -24,7 +24,7 @@
 - (void) scanApplications; 
 
 - (NSArray*) applications; 
-- (VTApplicationWrapper*) applicationForBundle: (NSString*) bundle; 
+- (VTApplicationWrapper*) applicationForBundleId: (NSString*) bundleId; 
 
 - (void) attachApplication: (VTApplicationWrapper*) wrapper; 
 - (void) detachApplication: (VTApplicationWrapper*) wrapper; 

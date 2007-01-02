@@ -121,35 +121,35 @@
 	return [mApplications allValues]; 
 }
 
-- (VTApplicationWrapper*) applicationForBundle: (NSString*) bundle {
-	return [mApplications objectForKey: bundle]; 
+- (VTApplicationWrapper*) applicationForBundleId: (NSString*) bundleId {
+	return [mApplications objectForKey: bundleId]; 
 }
 
 
 #pragma mark -
 - (void) attachApplication: (VTApplicationWrapper*) wrapper {
 	[self willChangeValueForKey: @"applications"]; 
-	[mApplications setObject: wrapper forKey: [wrapper bundlePath]]; 
+	[mApplications setObject: wrapper forKey: [wrapper bundleId]]; 
 	[self didChangeValueForKey: @"applications"]; 	
 }
 
 - (void) detachApplication: (VTApplicationWrapper*) wrapper {
 	[self willChangeValueForKey: @"applications"]; 	
-	[mApplications removeObjectForKey: [wrapper bundlePath]]; 
+	[mApplications removeObjectForKey: [wrapper bundleId]]; 
 	[self didChangeValueForKey: @"applications"]; 
 }
 
 #pragma mark -
 #pragma mark Notification sink 
 - (void) onApplicationAttached: (NSNotification*) notification {
-	NSString* bundlePath = [notification object]; 
+	NSString* bundleId = [notification object]; 
 	
-	// return nil paths 
-	if (bundlePath == nil) 
+	// return nil Ids 
+	if (bundleId == nil) 
 		return; 
 	
 	// if we know about this application already, delegate to the wrapper 
-	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundlePath]; 
+	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundleId]; 
 	
 	if (wrapper != nil) {
 		[wrapper onApplicationAttached: notification]; 
@@ -157,7 +157,7 @@
 	}
 	
 	// otherwise create a new wrapper 
-	wrapper = [[[VTApplicationWrapper alloc] initWithBundlePath: bundlePath] autorelease];
+	wrapper = [[[VTApplicationWrapper alloc] initWithBundleId: bundleId] autorelease];
 	if (wrapper == nil) 
 		return; 
 	
@@ -165,14 +165,14 @@
 }
 
 - (void) onApplicationDetached: (NSNotification*) notification {
-	NSString* bundlePath = [notification object]; 
+	NSString* bundleId = [notification object]; 
 	
 	// ignore nil paths 
-	if (bundlePath == nil) 
+	if (bundleId == nil) 
 		return; 
 	
 	// if we know about this application, let it know of the notification 
-	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundlePath]; 
+	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundleId]; 
 	if (wrapper == nil)
 		return; 
 	
@@ -206,19 +206,19 @@
 		PNApplication*	application		= nil; 
 		
 		while (application = [applicationIter nextObject]) {
-			if ([application bundlePath] == nil)
+			if ([application bundleId] == nil)
 				continue; 
 			
-			if ([mApplications objectForKey: [application bundlePath]] != nil)
+			if ([mApplications objectForKey: [application bundleId]] != nil)
 				break; 
 			
 			// create a new wrapper and add it 
-			VTApplicationWrapper* wrapper = [[VTApplicationWrapper alloc] initWithBundlePath: [application bundlePath]];
+			VTApplicationWrapper* wrapper = [[VTApplicationWrapper alloc] initWithBundleId: [application bundleId]];
 			
 			if (wrapper == nil) 
 				continue;
 			
-			[mApplications setObject: wrapper forKey: [application bundlePath]]; 
+			[mApplications setObject: wrapper forKey: [application bundleId]]; 
 			[wrapper release]; 
 		}
 	}

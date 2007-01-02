@@ -53,15 +53,16 @@
 	return nil; 
 }
 
-- (id) initWithBundlePath: (NSString*) bundlePath {
+- (id) initWithBundleId: (NSString*) bundleId {
 	if (self = [self init]) {
-		if (bundlePath == nil) {
+		if (bundleId == nil) {
 			[self autorelease]; 
-		
+      
 			return nil; 
 		}
 		
-		ZEN_ASSIGN(mBundle, bundlePath);
+		ZEN_ASSIGN(mBundleId, bundleId);
+    ZEN_ASSIGN(mBundle, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: bundleId]);
 		
 		// and complete initialization by filling the application array 
 		[self createApplications];
@@ -74,6 +75,7 @@
 
 - (void) dealloc {
 	ZEN_RELEASE(mBundle); 
+  ZEN_RELEASE(mBundleId);
 	ZEN_RELEASE(mApplications); 
 	ZEN_RELEASE(mImage); 
 	ZEN_RELEASE(mTitle); 
@@ -279,6 +281,11 @@
 	return mBundle; 
 }
 
+- (NSString*) bundleId {
+	return mBundleId; 
+}
+
+
 #pragma mark -
 #pragma mark Notifications 
 - (void) onApplicationAttached: (NSNotification*) notification {
@@ -288,7 +295,7 @@
 	// check validity of this application 
 	if (([application name] == nil) || [[application name] isEqualToString: @""]) 
 		return; 
-	if (([application icon] == nil) || ([application bundlePath] == nil)) 
+	if (([application icon] == nil) || ([application bundlePath] == nil) || ([application bundleId] == nil)) 
 		return; 
 	
 	// check if we already know about this instance 
@@ -302,7 +309,8 @@
 		
 		mPid	= [application pid]; 
 		ZEN_ASSIGN(mImage, ([application icon])); 
-		ZEN_ASSIGN_COPY(mTitle, ([application name])); 
+		ZEN_ASSIGN_COPY(mTitle, ([application name]));
+    ZEN_ASSIGN_COPY(mBundleId, ([application bundleId]));
 				
 		[self didChangeValueForKey: @"running"]; 
 	}
@@ -395,11 +403,11 @@
 	
 	// walk the desktops to find us an application matching our bundle 
 	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
-	VTDesktop*		desktop		= nil; 
-	
-	while (desktop = [desktopIter nextObject]) {
+	VTDesktop*		desktop		= nil;
+  
+  while (desktop = [desktopIter nextObject]) {
 		// walk all applications to find our bundle string 
-		NSEnumerator*	applicationIter	= [[desktop applications] objectEnumerator]; 
+		NSEnumerator*   applicationIter	= [[desktop applications] objectEnumerator]; 
 		PNApplication*	application		= nil; 
 		
 		while (application = [applicationIter nextObject]) {
@@ -411,12 +419,10 @@
 				[application setHidden: mHidden]; 
         [application setUnfocused: mUnfocused];
 				
-				// plus we are now officially interested in changes of the windows of this 
-				// application 
+				// plus we are now officially interested in changes of the windows of this application 
 				[application addObserver: self forKeyPath: @"windows" options: NSKeyValueObservingOptionNew context: NULL]; 
 				
-				// and skip to next desktop, as we expect only one application
-				// for a bundle per desktop 
+				// and skip to next desktop, as we expect only one application for a bundle per desktop 
 				break; 
 			}
 		}
@@ -429,7 +435,8 @@
 		
 		mPid = [application pid]; 
 		
-		ZEN_ASSIGN_COPY(mTitle, [application name]); 
+		ZEN_ASSIGN_COPY(mTitle, [application name]);
+    ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
 		ZEN_ASSIGN(mImage, [application icon]);
 		
 		[application release]; 
@@ -447,7 +454,8 @@
 	mPid = 0; 
 	NSBundle* bundle = [NSBundle bundleWithPath: mBundle];
   ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: mBundle]);
-	ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]); 
+	ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+  ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
 }
 
 @end 

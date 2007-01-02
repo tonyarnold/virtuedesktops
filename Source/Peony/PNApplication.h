@@ -27,12 +27,14 @@
  */  
 @interface PNApplication : NSObject<PNDesktopItem>
 {
-	pid_t				mPid;			//!< The process id of the application 
+	pid_t               mPid;			//!< The process id of the application 
 	ProcessSerialNumber	mPsn;			//!< The process serial number of the application 
-	NSImage*			mIcon;			//!< Application bundle icon 
-	NSString*			mName;			//!< Name of the application fetched from the bundle 
+  
+	NSImage*			mIcon;        //!< Application bundle icon 
+	NSString*			mName;        //!< Name of the application fetched from the bundle 
+  NSString*     mBundleId;    //!< The bundle id of the represented application
 	NSString*			mBundlePath;	//!< Path to the application bundle 
-	PNDesktop*			mDesktop;		//!< Desktop this application is on 
+	PNDesktop*		mDesktop;     //!< Desktop this application is on 
 	
 	BOOL				mIsSticky;		//!< Is the application stickied?  
 	BOOL				mIsHidden;		//!< Is the application hidden from display?
@@ -83,11 +85,15 @@
 - (NSString*) name; 
 
 #pragma mark -
+// Bundle ID
+- (NSString*) bundleId;
+
+#pragma mark -
 // iconic representation
 - (NSImage*) icon; 
 
 #pragma mark -
-- (NSString*) bundlePath; 
+- (NSString*) bundlePath;
 
 #pragma mark -
 - (BOOL) isValid; 

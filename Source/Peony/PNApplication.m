@@ -21,24 +21,26 @@
 {
 	if (self = [super init])
   {
-		mPid			= pid; 
+		mPid			= pid;
 		mDesktop	= [desktop retain]; 
 		mWindows	= [[NSMutableArray array] retain]; 
 		
 		mName			= nil; 
-		mIcon			= [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain]; 
+		mIcon			= [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
+    mBundleId = nil;
 		mBundlePath	= nil; 
 		
 		mIsSticky	= NO; 
 		mIsHidden	= NO;
     mIsUnfocused = NO;
-		
+
 		if (mPid == 0)
     {
 			// oops, no can do with this pid 
 			[self autorelease]; 
 			return nil; 
 		}
+    
 		
 		// Create psn out of the pid
 		OSStatus oResult = GetProcessForPID(mPid, &mPsn); 
@@ -63,7 +65,8 @@
 	ZEN_RELEASE(mName); 
 	ZEN_RELEASE(mIcon); 
 	ZEN_RELEASE(mDesktop); 
-	ZEN_RELEASE(mBundlePath); 
+	ZEN_RELEASE(mBundlePath);
+  ZEN_RELEASE(mBundleId);
 	
 	// super 
 	[super dealloc]; 
@@ -207,6 +210,17 @@
 	mName = (NSString*)strProcessName; 
 	
 	return mName; 
+}
+
+#pragma mark -
+- (NSString*) bundleId
+{
+  ZEN_RELEASE(mBundleId);
+  
+  NSBundle * appBundle = [NSBundle bundleWithPath: [self bundlePath]];
+  mBundleId = [[appBundle bundleIdentifier] retain];
+  
+  return mBundleId;
 }
 
 #pragma mark -
