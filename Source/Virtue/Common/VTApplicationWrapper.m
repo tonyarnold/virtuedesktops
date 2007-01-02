@@ -153,7 +153,7 @@
 	return mSticky; 
 }
 
-- (void) setHidden: (BOOL) flag {
+- (void) setIsHidden: (BOOL) flag {
 	if (mHidden == flag)
 		return; 
 	
@@ -164,7 +164,7 @@
 	PNApplication*	application		= nil; 
 	
 	while (application = [applicationIter nextObject]) {
-		[application setHidden: flag]; 
+		[application setIsHidden: flag]; 
 	}	
 }
 
@@ -317,7 +317,7 @@
 	
 	// now apply attributes 
 	[application setSticky: mSticky]; 
-	[application setHidden: mHidden];
+	[application setIsHidden: mHidden];
   [application setUnfocused: mUnfocused];
 	
 	// check if we should move this application to another desktop 
@@ -416,7 +416,7 @@
 				
 				// now apply attributes 
 				[application setSticky: mSticky]; 
-				[application setHidden: mHidden]; 
+				[application setIsHidden: mHidden]; 
         [application setUnfocused: mUnfocused];
 				
 				// plus we are now officially interested in changes of the windows of this application 

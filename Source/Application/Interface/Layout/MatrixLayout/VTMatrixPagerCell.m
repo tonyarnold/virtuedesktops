@@ -484,7 +484,7 @@ enum
 	PNApplication*	application	= nil; 
 	
 	while (application = [appletIter nextObject]) {
-		// skip hidden applications from display 
+		// skip hidden applications from display
 		if ([application isHidden]) 
 			continue; 
 		

@@ -92,9 +92,9 @@
 }
 
 #pragma mark -
-- (void) setHidden: (BOOL) hidden
+- (void) setIsHidden: (BOOL) isHidden
 {
-	mIsHidden = hidden; 
+	mIsHidden = isHidden; 
 }
 
 - (BOOL) isHidden

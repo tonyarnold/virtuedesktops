@@ -45,7 +45,7 @@
 - (BOOL) isSticky; 
 
 #pragma mark -
-- (void) setHidden: (BOOL) flag; 
+- (void) setIsHidden: (BOOL) flag; 
 - (BOOL) isHidden; 
 
 #pragma mark -

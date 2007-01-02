@@ -55,7 +55,7 @@
 - (NSArray*) windows; 
 
 #pragma mark -
-- (void) setHidden: (BOOL) hidden; 
+- (void) setIsHidden: (BOOL) hidden; 
 - (BOOL) isHidden; 
 
 #pragma mark -
