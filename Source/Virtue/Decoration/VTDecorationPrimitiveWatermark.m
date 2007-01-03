@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTDecorationPrimitiveWatermark.h"
+#import <Virtue/NSScreenOverallScreen.h>
 #import <Zen/Zen.h> 
 
 #pragma mark Coding keys 
@@ -29,8 +30,8 @@
 	if (self = [super init]) {
 		mImagePath = nil; 
 		mIntensity = 1.0; 
-		mImage = nil; 
-		
+		mImage = nil;
+    mImageScaling = kVtImageScalingFillScreen;
 		mName = @"Watermark Primitive"; 
 		
 		return self; 
@@ -42,6 +43,7 @@
 - (void) dealloc {
 	ZEN_RELEASE(mImagePath); 
 	ZEN_RELEASE(mImage); 
+  ZEN_RELEASE(mDisplayImage);
 	
 	[super dealloc]; 
 }
@@ -50,9 +52,10 @@
 - (id) copyWithZone: (NSZone*) zone {
 	VTDecorationPrimitiveWatermark* newInstance = (VTDecorationPrimitiveWatermark*)[super copyWithZone: zone]; 
 	// and initialize 
-	newInstance->mImagePath = [mImagePath copyWithZone: zone]; 
-	newInstance->mImage		= [mImage copyWithZone: zone]; 
-	newInstance->mIntensity	= mIntensity; 
+	newInstance->mImagePath     = [mImagePath copyWithZone: zone]; 
+	newInstance->mImage         = [mImage copyWithZone: zone]; 
+	newInstance->mIntensity     = mIntensity;
+  newInstance->mImageScaling  = mImageScaling;
 	
 	return newInstance; 
 }
@@ -64,7 +67,8 @@
 	if (self = [super initWithCoder: coder]) {
 		// attributes 
 		[self setImagePath: [coder decodeObjectForKey: kVtCodingImagePath]]; 
-		[self setIntensity: [coder decodeFloatForKey: kVtCodingIntensity]]; 
+		[self setIntensity: [coder decodeFloatForKey: kVtCodingIntensity]];
+    [self setScalingType: [coder decodeIntForKey: kVtCodingScaling]];
 		
 		return self; 
 	}
@@ -76,7 +80,8 @@
 	[super encodeWithCoder: coder]; 
 	
 	[coder encodeObject: mImagePath forKey: kVtCodingImagePath]; 
-	[coder encodeFloat: mIntensity forKey: kVtCodingIntensity]; 
+	[coder encodeFloat: mIntensity forKey: kVtCodingIntensity];
+  [coder encodeInt: mImageScaling forKey: kVtCodingScaling];
 }
 
 #pragma mark -
@@ -85,14 +90,17 @@
 	[super encodeToDictionary: dictionary]; 
 	
 	if (mImagePath)
-		[dictionary setObject: mImagePath forKey: kVtCodingImagePath]; 
-	[dictionary setObject: [NSNumber numberWithFloat: mIntensity] forKey: kVtCodingIntensity]; 
+		[dictionary setObject: [self imagePath] forKey: kVtCodingImagePath];
+  
+  [dictionary setObject: [NSNumber numberWithInt: [self scalingType]] forKey: kVtCodingScaling];
+	[dictionary setObject: [NSNumber numberWithFloat: [self intensity]] forKey: kVtCodingIntensity];
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	if (self = [super decodeFromDictionary: dictionary]) { 
 		[self setImagePath: [dictionary objectForKey: kVtCodingImagePath]]; 
 		[self setIntensity: [[dictionary objectForKey: kVtCodingIntensity] floatValue]]; 
+    [self setScalingType: [[dictionary objectForKey: kVtCodingScaling] intValue]];
 		
 		return self; 
 	}
@@ -108,12 +116,17 @@
 	
 	if ((path) && ([path length] > 0))
 		mImage = [[NSImage alloc] initByReferencingFile: mImagePath]; 
-	
+  
+  [mImage setScalesWhenResized: YES];
 	[self setNeedsDisplay]; 
 }
 
 - (NSString*) imagePath {
 	return mImagePath; 
+}
+
+- (NSString*) imageName {
+  return [[self imagePath] lastPathComponent];
 }
 
 #pragma mark -
@@ -124,6 +137,18 @@
 
 - (float) intensity {
 	return mIntensity; 
+}
+
+#pragma mark -
+- (void) setScalingType: (kVtImageScalingType) scalingType
+{
+  mImageScaling = scalingType;
+  [self setNeedsDisplay];
+}
+
+- (kVtImageScalingType) scalingType
+{
+  return mImageScaling;
 }
 
 #pragma mark -
@@ -145,32 +170,62 @@
 	// if there is no image, return 
 	if (mImage == nil)
 		return; 
-	
-	// draw the desktop name 
-	NSPoint location;
-	NSSize	imageSize = [mImage size];
-	
+  
+  NSRect bounds = [view visibleRect];  
+  
+  // If we're tiling, just draw and bail
+  if ([self scalingType] == kVtImageScalingTile)
+  {
+    [[NSColor colorWithPatternImage: mImage] set];
+    NSRectFill(bounds);
+    return;
+  }
+  
+	// draw the desktop image 
+	NSPoint   location;
+  ZEN_ASSIGN_COPY(mDisplayImage, mImage);
+	NSSize    size = [mDisplayImage size];
+  float     scaleFactor;
+
+  switch ([self scalingType]) {
+    case kVtImageScalingCenter:
+      break;
+    case kVtImageScalingFillScreen: 
+      // We need to calculate the longest side of the image, then scale up to the smaller side to the width/height of the screen
+      scaleFactor = size.width > size.height ? (bounds.size.width / size.width) : (bounds.size.height / size.height);
+      size.width  *= scaleFactor;
+      size.height *= scaleFactor;
+      break;
+    case kVtImageScalingStretch:
+      size = bounds.size;
+      break;
+    default:
+      ;
+  }
+  
+  [mDisplayImage setSize: size];
+
+  
 	if (mPositionType == kVtDecorationPositionAbsolute)
 		location = mPosition; 
 	else {
 		if (mPositionType == kVtDecorationPositionLL || mPositionType == kVtDecorationPositionTL) 
 			location.x = 10 + rect.origin.x; 
 		else 
-			location.x = rect.size.width - 10 - imageSize.width - rect.origin.x;
+			location.x = rect.size.width - 10 - size.width - rect.origin.x;
 		
 		if (mPositionType == kVtDecorationPositionTR || mPositionType == kVtDecorationPositionTL) 
-			location.y = rect.size.height + rect.origin.y - imageSize.height - 10; 
+			location.y = rect.size.height + rect.origin.y - size.height - 10; 
 		else 
 			location.y = 10 + rect.origin.y; 
     
     if (mPositionType == kVtDecorationPositionCenter) {
-      location.x = (rect.size.width/2) - (imageSize.width/2);
-      location.y = (rect.size.height/2) - (imageSize.height/2);
+      location.x = (rect.size.width - size.width)/2;
+      location.y = (rect.size.height - size.height)/2;
     }
 	}
-	
-	// draw desktopname 
-	[mImage dissolveToPoint: location fraction: mIntensity];
+  
+  [mDisplayImage dissolveToPoint: location fraction: mIntensity];
 }
 
 @end
