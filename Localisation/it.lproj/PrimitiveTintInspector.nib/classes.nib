@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = VTDecorationPrimitiveTintInspector; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = VTInspector; 
+        }, 
+        {
+            CLASS = VTInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindow = NSWindow; }; 
+            SUPERCLASS = NSResponder; 
+        }
+    ); 
+    IBVersion = 1; 
+}

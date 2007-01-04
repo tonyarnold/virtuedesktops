@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OAGradientTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {removeApplication = id; toggleSelectedWindowStickyState = id; }; 
+            CLASS = VTApplicationViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplicationsController = NSArrayController; 
+                mWindowsController = NSArrayController; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = VTScalingImageCell; LANGUAGE = ObjC; SUPERCLASS = NSImageCell; }, 
+        {
+            CLASS = VTVerticallyCentredTextFieldCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextFieldCell; 
+        }
+    ); 
+    IBVersion = 1; 
+}

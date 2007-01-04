@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {browseForWatermark = id; }; 
+            CLASS = VTDecorationPrimitiveWatermarkInspector; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = VTInspector; 
+        }, 
+        {CLASS = VTImageViewFileDropper; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {
+            CLASS = VTInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindow = NSWindow; }; 
+            SUPERCLASS = NSResponder; 
+        }
+    ); 
+    IBVersion = 1; 
+}

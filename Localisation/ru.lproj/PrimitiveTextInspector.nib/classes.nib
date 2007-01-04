@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = VTInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindow = NSWindow; }; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {showFontPanel = id; }; 
+            CLASS = VTPrimitiveDesktopNameInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mFontButton = NSButton; mTextField = NSTextField; }; 
+            SUPERCLASS = VTInspector; 
+        }
+    ); 
+    IBVersion = 1; 
+}
