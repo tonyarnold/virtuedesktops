@@ -863,71 +863,49 @@
 		EA4D9D2C0B2D9B88009B8605 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog-information.png"; sourceTree = "<group>"; };
 		EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-system-windows.png"; sourceTree = "<group>"; };
-		EA564FA90B2ED049004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Localisation/Portuguese.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
-		EA564FB30B2ED05F004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Norwegian; path = Localisation/Norwegian.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
-		EA564FB40B2ED06A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localisation/Japanese.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
-		EA564FB50B2ED072004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localisation/Japanese.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
-		EA564FB60B2ED07A004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Norwegian; path = Localisation/Norwegian.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
-		EA564FB70B2ED080004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Localisation/Portuguese.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
-		EA564FB80B2ED092004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
-		EA564FB90B2ED09D004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
-		EA564FBA0B2ED0B4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
-		EA564FBB0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
-		EA564FBC0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FBD0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FBE0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FBF0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC00B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC10B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC20B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC30B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC40B2ED0F1004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC50B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC60B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC70B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC80B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FC90B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FCA0B2ED137004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FCB0B2ED142004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FCC0B2ED14D004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FCD0B2ED15C004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FCE0B2ED165004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FCF0B2ED190004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD00B2ED199004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD10B2ED1A0004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD20B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD30B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD40B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD50B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD60B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD70B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD80B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FD90B2ED1CF004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FDA0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FDB0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FDC0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FDD0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
-		EA564FDF0B2ED209004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE00B2ED210004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE10B2ED214004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE20B2ED21E004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE30B2ED224004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE40B2ED22A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE50B2ED234004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE60B2ED23A004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE70B2ED243004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE80B2ED24E004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FE90B2ED253004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FEA0B2ED25A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FEB0B2ED266004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FEC0B2ED26F004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FED0B2ED275004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FEE0B2ED27C004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/Portuguese.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FEF0B2ED282004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Norwegian; path = Localisation/Norwegian.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FF00B2ED287004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/Japanese.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EA564FF20B2ED2D2004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA564FF30B2ED2D8004BF37F /* Norwegian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Norwegian; path = Norwegian.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA564FF40B2ED2E5004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Portuguese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA564FA90B2ED049004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Localisation/pt.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB40B2ED06A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localisation/ja.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB50B2ED072004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localisation/ja.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB70B2ED080004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = Localisation/pt.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA564FB80B2ED092004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBA0B2ED0B4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBB0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBC0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBD0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBE0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FBF0B2ED0D4004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC50B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC60B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC70B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC80B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FC90B2ED0FD004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCA0B2ED137004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCC0B2ED14D004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCD0B2ED15C004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FCF0B2ED190004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD10B2ED1A0004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD20B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD30B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD40B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FD50B2ED1B2004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDA0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDB0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDC0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDD0B2ED1E7004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA564FDF0B2ED209004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE10B2ED214004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE20B2ED21E004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE40B2ED22A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE50B2ED234004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE70B2ED243004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FE80B2ED24E004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEA0B2ED25A004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEB0B2ED266004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FED0B2ED275004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FEE0B2ED27C004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Portuguese; path = Localisation/pt.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FF00B2ED287004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA564FF20B2ED2D2004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA564FF40B2ED2E5004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
 		EA7A53D20A86A5B4000D6B5E /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
 		EA7A53D30A86A5B4000D6B5E /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
@@ -1135,7 +1113,6 @@
 		EA7A55CD0A86A6D0000D6B5E /* VTHotkeyPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTHotkeyPreferencesController.m; sourceTree = "<group>"; };
 		EA7A55CE0A86A6D0000D6B5E /* VTTriggerToTypeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTriggerToTypeImage.h; sourceTree = "<group>"; };
 		EA7A55CF0A86A6D0000D6B5E /* VTTriggerToTypeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTriggerToTypeImage.m; sourceTree = "<group>"; };
-		EA7A55D20A86A6D0000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7A55D30A86A6D0000D6B5E /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7A55D40A86A6D0000D6B5E /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7A55D80A86A6D0000D6B5E /* VTPagerPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPagerPreferencesController.h; sourceTree = "<group>"; };
@@ -1298,21 +1275,21 @@
 		EA7A5B490A86B7C4000D6B5E /* authtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = authtool; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B630A86B809000D6B5E /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A5B640A86B809000D6B5E /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTInterface-Info.plist"; sourceTree = "<group>"; };
-		EA7A60650A86CC9C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA7A60D70A86EF2F000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
-		EA7A60DE0A86F0A8000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		EA7A60E20A86F174000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
+		EA7A60650A86CC9C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A60D70A86EF2F000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A60DE0A86F0A8000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A60E20A86F174000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A61790A86F366000D6B5E /* VTDesktopColorLabelPrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopColorLabelPrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A617A0A86F366000D6B5E /* VTDesktopColorLabelPrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopColorLabelPrimitive-Info.plist"; sourceTree = "<group>"; };
-		EA7A61840A86F3EB000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA7A61890A86F490000D6B5E /* English */ = {isa = PBXFileReference; explicitFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
+		EA7A61840A86F3EB000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A61890A86F490000D6B5E /* English */ = {isa = PBXFileReference; explicitFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A62240A86F5C8000D6B5E /* VTDesktopNamePrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopNamePrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A62250A86F5C8000D6B5E /* VTDesktopNamePrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info.plist"; sourceTree = "<group>"; };
-		EA7A622E0A86F60C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
+		EA7A622E0A86F60C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A62600A86F7AB000D6B5E /* VTAppearancePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTAppearancePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A62610A86F7AB000D6B5E /* VTAppearancePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTAppearancePreferences-Info.plist"; sourceTree = "<group>"; };
-		EA7A626A0A86F7CA000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
-		EA7A629D0A86F89E000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
+		EA7A626A0A86F7CA000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA7A629D0A86F89E000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A629E0A86F89E000D6B5E /* VTApplicationPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationPreferencesController.h; sourceTree = "<group>"; };
 		EA7A629F0A86F89E000D6B5E /* VTApplicationPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationPreferencesController.m; sourceTree = "<group>"; };
 		EA7A62AE0A86F8D6000D6B5E /* VTApplicationPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTApplicationPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1320,10 +1297,10 @@
 		EA7A62C20A86F945000D6B5E /* iconApplicationPreferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconApplicationPreferences.icns; sourceTree = "<group>"; };
 		EA7A62D80A86F9AF000D6B5E /* VTDesktopTemplatePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopTemplatePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A62D90A86F9AF000D6B5E /* VTDesktopTemplatePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopTemplatePreferences-Info.plist"; sourceTree = "<group>"; };
-		EA7A62F50A86FAA4000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
+		EA7A62F50A86FAA4000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63360A86FB4F000D6B5E /* VTHotkeyPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTHotkeyPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63370A86FB4F000D6B5E /* VTHotkeyPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTHotkeyPreferences-Info.plist"; sourceTree = "<group>"; };
-		EA7A63410A86FC07000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
+		EA7A63410A86FC07000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTLayoutPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A635D0A86FC58000D6B5E /* VTLayoutPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTLayoutPreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = imagePreferencesPagers.tiff; path = ../VTLayoutPreferences/imagePreferencesPagers.tiff; sourceTree = "<group>"; };
@@ -1338,19 +1315,19 @@
 		EA7A63920A86FDC3000D6B5E /* imageWidgetDeletePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetDeletePressed.png; sourceTree = "<group>"; };
 		EA7A63930A86FDC3000D6B5E /* imageWidgetInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetInfo.png; sourceTree = "<group>"; };
 		EA7A63940A86FDC3000D6B5E /* imageWidgetInfoPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageWidgetInfoPressed.png; sourceTree = "<group>"; };
-		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
+		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
-		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VirtueDesktops-Info.plist"; sourceTree = "<group>"; };
-		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/Operations.nib; sourceTree = "<group>"; };
-		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTPreferences.nib; sourceTree = "<group>"; };
-		EA7A64020A86FF23000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
-		EA7A64050A86FF39000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
-		EA7A64080A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
-		EA7A640A0A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		EA7A640E0A86FF91000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = ../../Localisation/English.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		EA7A64110A86FFA5000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = ../../Localisation/English.lproj/Notifications.strings; sourceTree = "<group>"; };
+		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA7A64020A86FF23000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A64050A86FF39000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A64080A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA7A640A0A86FF4D000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA7A640E0A86FF91000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Localisation/en.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA7A64110A86FFA5000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Localisation/en.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
 		EA7A645C0A870084000D6B5E /* Virtue.scriptSuite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Virtue.scriptSuite; sourceTree = "<group>"; };
 		EA7A645D0A870084000D6B5E /* Virtue.scriptTerminology */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Virtue.scriptTerminology; sourceTree = "<group>"; };
 		EA7A65970A870299000D6B5E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -1363,99 +1340,99 @@
 		EA7A670C0A87043B000D6B5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		EA7A68860A870570000D6B5E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
-		EA7A6AB00A8709C2000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA7A6AB00A8709C2000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA7D76960A918A5500D36F0E /* VTAssignedTriggerArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAssignedTriggerArrayController.h; sourceTree = "<group>"; };
 		EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAssignedTriggerArrayController.m; sourceTree = "<group>"; };
 		EA8B6C330AD214A2001D1241 /* TAUIColorLabelColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUIColorLabelColorTransformer.h; sourceTree = "<group>"; };
 		EA8B6C340AD214A2001D1241 /* TAUIColorLabelColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelColorTransformer.m; sourceTree = "<group>"; };
-		EA8F2E770A93F9100047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA8F2E7D0A93F91A0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA8F2E7E0A93F91E0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA8F2E7F0A93F9240047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = Russian.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA8F2E8B0A93F9710047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = ../../Localisation/French.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		EA8F2E8C0A93F9740047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = ../../Localisation/German.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		EA8F2E8D0A93F9770047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = ../../Localisation/Italian.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		EA8F2E8E0A93F97A0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = ../../Localisation/Russian.lproj/DefaultPrimitiveNames.strings; sourceTree = "<group>"; };
-		EA8F2E9E0A93F9A80047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = ../../Localisation/French.lproj/Notifications.strings; sourceTree = "<group>"; };
-		EA8F2E9F0A93F9AA0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = ../../Localisation/German.lproj/Notifications.strings; sourceTree = "<group>"; };
-		EA8F2EA00A93F9AD0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = ../../Localisation/Italian.lproj/Notifications.strings; sourceTree = "<group>"; };
-		EA8F2EA10A93F9AF0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = ../../Localisation/Russian.lproj/Notifications.strings; sourceTree = "<group>"; };
-		EA8F2EA40A93F9D40047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
-		EA8F2EA50A93F9D70047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
-		EA8F2EA60A93F9DB0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
-		EA8F2EA70A93F9DE0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VirtueDesktops.nib; sourceTree = "<group>"; };
-		EA8F2EAC0A93F9E90047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		EA8F2EAD0A93F9EB0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		EA8F2EAE0A93F9EE0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		EA8F2EAF0A93F9F00047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTTriggerInspector.nib; sourceTree = "<group>"; };
-		EA8F2EB20A93F9F70047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
-		EA8F2EB30A93F9FA0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
-		EA8F2EB40A93F9FC0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
-		EA8F2EB50A93FA000047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTDesktopInspector.nib; sourceTree = "<group>"; };
-		EA8F2EB80A93FA060047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
-		EA8F2EB90A93FA080047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
-		EA8F2EBA0A93FA0A0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
-		EA8F2EBB0A93FA0C0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTApplicationInspector.nib; sourceTree = "<group>"; };
-		EA8F2EBE0A93FA120047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/Operations.nib; sourceTree = "<group>"; };
-		EA8F2EBF0A93FA150047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/Operations.nib; sourceTree = "<group>"; };
-		EA8F2EC00A93FA190047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/Operations.nib; sourceTree = "<group>"; };
-		EA8F2EC10A93FA1C0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/Operations.nib; sourceTree = "<group>"; };
-		EA8F2EC40A93FA270047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTPreferences.nib; sourceTree = "<group>"; };
-		EA8F2EC50A93FA2A0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTPreferences.nib; sourceTree = "<group>"; };
-		EA8F2EC60A93FA2D0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTPreferences.nib; sourceTree = "<group>"; };
-		EA8F2EC70A93FA300047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTPreferences.nib; sourceTree = "<group>"; };
-		EA8F2ECC0A93FA3A0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2ECD0A93FA3D0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2ECE0A93FA400047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2ECF0A93FA430047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2ED20A93FA4E0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2ED30A93FA510047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2ED40A93FA540047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2ED50A93FA560047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE10A93FA6C0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE20A93FA6E0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE30A93FA710047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE40A93FA740047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/PrimitiveTextInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE70A93FA7B0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE80A93FA7D0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
-		EA8F2EE90A93FA810047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
-		EA8F2EEA0A93FA830047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/PrimitiveTintInspector.nib; sourceTree = "<group>"; };
-		EA8F2EED0A93FA880047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		EA8F2EEE0A93FA8B0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		EA8F2EEF0A93FA8E0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		EA8F2EF00A93FA900047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/PrimitiveWatermarkInspector.nib; sourceTree = "<group>"; };
-		EA8F2EF30A93FA950047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
-		EA8F2EF40A93FA970047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
-		EA8F2EF50A93FA9B0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
-		EA8F2EF60A93FA9D0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = "<group>"; };
-		EA8F2EF90A93FAA10047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2EFA0A93FAA30047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2EFB0A93FAA70047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2EFC0A93FAA90047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = "<group>"; };
-		EA8F2EFF0A93FAAD0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F000A93FAAF0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F010A93FAB10047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F020A93FAB40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTAppearancePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F050A93FAB90047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F060A93FABB0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F070A93FABF0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F080A93FAC10047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTApplicationPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F0B0A93FAC60047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F0C0A93FAC80047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F0D0A93FACE0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F0E0A93FAD00047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTDesktopTemplatePreferences.nib; sourceTree = "<group>"; };
-		EA8F2F110A93FAD40047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F120A93FAD60047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F130A93FAD80047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F140A93FADA0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTHotkeyPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F170A93FADF0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F180A93FAE20047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F190A93FAE40047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F1A0A93FAE70047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F1D0A93FAED0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = ../../Localisation/French.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F1E0A93FAEF0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = ../../Localisation/German.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F1F0A93FAF20047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = ../../Localisation/Italian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
-		EA8F2F200A93FAF40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = ../../Localisation/Russian.lproj/VTPluginPreferences.nib; sourceTree = "<group>"; };
+		EA8F2E770A93F9100047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA8F2E7D0A93F91A0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA8F2E7E0A93F91E0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA8F2E7F0A93F9240047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA8F2E8B0A93F9710047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = Localisation/fr.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2E8C0A93F9740047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = Localisation/de.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2E8D0A93F9770047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Localisation/it.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2E8E0A93F97A0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = Localisation/ru.lproj/DefaultPrimitiveNames.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2E9E0A93F9A80047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = Localisation/fr.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2E9F0A93F9AA0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = Localisation/de.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2EA00A93F9AD0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Localisation/it.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2EA10A93F9AF0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = Localisation/ru.lproj/Notifications.strings; sourceTree = SOURCE_ROOT; };
+		EA8F2EA40A93F9D40047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EA50A93F9D70047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EA60A93F9DB0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EA70A93F9DE0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VirtueDesktops.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EAC0A93F9E90047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EAD0A93F9EB0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EAE0A93F9EE0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EAF0A93F9F00047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTTriggerInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EB20A93F9F70047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EB30A93F9FA0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EB40A93F9FC0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EB50A93FA000047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTDesktopInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EB80A93FA060047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EB90A93FA080047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EBA0A93FA0A0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EBB0A93FA0C0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EBE0A93FA120047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EBF0A93FA150047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EC00A93FA190047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EC10A93FA1C0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EC40A93FA270047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EC50A93FA2A0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EC60A93FA2D0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EC70A93FA300047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ECC0A93FA3A0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ECD0A93FA3D0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ECE0A93FA400047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ECF0A93FA430047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ED20A93FA4E0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ED30A93FA510047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ED40A93FA540047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2ED50A93FA560047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE10A93FA6C0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE20A93FA6E0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE30A93FA710047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE40A93FA740047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE70A93FA7B0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE80A93FA7D0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EE90A93FA810047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EEA0A93FA830047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EED0A93FA880047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EEE0A93FA8B0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EEF0A93FA8E0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EF00A93FA900047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EF30A93FA950047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EF40A93FA970047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EF50A93FA9B0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EF60A93FA9D0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EF90A93FAA10047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EFA0A93FAA30047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EFB0A93FAA70047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EFC0A93FAA90047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2EFF0A93FAAD0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F000A93FAAF0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F010A93FAB10047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F020A93FAB40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F050A93FAB90047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F060A93FABB0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F070A93FABF0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F080A93FAC10047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F0B0A93FAC60047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F0C0A93FAC80047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F0D0A93FACE0047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F0E0A93FAD00047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F110A93FAD40047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F120A93FAD60047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F130A93FAD80047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F140A93FADA0047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F170A93FADF0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F180A93FAE20047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F190A93FAE40047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F1A0A93FAE70047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F1D0A93FAED0047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = Localisation/fr.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F1E0A93FAEF0047C92C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = Localisation/de.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F1F0A93FAF20047C92C /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Localisation/it.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EA8F2F200A93FAF40047C92C /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Localisation/ru.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA94B9710A9456A000647E8E /* NetInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetInfo.framework; path = /System/Library/PrivateFrameworks/NetInfo.framework; sourceTree = "<absolute>"; };
 		EA99F6B30AE236090055D5D5 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EAB6F4EA0A9DE83200B9B0E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
@@ -1473,10 +1450,10 @@
 		EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelPalette.h; sourceTree = "<group>"; };
 		EAC013B60AD10C2800389BDB /* ColorLabelPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelPalette.m; sourceTree = "<group>"; };
 		EAC013B90AD10C4700389BDB /* palette.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = palette.table; sourceTree = "<group>"; };
-		EAC013BC0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ColorLabelInspector.nib; sourceTree = "<group>"; };
-		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
+		EAC013BC0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = en.lproj/ColorLabelInspector.nib; sourceTree = "<group>"; };
+		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = en.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
 		EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorLabel.ibclassdescription; sourceTree = "<group>"; };
-		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../Localisation/English.lproj/VTLayoutPreferences.nib; sourceTree = "<group>"; };
+		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
 		EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -4061,7 +4038,6 @@
 				EA8F2F070A93FABF0047C92C /* Italian */,
 				EA8F2F080A93FAC10047C92C /* Russian */,
 				EA564FE20B2ED21E004BF37F /* Portuguese */,
-				EA564FE30B2ED224004BF37F /* Norwegian */,
 				EA564FE40B2ED22A004BF37F /* Japanese */,
 			);
 			name = VTApplicationPreferences.nib;
@@ -4076,7 +4052,6 @@
 				EA8F2F0D0A93FACE0047C92C /* Italian */,
 				EA8F2F0E0A93FAD00047C92C /* Russian */,
 				EA564FE50B2ED234004BF37F /* Japanese */,
-				EA564FE60B2ED23A004BF37F /* Norwegian */,
 				EA564FE70B2ED243004BF37F /* Portuguese */,
 			);
 			name = VTDesktopTemplatePreferences.nib;
@@ -4091,7 +4066,6 @@
 				EA8F2F130A93FAD80047C92C /* Italian */,
 				EA8F2F140A93FADA0047C92C /* Russian */,
 				EA564FE80B2ED24E004BF37F /* Portuguese */,
-				EA564FE90B2ED253004BF37F /* Norwegian */,
 				EA564FEA0B2ED25A004BF37F /* Japanese */,
 			);
 			name = VTHotkeyPreferences.nib;
@@ -4106,7 +4080,6 @@
 				EA8F2EFB0A93FAA70047C92C /* Italian */,
 				EA8F2EFC0A93FAA90047C92C /* Russian */,
 				EA564FD20B2ED1B2004BF37F /* Portuguese */,
-				EA564FD60B2ED1CF004BF37F /* Norwegian */,
 				EA564FDA0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveDesktopColorLabelInspector.nib;
@@ -4121,7 +4094,6 @@
 				EA8F2ED40A93FA540047C92C /* Italian */,
 				EA8F2ED50A93FA560047C92C /* Russian */,
 				EA564FCD0B2ED15C004BF37F /* Japanese */,
-				EA564FCE0B2ED165004BF37F /* Norwegian */,
 			);
 			name = PrimitiveTextInspector.nib;
 			sourceTree = "<group>";
@@ -4135,7 +4107,6 @@
 				EA8F2EE90A93FA810047C92C /* Italian */,
 				EA8F2EEA0A93FA830047C92C /* Russian */,
 				EA564FD30B2ED1B2004BF37F /* Portuguese */,
-				EA564FD70B2ED1CF004BF37F /* Norwegian */,
 				EA564FDB0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveTintInspector.nib;
@@ -4150,7 +4121,6 @@
 				EA8F2EEF0A93FA8E0047C92C /* Italian */,
 				EA8F2EF00A93FA900047C92C /* Russian */,
 				EA564FD40B2ED1B2004BF37F /* Portuguese */,
-				EA564FD80B2ED1CF004BF37F /* Norwegian */,
 				EA564FDC0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveWatermarkInspector.nib;
@@ -4165,7 +4135,6 @@
 				EA8F2F010A93FAB10047C92C /* Italian */,
 				EA8F2F020A93FAB40047C92C /* Russian */,
 				EA564FDF0B2ED209004BF37F /* Japanese */,
-				EA564FE00B2ED210004BF37F /* Norwegian */,
 				EA564FE10B2ED214004BF37F /* Portuguese */,
 			);
 			name = VTAppearancePreferences.nib;
@@ -4180,7 +4149,6 @@
 				EA8F2EF50A93FA9B0047C92C /* Italian */,
 				EA8F2EF60A93FA9D0047C92C /* Russian */,
 				EA564FD50B2ED1B2004BF37F /* Portuguese */,
-				EA564FD90B2ED1CF004BF37F /* Norwegian */,
 				EA564FDD0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = VTDecorationPrimitiveInspector.nib;
@@ -4195,7 +4163,6 @@
 				EA8F2F1F0A93FAF20047C92C /* Italian */,
 				EA8F2F200A93FAF40047C92C /* Russian */,
 				EA564FEE0B2ED27C004BF37F /* Portuguese */,
-				EA564FEF0B2ED282004BF37F /* Norwegian */,
 				EA564FF00B2ED287004BF37F /* Japanese */,
 			);
 			name = VTPluginPreferences.nib;
@@ -4210,7 +4177,6 @@
 				EA8F2E7E0A93F91E0047C92C /* Italian */,
 				EA8F2E7F0A93F9240047C92C /* Russian */,
 				EA564FF20B2ED2D2004BF37F /* Japanese */,
-				EA564FF30B2ED2D8004BF37F /* Norwegian */,
 				EA564FF40B2ED2E5004BF37F /* Portuguese */,
 			);
 			name = Localizable.strings;
@@ -4219,7 +4185,6 @@
 		EA7A55D10A86A6D0000D6B5E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA7A55D20A86A6D0000D6B5E /* English */,
 				EA7A55D30A86A6D0000D6B5E /* fr */,
 				EA7A55D40A86A6D0000D6B5E /* it */,
 			);
@@ -4235,7 +4200,6 @@
 				EA8F2EC00A93FA190047C92C /* Italian */,
 				EA8F2EC10A93FA1C0047C92C /* Russian */,
 				EA564FBB0B2ED0D4004BF37F /* Japanese */,
-				EA564FC00B2ED0F1004BF37F /* Norwegian */,
 				EA564FC50B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = Operations.nib;
@@ -4250,7 +4214,6 @@
 				EA8F2EC60A93FA2D0047C92C /* Italian */,
 				EA8F2EC70A93FA300047C92C /* Russian */,
 				EA564FBE0B2ED0D4004BF37F /* Japanese */,
-				EA564FC30B2ED0F1004BF37F /* Norwegian */,
 				EA564FC80B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTPreferences.nib;
@@ -4265,7 +4228,6 @@
 				EA8F2EBA0A93FA0A0047C92C /* Italian */,
 				EA8F2EBB0A93FA0C0047C92C /* Russian */,
 				EA564FBC0B2ED0D4004BF37F /* Japanese */,
-				EA564FC10B2ED0F1004BF37F /* Norwegian */,
 				EA564FC60B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTApplicationInspector.nib;
@@ -4280,7 +4242,6 @@
 				EA8F2EB40A93F9FC0047C92C /* Italian */,
 				EA8F2EB50A93FA000047C92C /* Russian */,
 				EA564FBD0B2ED0D4004BF37F /* Japanese */,
-				EA564FC20B2ED0F1004BF37F /* Norwegian */,
 				EA564FC70B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTDesktopInspector.nib;
@@ -4295,7 +4256,6 @@
 				EA8F2EA60A93F9DB0047C92C /* Italian */,
 				EA8F2EA70A93F9DE0047C92C /* Russian */,
 				EA564FB80B2ED092004BF37F /* Portuguese */,
-				EA564FB90B2ED09D004BF37F /* Norwegian */,
 				EA564FBA0B2ED0B4004BF37F /* Japanese */,
 			);
 			name = VirtueDesktops.nib;
@@ -4310,7 +4270,6 @@
 				EA8F2EAE0A93F9EE0047C92C /* Italian */,
 				EA8F2EAF0A93F9F00047C92C /* Russian */,
 				EA564FBF0B2ED0D4004BF37F /* Japanese */,
-				EA564FC40B2ED0F1004BF37F /* Norwegian */,
 				EA564FC90B2ED0FD004BF37F /* Portuguese */,
 			);
 			name = VTTriggerInspector.nib;
@@ -4325,7 +4284,6 @@
 				EA8F2E8D0A93F9770047C92C /* Italian */,
 				EA8F2E8E0A93F97A0047C92C /* Russian */,
 				EA564FB50B2ED072004BF37F /* Japanese */,
-				EA564FB60B2ED07A004BF37F /* Norwegian */,
 				EA564FB70B2ED080004BF37F /* Portuguese */,
 			);
 			name = DefaultPrimitiveNames.strings;
@@ -4340,7 +4298,6 @@
 				EA8F2EA00A93F9AD0047C92C /* Italian */,
 				EA8F2EA10A93F9AF0047C92C /* Russian */,
 				EA564FA90B2ED049004BF37F /* Portuguese */,
-				EA564FB30B2ED05F004BF37F /* Norwegian */,
 				EA564FB40B2ED06A004BF37F /* Japanese */,
 			);
 			name = Notifications.strings;
@@ -4355,7 +4312,6 @@
 				EA8F2ECE0A93FA400047C92C /* Italian */,
 				EA8F2ECF0A93FA430047C92C /* Russian */,
 				EA564FCA0B2ED137004BF37F /* Portuguese */,
-				EA564FCB0B2ED142004BF37F /* Norwegian */,
 				EA564FCC0B2ED14D004BF37F /* Japanese */,
 			);
 			name = PrimitiveDesktopColorLabelInspector.nib;
@@ -4370,7 +4326,6 @@
 				EA8F2EE30A93FA710047C92C /* Italian */,
 				EA8F2EE40A93FA740047C92C /* Russian */,
 				EA564FCF0B2ED190004BF37F /* Japanese */,
-				EA564FD00B2ED199004BF37F /* Norwegian */,
 				EA564FD10B2ED1A0004BF37F /* Portuguese */,
 			);
 			name = PrimitiveTextInspector.nib;
@@ -4401,7 +4356,6 @@
 				EA8F2F190A93FAE40047C92C /* Italian */,
 				EA8F2F1A0A93FAE70047C92C /* Russian */,
 				EA564FEB0B2ED266004BF37F /* Japanese */,
-				EA564FEC0B2ED26F004BF37F /* Norwegian */,
 				EA564FED0B2ED275004BF37F /* Portuguese */,
 			);
 			name = VTLayoutPreferences.nib;
