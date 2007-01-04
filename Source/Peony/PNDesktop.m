@@ -182,12 +182,14 @@
 
 - (void) setName: (NSString*) name 
 {
+  [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopWillChangeName object: nil userInfo: nil];
 	[mDesktopName autorelease];
   
 	if (name && ([name length] > 0))
 		mDesktopName = [name copy];
 	else
 		mDesktopName = @"None";
+  [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopDidChangeName object: nil userInfo: nil];
 }
 
 

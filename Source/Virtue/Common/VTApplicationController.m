@@ -107,6 +107,9 @@
 		
 		if (newWrapper == nil)
 			break; 
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath: [newWrapper bundlePath]] == NO)
+      break;
 		
 		// and add it 
 		[self attachApplication: newWrapper]; 

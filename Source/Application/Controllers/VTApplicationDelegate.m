@@ -20,6 +20,7 @@
 #import <Virtue/VTNotifications.h>
 #import <Virtue/NSUserDefaultsControllerKeyFactory.h>
 #import <Virtue/VTFileSystemExtensions.h>
+#import <Peony/Peony.h>
 #import <Zen/Zen.h>
 #import <Sparkle/Sparkle.h>
 #import <Growl/Growl.h>
@@ -639,7 +640,12 @@ enum
 	[self showApplicationInspector: self];
 }
 
-
+- (void) onDesktopDidChange: (NSNotification*) notification
+{
+  [self updateStatusItem];
+  [self updateDesktopsMenu];
+  [self updateActiveDesktopMenu];
+}
 
 #pragma mark -
 #pragma mark KVO Sinks
@@ -663,7 +669,7 @@ enum
 		[newDesktop addObserver: self forKeyPath: @"applications" options: NSKeyValueObservingOptionNew context: NULL];
 		
 		[self updateStatusItem];
-		[self performSelector: @selector(postGrowlNotification) withObject: nil  afterDelay: 1.0];
+		[self performSelector: @selector(postGrowlNotification) withObject: nil afterDelay: 1.0];
     
 	}
 	else if ([keyPath isEqualToString: @"applications"]) {
@@ -743,6 +749,8 @@ enum
 	
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onMoveApplicationToDesktopNorth:) name: VTRequestApplicationMoveToNorth  object: nil];
 	/** end of moving applications */
+  
+  [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidChange:) name: PNDesktopDidChangeName object: nil];
 }
 
 - (void) unregisterObservers {
@@ -779,7 +787,7 @@ enum
 			NSString* title = [NSString stringWithFormat: @"[%@]", [[[VTDesktopController sharedInstance] activeDesktop] name]];
 			NSAttributedString* attributedTitle = [[[NSAttributedString alloc] initWithString: title attributes: attributes] autorelease];
 			
-			[mStatusItem setAttributedTitle: attributedTitle];      
+			[mStatusItem setAttributedTitle: [attributedTitle retain]];
 		}
 		else {
 			[mStatusItem setTitle: @""];

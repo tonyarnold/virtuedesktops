@@ -34,8 +34,8 @@
 #pragma mark Desktop Requests 
 
 // Request a change of desktop
-#define VTRequestChangeDesktopName			@"VTRequestChangeDesktop"
-#define VTRequestChangeDesktopParamName		@"VTRequestChangeDesktopTarget"
+#define VTRequestChangeDesktopName          @"VTRequestChangeDesktop"
+#define VTRequestChangeDesktopParamName     @"VTRequestChangeDesktopTarget"
 // Request to snap back to snap back target desktop 
 #define VTRequestChangeDesktopToSnapbackName	@"VTRequestChangeDesktopToSnapback"
 // Request to set current desktop as snapback desktop
@@ -64,7 +64,7 @@
 #define VTRequestDeleteDesktopName			@"VTRequestDeleteDesktop"
 
 // Request selection of the new show desktop via the overlay pager 
-#define VTRequestShowPagerName				@"VTRequestShowPager"
+#define VTRequestShowPagerName            @"VTRequestShowPager"
 // request a sticky overlay pager 
 #define VTRequestShowPagerAndStickName		@"VTRequestShowPagerAndStick"
 

@@ -38,10 +38,9 @@
 - (id) init {
 	if (self = [super init]) {
 		mApplications	= [[NSMutableArray alloc] init]; 
-		mDesktop		= nil; 
-		mImage			= nil;
-		mBundle			= nil; 
-		mSticky			= NO; 
+		mDesktop      = nil; 
+		mImage        = nil;
+		mSticky       = NO; 
 		mBindDesktop	= NO;
     mUnfocused		= NO;
 				
@@ -63,7 +62,6 @@
 		}
 		
 		ZEN_ASSIGN(mBundleId, bundleId);
-    ZEN_ASSIGN(mBundle, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: bundleId]);
 		
 		// and complete initialization by filling the application array 
 		[self createApplications];
@@ -75,7 +73,6 @@
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mBundle); 
   ZEN_RELEASE(mBundleId);
 	ZEN_RELEASE(mApplications); 
 	ZEN_RELEASE(mImage); 
@@ -92,7 +89,6 @@
 #pragma mark Coding 
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
-	[dictionary setObject: mBundle forKey: kVtCodingBundle]; 
   [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
 	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
@@ -104,7 +100,6 @@
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	// decode primitives 
-	mBundle       = [[dictionary objectForKey: kVtCodingBundle] retain];
   mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
 	mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
 	mHidden       = [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
@@ -227,7 +222,7 @@
 }
 
 - (NSImage*) icon {
-  if ([self isRunning] == NO)
+  if ([self isRunning] == NO && mImage != nil)
   {
     NSImage* fadedImage = [[NSImage alloc] initWithSize: [mImage size]];
     [fadedImage lockFocus];
@@ -281,7 +276,7 @@
 }
 
 - (NSString*) bundlePath {
-	return mBundle; 
+	return [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: [self bundleId]]; 
 }
 
 - (NSString*) bundleId {
@@ -414,7 +409,7 @@
 		PNApplication*	application		= nil; 
 		
 		while (application = [applicationIter nextObject]) {
-			if ([application bundlePath] && [[application bundlePath] isEqualToString: mBundle]) {
+			if ([application bundlePath] && [[application bundlePath] isEqualToString: [self bundlePath]]) {
 				[mApplications addObject: application]; 
 				
 				// now apply attributes 
@@ -452,13 +447,16 @@
 		return; 
 	}
 	
-	// if the application is not running, we fetch the information from the
-	// bundle itself
+	// if the application is not running, we fetch the information from the bundle itself (if it exists)
 	mPid = 0; 
-	NSBundle* bundle = [NSBundle bundleWithPath: mBundle];
-  ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: mBundle]);
-	ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
-  ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
+  
+  if ([[NSFileManager defaultManager] fileExistsAtPath: [self bundlePath]]) 
+  {
+    NSBundle* bundle = [NSBundle bundleWithPath: [self bundlePath]];
+    ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
+    ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+    ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
+  }
 }
 
 @end 

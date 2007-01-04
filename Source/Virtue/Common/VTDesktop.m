@@ -180,7 +180,7 @@
 	// reject if name is empty or nil, or if we already have a name like the one provided
 	if ((name == nil) || ([name length] == 0))
 		return;
-	
+  
 	// now set the name
 	[super setName: name];
 }

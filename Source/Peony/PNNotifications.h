@@ -66,3 +66,6 @@
 #define PNWindowWillChangeDesktop	@"PNWindowWillChangeDesktop"
 // A window was moved to another desktop 
 #define PNWindowDidChangeDesktop	@"PNWindowDidChangeDesktop"
+
+#define PNDesktopWillChangeName   @"PNDesktopWillChangeName"
+#define PNDesktopDidChangeName    @"PNDesktopDidChangeName"
