@@ -147,7 +147,6 @@
                 mCommandButton = NSButton; 
                 mControlButton = NSButton; 
                 mEnableMotionSensor = NSButton; 
-                mMotionSensorSensitivity = NSSlider; 
                 mShiftButton = NSButton; 
             }; 
             SUPERCLASS = NSPreferencePane; 

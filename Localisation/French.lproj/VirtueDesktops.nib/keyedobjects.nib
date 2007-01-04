@@ -332,7 +332,7 @@
 				<integer>179</integer>
 			</dict>
 		</dict>
-		<string>Rechercher une mise à jour...</string>
+		<string>Check for update…</string>
 		<string></string>
 		<dict>
 			<key>$class</key>
@@ -713,7 +713,7 @@
 				<integer>44</integer>
 			</dict>
 		</dict>
-		<string>Quitter VirtueDesktops</string>
+		<string>Quit VirtueDesktops</string>
 		<string>terminate:</string>
 		<dict>
 			<key>$class</key>
@@ -1012,7 +1012,7 @@
 				<integer>190</integer>
 			</dict>
 		</dict>
-		<string>À propos de VirtueDesktops…</string>
+		<string>About VirtueDesktops…</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2401,7 +2401,7 @@ Certaines icônes sont prisent du Tango Desktop Project, et utilisées sous la l
 				<integer>176</integer>
 			</dict>
 		</dict>
-		<string>Préférences...</string>
+		<string>Preferences…</string>
 		<string>showPreferences:</string>
 		<dict>
 			<key>$class</key>
@@ -2723,7 +2723,7 @@ Certaines icônes sont prisent du Tango Desktop Project, et utilisées sous la l
 				<integer>190</integer>
 			</dict>
 		</dict>
-		<string>Plus d'information</string>
+		<string>Further information</string>
 		<string>submenuAction:</string>
 		<dict>
 			<key>$class</key>
@@ -2789,7 +2789,7 @@ Certaines icônes sont prisent du Tango Desktop Project, et utilisées sous la l
 				<integer>194</integer>
 			</dict>
 		</dict>
-		<string>Visiter le site Web…</string>
+		<string>Visit website…</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2824,7 +2824,7 @@ Certaines icônes sont prisent du Tango Desktop Project, et utilisées sous la l
 				<integer>196</integer>
 			</dict>
 		</dict>
-		<string>Forums de discussion...</string>
+		<string>Discussion forums…</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2859,7 +2859,7 @@ Certaines icônes sont prisent du Tango Desktop Project, et utilisées sous la l
 				<integer>198</integer>
 			</dict>
 		</dict>
-		<string>Envoyer un commentaire...</string>
+		<string>Send feedback…</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2894,7 +2894,7 @@ Certaines icônes sont prisent du Tango Desktop Project, et utilisées sous la l
 				<integer>200</integer>
 			</dict>
 		</dict>
-		<string>Donnez...</string>
+		<string>Donate…</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4669,19 +4669,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>82</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>318</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>321</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>324</integer>
+					<integer>175</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4689,211 +4685,19 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>195</integer>
+					<integer>48</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>26</integer>
+					<integer>330</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>21</integer>
+					<integer>351</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>329</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>331</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>182</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>334</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>258</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>188</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>342</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>345</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>348</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>73</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>350</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>201</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>412</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>197</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>358</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>414</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>416</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>50</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>290</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>93</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>395</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>418</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>374</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>47</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>184</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>68</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>361</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>419</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>199</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>420</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>87</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>423</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>392</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>335</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>428</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>375</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>186</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>364</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>431</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>82</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>437</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>400</integer>
+					<integer>352</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4901,35 +4705,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>48</integer>
+					<integer>379</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>451</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>453</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>380</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>447</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>365</integer>
+					<integer>334</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4937,31 +4717,55 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>381</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>336</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>399</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>324</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>254</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>463</integer>
+					<integer>401</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>353</integer>
+					<integer>404</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>403</integer>
+					<integer>10</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>469</integer>
+					<integer>410</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>43</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>307</integer>
+					<integer>319</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4973,35 +4777,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>383</integer>
+					<integer>307</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>10</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>483</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>368</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>466</integer>
+					<integer>413</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5009,19 +4789,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>330</integer>
+					<integer>353</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>406</integer>
+					<integer>339</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>262</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>294</integer>
+					<integer>441</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5033,7 +4809,31 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>457</integer>
+					<integer>451</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>419</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>407</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>201</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>262</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>470</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5041,47 +4841,31 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>439</integer>
+					<integer>294</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>175</integer>
+					<integer>66</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>386</integer>
+					<integer>364</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>322</integer>
+					<integer>43</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>479</integer>
+					<integer>390</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>371</integer>
+					<integer>342</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>398</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>246</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>477</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>193</integer>
+					<integer>475</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5089,23 +4873,39 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>460</integer>
+					<integer>429</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>408</integer>
+					<integer>457</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>480</integer>
+					<integer>380</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>389</integer>
+					<integer>193</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>445</integer>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>373</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>414</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>246</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>423</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5113,7 +4913,308 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>442</integer>
+					<integer>393</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>430</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>345</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>363</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>26</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>195</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>460</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>182</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>367</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>477</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>481</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>454</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>425</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>73</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>395</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>433</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>258</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>357</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>197</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>370</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>462</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>50</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>322</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>47</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>426</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>188</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>479</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>184</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>445</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>290</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>396</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>435</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>93</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>35</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>466</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>68</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>87</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>199</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>360</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>448</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>465</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>428</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>186</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>348</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>21</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>437</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSAction</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>321</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>322</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>320</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>356</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>354</integer>
+			</dict>
+		</dict>
+		<string>Ouvrir récent</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>323</integer>
+			</dict>
+			<key>NSName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>326</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>320</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>324</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5133,115 +5234,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>320</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>357</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>356</integer>
-			</dict>
-		</dict>
-		<string>Supprimer</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
 				<integer>322</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>323</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>411</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>409</integer>
-			</dict>
-		</dict>
-		<string>Commencer la lecture</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>326</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -5261,132 +5254,8 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>325</integer>
 			</dict>
 		</dict>
-		<string>Coller</string>
-		<string>v</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>476</integer>
-			</dict>
-			<key>NSName</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>482</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>474</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>330</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>456</integer>
-			</dict>
-			<key>NSName</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>462</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>454</integer>
-			</dict>
-		</dict>
+		<string>Effacer le menu</string>
+		<string>_NSRecentDocumentsMenu</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5396,193 +5265,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>333</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1572864</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>332</integer>
-			</dict>
-		</dict>
-		<string>Masquer les autres</string>
-		<string>h</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>337</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>335</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>336</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>427</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>426</integer>
-			</dict>
-		</dict>
-		<string>Aide NewApplication</string>
-		<string>?</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>341</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>340</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>436</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>434</integer>
-			</dict>
-		</dict>
-		<string>Nouveau</string>
-		<string>n</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>344</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>343</integer>
-			</dict>
-		</dict>
-		<string>Enregistrer sous...</string>
-		<string>S</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>347</integer>
+				<integer>329</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
@@ -5606,16 +5289,21 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>346</integer>
+				<integer>328</integer>
 			</dict>
 		</dict>
-		<string>Tout sélectionner</string>
-		<string>a</string>
+		<string>Format d’impression…</string>
+		<string>P</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>20</integer>
+			</dict>
+			<key>NSAction</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>333</integer>
 			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
@@ -5627,7 +5315,274 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>322</integer>
+				<integer>331</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>334</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>332</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>444</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>442</integer>
+			</dict>
+		</dict>
+		<string>Rechercher</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>335</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>332</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>336</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>339</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>342</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>345</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>348</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>338</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>334</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTag</key>
+			<integer>1</integer>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>337</integer>
+			</dict>
+		</dict>
+		<string>Rechercher…</string>
+		<string>f</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>341</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>334</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTag</key>
+			<integer>2</integer>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>340</integer>
+			</dict>
+		</dict>
+		<string>Rechercher le suivant</string>
+		<string>g</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>344</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>334</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTag</key>
+			<integer>3</integer>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>343</integer>
+			</dict>
+		</dict>
+		<string>Rechercher le précédent</string>
+		<string>G</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>347</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>334</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTag</key>
+			<integer>7</integer>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>346</integer>
+			</dict>
+		</dict>
+		<string>Utiliser la sélection pour trouver</string>
+		<string>e</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>350</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>334</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -5647,706 +5602,6 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>349</integer>
 			</dict>
 		</dict>
-		<string>Arrêter la lecture</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>352</integer>
-			</dict>
-			<key>NSName</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>355</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>351</integer>
-			</dict>
-		</dict>
-		<string>Ouvrir récent</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>353</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>350</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>354</integer>
-			</dict>
-		</dict>
-		<string>Effacer le menu</string>
-		<string>_NSRecentDocumentsMenu</string>
-		<string>Édition</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>358</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>361</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>364</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>365</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>368</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>324</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>371</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>318</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>345</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>374</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>375</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>395</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>408</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>360</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>359</integer>
-			</dict>
-		</dict>
-		<string>Annuler</string>
-		<string>z</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>363</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>362</integer>
-			</dict>
-		</dict>
-		<string>Rétablir</string>
-		<string>Z</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>367</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>366</integer>
-			</dict>
-		</dict>
-		<string>Couper</string>
-		<string>x</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>370</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>369</integer>
-			</dict>
-		</dict>
-		<string>Copier</string>
-		<string>c</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>373</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1572864</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>372</integer>
-			</dict>
-		</dict>
-		<string>Coller et appliquer le style</string>
-		<string>V</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSAction</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>377</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>319</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>376</integer>
-			</dict>
-		</dict>
-		<string>Rechercher</string>
-		<string>submenuAction:</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>379</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>376</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>380</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>383</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>386</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>389</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>392</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>382</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTag</key>
-			<integer>1</integer>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>381</integer>
-			</dict>
-		</dict>
-		<string>Rechercher…</string>
-		<string>f</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>385</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTag</key>
-			<integer>2</integer>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>384</integer>
-			</dict>
-		</dict>
-		<string>Rechercher le suivant</string>
-		<string>g</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>388</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTag</key>
-			<integer>3</integer>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>387</integer>
-			</dict>
-		</dict>
-		<string>Rechercher le précédent</string>
-		<string>G</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>391</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTag</key>
-			<integer>7</integer>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>390</integer>
-			</dict>
-		</dict>
-		<string>Utiliser la sélection pour trouver</string>
-		<string>e</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>394</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>393</integer>
-			</dict>
-		</dict>
 		<string>Aller à la sélection</string>
 		<string>j</string>
 		<dict>
@@ -6355,11 +5610,250 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>331</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
 			<key>NSAction</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>397</integer>
+				<integer>355</integer>
 			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>353</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>354</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>418</integer>
+			</dict>
+			<key>NSName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>485</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>417</integer>
+			</dict>
+		</dict>
+		<string>Fichier</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>357</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>360</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>318</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>363</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>364</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>367</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>370</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>373</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>327</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>359</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>358</integer>
+			</dict>
+		</dict>
+		<string>Nouveau</string>
+		<string>n</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>362</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>361</integer>
+			</dict>
+		</dict>
+		<string>Ouvrir…</string>
+		<string>o</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
@@ -6384,57 +5878,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>14</integer>
 			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>398</integer>
-			</dict>
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>396</integer>
+				<integer>13</integer>
 			</dict>
-		</dict>
-		<string>Orthographe</string>
-		<string>submenuAction:</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>399</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>396</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>400</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>406</integer>
-				</dict>
-			</array>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -6445,14 +5893,14 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>366</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>398</integer>
+				<integer>319</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6469,7 +5917,313 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>401</integer>
+				<integer>365</integer>
+			</dict>
+		</dict>
+		<string>Fermer</string>
+		<string>w</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>369</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>368</integer>
+			</dict>
+		</dict>
+		<string>Enregistrer</string>
+		<string>s</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>372</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>371</integer>
+			</dict>
+		</dict>
+		<string>Enregistrer sous...</string>
+		<string>S</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>374</integer>
+			</dict>
+		</dict>
+		<string>Revenir</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>378</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>319</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>377</integer>
+			</dict>
+		</dict>
+		<string>Imprimer…</string>
+		<string>p</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>422</integer>
+			</dict>
+			<key>NSName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>440</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>420</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>384</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>382</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>383</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>469</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>467</integer>
 			</dict>
 		</dict>
 		<string>Orthographe...</string>
@@ -6480,17 +6234,113 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
+			<key>NSAction</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>387</integer>
+			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>405</integer>
+				<integer>13</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
+				<integer>353</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>388</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>386</integer>
+			</dict>
+		</dict>
+		<string>Fenêtre</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>389</integer>
+			</dict>
+			<key>NSName</key>
+			<dict>
+				<key>CF$UID</key>
 				<integer>398</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>386</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>390</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>393</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>395</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>396</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>392</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>388</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6507,7 +6357,291 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>404</integer>
+				<integer>391</integer>
+			</dict>
+		</dict>
+		<string>Réduire</string>
+		<string>m</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>388</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>394</integer>
+			</dict>
+		</dict>
+		<string>Agrandir/réduire</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>388</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>388</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>397</integer>
+			</dict>
+		</dict>
+		<string>Tout ramener au premier plan</string>
+		<string>_NSWindowsMenu</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>4</integer>
+			</dict>
+			<key>NSClassName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>400</integer>
+			</dict>
+		</dict>
+		<string>NSFontManager</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>403</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>331</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>402</integer>
+			</dict>
+		</dict>
+		<string>Couper</string>
+		<string>x</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSAction</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>406</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>407</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>405</integer>
+			</dict>
+		</dict>
+		<string>Services</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>408</integer>
+			</dict>
+			<key>NSName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>409</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>405</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array/>
+		</dict>
+		<string>_NSServicesMenu</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>412</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>382</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>411</integer>
 			</dict>
 		</dict>
 		<string>Vérifier l'orthographe</string>
@@ -6521,14 +6655,14 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
+				<integer>416</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>398</integer>
+				<integer>414</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6545,10 +6679,59 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>407</integer>
+				<integer>415</integer>
 			</dict>
 		</dict>
-		<string>Vérifier l’orthographe lors de la frappe</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>484</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>482</integer>
+			</dict>
+		</dict>
+		<string>Aide NewApplication</string>
+		<string>?</string>
+		<string>AMainMenu</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>419</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>352</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>441</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>481</integer>
+				</dict>
+			</array>
+		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6558,7 +6741,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSAction</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>410</integer>
+				<integer>421</integer>
 			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
@@ -6570,7 +6753,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>319</integer>
+				<integer>353</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6587,15 +6770,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSSubmenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>322</integer>
+				<integer>380</integer>
 			</dict>
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>409</integer>
+				<integer>420</integer>
 			</dict>
 		</dict>
-		<string>Parole</string>
+		<string>NewApplication</string>
 		<string>submenuAction:</string>
 		<dict>
 			<key>$class</key>
@@ -6607,11 +6790,47 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>321</integer>
+					<integer>423</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>348</integer>
+					<integer>425</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>426</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>428</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>404</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>429</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>430</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>433</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>435</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>379</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>437</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6624,14 +6843,89 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>413</integer>
+				<integer>13</integer>
+			</dict>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>424</integer>
+			</dict>
+		</dict>
+		<string>À propos de NewApplication</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>328</integer>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>427</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6658,6 +6952,10 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
@@ -6668,7 +6966,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>330</integer>
+				<integer>380</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6685,10 +6983,124 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>415</integer>
+				<integer>13</integer>
 			</dict>
 		</dict>
-		<string>Tout ramener au premier plan</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSIsDisabled</key>
+			<true/>
+			<key>NSIsSeparator</key>
+			<true/>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>432</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>431</integer>
+			</dict>
+		</dict>
+		<string>Masquer NewApplication</string>
+		<string>h</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>432</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1572864</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>380</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>434</integer>
+			</dict>
+		</dict>
+		<string>Masquer les autres</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6705,7 +7117,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>328</integer>
+				<integer>380</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6722,7 +7134,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>417</integer>
+				<integer>436</integer>
 			</dict>
 		</dict>
 		<string>Tout afficher</string>
@@ -6732,21 +7144,17 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
+				<integer>439</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>339</integer>
+				<integer>380</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -6763,218 +7171,12 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>422</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>421</integer>
-			</dict>
-		</dict>
-		<string>Ouvrir…</string>
-		<string>o</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>425</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>424</integer>
+				<integer>438</integer>
 			</dict>
 		</dict>
 		<string>Quitter NewApplication</string>
 		<string>q</string>
-		<string>Aide</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>334</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>430</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>429</integer>
-			</dict>
-		</dict>
-		<string>Format d’impression…</string>
-		<string>P</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
+		<string>_NSAppleMenu</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6984,7 +7186,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSAction</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>435</integer>
+				<integer>443</integer>
 			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
@@ -6996,7 +7198,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>433</integer>
+				<integer>353</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7013,37 +7215,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSSubmenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>339</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>434</integer>
+				<integer>442</integer>
 			</dict>
 		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>472</integer>
-			</dict>
-			<key>NSName</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>485</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>471</integer>
-			</dict>
-		</dict>
-		<string>Fichier</string>
+		<string>Édition</string>
 		<string>submenuAction:</string>
 		<dict>
 			<key>$class</key>
@@ -7053,49 +7233,57 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			</dict>
 			<key>NS.objects</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>420</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>437</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>431</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>439</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>442</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>342</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>445</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>418</integer>
+					<integer>448</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>428</integer>
+					<integer>351</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>447</integer>
+					<integer>401</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>451</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>454</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>457</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>460</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>462</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>465</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>330</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>466</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
 				</dict>
 			</array>
 		</dict>
@@ -7105,138 +7293,17 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
-			<key>NSAction</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>438</integer>
-			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
+				<integer>447</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>350</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>351</integer>
-			</dict>
-		</dict>
-		<string>submenuAction:</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>441</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>440</integer>
-			</dict>
-		</dict>
-		<string>Fermer</string>
-		<string>w</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>444</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>443</integer>
-			</dict>
-		</dict>
-		<string>Enregistrer</string>
-		<string>s</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7256,7 +7323,8 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>446</integer>
 			</dict>
 		</dict>
-		<string>Revenir</string>
+		<string>Annuler</string>
+		<string>z</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7264,58 +7332,54 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>20</integer>
 			</dict>
 			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>450</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>331</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>449</integer>
 			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>339</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>448</integer>
-			</dict>
 		</dict>
-		<string>Imprimer…</string>
-		<string>p</string>
+		<string>Rétablir</string>
+		<string>Z</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
-			<key>NSIsDisabled</key>
-			<true/>
-			<key>NSIsSeparator</key>
-			<true/>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
+				<integer>453</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>328</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7330,80 +7394,30 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>14</integer>
 			</dict>
 			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSAction</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>452</integer>
 			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>433</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>335</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>426</integer>
-			</dict>
 		</dict>
-		<string>submenuAction:</string>
+		<string>Copier</string>
+		<string>c</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
-			<key>NSAction</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>455</integer>
-			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
+				<integer>456</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>433</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7417,45 +7431,14 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<key>CF$UID</key>
 				<integer>14</integer>
 			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>330</integer>
-			</dict>
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>454</integer>
+				<integer>455</integer>
 			</dict>
 		</dict>
-		<string>Fenêtre</string>
-		<string>submenuAction:</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>457</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>460</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>329</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>414</integer>
-				</dict>
-			</array>
-		</dict>
+		<string>Coller</string>
+		<string>v</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7468,11 +7451,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>459</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
+			<integer>1572864</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>330</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7492,8 +7475,8 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>458</integer>
 			</dict>
 		</dict>
-		<string>Réduire</string>
-		<string>m</string>
+		<string>Coller et appliquer le style</string>
+		<string>V</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7510,7 +7493,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>330</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7530,249 +7513,24 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>461</integer>
 			</dict>
 		</dict>
-		<string>Agrandir/réduire</string>
-		<string>_NSWindowsMenu</string>
+		<string>Supprimer</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>20</integer>
 			</dict>
-			<key>NSAction</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>465</integer>
-			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>13</integer>
+				<integer>464</integer>
 			</dict>
 			<key>NSKeyEquivModMask</key>
 			<integer>1048576</integer>
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>466</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>464</integer>
-			</dict>
-		</dict>
-		<string>Services</string>
-		<string>submenuAction:</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NSMenuItems</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>467</integer>
-			</dict>
-			<key>NSName</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>468</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>464</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<string>_NSServicesMenu</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>4</integer>
-			</dict>
-			<key>NSClassName</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>470</integer>
-			</dict>
-		</dict>
-		<string>NSFontManager</string>
-		<string>AMainMenu</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>483</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>453</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>451</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSAction</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>475</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>433</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSSubmenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>474</integer>
-			</dict>
-		</dict>
-		<string>NewApplication</string>
-		<string>submenuAction:</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>36</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>477</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>327</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>412</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>419</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>463</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>479</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>480</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>331</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>416</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>423</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>13</integer>
-			</dict>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7789,10 +7547,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>478</integer>
+				<integer>463</integer>
 			</dict>
 		</dict>
-		<string>À propos de NewApplication</string>
+		<string>Tout sélectionner</string>
+		<string>a</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7813,7 +7572,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>328</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7833,44 +7592,6 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<integer>13</integer>
 			</dict>
 		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>20</integer>
-			</dict>
-			<key>NSKeyEquiv</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>333</integer>
-			</dict>
-			<key>NSKeyEquivModMask</key>
-			<integer>1048576</integer>
-			<key>NSMenu</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>328</integer>
-			</dict>
-			<key>NSMixedImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>18</integer>
-			</dict>
-			<key>NSMnemonicLoc</key>
-			<integer>2147483647</integer>
-			<key>NSOnImage</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>14</integer>
-			</dict>
-			<key>NSTitle</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>481</integer>
-			</dict>
-		</dict>
-		<string>Masquer NewApplication</string>
-		<string>_NSAppleMenu</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7880,7 +7601,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSAction</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>484</integer>
+				<integer>468</integer>
 			</dict>
 			<key>NSKeyEquiv</key>
 			<dict>
@@ -7892,7 +7613,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSMenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>433</integer>
+				<integer>331</integer>
 			</dict>
 			<key>NSMixedImage</key>
 			<dict>
@@ -7909,15 +7630,294 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<key>NSSubmenu</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>319</integer>
+				<integer>382</integer>
 			</dict>
 			<key>NSTitle</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>356</integer>
+				<integer>467</integer>
 			</dict>
 		</dict>
+		<string>Orthographe</string>
 		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>381</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>410</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>470</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>382</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>471</integer>
+			</dict>
+		</dict>
+		<string>Vérifier l’orthographe lors de la frappe</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSAction</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>474</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>331</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>475</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>473</integer>
+			</dict>
+		</dict>
+		<string>Parole</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>37</integer>
+			</dict>
+			<key>NSMenuItems</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>476</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>473</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>477</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>479</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>475</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>478</integer>
+			</dict>
+		</dict>
+		<string>Commencer la lecture</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>475</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>480</integer>
+			</dict>
+		</dict>
+		<string>Arrêter la lecture</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>20</integer>
+			</dict>
+			<key>NSAction</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>483</integer>
+			</dict>
+			<key>NSKeyEquiv</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>NSKeyEquivModMask</key>
+			<integer>1048576</integer>
+			<key>NSMenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>353</integer>
+			</dict>
+			<key>NSMixedImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>18</integer>
+			</dict>
+			<key>NSMnemonicLoc</key>
+			<integer>2147483647</integer>
+			<key>NSOnImage</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>14</integer>
+			</dict>
+			<key>NSSubmenu</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>414</integer>
+			</dict>
+			<key>NSTitle</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>482</integer>
+			</dict>
+		</dict>
+		<string>Aide</string>
+		<string>submenuAction:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>36</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>413</integer>
+				</dict>
+			</array>
+		</dict>
 		<string>_NSMainMenu</string>
 		<dict>
 			<key>$class</key>
@@ -7929,235 +7929,19 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>322</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>335</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>322</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>437</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>483</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>47</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>451</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>73</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>339</integer>
+					<integer>319</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>328</integer>
+					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>375</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>398</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
+					<integer>319</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8165,31 +7949,27 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>433</integer>
+					<integer>331</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>433</integer>
+					<integer>331</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>378</integer>
+					<integer>353</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>189</integer>
+					<integer>231</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>339</integer>
+					<integer>380</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>186</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
+					<integer>330</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8197,23 +7977,43 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>186</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>353</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>328</integer>
+					<integer>322</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>350</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>398</integer>
+					<integer>319</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8221,7 +8021,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>2</integer>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>352</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8233,35 +8037,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>463</integer>
+					<integer>414</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8269,19 +8049,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>453</integer>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>398</integer>
+					<integer>334</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>258</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
+					<integer>353</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8293,79 +8069,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>330</integer>
+					<integer>331</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>231</integer>
+					<integer>353</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>408</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>395</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
+					<integer>404</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8373,7 +8085,295 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>339</integer>
+					<integer>258</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>189</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>419</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>466</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>481</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>475</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>353</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>48</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>47</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>318</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>441</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>48</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>475</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>48</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>48</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
 				</dict>
 			</array>
 		</dict>
@@ -8387,19 +8387,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>82</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>318</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>321</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>324</integer>
+					<integer>175</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8407,311 +8403,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>195</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>26</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>21</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>329</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>331</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>334</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>258</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>188</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>342</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>345</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>348</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>73</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>350</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>201</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>412</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>197</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>358</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>414</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>416</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>50</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>290</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>93</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>395</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>418</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>374</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>47</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>68</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>361</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>419</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>199</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>420</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>87</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>423</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>392</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>335</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>428</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>375</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>186</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>364</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>431</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>82</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>437</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>400</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>230</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>451</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>453</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>380</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>447</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>365</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>254</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>463</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>353</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>469</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>43</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>307</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>97</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>383</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>10</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>483</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>368</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>466</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>89</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8719,11 +8411,107 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>406</integer>
+					<integer>351</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>262</integer>
+					<integer>352</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>230</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>379</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>33</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>381</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>336</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>399</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>324</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>254</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>401</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>404</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>10</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>410</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>97</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>307</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>413</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>89</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>353</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>339</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>441</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8735,7 +8523,31 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>457</integer>
+					<integer>451</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>419</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>407</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>201</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>262</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>470</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8743,43 +8555,27 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>439</integer>
+					<integer>66</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>175</integer>
+					<integer>364</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>386</integer>
+					<integer>43</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>322</integer>
+					<integer>390</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>479</integer>
+					<integer>342</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>371</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>398</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>246</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>477</integer>
+					<integer>475</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8787,31 +8583,43 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>193</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>65</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>460</integer>
+					<integer>429</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>408</integer>
+					<integer>457</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>480</integer>
+					<integer>380</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>389</integer>
+					<integer>193</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>445</integer>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>373</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>414</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>246</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>423</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8819,7 +8627,199 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>442</integer>
+					<integer>393</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>430</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>345</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>363</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>26</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>195</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>460</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>367</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>477</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>481</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>454</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>425</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>73</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>395</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>433</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>258</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>357</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>197</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>370</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>462</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>50</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>322</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>47</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>426</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>188</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>479</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>445</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>290</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>396</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>435</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>93</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>35</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>466</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>68</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>87</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>199</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>360</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>448</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>465</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>428</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>186</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>348</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>21</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>437</integer>
 				</dict>
 			</array>
 		</dict>
@@ -8854,14 +8854,6 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<dict>
 					<key>CF$UID</key>
 					<integer>494</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>27</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>22</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8993,6 +8985,10 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>514</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>527</integer>
 				</dict>
 				<dict>
@@ -9097,6 +9093,10 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>27</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>553</integer>
 				</dict>
 				<dict>
@@ -9166,10 +9166,6 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				<dict>
 					<key>CF$UID</key>
 					<integer>570</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>559</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9265,116 +9261,120 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>22</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>594</integer>
 				</dict>
 			</array>
 		</dict>
-		<string>Menu Item (Delete)</string>
-		<string>NSTextField2</string>
-		<string>Menu Item (Start Speaking)</string>
-		<string>Menu Item (Paste)</string>
-		<string>Menu Item (Separator)-8</string>
-		<string>Menu Item (Discussion forums…)</string>
-		<string>Menu Item (Separator)-11</string>
-		<string>Menu Item (Hide Others)</string>
-		<string>Menu Item (NewApplication Help)</string>
-		<string>NSScrollView21</string>
-		<string>Menu Item (Separator)-2</string>
-		<string>9</string>
-		<string>8</string>
-		<string>Menu Item (Select All)</string>
-		<string>Menu Item (Stop Speaking)</string>
-		<string>Image View</string>
-		<string>Open Recent Menu</string>
-		<string>Edit Menu</string>
-		<string>Menu Item (Separator)-1</string>
-		<string>121</string>
-		<string>Menu Item (Send feedback…)</string>
-		<string>Menu Item (Undo)</string>
-		<string>Menu Item (Bring All to Front)</string>
-		<string>Menu Item (Show All)</string>
-		<string>Text Field Cell (Version 0.52 (123))</string>
-		<string>NSTextField1</string>
-		<string>NSScrollView2</string>
-		<string>Menu Item (Spelling)</string>
-		<string>2</string>
-		<string>Menu Item (Separator)-6</string>
-		<string>Text Field (Version 0.52 (123))</string>
-		<string>About VirtueDesktops</string>
-		<string>Menu Item (Redo)</string>
-		<string>Menu Item (Separator)-3</string>
-		<string>Menu Item (Separator)-9</string>
-		<string>Menu Item (Donate…)</string>
-		<string>StatusBar Menu</string>
-		<string>Menu Item (Open…)</string>
-		<string>Text Field (VirtueDesktops)</string>
-		<string>1111</string>
-		<string>Menu Item (Jump to Selection)</string>
-		<string>2-1</string>
-		<string>5</string>
-		<string>Menu Item (Find)</string>
-		<string>Menu Item (Active Desktop)</string>
-		<string>Menu Item (Separator)-5</string>
-		<string>7</string>
-		<string>Menu Item (File)</string>
 		<string>Image Cell</string>
 		<string>Menu Item (Open Recent)</string>
+		<string>Menu Item (Preferences…)</string>
+		<string>5</string>
+		<string>Content View</string>
+		<string>Menu Item (Find)</string>
+		<string>Menu Item (Separator)-5</string>
+		<string>Menu Item (File)</string>
+		<string>NSButton4</string>
 		<string>Menu Item (Separator)-7</string>
 		<string>Find Menu</string>
+		<string>Menu Item (Remove)</string>
+		<string>Active Desktop Menu</string>
 		<string>Menu Item (Spelling…)</string>
-		<string>NSButton4</string>
-		<string>Content View</string>
-		<string>1-1</string>
 		<string>Menu Item (Window)</string>
 		<string>Menu Item (Find…)</string>
-		<string>Further information Menu</string>
-		<string>6</string>
-		<string>Active Desktop Menu</string>
-		<string>Menu Item (Cut)</string>
-		<string>Menu Item (Remove)</string>
-		<string>Welcome panel</string>
-		<string>Menu Item (Services)</string>
-		<string>Menu Item (Clear Menu)</string>
-		<string>Menu Item (Check Spelling)</string>
 		<string>Font Manager</string>
-		<string>Menu Item (Quit VirtueDesktops)</string>
-		<string>Shared Defaults</string>
+		<string>Menu Item (Clear Menu)</string>
+		<string>6</string>
+		<string>Welcome panel</string>
+		<string>Menu Item (Cut)</string>
+		<string>Menu Item (Services)</string>
+		<string>Menu Item (Check for update…)</string>
+		<string>Menu Item (Check Spelling)</string>
+		<string>File Menu</string>
 		<string>NSTextView</string>
+		<string>Shared Defaults</string>
+		<string>Menu Item (NewApplication Help)</string>
+		<string>Text Field Cell (VirtueDesktops)</string>
 		<string>MainMenu</string>
 		<string>Menu Item (Find Next)</string>
-		<string>Menu Item (Check for update…)</string>
 		<string>Menu Item (Edit)</string>
-		<string>Menu Item (NewApplication)</string>
-		<string>Menu Item (Copy)</string>
-		<string>File Menu</string>
-		<string>Services Menu</string>
-		<string>Text Field Cell (VirtueDesktops)</string>
-		<string>Window Menu</string>
-		<string>Menu Item (Check Spelling as You Type)</string>
 		<string>Menu Item (Further information)</string>
 		<string>Menu Item (Inspect Active Desktop...)</string>
-		<string>Menu Item (Minimize)</string>
+		<string>Menu Item (Copy)</string>
+		<string>Menu Item (NewApplication)</string>
+		<string>Services Menu</string>
+		<string>Menu Item (Separator)-1</string>
+		<string>Window Menu</string>
+		<string>Menu Item (Check Spelling as You Type)</string>
 		<string>NSButton41</string>
+		<string>Further information Menu</string>
 		<string>1</string>
-		<string>Menu Item (Preferences…)</string>
+		<string>Menu Item (Quit VirtueDesktops)</string>
+		<string>Menu Item (Minimize)</string>
 		<string>Menu Item (Find Previous)</string>
 		<string>Speech Menu</string>
+		<string>File's Owner</string>
+		<string>Menu Item (About VirtueDesktops…)</string>
 		<string>Menu Item (Separator)-10</string>
 		<string>Menu Item (Paste and Match Style)</string>
 		<string>NewApplication Menu</string>
+		<string>Menu Item (Visit website…)</string>
 		<string>Spelling Menu</string>
+		<string>10</string>
+		<string>2-1</string>
 		<string>NSButton</string>
 		<string>Menu Item (About NewApplication)</string>
-		<string>File's Owner</string>
-		<string>Menu Item (Visit website…)</string>
-		<string>Menu Item (About VirtueDesktops…)</string>
+		<string>Menu Item (Separator)</string>
 		<string>Menu Item (Zoom)</string>
 		<string>Menu Item (Speech)</string>
 		<string>Menu Item (Hide NewApplication)</string>
 		<string>Menu Item (Use Selection for Find)</string>
-		<string>10</string>
-		<string>Menu Item (Separator)</string>
+		<string>7</string>
+		<string>Menu Item (Discussion forums…)</string>
+		<string>NSTextField2</string>
+		<string>Menu Item (Delete)</string>
 		<string>3</string>
+		<string>Menu Item (Start Speaking)</string>
+		<string>1-1</string>
+		<string>Menu Item (Paste)</string>
+		<string>Menu Item (Separator)-8</string>
+		<string>Image View</string>
+		<string>Menu Item (Separator)-11</string>
+		<string>Menu Item (Hide Others)</string>
+		<string>NSScrollView21</string>
+		<string>9</string>
+		<string>Menu Item (Send feedback…)</string>
+		<string>8</string>
+		<string>Menu Item (Select All)</string>
+		<string>Text Field Cell (Version 0.52 (123))</string>
+		<string>Open Recent Menu</string>
+		<string>Edit Menu</string>
+		<string>Text Field (Version 0.52 (123))</string>
+		<string>121</string>
+		<string>Menu Item (Separator)-2</string>
+		<string>Menu Item (Stop Speaking)</string>
+		<string>Menu Item (Undo)</string>
+		<string>NSTextField1</string>
+		<string>Menu Item (Bring All to Front)</string>
+		<string>Menu Item (Show All)</string>
+		<string>NSScrollView2</string>
+		<string>Menu Item (Separator)-3</string>
+		<string>Menu Item (Spelling)</string>
+		<string>StatusBar Menu</string>
+		<string>2</string>
+		<string>About VirtueDesktops</string>
+		<string>Text Field (VirtueDesktops)</string>
+		<string>Menu Item (Donate…)</string>
+		<string>Menu Item (Open…)</string>
+		<string>Menu Item (Redo)</string>
+		<string>Menu Item (Separator)-6</string>
+		<string>Menu Item (Separator)-9</string>
+		<string>Menu Item (Active Desktop)</string>
+		<string>Menu Item (Jump to Selection)</string>
+		<string>1111</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9385,43 +9385,31 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>418</integer>
+					<integer>399</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>408</integer>
+					<integer>407</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>442</integer>
+					<integer>404</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>428</integer>
+					<integer>401</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>395</integer>
+					<integer>351</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>342</integer>
+					<integer>448</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>431</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>335</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>414</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>329</integer>
+					<integer>462</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9441,139 +9429,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>453</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>479</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>350</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>26</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>398</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>375</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>374</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>345</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>466</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>463</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>318</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>365</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>364</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>361</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>371</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>368</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>348</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>334</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>353</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>437</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>419</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>420</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>327</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>477</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>324</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>412</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>321</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>439</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9581,15 +9437,19 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>378</integer>
+					<integer>352</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>392</integer>
+					<integer>428</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>400</integer>
+					<integer>426</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>425</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9597,51 +9457,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>406</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>358</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>389</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>445</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>383</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>469</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>386</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>416</integer>
+					<integer>454</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9649,15 +9465,179 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>480</integer>
+					<integer>477</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>380</integer>
+					<integer>364</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>483</integer>
+					<integer>26</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>348</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>381</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>437</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>470</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>379</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>410</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>363</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>357</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>479</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>445</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>481</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>345</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>339</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>342</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>324</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>318</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>360</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>435</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>433</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>430</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>475</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>413</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>367</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>327</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>466</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>370</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>441</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>336</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>396</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>395</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>393</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>390</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>353</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>429</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9665,7 +9645,27 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>447</integer>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>414</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>330</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>373</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>465</integer>
 				</dict>
 			</array>
 		</dict>
@@ -9679,27 +9679,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>400</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9711,23 +9691,31 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9739,11 +9727,39 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>70</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9755,6 +9771,86 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>598</integer>
 				</dict>
 				<dict>
@@ -9771,11 +9867,55 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9787,155 +9927,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>70</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>598</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>598</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>470</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>597</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9959,12 +9955,16 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>598</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>598</integer>
 				</dict>
 			</array>
 		</dict>
-		<string>NSMenuItem</string>
 		<string>NSMenu</string>
+		<string>NSMenuItem</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9975,43 +9975,35 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>322</integer>
+					<integer>312</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>358</integer>
+					<integer>393</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>2</integer>
+					<integer>178</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>195</integer>
+					<integer>367</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>182</integer>
+					<integer>470</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>375</integer>
+					<integer>306</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>246</integer>
+					<integer>331</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>47</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>398</integer>
+					<integer>426</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10023,7 +10015,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>383</integer>
+					<integer>401</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>404</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10031,7 +10027,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>437</integer>
+					<integer>318</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10039,27 +10035,19 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>327</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>205</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>240</integer>
+					<integer>460</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>331</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>400</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
+					<integer>193</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10067,23 +10055,15 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>203</integer>
+					<integer>475</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>188</integer>
+					<integer>479</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>361</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>477</integer>
+					<integer>445</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10091,11 +10071,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>329</integer>
+					<integer>64</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>342</integer>
+					<integer>330</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10107,79 +10087,27 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>231</integer>
+					<integer>199</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>64</integer>
+					<integer>42</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>46</integer>
+					<integer>246</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>419</integer>
+					<integer>380</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>368</integer>
+					<integer>382</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>466</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>290</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>447</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>315</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>93</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>189</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>230</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>392</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>345</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>453</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>408</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>445</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>258</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>178</integer>
+					<integer>240</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10187,7 +10115,23 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>97</integer>
+					<integer>189</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>339</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>373</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>201</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10195,179 +10139,7 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>197</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>439</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>9</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>89</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>224</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>335</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>214</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>87</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>10</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>431</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>386</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>353</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>262</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>26</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>307</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>457</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>184</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>416</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>321</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>324</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>327</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>364</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>479</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>414</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>469</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>395</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>418</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>334</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>207</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>174</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>254</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>216</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>371</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>294</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>253</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>483</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>193</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>65</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>378</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>208</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>374</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10375,7 +10147,191 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>89</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>379</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>357</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>231</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>381</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>423</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>448</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>214</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>290</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>395</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>87</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>370</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>10</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>93</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>428</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>230</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>407</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>451</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>324</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>258</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>315</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>348</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>97</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>462</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>184</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>195</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>224</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>188</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>175</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>43</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>364</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>399</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>413</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>481</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>174</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>388</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>203</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>253</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>262</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>65</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>208</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>342</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>82</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>48</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10383,11 +10339,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>66</integer>
+					<integer>307</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>199</integer>
+					<integer>390</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10399,95 +10355,11 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>339</integer>
+					<integer>435</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>21</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>68</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>380</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>420</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>31</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>201</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>172</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>451</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>350</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>480</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>389</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>423</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>175</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>348</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>460</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>442</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>186</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>406</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>40</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>306</integer>
+					<integer>410</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10495,23 +10367,111 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>412</integer>
+					<integer>26</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>312</integer>
+					<integer>477</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>365</integer>
+					<integer>454</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>463</integer>
+					<integer>425</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>428</integer>
+					<integer>254</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>351</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>216</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>396</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>429</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>360</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>294</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>466</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>31</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>172</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>352</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>457</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>414</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>46</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>441</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>465</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>186</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>353</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>197</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>207</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>68</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10519,15 +10479,55 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>43</integer>
+					<integer>336</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>318</integer>
+					<integer>21</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>42</integer>
+					<integer>40</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>419</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>322</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>363</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>430</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>345</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>182</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>437</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>47</integer>
 				</dict>
 			</array>
 		</dict>
@@ -11097,145 +11097,145 @@ To get started, simply select the VirtueDesktops icon from the right-hand side o
 				</dict>
 			</array>
 		</dict>
-		<integer>298</integer>
-		<integer>295</integer>
-		<integer>325</integer>
-		<integer>226</integer>
-		<integer>413</integer>
-		<integer>287</integer>
-		<integer>405</integer>
-		<integer>236</integer>
-		<integer>269</integer>
-		<integer>307</integer>
-		<integer>118</integer>
-		<integer>104</integer>
-		<integer>303</integer>
-		<integer>250</integer>
-		<integer>317</integer>
-		<integer>328</integer>
-		<integer>132</integer>
-		<integer>404</integer>
-		<integer>270</integer>
-		<integer>271</integer>
-		<integer>308</integer>
-		<integer>398</integer>
-		<integer>117</integer>
-		<integer>139</integer>
-		<integer>119</integer>
-		<integer>288</integer>
-		<integer>318</integer>
-		<integer>280</integer>
-		<integer>327</integer>
-		<integer>268</integer>
-		<integer>321</integer>
-		<integer>406</integer>
-		<integer>114</integer>
-		<integer>393</integer>
-		<integer>245</integer>
-		<integer>246</integer>
-		<integer>274</integer>
-		<integer>291</integer>
-		<integer>281</integer>
-		<integer>401</integer>
-		<integer>320</integer>
-		<integer>416</integer>
-		<integer>388</integer>
-		<integer>217</integer>
-		<integer>403</integer>
-		<integer>305</integer>
-		<integer>296</integer>
-		<integer>263</integer>
-		<integer>290</integer>
-		<integer>313</integer>
-		<integer>396</integer>
-		<integer>248</integer>
-		<integer>231</integer>
-		<integer>389</integer>
-		<integer>408</integer>
-		<integer>220</integer>
-		<integer>315</integer>
-		<integer>154</integer>
-		<integer>249</integer>
-		<integer>360</integer>
-		<integer>282</integer>
-		<integer>264</integer>
-		<integer>329</integer>
-		<integer>235</integer>
-		<integer>151</integer>
-		<integer>314</integer>
-		<integer>306</integer>
-		<integer>324</integer>
-		<integer>397</integer>
-		<integer>55</integer>
-		<integer>410</integer>
-		<integer>265</integer>
-		<integer>414</integer>
-		<integer>278</integer>
-		<integer>309</integer>
-		<integer>300</integer>
-		<integer>292</integer>
-		<integer>273</integer>
-		<integer>289</integer>
-		<integer>276</integer>
-		<integer>267</integer>
-		<integer>197</integer>
-		<integer>285</integer>
-		<integer>312</integer>
-		<integer>283</integer>
-		<integer>56</integer>
-		<integer>136</integer>
-		<integer>392</integer>
-		<integer>359</integer>
-		<integer>259</integer>
-		<integer>286</integer>
-		<integer>402</integer>
-		<integer>409</integer>
-		<integer>260</integer>
-		<integer>219</integer>
-		<integer>244</integer>
-		<integer>301</integer>
-		<integer>326</integer>
-		<integer>294</integer>
-		<integer>258</integer>
-		<integer>251</integer>
-		<integer>415</integer>
-		<integer>218</integer>
-		<integer>221</integer>
-		<integer>134</integer>
-		<integer>108</integer>
-		<integer>311</integer>
-		<integer>229</integer>
-		<integer>153</integer>
-		<integer>228</integer>
-		<integer>302</integer>
-		<integer>319</integer>
-		<integer>262</integer>
-		<integer>113</integer>
-		<integer>158</integer>
-		<integer>133</integer>
-		<integer>261</integer>
-		<integer>323</integer>
-		<integer>279</integer>
-		<integer>304</integer>
-		<integer>277</integer>
-		<integer>105</integer>
-		<integer>299</integer>
+		<integer>412</integer>
 		<integer>266</integer>
+		<integer>248</integer>
 		<integer>322</integer>
-		<integer>115</integer>
 		<integer>310</integer>
-		<integer>138</integer>
 		<integer>411</integer>
 		<integer>284</integer>
 		<integer>275</integer>
-		<integer>412</integer>
+		<integer>118</integer>
+		<integer>104</integer>
 		<integer>293</integer>
 		<integer>272</integer>
+		<integer>250</integer>
+		<integer>317</integer>
+		<integer>328</integer>
 		<integer>316</integer>
-		<integer>407</integer>
-		<integer>129</integer>
+		<integer>132</integer>
 		<integer>297</integer>
+		<integer>219</integer>
+		<integer>117</integer>
+		<integer>298</integer>
+		<integer>299</integer>
+		<integer>295</integer>
+		<integer>327</integer>
+		<integer>245</integer>
+		<integer>287</integer>
+		<integer>406</integer>
+		<integer>114</integer>
+		<integer>221</integer>
 		<integer>144</integer>
+		<integer>405</integer>
+		<integer>269</integer>
+		<integer>307</integer>
+		<integer>404</integer>
+		<integer>231</integer>
+		<integer>217</integer>
+		<integer>303</integer>
+		<integer>398</integer>
+		<integer>313</integer>
+		<integer>158</integer>
+		<integer>408</integer>
+		<integer>154</integer>
+		<integer>270</integer>
+		<integer>249</integer>
+		<integer>271</integer>
+		<integer>318</integer>
+		<integer>393</integer>
+		<integer>308</integer>
+		<integer>280</integer>
+		<integer>288</integer>
+		<integer>329</integer>
+		<integer>401</integer>
+		<integer>268</integer>
+		<integer>235</integer>
+		<integer>321</integer>
+		<integer>151</integer>
+		<integer>388</integer>
+		<integer>274</integer>
+		<integer>403</integer>
+		<integer>281</integer>
+		<integer>291</integer>
+		<integer>324</integer>
+		<integer>320</integer>
+		<integer>396</integer>
+		<integer>416</integer>
+		<integer>305</integer>
+		<integer>389</integer>
+		<integer>296</integer>
+		<integer>414</integer>
+		<integer>263</integer>
+		<integer>226</integer>
+		<integer>290</integer>
+		<integer>360</integer>
+		<integer>119</integer>
+		<integer>105</integer>
+		<integer>129</integer>
+		<integer>315</integer>
+		<integer>197</integer>
+		<integer>283</integer>
+		<integer>261</integer>
+		<integer>136</integer>
+		<integer>264</integer>
+		<integer>139</integer>
+		<integer>409</integer>
+		<integer>397</integer>
+		<integer>244</integer>
+		<integer>326</integer>
+		<integer>306</integer>
+		<integer>251</integer>
+		<integer>229</integer>
+		<integer>415</integer>
+		<integer>410</integer>
+		<integer>265</integer>
+		<integer>134</integer>
+		<integer>108</integer>
+		<integer>278</integer>
+		<integer>309</integer>
+		<integer>311</integer>
+		<integer>55</integer>
+		<integer>300</integer>
+		<integer>292</integer>
+		<integer>273</integer>
+		<integer>392</integer>
+		<integer>289</integer>
+		<integer>359</integer>
+		<integer>267</integer>
+		<integer>276</integer>
+		<integer>319</integer>
+		<integer>402</integer>
+		<integer>285</integer>
+		<integer>312</integer>
+		<integer>113</integer>
+		<integer>133</integer>
+		<integer>259</integer>
+		<integer>286</integer>
+		<integer>282</integer>
+		<integer>246</integer>
+		<integer>260</integer>
+		<integer>301</integer>
+		<integer>294</integer>
+		<integer>115</integer>
+		<integer>258</integer>
+		<integer>220</integer>
+		<integer>56</integer>
+		<integer>228</integer>
+		<integer>407</integer>
+		<integer>302</integer>
+		<integer>153</integer>
+		<integer>138</integer>
+		<integer>262</integer>
+		<integer>218</integer>
+		<integer>325</integer>
+		<integer>323</integer>
+		<integer>314</integer>
+		<integer>279</integer>
+		<integer>304</integer>
+		<integer>413</integer>
+		<integer>277</integer>
+		<integer>236</integer>
 		<dict>
 			<key>$class</key>
 			<dict>
