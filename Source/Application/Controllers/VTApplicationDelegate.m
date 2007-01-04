@@ -669,7 +669,9 @@ enum
 		[newDesktop addObserver: self forKeyPath: @"applications" options: NSKeyValueObservingOptionNew context: NULL];
 		
 		[self updateStatusItem];
-		[self performSelector: @selector(postGrowlNotification) withObject: nil afterDelay: 1.0];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey: VTGrowlEnabled] == YES)
+      [self performSelector: @selector(postGrowlNotification) withObject: nil afterDelay: 1.0];
     
 	}
 	else if ([keyPath isEqualToString: @"applications"]) {
