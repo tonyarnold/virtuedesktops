@@ -18,6 +18,7 @@
 #import <Zen/Zen.h> 
 
 #define kVtCodingBundle         @"bundle"
+#define kVtCodingBundleId       @"id"
 #define kVtCodingSticky         @"sticky"
 #define kVtCodingHidden         @"hidden"
 #define kVtCodingUnfocused      @"unfocused"
@@ -92,6 +93,7 @@
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
 	[dictionary setObject: mBundle forKey: kVtCodingBundle]; 
+  [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
 	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
   [dictionary setObject: [NSNumber numberWithBool: mUnfocused] forKey: kVtCodingUnfocused];
@@ -102,9 +104,10 @@
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	// decode primitives 
-	mBundle			= [[dictionary objectForKey: kVtCodingBundle] retain]; 
-	mSticky			= [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
-	mHidden			= [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
+	mBundle       = [[dictionary objectForKey: kVtCodingBundle] retain];
+  mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
+	mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
+	mHidden       = [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
   mUnfocused		= [[dictionary objectForKey: kVtCodingUnfocused] boolValue];
 	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue]; 
 	

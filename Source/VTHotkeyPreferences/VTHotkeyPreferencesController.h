@@ -41,10 +41,10 @@
 	IBOutlet NSButton*				mCommandButton; 
 	IBOutlet NSButton*				mShiftButton; 
 	
-	// ivars 
+	// Instance variables 
 	VTTriggerNotification*	mSelectedNotification; 
-	VTHotkeyTextView*		mFieldEditor;					//!< Used to edit keyboard triggers 
-	id						mOriginalDelegate; 
+	VTHotkeyTextView*       mFieldEditor;					//!< Used to edit keyboard triggers 
+	id                      mOriginalDelegate; 
 }
 
 #pragma mark -

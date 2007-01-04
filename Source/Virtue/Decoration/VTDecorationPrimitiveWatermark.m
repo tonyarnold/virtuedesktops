@@ -92,14 +92,17 @@
 	if (mImagePath)
 		[dictionary setObject: [self imagePath] forKey: kVtCodingImagePath];
   
-  [dictionary setObject: [NSNumber numberWithInt: [self scalingType]] forKey: kVtCodingScaling];
-	[dictionary setObject: [NSNumber numberWithFloat: [self intensity]] forKey: kVtCodingIntensity];
+  if (mImageScaling)
+    [dictionary setObject: [NSNumber numberWithInt: [self scalingType]] forKey: kVtCodingScaling];
+  
+  if (mIntensity)
+    [dictionary setObject: [NSNumber numberWithFloat: [self intensity]] forKey: kVtCodingIntensity];
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	if (self = [super decodeFromDictionary: dictionary]) { 
 		[self setImagePath: [dictionary objectForKey: kVtCodingImagePath]]; 
-		[self setIntensity: [[dictionary objectForKey: kVtCodingIntensity] floatValue]]; 
+		[self setIntensity: [[dictionary objectForKey: kVtCodingIntensity] floatValue]];
     [self setScalingType: [[dictionary objectForKey: kVtCodingScaling] intValue]];
 		
 		return self; 
