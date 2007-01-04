@@ -1599,10 +1599,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>10</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>61</integer>
 				</dict>
 				<dict>
@@ -1632,6 +1628,10 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>10</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1662,10 +1662,6 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
@@ -1688,6 +1684,10 @@
 					<key>CF$UID</key>
 					<integer>31</integer>
 				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>11</integer>
+				</dict>
 			</array>
 		</dict>
 		<dict>
@@ -1698,10 +1698,6 @@
 			</dict>
 			<key>NS.objects</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>10</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>61</integer>
@@ -1733,6 +1729,10 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>10</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1782,7 +1782,6 @@
 				</dict>
 			</array>
 		</dict>
-		<string>NSTextField2</string>
 		<string>2</string>
 		<string>NSButton1</string>
 		<string>Inspector</string>
@@ -1791,6 +1790,7 @@
 		<string>NSTextField11</string>
 		<string>NSTextField112</string>
 		<string>File's Owner</string>
+		<string>NSTextField2</string>
 		<dict>
 			<key>$class</key>
 			<dict>
