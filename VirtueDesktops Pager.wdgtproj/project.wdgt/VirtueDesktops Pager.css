@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+}
+
+#front {
+
+}
+.backgroundImage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding-top: 22px;
+    padding-left: 27px;
+    height: 45px;
+    width: 40px;
+    color: white;
+    font: bold 22px Lucida Grande, Helvetica, sans-serif;
+    text-shadow: #000 0 1px 3px;
+}
+
+ul li.box1 {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+
+ul li.box2 {
+    position: absolute;
+    top: 19px;
+    left: 100px;
+}
+ul li.box3 {
+    position: absolute;
+    top: 98px;
+    left: 20px;
+}
+
+ul li.box4 {
+    position: absolute;
+    top: 98px;
+    left: 100px;
+}
+
+.virtue {
+  margin: 0.6em 0;
+  text-align: center;
+    color: #ddd;
+    text-shadow: #888 0 1px 2px;
+    font: 11px Lucida Grande, Helvetica, sans-serif;
+}
+
+.virtue2 {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    color: #fff;
+    text-shadow: #000 0 1px 3px;
+    letter-spacing: -1px;
+    font: 21px Lucida Grande, Helvetica, sans-serif;
+}
+
+.virtue2sub {
+    position: absolute;
+    top: 43px;
+    right: 23px;
+    color: #fff;
+    text-shadow: #000 0 1px 2px;
+    letter-spacing: -1px;
+    font: 10px Lucida Grande, Helvetica, sans-serif;
+}
+
+.desknum {
+    position: absolute;
+    top: 84px;
+    left: 35px;
+    color: #fff;
+    text-shadow: #000 0 1px 2px;
+    letter-spacing: -1px;
+    font: 13px Lucida Grande, Helvetica, sans-serif;
+}
+
+/*.note {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    right: 15px;
+    color: #a50100;
+    font: 11px Lucida Grande, Helvetica, sans-serif;
+}*/
+
+.by {
+    position: absolute;
+    bottom: 20px;
+    left: 17px;
+    color: #fff;
+    text-shadow: #000 0 1px 2px;
+    font: 9px Lucida Grande, Helvetica, sans-serif;
+}
+
+.flip {
+    position:absolute;
+    bottom: 13px;
+    right: 8px;
+    width:13px;
+    height:13px;
+}
+
+#flip {
+    opacity:0.5;
+    background: url(file:///System/Library/WidgetResources/ibutton/white_i.png) no-repeat top left;
+    z-index:8000;
+}
+
+#fliprollie {
+    display:none;
+    opacity:0.25;
+    background: url(file:///System/Library/WidgetResources/ibutton/white_rollie.png) no-repeat top left;
+    z-index:7999;
+
+}
+
+.donePrefsButton {
+    position: absolute;
+    display: none;
+}
+
+#widgetButton {
+    font: 10px "Lucida Grande";
+    font-weight: bold;
+}
+
+#back {
+    display: none;
+}
