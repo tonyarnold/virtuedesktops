@@ -19,7 +19,7 @@
 #import "VTTrigger.h" 
 #import "VTDesktopController.h" 
 #import "VTPreferences.h" 
-#import <Zen/Zen.h> 
+#import <Zen/Zen.h>
 
 #define kVtCodingType		@"notificationType"
 
@@ -341,28 +341,27 @@
 			// get name and description for notification 
 			[notification setNotification: NSLocalizedStringFromTable([[notification name] stringByAppendingString: @"_name"], @"Notifications", @"Notification name")];  
 			[notification setDescription: NSLocalizedStringFromTable([[notification name] stringByAppendingString: @"_desc"], @"Notifications", @"Notification description")];
-		}
+    }
 	}
 }
 
 #pragma mark -
 - (void) readPreferences {
-	NSDictionary* dictionary = [[NSUserDefaults standardUserDefaults] objectForKey: VTHotkeys]; 
-	if (dictionary == nil) {
-		NSString* defaultHotkeysPath = [[NSBundle mainBundle] pathForResource: @"DefaultHotkeys" ofType: @"plist"]; 
-		dictionary = [NSDictionary dictionaryWithContentsOfFile: defaultHotkeysPath]; 
-	}
-	
+  // @TODO@: Rewrite me to only unarchive objects with modified keys, and not the actual objects, but just the key values.
+  NSString* defaultHotkeysPath = [[NSBundle bundleForClass: [VTTriggerController class]] pathForResource: @"DefaultHotkeys" ofType: @"plist"];
+	NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile: defaultHotkeysPath];
+  [dictionary addEntriesFromDictionary: [[NSUserDefaults standardUserDefaults] objectForKey: VTHotkeys]];
+
 	[mNotifications decodeFromDictionary: dictionary]; 
 	
 	// Now we ensure that all desktops have their notification registered 
-	NSArray*		desktopNotifications	= [self notificationsWithName: VTRequestChangeDesktopName]; 
-	NSEnumerator*	desktopIter				= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
-	VTDesktop*		desktop					= nil; 
+	NSArray*      desktopNotifications	= [self notificationsWithName: VTRequestChangeDesktopName]; 
+	NSEnumerator*	desktopIter           = [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
+	VTDesktop*		desktop               = nil;
 	
 	while (desktop = [desktopIter nextObject]) {
-		NSEnumerator*			notificationIter	= [desktopNotifications objectEnumerator]; 
-		VTTriggerNotification*	notification		= nil; 
+		NSEnumerator*           notificationIter  = [desktopNotifications objectEnumerator]; 
+		VTTriggerNotification*	notification      = nil;
 		
 		while (notification = [notificationIter nextObject]) {
 			if ([notification isKindOfClass: [VTTriggerDesktopNotification class]] == NO)
@@ -379,12 +378,14 @@
 			[[self groupWithName: VTTriggerGroupNavigationName] addNotification: notification];
 		}
 	}
-	
+  
 	// try to localize 
-	[self readLocalizedNamesForGroup: mNotifications]; 
+	[self readLocalizedNamesForGroup: mNotifications];
 }
 
 - (void) writePreferences {
+  // @TODO@: Rewrite me to only archive objects with keys, and not the actual objects, but just the key values. What a mess!
+  
 	NSMutableDictionary* groupDict = [NSMutableDictionary dictionary]; 
 	
 	[mNotifications encodeToDictionary: groupDict]; 

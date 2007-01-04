@@ -91,25 +91,6 @@
 						<key>enabled</key>
 						<true/>
 						<key>name</key>
-						<string>VTRequestShowPager</string>
-						<key>triggers</key>
-						<array>
-							<dict>
-								<key>keyCode</key>
-								<integer>48</integer>
-								<key>keyModifiers</key>
-								<integer>524576</integer>
-								<key>triggerType</key>
-								<string>VTHotkeyTrigger</string>
-							</dict>
-						</array>
-						<key>type</key>
-						<string>VTTriggerNotification</string>
-					</dict>
-					<dict>
-						<key>enabled</key>
-						<true/>
-						<key>name</key>
 						<string>VTRequestShowPagerAndStick</string>
 						<key>triggers</key>
 						<array>
@@ -117,7 +98,7 @@
 								<key>keyCode</key>
 								<integer>48</integer>
 								<key>keyModifiers</key>
-								<integer>131072</integer>
+								<integer>524576</integer>
 								<key>triggerType</key>
 								<string>VTHotkeyTrigger</string>
 							</dict>
@@ -315,7 +296,55 @@
 				<key>type</key>
 				<string>VTTriggerGroup</string>
 			</dict>
+      <dict>
+				<key>groupKey</key>
+				<string>VTGroupWindows</string>
+				<key>items</key>
+				<array>
+					<dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestMoveWindowLeft</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+					<dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestMoveWindowRight</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+          <dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestMoveWindowUp</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+          <dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestMoveWindowDown</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
+				</array>
+				<key>type</key>
+				<string>VTTriggerGroup</string>
+			</dict>
 		</array>
 	</dict>
-
 </plist>

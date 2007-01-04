@@ -50,7 +50,8 @@
 - (void) addInDesktops: (VTDesktop*) desktop; 
 - (void) insertObject: (VTDesktop*) desktop inDesktopsAtIndex: (unsigned int) index;
 - (void) removeObjectFromDesktopsAtIndex: (unsigned int) index;
-- (void) sendWindowUnderPointerBack;
+- (void) sendWindowUnderCursorBack;
+- (void) moveWindowUnderCursorToDesktop: (VTDesktop*) desktop;
 
 #pragma mark -
 - (BOOL) canAdd;

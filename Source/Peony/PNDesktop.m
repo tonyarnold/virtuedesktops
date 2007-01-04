@@ -390,10 +390,10 @@
 }
 
 /**
-* @brief Sends the window under point behind all windows on the desktop
+* @brief Sends the window under cursor behind all windows on the desktop
  *
  */
-- (void) sendWindowUnderPointerBack
+- (void) sendWindowUnderCursorBack
 {
   if (![self visible])
     return;
@@ -406,6 +406,28 @@
     return;
   
   [self orderWindowBack: wcpWindow];
+}
+
+#pragma mark -
+#pragma mark Moving windows
+
+/**
+* @brief Sends the window under the cursor to the specified desktop
+ *
+ */
+- (void) moveWindowUnderCursorToDesktop: (PNDesktop*) desktop
+{
+  if (![self visible])
+    return;
+  
+  NSPoint mouseLoc = [NSEvent mouseLocation];
+  NSSize screenSize = [[NSScreen mainScreen] frame].size;
+  mouseLoc.y = screenSize.height - mouseLoc.y;
+  PNWindow* wcpWindow = [self windowContainingPoint: mouseLoc];
+  if (!wcpWindow)
+    return;
+
+  [wcpWindow setDesktop: desktop];
 }
 
 

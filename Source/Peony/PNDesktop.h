@@ -146,7 +146,11 @@ enum
 - (void) moveAllWindowsToDesktop: (PNDesktop*) desktop;
 - (void) orderWindowFront: (PNWindow*) window;
 - (void) orderWindowBack: (PNWindow*) window;
-- (void) sendWindowUnderPointerBack;
+- (void) sendWindowUnderCursorBack;
+
+#pragma mark -
+#pragma mark Moving windows
+- (void) moveWindowUnderCursorToDesktop: (PNDesktop*) desktop;
 
 #pragma mark -
 #pragma mark Updating 

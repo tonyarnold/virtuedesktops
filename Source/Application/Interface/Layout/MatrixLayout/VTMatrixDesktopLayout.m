@@ -306,7 +306,6 @@
 
 - (void) setDraggable: (BOOL) flag {
 	mDraggable = flag;
-  NSLog(@"Draggable set to %i", flag);
 }
 
 #pragma mark -

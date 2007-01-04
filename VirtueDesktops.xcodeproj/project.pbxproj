@@ -48,6 +48,8 @@
 		EA4D9D620B2D9BEC009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
 		EA575BD00A9DE7720020F318 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65980A870299000D6B5E /* ApplicationServices.framework */; };
 		EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
+		EA662C230B4CDCD5000009EB /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */; };
+		EA662C240B4CDCD5000009EB /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */; };
 		EA7A56AA0A86A74E000D6B5E /* DECCgsExt.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546C0A86A623000D6B5E /* DECCgsExt.c */; };
 		EA7A56AB0A86A74E000D6B5E /* DECEvent.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546D0A86A623000D6B5E /* DECEvent.c */; };
 		EA7A56AC0A86A74E000D6B5E /* DECEventAlpha.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546E0A86A623000D6B5E /* DECEventAlpha.c */; };
@@ -273,8 +275,6 @@
 		EA7A63A80A86FDEA000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A63A90A86FDEA000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A63AB0A86FDEA000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
-		EA7A63EC0A86FE89000D6B5E /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */; };
-		EA7A63ED0A86FE89000D6B5E /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */; };
 		EA7A63EE0A86FE8F000D6B5E /* authtool in Resources */ = {isa = PBXBuildFile; fileRef = EA7A5B490A86B7C4000D6B5E /* authtool */; };
 		EA7A63F00A86FE9E000D6B5E /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA7A58160A86AD7B000D6B5E /* DockExtension.bundle */; };
 		EA7A63F30A86FED2000D6B5E /* iconVirtue.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56560A86A70C000D6B5E /* iconVirtue.icns */; };
@@ -3293,6 +3293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA662C230B4CDCD5000009EB /* DefaultDesktops.plist in Resources */,
+				EA662C240B4CDCD5000009EB /* DefaultHotkeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3465,8 +3467,6 @@
 				EA7A64170A870001000D6B5E /* imageCrossSmallPressed.tif in Resources */,
 				EA7A63EE0A86FE8F000D6B5E /* authtool in Resources */,
 				EA7A63F00A86FE9E000D6B5E /* DockExtension.bundle in Resources */,
-				EA7A63EC0A86FE89000D6B5E /* DefaultDesktops.plist in Resources */,
-				EA7A63ED0A86FE89000D6B5E /* DefaultHotkeys.plist in Resources */,
 				EA7A63F30A86FED2000D6B5E /* iconVirtue.icns in Resources */,
 				EA7A63F90A86FF08000D6B5E /* Operations.nib in Resources */,
 				EA7A63FC0A86FF15000D6B5E /* VTPreferences.nib in Resources */,

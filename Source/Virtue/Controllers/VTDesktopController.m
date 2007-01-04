@@ -244,8 +244,12 @@
 		[self createDefaultDesktops]; 
 }
 
-- (void) sendWindowUnderPointerBack {
-	[[self activeDesktop] sendWindowUnderPointerBack];
+- (void) sendWindowUnderCursorBack {
+	[[self activeDesktop] sendWindowUnderCursorBack];
+}
+
+- (void) moveWindowUnderCursorToDesktop: (VTDesktop*) desktop {
+	[[self activeDesktop] moveWindowUnderCursorToDesktop: desktop];
 }
 
 #pragma mark -
@@ -517,9 +521,13 @@
 @implementation VTDesktopController (Private) 
 
 - (void) createDefaultDesktops {
-	NSArray* defaultDesktops;
-	
-	defaultDesktops = [NSArray arrayWithObjects: @"Main", @"Mail", @"Browsing", @"Code", nil];
+	NSString* defaultDesktopsPath = [[NSBundle bundleForClass: [VTDesktopController class]] pathForResource: @"DefaultDesktops" ofType: @"plist"];
+  
+  NSArray* defaultDesktops = [NSArray arrayWithContentsOfFile: defaultDesktopsPath];
+  
+  if ([defaultDesktops count] < 1)
+    defaultDesktops = [NSArray arrayWithObjects: @"One.", @"Two.", @"Three.", nil];
+  
 	
 	// now iterate and create desktops 
 	NSEnumerator*	desktopNameIter	= [defaultDesktops objectEnumerator]; 

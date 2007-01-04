@@ -592,7 +592,23 @@ enum
 }
 
 - (void) onSendWindowBack: (NSNotification*) notification {
-	[[VTDesktopController sharedInstance] sendWindowUnderPointerBack];
+	[[VTDesktopController sharedInstance] sendWindowUnderCursorBack];
+}
+
+- (void) onSendWindowLeft: (NSNotification*) notification {
+  [[VTDesktopController sharedInstance] moveWindowUnderCursorToDesktop: [[VTDesktopController sharedInstance] getDesktopInDirection: kVtDirectionWest]];
+}
+
+- (void) onSendWindowRight: (NSNotification*) notification {
+  [[VTDesktopController sharedInstance] moveWindowUnderCursorToDesktop: [[VTDesktopController sharedInstance] getDesktopInDirection: kVtDirectionEast]];
+}
+
+- (void) onSendWindowUp: (NSNotification*) notification {
+  [[VTDesktopController sharedInstance] moveWindowUnderCursorToDesktop: [[VTDesktopController sharedInstance] getDesktopInDirection: kVtDirectionNorth]];
+}
+
+- (void) onSendWindowDown: (NSNotification*) notification {
+  [[VTDesktopController sharedInstance] moveWindowUnderCursorToDesktop: [[VTDesktopController sharedInstance] getDesktopInDirection: kVtDirectionSouth]];
 }
 
 #pragma mark -
@@ -706,6 +722,10 @@ enum
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktopWest:) name: VTRequestChangeDesktopToWestName object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSwitchToDesktop:) name: VTRequestChangeDesktopName object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSendWindowBack:) name: VTRequestSendWindowBackName object: nil];
+  [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSendWindowLeft:) name: VTRequestMoveWindowLeft object: nil];
+  [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSendWindowRight:) name: VTRequestMoveWindowRight object: nil];
+  [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSendWindowUp:) name: VTRequestMoveWindowUp object: nil];
+  [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onSendWindowDown:) name: VTRequestMoveWindowDown object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPager:) name: VTRequestShowPagerName object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPagerSticky:) name: VTRequestShowPagerAndStickName object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowOperations:) name: VTRequestDisplayOverlayName object: nil];

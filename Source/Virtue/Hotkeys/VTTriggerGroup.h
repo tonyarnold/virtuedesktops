@@ -19,6 +19,7 @@
 #define VTTriggerGroupNavigationName    @"VTGroupNavigation"
 #define VTTriggerGroupDesktopsName      @"VTGroupDesktops"
 #define VTTriggerGroupInspectionName    @"VTGroupInspection"
+#define VTTriggerGroupWindowsName       @"VTGroupWindows"
 
 #pragma mark -
 @interface VTTriggerGroup : NSObject<VTCoding> {

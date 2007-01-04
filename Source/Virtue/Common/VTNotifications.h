@@ -15,10 +15,10 @@
 #pragma mark Internal 
 
 // Notification that a hotkey was pressed 
-#define kVtNotificationOnKeyPress		@"VT_NOTIFICATION_KEY_PRESS"
+#define kVtNotificationOnKeyPress       @"VT_NOTIFICATION_KEY_PRESS"
 
 // Notification that a hotkey was registered 
-#define kVtNotificationWasRegistered	@"VT_NOTIFICATION_REGISTERED" 
+#define kVtNotificationWasRegistered    @"VT_NOTIFICATION_REGISTERED" 
 // Notification that a hotkey was unregistered 
 #define kVtNotificationWasUnregistered	@"VT_NOTIFICATION_UNREGISTERED"
 
@@ -79,6 +79,12 @@
 
 // Request to send window behind other windows
 #define VTRequestSendWindowBackName         @"VTRequestSendWindowBack"
+
+// Move windows to desktops
+#define VTRequestMoveWindowLeft             @"VTRequestMoveWindowLeft"
+#define VTRequestMoveWindowRight            @"VTRequestMoveWindowRight"
+#define VTRequestMoveWindowUp               @"VTRequestMoveWindowUp"
+#define VTRequestMoveWindowDown             @"VTRequestMoveWindowDown"
 
 #pragma mark -
 #pragma mark Window open Requests 
