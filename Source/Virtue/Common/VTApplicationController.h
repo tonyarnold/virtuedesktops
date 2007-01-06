@@ -17,18 +17,22 @@
 #import "VTApplicationWrapper.h" 
 
 @interface VTApplicationController : NSObject<VTCoding> {
-	NSMutableDictionary*	mApplications; 
+	NSMutableDictionary *mApplications; 
 }
 
-+ (VTApplicationController*) sharedInstance; 
++ (VTApplicationController *) sharedInstance; 
 - (void) scanApplications; 
 
-- (NSArray*) applications; 
-- (VTApplicationWrapper*) applicationForPath: (NSString*) bundleId; 
+- (NSArray *) applications; 
+- (VTApplicationWrapper *) applicationForPath: (NSString *) path; 
 
-- (void) attachApplication: (VTApplicationWrapper*) wrapper; 
-- (void) detachApplication: (VTApplicationWrapper*) wrapper; 
+- (void) attachApplication: (VTApplicationWrapper *) wrapper; 
+- (void) detachApplication: (VTApplicationWrapper *) wrapper; 
 
-- (BOOL)appRunningWithBundleIdentifier:(NSString *)bundleIdentifier;
+- (BOOL)appRunningWithBundleIdentifier: (NSString *)bundleIdentifier;
+
+
+- (void) onApplicationAttachedLocal: (NSString *) bundlePath;
+- (void) onApplicationDetachedLocal: (NSString *) bundlePath;
 
 @end

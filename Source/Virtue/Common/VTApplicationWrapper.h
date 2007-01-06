@@ -20,15 +20,16 @@
   NSString* mBundleId;
 	
 	// running applications 
-	pid_t		mPid; 
+	pid_t     mPid; 
 	// general 
-	NSString*	mTitle; 
-	NSImage*	mImage; 
+	NSString*   mTitle; 
+	NSImage*    mImage; 
 	VTDesktop*	mDesktop; 
 	BOOL		mSticky; 
 	BOOL		mHidden; 
 	BOOL		mBindDesktop;
   BOOL		mUnfocused;
+  BOOL    mLaunching;
 	
 	NSMutableArray*	mApplications; 
 }
@@ -67,11 +68,16 @@
 - (NSString*) title; 
 
 #pragma mark -
-- (BOOL) isRunning; 
+- (pid_t) processIdentifier;
+- (BOOL) isRunning;
+- (BOOL) canBeRemoved;
 
 #pragma mark -
 - (NSString*) bundlePath; 
 - (NSString*) bundleId;
+
+#pragma mark -
+- (BOOL) hasCustomizedSettings;
 
 #pragma mark -
 #pragma mark Notification delegate 

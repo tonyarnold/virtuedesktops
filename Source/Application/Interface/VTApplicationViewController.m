@@ -122,7 +122,7 @@
 - (IBAction) removeApplication: (id) sender {
 	VTApplicationWrapper* application = [self selectedApplication]; 
 	
-	if (application == nil)
+	if (application == nil || [application canBeRemoved] == NO)
 		return; 
 	
 	[[VTApplicationController sharedInstance] detachApplication: application]; 

@@ -182,6 +182,9 @@
 		// and move all of our windows to the bound desktop 
 		[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
 	}
+  
+  if (mLaunching = NO)
+    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isSticky {
@@ -201,6 +204,9 @@
 	while (application = [applicationIter nextObject]) {
 		[application setIsHidden: flag]; 
 	}	
+  
+  if (mLaunching = NO)
+    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isHidden {
@@ -221,6 +227,9 @@
 	while (application = [applicationIter nextObject]) {
 		[application setUnfocused: flag]; 
 	}
+  
+  if (mLaunching = NO)
+    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isUnfocused {
@@ -237,6 +246,9 @@
   ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] activeDesktop]);
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];	
+
+  if (mLaunching = NO)
+    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isBindingToDesktop {
@@ -251,7 +263,6 @@
   
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
-	
 }
 
 - (VTDesktop*) boundDesktop {
@@ -259,7 +270,7 @@
 }
 
 - (NSImage*) icon {
-  if ([self isRunning] == NO && mImage != nil)
+  if ([self canBeRemoved] && mImage != nil)
   {
     NSImage* fadedImage = [[NSImage alloc] initWithSize: [mImage size]];
     [fadedImage lockFocus];
@@ -267,7 +278,10 @@
     [mImage dissolveToPoint: NSZeroPoint fraction: 0.4];
     [fadedImage unlockFocus];
     return fadedImage;
-  } 
+  }
+  
+  // Ensure our image is drawing right side up
+  [mImage setFlipped: NO];
   
   return mImage;
 }
@@ -308,16 +322,53 @@
 	return mTitle; 
 }
 
-- (BOOL) isRunning {
-	return (mPid != 0); 
+#pragma mark -
+
+- (pid_t) processIdentifier
+{   
+  NSArray       *allApps = [[NSWorkspace sharedWorkspace] launchedApplications];
+  NSEnumerator  *enumerator = [allApps objectEnumerator];
+  NSDictionary  *app;
+  while (app = [enumerator nextObject]) {
+    if ([[app objectForKey:@"NSApplicationPath"] isEqualToString: [self bundlePath]])
+    {
+      return (pid_t)[[app objectForKey:@"NSApplicationProcessIdentifier"] intValue];
+    }    
+  }
+  return 0;
 }
 
-- (NSString*) bundlePath {
+- (BOOL) isRunning
+{
+	return ([self processIdentifier] != 0); 
+}
+
+- (BOOL) canBeRemoved
+{
+  return ([self isRunning] == NO) && ([[self windows] count] == 0);
+}
+
+#pragma mark -
+
+- (NSString*) bundlePath
+{
 	return mBundlePath; 
 }
 
-- (NSString*) bundleId {
+- (NSString*) bundleId
+{
 	return mBundleId; 
+}
+
+
+#pragma mark -
+
+- (BOOL) hasCustomizedSettings
+{
+  if ([self isSticky] || [self isHidden] || [self isBindingToDesktop] || [self isUnfocused])
+    return YES;
+  
+  return NO;
 }
 
 
@@ -437,6 +488,7 @@
 	// clean array 
 	[mApplications removeAllObjects]; 
   
+  mLaunching = YES;
 	// Walk the desktops to find an application matching our bundle 
 	NSEnumerator *desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	VTDesktop    *desktop     = nil;
@@ -463,7 +515,7 @@
 			}
 		}
 	}
-	
+
 	if ([mApplications count] > 0) {
 		PNApplication *application = [[mApplications objectAtIndex: 0] retain];
     
@@ -497,6 +549,7 @@
     ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
     ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
   }
+  mLaunching = NO;
 }
 
 @end 

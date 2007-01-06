@@ -108,3 +108,8 @@
 #pragma mark -
 #define VTDesktopWillRemoveNotification	@"VTDesktopWillRemoveNotification"
 #define VTDesktopDidRemoveNotification	@"VTDesktopDidRemoveNotification"
+
+#pragma mark -
+#pragma mark Application Wrapper Events
+#define kVtNotificationApplicationWrapperOptionsChanged @"kVtNotificationApplicationWrapperOptionsChanged"
+

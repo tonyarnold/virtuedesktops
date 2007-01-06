@@ -101,10 +101,10 @@
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-	mName			= [[dictionary objectForKey: kVtCodingName] copy]; 
-	mPosition		= NSPointFromString([dictionary objectForKey: kVtCodingPosition]); 
+	mName         = [[dictionary objectForKey: kVtCodingName] copy]; 
+	mPosition     = NSPointFromString([dictionary objectForKey: kVtCodingPosition]); 
 	mPositionType	= [[dictionary objectForKey: kVtCodingPositionType] intValue]; 
-	mEnabled		= [[dictionary objectForKey: kVtCodingEnabled] boolValue]; 
+	mEnabled      = [[dictionary objectForKey: kVtCodingEnabled] boolValue]; 
 	
 	return self; 
 }

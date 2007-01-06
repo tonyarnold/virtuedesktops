@@ -21,13 +21,12 @@
 {
 	if (self = [super init])
   {
-		mPid			= pid;
-		mDesktop	= [desktop retain]; 
-		mWindows	= [[NSMutableArray array] retain]; 
-		
-		mName			= nil; 
-		mIcon			= [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
-    mBundleId = nil;
+		mPid        = pid;
+		mDesktop    = [desktop retain]; 
+		mWindows    = [[NSMutableArray array] retain]; 
+		mName       = nil; 
+		mIcon       = [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
+    mBundleId   = nil;
 		mBundlePath	= nil; 
 		
 		mIsSticky	= NO; 
@@ -40,7 +39,6 @@
 			[self autorelease]; 
 			return nil; 
 		}
-    
 		
 		// Create psn out of the pid
 		OSStatus oResult = GetProcessForPID(mPid, &mPsn); 
@@ -53,6 +51,8 @@
 			[self autorelease]; 
 			return nil;
 		}
+    
+    
 	}
 	
 	return nil; 
