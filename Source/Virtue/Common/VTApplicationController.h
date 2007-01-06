@@ -24,9 +24,11 @@
 - (void) scanApplications; 
 
 - (NSArray*) applications; 
-- (VTApplicationWrapper*) applicationForBundleId: (NSString*) bundleId; 
+- (VTApplicationWrapper*) applicationForPath: (NSString*) bundleId; 
 
 - (void) attachApplication: (VTApplicationWrapper*) wrapper; 
 - (void) detachApplication: (VTApplicationWrapper*) wrapper; 
+
+- (BOOL)appRunningWithBundleIdentifier:(NSString *)bundleIdentifier;
 
 @end

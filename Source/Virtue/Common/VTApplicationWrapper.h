@@ -16,6 +16,7 @@
 #import "VTDesktop.h" 
 
 @interface VTApplicationWrapper : NSObject<VTCoding> {
+  NSString* mBundlePath;
   NSString* mBundleId;
 	
 	// running applications 
@@ -36,6 +37,7 @@
 #pragma mark Lifetime 
 - (id) init; 
 - (id) initWithBundleId: (NSString*) bundleId;
+- (id) initWithPath: (NSString*) path;
 - (void) dealloc; 
 
 #pragma mark -

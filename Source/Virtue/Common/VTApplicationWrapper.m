@@ -17,7 +17,7 @@
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 
 
-#define kVtCodingBundle         @"bundle"
+#define kVtCodingBundlePath     @"path"
 #define kVtCodingBundleId       @"id"
 #define kVtCodingSticky         @"sticky"
 #define kVtCodingHidden         @"hidden"
@@ -43,6 +43,7 @@
 		mSticky       = NO; 
 		mBindDesktop	= NO;
     mUnfocused		= NO;
+    mBundlePath   = nil;
 				
 		// and register our interest in desktop collection changes 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillRemove:) name: VTDesktopWillRemoveNotification object: nil]; 
@@ -57,12 +58,45 @@
 	if (self = [self init]) {
 		if (bundleId == nil) {
 			[self autorelease]; 
-      
 			return nil; 
 		}
 		
 		ZEN_ASSIGN(mBundleId, bundleId);
+    ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: mBundleId]);
 		
+		// and complete initialization by filling the application array 
+		[self createApplications];
+		
+		return self; 
+	}
+	
+	return nil; 
+}
+
+- (id) initWithPath: (NSString*) path {
+	if (self = [self init]) {
+		if (path == nil) {
+			[self autorelease]; 
+			return nil; 
+		}
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath: path])
+    {
+      // We have an application path, so assign and continue
+      ZEN_ASSIGN(mBundlePath, path);
+    }
+    else
+    {
+      ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] fullPathForApplication: [path lastPathComponent]]);
+      if (mBundlePath == nil)
+      {
+        [self autorelease];
+        return nil;
+      }
+    }
+    
+    ZEN_ASSIGN_COPY(mBundleId, [[NSBundle bundleWithPath: path] objectForInfoDictionaryKey: @"CFBundleIdentifier"]);
+		    
 		// and complete initialization by filling the application array 
 		[self createApplications];
 		
@@ -89,6 +123,7 @@
 #pragma mark Coding 
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
+  [dictionary setObject: mBundlePath forKey: kVtCodingBundlePath];
   [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
 	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
@@ -99,6 +134,8 @@
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
+  // We use the path as the UID, so ensure precendence
+  mBundlePath   = [[dictionary objectForKey: kVtCodingBundlePath] retain];
 	// decode primitives 
   mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
 	mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
@@ -193,7 +230,7 @@
 #pragma mark -
 - (void) setBindingToDesktop: (BOOL) flag {
 	mBindDesktop = flag;
-  	
+  
 	if ((mBindDesktop == NO) || (mUnfocused == YES) || (mSticky == YES))
 		return; 
   
@@ -211,7 +248,7 @@
 	
 	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES) || (mUnfocused == YES))
 		return; 
-    
+  
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
 	
@@ -244,7 +281,7 @@
 		PNApplication* firstInstance = [mApplications objectAtIndex: 0]; 
 		if (firstInstance == nil)
 			return nil; 
-	
+    
 		return [firstInstance windows]; 
 	}
 	
@@ -276,7 +313,7 @@
 }
 
 - (NSString*) bundlePath {
-	return [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: [self bundleId]]; 
+	return mBundlePath; 
 }
 
 - (NSString*) bundleId {
@@ -293,7 +330,7 @@
 	// check validity of this application 
 	if (([application name] == nil) || [[application name] isEqualToString: @""]) 
 		return; 
-	if (([application icon] == nil) || ([application bundlePath] == nil) || ([application bundleId] == nil)) 
+	if (([application icon] == nil) || ([application bundlePath] == nil)) 
 		return; 
 	
 	// check if we already know about this instance 
@@ -305,10 +342,11 @@
 	if (mPid == 0) {
 		[self willChangeValueForKey: @"running"]; 
 		
-		mPid	= [application pid]; 
-		ZEN_ASSIGN(mImage, ([application icon])); 
-		ZEN_ASSIGN_COPY(mTitle, ([application name]));
-    ZEN_ASSIGN_COPY(mBundleId, ([application bundleId]));
+		mPid	= [application pid];
+    ZEN_ASSIGN_COPY(mBundlePath, [application bundlePath]);
+    ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
+    ZEN_ASSIGN_COPY(mTitle, [application name]);
+		ZEN_ASSIGN(mImage, [application icon]);     
 				
 		[self didChangeValueForKey: @"running"]; 
 	}
@@ -360,13 +398,13 @@
 	// check if we need this desktop, and if we do, reset ourselves. 
 	if ([notification object] != mDesktop)
 		return; 
-
+  
 	[self willChangeValueForKey: @"boundDesktop"]; 
 	[self willChangeValueForKey: @"bindingToDesktop"]; 
 	
 	ZEN_RELEASE(mDesktop); 
 	mBindDesktop = NO; 
-
+  
 	[self didChangeValueForKey: @"bindingToDesktop"]; 
 	[self didChangeValueForKey: @"boundDesktop"]; 
 }
@@ -378,7 +416,7 @@
 	if ([keyPath isEqualToString: @"windows"]) {
 		// note change of our windows path
 		[self willChangeValueForKey: @"windows"];
-    		
+    
 		// iterate all windows and move them if necessary 
 		if ((mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
@@ -398,15 +436,15 @@
 - (void) createApplications {
 	// clean array 
 	[mApplications removeAllObjects]; 
-	
-	// walk the desktops to find us an application matching our bundle 
-	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
-	VTDesktop*		desktop		= nil;
+  
+	// Walk the desktops to find an application matching our bundle 
+	NSEnumerator *desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
+	VTDesktop    *desktop     = nil;
   
   while (desktop = [desktopIter nextObject]) {
 		// walk all applications to find our bundle string 
-		NSEnumerator*   applicationIter	= [[desktop applications] objectEnumerator]; 
-		PNApplication*	application		= nil; 
+		NSEnumerator    *applicationIter	= [[desktop applications] objectEnumerator]; 
+		PNApplication   *application		= nil; 
 		
 		while (application = [applicationIter nextObject]) {
 			if ([application bundlePath] && [[application bundlePath] isEqualToString: [self bundlePath]]) {
@@ -427,14 +465,16 @@
 	}
 	
 	if ([mApplications count] > 0) {
-		PNApplication* application = [[mApplications objectAtIndex: 0] retain]; 
+		PNApplication *application = [[mApplications objectAtIndex: 0] retain];
+    
 		if (application == nil)
 			return; 
 		
 		mPid = [application pid]; 
 		
-		ZEN_ASSIGN_COPY(mTitle, [application name]);
+    ZEN_ASSIGN_COPY(mBundlePath, [application bundlePath]);
     ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
+		ZEN_ASSIGN_COPY(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);
 		
 		[application release]; 
@@ -448,14 +488,14 @@
 	}
 	
 	// if the application is not running, we fetch the information from the bundle itself (if it exists)
-	mPid = 0; 
+	mPid = 0;
   
   if ([[NSFileManager defaultManager] fileExistsAtPath: [self bundlePath]]) 
   {
-    NSBundle* bundle = [NSBundle bundleWithPath: [self bundlePath]];
-    ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
-    ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+    NSBundle *bundle = [NSBundle bundleWithPath: [self bundlePath]];
     ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
+    ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+    ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
   }
 }
 

@@ -109,7 +109,9 @@
 			break; 
     
     if ([[NSFileManager defaultManager] fileExistsAtPath: [newWrapper bundlePath]] == NO)
+    {  
       break;
+    }
 		
 		// and add it 
 		[self attachApplication: newWrapper]; 
@@ -124,35 +126,36 @@
 	return [mApplications allValues]; 
 }
 
-- (VTApplicationWrapper*) applicationForBundleId: (NSString*) bundleId {
-	return [mApplications objectForKey: bundleId]; 
+- (VTApplicationWrapper*) applicationForPath: (NSString*) bundlePath
+{
+  return [mApplications objectForKey: bundlePath];
 }
 
 
 #pragma mark -
 - (void) attachApplication: (VTApplicationWrapper*) wrapper {
 	[self willChangeValueForKey: @"applications"]; 
-	[mApplications setObject: wrapper forKey: [wrapper bundleId]]; 
+	[mApplications setObject: wrapper forKey: [wrapper bundlePath]]; 
 	[self didChangeValueForKey: @"applications"]; 	
 }
 
 - (void) detachApplication: (VTApplicationWrapper*) wrapper {
 	[self willChangeValueForKey: @"applications"]; 	
-	[mApplications removeObjectForKey: [wrapper bundleId]]; 
+	[mApplications removeObjectForKey: [wrapper bundlePath]]; 
 	[self didChangeValueForKey: @"applications"]; 
 }
 
 #pragma mark -
 #pragma mark Notification sink 
 - (void) onApplicationAttached: (NSNotification*) notification {
-	NSString* bundleId = [notification object]; 
+	NSString* bundlePath = [notification object]; 
 	
 	// return nil Ids 
-	if (bundleId == nil) 
+	if (bundlePath == nil)
 		return; 
 	
 	// if we know about this application already, delegate to the wrapper 
-	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundleId]; 
+	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundlePath]; 
 	
 	if (wrapper != nil) {
 		[wrapper onApplicationAttached: notification]; 
@@ -160,7 +163,7 @@
 	}
 	
 	// otherwise create a new wrapper 
-	wrapper = [[[VTApplicationWrapper alloc] initWithBundleId: bundleId] autorelease];
+	wrapper = [[[VTApplicationWrapper alloc] initWithPath: bundlePath] autorelease];
 	if (wrapper == nil) 
 		return; 
 	
@@ -168,14 +171,14 @@
 }
 
 - (void) onApplicationDetached: (NSNotification*) notification {
-	NSString* bundleId = [notification object]; 
+	NSString* bundlePath = [notification object]; 
 	
 	// ignore nil paths 
-	if (bundleId == nil) 
+	if (bundlePath == nil) 
 		return; 
 	
 	// if we know about this application, let it know of the notification 
-	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundleId]; 
+	VTApplicationWrapper* wrapper = [mApplications objectForKey: bundlePath]; 
 	if (wrapper == nil)
 		return; 
 	
@@ -194,13 +197,30 @@
 	[self detachApplication: wrapper]; 
 }
 
+- (BOOL)appRunningWithBundleIdentifier:(NSString *)bundleIdentifier
+{
+  BOOL result = NO;
+  
+  NSArray       *allApps = [[NSWorkspace sharedWorkspace] launchedApplications];
+  NSEnumerator  *enumerator = [allApps objectEnumerator];
+  NSDictionary  *app;
+  while (app = [enumerator nextObject]) {
+    if ([[app objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString: bundleIdentifier])
+    {
+      result = YES;
+      break;
+    }    
+  }
+  return result;
+}
+
 @end
 
 #pragma mark -
 @implementation VTApplicationController (Content) 
 
 - (void) createApplications {
-	// walk all desktops and collect applications 
+	// walk all desktops and collect applications
 	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator];
 	VTDesktop*		desktop		= nil; 
 	
@@ -209,22 +229,22 @@
 		PNApplication*	application		= nil; 
 		
 		while (application = [applicationIter nextObject]) {
-			if ([application bundleId] == nil)
-				continue; 
-			
-			if ([mApplications objectForKey: [application bundleId]] != nil)
-				break; 
+      
+      if ([application bundlePath] == nil)
+				continue;
 			
 			// create a new wrapper and add it 
-			VTApplicationWrapper* wrapper = [[VTApplicationWrapper alloc] initWithBundleId: [application bundleId]];
+			VTApplicationWrapper* wrapper = [[VTApplicationWrapper alloc] initWithPath: [application bundlePath]];
 			
 			if (wrapper == nil) 
 				continue;
 			
-			[mApplications setObject: wrapper forKey: [application bundleId]]; 
+			[mApplications setObject: wrapper forKey: [application bundlePath]]; 
 			[wrapper release]; 
 		}
 	}
+  
+  
 }
 
 @end 

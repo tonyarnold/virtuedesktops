@@ -807,7 +807,7 @@
 {
 	if (application == nil)
 		return;
-	if ([application bundleId] == nil)
+	if ([application bundlePath] == nil)
 		return;
   
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -818,14 +818,14 @@
 	[mApplications removeObjectForKey: [NSNumber numberWithInt: [application pid]]];
   
 	// and post notification
-	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application bundleId] userInfo: userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application bundlePath] userInfo: userInfo];
 }
 
 - (void) attachApplication: (PNApplication*) application 
 {
 	if (application == nil)
 		return;
-	if ([application bundleId] == nil)
+	if ([application bundlePath] == nil)
 		return;
   
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
@@ -833,7 +833,7 @@
 	[mApplications setObject: application forKey: [NSNumber numberWithInt: [application pid]]];
 	
 	// and post notification
-	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasAdded object: [application bundleId] userInfo: userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasAdded object: [application bundlePath] userInfo: userInfo];
 }
 
 @end

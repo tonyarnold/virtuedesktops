@@ -267,7 +267,7 @@
 		if (application) {
 			// the application 
 			mRepresentedApplication = [application retain]; 
-			mRepresentedWrapper		= [[[VTApplicationController sharedInstance] applicationForBundleId: [application bundleId]] retain]; 
+			mRepresentedWrapper		= [[[VTApplicationController sharedInstance] applicationForPath: [application bundlePath]] retain]; 
 		}
 	}
 	

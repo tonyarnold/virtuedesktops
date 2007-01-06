@@ -16,7 +16,7 @@
 @implementation PNApplication
 
 #pragma mark -
-#pragma mark Lifetime 
+#pragma mark Lifetime
 - (id) initWithPid: (pid_t) pid onDesktop: (PNDesktop*) desktop 
 {
 	if (self = [super init])
@@ -270,8 +270,7 @@
 	// get the path
 	mBundlePath = [[NSString stringWithCString: string] retain];
 	
-	return mBundlePath; 
-	
+	return mBundlePath;
 }
 
 #pragma mark -
