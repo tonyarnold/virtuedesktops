@@ -38,7 +38,6 @@
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopDidActivate:) name: kPnOnDesktopDidActivate object: nil]; 		
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowUnstickied:) name: kPnOnWindowUnstickied object: nil];
-		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowStickied:) name: kPnOnWindowStickied object: nil]; 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onApplicationStickied:) name: kPnOnApplicationStickied object: nil];
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onApplicationUnstickied:) name: kPnOnApplicationUnstickied object: nil];
 		
@@ -106,6 +105,8 @@
 {
 	// fetch the windows that were just stickied and add them to our list 
 	[mWindows addWindows: [aNotification object]];
+  
+  // Ideally, we'd also move the windows affected to the current desktop as well
 }
 
 - (void) onApplicationUnstickied: (NSNotification*) aNotification
