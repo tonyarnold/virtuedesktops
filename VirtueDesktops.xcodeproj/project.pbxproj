@@ -1318,7 +1318,7 @@
 		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
-		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VirtueDesktops-Info.plist"; sourceTree = "<group>"; };
 		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
@@ -4364,7 +4364,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA5D5FE80AECB2EE002B9A3C /* Release */ = {
+		EA5D5FE80AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4376,9 +4376,9 @@
 				PRODUCT_NAME = DockCommunicator;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FE90AECB2EE002B9A3C /* Release */ = {
+		EA5D5FE90AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -4403,9 +4403,9 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FEA0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FEA0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4427,9 +4427,9 @@
 				PRODUCT_NAME = Zen;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FEB0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FEB0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4451,9 +4451,9 @@
 				PRODUCT_NAME = Peony;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FEC0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FEC0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4477,9 +4477,9 @@
 				PRODUCT_NAME = Virtue;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FED0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FED0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4496,9 +4496,9 @@
 				PRODUCT_NAME = authtool;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FEE0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FEE0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4522,9 +4522,9 @@
 				PRODUCT_NAME = VTInterface;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FEF0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FEF0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4546,9 +4546,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF00AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF00AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4570,9 +4570,9 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF10AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF10AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4594,9 +4594,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF20AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF20AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4618,9 +4618,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF30AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF30AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4642,9 +4642,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF40AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF40AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4666,9 +4666,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF50AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF50AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4690,9 +4690,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF60AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF60AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4714,9 +4714,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF80AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF80AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4740,9 +4740,9 @@
 				PRODUCT_NAME = TAUserInterfaceElements;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FF90AECB2EE002B9A3C /* Release */ = {
+		EA5D5FF90AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4767,9 +4767,9 @@
 				WRAPPER_EXTENSION = palette;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FFA0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FFA0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4786,7 +4786,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_5 = "\"$(SRCROOT)/build/Release\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_6 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4811,17 +4810,21 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
-		EA5D5FFB0AECB2EE002B9A3C /* Release */ = {
+		EA5D5FFB0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
 				COPY_PHASE_STRIP = YES;
+				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_OBJC_GC = NO;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = Release;
+			name = "Platform-specific release";
 		};
 		EA7A56A60A86A739000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4839,7 +4842,7 @@
 			};
 			name = Debug;
 		};
-		EA7A56A70A86A739000D6B5E /* Release (Universal Binary) */ = {
+		EA7A56A70A86A739000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4851,7 +4854,7 @@
 				PRODUCT_NAME = DockCommunicator;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A58190A86AD7C000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4882,7 +4885,7 @@
 			};
 			name = Debug;
 		};
-		EA7A581A0A86AD7C000D6B5E /* Release (Universal Binary) */ = {
+		EA7A581A0A86AD7C000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -4907,7 +4910,7 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A58FB0A86B076000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4935,7 +4938,7 @@
 			};
 			name = Debug;
 		};
-		EA7A58FC0A86B076000D6B5E /* Release (Universal Binary) */ = {
+		EA7A58FC0A86B076000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -4957,7 +4960,7 @@
 				PRODUCT_NAME = Zen;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A59590A86B4D4000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4985,7 +4988,7 @@
 			};
 			name = Debug;
 		};
-		EA7A595A0A86B4D4000D6B5E /* Release (Universal Binary) */ = {
+		EA7A595A0A86B4D4000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5007,7 +5010,7 @@
 				PRODUCT_NAME = Peony;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A5A290A86B5E6000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5031,7 +5034,7 @@
 			};
 			name = Debug;
 		};
-		EA7A5A2A0A86B5E6000D6B5E /* Release (Universal Binary) */ = {
+		EA7A5A2A0A86B5E6000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5055,7 +5058,7 @@
 				PRODUCT_NAME = Virtue;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A5B550A86B7E5000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5078,7 +5081,7 @@
 			};
 			name = Debug;
 		};
-		EA7A5B560A86B7E5000D6B5E /* Release (Universal Binary) */ = {
+		EA7A5B560A86B7E5000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5095,7 +5098,7 @@
 				PRODUCT_NAME = authtool;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A5B660A86B809000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5120,7 +5123,7 @@
 			};
 			name = Debug;
 		};
-		EA7A5B670A86B809000D6B5E /* Release (Universal Binary) */ = {
+		EA7A5B670A86B809000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5144,7 +5147,7 @@
 				PRODUCT_NAME = VTInterface;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A617C0A86F366000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5167,7 +5170,7 @@
 			};
 			name = Debug;
 		};
-		EA7A617D0A86F366000D6B5E /* Release (Universal Binary) */ = {
+		EA7A617D0A86F366000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5189,7 +5192,7 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A62270A86F5C8000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5217,7 +5220,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62280A86F5C8000D6B5E /* Release (Universal Binary) */ = {
+		EA7A62280A86F5C8000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5239,7 +5242,7 @@
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A62630A86F7AB000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5267,7 +5270,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62640A86F7AB000D6B5E /* Release (Universal Binary) */ = {
+		EA7A62640A86F7AB000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5289,7 +5292,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A62B10A86F8D7000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5317,7 +5320,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62B20A86F8D7000D6B5E /* Release (Universal Binary) */ = {
+		EA7A62B20A86F8D7000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5339,7 +5342,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A62DB0A86F9AF000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5367,7 +5370,7 @@
 			};
 			name = Debug;
 		};
-		EA7A62DC0A86F9AF000D6B5E /* Release (Universal Binary) */ = {
+		EA7A62DC0A86F9AF000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5389,7 +5392,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A63390A86FB4F000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5417,7 +5420,7 @@
 			};
 			name = Debug;
 		};
-		EA7A633A0A86FB4F000D6B5E /* Release (Universal Binary) */ = {
+		EA7A633A0A86FB4F000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5439,7 +5442,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A635F0A86FC59000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5467,7 +5470,7 @@
 			};
 			name = Debug;
 		};
-		EA7A63600A86FC59000D6B5E /* Release (Universal Binary) */ = {
+		EA7A63600A86FC59000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5489,7 +5492,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A63860A86FD3D000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5517,7 +5520,7 @@
 			};
 			name = Debug;
 		};
-		EA7A63870A86FD3D000D6B5E /* Release (Universal Binary) */ = {
+		EA7A63870A86FD3D000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5539,7 +5542,7 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EA7A63E40A86FE65000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5559,7 +5562,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_5 = "\"$(SRCROOT)/build/Release\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_6 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -5587,7 +5589,7 @@
 			};
 			name = Debug;
 		};
-		EA7A63E50A86FE65000D6B5E /* Release (Universal Binary) */ = {
+		EA7A63E50A86FE65000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5604,7 +5606,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/Shared\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_4 = "\"$(SRCROOT)/Shared/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_5 = "\"$(SRCROOT)/build/Release\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_6 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -5629,17 +5630,22 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EAA9266F0A86A4E800D4674B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
-		EAA926700A86A4E800D4674B /* Release (Universal Binary) */ = {
+		EAA926700A86A4E800D4674B /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
@@ -5647,10 +5653,14 @@
 					i386,
 				);
 				COPY_PHASE_STRIP = YES;
+				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_OBJC_GC = NO;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EAC00E280AD1065D00389BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5667,7 +5677,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "Property lists/TAUserInterfaceElements-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks/";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -5680,7 +5690,7 @@
 			};
 			name = Debug;
 		};
-		EAC00E290AD1065D00389BDB /* Release (Universal Binary) */ = {
+		EAC00E290AD1065D00389BDB /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5704,7 +5714,7 @@
 				PRODUCT_NAME = TAUserInterfaceElements;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 		EAC013A10AD10BA500389BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5733,7 +5743,7 @@
 			};
 			name = Debug;
 		};
-		EAC013A20AD10BA500389BDB /* Release (Universal Binary) */ = {
+		EAC013A20AD10BA500389BDB /* Universal release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -5758,7 +5768,7 @@
 				WRAPPER_EXTENSION = palette;
 				ZERO_LINK = NO;
 			};
-			name = "Release (Universal Binary)";
+			name = "Universal release";
 		};
 /* End XCBuildConfiguration section */
 
@@ -5767,191 +5777,191 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A56A60A86A739000D6B5E /* Debug */,
-				EA7A56A70A86A739000D6B5E /* Release (Universal Binary) */,
-				EA5D5FE80AECB2EE002B9A3C /* Release */,
+				EA7A56A70A86A739000D6B5E /* Universal release */,
+				EA5D5FE80AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A58180A86AD7C000D6B5E /* Build configuration list for PBXNativeTarget "DockExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A58190A86AD7C000D6B5E /* Debug */,
-				EA7A581A0A86AD7C000D6B5E /* Release (Universal Binary) */,
-				EA5D5FE90AECB2EE002B9A3C /* Release */,
+				EA7A581A0A86AD7C000D6B5E /* Universal release */,
+				EA5D5FE90AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A58FA0A86B076000D6B5E /* Build configuration list for PBXNativeTarget "Zen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A58FB0A86B076000D6B5E /* Debug */,
-				EA7A58FC0A86B076000D6B5E /* Release (Universal Binary) */,
-				EA5D5FEA0AECB2EE002B9A3C /* Release */,
+				EA7A58FC0A86B076000D6B5E /* Universal release */,
+				EA5D5FEA0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A59580A86B4D4000D6B5E /* Build configuration list for PBXNativeTarget "Peony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A59590A86B4D4000D6B5E /* Debug */,
-				EA7A595A0A86B4D4000D6B5E /* Release (Universal Binary) */,
-				EA5D5FEB0AECB2EE002B9A3C /* Release */,
+				EA7A595A0A86B4D4000D6B5E /* Universal release */,
+				EA5D5FEB0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A5A280A86B5E6000D6B5E /* Build configuration list for PBXNativeTarget "Virtue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5A290A86B5E6000D6B5E /* Debug */,
-				EA7A5A2A0A86B5E6000D6B5E /* Release (Universal Binary) */,
-				EA5D5FEC0AECB2EE002B9A3C /* Release */,
+				EA7A5A2A0A86B5E6000D6B5E /* Universal release */,
+				EA5D5FEC0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A5B540A86B7E5000D6B5E /* Build configuration list for PBXNativeTarget "authtool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5B550A86B7E5000D6B5E /* Debug */,
-				EA7A5B560A86B7E5000D6B5E /* Release (Universal Binary) */,
-				EA5D5FED0AECB2EE002B9A3C /* Release */,
+				EA7A5B560A86B7E5000D6B5E /* Universal release */,
+				EA5D5FED0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A5B650A86B809000D6B5E /* Build configuration list for PBXNativeTarget "VTInterface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5B660A86B809000D6B5E /* Debug */,
-				EA7A5B670A86B809000D6B5E /* Release (Universal Binary) */,
-				EA5D5FEE0AECB2EE002B9A3C /* Release */,
+				EA7A5B670A86B809000D6B5E /* Universal release */,
+				EA5D5FEE0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A617B0A86F366000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopColorLabelPrimitive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A617C0A86F366000D6B5E /* Debug */,
-				EA7A617D0A86F366000D6B5E /* Release (Universal Binary) */,
-				EA5D5FEF0AECB2EE002B9A3C /* Release */,
+				EA7A617D0A86F366000D6B5E /* Universal release */,
+				EA5D5FEF0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A62260A86F5C8000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopNamePrimitive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62270A86F5C8000D6B5E /* Debug */,
-				EA7A62280A86F5C8000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF00AECB2EE002B9A3C /* Release */,
+				EA7A62280A86F5C8000D6B5E /* Universal release */,
+				EA5D5FF00AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A62620A86F7AB000D6B5E /* Build configuration list for PBXNativeTarget "VTAppearancePreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62630A86F7AB000D6B5E /* Debug */,
-				EA7A62640A86F7AB000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF10AECB2EE002B9A3C /* Release */,
+				EA7A62640A86F7AB000D6B5E /* Universal release */,
+				EA5D5FF10AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A62B00A86F8D7000D6B5E /* Build configuration list for PBXNativeTarget "VTApplicationPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62B10A86F8D7000D6B5E /* Debug */,
-				EA7A62B20A86F8D7000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF20AECB2EE002B9A3C /* Release */,
+				EA7A62B20A86F8D7000D6B5E /* Universal release */,
+				EA5D5FF20AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A62DA0A86F9AF000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopTemplatePreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A62DB0A86F9AF000D6B5E /* Debug */,
-				EA7A62DC0A86F9AF000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF30AECB2EE002B9A3C /* Release */,
+				EA7A62DC0A86F9AF000D6B5E /* Universal release */,
+				EA5D5FF30AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A63380A86FB4F000D6B5E /* Build configuration list for PBXNativeTarget "VTHotkeyPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A63390A86FB4F000D6B5E /* Debug */,
-				EA7A633A0A86FB4F000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF40AECB2EE002B9A3C /* Release */,
+				EA7A633A0A86FB4F000D6B5E /* Universal release */,
+				EA5D5FF40AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A635E0A86FC59000D6B5E /* Build configuration list for PBXNativeTarget "VTLayoutPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A635F0A86FC59000D6B5E /* Debug */,
-				EA7A63600A86FC59000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF50AECB2EE002B9A3C /* Release */,
+				EA7A63600A86FC59000D6B5E /* Universal release */,
+				EA5D5FF50AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A63850A86FD3D000D6B5E /* Build configuration list for PBXNativeTarget "VTPluginPreferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A63860A86FD3D000D6B5E /* Debug */,
-				EA7A63870A86FD3D000D6B5E /* Release (Universal Binary) */,
-				EA5D5FF60AECB2EE002B9A3C /* Release */,
+				EA7A63870A86FD3D000D6B5E /* Universal release */,
+				EA5D5FF60AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EA7A63E30A86FE65000D6B5E /* Build configuration list for PBXNativeTarget "VirtueDesktops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A63E40A86FE65000D6B5E /* Debug */,
-				EA7A63E50A86FE65000D6B5E /* Release (Universal Binary) */,
-				EA5D5FFA0AECB2EE002B9A3C /* Release */,
+				EA7A63E50A86FE65000D6B5E /* Universal release */,
+				EA5D5FFA0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAA9266F0A86A4E800D4674B /* Debug */,
-				EAA926700A86A4E800D4674B /* Release (Universal Binary) */,
-				EA5D5FFB0AECB2EE002B9A3C /* Release */,
+				EAA926700A86A4E800D4674B /* Universal release */,
+				EA5D5FFB0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EAC00E270AD1065D00389BDB /* Build configuration list for PBXNativeTarget "TAUserInterfaceElements" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAC00E280AD1065D00389BDB /* Debug */,
-				EAC00E290AD1065D00389BDB /* Release (Universal Binary) */,
-				EA5D5FF80AECB2EE002B9A3C /* Release */,
+				EAC00E290AD1065D00389BDB /* Universal release */,
+				EA5D5FF80AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 		EAC013A00AD10BA500389BDB /* Build configuration list for PBXNativeTarget "TA Interface Palette" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAC013A10AD10BA500389BDB /* Debug */,
-				EAC013A20AD10BA500389BDB /* Release (Universal Binary) */,
-				EA5D5FF90AECB2EE002B9A3C /* Release */,
+				EAC013A20AD10BA500389BDB /* Universal release */,
+				EA5D5FF90AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Universal Binary)";
+			defaultConfigurationName = "Universal release";
 		};
 /* End XCConfigurationList section */
 	};
