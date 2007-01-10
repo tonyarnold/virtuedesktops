@@ -151,6 +151,7 @@
                 deleteActiveDesktop = id; 
                 fixExecutablePermissions = id; 
                 sendFeedback = id; 
+                showAboutPanel = id; 
                 showApplicationInspector = id; 
                 showDesktopInspector = id; 
                 showDonationsPage = id; 
@@ -164,7 +165,7 @@
             CLASS = VTApplicationDelegate; 
             LANGUAGE = ObjC; 
             OUTLETS = {
-                mAttentionPermissionsWindow = NSWindow; 
+                mAboutPanel = NSPanel; 
                 mStatusItemActiveDesktopItem = NSMenu; 
                 mStatusItemMenu = NSMenu; 
                 mStatusItemRemoveActiveDesktopItem = NSMenuItem; 

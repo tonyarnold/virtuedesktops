@@ -143,7 +143,7 @@ enum
 	[VTPreferences registerDefaults];
 
 	// and ensure we have our version information in there
-	[[NSUserDefaults standardUserDefaults] setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"VTPreferencesVirtueVersionName"];
+	[[NSUserDefaults standardUserDefaults] setObject: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"VTPreferencesVirtueVersionName"];
 	
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	
@@ -275,11 +275,11 @@ enum
 }
 
 - (NSString*) versionString {
-	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayedVersionString"];
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
 - (NSString*) revisionString {
-	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleRevisionString"];
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
 #pragma mark -
@@ -323,10 +323,17 @@ enum
 }
 
 - (IBAction) showWelcomePanel: (id) sender {
-  [mWelcomePanel orderFront: self];
+  [[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+  [mWelcomePanel makeKeyAndOrderFront: sender];
 }
 
 #pragma mark -
+- (IBAction) showAboutPanel: (id) sender
+{
+  [[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+  [mAboutPanel makeKeyAndOrderFront: sender];
+}
+
 - (IBAction) sendFeedback: (id) sender {
 	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: [NSString stringWithFormat:@"mailto:tony@tonyarnold.com?subject=VirtueDesktops%%20Feedback%%20[%@]", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]]];
 }
@@ -359,7 +366,6 @@ enum
 }
 
 - (IBAction) fixExecutablePermissions: (id) sender {
-	[mAttentionPermissionsWindow orderOut: self];
 	// If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and by setting the set-group-ID-on-execution bit
 	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);	
 	

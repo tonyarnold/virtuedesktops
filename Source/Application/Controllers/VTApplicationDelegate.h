@@ -32,8 +32,9 @@
 	IBOutlet NSMenu*			mStatusItemActiveDesktopItem; 
 	IBOutlet NSMenuItem*	mStatusItemRemoveActiveDesktopItem; 
 	IBOutlet NSTextField*	mVersionTextField;
-	IBOutlet NSWindow*		mAttentionPermissionsWindow;
+  IBOutlet NSPanel*     mAboutPanel;
   IBOutlet NSPanel*     mWelcomePanel;
+  
 	
 	// Attributes 
 	BOOL						mStartedUp; 
@@ -70,6 +71,7 @@
 - (IBAction) showStatusbarMenu: (id) sender; 
 
 #pragma mark -
+- (IBAction) showAboutPanel: (id) sender;
 - (IBAction) sendFeedback: (id) sender; 
 - (IBAction) showWebsite: (id) sender; 
 - (IBAction) showForums: (id) sender; 

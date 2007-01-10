@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
-	<key>CFBundleDisplayedVersionString</key>
-	<string>0.53</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -22,25 +20,11 @@
 			<key>LSTypeIsPackage</key>
 			<string>YES</string>
 		</dict>
-		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>virtuedata</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string>VirtueDesktops Desktop Data</string>
-			<key>CFBundleTypeRole</key>
-			<string>None</string>
-			<key>LSTypeIsPackage</key>
-			<false/>
-			<key>NSPersistentStoreTypeKey</key>
-			<string>XML</string>
-		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>VirtueDesktops</string>
 	<key>CFBundleGetInfoString</key>
-	<string>0.53, Copyright 2006 Tony Arnold</string>
+	<string>0.54 Beta 2, Copyright 2007 Tony Arnold</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>Virtue Help</string>
 	<key>CFBundleHelpBookName</key>
@@ -55,28 +39,24 @@
 	<string>VirtueDesktops</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>CFBundleRevisionString</key>
-	<string>0000</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.54 Beta 2</string>
 	<key>CFBundleSignature</key>
 	<string>virt</string>
 	<key>CFBundleVersion</key>
-	<string>0.53r0000</string>
-	<key>CFBundleVersionString</key>
-	<string>0.53r0000</string>
-	<key>CFBundleShortVersionString</key>
-	<string>0.53r0000</string>
+	<string>0000</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.4.0</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSAppleScriptEnabled</key>
-	<string>YES</string>
+	<string>Yes</string>
 	<key>NSMainNibFile</key>
 	<string>VirtueDesktops</string>
 	<key>NSPrincipalClass</key>
 	<string>VTApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://www.virtuedesktops.info/category/appcast/feed</string>
+	<string>http://www.virtuedesktops.info/index.php/category/appcast/feed</string>
 	<key>SmartCrashReports_CommentsTemplate</key>
 	<string>Please include your e-mail address if you wish to be contacted in regard to this crash.</string>
 	<key>SmartCrashReports_CompanyName</key>

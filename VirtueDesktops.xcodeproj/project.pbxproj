@@ -3147,7 +3147,6 @@
 				EA7A67A70A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67A90A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67AB0A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67AD0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67AF0A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67B10A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67B30A87049A000D6B5E /* PBXTargetDependency */,
@@ -3159,6 +3158,7 @@
 				EA7A67BF0A87049A000D6B5E /* PBXTargetDependency */,
 				EAC00EA50AD1098100389BDB /* PBXTargetDependency */,
 				EAC015BC0AD12B4200389BDB /* PBXTargetDependency */,
+				EA7A67AD0A87049A000D6B5E /* PBXTargetDependency */,
 			);
 			name = VirtueDesktops;
 			productName = VirtueDesktops;
