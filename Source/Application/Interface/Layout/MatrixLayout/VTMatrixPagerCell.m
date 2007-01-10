@@ -200,35 +200,30 @@ enum
 	
 	// we are taking over the passed color and adjust a bit 
 	mBackgroundColor	= [[self borderColorFor: color highIntensity: NO] retain];
-	mBorderColor		= [[self borderColorFor: color highIntensity: YES] retain]; 
+	mBorderColor      = [[self borderColorFor: color highIntensity: YES] retain]; 
 	
 	// also adjust the desktop background color 
 	mDesktopBackgroundColor = [[self borderColorFor: mBackgroundColor highIntensity: NO] retain]; 
 }
 
 - (void) setBackgroundHighlightColor: (NSColor*) color {
-	// completely take over color  
-	ZEN_RELEASE(mBackgroundHighlightColor);
-	ZEN_RELEASE(mDesktopBackgroundHighlightColor);
-	
-	mBackgroundHighlightColor			= [color copy];
-	// adjust desktop background color 
+  ZEN_RELEASE(mBackgroundHighlightColor);
+  mBackgroundHighlightColor = [color copy];
+  ZEN_RELEASE(mDesktopBackgroundHighlightColor);
 	mDesktopBackgroundHighlightColor	= [[self borderColorFor: mBackgroundHighlightColor highIntensity: NO] retain]; 
 }
 
-- (void) setWindowColor: (NSColor*) color {
-	ZEN_RELEASE(mWindowColor);
-	ZEN_RELEASE(mWindowBorderColor); 
-	
-	mWindowColor = [color copy]; 
+- (void) setWindowColor: (NSColor*) color {	
+  ZEN_RELEASE(mWindowColor);
+  mWindowColor = [color copy];
+  ZEN_RELEASE(mWindowBorderColor);
 	mWindowBorderColor = [[[color shadowWithLevel: 0.4] colorWithAlphaComponent: 0.5] retain]; 
 }
 
-- (void) setWindowHighlightColor: (NSColor*) color {
-	ZEN_RELEASE(mWindowHighlightColor);
+- (void) setWindowHighlightColor: (NSColor*) color {	
+  ZEN_RELEASE(mWindowHighlightColor);
+  mWindowHighlightColor = [color copy];
 	ZEN_RELEASE(mWindowBorderHighlightColor);
-	
-	mWindowHighlightColor = [color copy]; 
 	mWindowBorderHighlightColor = [[[color shadowWithLevel: 0.4] colorWithAlphaComponent: 0.5] retain]; 
 }
 
@@ -291,7 +286,7 @@ enum
 	
 	// we draw our frame around the passed in frame and delegate to 
 	// the super class 
-	NSBezierPath*	borderPath	= [NSBezierPath bezierPathForRoundedRect: frame withRadius: 18]; 
+	NSBezierPath*	borderPath	= [NSBezierPath bezierPathForRoundedRect: frame withRadius: 8]; 
 
 	// only fill if there is a desktop 
 	if (mDesktop && (mDraggingTarget == NO)) {
@@ -307,9 +302,9 @@ enum
 	// DRAW COMPONENT: cell border frame 
 	[mBorderColor set]; 
 	if (mDraggingTarget) 
-		[borderPath setLineWidth: 3]; 
+		[borderPath setLineWidth: 1];
 	else
-		[borderPath setLineWidth: 1]; 
+		[borderPath setLineWidth: 3]; 
 	[borderPath stroke]; 
 	
 	// and continue for super 

@@ -37,7 +37,7 @@
 	if (self = [super init]) {
 		mDecorationPrimitives	= [[NSMutableArray alloc] init]; 
 		mControlView          = nil; 
-		mEnabled              = YES; 
+		mEnabled              = YES;
 		
 		ZEN_ASSIGN(mDesktop, desktop); 
 				

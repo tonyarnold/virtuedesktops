@@ -781,15 +781,12 @@ enum
 		
 		// check if we should set the desktop name as the title
 		if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueShowStatusbarDesktopName] == YES) {
-			NSDictionary* attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-        [NSFont labelFontOfSize: 0], NSFontAttributeName,
-        [NSColor darkGrayColor], NSForegroundColorAttributeName,
-        nil];
+			NSDictionary *stringAttributes = [NSDictionary dictionaryWithObjectsAndKeys: [NSFont labelFontOfSize: 0], NSFontAttributeName, [NSColor darkGrayColor], NSForegroundColorAttributeName, nil];
+			NSString *stringTitle = [NSString stringWithFormat: @"[%@]", [[[VTDesktopController sharedInstance] activeDesktop] name]];
+			NSAttributedString *attributedStringTitle = [[NSAttributedString alloc] initWithString: stringTitle attributes: stringAttributes];
 			
-			NSString* title = [NSString stringWithFormat: @"[%@]", [[[VTDesktopController sharedInstance] activeDesktop] name]];
-			NSAttributedString* attributedTitle = [[[NSAttributedString alloc] initWithString: title attributes: attributes] autorelease];
-			
-			[mStatusItem setAttributedTitle: [attributedTitle retain]];
+			[mStatusItem setAttributedTitle: attributedStringTitle];
+      ZEN_RELEASE(attributedStringTitle);
 		}
 		else {
 			[mStatusItem setTitle: @""];
@@ -961,7 +958,7 @@ enum
   if ([[[NSUserDefaults standardUserDefaults] objectForKey: @"VTDesktops"] count] == 0) {
     NSString *file = [[[VTFileSystemExtensions applicationSupportFolder] stringByAppendingPathComponent: @"Desktops.virtuedata"] retain];
     if ([fileManager fileExistsAtPath: file]) {
-      NSArray *serialisedDesktops = [[NSArray alloc] initWithContentsOfFile: file];
+      NSArray *serialisedDesktops = [[[NSArray alloc] initWithContentsOfFile: file] autorelease];
       // write to preferences 
       [[NSUserDefaults standardUserDefaults] setObject: [serialisedDesktops copy] forKey: @"VTDesktops"]; 
       

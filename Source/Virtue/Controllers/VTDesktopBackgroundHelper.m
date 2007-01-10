@@ -80,6 +80,12 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	return msINSTANCE; 
 }
 
+- (void) dealloc {		
+  ZEN_RELEASE(mDefaultDesktopBackgroundPath);
+	
+	[super dealloc]; 
+}
+
 #pragma mark -
 #pragma mark Attributes 
 - (VTBackgroundHelperMode) mode {
@@ -119,10 +125,10 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 #if 0	
 	switch (mMode) {
 	case VTBackgroundHelperModeFinder: 
-		return [self backgroundUsingFinder]; 
+		return [[[self backgroundUsingFinder] copy] autorelease]; 
 	case VTBackgroundHelperModePList: 
 #endif 
-		return [self backgroundUsingPList]; 
+		return [[[self backgroundUsingPList] copy] autorelease]; 
 #if 0
 	case VTBackgroundHelperModeNone: 
 		// Fallthrough
@@ -142,7 +148,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 }
 
 - (NSString*) defaultBackground {
-	return mDefaultDesktopBackgroundPath;
+	return [[mDefaultDesktopBackgroundPath copy] autorelease];
 }
 
 @end
@@ -351,10 +357,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 	
 	// Plus we have to send a nice notification so clients know that we changed
 	// the desktop plist file so they update themselves 
-	[[NSDistributedNotificationCenter defaultCenter]
-	postNotificationName: VTBackgroundHelperDesktopChangedName
-	object: VTBackgroundHelperDesktopChangedObject 
-	userInfo: nil];	
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: VTBackgroundHelperDesktopChangedName object: VTBackgroundHelperDesktopChangedObject userInfo: nil];	
 }
 
 - (NSString*) backgroundUsingPList {

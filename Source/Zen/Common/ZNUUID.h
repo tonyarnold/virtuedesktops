@@ -13,9 +13,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ZNUUID : NSObject {
-}
-
+@interface ZNUUID : NSObject
 + (NSString*) uuid;
-
 @end

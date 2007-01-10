@@ -186,7 +186,7 @@
 	[mDesktopName autorelease];
   
 	if (name && ([name length] > 0))
-		mDesktopName = [name copy];
+		mDesktopName = [name retain];
 	else
 		mDesktopName = @"None";
   [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopDidChangeName object: nil userInfo: nil];

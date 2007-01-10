@@ -15,15 +15,13 @@
 
 @implementation ZNUUID
 
-+ (NSString*) uuid {
-	CFUUIDRef	uidRef; 
-	NSString*	uidString; 
-
-	uidRef		= CFUUIDCreate(NULL); 
-	uidString	= (NSString *)CFUUIDCreateString(NULL, uidRef); 
-	CFRelease(uidRef); 
-	
-	return [uidString autorelease]; 
++ (NSString*) uuid
+{
+  CFUUIDRef theUUID = CFUUIDCreate(NULL);
+  CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+  CFRelease(theUUID);
+  
+  return [(NSString *)string autorelease];
 }
 
 @end

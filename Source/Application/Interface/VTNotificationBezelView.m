@@ -57,7 +57,7 @@ enum {
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mShadow); 
+	ZEN_RELEASE(mShadow);
 	ZEN_RELEASE(mTextAttributes); 
 	ZEN_RELEASE(mText); 
 	ZEN_RELEASE(mDesktop); 

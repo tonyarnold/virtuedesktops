@@ -108,15 +108,16 @@
 
 - (void) dealloc {
   ZEN_RELEASE(mBundleId);
-	ZEN_RELEASE(mApplications); 
-	ZEN_RELEASE(mImage); 
-	ZEN_RELEASE(mTitle); 
-	ZEN_RELEASE(mDesktop); 
+  ZEN_RELEASE(mBundlePath);
+	ZEN_RELEASE(mApplications);
+	ZEN_RELEASE(mImage);
+	ZEN_RELEASE(mTitle);
+	ZEN_RELEASE(mDesktop);
 	
 	// give up observer status 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
-	
-	[super dealloc]; 
+  
+  [super dealloc]; 
 }
 
 #pragma mark -
@@ -335,7 +336,8 @@
       return (pid_t)[[app objectForKey:@"NSApplicationProcessIdentifier"] intValue];
     }    
   }
-  return 0;
+  
+  return (pid_t)0;
 }
 
 - (BOOL) isRunning

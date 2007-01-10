@@ -40,10 +40,10 @@
 #pragma mark -
 - (id) initWithName: (NSString*) name identifier: (int) identifier {
 	if (self = [super initWithId: identifier andName: name]) {
-		mDesktopBackgroundImagePath         = nil;
-		mDecoration                         = [[VTDesktopDecoration alloc] initWithDesktop: self];
-		mUUID                               = [[ZNUUID uuid] retain];
-		mShowsBackground                    = NO;
+		mDesktopBackgroundImagePath = nil;
+		mDecoration                 = [[VTDesktopDecoration alloc] initWithDesktop: self];
+		mUUID                       = [[ZNUUID uuid] retain];
+		mShowsBackground            = NO;
 		
 		return self;
 	}
@@ -116,11 +116,12 @@
 		[self setDesktopBackground: [dictionary objectForKey: kVtCodingBackgroundImage]];
 	}
 	
-	mUUID				= [[dictionary objectForKey: kVtCodingUUID] copy];
+  NSString *uuidString = [NSString stringWithString: [dictionary objectForKey: kVtCodingUUID]];
+  if (mUUID)
+    mUUID = [uuidString retain];
+  
 	NSColor* colorData	= [NSColor colorWithString: [dictionary objectForKey: kVtCodingColorLabel]];
-	
-	
-	
+  
 	if (colorData)
 		mColorLabel = [colorData retain];
 	
@@ -187,7 +188,7 @@
 
 #pragma mark -
 - (NSString*) uuid {
-	return [[mUUID copy] autorelease];
+	return mUUID;
 }
 
 #pragma mark -

@@ -27,7 +27,7 @@
 
 enum
 {
-	kRoundedRadius = 25
+	kRoundedRadius = 18
 };
 
 

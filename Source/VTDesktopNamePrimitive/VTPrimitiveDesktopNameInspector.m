@@ -84,7 +84,6 @@
   NSShadow* textShadow = [newAttributes objectForKey:@"NSShadow"];
   if (nil != textShadow)
     [(VTDesktopNamePrimitive*)mInspectedObject setFontShadow: textShadow];
-  
 }
 
 - (void) windowWillClose: (NSNotification*) aNotification {

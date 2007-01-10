@@ -15,7 +15,8 @@
 #import <Peony/Peony.h> 
 
 @interface VTMatrixPagerAppletCell : NSImageCell {
-	PNApplication* mApplication; 
+	PNApplication *mApplication; 
+  NSImage       *mApplicationIcon;
 }
 
 #pragma mark -

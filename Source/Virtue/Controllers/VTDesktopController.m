@@ -84,7 +84,7 @@
 		[[NSDistributedNotificationCenter defaultCenter] addObserver: self selector: @selector(onNextWestDesktopRequest:) name: @"SwitchToPrevWorkspace" object: nil];
 		
 		// create timer loop to update desktops 
-		[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
+		[NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 		
 		return self; 
 	}
@@ -98,10 +98,12 @@
 	[[NSDistributedNotificationCenter defaultCenter] removeObserver: self]; 
 	
 	// get rid of attributes 
-	[_desktops release];
-	ZEN_RELEASE(mPreviousDesktop); 
+	ZEN_RELEASE(_desktops);
+  ZEN_RELEASE(mApplications);
+  ZEN_RELEASE(mDesktopWatchers);
+	ZEN_RELEASE(mPreviousDesktop);
 	ZEN_RELEASE(mSnapbackDesktop); 
-	ZEN_RELEASE(mDefaultDesktopBackgroundPath); 
+	ZEN_RELEASE(mDefaultDesktopBackgroundPath);
 	
 	[super dealloc]; 
 }
@@ -406,7 +408,8 @@
 		
 		desktopId++; 
 	}
-	
+	[uuidArray autorelease];
+  
 	// if we still have zero desktops handy, we will trigger creation of 
 	// our default desktops 
 	if ([_desktops count] == 0)

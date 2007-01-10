@@ -14,7 +14,7 @@
 #import "VTApplicationController.h"
 #import "VTDesktopController.h" 
 #import "VTNotifications.h" 
-#import <Zen/Zen.h> 
+#import <Zen/Zen.h>
 
 #define kVtCodingApplications	@"applications"
 

@@ -209,7 +209,7 @@
 	
 	mName = (NSString*)strProcessName; 
 	
-	return mName; 
+	return [[mName copy] autorelease]; 
 }
 
 #pragma mark -
@@ -220,7 +220,7 @@
   NSBundle * appBundle = [NSBundle bundleWithPath: [self bundlePath]];
   mBundleId = [[appBundle bundleIdentifier] retain];
   
-  return mBundleId;
+  return [[mBundleId copy] autorelease];
 }
 
 #pragma mark -
@@ -270,7 +270,7 @@
 	// get the path
 	mBundlePath = [[NSString stringWithCString: string] retain];
 	
-	return mBundlePath;
+	return [[mBundlePath copy] autorelease];
 }
 
 #pragma mark -

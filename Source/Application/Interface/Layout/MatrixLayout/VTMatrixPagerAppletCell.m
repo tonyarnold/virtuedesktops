@@ -36,7 +36,8 @@
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mApplication); 
+	ZEN_RELEASE(mApplicationIcon);
+  ZEN_RELEASE(mApplication);
 	
 	[super dealloc]; 
 }
@@ -49,10 +50,9 @@
 
 - (void) setApplication: (PNApplication*) application {
 	ZEN_ASSIGN(mApplication, application); 
-	
-	NSImage*	image		= [mApplication icon];
-	
-	[self setImage: image]; 
+  ZEN_ASSIGN(mApplicationIcon, [mApplication icon]);
+  
+	[self setImage: mApplicationIcon]; 
 	[[self controlView] setNeedsDisplay: YES]; 
 }
 

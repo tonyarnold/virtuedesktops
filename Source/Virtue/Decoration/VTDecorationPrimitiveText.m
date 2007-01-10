@@ -62,6 +62,8 @@
 	ZEN_RELEASE(mText); 
 	ZEN_RELEASE(mFont); 
   ZEN_RELEASE(mFontColor);
+  ZEN_RELEASE(mFontShadow);
+  ZEN_RELEASE(mFontAttributes);
 	
 	[super dealloc]; 
 }
@@ -74,6 +76,7 @@
 	newInstance->mFont                  = [mFont copyWithZone: zone]; 
   newInstance->mFontAttributes        = [mFontAttributes copyWithZone: zone];
   newInstance->mFontColor             = [mFontColor copyWithZone: zone];
+  newInstance->mFontShadow            = [mFontShadow copyWithZone: zone];
 	
 	return newInstance; 
 }
@@ -85,8 +88,8 @@
 	if (self = [super initWithCoder: coder]) {
 		mText	= [[coder decodeObjectForKey: kVtCodingText] retain]; 
 		mFont	= [[coder decodeObjectForKey: kVtCodingFont] retain];
-    mFontColor = [[coder decodeObjectForKey: kVtCodingFontColor] autorelease];
-    mFontShadow = [[[NSShadow alloc] init] retain];
+    mFontColor = [[coder decodeObjectForKey: kVtCodingFontColor] retain];
+    mFontShadow = [[NSShadow alloc] init];
     [mFontShadow setShadowOffset: [coder decodeSizeForKey: kVtCodingFontShadowOffset]];
     [mFontShadow setShadowBlurRadius: [coder decodeFloatForKey: kVtCodingFontShadowBlurRadius]];
     [mFontShadow setShadowColor: [coder decodeObjectForKey: kVtCodingFontShadowColor]];
@@ -130,14 +133,14 @@
   if (self = [super decodeFromDictionary: dictionary]) {
 		[self setText: [dictionary objectForKey: kVtCodingText]]; 
 		
-    NSFontDescriptor* fontDescriptor = [[NSFontDescriptor alloc] initWithFontAttributes: [dictionary objectForKey: kVtCodingFont]];
+    NSFontDescriptor* fontDescriptor = [NSFontDescriptor fontDescriptorWithFontAttributes: [dictionary objectForKey: kVtCodingFont]];
 		if (fontDescriptor != nil)
-      [self setFont: [NSFont fontWithDescriptor: fontDescriptor size: [[fontDescriptor objectForKey: NSFontSizeAttribute] intValue]]]; 
-    
+      [self setFont: [NSFont fontWithDescriptor: fontDescriptor size: [[fontDescriptor objectForKey: NSFontSizeAttribute] doubleValue]]]; 
+
     NSColor* fontColor = [NSColor colorWithString: [dictionary objectForKey: kVtCodingFontColor]];
     if (fontColor != nil)
       [self setFontColor: fontColor];
-           
+    
     [mFontShadow setShadowOffset: NSSizeFromString([dictionary objectForKey: kVtCodingFontShadowOffset])];
     [mFontShadow setShadowBlurRadius: [[dictionary objectForKey: kVtCodingFontShadowBlurRadius] floatValue]];
     NSColor* shadowColor = [NSColor colorWithString: [dictionary objectForKey: kVtCodingFontShadowColor]];
@@ -302,7 +305,7 @@
 
 - (void) setAttributes {
   // Create our text attributes
-  
+  ZEN_RELEASE(mFontAttributes);
   mFontAttributes = [[NSMutableDictionary dictionaryWithObjectsAndKeys:
       mFontColor, NSForegroundColorAttributeName,
       mFont, NSFontAttributeName,
