@@ -25,7 +25,7 @@
 		<key>hidden</key>
 		<true/>
 		<key>name</key>
-		<string>Desktop Color Label Primitive</string>
+		<string>Desktop tint</string>
 		<key>type</key>
 		<string>VTObjectiveC</string>
 	</dict>

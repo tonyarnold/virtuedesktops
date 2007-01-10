@@ -267,6 +267,24 @@
 @implementation VTApplicationController (Content) 
 
 - (void) createApplications {
+  // walk all desktops and collect applications 
+	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator];
+	VTDesktop*		desktop		= nil; 
+	
+	while (desktop = [desktopIter nextObject]) {
+		NSEnumerator*	applicationIter	= [[desktop applications] objectEnumerator]; 
+		PNApplication*	application		= nil; 
+		
+		while (application = [applicationIter nextObject]) {
+      NSString *applicationReferencePath = [NSString stringWithString: [application bundlePath]];
+      
+			if (applicationReferencePath != nil && [mApplications objectForKey: applicationReferencePath] == nil)
+      {
+        [self onApplicationAttachedLocal: applicationReferencePath];
+      } 
+		}
+	}
+  
   NSArray *launchedApplications = [[[NSWorkspace sharedWorkspace] launchedApplications] retain];
   NSEnumerator *applicationEnum = [[launchedApplications objectEnumerator] retain];
   NSDictionary *applicationReference;
@@ -274,14 +292,14 @@
   while (applicationReference = [applicationEnum nextObject])
   {
     NSString *applicationReferencePath = [NSString stringWithString: [applicationReference objectForKey: @"NSApplicationPath"]];
-    if ([mApplications objectForKey: applicationReferencePath] == nil)
+    if (applicationReferencePath != nil && [mApplications objectForKey: applicationReferencePath] == nil)
     {
       [self onApplicationAttachedLocal: applicationReferencePath];
     }
   }
   
   [launchedApplications release];
-  [applicationEnum release];  
+  [applicationEnum release]; 
 }
 
 @end 

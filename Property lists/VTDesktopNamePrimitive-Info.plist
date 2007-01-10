@@ -25,11 +25,11 @@
 		<key>hidden</key>
 		<true/>
 		<key>name</key>
-		<string>Desktop Name Primitive</string>
+		<string>Desktop name</string>
 		<key>type</key>
 		<string>VTObjectiveC</string>
 	</dict>
 	<key>VTPluginDisplayName</key>
-	<string>Desktop Name Primitive</string>
+	<string>Desktop name</string>
 </dict>
 </plist>

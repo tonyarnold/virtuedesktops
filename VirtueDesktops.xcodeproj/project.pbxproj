@@ -1444,7 +1444,7 @@
 		EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButtonCell.m; sourceTree = "<group>"; };
 		EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
 		EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
-		EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtue Interface Palette.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TA Interface Palette.palette"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelInspector.h; sourceTree = "<group>"; };
 		EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelInspector.m; sourceTree = "<group>"; };
 		EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelPalette.h; sourceTree = "<group>"; };
@@ -2442,7 +2442,7 @@
 				EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */,
 				EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */,
 				EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */,
-				EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */,
+				EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3200,7 +3200,7 @@
 			);
 			name = "TA Interface Palette";
 			productName = "Virtue Interface Palette";
-			productReference = EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */;
+			productReference = EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
