@@ -1,15 +1,15 @@
-/******************************************************************************
-* 
-* Peony.Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+/****************************************************************************
+ *
+ Peony framework
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
+ *
+ * See COPYING for licensing details
+ *
+ ****************************************************************************/
 
 #import "PNWindowList.h"
 #import "PNNotifications.h"
@@ -17,7 +17,6 @@
 #import "PNDesktopItem.h" 
 #import "CGSPrivate.h"
 #import "DEComm.h"
-#import <Zen/Zen.h> 
 
 @interface PNWindowList(Private)
 - (NSArray*) nativeWindows; 
@@ -40,8 +39,8 @@
 
 - (id) initWithArray: (NSArray*) windows {
 	if (self = [super init]) {
-		mWindows				= [[NSMutableArray alloc] init]; 
-		mNativeWindows	= [[NSMutableArray alloc] init]; 
+		mWindows        = [[NSMutableArray alloc] init]; 
+		mNativeWindows  = [[NSMutableArray alloc] init];
 		
 		if (windows)
 			[self addWindows: windows]; 
@@ -53,8 +52,8 @@
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mWindows); 
-	ZEN_RELEASE(mNativeWindows); 
+	[mWindows release]; 
+	[mNativeWindows release]; 
 	
 	[super dealloc]; 
 }

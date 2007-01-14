@@ -1,6 +1,6 @@
 /******************************************************************************
 * 
-* Peony.Virtue 
+Peony framework 
 *
 * A desktop extension for MacOS X
 *

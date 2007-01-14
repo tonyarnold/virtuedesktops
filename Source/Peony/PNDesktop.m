@@ -1,22 +1,21 @@
-/******************************************************************************
-*
-* Peony.Virtue
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
-* Copyright 2006, Tony Arnold <tony@tonyarnold.com>
-*
-* See COPYING for licensing details
-*
-*****************************************************************************/
+/****************************************************************************
+ *
+ Peony framework
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
+ *
+ * See COPYING for licensing details
+ *
+ ****************************************************************************/
 
 #import "PNDesktop.h"
 #import "PNWindow.h"
 #import "PNApplication.h"
 #import "PNNotifications.h"
 #import "PNStickyWindowCollection.h"
-#import <Zen/Zen.h>
 
 @interface PNDesktop(Private)
 - (PNWindow*) windowWithId: (CGSWindow) windowId;
@@ -105,9 +104,9 @@
 
 - (void) dealloc 
 {
-	ZEN_RELEASE(mDesktopName);
-	ZEN_RELEASE(mWindows);
-	ZEN_RELEASE(mApplications);
+	[mDesktopName release];
+	[mWindows release];
+	[mApplications release];
   
 	// Delegate deallocation to superclass
 	[super dealloc];
@@ -182,13 +181,19 @@
 
 - (void) setName: (NSString*) name 
 {
+  if (mDesktopName == name)
+    return;
+  
   [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopWillChangeName object: nil userInfo: nil];
-	[mDesktopName autorelease];
+  
+  if (mDesktopName)
+    [mDesktopName release];
   
 	if (name && ([name length] > 0))
 		mDesktopName = [name retain];
 	else
 		mDesktopName = @"None";
+  
   [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopDidChangeName object: nil userInfo: nil];
 }
 
@@ -464,7 +469,7 @@
 	OSStatus oResult;
   
 	int							iNumberOfWindows			= 0;
-	NSMutableData*	oWindows							= NULL;
+	NSMutableData*	oWindows							= nil;
 	BOOL						didChangeWindows			= NO;
 	BOOL						didChangeApplications = NO;
   
@@ -495,7 +500,7 @@
 	int i									= 0;
 	int currentListIndex	= 0;
   
-	// heya, now we can start synchronizing.. we will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
+	// Now we can start synchronizing. We will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
 	for ( i = 0; i < iNumberOfWindows; i++ ) {
 		// get entry from list of fetched windows
 		CGSWindow iWindowId = ((int*)[oWindows mutableBytes])[i];
@@ -507,7 +512,7 @@
     if (([window level] == NSPopUpMenuWindowLevel) ||
 				([window level] == NSSubmenuWindowLevel) ||
 				([window level] == NSMainMenuWindowLevel)) {
-			ZEN_RELEASE(window);
+			[window release];
 			continue;
 		}
     
@@ -522,12 +527,12 @@
 			// and attach
 			[self attachApplication: application];
 			// and release application
-			ZEN_RELEASE(application);
+			[application release];
 		}
 		
 		// if the window is special, we do not include it in our list
 		if ([window isSpecial]) {
-			ZEN_RELEASE(window);
+			[window release];
 			continue;
 		}
     
@@ -566,14 +571,14 @@
     // Bind the window to it's parent application
     [application bindWindow: window];
     
-		ZEN_RELEASE(window);
+		[window release];
 		// increment the list index
 		currentListIndex++;
 	}
   
 	// now handle sticky windows, this will only change the window list, if we are not the active desktop
-	NSArray*				stickyWindowsCopy = [NSMutableArray arrayWithArray: [[PNStickyWindowCollection stickyWindowCollection] windows]];
-	NSEnumerator*		stickyIter				= [stickyWindowsCopy objectEnumerator];
+	NSArray*        stickyWindowsCopy = [NSArray arrayWithArray: [[PNStickyWindowCollection stickyWindowCollection] windows]];
+  NSEnumerator*		stickyIter				= [stickyWindowsCopy objectEnumerator];
 	PNWindow*				stickyWindow			= nil;
   
 	while (stickyWindow = [stickyIter nextObject]) {
@@ -619,7 +624,7 @@
 					// and attach application
 					[self attachApplication: application];
 					// safe to release it now
-					ZEN_RELEASE(application);
+					[application release];
 				}
         
 				[application bindWindow: stickyWindow];
@@ -754,7 +759,7 @@
   if (nWindows == 0)
     return nil;
   
-  PNWindow* window = (PNWindow*) [mWindows objectAtIndex: (nWindows - 1)];
+  PNWindow* window = (PNWindow*)[mWindows objectAtIndex: (nWindows - 1)];
   
   if (!window)
     return nil;
@@ -785,8 +790,8 @@
 	if (self = [super init]) {
 		// initialise attributes
 		mDesktopId		= desktopId;
-		mDesktopName	= [name copy];
-		mWindows		= [[NSMutableArray array] retain];
+		mDesktopName	= [name retain];
+		mWindows      = [[NSMutableArray array] retain];
 		mApplications = [[NSMutableDictionary dictionary] retain];
     
 		// build up list of windows we got in our workspace
@@ -807,7 +812,7 @@
 {
 	if (application == nil)
 		return;
-	if ([application bundlePath] == nil)
+	if ([application path] == nil)
 		return;
   
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -818,14 +823,14 @@
 	[mApplications removeObjectForKey: [NSNumber numberWithInt: [application pid]]];
   
 	// and post notification
-	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application bundlePath] userInfo: userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application path] userInfo: userInfo];
 }
 
 - (void) attachApplication: (PNApplication*) application 
 {
 	if (application == nil)
 		return;
-	if ([application bundlePath] == nil)
+	if ([application path] == nil)
 		return;
   
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
@@ -833,7 +838,7 @@
 	[mApplications setObject: application forKey: [NSNumber numberWithInt: [application pid]]];
 	
 	// and post notification
-	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasAdded object: [application bundlePath] userInfo: userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasAdded object: [application path] userInfo: userInfo];
 }
 
 @end

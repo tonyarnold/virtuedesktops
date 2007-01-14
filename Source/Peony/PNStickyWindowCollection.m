@@ -1,15 +1,15 @@
-/******************************************************************************
-* 
-* Peony.Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+/****************************************************************************
+ *
+ Peony framework
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
+ *
+ * See COPYING for licensing details
+ *
+ ****************************************************************************/
 
 #import "PNStickyWindowCollection.h"
 #import "PNNotifications.h" 
@@ -21,7 +21,7 @@
 	static PNStickyWindowCollection* msINSTANCE = nil; 
   
 	if (msINSTANCE == nil)
-		msINSTANCE = [[PNStickyWindowCollection  alloc] init]; 
+		msINSTANCE = [[PNStickyWindowCollection alloc] init]; 
 	
 	return msINSTANCE; 
 }

@@ -1,17 +1,16 @@
-/******************************************************************************
-* 
-* Peony.Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+/****************************************************************************
+ *
+ Peony framework
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
+ *
+ * See COPYING for licensing details
+ *
+ ****************************************************************************/ 
 
-// cocoa includes 
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h> 
 
@@ -21,9 +20,9 @@
 
 enum
 {
-	kPnWindowInvalidId		= -1,
-	kPnWindowInvalidLevel   = -1,
-	kPnWindowInvalidPid		=  0,
+	kPnWindowInvalidId    = -1,
+	kPnWindowInvalidLevel = -1,
+	kPnWindowInvalidPid   =  0,
 }; 
 
 enum
@@ -33,7 +32,7 @@ enum
 	kPnOrderTypeOut		= kCGSOrderOut,
 };
 
-/**
+/*
  * @interface	PNWindow
  * @brief		Lightweight wrapper around a CGSWindow
  *
@@ -130,7 +129,5 @@ enum
 
 #pragma mark -
 - (NSRect) screenRectangle; 
-
-//  @}
 
 @end 

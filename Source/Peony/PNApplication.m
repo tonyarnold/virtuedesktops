@@ -2,7 +2,7 @@
 * Peony framework
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -11,7 +11,6 @@
 #import "PNApplication.h"
 #import "PNWindowList.h"
 #import "PNNotifications.h"
-#import <Zen/Zen.h> 
 
 @implementation PNApplication
 
@@ -24,10 +23,8 @@
 		mPid        = pid;
 		mDesktop    = [desktop retain]; 
 		mWindows    = [[NSMutableArray array] retain]; 
-		mName       = nil; 
-		mIcon       = [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
-    mBundleId   = nil;
-		mBundlePath	= nil; 
+    
+    _name       = nil;
 		
 		mIsSticky	= NO; 
 		mIsHidden	= NO;
@@ -61,12 +58,8 @@
 - (void) dealloc
 {
 	// attributes 
-	ZEN_RELEASE(mWindows); 
-	ZEN_RELEASE(mName); 
-	ZEN_RELEASE(mIcon); 
-	ZEN_RELEASE(mDesktop); 
-	ZEN_RELEASE(mBundlePath);
-  ZEN_RELEASE(mBundleId);
+	[mWindows release];
+	[mDesktop release]; 
 	
 	// super 
 	[super dealloc]; 
@@ -94,6 +87,9 @@
 #pragma mark -
 - (void) setIsHidden: (BOOL) isHidden
 {
+  if (mIsHidden == isHidden)
+    return;
+  
 	mIsHidden = isHidden; 
 }
 
@@ -134,8 +130,11 @@
 }
 
 #pragma mark -
-- (void) setUnfocused: (BOOL) unfocused
+- (void) setIsUnfocused: (BOOL) unfocused
 {
+  if (mIsUnfocused == unfocused)
+    return;
+  
   mIsUnfocused = unfocused; 
 }
 
@@ -174,12 +173,11 @@
 }
 
 /**
- * @todo	Move this method from separate window handling to handling a window list, which should be much more effecient
+ * @TODO	Move this method from separate window handling to handling a window list, which should be much more effecient
  *
  */ 
 - (void) setDesktop: (PNDesktop*) desktop {
 	// We will not modify the desktop we belong to but will just move all the windows we know about to the passed desktop, a new application instance will be created there...
-	
 	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] init];
 	NSEnumerator*   windowIter					= [mWindows objectEnumerator];
 	PNWindow*       window							= nil;
@@ -189,74 +187,58 @@
 		if ([window isSticky] == 0)
 			[windowsForSwitching addObject: window];
 	}
+  
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
 	[mWindowList setDesktop: desktop];
-}
-
-#pragma mark -
-
-- (NSString*) name {
-	ZEN_RELEASE(mName);
-
-	if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) {
-		mName = @""; 
-		return mName; 
-	}
-	
-	// get the process name
-	CFStringRef strProcessName;    
-	CopyProcessName(&mPsn, &strProcessName); 
-	
-	mName = (NSString*)strProcessName; 
-	
-	return [[mName copy] autorelease]; 
-}
-
-#pragma mark -
-- (NSString*) bundleId
-{
-  ZEN_RELEASE(mBundleId);
+  if (mDesktop)
+    [mDesktop release];
   
-  NSBundle * appBundle = [NSBundle bundleWithPath: [self bundlePath]];
-  mBundleId = [[appBundle bundleIdentifier] retain];
-  
-  return [[mBundleId copy] autorelease];
+  mDesktop = [desktop retain];
 }
 
 #pragma mark -
-- (NSImage*) icon 
-{
-  ZEN_RELEASE(mIcon);
-    
-	if ((mPsn.highLongOfPSN != 0) || (mPsn.lowLongOfPSN != 0))
+
+- (NSString*) name 
+{  
+  char		buffer[1025];
+  CFStringRef		pName;
+  
+  if( !_name )
   {
-    // get the application bundle location
-    FSRef fsRef;
-    GetProcessBundleLocation(&mPsn, &fsRef); 
+    if( !_name && (CopyProcessName( &mPsn, &pName) == noErr) )    // with thanks to Dylan Ashe
+    {
+      CFStringGetCString( pName, buffer, 256, CFStringConvertNSStringEncodingToEncoding( [NSString defaultCStringEncoding]));
+      
+      _name = [NSString stringWithCString:buffer];
+      [_name retain];
+      
+      CFRelease( pName);
+    }
+    // CFBundleName code demoted to alternate method because it was causing plist processing issues in Jaguar, yet CopyProcessName doesn't work for everything, e.g. Help Viewer - njr
+    else if( [self path] )
+    {
+      NSBundle *b = [NSBundle bundleWithPath: [self path]];
+      if( b )
+      {
+        _name = [b localizedStringForKey:@"CFBundleName" value:@"_AsM_nO_nAmE_" table:@"InfoPlist"];
+        
+        if( [_name isEqualToString:@"_AsM_nO_nAmE_"] )
+          _name = [[b infoDictionary] objectForKey:@"CFBundleName"];
+        
+        if( _name )
+          [_name retain];
+      }
+    }
     
-    char string[512];
-    FSRefMakePath(&fsRef, (UInt8 *)string, 512);
-
-    // get the icon
-    mIcon = [[[NSWorkspace sharedWorkspace] iconForFile: [NSString stringWithCString: string]] retain];
   }
   
-  
-  // This doesn't seem to work
-  if (mIcon == nil)
-  {
-    mIcon = [[[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericApplicationIcon)] retain];
-  }
-  
-	return mIcon; 
+  return _name ? _name : NSLocalizedString(@"<<unknown application>>", "Name used when application name cannot be determined");
 }
 
 #pragma mark -
-- (NSString*) bundlePath 
-{
-	if (mBundlePath != nil)
-		return mBundlePath; 
-	
+
+- (NSString*) path 
+{	
 	if ((mPsn.highLongOfPSN == 0) && (mPsn.lowLongOfPSN == 0)) 
 		return nil; 
 	
@@ -266,11 +248,19 @@
 	
 	char string[512];
 	FSRefMakePath(&fsRef, (UInt8 *)string, 512);
-    
-	// get the path
-	mBundlePath = [[NSString stringWithCString: string] retain];
-	
-	return [[mBundlePath copy] autorelease];
+  	
+	return [NSString stringWithCString: string];
+}
+
+- (NSString*) bundleId
+{   
+  return [[NSBundle bundleWithPath: [self path]] bundleIdentifier];
+}
+
+#pragma mark -
+- (NSImage*) icon 
+{    
+	return [[NSWorkspace sharedWorkspace] iconForFile: [self path]]; 
 }
 
 #pragma mark -
@@ -284,6 +274,21 @@
 	OSStatus iReturn = GetProcessForPID(mPid, &psn); 
 	
 	return (iReturn == noErr); 
+}
+
+- (BOOL) isFrontmost
+{
+  ProcessSerialNumber psn;
+  Boolean applicationIsFrontmost = NO;
+  
+  OSStatus iReturn = GetFrontProcess(&psn);
+  
+  if (iReturn == noErr)
+  {
+    iReturn = SameProcess(&psn, &mPsn, &applicationIsFrontmost); 
+  }
+  
+  return (BOOL) applicationIsFrontmost;
 }
 
 #pragma mark -

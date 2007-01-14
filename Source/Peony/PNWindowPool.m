@@ -1,20 +1,19 @@
-/******************************************************************************
-* 
-* Peony.Virtue 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+/****************************************************************************
+ *
+ Peony framework
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
+ *
+ * See COPYING for licensing details
+ *
+ ****************************************************************************/
 
 #import "PNWindowPool.h"
 #import "PNWindow.h" 
 #import "PNNotifications.h" 
-#import <Zen/Zen.h> 
 
 @implementation PNWindowPool
 
@@ -47,7 +46,7 @@
 	// unregister 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
 	// release attributes 
-	ZEN_RELEASE(mWindows); 
+	[mWindows release]; 
 	// super...
 	[super dealloc]; 
 }
@@ -64,7 +63,6 @@
 		window = [[PNWindow alloc] initWithWindowId: windowId]; 
 		[mWindows setObject: window forKey: [NSNumber numberWithInt: windowId]]; 
 		// releasing window as retained by the dictionary 
-		[window release]; 
 	}
 	
 	return window; 

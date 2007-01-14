@@ -1,15 +1,16 @@
-/******************************************************************************
-*
-* Peony framework
-*
-* A desktop extension for Mac OS X
-*
-* Copyright 2006, Tony Arnold tony@tonyarnold.com
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-*
-*****************************************************************************/
+/****************************************************************************
+ *
+ Peony framework
+ *
+ * A desktop extension for MacOS X
+ *
+ * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
+ * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
+ *
+ * See COPYING for licensing details
+ *
+ ****************************************************************************/
+
 #import <syslog.h>
 #import "PNWindow.h"
 #import "PNStickyWindowCollection.h"
@@ -17,7 +18,6 @@
 #import "PNDesktop.h"
 #import "PNWindowPool.h"
 #import "DECEvent.h"
-#import <Zen/Zen.h>
 
 #define CGSTransparentBackgroundMask (1<<7)
 
@@ -35,8 +35,8 @@
 }
 
 #pragma mark -
-/**
-* @brief Designated initializer for PNWindow instances
+/*
+ * @brief Designated initializer for PNWindow instances
  *
  * @param windowId	The native CGSWindow id that is wrapped by the initialized instance
  *
@@ -54,8 +54,8 @@
 	return nil;
 }
 
-/**
-* @brief Initializer for PNWindow instances
+/*
+ * @brief Initializer for PNWindow instances
  *
  * @param window	The native NSWindow instance that should be wrapped by the initialized instance
  *
@@ -69,7 +69,7 @@
 }
 
 - (void) dealloc {
-	ZEN_RELEASE(mIcon);
+	[mIcon release];
   
 	[super dealloc];
 }
@@ -180,14 +180,14 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName: PNWindowDidChangeDesktop object: self userInfo: userInfo];
 }
 
-/**
-* @brief Attaches the window to the passed desktop
+/*
+ * @brief Attaches the window to the passed desktop
  *
  * @param desktop The desktop that will become the owner of this window
  *
  */
 - (void) setDesktop: (PNDesktop*) desktop {
-	// we won't allow setting a nil desktop
+	// We won't allow setting a nil desktop
 	if (desktop == nil)
 		return;
   
@@ -273,8 +273,8 @@
 }
 
 #pragma mark -
-/**
-* @brief Sets the window to be stickied according to the passed flag
+/*
+ * @brief Sets the window to be stickied according to the passed flag
  *
  * @param stickyState If set ot @c YES, the window will be stickied, if
  *						set to @c NO, the window will become nonsticky.
@@ -369,7 +369,7 @@
 #pragma mark -
 - (NSImage*) icon {
 	if (mIcon == nil) {
-		mIcon = [[NSImage imageNamed: @"imageWindow.png"] retain];
+		mIcon = [NSImage imageNamed: @"imageWindow.png"];
 	}
   
 	return mIcon;
