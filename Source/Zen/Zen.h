@@ -14,7 +14,10 @@
     @discussion This is a convenience header to import all related Zen components that contribute to the overall framework.
  */
 
-#import "ZenCocoaCategories.h" 
-#import "ZNMemoryManagementMacros.h" 
-#import "ZNFilesystemWatcher.h" 
-#import "ZNImagePopupButton.h"
+#import "Categories/ZenCocoaCategories.h"
+#import "Common/ZNEdge.h"
+#import "Common/ZNShading.h"
+#import "FileSystem/ZNFilesystemWatcher.h"
+#import "Macros/ZNMemoryManagementMacros.h"
+#import "Widgets/ZNEffectWindow.h"
+#import "Widgets/ZNImagePopupButton.h"

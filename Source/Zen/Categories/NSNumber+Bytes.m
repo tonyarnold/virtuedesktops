@@ -10,7 +10,7 @@
 //  See COPYING for licensing details
 //  
 
-#import "NSNumberBytes.h"
+#import "NSNumber+Bytes.h"
 
 
 @implementation NSNumber (ZenBytes)

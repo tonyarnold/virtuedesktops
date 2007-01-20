@@ -9,7 +9,7 @@
 //  
 
 #import <Carbon/Carbon.h> 
-#import "NSStringWithModifiers.h" 
+#import "NSString+Modifiers.h" 
 
 @implementation NSString(ZNKeyModifiers)
 

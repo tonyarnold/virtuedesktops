@@ -9,10 +9,11 @@
 //  
 
 /*!
-    @header     NSFileManager (ZenAlias)
+    @header     NSFileManager+Alias
     @abstract   Defines an NSFileManager category to add creation of alias handles
     @discussion The category contained in this header extends the default file manager to support the creation of alias handles via a simple, cocoa-like method.
 */
+
 #import <Cocoa/Cocoa.h>
 /*!
     @category     NSFileManager (ZenAlias)
@@ -20,7 +21,6 @@
     @discussion   This category extends the default file manager to support the creation of alias handles via a simple, cocoa-like method.
 */
 @interface NSFileManager (ZenAlias)
-
 /*!
     @method     makeAlias:
     @abstract   Create a new alias handle using a specified path
@@ -29,5 +29,4 @@
     @result     An AliasHandle for the specified path
 */
 - (AliasHandle) makeAlias: (NSString*) path; 
-
 @end

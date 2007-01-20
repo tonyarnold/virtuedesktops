@@ -10,7 +10,7 @@
 //  See COPYING for licensing details
 //  
 
-#import "NSMethodSignatureArguments.h"
+#import "NSMethodSignature+Arguments.h"
 
 
 @interface NSMethodSignature(NSMethodSignaturePrivate)

@@ -70,10 +70,10 @@
 		EA7A58710A86AE21000D6B5E /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A546B0A86A60B000D6B5E /* main.h */; };
 		EA7A58720A86AE32000D6B5E /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54890A86A663000D6B5E /* CGSPrivate.h */; };
 		EA7A58770A86AE45000D6B5E /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A56A30A86A738000D6B5E /* libDockCommunicator.a */; };
-		EA7A59020A86B08E000D6B5E /* NSFileManagerAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A59030A86B08E000D6B5E /* NSMethodSignatureArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D30A86A5B4000D6B5E /* NSMethodSignatureArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A59040A86B08E000D6B5E /* NSNumberBytes.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D50A86A5B4000D6B5E /* NSNumberBytes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A59050A86B08E000D6B5E /* NSStringWithModifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D70A86A5B4000D6B5E /* NSStringWithModifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7A59020A86B08E000D6B5E /* NSFileManager+Alias.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D10A86A5B4000D6B5E /* NSFileManager+Alias.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7A59030A86B08E000D6B5E /* NSMethodSignature+Arguments.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D30A86A5B4000D6B5E /* NSMethodSignature+Arguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7A59040A86B08E000D6B5E /* NSNumber+Bytes.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D50A86A5B4000D6B5E /* NSNumber+Bytes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7A59050A86B08E000D6B5E /* NSString+Modifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D70A86A5B4000D6B5E /* NSString+Modifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59060A86B08E000D6B5E /* Zen.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53EA0A86A5B4000D6B5E /* Zen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59070A86B08E000D6B5E /* ZenCocoaCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D90A86A5B4000D6B5E /* ZenCocoaCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59080A86B08E000D6B5E /* ZNEdge.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53DB0A86A5B4000D6B5E /* ZNEdge.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,17 +82,14 @@
 		EA7A590B0A86B08E000D6B5E /* ZNImagePopUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53E80A86A5B4000D6B5E /* ZNImagePopUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A590C0A86B08E000D6B5E /* ZNMemoryManagementMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53E40A86A5B4000D6B5E /* ZNMemoryManagementMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A590D0A86B08E000D6B5E /* ZNShading.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53DC0A86A5B4000D6B5E /* ZNShading.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A590E0A86B08E000D6B5E /* ZNUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53DE0A86A5B4000D6B5E /* ZNUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A59130A86B0C4000D6B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A58C20A86AEF7000D6B5E /* main.c */; };
-		EA7A59170A86B0E9000D6B5E /* NSFileManagerAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D20A86A5B4000D6B5E /* NSFileManagerAlias.m */; };
-		EA7A59180A86B0E9000D6B5E /* NSMethodSignatureArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D40A86A5B4000D6B5E /* NSMethodSignatureArguments.m */; };
-		EA7A59190A86B0E9000D6B5E /* NSNumberBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D60A86A5B4000D6B5E /* NSNumberBytes.m */; };
-		EA7A591A0A86B0E9000D6B5E /* NSStringWithModifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D80A86A5B4000D6B5E /* NSStringWithModifiers.m */; };
+		EA7A59170A86B0E9000D6B5E /* NSFileManager+Alias.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D20A86A5B4000D6B5E /* NSFileManager+Alias.m */; };
+		EA7A59180A86B0E9000D6B5E /* NSMethodSignature+Arguments.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D40A86A5B4000D6B5E /* NSMethodSignature+Arguments.m */; };
+		EA7A59190A86B0E9000D6B5E /* NSNumber+Bytes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D60A86A5B4000D6B5E /* NSNumber+Bytes.m */; };
+		EA7A591A0A86B0E9000D6B5E /* NSString+Modifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D80A86A5B4000D6B5E /* NSString+Modifiers.m */; };
 		EA7A591B0A86B0E9000D6B5E /* ZNEffectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53E70A86A5B4000D6B5E /* ZNEffectWindow.m */; };
 		EA7A591C0A86B0E9000D6B5E /* ZNFilesystemWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53E20A86A5B4000D6B5E /* ZNFilesystemWatcher.m */; };
 		EA7A591D0A86B0E9000D6B5E /* ZNImagePopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53E90A86A5B4000D6B5E /* ZNImagePopUpButton.m */; };
 		EA7A591E0A86B0E9000D6B5E /* ZNShading.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53DD0A86A5B4000D6B5E /* ZNShading.m */; };
-		EA7A591F0A86B0E9000D6B5E /* ZNUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53DF0A86A5B4000D6B5E /* ZNUUID.m */; };
 		EA7A59620A86B4F5000D6B5E /* Peony.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53EB0A86A5C5000D6B5E /* Peony.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59630A86B4F5000D6B5E /* PNApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53EC0A86A5C5000D6B5E /* PNApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59640A86B4F5000D6B5E /* PNDesktop.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53EE0A86A5C5000D6B5E /* PNDesktop.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -111,7 +108,6 @@
 		EA7A59730A86B522000D6B5E /* PNWindowList.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53F70A86A5C5000D6B5E /* PNWindowList.m */; };
 		EA7A59740A86B522000D6B5E /* PNWindowPool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53F90A86A5C5000D6B5E /* PNWindowPool.m */; };
 		EA7A59810A86B554000D6B5E /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A56A30A86A738000D6B5E /* libDockCommunicator.a */; };
-		EA7A5A0F0A86B5BB000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A5A490A86B63F000D6B5E /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54890A86A663000D6B5E /* CGSPrivate.h */; };
 		EA7A5A4B0A86B651000D6B5E /* NSBezierPathPlate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53FE0A86A5D8000D6B5E /* NSBezierPathPlate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A5A4C0A86B651000D6B5E /* NSBundlePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54000A86A5D8000D6B5E /* NSBundlePlugin.h */; settings = {ATTRIBUTES = (); }; };
@@ -464,6 +460,8 @@
 		EAC060F60A89679E00020B92 /* imageMouseTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56750A86A70C000D6B5E /* imageMouseTrigger.png */; };
 		EAC061060A89685D00020B92 /* imagePreferencesPagers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */; };
 		EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */; };
+		EAED24AC0B552CD8006E517B /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = EAED24AA0B552CD8006E517B /* NSString+UUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAED24AD0B552CD8006E517B /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = EAED24AB0B552CD8006E517B /* NSString+UUID.m */; };
 		EAF52D450ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */; };
 		EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */; };
 		EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
@@ -484,13 +482,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EA7A56A20A86A738000D6B5E;
 			remoteInfo = DockCommunicator;
-		};
-		EA7A59790A86B540000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
-			remoteInfo = Zen;
 		};
 		EA7A5ABE0A86B6CB000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -906,20 +897,18 @@
 		EA564FF00B2ED287004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA564FF20B2ED2D2004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA564FF40B2ED2E5004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAlias.h; sourceTree = "<group>"; };
-		EA7A53D20A86A5B4000D6B5E /* NSFileManagerAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerAlias.m; sourceTree = "<group>"; };
-		EA7A53D30A86A5B4000D6B5E /* NSMethodSignatureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMethodSignatureArguments.h; sourceTree = "<group>"; };
-		EA7A53D40A86A5B4000D6B5E /* NSMethodSignatureArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMethodSignatureArguments.m; sourceTree = "<group>"; };
-		EA7A53D50A86A5B4000D6B5E /* NSNumberBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberBytes.h; sourceTree = "<group>"; };
-		EA7A53D60A86A5B4000D6B5E /* NSNumberBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberBytes.m; sourceTree = "<group>"; };
-		EA7A53D70A86A5B4000D6B5E /* NSStringWithModifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringWithModifiers.h; sourceTree = "<group>"; };
-		EA7A53D80A86A5B4000D6B5E /* NSStringWithModifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringWithModifiers.m; sourceTree = "<group>"; };
+		EA7A53D10A86A5B4000D6B5E /* NSFileManager+Alias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Alias.h"; sourceTree = "<group>"; };
+		EA7A53D20A86A5B4000D6B5E /* NSFileManager+Alias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Alias.m"; sourceTree = "<group>"; };
+		EA7A53D30A86A5B4000D6B5E /* NSMethodSignature+Arguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+Arguments.h"; sourceTree = "<group>"; };
+		EA7A53D40A86A5B4000D6B5E /* NSMethodSignature+Arguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+Arguments.m"; sourceTree = "<group>"; };
+		EA7A53D50A86A5B4000D6B5E /* NSNumber+Bytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Bytes.h"; sourceTree = "<group>"; };
+		EA7A53D60A86A5B4000D6B5E /* NSNumber+Bytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Bytes.m"; sourceTree = "<group>"; };
+		EA7A53D70A86A5B4000D6B5E /* NSString+Modifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Modifiers.h"; sourceTree = "<group>"; };
+		EA7A53D80A86A5B4000D6B5E /* NSString+Modifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Modifiers.m"; sourceTree = "<group>"; };
 		EA7A53D90A86A5B4000D6B5E /* ZenCocoaCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenCocoaCategories.h; sourceTree = "<group>"; };
 		EA7A53DB0A86A5B4000D6B5E /* ZNEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNEdge.h; sourceTree = "<group>"; };
 		EA7A53DC0A86A5B4000D6B5E /* ZNShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNShading.h; sourceTree = "<group>"; };
 		EA7A53DD0A86A5B4000D6B5E /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNShading.m; sourceTree = "<group>"; };
-		EA7A53DE0A86A5B4000D6B5E /* ZNUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNUUID.h; sourceTree = "<group>"; };
-		EA7A53DF0A86A5B4000D6B5E /* ZNUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNUUID.m; sourceTree = "<group>"; };
 		EA7A53E10A86A5B4000D6B5E /* ZNFilesystemWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNFilesystemWatcher.h; sourceTree = "<group>"; };
 		EA7A53E20A86A5B4000D6B5E /* ZNFilesystemWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNFilesystemWatcher.m; sourceTree = "<group>"; };
 		EA7A53E40A86A5B4000D6B5E /* ZNMemoryManagementMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNMemoryManagementMacros.h; sourceTree = "<group>"; };
@@ -1265,7 +1254,6 @@
 		EA7A56A30A86A738000D6B5E /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A58160A86AD7B000D6B5E /* DockExtension.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockExtension.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A58170A86AD7B000D6B5E /* DockExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DockExtension-Info.plist"; sourceTree = "<group>"; };
-		EA7A58C20A86AEF7000D6B5E /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EA7A58F80A86B076000D6B5E /* Zen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A58F90A86B076000D6B5E /* Zen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Zen-Info.plist"; sourceTree = "<group>"; };
 		EA7A59560A86B4D3000D6B5E /* Peony.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Peony.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1444,7 +1432,7 @@
 		EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButtonCell.m; sourceTree = "<group>"; };
 		EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
 		EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
-		EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TA Interface Palette.palette"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtue Interface Palette.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelInspector.h; sourceTree = "<group>"; };
 		EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelInspector.m; sourceTree = "<group>"; };
 		EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelPalette.h; sourceTree = "<group>"; };
@@ -1454,6 +1442,10 @@
 		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = en.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
 		EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorLabel.ibclassdescription; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EAE65ADA0B624D8100AC2655 /* Peony.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Peony.hdoc; path = Source/Peony/Peony.hdoc; sourceTree = "<group>"; };
+		EAE65AE10B624DE900AC2655 /* Zen.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Zen.hdoc; path = Source/Zen/Zen.hdoc; sourceTree = "<group>"; };
+		EAED24AA0B552CD8006E517B /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		EAED24AB0B552CD8006E517B /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
 		EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -1494,7 +1486,6 @@
 				EA7A65C00A8702ED000D6B5E /* Carbon.framework in Frameworks */,
 				EA7A65BB0A8702E2000D6B5E /* Cocoa.framework in Frameworks */,
 				EA7A59810A86B554000D6B5E /* libDockCommunicator.a in Frameworks */,
-				EA7A5A0F0A86B5BB000D6B5E /* Zen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1743,8 +1734,7 @@
 		EA7A53CF0A86A5A4000D6B5E /* Zen */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A58C20A86AEF7000D6B5E /* main.c */,
-				EA7A53D00A86A5B4000D6B5E /* CocoaExtensions */,
+				EA7A53D00A86A5B4000D6B5E /* Categories */,
 				EA7A53DA0A86A5B4000D6B5E /* Common */,
 				EA7A53E00A86A5B4000D6B5E /* FileSystem */,
 				EA7A53E30A86A5B4000D6B5E /* Macros */,
@@ -1754,20 +1744,22 @@
 			path = Zen;
 			sourceTree = "<group>";
 		};
-		EA7A53D00A86A5B4000D6B5E /* CocoaExtensions */ = {
+		EA7A53D00A86A5B4000D6B5E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A53D10A86A5B4000D6B5E /* NSFileManagerAlias.h */,
-				EA7A53D20A86A5B4000D6B5E /* NSFileManagerAlias.m */,
-				EA7A53D30A86A5B4000D6B5E /* NSMethodSignatureArguments.h */,
-				EA7A53D40A86A5B4000D6B5E /* NSMethodSignatureArguments.m */,
-				EA7A53D50A86A5B4000D6B5E /* NSNumberBytes.h */,
-				EA7A53D60A86A5B4000D6B5E /* NSNumberBytes.m */,
-				EA7A53D70A86A5B4000D6B5E /* NSStringWithModifiers.h */,
-				EA7A53D80A86A5B4000D6B5E /* NSStringWithModifiers.m */,
+				EAED24AA0B552CD8006E517B /* NSString+UUID.h */,
+				EAED24AB0B552CD8006E517B /* NSString+UUID.m */,
+				EA7A53D10A86A5B4000D6B5E /* NSFileManager+Alias.h */,
+				EA7A53D20A86A5B4000D6B5E /* NSFileManager+Alias.m */,
+				EA7A53D30A86A5B4000D6B5E /* NSMethodSignature+Arguments.h */,
+				EA7A53D40A86A5B4000D6B5E /* NSMethodSignature+Arguments.m */,
+				EA7A53D50A86A5B4000D6B5E /* NSNumber+Bytes.h */,
+				EA7A53D60A86A5B4000D6B5E /* NSNumber+Bytes.m */,
+				EA7A53D70A86A5B4000D6B5E /* NSString+Modifiers.h */,
+				EA7A53D80A86A5B4000D6B5E /* NSString+Modifiers.m */,
 				EA7A53D90A86A5B4000D6B5E /* ZenCocoaCategories.h */,
 			);
-			path = CocoaExtensions;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		EA7A53DA0A86A5B4000D6B5E /* Common */ = {
@@ -1776,8 +1768,6 @@
 				EA7A53DB0A86A5B4000D6B5E /* ZNEdge.h */,
 				EA7A53DC0A86A5B4000D6B5E /* ZNShading.h */,
 				EA7A53DD0A86A5B4000D6B5E /* ZNShading.m */,
-				EA7A53DE0A86A5B4000D6B5E /* ZNUUID.h */,
-				EA7A53DF0A86A5B4000D6B5E /* ZNUUID.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2442,7 +2432,7 @@
 				EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */,
 				EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */,
 				EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */,
-				EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */,
+				EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2656,6 +2646,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7A53CA0A86A576000D6B5E /* Source */,
+				EAE65AD40B624D6800AC2655 /* Documentation */,
 				EA7A54870A86A658000D6B5E /* Shared */,
 				EA7A564E0A86A705000D6B5E /* Data */,
 				EA7A6AAF0A8709C2000D6B5E /* Localisation */,
@@ -2696,6 +2687,15 @@
 			path = "TA Interface Palette";
 			sourceTree = "<group>";
 		};
+		EAE65AD40B624D6800AC2655 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				EAE65ADA0B624D8100AC2655 /* Peony.hdoc */,
+				EAE65AE10B624DE900AC2655 /* Zen.hdoc */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2714,10 +2714,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A59020A86B08E000D6B5E /* NSFileManagerAlias.h in Headers */,
-				EA7A59030A86B08E000D6B5E /* NSMethodSignatureArguments.h in Headers */,
-				EA7A59040A86B08E000D6B5E /* NSNumberBytes.h in Headers */,
-				EA7A59050A86B08E000D6B5E /* NSStringWithModifiers.h in Headers */,
+				EA7A59020A86B08E000D6B5E /* NSFileManager+Alias.h in Headers */,
+				EA7A59030A86B08E000D6B5E /* NSMethodSignature+Arguments.h in Headers */,
+				EA7A59040A86B08E000D6B5E /* NSNumber+Bytes.h in Headers */,
+				EA7A59050A86B08E000D6B5E /* NSString+Modifiers.h in Headers */,
 				EA7A59060A86B08E000D6B5E /* Zen.h in Headers */,
 				EA7A59070A86B08E000D6B5E /* ZenCocoaCategories.h in Headers */,
 				EA7A59080A86B08E000D6B5E /* ZNEdge.h in Headers */,
@@ -2726,7 +2726,7 @@
 				EA7A590B0A86B08E000D6B5E /* ZNImagePopUpButton.h in Headers */,
 				EA7A590C0A86B08E000D6B5E /* ZNMemoryManagementMacros.h in Headers */,
 				EA7A590D0A86B08E000D6B5E /* ZNShading.h in Headers */,
-				EA7A590E0A86B08E000D6B5E /* ZNUUID.h in Headers */,
+				EAED24AC0B552CD8006E517B /* NSString+UUID.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2884,7 +2884,6 @@
 			buildConfigurationList = EA7A58FA0A86B076000D6B5E /* Build configuration list for PBXNativeTarget "Zen" */;
 			buildPhases = (
 				EA7A58F30A86B076000D6B5E /* Headers */,
-				EA7A58F40A86B076000D6B5E /* Resources */,
 				EA7A58F50A86B076000D6B5E /* Sources */,
 				EA7A58F60A86B076000D6B5E /* Frameworks */,
 			);
@@ -2910,7 +2909,6 @@
 			);
 			dependencies = (
 				EA7A59780A86B534000D6B5E /* PBXTargetDependency */,
-				EA7A597A0A86B540000D6B5E /* PBXTargetDependency */,
 			);
 			name = Peony;
 			productName = Peony;
@@ -3137,7 +3135,6 @@
 				EA7A696D0A870826000D6B5E /* CopyFiles */,
 				EA7A697E0A870880000D6B5E /* CopyFiles */,
 				EA7A63DE0A86FE65000D6B5E /* Frameworks */,
-				EAF826A80A91FB26008612A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -3200,7 +3197,7 @@
 			);
 			name = "TA Interface Palette";
 			productName = "Virtue Interface Palette";
-			productReference = EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */;
+			productReference = EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -3209,6 +3206,7 @@
 		EAA9266D0A86A4E800D4674B /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -3251,6 +3249,7 @@
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
+			shouldCheckCompatibility = 1;
 			targets = (
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,
@@ -3275,13 +3274,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EA7A58F40A86B076000D6B5E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA7A59520A86B4D3000D6B5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3524,19 +3516,6 @@
 			shellPath = "/usr/bin/env perl";
 			shellScript = "foreach my $name ('TAUserInterfaceElements') {\n  my $exec_cmd = '/usr/bin/install_name_tool -change \"@executable_path/../Frameworks/' . $name . '.framework/Versions/A/' . $name . '\" \"@loader_path/../Frameworks/' . $name . '.framework/Versions/A/' . $name . '\" \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/MacOS/${PRODUCT_NAME}\"';\n  my $exec_cmd_result = `$exec_cmd`;\n}";
 		};
-		EAF826A80A91FB26008612A2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\t\nmy\t$version = $REV;\n\t$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\t\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/0000/$version/mg;\n\t\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3572,16 +3551,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7A59130A86B0C4000D6B5E /* main.c in Sources */,
-				EA7A59170A86B0E9000D6B5E /* NSFileManagerAlias.m in Sources */,
-				EA7A59180A86B0E9000D6B5E /* NSMethodSignatureArguments.m in Sources */,
-				EA7A59190A86B0E9000D6B5E /* NSNumberBytes.m in Sources */,
-				EA7A591A0A86B0E9000D6B5E /* NSStringWithModifiers.m in Sources */,
+				EA7A59170A86B0E9000D6B5E /* NSFileManager+Alias.m in Sources */,
+				EA7A59180A86B0E9000D6B5E /* NSMethodSignature+Arguments.m in Sources */,
+				EA7A59190A86B0E9000D6B5E /* NSNumber+Bytes.m in Sources */,
+				EA7A591A0A86B0E9000D6B5E /* NSString+Modifiers.m in Sources */,
 				EA7A591B0A86B0E9000D6B5E /* ZNEffectWindow.m in Sources */,
 				EA7A591C0A86B0E9000D6B5E /* ZNFilesystemWatcher.m in Sources */,
 				EA7A591D0A86B0E9000D6B5E /* ZNImagePopUpButton.m in Sources */,
 				EA7A591E0A86B0E9000D6B5E /* ZNShading.m in Sources */,
-				EA7A591F0A86B0E9000D6B5E /* ZNUUID.m in Sources */,
+				EAED24AD0B552CD8006E517B /* NSString+UUID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3815,11 +3793,6 @@
 			isa = PBXTargetDependency;
 			target = EA7A56A20A86A738000D6B5E /* DockCommunicator */;
 			targetProxy = EA7A59770A86B534000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A597A0A86B540000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A58F70A86B076000D6B5E /* Zen */;
-			targetProxy = EA7A59790A86B540000D6B5E /* PBXContainerItemProxy */;
 		};
 		EA7A5ABF0A86B6CB000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4410,7 +4383,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4434,7 +4407,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4458,7 +4431,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4503,7 +4476,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4721,7 +4694,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4917,7 +4890,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -4943,7 +4916,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -4967,7 +4940,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -4993,7 +4966,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -5017,7 +4990,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -5039,7 +5012,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -5105,7 +5078,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -5128,7 +5101,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -5549,6 +5522,8 @@
 			buildSettings = {
 				ALTERNATE_GROUP = procmod;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_MARKETING_VERSION = 0.55;
+				CURRENT_PROJECT_VERSION = 2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
@@ -5667,7 +5642,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -5695,7 +5670,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
