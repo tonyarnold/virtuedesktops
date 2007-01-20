@@ -1,14 +1,12 @@
-/******************************************************************************
- * 
- * Zen 
- *
- * A foundations framework 
- *
- * Copyright 2004, Thomas Staller playback@users.sourceforge.net
- *
- * See COPYING for licensing details
- * 
- *****************************************************************************/ 
+//
+//  ZNMemoryManagementMacros.h
+//  Zen framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
 #define	ZEN_ASSIGN(aTarget, aSource) \
 if (aTarget != nil)					 \

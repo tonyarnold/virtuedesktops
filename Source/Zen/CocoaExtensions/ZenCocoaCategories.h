@@ -1,17 +1,15 @@
-/******************************************************************************
-* 
-* VirtueDesktops 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+//
+//  ZenCocoaCategories.h
+//  Zen framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
-#import "NSStringWithModifiers.h"
-#import "NSFileManagerAlias.h" 
-#import "NSMethodSignatureArguments.h" 
-#import "NSNumberBytes.h"
+#import "NSString+Modifiers.h"
+#import "NSFileManager+Alias.h" 
+#import "NSMethodSignature+Arguments.h" 
+#import "NSNumber+Bytes.h"
+#import "NSString+UUID.h"

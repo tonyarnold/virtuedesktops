@@ -1,15 +1,12 @@
-/******************************************************************************
-* 
-* Zen 
-*
-* A foundations framework 
-*
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+//
+//  ZNShading.m
+//  Zen framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
 #import <Cocoa/Cocoa.h>
 #import "ZNShading.h" 
@@ -107,37 +104,37 @@ static void ZNAxialShaderFunction(void* infoIn, const float* in, float* out) {
 	// calculate start and end point 
 	switch (startEdge) {
 		case ZNEdgeLeft: 
-			startPoint	= CGPointMake(frame.origin.x, frame.origin.y); 
-			endPoint	= CGPointMake(frame.size.width, frame.origin.y); 
+			startPoint  = CGPointMake(frame.origin.x, frame.origin.y); 
+			endPoint    = CGPointMake(frame.size.width, frame.origin.y); 
 			break; 
 		case ZNEdgeRight: 
-			startPoint	= CGPointMake(frame.size.width, frame.origin.y); 
-			endPoint	= CGPointMake(frame.origin.x, frame.origin.y); 
+			startPoint  = CGPointMake(frame.size.width, frame.origin.y); 
+			endPoint    = CGPointMake(frame.origin.x, frame.origin.y); 
 			break; 
 		case ZNEdgeBottom: 
-			startPoint	= CGPointMake(frame.origin.x, frame.origin.y); 
-			endPoint	= CGPointMake(frame.origin.x, frame.size.height); 
+			startPoint  = CGPointMake(frame.origin.x, frame.origin.y); 
+			endPoint    = CGPointMake(frame.origin.x, frame.size.height); 
 			break; 
 		case ZNEdgeTop: 
-			startPoint	= CGPointMake(frame.origin.x, frame.size.height); 
-			endPoint	= CGPointMake(frame.origin.x, frame.origin.y); 
+			startPoint  = CGPointMake(frame.origin.x, frame.size.height); 
+			endPoint    = CGPointMake(frame.origin.x, frame.origin.y); 
 			break; 
 		// Diagonals 
 		case ZNEdgeTopLeft: 
-			startPoint	= CGPointMake(frame.origin.x, frame.size.height); 
-			endPoint	= CGPointMake(frame.size.width, frame.origin.y); 
+			startPoint  = CGPointMake(frame.origin.x, frame.size.height); 
+			endPoint    = CGPointMake(frame.size.width, frame.origin.y); 
 			break; 
 		case ZNEdgeTopRight: 
-			startPoint	= CGPointMake(frame.size.width, frame.size.height); 
-			endPoint	= CGPointMake(frame.origin.x, frame.origin.y); 
+			startPoint  = CGPointMake(frame.size.width, frame.size.height); 
+			endPoint    = CGPointMake(frame.origin.x, frame.origin.y); 
 			break; 
 		case ZNEdgeBottomLeft: 
-			startPoint	= CGPointMake(frame.origin.x, frame.origin.y); 
-			endPoint	= CGPointMake(frame.size.width, frame.size.height); 
+			startPoint  = CGPointMake(frame.origin.x, frame.origin.y); 
+			endPoint    = CGPointMake(frame.size.width, frame.size.height); 
 			break; 
 		case ZNEdgeBottomRight: 
-			startPoint	= CGPointMake(frame.size.width, frame.origin.y); 
-			endPoint	= CGPointMake(frame.origin.x, frame.size.height); 
+			startPoint  = CGPointMake(frame.size.width, frame.origin.y); 
+			endPoint    = CGPointMake(frame.origin.x, frame.size.height); 
 			break; 
 		// Just to stop the warning
 		case ZNEdgeAny:

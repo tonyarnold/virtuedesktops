@@ -1,25 +1,19 @@
-/******************************************************************************
-* 
-* Zen 
-*
-* A foundations framework 
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************
-*
-* Copyright, Colloquy Project 
-* http://www.colloquy.info
-*
-*****************************************************************************/ 
+//
+//  NSNumberBytes.m
+//  Zen framework
+//  
+//  Originally taken from the Colloquy project - http://colloquy.info
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
 #import "NSNumberBytes.h"
 
 
-@implementation NSNumber(VTBytes)
+@implementation NSNumber (ZenBytes)
 
 + (NSNumber*) numberWithBytes: (const void*) bytes objCType: (const char*) type {
 	if( ! strcmp( type, @encode( char ) ) ) {
