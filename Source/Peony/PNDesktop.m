@@ -34,13 +34,13 @@
 + (PNDesktop*) desktopWithId: (int) desktopId 
 {
 	// Create a new desktop and associate it with the passed workspace id
-	return [[[PNDesktop alloc] initWithId: desktopId] autorelease];
+	return [[PNDesktop alloc] initWithId: desktopId];
 }
 
 + (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name 
 {
 	// Create a new desktop and associate it with the passed workspace id
-	return [[[PNDesktop alloc] initWithId: desktopId andName: name] autorelease];
+	return [[PNDesktop alloc] initWithId: desktopId andName: name];
 }
 
 #pragma mark -
@@ -51,7 +51,7 @@
 }
 
 
-- (id) initWithId: (int) desktopId 
+- (id) initWithId:(int)desktopId
 {
 	// generate default name
 	NSString* sDefaultName = [NSString stringWithFormat: @"Desktop %i", desktopId];
@@ -60,7 +60,7 @@
 	return [self initWithId: desktopId andName: sDefaultName];
 }
 
-- (id) initWithId: (int) desktopId andName: (NSString*) name {
+- (id) initWithId:(int)desktopId andName:(NSString*)name {
 	return [self initWithId: desktopId andName: name update: YES];
 }
 
@@ -76,9 +76,11 @@
 
 #pragma mark -
 #pragma mark NSCopying
-- (id) copyWithZone: (NSZone*) zone 
+- (id) copyWithZone:(NSZone*)zone
 {
-	PNDesktop* desktop = [[PNDesktop alloc] initWithId: mDesktopId andName: mDesktopName update: NO];
+	PNDesktop* desktop = [[PNDesktop alloc] initWithId: mDesktopId
+                                             andName: mDesktopName
+                                              update: NO];
   
 	desktop->mWindows				= [mWindows retain];
 	desktop->mApplications	= [mApplications retain];
@@ -446,7 +448,7 @@
 		CGSWindow iWindowId = ((int*)[oWindows mutableBytes])[i];
     
 		// get the window proxy
-		PNWindow* window = [[PNWindow windowWithWindowId: iWindowId] retain];
+		PNWindow* window = [PNWindow windowWithWindowId: iWindowId];
     
 		// ignore menus
     if (([window level] == NSPopUpMenuWindowLevel) ||
@@ -715,7 +717,7 @@
 {
 	// iterate through the list of windows until we find the passed window id
 	NSEnumerator*		windowIter	= [mWindows objectEnumerator];
-	PNWindow*		window		= nil;
+	PNWindow*       window		= nil;
   
 	while (window = [windowIter nextObject]) {
 		if ([window nativeWindow] == windowId)

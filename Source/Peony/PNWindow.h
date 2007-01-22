@@ -29,23 +29,20 @@ enum
 	kPnOrderTypeOut		= kCGSOrderOut,
 };
 
-/*
- * @interface	PNWindow
- * @brief		Lightweight wrapper around a CGSWindow
- *
- * This interface provides methods for window manipulation operations on 
- * CGSWindows. Instances can be created from a native CGSWindow id or 
- * by using an NSWindow as template. 
- * 
+/*!
+    @class      PNWindow
+    @abstract		Lightweight wrapper around a CGSWindow
+    @discussion This interface provides methods for window manipulation operations on CGSWindows. Instances can be created from a native CGSWindow id or by using an NSWindow as template. 
+
  */ 
 @interface PNWindow : NSObject<PNDesktopItem>
 {
-	CGSWindow   mNativeWindow;		//!< The native window that is wrapped 
-	pid_t		mOwnerPid;						//!< The pid of the window owner 
-	NSImage*	mIcon;							//!< Window icon 
+	CGSWindow   mNativeWindow;      //!< The native window that is wrapped 
+	pid_t       mOwnerPid;					//!< The pid of the window owner 
+	NSImage*    mIcon;							//!< Window icon 
 	
-	BOOL		mIsSticky;						//!< YES if the window is stickied 
-	BOOL		mIsSpecial;						//!< If YES, VirtueDesktops will not display this window 
+	BOOL		mIsSticky;              //!< YES if the window is stickied 
+	BOOL		mIsSpecial;             //!< If YES, VirtueDesktops will not display this window 
 	BOOL		mIsIgnoredByExpose; 
 }
 

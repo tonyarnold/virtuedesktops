@@ -49,20 +49,15 @@
 }
 
 #pragma mark -
-#pragma mark Operations 
+#pragma mark Operations
 
 - (PNWindow*) windowWithId: (CGSWindow) windowId {
-	// try to find it in our dictionary 
-	PNWindow* window = [mWindows objectForKey: [NSNumber numberWithInt: windowId]]; 
-	
 	// create and add it if necessary 
-	if (window == nil) {
-		window = [[PNWindow alloc] initWithWindowId: windowId]; 
-		[mWindows setObject: window forKey: [NSNumber numberWithInt: windowId]]; 
-		// releasing window as retained by the dictionary
+	if ([mWindows objectForKey: [NSNumber numberWithInt: windowId]] == nil) {
+		[mWindows setObject: [[PNWindow alloc] initWithWindowId: windowId] forKey: [NSNumber numberWithInt: windowId]]; 
 	}
   
-	return window; 
+	return [mWindows objectForKey: [NSNumber numberWithInt: windowId]]; 
 }
 
 #pragma mark -
