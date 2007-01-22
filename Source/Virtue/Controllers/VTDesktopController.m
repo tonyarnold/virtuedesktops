@@ -3,7 +3,7 @@
 * VirtueDesktops framework
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 *
@@ -20,7 +20,6 @@
 #import "VTDesktopBackgroundHelper.h" 
 
 #import <Zen/Zen.h> 
-#import <Zen/NSMethodSignatureArguments.h> 
 
 #define VTDesktops @"VTDesktops"
 
@@ -388,8 +387,8 @@
 	// desktop id 
 	int  desktopId = [PNDesktop firstDesktopIdentifier];
   NSArray* serialisedDesktops = [[NSUserDefaults standardUserDefaults] objectForKey: VTDesktops];
-	NSEnumerator*	serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
-	NSDictionary*	serialisedDesktopDictionary;
+	NSEnumerator*     serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
+	NSDictionary*     serialisedDesktopDictionary;
 	NSMutableArray*   uuidArray = [[NSMutableArray alloc] init];
 	
 	while (serialisedDesktopDictionary = [serialisedDesktopsIterator nextObject]) {
@@ -410,16 +409,12 @@
 	}
 	[uuidArray autorelease];
   
-	// if we still have zero desktops handy, we will trigger creation of 
-	// our default desktops 
+	// if we still have zero desktops handy, we will trigger creation of our default desktops 
 	if ([_desktops count] == 0)
 		[self createDefaultDesktops]; 
-	
-	VTDesktop* activeDesktop = [[[self activeDesktop] retain] autorelease]; 
-	
+		
 	// bind to active desktop 
-	[activeDesktop addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
-	
+	[[self activeDesktop] addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
 	
 	// and apply settings of active desktop 
 	mExpectingBackgroundChange = YES;

@@ -1,15 +1,12 @@
-/****************************************************************************
- *
- Peony framework
- *
- * A desktop extension for MacOS X
- *
- * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
- * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
- *
- * See COPYING for licensing details
- *
- ****************************************************************************/
+//
+//  PNWindowPool.h
+//  Peony framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
 #import <Foundation/Foundation.h>
 #import "CGSPrivate.h" 

@@ -1,15 +1,12 @@
-/****************************************************************************
- *
- Peony framework
- *
- * A desktop extension for MacOS X
- *
- * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
- * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
- *
- * See COPYING for licensing details
- *
- ****************************************************************************/
+//
+//  PNDesktop.m
+//  Peony framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+// 
 
 #import "PNDesktop.h"
 #import "PNWindow.h"
@@ -34,27 +31,12 @@
 #pragma mark -
 #pragma mark Lifetime
 
-/**
-* @brief		Factory for a desktop with passed id
- *
- * @param		desktopId		The workspace id that should be wrapped
- *
- * Returns an autoreleased desktop wrapper instance that is fully initialised and assigned a temporary desktop name.
- *
- */
 + (PNDesktop*) desktopWithId: (int) desktopId 
 {
 	// Create a new desktop and associate it with the passed workspace id
 	return [[[PNDesktop alloc] initWithId: desktopId] autorelease];
 }
 
-/**
-* @brief		Factory for a desktop with passed id and name
- *
- * @param		desktopId		The workspace id that should be wrapped
- * @param		andName			The desktop name
- *
- */
 + (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name 
 {
 	// Create a new desktop and associate it with the passed workspace id
@@ -63,23 +45,12 @@
 
 #pragma mark -
 
-/**
-* @brief We do not allow initialisation of a non-connected desktop proxy
- *
- */
 - (id) init 
 {
 	return [self initWithId: -1];
 }
 
-/**
-* @brief Initialiser for a desktop
- *
- * @param desktopId The workspace id that is wrapped
- *
- * A call to this initialiser will bind the desktop to the passed workspace and initialise the name of the desktop to the default name.
- *
- */
+
 - (id) initWithId: (int) desktopId 
 {
 	// generate default name
@@ -89,15 +60,6 @@
 	return [self initWithId: desktopId andName: sDefaultName];
 }
 
-/**
-* @brief Designated initialiser for a desktop
- *
- * @param desktopId The workspace id that is wrapped
- * @param andName		The desktop name
- *
- * A call to this initialiser will bind the desktop to the passed workspace and initialise the name of the desktop to the passed name.
- *
- */
 - (id) initWithId: (int) desktopId andName: (NSString*) name {
 	return [self initWithId: desktopId andName: name update: YES];
 }
@@ -126,12 +88,6 @@
 
 #pragma mark -
 #pragma mark Attributes
-
-/**
-* @brief		Returns the id of the desktop that is currently shown
- *
- * @return	The workspace id of the currently shown desktop or kPnDesktopInvalidId if there was an error.
- */
 + (int) activeDesktopIdentifier
 {
 	// Get a connection to the CoreGraphics server
@@ -150,10 +106,6 @@
 	return iWorkspaceId;
 }
 
-/**
-* @brief Returns the lowest possible valid desktop id
- *
- */
 + (int) firstDesktopIdentifier 
 {
 	return 1;
@@ -375,11 +327,10 @@
 	[window orderAbove: referenceWindow];
 }
 
-/**
-* @brief Orders the passed window to the back of the current desktop
- *
- * @param window	Window to bring to the back
- *
+/*!
+ @method orderWindowBack
+ @brief Orders the passed window to the back of the current desktop
+ @param window  Window to order to the back
  */
 - (void) orderWindowBack: (PNWindow*) window {
   if ([mWindows count] == 0)
@@ -396,9 +347,9 @@
   [window orderBelow: bmWindow];
 }
 
-/**
-* @brief Sends the window under cursor behind all windows on the desktop
- *
+/*!
+ @method    sendWindowUnderCursorBack
+ @abstract  Sends the window under cursor behind all windows on the desktop
  */
 - (void) sendWindowUnderCursorBack
 {
@@ -418,9 +369,10 @@
 #pragma mark -
 #pragma mark Moving windows
 
-/**
-* @brief Sends the window under the cursor to the specified desktop
- *
+/*!
+ @method    moveWindowUnderCursorToDesktop:
+ @abstract  Sends the window under the cursor to the specified desktop
+ @param     desktop   The target desktop
  */
 - (void) moveWindowUnderCursorToDesktop: (PNDesktop*) desktop
 {
@@ -440,24 +392,12 @@
 
 #pragma mark -
 #pragma mark Updating
-
-/**
-* @brief Clear the list of windows and fetch all windows in the workspace
- *
- * Queries windows for the wrapped desktop and adds new windows not yet contained
- * in the internal list of windows. Windows that are contained in the internal list
- * but were not returned by the windows query, will be removed from the internal
- * list. We also try to validate all sticky windows in this run and remove invalid
- * sticky windows (those that were closed) from the sticky window list.
- *
- * @note	This method is inherently costly, it should not be called every ms and
- *			the caller should be prepared to wait a bit here.
- *
- * @notify	kPnOnWindowRemoved
- *			Called if a window is no longer living on this desktop or was closed
- *
- * @todo	Optimize a bit here
- *
+/*!
+  @method     updateDesktop
+  @abstract   Clear the list of windows and fetch all windows in the workspace
+  @discussion Queries windows for the wrapped desktop and adds new windows not yet contained in the internal list of windows. Windows that are contained in the internal list but were not returned by the windows query, will be removed from the internal list. We also try to validate all sticky windows in this run and remove invalid sticky windows (those that were closed) from the sticky window list. 
+ 
+      This method is inherently costly, it should not be called every millisecond and the caller should be prepared to wait a bit here.
  */
 - (void) updateDesktop 
 {

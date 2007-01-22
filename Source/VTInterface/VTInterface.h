@@ -3,7 +3,7 @@
  *  VirtueDesktops
  *
  *  Created by Tony Arnold on 9/08/06.
- *  Copyright 2006 boomBalada! Productions. All rights reserved.
+ *  Copyright 2007 boomBalada! Productions. All rights reserved.
  *
  */
 

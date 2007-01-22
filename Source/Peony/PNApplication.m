@@ -1,12 +1,12 @@
-/******************************************************************************
-* Peony framework
-*
-* Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2007, Tony Arnold tony@tonyarnold.com
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+//
+//  PNApplication.m
+//  Peony framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
 #import "PNApplication.h"
 #import "PNWindowList.h"
@@ -194,25 +194,29 @@
     [mDesktop release];
   
   mDesktop = [desktop retain];
+  [mWindowList release];
+  
+  if (windowsForSwitching)
+    [windowsForSwitching release];
 }
 
 #pragma mark -
 
 - (NSString*) name 
 {  
-  char		buffer[1025];
+  char          buffer[1024];
   CFStringRef		pName;
   
   if( !_name )
   {
     if( !_name && (CopyProcessName( &mPsn, &pName) == noErr) )    // with thanks to Dylan Ashe
     {
-      CFStringGetCString( pName, buffer, 256, CFStringConvertNSStringEncodingToEncoding( [NSString defaultCStringEncoding]));
+      CFStringGetCString(pName, buffer, 256, CFStringConvertNSStringEncodingToEncoding([NSString defaultCStringEncoding]));
       
       _name = [NSString stringWithCString:buffer];
       [_name retain];
       
-      CFRelease( pName);
+      CFRelease(pName);
     }
     // CFBundleName code demoted to alternate method because it was causing plist processing issues in Jaguar, yet CopyProcessName doesn't work for everything, e.g. Help Viewer - njr
     else if( [self path] )

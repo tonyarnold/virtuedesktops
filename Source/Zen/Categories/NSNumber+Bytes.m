@@ -1,5 +1,5 @@
 //
-//  NSNumberBytes.m
+//  NSNumber+Bytes.m
 //  Zen framework
 //  
 //  Originally taken from the Colloquy project - http://colloquy.info

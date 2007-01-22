@@ -1,0 +1,5 @@
+/*!
+    @framework    Peony
+    @abstract     Classes for creating and managing "virtual desktops" by utilising Apple's workspace objects
+    @discussion   This framework does a lot of the management of creating, modifying and maintaining virtual desktops using Apple's workspace objects. It does not define a "layout" for the desktops - as far as the framework is concerned, the desktops have an order but no physical representation or orientation.
+*/

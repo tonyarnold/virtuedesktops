@@ -5,7 +5,7 @@
 * A desktop extension for MacOS X
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2005-2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -18,12 +18,14 @@
 
 - (NSScriptObjectSpecifier*) objectSpecifier {	
 	// find our container 
-	VTDesktop*		desktop				= [[VTDesktopController sharedInstance] desktopWithIdentifier: [self desktopId]]; 
-	PNApplication*	application	= [desktop applicationForPid: [self ownerPid]]; 
+	VTDesktop*      desktop			= [[[VTDesktopController sharedInstance] desktopWithIdentifier: [self desktopId]] retain]; 
+	PNApplication*	application	= [[desktop applicationForPid: [self ownerPid]] retain]; 
 	
 	int index = [[application windows] indexOfObject: self]; 
 	
 	NSScriptObjectSpecifier* containerRef = [application objectSpecifier]; 
+  [desktop release];
+  [application release];
 	return [[[NSIndexSpecifier alloc] initWithContainerClassDescription: [containerRef keyClassDescription] containerSpecifier: containerRef key: @"windows" index: index] autorelease]; 
 }
 

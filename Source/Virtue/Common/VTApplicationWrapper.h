@@ -16,20 +16,20 @@
 #import "VTDesktop.h" 
 
 @interface VTApplicationWrapper : NSObject<VTCoding> {
-  NSString* mBundlePath;
-  NSString* mBundleId;
+  NSString*   mBundlePath;
+  NSString*   mBundleId;
 	
 	// running applications 
-	pid_t     mPid; 
+	pid_t       mPid; 
 	// general 
 	NSString*   mTitle; 
 	NSImage*    mImage; 
 	VTDesktop*	mDesktop; 
-	BOOL		mSticky; 
-	BOOL		mHidden; 
-	BOOL		mBindDesktop;
-  BOOL		mUnfocused;
-  BOOL    mLaunching;
+	BOOL        mSticky; 
+	BOOL        mHidden; 
+	BOOL        mBindDesktop;
+  BOOL        mUnfocused;
+  BOOL        mLaunching;
 	
 	NSMutableArray*	mApplications; 
 }
@@ -55,7 +55,7 @@
 - (BOOL) isBindingToDesktop; 
 
 #pragma mark -
-- (void) setUnfocused: (BOOL) flag;
+- (void) setIsUnfocused: (BOOL) flag;
 - (BOOL) isUnfocused;
 
 #pragma mark -
@@ -65,7 +65,7 @@
 #pragma mark -
 - (NSImage*) icon; 
 - (NSArray*) windows; 
-- (NSString*) title; 
+- (NSString*) title;
 
 #pragma mark -
 - (pid_t) processIdentifier;

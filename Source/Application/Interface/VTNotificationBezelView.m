@@ -5,7 +5,7 @@
 * A desktop extension for MacOS X
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2005-2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -33,15 +33,12 @@ enum {
 		mDesktop		= nil; 
 		mDrawApplets	= NO; 
 		
-		mShadow = [[NSShadow alloc] init]; 
-		[mShadow setShadowColor: [NSColor blackColor]]; 
-		[mShadow setShadowOffset: NSMakeSize(0, -1)]; 
-		[mShadow setShadowBlurRadius: 3]; 
-		
 		NSShadow* textShadow = [[[NSShadow alloc] init] autorelease];
 		[textShadow setShadowColor: [NSColor blackColor]];
 		[textShadow setShadowOffset: NSMakeSize(0, -1)];
 		[textShadow setShadowBlurRadius: 3];
+    
+    ZEN_ASSIGN_COPY(mShadow, textShadow);
 		
 		// desktop name attributes 
 		mTextAttributes = [[NSMutableDictionary dictionaryWithObjectsAndKeys: 

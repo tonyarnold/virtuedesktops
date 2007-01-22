@@ -1,15 +1,12 @@
-/****************************************************************************
- *
- Peony framework
- *
- * A desktop extension for MacOS X
- *
- * Copyright 2004, Thomas Staller <playback@users.sourceforge.net>
- * Copyright 2007, Tony Arnold <tony@tonyarnold.com>
- *
- * See COPYING for licensing details
- *
- ****************************************************************************/
+//
+//  PNWindowPool.h
+//  Peony framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
 #import "PNWindowPool.h"
 #import "PNWindow.h" 
@@ -62,9 +59,9 @@
 	if (window == nil) {
 		window = [[PNWindow alloc] initWithWindowId: windowId]; 
 		[mWindows setObject: window forKey: [NSNumber numberWithInt: windowId]]; 
-		// releasing window as retained by the dictionary 
+		// releasing window as retained by the dictionary
 	}
-	
+  
 	return window; 
 }
 

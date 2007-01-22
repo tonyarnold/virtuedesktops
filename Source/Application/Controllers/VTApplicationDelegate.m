@@ -5,7 +5,7 @@
 * A desktop extension for MacOS X
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2005-2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 *
@@ -75,8 +75,8 @@ enum
 	return nil;
 }
 
-- (void) dealloc {
-	ZEN_RELEASE(mStatusItem);
+- (void) dealloc {  
+  ZEN_RELEASE(mStatusItem);
 	ZEN_RELEASE(mNotificationBezel);
 	ZEN_RELEASE(mPreferenceController);
 	ZEN_RELEASE(mOperationsController);
@@ -84,16 +84,9 @@ enum
 	ZEN_RELEASE(mDesktopInspector);
 	ZEN_RELEASE(mApplicationInspector);
 	
-	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout"];
-	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout.desktops"];
-	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"];
-	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"activeDesktop"];
-	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]];
-	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
-	
 	[mPluginController unloadPlugins];
 	ZEN_RELEASE(mPluginController);
-	
+  
 	[self unregisterObservers];
 	[super dealloc];
 }
@@ -347,7 +340,7 @@ enum
 }
 
 - (IBAction) showDonationsPage: (id) sender {
-	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.info/donations"]];
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://virtuedesktops.info/index.php/donations"]];
 }
 
 #pragma mark -
@@ -577,7 +570,7 @@ enum
 	VTDesktop* moveToDesktop = [[VTDesktopController sharedInstance] getDesktopInDirection: direction];
 	VTDesktop* activeDesktop = [[VTDesktopController sharedInstance] activeDesktop];
 	NSEnumerator* applicationIter = [[activeDesktop applications] objectEnumerator];
-	PNApplication* application = nil;
+	PNApplication* application    = nil;
 	
 	ProcessSerialNumber activePSN;
 	OSErr result = GetFrontProcess(&activePSN);
@@ -658,10 +651,12 @@ enum
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)anObject change:(NSDictionary *)theChange context:(void *)theContext
 {
-	if ([keyPath isEqualToString: @"desktops"] || [keyPath isEqualToString: @"activeLayout"] || [keyPath isEqualToString: @"activeLayout.desktops"]) {
+	if ([keyPath isEqualToString: @"desktops"] || [keyPath isEqualToString: @"activeLayout"] || [keyPath isEqualToString: @"activeLayout.desktops"]) 
+  {
 		mStatusItemMenuDesktopNeedsUpdate = YES;
 	}
-	else if ([keyPath isEqualToString: @"activeDesktop"]) {
+	else if ([keyPath isEqualToString: @"activeDesktop"]) 
+  {
 		mStatusItemMenuDesktopNeedsUpdate = YES;
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
 		
@@ -680,14 +675,17 @@ enum
       [self performSelector: @selector(postGrowlNotification) withObject: nil afterDelay: 1.0];
     
 	}
-	else if ([keyPath isEqualToString: @"applications"]) {
+	else if ([keyPath isEqualToString: @"applications"]) 
+  {
 		mStatusItemMenuDesktopNeedsUpdate = YES;
 		mStatusItemMenuActiveDesktopNeedsUpdate = YES;
 	}
-	else if ([keyPath hasSuffix: VTVirtueShowStatusbarMenu]) {
+	else if ([keyPath hasSuffix: VTVirtueShowStatusbarMenu]) 
+  {
 		[self updateStatusItem];
 	}
-	else if ([keyPath hasSuffix: VTVirtueShowStatusbarDesktopName]) {
+	else if ([keyPath hasSuffix: VTVirtueShowStatusbarDesktopName]) 
+  {
 		[self updateStatusItem];
 	}
 }
@@ -762,6 +760,13 @@ enum
 }
 
 - (void) unregisterObservers {
+  [[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout"];
+	[[VTLayoutController sharedInstance] removeObserver: self forKeyPath: @"activeLayout.desktops"];
+	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"];
+	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"activeDesktop"];
+	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarDesktopName]];
+	[[NSUserDefaultsController sharedUserDefaultsController] removeObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu]];
+  
 	[[NSNotificationCenter defaultCenter] removeObserver: self];
 	[[[NSWorkspace sharedWorkspace] notificationCenter] removeObserver: self];
 }
@@ -787,12 +792,11 @@ enum
 		
 		// check if we should set the desktop name as the title
 		if ([[NSUserDefaults standardUserDefaults] boolForKey: VTVirtueShowStatusbarDesktopName] == YES) {
-			NSDictionary *stringAttributes = [NSDictionary dictionaryWithObjectsAndKeys: [NSFont labelFontOfSize: 0], NSFontAttributeName, [NSColor darkGrayColor], NSForegroundColorAttributeName, nil];
 			NSString *stringTitle = [NSString stringWithFormat: @"[%@]", [[[VTDesktopController sharedInstance] activeDesktop] name]];
-			NSAttributedString *attributedStringTitle = [[NSAttributedString alloc] initWithString: stringTitle attributes: stringAttributes];
+			NSAttributedString *attributedStringTitle = [[NSAttributedString alloc] initWithString: stringTitle attributes: [NSDictionary dictionaryWithObjectsAndKeys: [NSFont labelFontOfSize: 0], NSFontAttributeName, [NSColor darkGrayColor], NSForegroundColorAttributeName, nil]];
 			
 			[mStatusItem setAttributedTitle: attributedStringTitle];
-      ZEN_RELEASE(attributedStringTitle);
+      [attributedStringTitle release];
 		}
 		else {
 			[mStatusItem setTitle: @""];
@@ -802,7 +806,7 @@ enum
 		if (mStatusItem) {
 			// remove the status item from the status bar and get rid of it
 			[[NSStatusBar systemStatusBar] removeStatusItem: mStatusItem];
-			ZEN_RELEASE(mStatusItem);
+			[mStatusItem release];
 		}
 	}
 }
@@ -885,16 +889,20 @@ enum
 	
 	while (application = [applicationIter nextObject]) {
 		NSString*	applicationTitle	= [application name];
-		NSImage*	applicationIcon		= [[[application icon] copy] autorelease];
-    [applicationIcon setSize: NSMakeSize(32.0,32.0)];
 		// do not add nil or empty application titles to the menu
 		if ((applicationTitle == nil) || ([applicationTitle length] == 0))
 			continue;
+    
 		
 		NSMenuItem* menuItem = [[NSMenuItem alloc] initWithTitle: applicationTitle action: nil keyEquivalent: @""];
 		[menuItem setRepresentedObject: application];
 		[menuItem setEnabled: YES];
+    
+    NSImage*	applicationIcon		= [application icon];
+    [applicationIcon setSize: NSMakeSize(32.0,32.0)];
 		[menuItem setImage: applicationIcon];
+    
+    
 		[menuItem setTag: kVtMenuItemMagicNumber];
 		[menuItem setTarget: self];
 		[menuItem setAction: @selector(onMenuApplicationWindowSelected:)];

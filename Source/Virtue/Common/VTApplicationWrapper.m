@@ -215,7 +215,7 @@
 }
 
 #pragma mark -
-- (void) setUnfocused: (BOOL) flag {
+- (void) setIsUnfocused: (BOOL) flag {
 	if (mUnfocused == flag)
 		return;
 	
@@ -226,7 +226,7 @@
 	PNApplication*	application		= nil; 
 	
 	while (application = [applicationIter nextObject]) {
-		[application setUnfocused: flag]; 
+		[application setIsUnfocused: flag]; 
 	}
   
   if (mLaunching = NO)
@@ -383,7 +383,7 @@
 	// check validity of this application 
 	if (([application name] == nil) || [[application name] isEqualToString: @""]) 
 		return; 
-	if (([application icon] == nil) || ([application bundlePath] == nil)) 
+	if (([application icon] == nil) || ([application path] == nil)) 
 		return; 
 	
 	// check if we already know about this instance 
@@ -396,7 +396,7 @@
 		[self willChangeValueForKey: @"running"]; 
 		
 		mPid	= [application pid];
-    ZEN_ASSIGN_COPY(mBundlePath, [application bundlePath]);
+    ZEN_ASSIGN_COPY(mBundlePath, [application path]);
     ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
     ZEN_ASSIGN_COPY(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);     
@@ -407,17 +407,25 @@
 	// now apply attributes 
 	[application setSticky: mSticky]; 
 	[application setIsHidden: mHidden];
-  [application setUnfocused: mUnfocused];
+  [application setIsUnfocused: mUnfocused];
 	
 	// check if we should move this application to another desktop 
 	if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
-		[application setDesktop: mDesktop];
+    // First move the application to the other desktop
+    [application setDesktop: mDesktop];
+    
+    // Then (if the preferences and circumstance are right) move to that desktop as well
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey: @"VTDesktopFollowsApplicationFocus"] && [application isFrontmost])
+//    {
+//      [[VTDesktopController sharedInstance] activateDesktop: mDesktop];
+//    }
+    
 	}
 	
-	// and add 
+	// ...and add 
 	[mApplications addObject: application]; 
-	// plus we are now officially interested in changes of the windows of this 
-	// application 
+  
+	// We are now officially interested in changes of the windows of this application 
 	[application addObserver: self forKeyPath: @"windows" options: NSKeyValueObservingOptionNew context: NULL]; 
 }
 
@@ -432,7 +440,7 @@
 		return; 
 	}
 	
-	// remove observer status 
+	// remove observer status
 	[application removeObserver: self forKeyPath: @"windows"]; 
 	// remove it from our list 
 	[mApplications removeObjectAtIndex: index]; 
@@ -470,9 +478,9 @@
 		// note change of our windows path
 		[self willChangeValueForKey: @"windows"];
     
-		// iterate all windows and move them if necessary 
+		// Iterate all windows and move them if necessary 
 		if ((mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
-			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
+			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
 		}
 		
 		[self didChangeValueForKey: @"windows"]; 
@@ -487,7 +495,7 @@
 @implementation VTApplicationWrapper (Binding) 
 
 - (void) createApplications {
-	// clean array 
+	// Clean array 
 	[mApplications removeAllObjects]; 
   
   mLaunching = YES;
@@ -498,16 +506,16 @@
   while (desktop = [desktopIter nextObject]) {
 		// walk all applications to find our bundle string 
 		NSEnumerator    *applicationIter	= [[desktop applications] objectEnumerator]; 
-		PNApplication   *application		= nil; 
+		PNApplication   *application      = nil; 
 		
 		while (application = [applicationIter nextObject]) {
-			if ([application bundlePath] && [[application bundlePath] isEqualToString: [self bundlePath]]) {
+			if ([application path] && [[application path] isEqualToString: [self bundlePath]]) {
 				[mApplications addObject: application]; 
 				
 				// now apply attributes 
 				[application setSticky: mSticky]; 
 				[application setIsHidden: mHidden]; 
-        [application setUnfocused: mUnfocused];
+        [application setIsUnfocused: mUnfocused];
 				
 				// plus we are now officially interested in changes of the windows of this application 
 				[application addObserver: self forKeyPath: @"windows" options: NSKeyValueObservingOptionNew context: NULL]; 
@@ -526,17 +534,18 @@
 		
 		mPid = [application pid]; 
 		
-    ZEN_ASSIGN_COPY(mBundlePath, [application bundlePath]);
+    ZEN_ASSIGN_COPY(mBundlePath, [application path]);
     ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
 		ZEN_ASSIGN_COPY(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);
-		
-		[application release]; 
-		
+				
 		// check if we should move this application to another desktop 
 		if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
-			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
+			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
 		}
+    
+    if (application)
+      [application release];
 		
 		return; 
 	}

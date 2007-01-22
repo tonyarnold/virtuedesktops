@@ -10,6 +10,10 @@
 * See COPYING for licensing details
 * 
 *****************************************************************************/ 
+/*!
+    @class       VTApplicationController
+    @abstract    Maintains and provides information about the current list of applications under the running user account
+*/
 
 #import "VTApplicationController.h"
 #import "VTDesktopController.h" 
@@ -266,8 +270,13 @@
 #pragma mark -
 @implementation VTApplicationController (Content) 
 
+/*!
+    @method     createApplications
+    @abstract   Gathers applications and adds them to the current controller
+    @discussion This method walks through our list of desktops, asking them for known application instances (those with attached windows), and adding them to the list of applications that this controller knows about. Once it has this list, it appends any running applications that the desktops were unaware of (this occurs when an application is an LSUIElement or has no recognised window instances).
+*/
+
 - (void) createApplications {
-  // walk all desktops and collect applications 
 	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator];
 	VTDesktop*		desktop		= nil; 
 	
@@ -276,7 +285,7 @@
 		PNApplication*	application		= nil; 
 		
 		while (application = [applicationIter nextObject]) {
-      NSString *applicationReferencePath = [NSString stringWithString: [application bundlePath]];
+      NSString *applicationReferencePath = [NSString stringWithString: [application path]];
       
 			if (applicationReferencePath != nil && [mApplications objectForKey: applicationReferencePath] == nil)
       {

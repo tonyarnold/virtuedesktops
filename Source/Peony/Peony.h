@@ -1,25 +1,22 @@
-/******************************************************************************
-* 
-Peony framework 
-*
-* A desktop extension for MacOS X
-*
-* Copyright 2004, Thomas Staller 
-* playback@users.sourceforge.net
-*
-* See COPYING for licensing details
-* 
-*****************************************************************************/ 
+//
+//  Peony.h
+//  Peony framework
+//
+//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+//
+//  See COPYING for licensing details
+//  
 
-// Peony Notifications 
+/*!
+    @header     Peony
+    @abstract   Convenience header to import all related Peony components that contribute to the overall framework
+    @discussion This is a convenience header to import all related Peony components that contribute to the overall framework.
+ */
+
 #import "PNNotifications.h" 
-// PNDesktopItem
 #import "PNDesktopItem.h" 
-// PNWindow
 #import "PNWindow.h"
-// PNWindowList 
 #import "PNWindowList.h" 
-// PNApplication
 #import "PNApplication.h" 
-// PNDesktop
 #import "PNDesktop.h"

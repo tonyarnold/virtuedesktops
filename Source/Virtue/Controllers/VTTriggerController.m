@@ -57,10 +57,8 @@
 
 - (void) dealloc {
 	// remove observer 
-	[[NSNotificationCenter defaultCenter]
-	removeObserver: self]; 
-	[[VTDesktopController sharedInstance] 
-	removeObserver: self forKeyPath: @"desktops"]; 
+	[[VTDesktopController sharedInstance] removeObserver: self forKeyPath: @"desktops"]; 
+  [[NSNotificationCenter defaultCenter] removeObserver: self]; 
 	
 	// free attributes 
 	ZEN_RELEASE(mNotifications); 

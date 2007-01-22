@@ -47,6 +47,7 @@
 		EA4D9D610B2D9BEA009B8605 /* dialog-information.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */; };
 		EA4D9D620B2D9BEC009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
 		EA575BD00A9DE7720020F318 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65980A870299000D6B5E /* ApplicationServices.framework */; };
+		EA5E5F0B0B64EC06004A1C6D /* version.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */; };
 		EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
 		EA662C230B4CDCD5000009EB /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */; };
 		EA662C240B4CDCD5000009EB /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */; };
@@ -436,8 +437,8 @@
 		EAC00E3C0AD1072800389BDB /* TAUIColorLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E3A0AD1072800389BDB /* TAUIColorLabelButton.m */; };
 		EAC00E440AD1075D00389BDB /* TAUIColorLabelButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E420AD1075D00389BDB /* TAUIColorLabelButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAC00E450AD1075D00389BDB /* TAUIColorLabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */; };
-		EAC00E6E0AD1088700389BDB /* NSBezierPathPlate.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */; };
-		EAC00E6F0AD1088700389BDB /* NSBezierPathPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */; };
+		EAC00E6E0AD1088700389BDB /* NSBezierPath+Plate.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */; };
+		EAC00E6F0AD1088700389BDB /* NSBezierPath+Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */; };
 		EAC00E910AD108F700389BDB /* TAUserInterfaceElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */; };
 		EAC00E920AD108FC00389BDB /* TAUserInterfaceElements.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */; };
 		EAC00EA70AD109AC00389BDB /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
@@ -897,6 +898,7 @@
 		EA564FF00B2ED287004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA564FF20B2ED2D2004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA564FF40B2ED2E5004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
 		EA7A53D10A86A5B4000D6B5E /* NSFileManager+Alias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Alias.h"; sourceTree = "<group>"; };
 		EA7A53D20A86A5B4000D6B5E /* NSFileManager+Alias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Alias.m"; sourceTree = "<group>"; };
 		EA7A53D30A86A5B4000D6B5E /* NSMethodSignature+Arguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+Arguments.h"; sourceTree = "<group>"; };
@@ -1430,8 +1432,8 @@
 		EAC00E3A0AD1072800389BDB /* TAUIColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButton.m; sourceTree = "<group>"; };
 		EAC00E420AD1075D00389BDB /* TAUIColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUIColorLabelButtonCell.h; sourceTree = "<group>"; };
 		EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButtonCell.m; sourceTree = "<group>"; };
-		EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
-		EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
+		EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+Plate.h"; sourceTree = "<group>"; };
+		EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+Plate.m"; sourceTree = "<group>"; };
 		EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtue Interface Palette.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelInspector.h; sourceTree = "<group>"; };
 		EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelInspector.m; sourceTree = "<group>"; };
@@ -1442,6 +1444,8 @@
 		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = en.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
 		EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorLabel.ibclassdescription; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EACDEBBC0B643C6000E07F67 /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
+		EACDEBBD0B643C6700E07F67 /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
 		EAE65ADA0B624D8100AC2655 /* Peony.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Peony.hdoc; path = Source/Peony/Peony.hdoc; sourceTree = "<group>"; };
 		EAE65AE10B624DE900AC2655 /* Zen.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Zen.hdoc; path = Source/Zen/Zen.hdoc; sourceTree = "<group>"; };
 		EAED24AA0B552CD8006E517B /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
@@ -2653,6 +2657,7 @@
 				EA7A56A40A86A738000D6B5E /* Products */,
 				EA7A6A070A8708F2000D6B5E /* Property lists */,
 				EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */,
+				EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2664,8 +2669,10 @@
 				EAC00E3A0AD1072800389BDB /* TAUIColorLabelButton.m */,
 				EAC00E420AD1075D00389BDB /* TAUIColorLabelButtonCell.h */,
 				EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */,
-				EAC00E6C0AD1088700389BDB /* NSBezierPathPlate.h */,
-				EAC00E6D0AD1088700389BDB /* NSBezierPathPlate.m */,
+				EACDEBBC0B643C6000E07F67 /* NSBezierPathPlate.h */,
+				EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */,
+				EACDEBBD0B643C6700E07F67 /* NSBezierPathPlate.m */,
+				EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */,
 				EA8B6C330AD214A2001D1241 /* TAUIColorLabelColorTransformer.h */,
 				EA8B6C340AD214A2001D1241 /* TAUIColorLabelColorTransformer.m */,
 			);
@@ -2836,7 +2843,7 @@
 			files = (
 				EAC00E3B0AD1072800389BDB /* TAUIColorLabelButton.h in Headers */,
 				EAC00E440AD1075D00389BDB /* TAUIColorLabelButtonCell.h in Headers */,
-				EAC00E6E0AD1088700389BDB /* NSBezierPathPlate.h in Headers */,
+				EAC00E6E0AD1088700389BDB /* NSBezierPath+Plate.h in Headers */,
 				EA8B6C350AD214A2001D1241 /* TAUIColorLabelColorTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3206,7 +3213,6 @@
 		EAA9266D0A86A4E800D4674B /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = EAA9266E0A86A4E800D4674B /* Build configuration list for PBXProject "VirtueDesktops" */;
-			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -3249,7 +3255,6 @@
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			shouldCheckCompatibility = 1;
 			targets = (
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,
@@ -3476,6 +3481,7 @@
 				EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */,
 				EA99F6B40AE236090055D5D5 /* COPYING in Resources */,
 				EA4B683A0B2E0CAB0079CE21 /* Virtue-menu-highlighted.png in Resources */,
+				EA5E5F0B0B64EC06004A1C6D /* version.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3767,7 +3773,7 @@
 			files = (
 				EAC00E3C0AD1072800389BDB /* TAUIColorLabelButton.m in Sources */,
 				EAC00E450AD1075D00389BDB /* TAUIColorLabelButtonCell.m in Sources */,
-				EAC00E6F0AD1088700389BDB /* NSBezierPathPlate.m in Sources */,
+				EAC00E6F0AD1088700389BDB /* NSBezierPath+Plate.m in Sources */,
 				EA8B6C360AD214A2001D1241 /* TAUIColorLabelColorTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4787,6 +4793,7 @@
 		};
 		EA5D5FFB0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
 				COPY_PHASE_STRIP = YES;
@@ -5609,6 +5616,7 @@
 		};
 		EAA9266F0A86A4E800D4674B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_AUTO_VECTORIZATION = YES;
@@ -5622,6 +5630,7 @@
 		};
 		EAA926700A86A4E800D4674B /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					ppc,

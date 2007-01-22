@@ -5,18 +5,17 @@
 * A desktop extension for MacOS X
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2005-2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Peony/Peony.h> 
-
+#import <Peony/Peony.h>
 
 @interface VTNotificationBezelView : NSView {
-	NSShadow*				mShadow;			//!< Shadow for application icons 
+	NSShadow*             mShadow;			//!< Shadow for application icons 
 	NSMutableDictionary*	mTextAttributes;	//!< Attributes for desktop name text 
 	
 	NSString*	mText; 

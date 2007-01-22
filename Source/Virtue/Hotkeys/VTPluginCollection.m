@@ -13,7 +13,6 @@
 
 #import "VTPluginCollection.h"
 #import <Zen/Zen.h> 
-#import <Zen/NSNumberBytes.h> 
 
 @implementation VTPluginCollection
 

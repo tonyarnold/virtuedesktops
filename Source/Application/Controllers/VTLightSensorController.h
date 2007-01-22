@@ -3,7 +3,7 @@
 //  VirtueDesktops
 //
 //  Created by Tony on 23/08/06.
-//  Copyright 2006 boomBalada! Productions. All rights reserved.
+//  Copyright 2007 boomBalada! Productions. All rights reserved.
 //
 
 #include <Cocoa/Cocoa.h>

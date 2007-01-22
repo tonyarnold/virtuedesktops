@@ -6,7 +6,7 @@
 //  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
 //
 //  See COPYING for licensing details
-//  
+//
 
 #import "NSString+Modifiers.h"
 #import "NSFileManager+Alias.h" 

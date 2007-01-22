@@ -3,7 +3,7 @@
 //  TAUserInterfaceElements.framework
 //
 //  Created by Tony on 2/10/06.
-//  Copyright 2006 boomBalada! Productions..
+//  Copyright 2007 boomBalada! Productions..
 //  Some rights reserved: <http://creativecommons.org/licenses/by/2.5/>
 //
 

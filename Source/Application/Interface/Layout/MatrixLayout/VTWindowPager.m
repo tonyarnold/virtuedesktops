@@ -3,7 +3,7 @@
 //  VirtueDesktops
 //
 //  Created by Tony on 13/06/06.
-//  Copyright 2006 boomBalada! Productions. All rights reserved.
+//  Copyright 2007 boomBalada! Productions. All rights reserved.
 //
 
 #import "VTWindowPager.h"

@@ -1,0 +1,5 @@
+/*!
+    @framework    Zen
+    @abstract     A framework of handy utility methods, macros and categories
+    @discussion   This framework contains useful utility methods, macros and categories. Check out the memory management macros (ZNMemoryManagementMacros) for the answer to many pre-garbage collection woes.
+*/

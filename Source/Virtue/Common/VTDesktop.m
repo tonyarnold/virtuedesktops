@@ -3,7 +3,7 @@
  * VirtueDesktops framework
  *
  * Copyright 2004, Thomas Staller playback@users.sourceforge.net
- * Copyright 2006, Tony Arnold tony@tonyarnold.com
+ * Copyright 2007, Tony Arnold tony@tonyarnold.com
  *
  * See COPYING for licensing details
  *
@@ -30,7 +30,7 @@
 #pragma mark Lifetime
 
 + (id) desktopWithIdentifier: (int) identifier {
-	return [VTDesktop desktopWithName: nil identifier: identifier];
+	return [[VTDesktop desktopWithName: nil identifier: identifier] autorelease];
 }
 
 + (id) desktopWithName: (NSString*) name identifier: (int) identifier {
@@ -42,7 +42,7 @@
 	if (self = [super initWithId: identifier andName: name]) {
 		mDesktopBackgroundImagePath = nil;
 		mDecoration                 = [[VTDesktopDecoration alloc] initWithDesktop: self];
-		mUUID                       = [[ZNUUID uuid] retain];
+		mUUID                       = [NSString stringWithUUID];
 		mShowsBackground            = NO;
 		
 		return self;
@@ -127,7 +127,7 @@
 	
 	// ensure an UUID
 	if ((mUUID == nil) || ([mUUID length] == 0))
-		mUUID = [[ZNUUID uuid] retain];
+		mUUID = [NSString stringWithUUID];
 	
 	// now the decoration
 	[mDecoration decodeFromDictionary: [dictionary objectForKey: kVtCodingDecoration]];

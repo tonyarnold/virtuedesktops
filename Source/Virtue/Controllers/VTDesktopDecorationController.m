@@ -183,6 +183,7 @@
 	[pnWindow setIgnoredByExpose: YES];
 	[pnWindow setSticky: NO];
 	[window setAlphaValue: 1.0f];
+  [pnWindow release];
   
 	return window; 
 }

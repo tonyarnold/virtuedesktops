@@ -5,7 +5,7 @@
 * A desktop extension for MacOS X
 *
 * Copyright 2004, Thomas Staller playback@users.sourceforge.net
-* Copyright 2005-2006, Tony Arnold tony@tonyarnold.com
+* Copyright 2005-2007, Tony Arnold tony@tonyarnold.com
 *
 * See COPYING for licensing details
 * 
@@ -16,7 +16,6 @@
 #import <Virtue/VTPluginCollection.h> 
 #import <Virtue/VTFileSystemExtensions.h>
 #import <Zen/Zen.h> 
-#import <Zen/NSNumberBytes.h> 
 
 @interface VTPluginController (PluginLoading)
 - (NSArray*) pluginSearchPaths; 

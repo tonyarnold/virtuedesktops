@@ -3,7 +3,7 @@
 //  VirtueDesktops
 //
 //  Created by Tony on 12/06/06.
-//  Copyright 2006 boomBalada! Productions. All rights reserved.
+//  Copyright 2007 boomBalada! Productions. All rights reserved.
 //
 //  This class interfaces with the "UniMotion" library ( Version 0.3 - http://members.optusnet.com.au/lbramsay/programs/unimotion.html ) to allow motion-based switching between active desktops.
 //  Notes:
