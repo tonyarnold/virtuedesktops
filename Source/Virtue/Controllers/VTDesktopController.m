@@ -455,7 +455,7 @@
 }
 
 - (void) onUpdateDesktops: (NSTimer*) timer {
-	[_desktops makeObjectsPerformSelector: @selector(updateDesktop)]; 
+	[[self desktops] makeObjectsPerformSelector: @selector(updateDesktop)]; 
 	[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(onUpdateDesktops:) userInfo: nil repeats: NO]; 
 }
 

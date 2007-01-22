@@ -437,7 +437,7 @@
 	
   
 	// Copy the current list of windows for cross checking
-	NSMutableArray* previousWindows = [NSMutableArray arrayWithArray: mWindows];
+	NSMutableArray* previousWindows = [NSMutableArray arrayWithArray: [self windows]];
   
 	int i									= 0;
 	int currentListIndex	= 0;
@@ -449,6 +449,10 @@
     
 		// get the window proxy
 		PNWindow* window = [PNWindow windowWithWindowId: iWindowId];
+    [window retain];
+    
+    if (window == nil)
+      continue;
     
 		// ignore menus
     if (([window level] == NSPopUpMenuWindowLevel) ||
@@ -466,9 +470,14 @@
 			didChangeApplications = YES;
       
 			application = [[PNApplication alloc] initWithPid: [window ownerPid] onDesktop: self];
-			// and attach
-			[self attachApplication: application];
-			// and release application
+      
+      if (application != nil)
+      {
+        // and attach
+        [self attachApplication: application];
+      }
+      
+      // and release application
 			[application release];
 		}
 		
