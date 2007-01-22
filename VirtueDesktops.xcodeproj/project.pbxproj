@@ -424,8 +424,6 @@
 		EA7A69D70A870893000D6B5E /* VTLayoutPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */; };
 		EA7A69D80A870893000D6B5E /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */; };
 		EA7D76980A918A5500D36F0E /* VTAssignedTriggerArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */; };
-		EA8B6C350AD214A2001D1241 /* TAUIColorLabelColorTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8B6C330AD214A2001D1241 /* TAUIColorLabelColorTransformer.h */; };
-		EA8B6C360AD214A2001D1241 /* TAUIColorLabelColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8B6C340AD214A2001D1241 /* TAUIColorLabelColorTransformer.m */; };
 		EA8F2E8A0A93F9620047C92C /* DefaultPrimitiveNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E890A93F9620047C92C /* DefaultPrimitiveNames.strings */; };
 		EA8F2E9D0A93F99E0047C92C /* Notifications.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E9C0A93F99E0047C92C /* Notifications.strings */; };
 		EA8F2ECB0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2ECA0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib */; };
@@ -2844,7 +2842,6 @@
 				EAC00E3B0AD1072800389BDB /* TAUIColorLabelButton.h in Headers */,
 				EAC00E440AD1075D00389BDB /* TAUIColorLabelButtonCell.h in Headers */,
 				EAC00E6E0AD1088700389BDB /* NSBezierPath+Plate.h in Headers */,
-				EA8B6C350AD214A2001D1241 /* TAUIColorLabelColorTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3137,6 +3134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA7A63E30A86FE65000D6B5E /* Build configuration list for PBXNativeTarget "VirtueDesktops" */;
 			buildPhases = (
+				EA5E5FD10B64F6FD004A1C6D /* ShellScript */,
 				EA7A63DC0A86FE65000D6B5E /* Resources */,
 				EA7A63DD0A86FE65000D6B5E /* Sources */,
 				EA7A696D0A870826000D6B5E /* CopyFiles */,
@@ -3509,6 +3507,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EA5E5FD10B64F6FD004A1C6D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env perl";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/version.xcconfig\";\n#my $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy  $version = $REV;\n    $version =~ s/([\\\\d]*:)(\\\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+		};
 		EAC013FC0AD10D0C00389BDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3774,7 +3785,6 @@
 				EAC00E3C0AD1072800389BDB /* TAUIColorLabelButton.m in Sources */,
 				EAC00E450AD1075D00389BDB /* TAUIColorLabelButtonCell.m in Sources */,
 				EAC00E6F0AD1088700389BDB /* NSBezierPath+Plate.m in Sources */,
-				EA8B6C360AD214A2001D1241 /* TAUIColorLabelColorTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
