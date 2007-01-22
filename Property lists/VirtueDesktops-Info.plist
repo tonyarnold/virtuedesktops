@@ -24,7 +24,7 @@
 	<key>CFBundleExecutable</key>
 	<string>VirtueDesktops</string>
 	<key>CFBundleGetInfoString</key>
-	<string>${CURRENT_MARKETING_VERSION}, Copyright 2007 Tony Arnold</string>
+	<string>${CURRENT_MARKETING_VERSION} (${CURRENT_PROJECT_VERSION}), Copyright 2007 Tony Arnold</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>Virtue Help</string>
 	<key>CFBundleHelpBookName</key>
