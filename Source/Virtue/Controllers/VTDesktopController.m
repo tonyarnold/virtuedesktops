@@ -381,6 +381,8 @@
 	[[NSUserDefaults standardUserDefaults] setObject: desktopsArray forKey: VTDesktops]; 
 	// and sync 
 	[[NSUserDefaults standardUserDefaults] synchronize];
+  [desktopsArray release];
+  [desktopsUUIDs release];
 }
 
 - (void) deserializeDesktops {
@@ -407,7 +409,7 @@
 		
 		desktopId++; 
 	}
-	[uuidArray autorelease];
+	[uuidArray release];
   
 	// if we still have zero desktops handy, we will trigger creation of our default desktops 
 	if ([_desktops count] == 0)

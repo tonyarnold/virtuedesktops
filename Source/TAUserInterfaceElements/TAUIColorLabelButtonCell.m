@@ -46,13 +46,11 @@
     } else {
       [self setColor: [coder decodeObject]];
       BOOL mTmpSelected = NO;
-      [coder decodeValueOfObjCType: @encode(BOOL) 
-                                at: &mTmpSelected];
+      [coder decodeValueOfObjCType: @encode(BOOL) at: &mTmpSelected];
       [self setSelected: mTmpSelected];
     }
     TAUIColorLabelButtonType mTmpType;
-    [coder decodeValueOfObjCType: @encode(TAUIColorLabelButtonType) 
-                              at: &mTmpType];
+    [coder decodeValueOfObjCType: @encode(TAUIColorLabelButtonType) at: &mTmpType];
     [self setLabelType: mTmpType];
     return self;
   }
@@ -67,12 +65,10 @@
     [coder encodeBool:    [self selected] forKey: @"selected"];
   } else {
     [coder encodeObject: [self color]];
-    [coder encodeValueOfObjCType: @encode(BOOL) 
-                              at: &mSelected];
+    [coder encodeValueOfObjCType: @encode(BOOL) at: &mSelected];
   }
   
-  [coder encodeValueOfObjCType: @encode(TAUIColorLabelButtonType) 
-                            at: &mType];
+  [coder encodeValueOfObjCType: @encode(TAUIColorLabelButtonType) at: &mType];
   
 }
 
@@ -111,14 +107,14 @@
 #pragma mark -
 - (void) setLabelType: (TAUIColorLabelButtonType) type {
 	mType = type;
-  NSBundle *bundle = [NSBundle bundleForClass:[TAUIColorLabelButtonCell class]];
+  NSString *bundleResourcePath = [[NSBundle bundleForClass: [TAUIColorLabelButtonCell class]] resourcePath];
 	
-	// set image to display 
-	ZEN_RELEASE(mImage); 
+	// set image to display
+	ZEN_RELEASE(mImage);
 	if (mType == TAUIClearLabelType)
-    mImage = [[NSImage alloc] initByReferencingFile: [[NSBundle pathForResource:@"imageColorLabelClear" ofType:@"png" inDirectory: [bundle resourcePath]] retain]];
+    mImage = [[NSImage alloc] initByReferencingFile: [NSBundle pathForResource:@"imageColorLabelClear" ofType:@"png" inDirectory: bundleResourcePath]];
 	else
-    mImage = [[NSImage alloc] initByReferencingFile: [[NSBundle pathForResource:@"imageColorLabelMaskComposite" ofType:@"png" inDirectory: [bundle resourcePath]] retain]];
+    mImage = [[NSImage alloc] initByReferencingFile: [NSBundle pathForResource:@"imageColorLabelMaskComposite" ofType:@"png" inDirectory: bundleResourcePath]];
 	
 	[[self controlView] setNeedsDisplay: YES]; 
 }

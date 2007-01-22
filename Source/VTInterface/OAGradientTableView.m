@@ -140,7 +140,6 @@ static const CGFunctionCallbacks linearFunctionCallbacks = {0, &_linearColorBlen
     rowIndex = newRowIndex;
   }
   
-  
   CGFunctionRelease(linearBlendFunctionRef);
   CGColorSpaceRelease(colorSpace);
 }
