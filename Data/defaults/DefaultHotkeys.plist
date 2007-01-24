@@ -87,6 +87,16 @@
 						<key>type</key>
 						<string>VTTriggerNotification</string>
 					</dict>
+          <dict>
+						<key>enabled</key>
+						<true/>
+						<key>name</key>
+						<string>VTRequestShowPager</string>
+						<key>triggers</key>
+						<array/>
+						<key>type</key>
+						<string>VTTriggerNotification</string>
+					</dict>
 					<dict>
 						<key>enabled</key>
 						<true/>
