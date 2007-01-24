@@ -6,6 +6,36 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		EAF7BD870B67998D00A100FC /* VirtueDesktops complete */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EAF7BDC10B679A0600A100FC /* Build configuration list for PBXAggregateTarget "VirtueDesktops complete" */;
+			buildPhases = (
+				EAF7BDAA0B67999E00A100FC /* CopyFiles */,
+			);
+			dependencies = (
+				EAF7BD890B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD8B0B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD8D0B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD8F0B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD910B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD930B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD950B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD970B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD990B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD9B0B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD9D0B67999300A100FC /* PBXTargetDependency */,
+				EAF7BD9F0B67999300A100FC /* PBXTargetDependency */,
+				EAF7BDA10B67999300A100FC /* PBXTargetDependency */,
+				EAF7BDA30B67999300A100FC /* PBXTargetDependency */,
+				EAF7BDA50B67999300A100FC /* PBXTargetDependency */,
+				EAF7BDA70B67999300A100FC /* PBXTargetDependency */,
+			);
+			name = "VirtueDesktops complete";
+			productName = "VirtueDesktops complete";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		EA044F640AD39598008BB56A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA044F880AD39714008BB56A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
@@ -13,44 +43,24 @@
 		EA0EE4E70A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE4E60A93E8EC009F3FC1 /* VTDesktopTemplatePreferences.nib */; };
 		EA0EE4EB0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE4EA0A93E8F7009F3FC1 /* VTHotkeyPreferences.nib */; };
 		EA0EE57C0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE57B0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */; };
-		EA0EE5800A93ECBC009F3FC1 /* PrimitiveTintInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */; };
-		EA0EE5820A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */; };
 		EA0EE5860A93ECC3009F3FC1 /* VTAppearancePreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5850A93ECC3009F3FC1 /* VTAppearancePreferences.nib */; };
-		EA0EE5880A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */; };
 		EA0EE58A0A93ECC3009F3FC1 /* VTPluginPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5890A93ECC3009F3FC1 /* VTPluginPreferences.nib */; };
 		EA0EE58E0A93ECCE009F3FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */; };
 		EA121DEE0AD15DD40086403E /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA121DD60AD15DD40086403E /* InterfaceBuilder.framework */; };
-		EA2852620A8A745D009DB65B /* Virtue.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852610A8A745D009DB65B /* Virtue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2852670A8A75CC009DB65B /* VTInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA28A40B0AB16E0500EC10E5 /* VTFileSystemExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA28A40C0AB16E0500EC10E5 /* VTFileSystemExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */; };
-		EA2CECD70AD0B4F3002D32DA /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
-		EA2CECD80AD0B4F3002D32DA /* imageColorLabelMask.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56610A86A70C000D6B5E /* imageColorLabelMask.png */; };
-		EA2CECD90AD0B4F3002D32DA /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56620A86A70C000D6B5E /* imageColorLabelMaskBar.png */; };
-		EA2CECDA0AD0B4F3002D32DA /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56630A86A70C000D6B5E /* imageColorLabelMaskComposite.png */; };
 		EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56620A86A70C000D6B5E /* imageColorLabelMaskBar.png */; };
-		EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */; };
 		EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */; };
 		EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36CCE90A9C4F6B0081417B /* IOKit.framework */; };
 		EA4039570A89CDDE00807BE2 /* imageWidgetAddPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039550A89CDDE00807BE2 /* imageWidgetAddPressed.png */; };
 		EA4039580A89CDDE00807BE2 /* imageWidgetAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4039560A89CDDE00807BE2 /* imageWidgetAdd.png */; };
 		EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56540A86A70C000D6B5E /* iconDesktopFolder.icns */; };
 		EA4B683A0B2E0CAB0079CE21 /* Virtue-menu-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4B68390B2E0CAB0079CE21 /* Virtue-menu-highlighted.png */; };
-		EA4B68420B2E0D8D0079CE21 /* OAGradientTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4B68400B2E0D8D0079CE21 /* OAGradientTableView.h */; };
-		EA4B68430B2E0D8D0079CE21 /* OAGradientTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */; };
-		EA4B68480B2E0D970079CE21 /* VTScalingImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4B68440B2E0D970079CE21 /* VTScalingImageCell.h */; };
-		EA4B68490B2E0D970079CE21 /* VTScalingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */; };
-		EA4B684A0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4B68460B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h */; };
-		EA4B684B0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */; };
 		EA4D9D3E0B2D9BBC009B8605 /* preferences-system-windows.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2E0B2D9B88009B8605 /* preferences-system-windows.png */; };
 		EA4D9D440B2D9BDB009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
 		EA4D9D610B2D9BEA009B8605 /* dialog-information.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2D0B2D9B88009B8605 /* dialog-information.png */; };
 		EA4D9D620B2D9BEC009B8605 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA4D9D2C0B2D9B88009B8605 /* COPYING */; };
 		EA575BD00A9DE7720020F318 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65980A870299000D6B5E /* ApplicationServices.framework */; };
-		EA5E5F0B0B64EC06004A1C6D /* version.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */; };
-		EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
-		EA662C230B4CDCD5000009EB /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */; };
-		EA662C240B4CDCD5000009EB /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */; };
+		EA5E5F0B0B64EC06004A1C6D /* ProductVersion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EA5E5F0A0B64EC06004A1C6D /* ProductVersion.xcconfig */; };
+		EA6041860A8E588A00B511DA /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
 		EA6915E10B670C0D002C4F7A /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A56AA0A86A74E000D6B5E /* DECCgsExt.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546C0A86A623000D6B5E /* DECCgsExt.c */; };
 		EA7A56AB0A86A74E000D6B5E /* DECEvent.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546D0A86A623000D6B5E /* DECEvent.c */; };
@@ -108,125 +118,10 @@
 		EA7A59730A86B522000D6B5E /* PNWindowList.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53F70A86A5C5000D6B5E /* PNWindowList.m */; };
 		EA7A59740A86B522000D6B5E /* PNWindowPool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53F90A86A5C5000D6B5E /* PNWindowPool.m */; };
 		EA7A59810A86B554000D6B5E /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A56A30A86A738000D6B5E /* libDockCommunicator.a */; };
-		EA7A5A490A86B63F000D6B5E /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54890A86A663000D6B5E /* CGSPrivate.h */; };
-		EA7A5A4B0A86B651000D6B5E /* NSBezierPathPlate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53FE0A86A5D8000D6B5E /* NSBezierPathPlate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A4C0A86B651000D6B5E /* NSBundlePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54000A86A5D8000D6B5E /* NSBundlePlugin.h */; settings = {ATTRIBUTES = (); }; };
-		EA7A5A4D0A86B651000D6B5E /* NSColorString.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54020A86A5D8000D6B5E /* NSColorString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A4E0A86B651000D6B5E /* NSImageTint.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54040A86A5D8000D6B5E /* NSImageTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A4F0A86B651000D6B5E /* NSScreenOverallScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54060A86A5D8000D6B5E /* NSScreenOverallScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A500A86B651000D6B5E /* NSStringFSRef.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54080A86A5D8000D6B5E /* NSStringFSRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A510A86B651000D6B5E /* NSUserDefaultsColor.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A540A0A86A5D8000D6B5E /* NSUserDefaultsColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A520A86B651000D6B5E /* NSUserDefaultsControllerKeyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A540C0A86A5D8000D6B5E /* NSUserDefaultsControllerKeyFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A530A86B651000D6B5E /* VTApplicationController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A540F0A86A5D8000D6B5E /* VTApplicationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A540A86B651000D6B5E /* VTApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54110A86A5D8000D6B5E /* VTApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A550A86B651000D6B5E /* VTCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54130A86A5D8000D6B5E /* VTCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A560A86B651000D6B5E /* VTDecorationPrimitive.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A542E0A86A5D9000D6B5E /* VTDecorationPrimitive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A570A86B651000D6B5E /* VTDecorationPrimitiveInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A542C0A86A5D9000D6B5E /* VTDecorationPrimitiveInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A580A86B651000D6B5E /* VTDecorationPrimitiveScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A545D0A86A5D9000D6B5E /* VTDecorationPrimitiveScripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A590A86B651000D6B5E /* VTDecorationPrimitiveText.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54300A86A5D9000D6B5E /* VTDecorationPrimitiveText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A5A0A86B651000D6B5E /* VTDecorationPrimitiveTint.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54320A86A5D9000D6B5E /* VTDecorationPrimitiveTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A5B0A86B651000D6B5E /* VTDecorationPrimitiveWatermark.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54340A86A5D9000D6B5E /* VTDecorationPrimitiveWatermark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A5C0A86B651000D6B5E /* VTDesktop.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54140A86A5D8000D6B5E /* VTDesktop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A5D0A86B651000D6B5E /* VTDesktopBackgroundHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A541B0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A5E0A86B651000D6B5E /* VTDesktopController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A541D0A86A5D9000D6B5E /* VTDesktopController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A5F0A86B651000D6B5E /* VTDesktopControllerScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A545F0A86A5D9000D6B5E /* VTDesktopControllerScripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A600A86B651000D6B5E /* VTDesktopDecoration.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54360A86A5D9000D6B5E /* VTDesktopDecoration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A610A86B651000D6B5E /* VTDesktopDecorationController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A541F0A86A5D9000D6B5E /* VTDesktopDecorationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A620A86B651000D6B5E /* VTDesktopDecorationScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54610A86A5D9000D6B5E /* VTDesktopDecorationScripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A630A86B651000D6B5E /* VTDesktopDecorationView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54380A86A5D9000D6B5E /* VTDesktopDecorationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A640A86B651000D6B5E /* VTDesktopLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A544A0A86A5D9000D6B5E /* VTDesktopLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A650A86B651000D6B5E /* VTDesktopProtector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54210A86A5D9000D6B5E /* VTDesktopProtector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A660A86B651000D6B5E /* VTDesktopScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54630A86A5D9000D6B5E /* VTDesktopScripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A670A86B651000D6B5E /* VTHotkeyTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A543B0A86A5D9000D6B5E /* VTHotkeyTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A680A86B651000D6B5E /* VTInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54160A86A5D8000D6B5E /* VTInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A690A86B651000D6B5E /* VTLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A544C0A86A5D9000D6B5E /* VTLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A6A0A86B651000D6B5E /* VTLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54230A86A5D9000D6B5E /* VTLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A6B0A86B651000D6B5E /* VTModifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54180A86A5D9000D6B5E /* VTModifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A6C0A86B651000D6B5E /* VTMouseTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A543D0A86A5D9000D6B5E /* VTMouseTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A6D0A86B651000D6B5E /* VTMouseWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54250A86A5D9000D6B5E /* VTMouseWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A6E0A86B651000D6B5E /* VTMouseWatcherProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54270A86A5D9000D6B5E /* VTMouseWatcherProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A6F0A86B651000D6B5E /* VTNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54190A86A5D9000D6B5E /* VTNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A700A86B651000D6B5E /* VTPager.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A544D0A86A5D9000D6B5E /* VTPager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A710A86B651000D6B5E /* VTPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A544F0A86A5D9000D6B5E /* VTPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A720A86B651000D6B5E /* VTPluginCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A543F0A86A5D9000D6B5E /* VTPluginCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A730A86B651000D6B5E /* VTPluginDecoration.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54500A86A5D9000D6B5E /* VTPluginDecoration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A740A86B651000D6B5E /* VTPluginInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54510A86A5D9000D6B5E /* VTPluginInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A750A86B651000D6B5E /* VTPluginLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54530A86A5D9000D6B5E /* VTPluginLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A760A86B651000D6B5E /* VTPluginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54540A86A5D9000D6B5E /* VTPluginProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A770A86B651000D6B5E /* VTPluginScript.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54560A86A5D9000D6B5E /* VTPluginScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A780A86B651000D6B5E /* VTPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A790A86B651000D6B5E /* VTScriptPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54570A86A5D9000D6B5E /* VTScriptPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A7A0A86B651000D6B5E /* VTTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54410A86A5D9000D6B5E /* VTTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A7B0A86B651000D6B5E /* VTTriggerController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54280A86A5D9000D6B5E /* VTTriggerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A7C0A86B651000D6B5E /* VTTriggerDesktopNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54430A86A5D9000D6B5E /* VTTriggerDesktopNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A7D0A86B651000D6B5E /* VTTriggerGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54450A86A5D9000D6B5E /* VTTriggerGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A7E0A86B651000D6B5E /* VTTriggerNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A54470A86A5D9000D6B5E /* VTTriggerNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5A840A86B68E000D6B5E /* NSBezierPathPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53FF0A86A5D8000D6B5E /* NSBezierPathPlate.m */; };
-		EA7A5A850A86B68E000D6B5E /* NSBundlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54010A86A5D8000D6B5E /* NSBundlePlugin.m */; };
-		EA7A5A860A86B68E000D6B5E /* NSColorString.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54030A86A5D8000D6B5E /* NSColorString.m */; };
-		EA7A5A870A86B68E000D6B5E /* NSImageTint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54050A86A5D8000D6B5E /* NSImageTint.m */; };
-		EA7A5A880A86B68E000D6B5E /* NSScreenOverallScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54070A86A5D8000D6B5E /* NSScreenOverallScreen.m */; };
-		EA7A5A890A86B68E000D6B5E /* NSStringFSRef.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54090A86A5D8000D6B5E /* NSStringFSRef.m */; };
-		EA7A5A8A0A86B68E000D6B5E /* NSUserDefaultsColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A540B0A86A5D8000D6B5E /* NSUserDefaultsColor.m */; };
-		EA7A5A8B0A86B68E000D6B5E /* NSUserDefaultsControllerKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A540D0A86A5D8000D6B5E /* NSUserDefaultsControllerKeyFactory.m */; };
-		EA7A5A8C0A86B68E000D6B5E /* VTApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54100A86A5D8000D6B5E /* VTApplicationController.m */; };
-		EA7A5A8D0A86B68E000D6B5E /* VTApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54120A86A5D8000D6B5E /* VTApplicationWrapper.m */; };
-		EA7A5A8E0A86B68E000D6B5E /* VTDecorationPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A542F0A86A5D9000D6B5E /* VTDecorationPrimitive.m */; };
-		EA7A5A910A86B68E000D6B5E /* VTDecorationPrimitiveText.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54310A86A5D9000D6B5E /* VTDecorationPrimitiveText.m */; };
-		EA7A5A920A86B68E000D6B5E /* VTDecorationPrimitiveTint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54330A86A5D9000D6B5E /* VTDecorationPrimitiveTint.m */; };
-		EA7A5A930A86B68E000D6B5E /* VTDecorationPrimitiveWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54350A86A5D9000D6B5E /* VTDecorationPrimitiveWatermark.m */; };
-		EA7A5A940A86B68E000D6B5E /* VTDesktop.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54150A86A5D8000D6B5E /* VTDesktop.m */; };
-		EA7A5A950A86B68E000D6B5E /* VTDesktopBackgroundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A541C0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.m */; };
-		EA7A5A960A86B68E000D6B5E /* VTDesktopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A541E0A86A5D9000D6B5E /* VTDesktopController.m */; };
-		EA7A5A980A86B68E000D6B5E /* VTDesktopDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54370A86A5D9000D6B5E /* VTDesktopDecoration.m */; };
-		EA7A5A990A86B68E000D6B5E /* VTDesktopDecorationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54200A86A5D9000D6B5E /* VTDesktopDecorationController.m */; };
-		EA7A5A9B0A86B68E000D6B5E /* VTDesktopDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54390A86A5D9000D6B5E /* VTDesktopDecorationView.m */; };
-		EA7A5A9C0A86B68E000D6B5E /* VTDesktopLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A544B0A86A5D9000D6B5E /* VTDesktopLayout.m */; };
-		EA7A5A9F0A86B68E000D6B5E /* VTHotkeyTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A543C0A86A5D9000D6B5E /* VTHotkeyTrigger.m */; };
-		EA7A5AA00A86B68E000D6B5E /* VTInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54170A86A5D9000D6B5E /* VTInspector.m */; };
-		EA7A5AA10A86B68E000D6B5E /* VTLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54240A86A5D9000D6B5E /* VTLayoutController.m */; };
-		EA7A5AA20A86B68E000D6B5E /* VTMouseTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A543E0A86A5D9000D6B5E /* VTMouseTrigger.m */; };
-		EA7A5AA30A86B68E000D6B5E /* VTMouseWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54260A86A5D9000D6B5E /* VTMouseWatcher.m */; };
-		EA7A5AA40A86B68E000D6B5E /* VTPluginCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54400A86A5D9000D6B5E /* VTPluginCollection.m */; };
-		EA7A5AA50A86B68E000D6B5E /* VTPluginInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54520A86A5D9000D6B5E /* VTPluginInstance.m */; };
-		EA7A5AA70A86B68E000D6B5E /* VTPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A545B0A86A5D9000D6B5E /* VTPreferences.m */; };
-		EA7A5AA80A86B68E000D6B5E /* VTScriptPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54580A86A5D9000D6B5E /* VTScriptPlugin.m */; };
-		EA7A5AA90A86B68E000D6B5E /* VTTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54420A86A5D9000D6B5E /* VTTrigger.m */; };
-		EA7A5AAA0A86B68E000D6B5E /* VTTriggerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54290A86A5D9000D6B5E /* VTTriggerController.m */; };
-		EA7A5AAB0A86B68E000D6B5E /* VTTriggerDesktopNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54440A86A5D9000D6B5E /* VTTriggerDesktopNotification.m */; };
-		EA7A5AAC0A86B68E000D6B5E /* VTTriggerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54460A86A5D9000D6B5E /* VTTriggerGroup.m */; };
-		EA7A5AAD0A86B68E000D6B5E /* VTTriggerNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54480A86A5D9000D6B5E /* VTTriggerNotification.m */; };
-		EA7A5AB10A86B6AF000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A5ABB0A86B6B1000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A5B510A86B7D2000D6B5E /* authtool.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A558A0A86A6D0000D6B5E /* authtool.c */; };
-		EA7A5B700A86B885000D6B5E /* VTDecorationPrimitiveBindings.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A561A0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B710A86B885000D6B5E /* VTDecorationPrimitiveTextInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A561C0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B720A86B885000D6B5E /* VTDecorationPrimitiveTintInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A561E0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B730A86B885000D6B5E /* VTDecorationPrimitiveViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56200A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B740A86B885000D6B5E /* VTDecorationPrimitiveWatermarkInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56220A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B750A86B885000D6B5E /* VTHotkeyCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A560E0A86A6D1000D6B5E /* VTHotkeyCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B760A86B885000D6B5E /* VTPositionGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56150A86A6D1000D6B5E /* VTPositionGrid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B770A86B885000D6B5E /* VTPositionGridCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56170A86A6D1000D6B5E /* VTPositionGridCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B780A86B8C8000D6B5E /* VTHotkeyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56100A86A6D1000D6B5E /* VTHotkeyTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B790A86B8C8000D6B5E /* VTHotkeyTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A56120A86A6D1000D6B5E /* VTHotkeyTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A5B7E0A86B8EF000D6B5E /* VTDecorationPrimitiveBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */; };
-		EA7A5B7F0A86B8EF000D6B5E /* VTDecorationPrimitiveTextInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561D0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.m */; };
-		EA7A5B800A86B8EF000D6B5E /* VTDecorationPrimitiveTintInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561F0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.m */; };
-		EA7A5B810A86B8EF000D6B5E /* VTDecorationPrimitiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56210A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.m */; };
-		EA7A5B820A86B8EF000D6B5E /* VTDecorationPrimitiveWatermarkInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56230A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.m */; };
-		EA7A5B830A86B8EF000D6B5E /* VTHotkeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A560F0A86A6D1000D6B5E /* VTHotkeyCell.m */; };
-		EA7A5B840A86B8EF000D6B5E /* VTHotkeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56110A86A6D1000D6B5E /* VTHotkeyTextField.m */; };
-		EA7A5B850A86B8EF000D6B5E /* VTHotkeyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56130A86A6D1000D6B5E /* VTHotkeyTextView.m */; };
-		EA7A5B860A86B8EF000D6B5E /* VTPositionGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56160A86A6D1000D6B5E /* VTPositionGrid.m */; };
-		EA7A5B870A86B8EF000D6B5E /* VTPositionGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56180A86A6D1000D6B5E /* VTPositionGridCell.m */; };
-		EA7A5C5D0A86B915000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EA7A5C960A86B92A000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
-		EA7A5C970A86B92A000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A61A30A86F513000D6B5E /* VTDesktopColorLabelPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A562D0A86A6D1000D6B5E /* VTDesktopColorLabelPrimitive.m */; };
 		EA7A61A50A86F513000D6B5E /* VTPluginDesktopColorLabelPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A562F0A86A6D1000D6B5E /* VTPluginDesktopColorLabelPrimitive.m */; };
 		EA7A61A70A86F513000D6B5E /* VTPrimitiveDesktopColorLabelInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56310A86A6D1000D6B5E /* VTPrimitiveDesktopColorLabelInspector.m */; };
-		EA7A61AA0A86F535000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
-		EA7A61CD0A86F566000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A62060A86F571000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A620B0A86F57D000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A62400A86F696000D6B5E /* VTDesktopNamePrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56380A86A6D1000D6B5E /* VTDesktopNamePrimitive.m */; };
@@ -234,7 +129,6 @@
 		EA7A62420A86F696000D6B5E /* VTPrimitiveDesktopNameInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A563C0A86A6D1000D6B5E /* VTPrimitiveDesktopNameInspector.m */; };
 		EA7A62450A86F6C2000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A62460A86F6C2000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A62470A86F6C2000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A62670A86F7BA000D6B5E /* imagePreferencesAppearance.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A567B0A86A70C000D6B5E /* imagePreferencesAppearance.tiff */; };
 		EA7A62750A86F817000D6B5E /* VTAppearancePreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55B50A86A6D0000D6B5E /* VTAppearancePreferencesController.m */; };
 		EA7A62B90A86F8F9000D6B5E /* VTApplicationPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A629F0A86F89E000D6B5E /* VTApplicationPreferencesController.m */; };
@@ -248,17 +142,12 @@
 		EA7A62EF0A86FA91000D6B5E /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A568F0A86A70C000D6B5E /* imageWidgetInfoPressed.png */; };
 		EA7A63130A86FB04000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A63140A86FB04000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A63150A86FB04000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EA7A63160A86FB04000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
 		EA7A63490A86FC24000D6B5E /* VTHotkeyPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55CD0A86A6D0000D6B5E /* VTHotkeyPreferencesController.m */; };
 		EA7A634A0A86FC24000D6B5E /* VTTriggerToTypeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55CF0A86A6D0000D6B5E /* VTTriggerToTypeImage.m */; };
 		EA7A634C0A86FC2E000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A634D0A86FC2E000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A634E0A86FC2E000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EA7A634F0A86FC2E000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
 		EA7A63700A86FCFA000D6B5E /* VTLayoutPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A636E0A86FCFA000D6B5E /* VTLayoutPreferencesController.m */; };
 		EA7A63730A86FD17000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A63740A86FD17000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
 		EA7A63760A86FD17000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A63980A86FDC3000D6B5E /* iconExtension.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A638E0A86FDC3000D6B5E /* iconExtension.icns */; };
 		EA7A63990A86FDC3000D6B5E /* imageAction.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A638F0A86FDC3000D6B5E /* imageAction.tiff */; };
@@ -268,9 +157,6 @@
 		EA7A639D0A86FDC3000D6B5E /* imageWidgetInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63930A86FDC3000D6B5E /* imageWidgetInfo.png */; };
 		EA7A639E0A86FDC3000D6B5E /* imageWidgetInfoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A63940A86FDC3000D6B5E /* imageWidgetInfoPressed.png */; };
 		EA7A63A00A86FDC3000D6B5E /* VTPluginPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */; };
-		EA7A63A80A86FDEA000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A63A90A86FDEA000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EA7A63AB0A86FDEA000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A63EE0A86FE8F000D6B5E /* authtool in Resources */ = {isa = PBXBuildFile; fileRef = EA7A5B490A86B7C4000D6B5E /* authtool */; };
 		EA7A63F00A86FE9E000D6B5E /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA7A58160A86AD7B000D6B5E /* DockExtension.bundle */; };
 		EA7A63F30A86FED2000D6B5E /* iconVirtue.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56560A86A70C000D6B5E /* iconVirtue.icns */; };
@@ -374,8 +260,6 @@
 		EA7A648A0A8700E7000D6B5E /* VTTriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56050A86A6D1000D6B5E /* VTTriggerViewController.m */; };
 		EA7A64C00A870165000D6B5E /* libDockCommunicator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A56A30A86A738000D6B5E /* libDockCommunicator.a */; };
 		EA7A64C10A870165000D6B5E /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A64C20A870165000D6B5E /* Virtue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EA7A64C30A870165000D6B5E /* VTInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
 		EA7A64C40A870165000D6B5E /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A64C50A870172000D6B5E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
 		EA7A64D30A8701AA000D6B5E /* libUniMotion.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A55700A86A668000D6B5E /* libUniMotion.dylib */; };
@@ -389,10 +273,7 @@
 		EA7A65B60A8702D4000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA7A65BB0A8702E2000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA7A65C00A8702ED000D6B5E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65990A870299000D6B5E /* Carbon.framework */; };
-		EA7A65C50A8702F5000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
-		EA7A669C0A87031D000D6B5E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65990A870299000D6B5E /* Carbon.framework */; };
 		EA7A66A00A870329000D6B5E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659C0A870299000D6B5E /* Security.framework */; };
-		EA7A66A50A870334000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA7A66B30A870351000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA7A66C80A870376000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA7A66CD0A870381000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
@@ -409,26 +290,15 @@
 		EA7A66F40A8703C1000D6B5E /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659B0A870299000D6B5E /* PreferencePanes.framework */; };
 		EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A68860A870570000D6B5E /* CoreFoundation.framework */; };
 		EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */; };
-		EA7A69720A870848000D6B5E /* libUniMotion.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A55700A86A668000D6B5E /* libUniMotion.dylib */; };
-		EA7A69780A870874000D6B5E /* Peony.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
-		EA7A69790A870874000D6B5E /* Virtue.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */; };
-		EA7A697A0A870874000D6B5E /* VTInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A5B630A86B809000D6B5E /* VTInterface.framework */; };
-		EA7A697B0A870874000D6B5E /* Zen.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
-		EA7A69D10A870893000D6B5E /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A61790A86F366000D6B5E /* VTDesktopColorLabelPrimitive.plugin */; };
-		EA7A69D20A870893000D6B5E /* VTDesktopNamePrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62240A86F5C8000D6B5E /* VTDesktopNamePrimitive.plugin */; };
-		EA7A69D30A870893000D6B5E /* VTAppearancePreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62600A86F7AB000D6B5E /* VTAppearancePreferences.prefPane */; };
-		EA7A69D40A870893000D6B5E /* VTApplicationPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62AE0A86F8D6000D6B5E /* VTApplicationPreferences.prefPane */; };
-		EA7A69D50A870893000D6B5E /* VTDesktopTemplatePreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62D80A86F9AF000D6B5E /* VTDesktopTemplatePreferences.prefPane */; };
-		EA7A69D60A870893000D6B5E /* VTHotkeyPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63360A86FB4F000D6B5E /* VTHotkeyPreferences.prefPane */; };
-		EA7A69D70A870893000D6B5E /* VTLayoutPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */; };
-		EA7A69D80A870893000D6B5E /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */; };
+		EA7A69720A870848000D6B5E /* libUniMotion.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A55700A86A668000D6B5E /* libUniMotion.dylib */; };
+		EA7A69780A870874000D6B5E /* Peony.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
+		EA7A697B0A870874000D6B5E /* Zen.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7D76980A918A5500D36F0E /* VTAssignedTriggerArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */; };
 		EA82FB800B67064700E09099 /* ZNLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EA82FB7E0B67064700E09099 /* ZNLog.h */; };
 		EA82FB810B67064700E09099 /* ZNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FB7F0B67064700E09099 /* ZNLog.m */; };
 		EA8F2E8A0A93F9620047C92C /* DefaultPrimitiveNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E890A93F9620047C92C /* DefaultPrimitiveNames.strings */; };
 		EA8F2E9D0A93F99E0047C92C /* Notifications.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E9C0A93F99E0047C92C /* Notifications.strings */; };
 		EA8F2ECB0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2ECA0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib */; };
-		EA8F2EE00A93FA660047C92C /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */; };
 		EA94B9730A9456A000647E8E /* NetInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA94B9710A9456A000647E8E /* NetInfo.framework */; };
 		EA99F6B40AE236090055D5D5 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA99F6B30AE236090055D5D5 /* COPYING */; };
 		EAB6F67E0A9DE94E00B9B0E8 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A65980A870299000D6B5E /* ApplicationServices.framework */; };
@@ -439,7 +309,7 @@
 		EAC00E6E0AD1088700389BDB /* NSBezierPath+Plate.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */; };
 		EAC00E6F0AD1088700389BDB /* NSBezierPath+Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */; };
 		EAC00E910AD108F700389BDB /* TAUserInterfaceElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */; };
-		EAC00E920AD108FC00389BDB /* TAUserInterfaceElements.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */; };
+		EAC00E920AD108FC00389BDB /* TAUserInterfaceElements.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */; };
 		EAC00EA70AD109AC00389BDB /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
 		EAC00EA80AD109AC00389BDB /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56630A86A70C000D6B5E /* imageColorLabelMaskComposite.png */; };
 		EAC013B70AD10C2800389BDB /* ColorLabelInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */; };
@@ -462,10 +332,78 @@
 		EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */; };
 		EAED24AC0B552CD8006E517B /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = EAED24AA0B552CD8006E517B /* NSString+UUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAED24AD0B552CD8006E517B /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = EAED24AB0B552CD8006E517B /* NSString+UUID.m */; };
-		EAF52D450ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */; };
 		EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */; };
+		EAF7ACAE0B67924B00A100FC /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
+		EAF7ACAF0B67924B00A100FC /* Peony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
+		EAF7B4BE0B67930700A100FC /* NSBezierPathPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53FF0A86A5D8000D6B5E /* NSBezierPathPlate.m */; };
+		EAF7B4BF0B67930700A100FC /* NSBundlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54010A86A5D8000D6B5E /* NSBundlePlugin.m */; };
+		EAF7B4C00B67930700A100FC /* NSColorString.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54030A86A5D8000D6B5E /* NSColorString.m */; };
+		EAF7B4C10B67930700A100FC /* NSImageTint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54050A86A5D8000D6B5E /* NSImageTint.m */; };
+		EAF7B4C20B67930700A100FC /* NSScreenOverallScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54070A86A5D8000D6B5E /* NSScreenOverallScreen.m */; };
+		EAF7B4C30B67930700A100FC /* NSStringFSRef.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54090A86A5D8000D6B5E /* NSStringFSRef.m */; };
+		EAF7B4C40B67930700A100FC /* NSUserDefaultsColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A540B0A86A5D8000D6B5E /* NSUserDefaultsColor.m */; };
+		EAF7B4C50B67930700A100FC /* NSUserDefaultsControllerKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A540D0A86A5D8000D6B5E /* NSUserDefaultsControllerKeyFactory.m */; };
+		EAF7B4C60B67930700A100FC /* VTApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54100A86A5D8000D6B5E /* VTApplicationController.m */; };
+		EAF7B4C70B67930700A100FC /* VTApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54120A86A5D8000D6B5E /* VTApplicationWrapper.m */; };
+		EAF7B4C80B67930700A100FC /* VTDecorationPrimitive.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A542F0A86A5D9000D6B5E /* VTDecorationPrimitive.m */; };
+		EAF7B4CB0B67930700A100FC /* VTDecorationPrimitiveText.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54310A86A5D9000D6B5E /* VTDecorationPrimitiveText.m */; };
+		EAF7B4CC0B67930700A100FC /* VTDecorationPrimitiveTint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54330A86A5D9000D6B5E /* VTDecorationPrimitiveTint.m */; };
+		EAF7B4CD0B67930700A100FC /* VTDecorationPrimitiveWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54350A86A5D9000D6B5E /* VTDecorationPrimitiveWatermark.m */; };
+		EAF7B4CE0B67930700A100FC /* VTDesktop.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54150A86A5D8000D6B5E /* VTDesktop.m */; };
+		EAF7B4CF0B67930700A100FC /* VTDesktopBackgroundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A541C0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.m */; };
+		EAF7B4D00B67930700A100FC /* VTDesktopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A541E0A86A5D9000D6B5E /* VTDesktopController.m */; };
+		EAF7B4D20B67930700A100FC /* VTDesktopDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54370A86A5D9000D6B5E /* VTDesktopDecoration.m */; };
+		EAF7B4D30B67930700A100FC /* VTDesktopDecorationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54200A86A5D9000D6B5E /* VTDesktopDecorationController.m */; };
+		EAF7B4D50B67930700A100FC /* VTDesktopDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54390A86A5D9000D6B5E /* VTDesktopDecorationView.m */; };
+		EAF7B4D60B67930700A100FC /* VTDesktopLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A544B0A86A5D9000D6B5E /* VTDesktopLayout.m */; };
+		EAF7B4D70B67930700A100FC /* VTDesktopProtector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54220A86A5D9000D6B5E /* VTDesktopProtector.m */; };
+		EAF7B4D90B67930700A100FC /* VTFileSystemExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */; };
+		EAF7B4DA0B67930700A100FC /* VTHotkeyTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A543C0A86A5D9000D6B5E /* VTHotkeyTrigger.m */; };
+		EAF7B4DB0B67930700A100FC /* VTInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54170A86A5D9000D6B5E /* VTInspector.m */; };
+		EAF7B4DC0B67930700A100FC /* VTLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54240A86A5D9000D6B5E /* VTLayoutController.m */; };
+		EAF7B4DD0B67930700A100FC /* VTMouseTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A543E0A86A5D9000D6B5E /* VTMouseTrigger.m */; };
+		EAF7B4DE0B67930700A100FC /* VTMouseWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54260A86A5D9000D6B5E /* VTMouseWatcher.m */; };
+		EAF7B4DF0B67930700A100FC /* VTPluginCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54400A86A5D9000D6B5E /* VTPluginCollection.m */; };
+		EAF7B4E00B67930700A100FC /* VTPluginInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54520A86A5D9000D6B5E /* VTPluginInstance.m */; };
+		EAF7B4E20B67930700A100FC /* VTPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A545B0A86A5D9000D6B5E /* VTPreferences.m */; };
+		EAF7B4E30B67930700A100FC /* VTScriptPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54580A86A5D9000D6B5E /* VTScriptPlugin.m */; };
+		EAF7B4E40B67930700A100FC /* VTTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54420A86A5D9000D6B5E /* VTTrigger.m */; };
+		EAF7B4E50B67930700A100FC /* VTTriggerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54290A86A5D9000D6B5E /* VTTriggerController.m */; };
+		EAF7B4E60B67930700A100FC /* VTTriggerDesktopNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54440A86A5D9000D6B5E /* VTTriggerDesktopNotification.m */; };
+		EAF7B4E70B67930700A100FC /* VTTriggerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54460A86A5D9000D6B5E /* VTTriggerGroup.m */; };
+		EAF7B4E80B67930700A100FC /* VTTriggerNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A54480A86A5D9000D6B5E /* VTTriggerNotification.m */; };
+		EAF7B4E90B67932700A100FC /* OAGradientTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */; };
+		EAF7B4EA0B67932700A100FC /* VTDecorationPrimitiveBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */; };
+		EAF7B4EB0B67932700A100FC /* VTDecorationPrimitiveTextInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561D0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.m */; };
+		EAF7B4EC0B67932700A100FC /* VTDecorationPrimitiveTintInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A561F0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.m */; };
+		EAF7B4ED0B67932700A100FC /* VTDecorationPrimitiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56210A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.m */; };
+		EAF7B4EE0B67932700A100FC /* VTDecorationPrimitiveWatermarkInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56230A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.m */; };
+		EAF7B4EF0B67932700A100FC /* VTHotkeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A560F0A86A6D1000D6B5E /* VTHotkeyCell.m */; };
+		EAF7B4F00B67932700A100FC /* VTHotkeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56110A86A6D1000D6B5E /* VTHotkeyTextField.m */; };
+		EAF7B4F10B67932700A100FC /* VTHotkeyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56130A86A6D1000D6B5E /* VTHotkeyTextView.m */; };
+		EAF7B4F20B67932700A100FC /* VTPositionGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56160A86A6D1000D6B5E /* VTPositionGrid.m */; };
+		EAF7B4F30B67932700A100FC /* VTPositionGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A56180A86A6D1000D6B5E /* VTPositionGridCell.m */; };
+		EAF7B4F40B67932700A100FC /* VTScalingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */; };
+		EAF7B4F50B67932700A100FC /* VTVerticallyCentredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */; };
+		EAF7BDB40B6799DB00A100FC /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A61790A86F366000D6B5E /* VTDesktopColorLabelPrimitive.plugin */; };
+		EAF7BDB50B6799DB00A100FC /* VTDesktopNamePrimitive.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62240A86F5C8000D6B5E /* VTDesktopNamePrimitive.plugin */; };
+		EAF7BDB60B6799DB00A100FC /* VTAppearancePreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62600A86F7AB000D6B5E /* VTAppearancePreferences.prefPane */; };
+		EAF7BDB70B6799DB00A100FC /* VTApplicationPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62AE0A86F8D6000D6B5E /* VTApplicationPreferences.prefPane */; };
+		EAF7BDB80B6799DB00A100FC /* VTDesktopTemplatePreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A62D80A86F9AF000D6B5E /* VTDesktopTemplatePreferences.prefPane */; };
+		EAF7BDB90B6799DB00A100FC /* VTHotkeyPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63360A86FB4F000D6B5E /* VTHotkeyPreferences.prefPane */; };
+		EAF7BDBA0B6799DB00A100FC /* VTLayoutPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */; };
+		EAF7BDBB0B6799DB00A100FC /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */; };
+		EAF7BF0C0B67A01800A100FC /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */; };
+		EAF7BF0D0B67A01800A100FC /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */; };
+		EAF7BF100B67A02F00A100FC /* imageColorLabelClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56600A86A70C000D6B5E /* imageColorLabelClear.png */; };
+		EAF7BF110B67A02F00A100FC /* imageColorLabelMask.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56610A86A70C000D6B5E /* imageColorLabelMask.png */; };
+		EAF7BF120B67A02F00A100FC /* imageColorLabelMaskComposite.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56630A86A70C000D6B5E /* imageColorLabelMaskComposite.png */; };
+		EAF7BF130B67A02F00A100FC /* PrimitiveTextInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */; };
+		EAF7BF140B67A02F00A100FC /* PrimitiveTintInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */; };
+		EAF7BF150B67A02F00A100FC /* PrimitiveWatermarkInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */; };
+		EAF7BF160B67A02F00A100FC /* VTDecorationPrimitiveInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */; };
 		EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
-		EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
+		EAF823400A91F7FA008612A2 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,7 +411,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
 			remoteInfo = Zen;
 		};
 		EA7A583E0A86AD97000D6B5E /* PBXContainerItemProxy */ = {
@@ -490,41 +428,6 @@
 			remoteGlobalIDString = EA7A56A20A86A738000D6B5E;
 			remoteInfo = DockCommunicator;
 		};
-		EA7A5ABE0A86B6CB000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
-			remoteInfo = Zen;
-		};
-		EA7A5AC00A86B6CB000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
-			remoteInfo = Peony;
-		};
-		EA7A5CA00A86B93C000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
-			remoteInfo = Zen;
-		};
-		EA7A5CA20A86B93C000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
-			remoteInfo = Peony;
-		};
-		EA7A5CA40A86B93C000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
-		};
 		EA7A62140A86F593000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
@@ -538,20 +441,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
-		};
-		EA7A62180A86F593000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
-		};
-		EA7A621A0A86F593000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5B620A86B809000D6B5E;
-			remoteInfo = VTInterface;
 		};
 		EA7A631D0A86FB10000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -567,20 +456,6 @@
 			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
-		EA7A63210A86FB10000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
-		};
-		EA7A63230A86FB10000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5B620A86B809000D6B5E;
-			remoteInfo = VTInterface;
-		};
 		EA7A63AE0A86FE06000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
@@ -595,13 +470,6 @@
 			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
-		EA7A63B20A86FE06000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
-		};
 		EA7A63B60A86FE0F000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
@@ -615,41 +483,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
-		};
-		EA7A63BA0A86FE0F000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
-		};
-		EA7A63C00A86FE1E000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5B620A86B809000D6B5E;
-			remoteInfo = VTInterface;
-		};
-		EA7A63CA0A86FE39000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
-			remoteInfo = Zen;
-		};
-		EA7A63CC0A86FE39000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
-			remoteInfo = Peony;
-		};
-		EA7A63CE0A86FE39000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
 		};
 		EA7A67A20A87049A000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -679,82 +512,12 @@
 			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
-		EA7A67AA0A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5A250A86B5E6000D6B5E;
-			remoteInfo = Virtue;
-		};
 		EA7A67AC0A87049A000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EA7A5B480A86B7C4000D6B5E;
 			remoteInfo = authtool;
-		};
-		EA7A67AE0A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A5B620A86B809000D6B5E;
-			remoteInfo = VTInterface;
-		};
-		EA7A67B00A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A61780A86F366000D6B5E;
-			remoteInfo = VTDesktopColorLabelPrimitive;
-		};
-		EA7A67B20A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A62230A86F5C8000D6B5E;
-			remoteInfo = VTDesktopNamePrimitive;
-		};
-		EA7A67B40A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A625F0A86F7AB000D6B5E;
-			remoteInfo = VTAppearancePreferences;
-		};
-		EA7A67B60A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A62AD0A86F8D6000D6B5E;
-			remoteInfo = VTApplicationPreferences;
-		};
-		EA7A67B80A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A62D70A86F9AF000D6B5E;
-			remoteInfo = VTDesktopTemplatePreferences;
-		};
-		EA7A67BA0A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A63350A86FB4F000D6B5E;
-			remoteInfo = VTHotkeyPreferences;
-		};
-		EA7A67BC0A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A635B0A86FC58000D6B5E;
-			remoteInfo = VTLayoutPreferences;
-		};
-		EA7A67BE0A87049A000D6B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7A63820A86FD3D000D6B5E;
-			remoteInfo = VTPluginPreferences;
 		};
 		EAC00EA40AD1098100389BDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -777,6 +540,216 @@
 			remoteGlobalIDString = EAC0139D0AD10BA400389BDB;
 			remoteInfo = "Virtue Interface Palette";
 		};
+		EAF7BD2F0B67969200A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD4C0B67982C00A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD500B67985A00A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD520B67986A00A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD540B67986F00A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteInfo = Zen;
+		};
+		EAF7BD560B67986F00A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteInfo = Peony;
+		};
+		EAF7BD580B67988100A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteInfo = Zen;
+		};
+		EAF7BD5A0B67988100A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteInfo = Peony;
+		};
+		EAF7BD5C0B67988400A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD5E0B67989300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD600B67989300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteInfo = Zen;
+		};
+		EAF7BD620B67989300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteInfo = Peony;
+		};
+		EAF7BD790B6798A600A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD7D0B6798BB00A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD880B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteInfo = VirtueDesktops;
+		};
+		EAF7BD8A0B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A56A20A86A738000D6B5E /* DockCommunicator */;
+			remoteInfo = DockCommunicator;
+		};
+		EAF7BD8C0B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A58150A86AD7B000D6B5E /* DockExtension */;
+			remoteInfo = DockExtension;
+		};
+		EAF7BD8E0B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteInfo = Zen;
+		};
+		EAF7BD900B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteInfo = Peony;
+		};
+		EAF7BD920B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A5B480A86B7C4000D6B5E /* authtool */;
+			remoteInfo = authtool;
+		};
+		EAF7BD940B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A61780A86F366000D6B5E /* VTDesktopColorLabelPrimitive */;
+			remoteInfo = VTDesktopColorLabelPrimitive;
+		};
+		EAF7BD960B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A62230A86F5C8000D6B5E /* VTDesktopNamePrimitive */;
+			remoteInfo = VTDesktopNamePrimitive;
+		};
+		EAF7BD980B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A625F0A86F7AB000D6B5E /* VTAppearancePreferences */;
+			remoteInfo = VTAppearancePreferences;
+		};
+		EAF7BD9A0B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A62AD0A86F8D6000D6B5E /* VTApplicationPreferences */;
+			remoteInfo = VTApplicationPreferences;
+		};
+		EAF7BD9C0B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A62D70A86F9AF000D6B5E /* VTDesktopTemplatePreferences */;
+			remoteInfo = VTDesktopTemplatePreferences;
+		};
+		EAF7BD9E0B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63350A86FB4F000D6B5E /* VTHotkeyPreferences */;
+			remoteInfo = VTHotkeyPreferences;
+		};
+		EAF7BDA00B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A635B0A86FC58000D6B5E /* VTLayoutPreferences */;
+			remoteInfo = VTLayoutPreferences;
+		};
+		EAF7BDA20B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */;
+			remoteInfo = VTPluginPreferences;
+		};
+		EAF7BDA40B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC00E240AD1065C00389BDB /* TAUserInterfaceElements */;
+			remoteInfo = TAUserInterfaceElements;
+		};
+		EAF7BDA60B67999300A100FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC0139D0AD10BA400389BDB /* TA Interface Palette */;
+			remoteInfo = "TA Interface Palette";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -790,40 +763,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		EA7A696D0A870826000D6B5E /* CopyFiles */ = {
+		EA7A696D0A870826000D6B5E /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EAC00E920AD108FC00389BDB /* TAUserInterfaceElements.framework in CopyFiles */,
-				EAF823400A91F7FA008612A2 /* Sparkle.framework in CopyFiles */,
-				EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */,
-				EA7A69780A870874000D6B5E /* Peony.framework in CopyFiles */,
-				EA7A69790A870874000D6B5E /* Virtue.framework in CopyFiles */,
-				EA7A697A0A870874000D6B5E /* VTInterface.framework in CopyFiles */,
-				EA7A697B0A870874000D6B5E /* Zen.framework in CopyFiles */,
-				EA7A69720A870848000D6B5E /* libUniMotion.dylib in CopyFiles */,
-				EA36CC7D0A9C4A290081417B /* VTLightSensorController.h in CopyFiles */,
-				EAF52D450ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h in CopyFiles */,
+				EAC00E920AD108FC00389BDB /* TAUserInterfaceElements.framework in Copy Frameworks */,
+				EAF823400A91F7FA008612A2 /* Sparkle.framework in Copy Frameworks */,
+				EA6041860A8E588A00B511DA /* Growl.framework in Copy Frameworks */,
+				EA7A69780A870874000D6B5E /* Peony.framework in Copy Frameworks */,
+				EA7A697B0A870874000D6B5E /* Zen.framework in Copy Frameworks */,
+				EA7A69720A870848000D6B5E /* libUniMotion.dylib in Copy Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA7A697E0A870880000D6B5E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				EA7A69D10A870893000D6B5E /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */,
-				EA7A69D20A870893000D6B5E /* VTDesktopNamePrimitive.plugin in CopyFiles */,
-				EA7A69D30A870893000D6B5E /* VTAppearancePreferences.prefPane in CopyFiles */,
-				EA7A69D40A870893000D6B5E /* VTApplicationPreferences.prefPane in CopyFiles */,
-				EA7A69D50A870893000D6B5E /* VTDesktopTemplatePreferences.prefPane in CopyFiles */,
-				EA7A69D60A870893000D6B5E /* VTHotkeyPreferences.prefPane in CopyFiles */,
-				EA7A69D70A870893000D6B5E /* VTLayoutPreferences.prefPane in CopyFiles */,
-				EA7A69D80A870893000D6B5E /* VTPluginPreferences.prefPane in CopyFiles */,
-			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EAC014000AD10D2B00389BDB /* Copy Frameworks */ = {
@@ -837,13 +790,28 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAF7BDAA0B67999E00A100FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = VirtueDesktops.app/Contents/PlugIns;
+			dstSubfolderSpec = 16;
+			files = (
+				EAF7BDB40B6799DB00A100FC /* VTDesktopColorLabelPrimitive.plugin in CopyFiles */,
+				EAF7BDB50B6799DB00A100FC /* VTDesktopNamePrimitive.plugin in CopyFiles */,
+				EAF7BDB60B6799DB00A100FC /* VTAppearancePreferences.prefPane in CopyFiles */,
+				EAF7BDB70B6799DB00A100FC /* VTApplicationPreferences.prefPane in CopyFiles */,
+				EAF7BDB80B6799DB00A100FC /* VTDesktopTemplatePreferences.prefPane in CopyFiles */,
+				EAF7BDB90B6799DB00A100FC /* VTHotkeyPreferences.prefPane in CopyFiles */,
+				EAF7BDBA0B6799DB00A100FC /* VTLayoutPreferences.prefPane in CopyFiles */,
+				EAF7BDBB0B6799DB00A100FC /* VTPluginPreferences.prefPane in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EA044FA60AD39888008BB56A /* TAUIColorLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUIColorLabelButton.h; sourceTree = "<group>"; };
 		EA121DD60AD15DD40086403E /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
-		EA2852610A8A745D009DB65B /* Virtue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtue.h; sourceTree = "<group>"; };
-		EA2852670A8A75CC009DB65B /* VTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTInterface.h; sourceTree = "<group>"; };
 		EA28A4090AB16E0500EC10E5 /* VTFileSystemExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTFileSystemExtensions.h; sourceTree = "<group>"; };
 		EA28A40A0AB16E0500EC10E5 /* VTFileSystemExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTFileSystemExtensions.m; sourceTree = "<group>"; };
 		EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTLightSensorController.h; sourceTree = "<group>"; };
@@ -904,7 +872,7 @@
 		EA564FF00B2ED287004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Localisation/ja.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA564FF20B2ED2D2004BF37F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA564FF40B2ED2E5004BF37F /* Portuguese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Portuguese; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
+		EA5E5F0A0B64EC06004A1C6D /* ProductVersion.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ProductVersion.xcconfig; sourceTree = "<group>"; };
 		EA7A53D10A86A5B4000D6B5E /* NSFileManager+Alias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Alias.h"; sourceTree = "<group>"; };
 		EA7A53D20A86A5B4000D6B5E /* NSFileManager+Alias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Alias.m"; sourceTree = "<group>"; };
 		EA7A53D30A86A5B4000D6B5E /* NSMethodSignature+Arguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+Arguments.h"; sourceTree = "<group>"; };
@@ -1022,18 +990,10 @@
 		EA7A54540A86A5D9000D6B5E /* VTPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginProtocol.h; sourceTree = "<group>"; };
 		EA7A54550A86A5D9000D6B5E /* VTPluginProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginProtocol.m; sourceTree = "<group>"; };
 		EA7A54560A86A5D9000D6B5E /* VTPluginScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginScript.h; sourceTree = "<group>"; };
-		EA7A54570A86A5D9000D6B5E /* VTScriptPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTScriptPlugin.h; sourceTree = "<group>"; };
-		EA7A54580A86A5D9000D6B5E /* VTScriptPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTScriptPlugin.m; sourceTree = "<group>"; };
+		EA7A54570A86A5D9000D6B5E /* VTScriptPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTScriptPlugin.h; path = ../../Application/Plugins/VTScriptPlugin.h; sourceTree = "<group>"; };
+		EA7A54580A86A5D9000D6B5E /* VTScriptPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTScriptPlugin.m; path = ../../Application/Plugins/VTScriptPlugin.m; sourceTree = "<group>"; };
 		EA7A545A0A86A5D9000D6B5E /* VTPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPreferences.h; sourceTree = "<group>"; };
 		EA7A545B0A86A5D9000D6B5E /* VTPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPreferences.m; sourceTree = "<group>"; };
-		EA7A545D0A86A5D9000D6B5E /* VTDecorationPrimitiveScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDecorationPrimitiveScripting.h; sourceTree = "<group>"; };
-		EA7A545E0A86A5D9000D6B5E /* VTDecorationPrimitiveScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDecorationPrimitiveScripting.m; sourceTree = "<group>"; };
-		EA7A545F0A86A5D9000D6B5E /* VTDesktopControllerScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopControllerScripting.h; sourceTree = "<group>"; };
-		EA7A54600A86A5D9000D6B5E /* VTDesktopControllerScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopControllerScripting.m; sourceTree = "<group>"; };
-		EA7A54610A86A5D9000D6B5E /* VTDesktopDecorationScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopDecorationScripting.h; sourceTree = "<group>"; };
-		EA7A54620A86A5D9000D6B5E /* VTDesktopDecorationScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopDecorationScripting.m; sourceTree = "<group>"; };
-		EA7A54630A86A5D9000D6B5E /* VTDesktopScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDesktopScripting.h; sourceTree = "<group>"; };
-		EA7A54640A86A5D9000D6B5E /* VTDesktopScripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDesktopScripting.m; sourceTree = "<group>"; };
 		EA7A54670A86A60B000D6B5E /* DEEventHandlers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DEEventHandlers.c; sourceTree = "<group>"; };
 		EA7A54680A86A60B000D6B5E /* DEEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEEventHandlers.h; sourceTree = "<group>"; };
 		EA7A54690A86A60B000D6B5E /* DEEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEEvents.h; sourceTree = "<group>"; };
@@ -1259,49 +1219,34 @@
 		EA7A569C0A86A70C000D6B5E /* DesktopManagementTest.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = DesktopManagementTest.scpt; sourceTree = "<group>"; };
 		EA7A56A30A86A738000D6B5E /* libDockCommunicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDockCommunicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A58160A86AD7B000D6B5E /* DockExtension.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockExtension.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A58170A86AD7B000D6B5E /* DockExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DockExtension-Info.plist"; sourceTree = "<group>"; };
 		EA7A58F80A86B076000D6B5E /* Zen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A58F90A86B076000D6B5E /* Zen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Zen-Info.plist"; sourceTree = "<group>"; };
 		EA7A59560A86B4D3000D6B5E /* Peony.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Peony.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A59570A86B4D3000D6B5E /* Peony-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Peony-Info.plist"; sourceTree = "<group>"; };
-		EA7A5A260A86B5E6000D6B5E /* Virtue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Virtue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A5A270A86B5E6000D6B5E /* Virtue-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Virtue-Info.plist"; sourceTree = "<group>"; };
 		EA7A5B490A86B7C4000D6B5E /* authtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = authtool; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A5B630A86B809000D6B5E /* VTInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A5B640A86B809000D6B5E /* VTInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTInterface-Info.plist"; sourceTree = "<group>"; };
 		EA7A60650A86CC9C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A60D70A86EF2F000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveTintInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A60DE0A86F0A8000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveWatermarkInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A60E20A86F174000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTDecorationPrimitiveInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A61790A86F366000D6B5E /* VTDesktopColorLabelPrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopColorLabelPrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A617A0A86F366000D6B5E /* VTDesktopColorLabelPrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopColorLabelPrimitive-Info.plist"; sourceTree = "<group>"; };
 		EA7A61840A86F3EB000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A61890A86F490000D6B5E /* English */ = {isa = PBXFileReference; explicitFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveDesktopColorLabelInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A62240A86F5C8000D6B5E /* VTDesktopNamePrimitive.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopNamePrimitive.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A62250A86F5C8000D6B5E /* VTDesktopNamePrimitive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopNamePrimitive-Info.plist"; sourceTree = "<group>"; };
 		EA7A622E0A86F60C000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/PrimitiveTextInspector.nib; sourceTree = SOURCE_ROOT; };
 		EA7A62600A86F7AB000D6B5E /* VTAppearancePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTAppearancePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A62610A86F7AB000D6B5E /* VTAppearancePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTAppearancePreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A626A0A86F7CA000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTAppearancePreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A629D0A86F89E000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTApplicationPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A629E0A86F89E000D6B5E /* VTApplicationPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationPreferencesController.h; sourceTree = "<group>"; };
 		EA7A629F0A86F89E000D6B5E /* VTApplicationPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationPreferencesController.m; sourceTree = "<group>"; };
 		EA7A62AE0A86F8D6000D6B5E /* VTApplicationPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTApplicationPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A62AF0A86F8D6000D6B5E /* VTApplicationPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTApplicationPreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A62C20A86F945000D6B5E /* iconApplicationPreferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconApplicationPreferences.icns; sourceTree = "<group>"; };
 		EA7A62D80A86F9AF000D6B5E /* VTDesktopTemplatePreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTDesktopTemplatePreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A62D90A86F9AF000D6B5E /* VTDesktopTemplatePreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTDesktopTemplatePreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A62F50A86FAA4000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTDesktopTemplatePreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63360A86FB4F000D6B5E /* VTHotkeyPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTHotkeyPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A63370A86FB4F000D6B5E /* VTHotkeyPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTHotkeyPreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A63410A86FC07000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTHotkeyPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTLayoutPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A635D0A86FC58000D6B5E /* VTLayoutPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTLayoutPreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = imagePreferencesPagers.tiff; path = ../VTLayoutPreferences/imagePreferencesPagers.tiff; sourceTree = "<group>"; };
 		EA7A636D0A86FCFA000D6B5E /* VTLayoutPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTLayoutPreferencesController.h; sourceTree = "<group>"; };
 		EA7A636E0A86FCFA000D6B5E /* VTLayoutPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTLayoutPreferencesController.m; sourceTree = "<group>"; };
 		EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTPluginPreferences.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A63840A86FD3D000D6B5E /* VTPluginPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VTPluginPreferences-Info.plist"; sourceTree = "<group>"; };
 		EA7A638E0A86FDC3000D6B5E /* iconExtension.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iconExtension.icns; sourceTree = "<group>"; };
 		EA7A638F0A86FDC3000D6B5E /* imageAction.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imageAction.tiff; sourceTree = "<group>"; };
 		EA7A63900A86FDC3000D6B5E /* imageActionPressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = imageActionPressed.tiff; sourceTree = "<group>"; };
@@ -1313,7 +1258,6 @@
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
 		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VirtueDesktops-Info.plist"; sourceTree = "<group>"; };
 		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A64020A86FF23000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
@@ -1433,7 +1377,6 @@
 		EA99F6B30AE236090055D5D5 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EAB6F4EA0A9DE83200B9B0E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
 		EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TAUserInterfaceElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAC00E260AD1065C00389BDB /* TAUserInterfaceElements-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TAUserInterfaceElements-Info.plist"; sourceTree = "<group>"; };
 		EAC00E390AD1072800389BDB /* TAUIColorLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUIColorLabelButton.h; sourceTree = "<group>"; };
 		EAC00E3A0AD1072800389BDB /* TAUIColorLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButton.m; sourceTree = "<group>"; };
 		EAC00E420AD1075D00389BDB /* TAUIColorLabelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUIColorLabelButtonCell.h; sourceTree = "<group>"; };
@@ -1450,16 +1393,14 @@
 		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = en.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
 		EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorLabel.ibclassdescription; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
-		EACDEBBC0B643C6000E07F67 /* NSBezierPathPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathPlate.h; sourceTree = "<group>"; };
-		EACDEBBD0B643C6700E07F67 /* NSBezierPathPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathPlate.m; sourceTree = "<group>"; };
 		EAE65ADA0B624D8100AC2655 /* Peony.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Peony.hdoc; path = Source/Peony/Peony.hdoc; sourceTree = "<group>"; };
 		EAE65AE10B624DE900AC2655 /* Zen.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Zen.hdoc; path = Source/Zen/Zen.hdoc; sourceTree = "<group>"; };
 		EAED24AA0B552CD8006E517B /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		EAED24AB0B552CD8006E517B /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		EAF52D430ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTApplicationRunningCountTransformer.h; sourceTree = "<group>"; };
 		EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
+		EAF7BD180B67959800A100FC /* Bundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Bundle.xcconfig; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		EAFCF6300AB65C43005882DB /* Light Sensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Light Sensor-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1500,17 +1441,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA7A5A240A86B5E6000D6B5E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A669C0A87031D000D6B5E /* Carbon.framework in Frameworks */,
-				EA7A65C50A8702F5000D6B5E /* Cocoa.framework in Frameworks */,
-				EA7A5ABB0A86B6B1000D6B5E /* Zen.framework in Frameworks */,
-				EA7A5AB10A86B6AF000D6B5E /* Peony.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA7A5B470A86B7C4000D6B5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1520,26 +1450,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA7A5B610A86B809000D6B5E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A66A50A870334000D6B5E /* Cocoa.framework in Frameworks */,
-				EA7A5C960A86B92A000D6B5E /* Zen.framework in Frameworks */,
-				EA7A5C970A86B92A000D6B5E /* Peony.framework in Frameworks */,
-				EA7A5C5D0A86B915000D6B5E /* Virtue.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA7A61770A86F366000D6B5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA7A66B30A870351000D6B5E /* Cocoa.framework in Frameworks */,
-				EA7A61AA0A86F535000D6B5E /* VTInterface.framework in Frameworks */,
 				EA7A620B0A86F57D000D6B5E /* Zen.framework in Frameworks */,
 				EA7A62060A86F571000D6B5E /* Peony.framework in Frameworks */,
-				EA7A61CD0A86F566000D6B5E /* Virtue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1550,7 +1467,6 @@
 				EA7A66C80A870376000D6B5E /* Cocoa.framework in Frameworks */,
 				EA7A62450A86F6C2000D6B5E /* Zen.framework in Frameworks */,
 				EA7A62460A86F6C2000D6B5E /* Peony.framework in Frameworks */,
-				EA7A62470A86F6C2000D6B5E /* Virtue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1580,8 +1496,6 @@
 				EA7A66DA0A870398000D6B5E /* PreferencePanes.framework in Frameworks */,
 				EA7A63130A86FB04000D6B5E /* Zen.framework in Frameworks */,
 				EA7A63140A86FB04000D6B5E /* Peony.framework in Frameworks */,
-				EA7A63150A86FB04000D6B5E /* Virtue.framework in Frameworks */,
-				EA7A63160A86FB04000D6B5E /* VTInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1593,8 +1507,6 @@
 				EA7A66E40A8703A9000D6B5E /* PreferencePanes.framework in Frameworks */,
 				EA7A634C0A86FC2E000D6B5E /* Zen.framework in Frameworks */,
 				EA7A634D0A86FC2E000D6B5E /* Peony.framework in Frameworks */,
-				EA7A634E0A86FC2E000D6B5E /* Virtue.framework in Frameworks */,
-				EA7A634F0A86FC2E000D6B5E /* VTInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1605,7 +1517,6 @@
 				EA7A66E90A8703B4000D6B5E /* Cocoa.framework in Frameworks */,
 				EA7A66EA0A8703B4000D6B5E /* PreferencePanes.framework in Frameworks */,
 				EA7A63730A86FD17000D6B5E /* Peony.framework in Frameworks */,
-				EA7A63740A86FD17000D6B5E /* Virtue.framework in Frameworks */,
 				EA7A63760A86FD17000D6B5E /* Zen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1614,11 +1525,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF7ACAE0B67924B00A100FC /* Zen.framework in Frameworks */,
+				EAF7ACAF0B67924B00A100FC /* Peony.framework in Frameworks */,
 				EA7A66F30A8703C1000D6B5E /* Cocoa.framework in Frameworks */,
 				EA7A66F40A8703C1000D6B5E /* PreferencePanes.framework in Frameworks */,
-				EA7A63A80A86FDEA000D6B5E /* Peony.framework in Frameworks */,
-				EA7A63A90A86FDEA000D6B5E /* Virtue.framework in Frameworks */,
-				EA7A63AB0A86FDEA000D6B5E /* Zen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1633,8 +1543,6 @@
 				EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */,
 				EA7A64C50A870172000D6B5E /* Growl.framework in Frameworks */,
 				EA7A64C10A870165000D6B5E /* Peony.framework in Frameworks */,
-				EA7A64C20A870165000D6B5E /* Virtue.framework in Frameworks */,
-				EA7A64C30A870165000D6B5E /* VTInterface.framework in Frameworks */,
 				EA7A64C40A870165000D6B5E /* Zen.framework in Frameworks */,
 				EA7A659E0A870299000D6B5E /* AppKit.framework in Frameworks */,
 				EA7A65A00A870299000D6B5E /* Carbon.framework in Frameworks */,
@@ -1682,22 +1590,13 @@
 			isa = PBXGroup;
 			children = (
 				EA7A55880A86A6B7000D6B5E /* Application */,
+				EA7A55890A86A6D0000D6B5E /* AuthTool */,
 				EA7A54650A86A604000D6B5E /* DockCommunicator */,
 				EA7A54660A86A604000D6B5E /* DockExtension */,
-				EA7A53CD0A86A5A4000D6B5E /* Peony */,
+				EAF7BFFA0B67AA9E00A100FC /* Frameworks */,
+				EAF7BFF50B67AA7300A100FC /* Plugins */,
 				EAC013A80AD10BCA00389BDB /* TA Interface Palette */,
-				EA7A61880A86F490000D6B5E /* VTDesktopColorLabelPrimitive */,
-				EA7A622D0A86F60C000D6B5E /* VTDesktopNamePrimitive */,
-				EA7A5B6D0A86B83E000D6B5E /* VTInterface */,
-				EA7A624E0A86F733000D6B5E /* VTAppearancePreferences */,
-				EA7A629C0A86F89E000D6B5E /* VTApplicationPreferences */,
-				EA7A62D30A86F9A2000D6B5E /* VTDesktopTemplatePreferences */,
-				EA7A632D0A86FB39000D6B5E /* VTHotkeyPreferences */,
-				EA7A636B0A86FCFA000D6B5E /* VTLayoutPreferences */,
-				EA7A638D0A86FD5F000D6B5E /* VTPluginPreferences */,
 				EAC00E310AD106D100389BDB /* TAUserInterfaceElements */,
-				EA7A53CE0A86A5A4000D6B5E /* Virtue */,
-				EA7A53CF0A86A5A4000D6B5E /* Zen */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -1723,23 +1622,6 @@
 				EA7A53FA0A86A5C5000D6B5E /* Scripting */,
 			);
 			path = Peony;
-			sourceTree = "<group>";
-		};
-		EA7A53CE0A86A5A4000D6B5E /* Virtue */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A53FD0A86A5D8000D6B5E /* CocoaExtensions */,
-				EA7A540E0A86A5D8000D6B5E /* Common */,
-				EA7A541A0A86A5D9000D6B5E /* Controllers */,
-				EA7A542A0A86A5D9000D6B5E /* Decoration */,
-				EA7A543A0A86A5D9000D6B5E /* Hotkeys */,
-				EA7A54490A86A5D9000D6B5E /* Layout */,
-				EA7A544E0A86A5D9000D6B5E /* Plugins */,
-				EA7A54590A86A5D9000D6B5E /* Preferences */,
-				EA7A545C0A86A5D9000D6B5E /* Scripting */,
-				EA2852610A8A745D009DB65B /* Virtue.h */,
-			);
-			path = Virtue;
 			sourceTree = "<group>";
 		};
 		EA7A53CF0A86A5A4000D6B5E /* Zen */ = {
@@ -1837,46 +1719,6 @@
 			path = CocoaExtensions;
 			sourceTree = "<group>";
 		};
-		EA7A540E0A86A5D8000D6B5E /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A540F0A86A5D8000D6B5E /* VTApplicationController.h */,
-				EA7A54100A86A5D8000D6B5E /* VTApplicationController.m */,
-				EA7A54110A86A5D8000D6B5E /* VTApplicationWrapper.h */,
-				EA7A54120A86A5D8000D6B5E /* VTApplicationWrapper.m */,
-				EA7A54130A86A5D8000D6B5E /* VTCoding.h */,
-				EA7A54140A86A5D8000D6B5E /* VTDesktop.h */,
-				EA7A54150A86A5D8000D6B5E /* VTDesktop.m */,
-				EA7A54160A86A5D8000D6B5E /* VTInspector.h */,
-				EA7A54170A86A5D9000D6B5E /* VTInspector.m */,
-				EA7A54180A86A5D9000D6B5E /* VTModifiers.h */,
-				EA7A54190A86A5D9000D6B5E /* VTNotifications.h */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		EA7A541A0A86A5D9000D6B5E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A541B0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.h */,
-				EA7A541C0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.m */,
-				EA7A541D0A86A5D9000D6B5E /* VTDesktopController.h */,
-				EA7A541E0A86A5D9000D6B5E /* VTDesktopController.m */,
-				EA7A541F0A86A5D9000D6B5E /* VTDesktopDecorationController.h */,
-				EA7A54200A86A5D9000D6B5E /* VTDesktopDecorationController.m */,
-				EA7A54210A86A5D9000D6B5E /* VTDesktopProtector.h */,
-				EA7A54220A86A5D9000D6B5E /* VTDesktopProtector.m */,
-				EA7A54230A86A5D9000D6B5E /* VTLayoutController.h */,
-				EA7A54240A86A5D9000D6B5E /* VTLayoutController.m */,
-				EA7A54250A86A5D9000D6B5E /* VTMouseWatcher.h */,
-				EA7A54260A86A5D9000D6B5E /* VTMouseWatcher.m */,
-				EA7A54270A86A5D9000D6B5E /* VTMouseWatcherProtocol.h */,
-				EA7A54280A86A5D9000D6B5E /* VTTriggerController.h */,
-				EA7A54290A86A5D9000D6B5E /* VTTriggerController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		EA7A542A0A86A5D9000D6B5E /* Decoration */ = {
 			isa = PBXGroup;
 			children = (
@@ -1927,17 +1769,6 @@
 			path = Hotkeys;
 			sourceTree = "<group>";
 		};
-		EA7A54490A86A5D9000D6B5E /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A544A0A86A5D9000D6B5E /* VTDesktopLayout.h */,
-				EA7A544B0A86A5D9000D6B5E /* VTDesktopLayout.m */,
-				EA7A544C0A86A5D9000D6B5E /* VTLayout.h */,
-				EA7A544D0A86A5D9000D6B5E /* VTPager.h */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 		EA7A544E0A86A5D9000D6B5E /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
@@ -1962,21 +1793,6 @@
 				EA7A545B0A86A5D9000D6B5E /* VTPreferences.m */,
 			);
 			path = Preferences;
-			sourceTree = "<group>";
-		};
-		EA7A545C0A86A5D9000D6B5E /* Scripting */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A545D0A86A5D9000D6B5E /* VTDecorationPrimitiveScripting.h */,
-				EA7A545E0A86A5D9000D6B5E /* VTDecorationPrimitiveScripting.m */,
-				EA7A545F0A86A5D9000D6B5E /* VTDesktopControllerScripting.h */,
-				EA7A54600A86A5D9000D6B5E /* VTDesktopControllerScripting.m */,
-				EA7A54610A86A5D9000D6B5E /* VTDesktopDecorationScripting.h */,
-				EA7A54620A86A5D9000D6B5E /* VTDesktopDecorationScripting.m */,
-				EA7A54630A86A5D9000D6B5E /* VTDesktopScripting.h */,
-				EA7A54640A86A5D9000D6B5E /* VTDesktopScripting.m */,
-			);
-			path = Scripting;
 			sourceTree = "<group>";
 		};
 		EA7A54650A86A604000D6B5E /* DockCommunicator */ = {
@@ -2072,22 +1888,16 @@
 		EA7A55880A86A6B7000D6B5E /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A645C0A870084000D6B5E /* Virtue.scriptSuite */,
-				EA7A645D0A870084000D6B5E /* Virtue.scriptTerminology */,
-				EA8F2E9C0A93F99E0047C92C /* Notifications.strings */,
-				EA8F2E890A93F9620047C92C /* DefaultPrimitiveNames.strings */,
-				EA7A64070A86FF4D000D6B5E /* VirtueDesktops.nib */,
-				EA7A64090A86FF4D000D6B5E /* VTTriggerInspector.nib */,
-				EA7A64040A86FF39000D6B5E /* VTDesktopInspector.nib */,
-				EA7A64010A86FF23000D6B5E /* VTApplicationInspector.nib */,
-				EA7A63F70A86FF08000D6B5E /* Operations.nib */,
-				EA7A63FA0A86FF15000D6B5E /* VTPreferences.nib */,
-				EA7A55890A86A6D0000D6B5E /* AuthTool */,
+				EA7A56240A86A6D1000D6B5E /* main.m */,
 				EA7A558D0A86A6D0000D6B5E /* Categories */,
+				EA7A53FD0A86A5D8000D6B5E /* CocoaExtensions */,
 				EA7A55900A86A6D0000D6B5E /* Common */,
 				EA7A55920A86A6D0000D6B5E /* Controllers */,
+				EA7A543A0A86A5D9000D6B5E /* Hotkeys */,
 				EA7A559D0A86A6D0000D6B5E /* Interface */,
-				EA7A56240A86A6D1000D6B5E /* main.m */,
+				EA7A544E0A86A5D9000D6B5E /* Plugins */,
+				EA7A54590A86A5D9000D6B5E /* Preferences */,
+				EAF7BF2E0B67A17700A100FC /* Resources */,
 				EA7A563D0A86A6D1000D6B5E /* Scripting */,
 			);
 			path = Application;
@@ -2116,6 +1926,17 @@
 			isa = PBXGroup;
 			children = (
 				EA7A55910A86A6D0000D6B5E /* VTPreferenceKeys.h */,
+				EA7A540F0A86A5D8000D6B5E /* VTApplicationController.h */,
+				EA7A54100A86A5D8000D6B5E /* VTApplicationController.m */,
+				EA7A54110A86A5D8000D6B5E /* VTApplicationWrapper.h */,
+				EA7A54120A86A5D8000D6B5E /* VTApplicationWrapper.m */,
+				EA7A54130A86A5D8000D6B5E /* VTCoding.h */,
+				EA7A54140A86A5D8000D6B5E /* VTDesktop.h */,
+				EA7A54150A86A5D8000D6B5E /* VTDesktop.m */,
+				EA7A54160A86A5D8000D6B5E /* VTInspector.h */,
+				EA7A54170A86A5D9000D6B5E /* VTInspector.m */,
+				EA7A54180A86A5D9000D6B5E /* VTModifiers.h */,
+				EA7A54190A86A5D9000D6B5E /* VTNotifications.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2123,6 +1944,21 @@
 		EA7A55920A86A6D0000D6B5E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A541B0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.h */,
+				EA7A541C0A86A5D9000D6B5E /* VTDesktopBackgroundHelper.m */,
+				EA7A541D0A86A5D9000D6B5E /* VTDesktopController.h */,
+				EA7A541E0A86A5D9000D6B5E /* VTDesktopController.m */,
+				EA7A541F0A86A5D9000D6B5E /* VTDesktopDecorationController.h */,
+				EA7A54200A86A5D9000D6B5E /* VTDesktopDecorationController.m */,
+				EA7A54210A86A5D9000D6B5E /* VTDesktopProtector.h */,
+				EA7A54220A86A5D9000D6B5E /* VTDesktopProtector.m */,
+				EA7A54230A86A5D9000D6B5E /* VTLayoutController.h */,
+				EA7A54240A86A5D9000D6B5E /* VTLayoutController.m */,
+				EA7A54250A86A5D9000D6B5E /* VTMouseWatcher.h */,
+				EA7A54260A86A5D9000D6B5E /* VTMouseWatcher.m */,
+				EA7A54270A86A5D9000D6B5E /* VTMouseWatcherProtocol.h */,
+				EA7A54280A86A5D9000D6B5E /* VTTriggerController.h */,
+				EA7A54290A86A5D9000D6B5E /* VTTriggerController.m */,
 				EA7A55930A86A6D0000D6B5E /* VTApplication.h */,
 				EA7A55940A86A6D0000D6B5E /* VTApplication.m */,
 				EA7A55950A86A6D0000D6B5E /* VTApplicationDelegate.h */,
@@ -2142,9 +1978,36 @@
 		EA7A559D0A86A6D0000D6B5E /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A542A0A86A5D9000D6B5E /* Decoration */,
 				EA7A559E0A86A6D0000D6B5E /* Layout */,
 				EA7A55AE0A86A6D0000D6B5E /* Preferences */,
 				EA7A55E30A86A6D1000D6B5E /* Transformers */,
+				EA4B68400B2E0D8D0079CE21 /* OAGradientTableView.h */,
+				EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */,
+				EA7A561A0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.h */,
+				EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */,
+				EA7A561C0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.h */,
+				EA7A561D0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.m */,
+				EA7A561E0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.h */,
+				EA7A561F0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.m */,
+				EA7A56200A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.h */,
+				EA7A56210A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.m */,
+				EA7A56220A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.h */,
+				EA7A56230A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.m */,
+				EA7A560E0A86A6D1000D6B5E /* VTHotkeyCell.h */,
+				EA7A560F0A86A6D1000D6B5E /* VTHotkeyCell.m */,
+				EA7A56100A86A6D1000D6B5E /* VTHotkeyTextField.h */,
+				EA7A56110A86A6D1000D6B5E /* VTHotkeyTextField.m */,
+				EA7A56120A86A6D1000D6B5E /* VTHotkeyTextView.h */,
+				EA7A56130A86A6D1000D6B5E /* VTHotkeyTextView.m */,
+				EA7A56150A86A6D1000D6B5E /* VTPositionGrid.h */,
+				EA7A56160A86A6D1000D6B5E /* VTPositionGrid.m */,
+				EA7A56170A86A6D1000D6B5E /* VTPositionGridCell.h */,
+				EA7A56180A86A6D1000D6B5E /* VTPositionGridCell.m */,
+				EA4B68440B2E0D970079CE21 /* VTScalingImageCell.h */,
+				EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */,
+				EA4B68460B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h */,
+				EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */,
 				EA7A55F00A86A6D1000D6B5E /* VTApplicationViewController.h */,
 				EA7A55F10A86A6D1000D6B5E /* VTApplicationViewController.m */,
 				EA7A55F20A86A6D1000D6B5E /* VTDesktopCollectionViewController.h */,
@@ -2172,6 +2035,10 @@
 		EA7A559E0A86A6D0000D6B5E /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A544A0A86A5D9000D6B5E /* VTDesktopLayout.h */,
+				EA7A544B0A86A5D9000D6B5E /* VTDesktopLayout.m */,
+				EA7A544C0A86A5D9000D6B5E /* VTLayout.h */,
+				EA7A544D0A86A5D9000D6B5E /* VTPager.h */,
 				EA7A55A00A86A6D0000D6B5E /* MatrixLayout */,
 			);
 			path = Layout;
@@ -2315,14 +2182,16 @@
 			path = Scripting;
 			sourceTree = "<group>";
 		};
-		EA7A564E0A86A705000D6B5E /* Data */ = {
+		EA7A564E0A86A705000D6B5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */,
 				EA7A564F0A86A70C000D6B5E /* Defaults */,
 				EA7A56520A86A70C000D6B5E /* Icons */,
 				EA7A56570A86A70C000D6B5E /* Images */,
 				EA7A569B0A86A70C000D6B5E /* Scripts */,
 			);
+			name = Resources;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -2422,9 +2291,7 @@
 				EA7A58160A86AD7B000D6B5E /* DockExtension.bundle */,
 				EA7A58F80A86B076000D6B5E /* Zen.framework */,
 				EA7A59560A86B4D3000D6B5E /* Peony.framework */,
-				EA7A5A260A86B5E6000D6B5E /* Virtue.framework */,
 				EA7A5B490A86B7C4000D6B5E /* authtool */,
-				EA7A5B630A86B809000D6B5E /* VTInterface.framework */,
 				EA7A61790A86F366000D6B5E /* VTDesktopColorLabelPrimitive.plugin */,
 				EA7A62240A86F5C8000D6B5E /* VTDesktopNamePrimitive.plugin */,
 				EA7A62600A86F7AB000D6B5E /* VTAppearancePreferences.prefPane */,
@@ -2438,45 +2305,6 @@
 				EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EA7A5B6D0A86B83E000D6B5E /* VTInterface */ = {
-			isa = PBXGroup;
-			children = (
-				EA4B68400B2E0D8D0079CE21 /* OAGradientTableView.h */,
-				EA4B68410B2E0D8D0079CE21 /* OAGradientTableView.m */,
-				EA7A561A0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.h */,
-				EA7A561B0A86A6D1000D6B5E /* VTDecorationPrimitiveBindings.m */,
-				EA7A561C0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.h */,
-				EA7A561D0A86A6D1000D6B5E /* VTDecorationPrimitiveTextInspector.m */,
-				EA7A561E0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.h */,
-				EA7A561F0A86A6D1000D6B5E /* VTDecorationPrimitiveTintInspector.m */,
-				EA7A56200A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.h */,
-				EA7A56210A86A6D1000D6B5E /* VTDecorationPrimitiveViewController.m */,
-				EA7A56220A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.h */,
-				EA7A56230A86A6D1000D6B5E /* VTDecorationPrimitiveWatermarkInspector.m */,
-				EA7A560E0A86A6D1000D6B5E /* VTHotkeyCell.h */,
-				EA7A560F0A86A6D1000D6B5E /* VTHotkeyCell.m */,
-				EA7A56100A86A6D1000D6B5E /* VTHotkeyTextField.h */,
-				EA7A56110A86A6D1000D6B5E /* VTHotkeyTextField.m */,
-				EA7A56120A86A6D1000D6B5E /* VTHotkeyTextView.h */,
-				EA7A56130A86A6D1000D6B5E /* VTHotkeyTextView.m */,
-				EA7A56150A86A6D1000D6B5E /* VTPositionGrid.h */,
-				EA7A56160A86A6D1000D6B5E /* VTPositionGrid.m */,
-				EA7A56170A86A6D1000D6B5E /* VTPositionGridCell.h */,
-				EA7A56180A86A6D1000D6B5E /* VTPositionGridCell.m */,
-				EA4B68440B2E0D970079CE21 /* VTScalingImageCell.h */,
-				EA4B68450B2E0D970079CE21 /* VTScalingImageCell.m */,
-				EA4B68460B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h */,
-				EA4B68470B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m */,
-				EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */,
-				EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */,
-				EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */,
-				EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */,
-				EA0EE5780A93ECB5009F3FC1 /* PrimitiveDesktopColorLabelInspector.nib */,
-				EA2852670A8A75CC009DB65B /* VTInterface.h */,
-			);
-			path = VTInterface;
 			sourceTree = "<group>";
 		};
 		EA7A61880A86F490000D6B5E /* VTDesktopColorLabelPrimitive */ = {
@@ -2614,49 +2442,17 @@
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
 		};
-		EA7A6A070A8708F2000D6B5E /* Property lists */ = {
-			isa = PBXGroup;
-			children = (
-				EAC00E260AD1065C00389BDB /* TAUserInterfaceElements-Info.plist */,
-				EAFCF6300AB65C43005882DB /* Light Sensor-Info.plist */,
-				EA7A58170A86AD7B000D6B5E /* DockExtension-Info.plist */,
-				EA7A59570A86B4D3000D6B5E /* Peony-Info.plist */,
-				EA7A5A270A86B5E6000D6B5E /* Virtue-Info.plist */,
-				EA7A63E20A86FE65000D6B5E /* VirtueDesktops-Info.plist */,
-				EA7A62610A86F7AB000D6B5E /* VTAppearancePreferences-Info.plist */,
-				EA7A62AF0A86F8D6000D6B5E /* VTApplicationPreferences-Info.plist */,
-				EA7A617A0A86F366000D6B5E /* VTDesktopColorLabelPrimitive-Info.plist */,
-				EA7A62250A86F5C8000D6B5E /* VTDesktopNamePrimitive-Info.plist */,
-				EA7A62D90A86F9AF000D6B5E /* VTDesktopTemplatePreferences-Info.plist */,
-				EA7A63370A86FB4F000D6B5E /* VTHotkeyPreferences-Info.plist */,
-				EA7A5B640A86B809000D6B5E /* VTInterface-Info.plist */,
-				EA7A635D0A86FC58000D6B5E /* VTLayoutPreferences-Info.plist */,
-				EA7A63840A86FD3D000D6B5E /* VTPluginPreferences-Info.plist */,
-				EA7A58F90A86B076000D6B5E /* Zen-Info.plist */,
-			);
-			path = "Property lists";
-			sourceTree = "<group>";
-		};
-		EA7A6AAF0A8709C2000D6B5E /* Localisation */ = {
-			isa = PBXGroup;
-			children = (
-				EA0EE58D0A93ECCE009F3FC1 /* Localizable.strings */,
-			);
-			path = Localisation;
-			sourceTree = "<group>";
-		};
 		EAA9266B0A86A4E800D4674B = {
 			isa = PBXGroup;
 			children = (
 				EA7A53CA0A86A576000D6B5E /* Source */,
 				EAE65AD40B624D6800AC2655 /* Documentation */,
 				EA7A54870A86A658000D6B5E /* Shared */,
-				EA7A564E0A86A705000D6B5E /* Data */,
-				EA7A6AAF0A8709C2000D6B5E /* Localisation */,
-				EA7A56A40A86A738000D6B5E /* Products */,
-				EA7A6A070A8708F2000D6B5E /* Property lists */,
+				EA7A564E0A86A705000D6B5E /* Resources */,
 				EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */,
-				EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */,
+				EA7A56A40A86A738000D6B5E /* Products */,
+				EA5E5F0A0B64EC06004A1C6D /* ProductVersion.xcconfig */,
+				EAF7BD180B67959800A100FC /* Bundle.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2668,9 +2464,7 @@
 				EAC00E3A0AD1072800389BDB /* TAUIColorLabelButton.m */,
 				EAC00E420AD1075D00389BDB /* TAUIColorLabelButtonCell.h */,
 				EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */,
-				EACDEBBC0B643C6000E07F67 /* NSBezierPathPlate.h */,
 				EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */,
-				EACDEBBD0B643C6700E07F67 /* NSBezierPathPlate.m */,
 				EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */,
 				EA8B6C330AD214A2001D1241 /* TAUIColorLabelColorTransformer.h */,
 				EA8B6C340AD214A2001D1241 /* TAUIColorLabelColorTransformer.m */,
@@ -2700,6 +2494,52 @@
 				EAE65AE10B624DE900AC2655 /* Zen.hdoc */,
 			);
 			name = Documentation;
+			sourceTree = "<group>";
+		};
+		EAF7BF2E0B67A17700A100FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A645C0A870084000D6B5E /* Virtue.scriptSuite */,
+				EA7A645D0A870084000D6B5E /* Virtue.scriptTerminology */,
+				EA8F2E9C0A93F99E0047C92C /* Notifications.strings */,
+				EA8F2E890A93F9620047C92C /* DefaultPrimitiveNames.strings */,
+				EA7A64070A86FF4D000D6B5E /* VirtueDesktops.nib */,
+				EA7A64090A86FF4D000D6B5E /* VTTriggerInspector.nib */,
+				EA7A64040A86FF39000D6B5E /* VTDesktopInspector.nib */,
+				EA7A64010A86FF23000D6B5E /* VTApplicationInspector.nib */,
+				EA7A63F70A86FF08000D6B5E /* Operations.nib */,
+				EA7A63FA0A86FF15000D6B5E /* VTPreferences.nib */,
+				EA8F2EDF0A93FA660047C92C /* PrimitiveTextInspector.nib */,
+				EA0EE57F0A93ECBC009F3FC1 /* PrimitiveTintInspector.nib */,
+				EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */,
+				EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */,
+				EA0EE5780A93ECB5009F3FC1 /* PrimitiveDesktopColorLabelInspector.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EAF7BFF50B67AA7300A100FC /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A61880A86F490000D6B5E /* VTDesktopColorLabelPrimitive */,
+				EA7A622D0A86F60C000D6B5E /* VTDesktopNamePrimitive */,
+				EA7A624E0A86F733000D6B5E /* VTAppearancePreferences */,
+				EA7A629C0A86F89E000D6B5E /* VTApplicationPreferences */,
+				EA7A62D30A86F9A2000D6B5E /* VTDesktopTemplatePreferences */,
+				EA7A632D0A86FB39000D6B5E /* VTHotkeyPreferences */,
+				EA7A636B0A86FCFA000D6B5E /* VTLayoutPreferences */,
+				EA7A638D0A86FD5F000D6B5E /* VTPluginPreferences */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		EAF7BFFA0B67AA9E00A100FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A53CD0A86A5A4000D6B5E /* Peony */,
+				EA7A53CF0A86A5A4000D6B5E /* Zen */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2750,89 +2590,6 @@
 				EA7A59690A86B4F5000D6B5E /* PNWindow.h in Headers */,
 				EA7A596A0A86B4F5000D6B5E /* PNWindowList.h in Headers */,
 				EA7A596B0A86B4F5000D6B5E /* PNWindowPool.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA7A5A210A86B5E6000D6B5E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A5A490A86B63F000D6B5E /* CGSPrivate.h in Headers */,
-				EA7A5A4B0A86B651000D6B5E /* NSBezierPathPlate.h in Headers */,
-				EA7A5A4C0A86B651000D6B5E /* NSBundlePlugin.h in Headers */,
-				EA7A5A4D0A86B651000D6B5E /* NSColorString.h in Headers */,
-				EA7A5A4E0A86B651000D6B5E /* NSImageTint.h in Headers */,
-				EA7A5A4F0A86B651000D6B5E /* NSScreenOverallScreen.h in Headers */,
-				EA7A5A500A86B651000D6B5E /* NSStringFSRef.h in Headers */,
-				EA7A5A510A86B651000D6B5E /* NSUserDefaultsColor.h in Headers */,
-				EA7A5A520A86B651000D6B5E /* NSUserDefaultsControllerKeyFactory.h in Headers */,
-				EA7A5A530A86B651000D6B5E /* VTApplicationController.h in Headers */,
-				EA7A5A540A86B651000D6B5E /* VTApplicationWrapper.h in Headers */,
-				EA7A5A550A86B651000D6B5E /* VTCoding.h in Headers */,
-				EA7A5A560A86B651000D6B5E /* VTDecorationPrimitive.h in Headers */,
-				EA7A5A570A86B651000D6B5E /* VTDecorationPrimitiveInspector.h in Headers */,
-				EA7A5A580A86B651000D6B5E /* VTDecorationPrimitiveScripting.h in Headers */,
-				EA7A5A590A86B651000D6B5E /* VTDecorationPrimitiveText.h in Headers */,
-				EA7A5A5A0A86B651000D6B5E /* VTDecorationPrimitiveTint.h in Headers */,
-				EA7A5A5B0A86B651000D6B5E /* VTDecorationPrimitiveWatermark.h in Headers */,
-				EA7A5A5C0A86B651000D6B5E /* VTDesktop.h in Headers */,
-				EA7A5A5D0A86B651000D6B5E /* VTDesktopBackgroundHelper.h in Headers */,
-				EA7A5A5E0A86B651000D6B5E /* VTDesktopController.h in Headers */,
-				EA7A5A5F0A86B651000D6B5E /* VTDesktopControllerScripting.h in Headers */,
-				EA7A5A600A86B651000D6B5E /* VTDesktopDecoration.h in Headers */,
-				EA7A5A610A86B651000D6B5E /* VTDesktopDecorationController.h in Headers */,
-				EA7A5A620A86B651000D6B5E /* VTDesktopDecorationScripting.h in Headers */,
-				EA7A5A630A86B651000D6B5E /* VTDesktopDecorationView.h in Headers */,
-				EA7A5A640A86B651000D6B5E /* VTDesktopLayout.h in Headers */,
-				EA7A5A650A86B651000D6B5E /* VTDesktopProtector.h in Headers */,
-				EA7A5A660A86B651000D6B5E /* VTDesktopScripting.h in Headers */,
-				EA7A5A670A86B651000D6B5E /* VTHotkeyTrigger.h in Headers */,
-				EA7A5A680A86B651000D6B5E /* VTInspector.h in Headers */,
-				EA7A5A690A86B651000D6B5E /* VTLayout.h in Headers */,
-				EA7A5A6A0A86B651000D6B5E /* VTLayoutController.h in Headers */,
-				EA7A5A6B0A86B651000D6B5E /* VTModifiers.h in Headers */,
-				EA7A5A6C0A86B651000D6B5E /* VTMouseTrigger.h in Headers */,
-				EA7A5A6D0A86B651000D6B5E /* VTMouseWatcher.h in Headers */,
-				EA7A5A6E0A86B651000D6B5E /* VTMouseWatcherProtocol.h in Headers */,
-				EA7A5A6F0A86B651000D6B5E /* VTNotifications.h in Headers */,
-				EA7A5A700A86B651000D6B5E /* VTPager.h in Headers */,
-				EA7A5A710A86B651000D6B5E /* VTPlugin.h in Headers */,
-				EA7A5A720A86B651000D6B5E /* VTPluginCollection.h in Headers */,
-				EA7A5A730A86B651000D6B5E /* VTPluginDecoration.h in Headers */,
-				EA7A5A740A86B651000D6B5E /* VTPluginInstance.h in Headers */,
-				EA7A5A750A86B651000D6B5E /* VTPluginLayout.h in Headers */,
-				EA7A5A760A86B651000D6B5E /* VTPluginProtocol.h in Headers */,
-				EA7A5A770A86B651000D6B5E /* VTPluginScript.h in Headers */,
-				EA7A5A780A86B651000D6B5E /* VTPreferences.h in Headers */,
-				EA7A5A790A86B651000D6B5E /* VTScriptPlugin.h in Headers */,
-				EA7A5A7A0A86B651000D6B5E /* VTTrigger.h in Headers */,
-				EA7A5A7B0A86B651000D6B5E /* VTTriggerController.h in Headers */,
-				EA7A5A7C0A86B651000D6B5E /* VTTriggerDesktopNotification.h in Headers */,
-				EA7A5A7D0A86B651000D6B5E /* VTTriggerGroup.h in Headers */,
-				EA7A5A7E0A86B651000D6B5E /* VTTriggerNotification.h in Headers */,
-				EA2852620A8A745D009DB65B /* Virtue.h in Headers */,
-				EA28A40B0AB16E0500EC10E5 /* VTFileSystemExtensions.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA7A5B5E0A86B809000D6B5E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A5B700A86B885000D6B5E /* VTDecorationPrimitiveBindings.h in Headers */,
-				EA7A5B710A86B885000D6B5E /* VTDecorationPrimitiveTextInspector.h in Headers */,
-				EA7A5B720A86B885000D6B5E /* VTDecorationPrimitiveTintInspector.h in Headers */,
-				EA7A5B730A86B885000D6B5E /* VTDecorationPrimitiveViewController.h in Headers */,
-				EA7A5B740A86B885000D6B5E /* VTDecorationPrimitiveWatermarkInspector.h in Headers */,
-				EA7A5B760A86B885000D6B5E /* VTPositionGrid.h in Headers */,
-				EA7A5B770A86B885000D6B5E /* VTPositionGridCell.h in Headers */,
-				EA7A5B750A86B885000D6B5E /* VTHotkeyCell.h in Headers */,
-				EA7A5B780A86B8C8000D6B5E /* VTHotkeyTextField.h in Headers */,
-				EA7A5B790A86B8C8000D6B5E /* VTHotkeyTextView.h in Headers */,
-				EA2852680A8A75CC009DB65B /* VTInterface.h in Headers */,
-				EA4B68420B2E0D8D0079CE21 /* OAGradientTableView.h in Headers */,
-				EA4B68480B2E0D970079CE21 /* VTScalingImageCell.h in Headers */,
-				EA4B684A0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2921,26 +2678,6 @@
 			productReference = EA7A59560A86B4D3000D6B5E /* Peony.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EA7A5A250A86B5E6000D6B5E /* Virtue */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA7A5A280A86B5E6000D6B5E /* Build configuration list for PBXNativeTarget "Virtue" */;
-			buildPhases = (
-				EA7A5A210A86B5E6000D6B5E /* Headers */,
-				EA7A5A220A86B5E6000D6B5E /* Resources */,
-				EA7A5A230A86B5E6000D6B5E /* Sources */,
-				EA7A5A240A86B5E6000D6B5E /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA7A5ABF0A86B6CB000D6B5E /* PBXTargetDependency */,
-				EA7A5AC10A86B6CB000D6B5E /* PBXTargetDependency */,
-			);
-			name = Virtue;
-			productName = Virtue;
-			productReference = EA7A5A260A86B5E6000D6B5E /* Virtue.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		EA7A5B480A86B7C4000D6B5E /* authtool */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA7A5B540A86B7E5000D6B5E /* Build configuration list for PBXNativeTarget "authtool" */;
@@ -2957,27 +2694,6 @@
 			productReference = EA7A5B490A86B7C4000D6B5E /* authtool */;
 			productType = "com.apple.product-type.tool";
 		};
-		EA7A5B620A86B809000D6B5E /* VTInterface */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA7A5B650A86B809000D6B5E /* Build configuration list for PBXNativeTarget "VTInterface" */;
-			buildPhases = (
-				EA7A5B5E0A86B809000D6B5E /* Headers */,
-				EA7A5B5F0A86B809000D6B5E /* Resources */,
-				EA7A5B600A86B809000D6B5E /* Sources */,
-				EA7A5B610A86B809000D6B5E /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA7A5CA10A86B93C000D6B5E /* PBXTargetDependency */,
-				EA7A5CA30A86B93C000D6B5E /* PBXTargetDependency */,
-				EA7A5CA50A86B93C000D6B5E /* PBXTargetDependency */,
-			);
-			name = VTInterface;
-			productName = VTInterface;
-			productReference = EA7A5B630A86B809000D6B5E /* VTInterface.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		EA7A61780A86F366000D6B5E /* VTDesktopColorLabelPrimitive */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA7A617B0A86F366000D6B5E /* Build configuration list for PBXNativeTarget "VTDesktopColorLabelPrimitive" */;
@@ -2991,8 +2707,7 @@
 			dependencies = (
 				EA7A62150A86F593000D6B5E /* PBXTargetDependency */,
 				EA7A62170A86F593000D6B5E /* PBXTargetDependency */,
-				EA7A62190A86F593000D6B5E /* PBXTargetDependency */,
-				EA7A621B0A86F593000D6B5E /* PBXTargetDependency */,
+				EAF7BD510B67985A00A100FC /* PBXTargetDependency */,
 			);
 			name = VTDesktopColorLabelPrimitive;
 			productName = VTDesktopColorLabelPrimitive;
@@ -3010,6 +2725,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				EAF7BD550B67986F00A100FC /* PBXTargetDependency */,
+				EAF7BD570B67986F00A100FC /* PBXTargetDependency */,
+				EAF7BD530B67986A00A100FC /* PBXTargetDependency */,
 			);
 			name = VTDesktopNamePrimitive;
 			productName = VTDesktopNamePrimitive;
@@ -3027,6 +2745,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				EAF7BD590B67988100A100FC /* PBXTargetDependency */,
+				EAF7BD5B0B67988100A100FC /* PBXTargetDependency */,
+				EAF7BD5D0B67988400A100FC /* PBXTargetDependency */,
 			);
 			name = VTAppearancePreferences;
 			productName = VTAppearancePreferences;
@@ -3044,6 +2765,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				EAF7BD610B67989300A100FC /* PBXTargetDependency */,
+				EAF7BD630B67989300A100FC /* PBXTargetDependency */,
+				EAF7BD5F0B67989300A100FC /* PBXTargetDependency */,
 			);
 			name = VTApplicationPreferences;
 			productName = VTApplicationPreferences;
@@ -3063,8 +2787,7 @@
 			dependencies = (
 				EA7A631E0A86FB10000D6B5E /* PBXTargetDependency */,
 				EA7A63200A86FB10000D6B5E /* PBXTargetDependency */,
-				EA7A63220A86FB10000D6B5E /* PBXTargetDependency */,
-				EA7A63240A86FB10000D6B5E /* PBXTargetDependency */,
+				EAF7BD7A0B6798A600A100FC /* PBXTargetDependency */,
 			);
 			name = VTDesktopTemplatePreferences;
 			productName = VTDesktopTemplatePreferences;
@@ -3084,8 +2807,7 @@
 			dependencies = (
 				EA7A63B70A86FE0F000D6B5E /* PBXTargetDependency */,
 				EA7A63B90A86FE0F000D6B5E /* PBXTargetDependency */,
-				EA7A63BB0A86FE0F000D6B5E /* PBXTargetDependency */,
-				EA7A63C10A86FE1E000D6B5E /* PBXTargetDependency */,
+				EAF7BD7E0B6798BB00A100FC /* PBXTargetDependency */,
 			);
 			name = VTHotkeyPreferences;
 			productName = VTHotkeyPreferences;
@@ -3105,7 +2827,7 @@
 			dependencies = (
 				EA7A63AF0A86FE06000D6B5E /* PBXTargetDependency */,
 				EA7A63B10A86FE06000D6B5E /* PBXTargetDependency */,
-				EA7A63B30A86FE06000D6B5E /* PBXTargetDependency */,
+				EAF7BD4D0B67982C00A100FC /* PBXTargetDependency */,
 			);
 			name = VTLayoutPreferences;
 			productName = VTLayoutPreferences;
@@ -3123,9 +2845,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EA7A63CB0A86FE39000D6B5E /* PBXTargetDependency */,
-				EA7A63CD0A86FE39000D6B5E /* PBXTargetDependency */,
-				EA7A63CF0A86FE39000D6B5E /* PBXTargetDependency */,
+				EAF7BD300B67969200A100FC /* PBXTargetDependency */,
 			);
 			name = VTPluginPreferences;
 			productName = VTPluginPreferences;
@@ -3139,8 +2859,7 @@
 				EA5E5FD10B64F6FD004A1C6D /* ShellScript */,
 				EA7A63DC0A86FE65000D6B5E /* Resources */,
 				EA7A63DD0A86FE65000D6B5E /* Sources */,
-				EA7A696D0A870826000D6B5E /* CopyFiles */,
-				EA7A697E0A870880000D6B5E /* CopyFiles */,
+				EA7A696D0A870826000D6B5E /* Copy Frameworks */,
 				EA7A63DE0A86FE65000D6B5E /* Frameworks */,
 			);
 			buildRules = (
@@ -3150,16 +2869,6 @@
 				EA7A67A50A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67A70A87049A000D6B5E /* PBXTargetDependency */,
 				EA7A67A90A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67AB0A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67AF0A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67B10A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67B30A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67B50A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67B70A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67B90A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67BB0A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67BD0A87049A000D6B5E /* PBXTargetDependency */,
-				EA7A67BF0A87049A000D6B5E /* PBXTargetDependency */,
 				EAC00EA50AD1098100389BDB /* PBXTargetDependency */,
 				EAC015BC0AD12B4200389BDB /* PBXTargetDependency */,
 				EA7A67AD0A87049A000D6B5E /* PBXTargetDependency */,
@@ -3256,14 +2965,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAF7BD870B67998D00A100FC /* VirtueDesktops complete */,
 				EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */,
 				EA7A56A20A86A738000D6B5E /* DockCommunicator */,
 				EA7A58150A86AD7B000D6B5E /* DockExtension */,
 				EA7A58F70A86B076000D6B5E /* Zen */,
 				EA7A59550A86B4D3000D6B5E /* Peony */,
-				EA7A5A250A86B5E6000D6B5E /* Virtue */,
 				EA7A5B480A86B7C4000D6B5E /* authtool */,
-				EA7A5B620A86B809000D6B5E /* VTInterface */,
 				EA7A61780A86F366000D6B5E /* VTDesktopColorLabelPrimitive */,
 				EA7A62230A86F5C8000D6B5E /* VTDesktopNamePrimitive */,
 				EA7A625F0A86F7AB000D6B5E /* VTAppearancePreferences */,
@@ -3283,30 +2991,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA7A5A220A86B5E6000D6B5E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA662C230B4CDCD5000009EB /* DefaultDesktops.plist in Resources */,
-				EA662C240B4CDCD5000009EB /* DefaultHotkeys.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA7A5B5F0A86B809000D6B5E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA2CECD70AD0B4F3002D32DA /* imageColorLabelClear.png in Resources */,
-				EA2CECD80AD0B4F3002D32DA /* imageColorLabelMask.png in Resources */,
-				EA2CECD90AD0B4F3002D32DA /* imageColorLabelMaskBar.png in Resources */,
-				EA2CECDA0AD0B4F3002D32DA /* imageColorLabelMaskComposite.png in Resources */,
-				EA8F2EE00A93FA660047C92C /* PrimitiveTextInspector.nib in Resources */,
-				EA0EE5800A93ECBC009F3FC1 /* PrimitiveTintInspector.nib in Resources */,
-				EA0EE5820A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib in Resources */,
-				EA0EE5880A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3404,7 +3088,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */,
+				EAF7BF0C0B67A01800A100FC /* DefaultDesktops.plist in Resources */,
+				EAF7BF0D0B67A01800A100FC /* DefaultHotkeys.plist in Resources */,
 				EA7A64330A87004E000D6B5E /* imageWidgetAddPopup.png in Resources */,
 				EA7A64340A87004E000D6B5E /* imageWidgetAddPopupPressed.png in Resources */,
 				EA7A644C0A87005C000D6B5E /* imageAction.tiff in Resources */,
@@ -3462,6 +3147,14 @@
 				EA7A64150A870001000D6B5E /* imageCrossSmall.tif in Resources */,
 				EA7A64160A870001000D6B5E /* imageCrossSmallHover.tif in Resources */,
 				EA7A64170A870001000D6B5E /* imageCrossSmallPressed.tif in Resources */,
+				EAF7BF100B67A02F00A100FC /* imageColorLabelClear.png in Resources */,
+				EAF7BF110B67A02F00A100FC /* imageColorLabelMask.png in Resources */,
+				EA2CED010AD0B521002D32DA /* imageColorLabelMaskBar.png in Resources */,
+				EAF7BF120B67A02F00A100FC /* imageColorLabelMaskComposite.png in Resources */,
+				EAF7BF130B67A02F00A100FC /* PrimitiveTextInspector.nib in Resources */,
+				EAF7BF140B67A02F00A100FC /* PrimitiveTintInspector.nib in Resources */,
+				EAF7BF150B67A02F00A100FC /* PrimitiveWatermarkInspector.nib in Resources */,
+				EAF7BF160B67A02F00A100FC /* VTDecorationPrimitiveInspector.nib in Resources */,
 				EA7A63EE0A86FE8F000D6B5E /* authtool in Resources */,
 				EA7A63F00A86FE9E000D6B5E /* DockExtension.bundle in Resources */,
 				EA7A63F30A86FED2000D6B5E /* iconVirtue.icns in Resources */,
@@ -3481,7 +3174,7 @@
 				EA40395B0A89CE0F00807BE2 /* iconDesktopFolder.icns in Resources */,
 				EA99F6B40AE236090055D5D5 /* COPYING in Resources */,
 				EA4B683A0B2E0CAB0079CE21 /* Virtue-menu-highlighted.png in Resources */,
-				EA5E5F0B0B64EC06004A1C6D /* version.xcconfig in Resources */,
+				EA5E5F0B0B64EC06004A1C6D /* ProductVersion.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3520,7 +3213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/version.xcconfig\";\n#my $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/ProductVersion.xcconfig\";\n#my $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
 		};
 		EAC013FC0AD10D0C00389BDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3596,74 +3289,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA7A5A230A86B5E6000D6B5E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A5A840A86B68E000D6B5E /* NSBezierPathPlate.m in Sources */,
-				EA7A5A850A86B68E000D6B5E /* NSBundlePlugin.m in Sources */,
-				EA7A5A860A86B68E000D6B5E /* NSColorString.m in Sources */,
-				EA7A5A870A86B68E000D6B5E /* NSImageTint.m in Sources */,
-				EA7A5A880A86B68E000D6B5E /* NSScreenOverallScreen.m in Sources */,
-				EA7A5A890A86B68E000D6B5E /* NSStringFSRef.m in Sources */,
-				EA7A5A8A0A86B68E000D6B5E /* NSUserDefaultsColor.m in Sources */,
-				EA7A5A8B0A86B68E000D6B5E /* NSUserDefaultsControllerKeyFactory.m in Sources */,
-				EA7A5A8C0A86B68E000D6B5E /* VTApplicationController.m in Sources */,
-				EA7A5A8D0A86B68E000D6B5E /* VTApplicationWrapper.m in Sources */,
-				EA7A5A8E0A86B68E000D6B5E /* VTDecorationPrimitive.m in Sources */,
-				EA7A5A910A86B68E000D6B5E /* VTDecorationPrimitiveText.m in Sources */,
-				EA7A5A920A86B68E000D6B5E /* VTDecorationPrimitiveTint.m in Sources */,
-				EA7A5A930A86B68E000D6B5E /* VTDecorationPrimitiveWatermark.m in Sources */,
-				EA7A5A940A86B68E000D6B5E /* VTDesktop.m in Sources */,
-				EA7A5A950A86B68E000D6B5E /* VTDesktopBackgroundHelper.m in Sources */,
-				EA7A5A960A86B68E000D6B5E /* VTDesktopController.m in Sources */,
-				EA7A5A980A86B68E000D6B5E /* VTDesktopDecoration.m in Sources */,
-				EA7A5A990A86B68E000D6B5E /* VTDesktopDecorationController.m in Sources */,
-				EA7A5A9B0A86B68E000D6B5E /* VTDesktopDecorationView.m in Sources */,
-				EA7A5A9C0A86B68E000D6B5E /* VTDesktopLayout.m in Sources */,
-				EA7A5A9F0A86B68E000D6B5E /* VTHotkeyTrigger.m in Sources */,
-				EA7A5AA00A86B68E000D6B5E /* VTInspector.m in Sources */,
-				EA7A5AA10A86B68E000D6B5E /* VTLayoutController.m in Sources */,
-				EA7A5AA20A86B68E000D6B5E /* VTMouseTrigger.m in Sources */,
-				EA7A5AA30A86B68E000D6B5E /* VTMouseWatcher.m in Sources */,
-				EA7A5AA40A86B68E000D6B5E /* VTPluginCollection.m in Sources */,
-				EA7A5AA50A86B68E000D6B5E /* VTPluginInstance.m in Sources */,
-				EA7A5AA70A86B68E000D6B5E /* VTPreferences.m in Sources */,
-				EA7A5AA80A86B68E000D6B5E /* VTScriptPlugin.m in Sources */,
-				EA7A5AA90A86B68E000D6B5E /* VTTrigger.m in Sources */,
-				EA7A5AAA0A86B68E000D6B5E /* VTTriggerController.m in Sources */,
-				EA7A5AAB0A86B68E000D6B5E /* VTTriggerDesktopNotification.m in Sources */,
-				EA7A5AAC0A86B68E000D6B5E /* VTTriggerGroup.m in Sources */,
-				EA7A5AAD0A86B68E000D6B5E /* VTTriggerNotification.m in Sources */,
-				EA28A40C0AB16E0500EC10E5 /* VTFileSystemExtensions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA7A5B460A86B7C4000D6B5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA7A5B510A86B7D2000D6B5E /* authtool.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA7A5B600A86B809000D6B5E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A5B7E0A86B8EF000D6B5E /* VTDecorationPrimitiveBindings.m in Sources */,
-				EA7A5B7F0A86B8EF000D6B5E /* VTDecorationPrimitiveTextInspector.m in Sources */,
-				EA7A5B800A86B8EF000D6B5E /* VTDecorationPrimitiveTintInspector.m in Sources */,
-				EA7A5B810A86B8EF000D6B5E /* VTDecorationPrimitiveViewController.m in Sources */,
-				EA7A5B820A86B8EF000D6B5E /* VTDecorationPrimitiveWatermarkInspector.m in Sources */,
-				EA7A5B830A86B8EF000D6B5E /* VTHotkeyCell.m in Sources */,
-				EA7A5B840A86B8EF000D6B5E /* VTHotkeyTextField.m in Sources */,
-				EA7A5B850A86B8EF000D6B5E /* VTHotkeyTextView.m in Sources */,
-				EA7A5B860A86B8EF000D6B5E /* VTPositionGrid.m in Sources */,
-				EA7A5B870A86B8EF000D6B5E /* VTPositionGridCell.m in Sources */,
-				EA4B68430B2E0D8D0079CE21 /* OAGradientTableView.m in Sources */,
-				EA4B68490B2E0D970079CE21 /* VTScalingImageCell.m in Sources */,
-				EA4B684B0B2E0D970079CE21 /* VTVerticallyCentredTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3741,6 +3371,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF7B4E90B67932700A100FC /* OAGradientTableView.m in Sources */,
+				EAF7B4EA0B67932700A100FC /* VTDecorationPrimitiveBindings.m in Sources */,
+				EAF7B4EB0B67932700A100FC /* VTDecorationPrimitiveTextInspector.m in Sources */,
+				EAF7B4EC0B67932700A100FC /* VTDecorationPrimitiveTintInspector.m in Sources */,
+				EAF7B4ED0B67932700A100FC /* VTDecorationPrimitiveViewController.m in Sources */,
+				EAF7B4EE0B67932700A100FC /* VTDecorationPrimitiveWatermarkInspector.m in Sources */,
+				EAF7B4EF0B67932700A100FC /* VTHotkeyCell.m in Sources */,
+				EAF7B4F00B67932700A100FC /* VTHotkeyTextField.m in Sources */,
+				EAF7B4F10B67932700A100FC /* VTHotkeyTextView.m in Sources */,
+				EAF7B4F20B67932700A100FC /* VTPositionGrid.m in Sources */,
+				EAF7B4F30B67932700A100FC /* VTPositionGridCell.m in Sources */,
+				EAF7B4F40B67932700A100FC /* VTScalingImageCell.m in Sources */,
+				EAF7B4F50B67932700A100FC /* VTVerticallyCentredTextFieldCell.m in Sources */,
+				EAF7B4BE0B67930700A100FC /* NSBezierPathPlate.m in Sources */,
+				EAF7B4BF0B67930700A100FC /* NSBundlePlugin.m in Sources */,
+				EAF7B4C00B67930700A100FC /* NSColorString.m in Sources */,
+				EAF7B4C10B67930700A100FC /* NSImageTint.m in Sources */,
+				EAF7B4C20B67930700A100FC /* NSScreenOverallScreen.m in Sources */,
+				EAF7B4C30B67930700A100FC /* NSStringFSRef.m in Sources */,
+				EAF7B4C40B67930700A100FC /* NSUserDefaultsColor.m in Sources */,
+				EAF7B4C50B67930700A100FC /* NSUserDefaultsControllerKeyFactory.m in Sources */,
+				EAF7B4C60B67930700A100FC /* VTApplicationController.m in Sources */,
+				EAF7B4C70B67930700A100FC /* VTApplicationWrapper.m in Sources */,
+				EAF7B4C80B67930700A100FC /* VTDecorationPrimitive.m in Sources */,
+				EAF7B4CB0B67930700A100FC /* VTDecorationPrimitiveText.m in Sources */,
+				EAF7B4CC0B67930700A100FC /* VTDecorationPrimitiveTint.m in Sources */,
+				EAF7B4CD0B67930700A100FC /* VTDecorationPrimitiveWatermark.m in Sources */,
+				EAF7B4CE0B67930700A100FC /* VTDesktop.m in Sources */,
+				EAF7B4CF0B67930700A100FC /* VTDesktopBackgroundHelper.m in Sources */,
+				EAF7B4D00B67930700A100FC /* VTDesktopController.m in Sources */,
+				EAF7B4D20B67930700A100FC /* VTDesktopDecoration.m in Sources */,
+				EAF7B4D30B67930700A100FC /* VTDesktopDecorationController.m in Sources */,
+				EAF7B4D50B67930700A100FC /* VTDesktopDecorationView.m in Sources */,
+				EAF7B4D60B67930700A100FC /* VTDesktopLayout.m in Sources */,
+				EAF7B4D70B67930700A100FC /* VTDesktopProtector.m in Sources */,
+				EAF7B4D90B67930700A100FC /* VTFileSystemExtensions.m in Sources */,
+				EAF7B4DA0B67930700A100FC /* VTHotkeyTrigger.m in Sources */,
+				EAF7B4DB0B67930700A100FC /* VTInspector.m in Sources */,
+				EAF7B4DC0B67930700A100FC /* VTLayoutController.m in Sources */,
+				EAF7B4DD0B67930700A100FC /* VTMouseTrigger.m in Sources */,
+				EAF7B4DE0B67930700A100FC /* VTMouseWatcher.m in Sources */,
+				EAF7B4DF0B67930700A100FC /* VTPluginCollection.m in Sources */,
+				EAF7B4E00B67930700A100FC /* VTPluginInstance.m in Sources */,
+				EAF7B4E20B67930700A100FC /* VTPreferences.m in Sources */,
+				EAF7B4E30B67930700A100FC /* VTScriptPlugin.m in Sources */,
+				EAF7B4E40B67930700A100FC /* VTTrigger.m in Sources */,
+				EAF7B4E50B67930700A100FC /* VTTriggerController.m in Sources */,
+				EAF7B4E60B67930700A100FC /* VTTriggerDesktopNotification.m in Sources */,
+				EAF7B4E70B67930700A100FC /* VTTriggerGroup.m in Sources */,
+				EAF7B4E80B67930700A100FC /* VTTriggerNotification.m in Sources */,
 				EA7A64620A8700A4000D6B5E /* fixExecutable.c in Sources */,
 				EA7A64630A8700A7000D6B5E /* main.m in Sources */,
 				EA7A64640A8700AB000D6B5E /* PNApplicationScripting.m in Sources */,
@@ -3817,31 +3497,6 @@
 			target = EA7A56A20A86A738000D6B5E /* DockCommunicator */;
 			targetProxy = EA7A59770A86B534000D6B5E /* PBXContainerItemProxy */;
 		};
-		EA7A5ABF0A86B6CB000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A58F70A86B076000D6B5E /* Zen */;
-			targetProxy = EA7A5ABE0A86B6CB000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A5AC10A86B6CB000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A59550A86B4D3000D6B5E /* Peony */;
-			targetProxy = EA7A5AC00A86B6CB000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A5CA10A86B93C000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A58F70A86B076000D6B5E /* Zen */;
-			targetProxy = EA7A5CA00A86B93C000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A5CA30A86B93C000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A59550A86B4D3000D6B5E /* Peony */;
-			targetProxy = EA7A5CA20A86B93C000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A5CA50A86B93C000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A5CA40A86B93C000D6B5E /* PBXContainerItemProxy */;
-		};
 		EA7A62150A86F593000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA7A58F70A86B076000D6B5E /* Zen */;
@@ -3851,16 +3506,6 @@
 			isa = PBXTargetDependency;
 			target = EA7A59550A86B4D3000D6B5E /* Peony */;
 			targetProxy = EA7A62160A86F593000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A62190A86F593000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A62180A86F593000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A621B0A86F593000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5B620A86B809000D6B5E /* VTInterface */;
-			targetProxy = EA7A621A0A86F593000D6B5E /* PBXContainerItemProxy */;
 		};
 		EA7A631E0A86FB10000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3872,16 +3517,6 @@
 			target = EA7A59550A86B4D3000D6B5E /* Peony */;
 			targetProxy = EA7A631F0A86FB10000D6B5E /* PBXContainerItemProxy */;
 		};
-		EA7A63220A86FB10000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A63210A86FB10000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A63240A86FB10000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5B620A86B809000D6B5E /* VTInterface */;
-			targetProxy = EA7A63230A86FB10000D6B5E /* PBXContainerItemProxy */;
-		};
 		EA7A63AF0A86FE06000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA7A58F70A86B076000D6B5E /* Zen */;
@@ -3892,11 +3527,6 @@
 			target = EA7A59550A86B4D3000D6B5E /* Peony */;
 			targetProxy = EA7A63B00A86FE06000D6B5E /* PBXContainerItemProxy */;
 		};
-		EA7A63B30A86FE06000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A63B20A86FE06000D6B5E /* PBXContainerItemProxy */;
-		};
 		EA7A63B70A86FE0F000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA7A58F70A86B076000D6B5E /* Zen */;
@@ -3906,31 +3536,6 @@
 			isa = PBXTargetDependency;
 			target = EA7A59550A86B4D3000D6B5E /* Peony */;
 			targetProxy = EA7A63B80A86FE0F000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A63BB0A86FE0F000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A63BA0A86FE0F000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A63C10A86FE1E000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5B620A86B809000D6B5E /* VTInterface */;
-			targetProxy = EA7A63C00A86FE1E000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A63CB0A86FE39000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A58F70A86B076000D6B5E /* Zen */;
-			targetProxy = EA7A63CA0A86FE39000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A63CD0A86FE39000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A59550A86B4D3000D6B5E /* Peony */;
-			targetProxy = EA7A63CC0A86FE39000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A63CF0A86FE39000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A63CE0A86FE39000D6B5E /* PBXContainerItemProxy */;
 		};
 		EA7A67A30A87049A000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3952,60 +3557,10 @@
 			target = EA7A59550A86B4D3000D6B5E /* Peony */;
 			targetProxy = EA7A67A80A87049A000D6B5E /* PBXContainerItemProxy */;
 		};
-		EA7A67AB0A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5A250A86B5E6000D6B5E /* Virtue */;
-			targetProxy = EA7A67AA0A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
 		EA7A67AD0A87049A000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA7A5B480A86B7C4000D6B5E /* authtool */;
 			targetProxy = EA7A67AC0A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67AF0A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A5B620A86B809000D6B5E /* VTInterface */;
-			targetProxy = EA7A67AE0A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67B10A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A61780A86F366000D6B5E /* VTDesktopColorLabelPrimitive */;
-			targetProxy = EA7A67B00A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67B30A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A62230A86F5C8000D6B5E /* VTDesktopNamePrimitive */;
-			targetProxy = EA7A67B20A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67B50A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A625F0A86F7AB000D6B5E /* VTAppearancePreferences */;
-			targetProxy = EA7A67B40A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67B70A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A62AD0A86F8D6000D6B5E /* VTApplicationPreferences */;
-			targetProxy = EA7A67B60A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67B90A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A62D70A86F9AF000D6B5E /* VTDesktopTemplatePreferences */;
-			targetProxy = EA7A67B80A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67BB0A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A63350A86FB4F000D6B5E /* VTHotkeyPreferences */;
-			targetProxy = EA7A67BA0A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67BD0A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A635B0A86FC58000D6B5E /* VTLayoutPreferences */;
-			targetProxy = EA7A67BC0A87049A000D6B5E /* PBXContainerItemProxy */;
-		};
-		EA7A67BF0A87049A000D6B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */;
-			targetProxy = EA7A67BE0A87049A000D6B5E /* PBXContainerItemProxy */;
 		};
 		EAC00EA50AD1098100389BDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4021,6 +3576,156 @@
 			isa = PBXTargetDependency;
 			target = EAC0139D0AD10BA400389BDB /* TA Interface Palette */;
 			targetProxy = EAC015BB0AD12B4200389BDB /* PBXContainerItemProxy */;
+		};
+		EAF7BD300B67969200A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD2F0B67969200A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD4D0B67982C00A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD4C0B67982C00A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD510B67985A00A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD500B67985A00A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD530B67986A00A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD520B67986A00A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD550B67986F00A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A58F70A86B076000D6B5E /* Zen */;
+			targetProxy = EAF7BD540B67986F00A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD570B67986F00A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A59550A86B4D3000D6B5E /* Peony */;
+			targetProxy = EAF7BD560B67986F00A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD590B67988100A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A58F70A86B076000D6B5E /* Zen */;
+			targetProxy = EAF7BD580B67988100A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD5B0B67988100A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A59550A86B4D3000D6B5E /* Peony */;
+			targetProxy = EAF7BD5A0B67988100A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD5D0B67988400A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD5C0B67988400A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD5F0B67989300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD5E0B67989300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD610B67989300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A58F70A86B076000D6B5E /* Zen */;
+			targetProxy = EAF7BD600B67989300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD630B67989300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A59550A86B4D3000D6B5E /* Peony */;
+			targetProxy = EAF7BD620B67989300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD7A0B6798A600A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD790B6798A600A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD7E0B6798BB00A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD7D0B6798BB00A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD890B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			targetProxy = EAF7BD880B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD8B0B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A56A20A86A738000D6B5E /* DockCommunicator */;
+			targetProxy = EAF7BD8A0B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD8D0B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A58150A86AD7B000D6B5E /* DockExtension */;
+			targetProxy = EAF7BD8C0B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD8F0B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A58F70A86B076000D6B5E /* Zen */;
+			targetProxy = EAF7BD8E0B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD910B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A59550A86B4D3000D6B5E /* Peony */;
+			targetProxy = EAF7BD900B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD930B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A5B480A86B7C4000D6B5E /* authtool */;
+			targetProxy = EAF7BD920B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD950B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A61780A86F366000D6B5E /* VTDesktopColorLabelPrimitive */;
+			targetProxy = EAF7BD940B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD970B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A62230A86F5C8000D6B5E /* VTDesktopNamePrimitive */;
+			targetProxy = EAF7BD960B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD990B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A625F0A86F7AB000D6B5E /* VTAppearancePreferences */;
+			targetProxy = EAF7BD980B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD9B0B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A62AD0A86F8D6000D6B5E /* VTApplicationPreferences */;
+			targetProxy = EAF7BD9A0B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD9D0B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A62D70A86F9AF000D6B5E /* VTDesktopTemplatePreferences */;
+			targetProxy = EAF7BD9C0B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BD9F0B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63350A86FB4F000D6B5E /* VTHotkeyPreferences */;
+			targetProxy = EAF7BD9E0B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BDA10B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A635B0A86FC58000D6B5E /* VTLayoutPreferences */;
+			targetProxy = EAF7BDA00B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BDA30B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */;
+			targetProxy = EAF7BDA20B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BDA50B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC00E240AD1065C00389BDB /* TAUserInterfaceElements */;
+			targetProxy = EAF7BDA40B67999300A100FC /* PBXContainerItemProxy */;
+		};
+		EAF7BDA70B67999300A100FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC0139D0AD10BA400389BDB /* TA Interface Palette */;
+			targetProxy = EAF7BDA60B67999300A100FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -4079,6 +3784,7 @@
 				EA564FDA0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveDesktopColorLabelInspector.nib;
+			path = ../VTInterface;
 			sourceTree = "<group>";
 		};
 		EA0EE57B0A93ECBC009F3FC1 /* PrimitiveTextInspector.nib */ = {
@@ -4106,6 +3812,7 @@
 				EA564FDB0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveTintInspector.nib;
+			path = ../VTInterface;
 			sourceTree = "<group>";
 		};
 		EA0EE5810A93ECBC009F3FC1 /* PrimitiveWatermarkInspector.nib */ = {
@@ -4120,6 +3827,7 @@
 				EA564FDC0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = PrimitiveWatermarkInspector.nib;
+			path = ../VTInterface;
 			sourceTree = "<group>";
 		};
 		EA0EE5850A93ECC3009F3FC1 /* VTAppearancePreferences.nib */ = {
@@ -4148,6 +3856,7 @@
 				EA564FDD0B2ED1E7004BF37F /* Japanese */,
 			);
 			name = VTDecorationPrimitiveInspector.nib;
+			path = ../VTInterface;
 			sourceTree = "<group>";
 		};
 		EA0EE5890A93ECC3009F3FC1 /* VTPluginPreferences.nib */ = {
@@ -4176,6 +3885,7 @@
 				EA564FF40B2ED2E5004BF37F /* Portuguese */,
 			);
 			name = Localizable.strings;
+			path = ../Localisation;
 			sourceTree = "<group>";
 		};
 		EA7A55D10A86A6D0000D6B5E /* InfoPlist.strings */ = {
@@ -4325,6 +4035,7 @@
 				EA564FD10B2ED1A0004BF37F /* Portuguese */,
 			);
 			name = PrimitiveTextInspector.nib;
+			path = ../VTInterface;
 			sourceTree = "<group>";
 		};
 		EAC013BB0AD10C7400389BDB /* ColorLabelInspector.nib */ = {
@@ -4449,32 +4160,6 @@
 			};
 			name = "Platform-specific release";
 		};
-		EA5D5FEC0AECB2EE002B9A3C /* Platform-specific release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/Virtue-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = Virtue;
-				ZERO_LINK = NO;
-			};
-			name = "Platform-specific release";
-		};
 		EA5D5FED0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4494,34 +4179,9 @@
 			};
 			name = "Platform-specific release";
 		};
-		EA5D5FEE0AECB2EE002B9A3C /* Platform-specific release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/VTInterface-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = VTInterface;
-				ZERO_LINK = NO;
-			};
-			name = "Platform-specific release";
-		};
 		EA5D5FEF0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4546,6 +4206,7 @@
 		};
 		EA5D5FF00AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4570,6 +4231,7 @@
 		};
 		EA5D5FF10AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4594,6 +4256,7 @@
 		};
 		EA5D5FF20AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4618,6 +4281,7 @@
 		};
 		EA5D5FF30AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4642,6 +4306,7 @@
 		};
 		EA5D5FF40AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4666,6 +4331,7 @@
 		};
 		EA5D5FF50AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4690,6 +4356,7 @@
 		};
 		EA5D5FF60AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -4810,10 +4477,10 @@
 		};
 		EA5D5FFB0AECB2EE002B9A3C /* Platform-specific release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
 				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_OBJC_GC = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
@@ -5009,54 +4676,6 @@
 			};
 			name = "Universal release";
 		};
-		EA7A5A290A86B5E6000D6B5E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/Virtue-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				PREBINDING = NO;
-				PRODUCT_NAME = Virtue;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		EA7A5A2A0A86B5E6000D6B5E /* Universal release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/Virtue-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = Virtue;
-				ZERO_LINK = NO;
-			};
-			name = "Universal release";
-		};
 		EA7A5B550A86B7E5000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5097,57 +4716,9 @@
 			};
 			name = "Universal release";
 		};
-		EA7A5B660A86B809000D6B5E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/VTInterface-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
-				PRODUCT_NAME = VTInterface;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		EA7A5B670A86B809000D6B5E /* Universal release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Property lists/VTInterface-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = VTInterface;
-				ZERO_LINK = NO;
-			};
-			name = "Universal release";
-		};
 		EA7A617C0A86F366000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5169,6 +4740,7 @@
 		};
 		EA7A617D0A86F366000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5193,6 +4765,7 @@
 		};
 		EA7A62270A86F5C8000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5219,6 +4792,7 @@
 		};
 		EA7A62280A86F5C8000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5243,6 +4817,7 @@
 		};
 		EA7A62630A86F7AB000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5269,6 +4844,7 @@
 		};
 		EA7A62640A86F7AB000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5293,6 +4869,7 @@
 		};
 		EA7A62B10A86F8D7000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5319,6 +4896,7 @@
 		};
 		EA7A62B20A86F8D7000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5343,6 +4921,7 @@
 		};
 		EA7A62DB0A86F9AF000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5369,6 +4948,7 @@
 		};
 		EA7A62DC0A86F9AF000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5393,6 +4973,7 @@
 		};
 		EA7A63390A86FB4F000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5419,6 +5000,7 @@
 		};
 		EA7A633A0A86FB4F000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5443,6 +5025,7 @@
 		};
 		EA7A635F0A86FC59000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5469,6 +5052,7 @@
 		};
 		EA7A63600A86FC59000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5493,6 +5077,7 @@
 		};
 		EA7A63860A86FD3D000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5519,6 +5104,7 @@
 		};
 		EA7A63870A86FD3D000D6B5E /* Universal release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -5543,6 +5129,7 @@
 		};
 		EA7A63E40A86FE65000D6B5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* ProductVersion.xcconfig */;
 			buildSettings = {
 				ALTERNATE_GROUP = procmod;
 				COPY_PHASE_STRIP = NO;
@@ -5584,7 +5171,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = VirtueDesktops;
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = YES;
+				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
@@ -5633,7 +5220,6 @@
 		};
 		EAA9266F0A86A4E800D4674B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_AUTO_VECTORIZATION = YES;
@@ -5647,13 +5233,13 @@
 		};
 		EAA926700A86A4E800D4674B /* Universal release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA5E5F0A0B64EC06004A1C6D /* version.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					ppc,
 					i386,
 				);
 				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_OBJC_GC = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
@@ -5771,6 +5357,31 @@
 			};
 			name = "Universal release";
 		};
+		EAF7BDC20B679A0600A100FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "VirtueDesktops complete";
+			};
+			name = Debug;
+		};
+		EAF7BDC30B679A0600A100FC /* Universal release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "VirtueDesktops complete";
+			};
+			name = "Universal release";
+		};
+		EAF7BDC40B679A0600A100FC /* Platform-specific release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "VirtueDesktops complete";
+			};
+			name = "Platform-specific release";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -5814,32 +5425,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Universal release";
 		};
-		EA7A5A280A86B5E6000D6B5E /* Build configuration list for PBXNativeTarget "Virtue" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA7A5A290A86B5E6000D6B5E /* Debug */,
-				EA7A5A2A0A86B5E6000D6B5E /* Universal release */,
-				EA5D5FEC0AECB2EE002B9A3C /* Platform-specific release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Universal release";
-		};
 		EA7A5B540A86B7E5000D6B5E /* Build configuration list for PBXNativeTarget "authtool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA7A5B550A86B7E5000D6B5E /* Debug */,
 				EA7A5B560A86B7E5000D6B5E /* Universal release */,
 				EA5D5FED0AECB2EE002B9A3C /* Platform-specific release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Universal release";
-		};
-		EA7A5B650A86B809000D6B5E /* Build configuration list for PBXNativeTarget "VTInterface" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA7A5B660A86B809000D6B5E /* Debug */,
-				EA7A5B670A86B809000D6B5E /* Universal release */,
-				EA5D5FEE0AECB2EE002B9A3C /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Universal release";
@@ -5960,6 +5551,16 @@
 				EAC013A10AD10BA500389BDB /* Debug */,
 				EAC013A20AD10BA500389BDB /* Universal release */,
 				EA5D5FF90AECB2EE002B9A3C /* Platform-specific release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Universal release";
+		};
+		EAF7BDC10B679A0600A100FC /* Build configuration list for PBXAggregateTarget "VirtueDesktops complete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF7BDC20B679A0600A100FC /* Debug */,
+				EAF7BDC30B679A0600A100FC /* Universal release */,
+				EAF7BDC40B679A0600A100FC /* Platform-specific release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Universal release";
