@@ -61,7 +61,7 @@
 		mDecorationPrototype					= nil; 
 		mExpectingBackgroundChange		= NO; 
 		
-		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]); 
+		ZEN_ASSIGN(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]); 
 		
 		// Register as observer for desktop switches 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillChange:) name: kPnOnDesktopWillActivate object: nil];
@@ -446,7 +446,7 @@
 	}		
 		
 	// otherwise get the background picture and set it as the default
-	ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]);
+	ZEN_ASSIGN(mDefaultDesktopBackgroundPath, [[VTDesktopBackgroundHelper sharedInstance] background]);
 	[[VTDesktopBackgroundHelper sharedInstance] setDefaultBackground: mDefaultDesktopBackgroundPath];
 	
 	

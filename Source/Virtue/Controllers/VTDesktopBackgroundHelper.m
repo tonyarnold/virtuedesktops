@@ -61,7 +61,7 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 		
 		// find out which mode to use 
 		[self updateMode];
-		ZEN_ASSIGN_COPY(mDefaultDesktopBackgroundPath, [self background]);
+		ZEN_ASSIGN(mDefaultDesktopBackgroundPath, [self background]);
 		
 		return self; 
 	}
@@ -124,10 +124,10 @@ OSStatus AEHelperCoerceNSURL (NSURL *furl, DescType toType, AEDesc *result);
 #if 0	
 	switch (mMode) {
 	case VTBackgroundHelperModeFinder: 
-		return [[[self backgroundUsingFinder] copy] autorelease]; 
+		return [self backgroundUsingFinder]; 
 	case VTBackgroundHelperModePList: 
 #endif 
-		return [[[self backgroundUsingPList] copy] autorelease]; 
+		return [self backgroundUsingPList]; 
 #if 0
 	case VTBackgroundHelperModeNone: 
 		// Fallthrough

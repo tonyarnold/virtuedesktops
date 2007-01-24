@@ -16,7 +16,6 @@
 
 @interface VTMatrixPagerAppletCell : NSImageCell {
 	PNApplication *mApplication; 
-  NSImage       *mApplicationIcon;
 }
 
 #pragma mark -

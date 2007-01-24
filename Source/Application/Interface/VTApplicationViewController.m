@@ -158,6 +158,7 @@
 	
 	// write to preferences 
 	[[NSUserDefaults standardUserDefaults] setObject: applicationDict forKey: VTPreferencesApplicationsName]; 
+
 	// and sync 
 	[[NSUserDefaults standardUserDefaults] synchronize]; 	
 }

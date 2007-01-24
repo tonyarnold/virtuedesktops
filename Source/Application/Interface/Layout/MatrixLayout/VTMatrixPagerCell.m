@@ -210,7 +210,7 @@ enum
   ZEN_RELEASE(mBackgroundHighlightColor);
   mBackgroundHighlightColor = [color copy];
   ZEN_RELEASE(mDesktopBackgroundHighlightColor);
-	mDesktopBackgroundHighlightColor	= [[self borderColorFor: mBackgroundHighlightColor highIntensity: NO] retain]; 
+	mDesktopBackgroundHighlightColor	= [[self borderColorFor: mBackgroundHighlightColor highIntensity: NO] retain];
 }
 
 - (void) setWindowColor: (NSColor*) color {	

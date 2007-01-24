@@ -61,9 +61,9 @@
 			return nil; 
 		}
 		
-		ZEN_ASSIGN(mBundleId, bundleId);
+		ZEN_ASSIGN(mBundleId, bundleId);    
     ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: mBundleId]);
-		
+		    
 		// and complete initialization by filling the application array 
 		[self createApplications];
 		
@@ -96,7 +96,7 @@
     }
     
     ZEN_ASSIGN_COPY(mBundleId, [[NSBundle bundleWithPath: path] objectForInfoDictionaryKey: @"CFBundleIdentifier"]);
-		    
+		        
 		// and complete initialization by filling the application array 
 		[self createApplications];
 		
@@ -125,11 +125,15 @@
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
   [dictionary setObject: mBundlePath forKey: kVtCodingBundlePath];
-  [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
+  
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
 	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
   [dictionary setObject: [NSNumber numberWithBool: mUnfocused] forKey: kVtCodingUnfocused];
 	[dictionary setObject: [NSNumber numberWithBool: mBindDesktop] forKey: kVtCodingDesktopEnabled];
+  
+  if (mBundleId)
+    [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
+  
 	if (mDesktop)
 		[dictionary setObject: [mDesktop uuid] forKey: kVtCodingDesktop]; 
 }
@@ -145,7 +149,8 @@
 	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue]; 
 	
 	// try to read the desktop
-	NSString* desktopUUID = [dictionary objectForKey: kVtCodingDesktop]; 
+	NSString* desktopUUID = [dictionary objectForKey: kVtCodingDesktop];
+  
 	// get the desktop, this may be nil, which is ok
 	if (desktopUUID)
 		ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] desktopWithUUID: desktopUUID]); 
@@ -396,9 +401,9 @@
 		[self willChangeValueForKey: @"running"]; 
 		
 		mPid	= [application pid];
-    ZEN_ASSIGN_COPY(mBundlePath, [application path]);
-    ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
-    ZEN_ASSIGN_COPY(mTitle, [application name]);
+    ZEN_ASSIGN(mBundlePath, [application path]);
+    ZEN_ASSIGN(mBundleId, [application bundleId]);
+    ZEN_ASSIGN(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);     
 				
 		[self didChangeValueForKey: @"running"]; 

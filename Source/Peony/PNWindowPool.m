@@ -54,7 +54,8 @@
 - (PNWindow*) windowWithId: (CGSWindow) windowId {
 	// create and add it if necessary 
 	if ([mWindows objectForKey: [NSNumber numberWithInt: windowId]] == nil) {
-		[mWindows setObject: [[PNWindow alloc] initWithWindowId: windowId] forKey: [NSNumber numberWithInt: windowId]]; 
+    PNWindow *newWindow = [[PNWindow alloc] initWithWindowId: windowId];
+		[mWindows setObject: newWindow forKey: [NSNumber numberWithInt: windowId]];
 	}
   
 	return [mWindows objectForKey: [NSNumber numberWithInt: windowId]]; 
@@ -67,7 +68,7 @@
 	PNWindow* window = [notification object]; 
 		
 #if 0
-	// check if the window is still valid, and if it isn't remove it form the map
+	// check if the window is still valid, and if it isn't remove it from the map
 	if ([window isValid])
 		return; 
 #endif 

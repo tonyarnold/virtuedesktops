@@ -45,7 +45,6 @@
 		mIsSticky						= NO;
 		mIsSpecial					= NO;
 		mIsIgnoredByExpose	= NO;
-		mIcon								= nil;
 		return self;
 	}
 	return nil;
@@ -365,11 +364,10 @@
 
 #pragma mark -
 - (NSImage*) icon {
-	if (mIcon == nil) {
-		mIcon = [NSImage imageNamed: @"imageWindow.png"];
-	}
-  
-	return mIcon;
+//	if (mIcon == nil) {
+//		mIcon = [NSImage imageNamed: @"imageWindow.png"];
+//	}
+	return [NSImage imageNamed: @"imageWindow.png"];
 }
 
 #pragma mark -

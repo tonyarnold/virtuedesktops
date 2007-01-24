@@ -150,7 +150,7 @@
 		ZEN_ASSIGN_COPY(mDesktopBackgroundImagePath, [[VTDesktopBackgroundHelper sharedInstance] defaultBackground]);
 	}
 	
-	return [[mDesktopBackgroundImagePath copy] autorelease];
+	return mDesktopBackgroundImagePath;
 }
 
 - (void) setDefaultDesktopBackgroundIfNeeded: (NSString*) path {
