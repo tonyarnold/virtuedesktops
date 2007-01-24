@@ -2451,8 +2451,7 @@
 				EA7A564E0A86A705000D6B5E /* Resources */,
 				EA7A65940A87025C000D6B5E /* External Frameworks and Libraries */,
 				EA7A56A40A86A738000D6B5E /* Products */,
-				EA5E5F0A0B64EC06004A1C6D /* ProductVersion.xcconfig */,
-				EAF7BD180B67959800A100FC /* Bundle.xcconfig */,
+				EAF7C8460B67B01D00A100FC /* Configurations */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2540,6 +2539,15 @@
 				EA7A53CF0A86A5A4000D6B5E /* Zen */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAF7C8460B67B01D00A100FC /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E5F0A0B64EC06004A1C6D /* ProductVersion.xcconfig */,
+				EAF7BD180B67959800A100FC /* Bundle.xcconfig */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3213,7 +3221,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/ProductVersion.xcconfig\";\n#my $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/Configurations/ProductVersion.xcconfig\";\n#my $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
 		};
 		EAC013FC0AD10D0C00389BDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
