@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTDecorationPrimitiveWatermark.h"
-#import <Virtue/NSScreenOverallScreen.h>
+#import "NSScreenOverallScreen.h"
 #import <Zen/Zen.h> 
 
 #pragma mark Coding keys 

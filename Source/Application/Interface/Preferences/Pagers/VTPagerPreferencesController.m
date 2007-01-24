@@ -12,9 +12,9 @@
 *****************************************************************************/ 
 
 #import "VTPagerPreferencesController.h"
-#import <Virtue/VTPreferences.h> 
-#import <Virtue/VTLayoutController.h> 
-#import <Virtue/NSUserDefaultsColor.h> 
+#import "VTPreferences.h"
+#import "VTLayoutController.h"
+#import "NSUserDefaultsColor.h"
 
 @interface VTPagerPreferencesController(Private) 
 - (void) selectPager; 

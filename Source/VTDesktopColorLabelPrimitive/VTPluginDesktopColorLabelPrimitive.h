@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTPlugin.h> 
+#import "VTPlugin.h" 
 
 @interface VTPluginDesktopColorLabelPrimitive : NSObject<VTPluginDecoration> {
 }

@@ -7,7 +7,7 @@
 //
 
 #import "VTApplicationRunningCountTransformer.h"
-#import <Virtue/VTDesktop.h> 
+#import "VTDesktop.h"
 
 @implementation VTApplicationRunningCountTransformer
 

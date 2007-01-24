@@ -13,7 +13,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <PreferencePanes/NSPreferencePane.h>
-#import <Virtue/VTHotkeyGroup.h> 
+#import "VTHotkeyGroup.h"
 #import "VTHotkeyTextView.h" 
 
 

@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTNotificationBezelView.h"
-#import <Virtue/NSBezierPathPlate.h>
+#import "NSBezierPathPlate.h"
 #import <Zen/ZNMemoryManagementMacros.h>
 
 #define kDefaultText @"VirtueDesktops"

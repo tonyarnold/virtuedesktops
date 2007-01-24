@@ -12,10 +12,10 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktopLayout.h>
-#import <Virtue/VTDesktop.h>
-#import <Virtue/VTPager.h>
-#import <Virtue/VTCoding.h> 
+#import "VTDesktopLayout.h"
+#import "VTDesktop.h"
+#import "VTPager.h"
+#import "VTCoding.h" 
 
 @interface VTMatrixDesktopLayout : VTDesktopLayout<VTCoding> {
 	unsigned int	mRows; 

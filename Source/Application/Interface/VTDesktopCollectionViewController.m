@@ -11,8 +11,8 @@
 * 
 *****************************************************************************/ 
 
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/VTNotifications.h>
+#import "VTDesktopController.h"
+#import "VTNotifications.h"
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 
 

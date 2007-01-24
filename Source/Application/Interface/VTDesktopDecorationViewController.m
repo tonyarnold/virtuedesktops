@@ -12,12 +12,12 @@
 *****************************************************************************/ 
 
 #import "VTDesktopDecorationViewController.h"
-#import <Virtue/VTDesktopDecorationController.h>
-#import <Virtue/VTDecorationPrimitiveText.h>
-#import <Virtue/VTDecorationPrimitiveTint.h>
-#import <Virtue/VTDecorationPrimitiveWatermark.h>
-#import <Virtue/VTPlugin.h>
-#import <Zen/ZNMemoryManagementMacros.h> 
+#import "VTDesktopDecorationController.h"
+#import "VTDecorationPrimitiveText.h"
+#import "VTDecorationPrimitiveTint.h"
+#import "VTDecorationPrimitiveWatermark.h"
+#import "VTPlugin.h"
+#import <Zen/Zen.h> 
 
 #import "VTDecorationPrimitiveTextInspector.h" 
 #import "VTDecorationPrimitiveBindings.h" 

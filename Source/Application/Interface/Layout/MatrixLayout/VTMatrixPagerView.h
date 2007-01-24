@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktop.h>
+#import "VTDesktop.h"
 #import "VTMatrixDesktopLayout.h" 
 #import "VTMatrixPagerCell.h" 
 

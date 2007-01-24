@@ -183,7 +183,7 @@
 
 	// if we fail, we return 
 	if (![appleScript compileAndReturnError: nil]) {
-		NSLog(@"failed compiling apple script from %@", scriptSource); 
+		ZNLog( @"failed compiling apple script from %@", scriptSource); 
 		return; 
 	}
 				

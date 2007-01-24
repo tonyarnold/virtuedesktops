@@ -13,8 +13,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Peony/Peony.h> 
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/VTApplicationWrapper.h> 
+#import "VTDesktopController.h"
+#import "VTApplicationWrapper.h"
 
 @interface VTOperationsViewController : NSWindowController {
 	// Outlets 

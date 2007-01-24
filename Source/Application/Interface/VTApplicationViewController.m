@@ -17,9 +17,9 @@
 #import "VTDesktopIdTransformer.h" 
 #import "VTWindowStickyStateTransformer.h" 
 #import "VTPreferenceKeys.h" 
-#import <Virtue/VTDesktopController.h> 
-#import <Virtue/VTLayoutController.h> 
-#import <Virtue/VTApplicationController.h> 
+#import "VTDesktopController.h"
+#import "VTLayoutController.h"
+#import "VTApplicationController.h"
 
 @interface PNWindow (VTApplicationViewController)
 - (void) setStickyObject: (NSNumber*) state; 

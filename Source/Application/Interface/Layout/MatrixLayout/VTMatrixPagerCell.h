@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktop.h>
-#import <Virtue/VTDesktopController.h>
+#import "VTDesktop.h"
+#import "VTDesktopController.h"
 
 @interface VTMatrixPagerCell : NSActionCell {
 	// attributes 

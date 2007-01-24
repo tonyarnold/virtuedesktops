@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import "VTNotificationBezel.h"
-#import <Virtue/VTPreferences.h>
-#import <Virtue/NSUserDefaultsControllerKeyFactory.h>
+#import "VTPreferences.h"
+#import "NSUserDefaultsControllerKeyFactory.h"
 #import <Zen/ZNMemoryManagementMacros.h> 
 
 #define kVtFadingIncrement	0.05

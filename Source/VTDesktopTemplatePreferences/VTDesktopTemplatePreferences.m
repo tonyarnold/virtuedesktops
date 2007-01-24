@@ -14,17 +14,17 @@
 #import "VTDesktopTemplatePreferences.h"
 #import "VTPreferenceKeys.h" 
 
-#import <Virtue/VTDecorationPrimitiveText.h>
-#import <VTInterface/VTDecorationPrimitiveTextInspector.h>
-#import <Virtue/VTDecorationPrimitiveTint.h> 
-#import <VTInterface/VTDecorationPrimitiveTintInspector.h>
-#import <Virtue/VTDecorationPrimitiveWatermark.h>
-#import <VTInterface/VTDecorationPrimitiveWatermarkInspector.h>
+#import "VTDecorationPrimitiveText.h"
+#import "VTDecorationPrimitiveTextInspector.h"
+#import "VTDecorationPrimitiveTint.h" 
+#import "VTDecorationPrimitiveTintInspector.h"
+#import "VTDecorationPrimitiveWatermark.h"
+#import "VTDecorationPrimitiveWatermarkInspector.h"
 
-#import <Virtue/VTPlugin.h> 
-#import <Virtue/VTPluginCollection.h> 
-#import <Virtue/VTNotifications.h>
-#import <Virtue/VTDesktopController.h> 
+#import "VTPlugin.h" 
+#import "VTPluginCollection.h" 
+#import "VTNotifications.h"
+#import "VTDesktopController.h" 
 
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 

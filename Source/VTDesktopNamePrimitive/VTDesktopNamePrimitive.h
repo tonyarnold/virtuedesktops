@@ -12,9 +12,9 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDecorationPrimitiveText.h>
-#import <Virtue/VTDesktopDecoration.h>
-#import <Virtue/VTDesktop.h>
+#import "VTDecorationPrimitiveText.h"
+#import "VTDesktopDecoration.h"
+#import "VTDesktop.h"
 
 @interface VTDesktopNamePrimitive : VTDecorationPrimitiveText { }
 

@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import "VTDesktopColorLabelPrimitive.h"
-#import <Virtue/VTDesktopDecoration.h>
-#import <Virtue/VTDesktop.h>
+#import "VTDesktopDecoration.h"
+#import "VTDesktop.h"
 #import <Zen/Zen.h> 
 
 #define kVtCodingIntensity	@"intensity"

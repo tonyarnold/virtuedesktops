@@ -1,6 +1,6 @@
 #import <AppKit/AppKit.h>
 #import <Carbon/Carbon.h>
-#import <Virtue/VTNotifications.h>
+#import "VTNotifications.h"
 #import "VTApplication.h"
 
 enum  {

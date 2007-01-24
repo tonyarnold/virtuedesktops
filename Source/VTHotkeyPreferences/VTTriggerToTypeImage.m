@@ -12,9 +12,9 @@
 *****************************************************************************/ 
 
 #import "VTTriggerToTypeImage.h"
-#import <Virtue/VTTrigger.h> 
-#import <Virtue/VTHotkeyTrigger.h> 
-#import <Virtue/VTMouseTrigger.h> 
+#import "VTTrigger.h"
+#import "VTHotkeyTrigger.h" 
+#import "VTMouseTrigger.h"
 
 @implementation VTTriggerToTypeImage
 

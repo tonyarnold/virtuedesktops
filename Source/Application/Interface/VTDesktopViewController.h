@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktop.h>
-#import <Zen/ZNImagePopUpButton.h>
+#import "VTDesktop.h"
+#import <Zen/Zen.h>
 #import "VTDecorationPrimitiveViewController.h" 
 #import "VTImageViewFileDropper.h" 
 #import "VTHotkeyTextField.h" 

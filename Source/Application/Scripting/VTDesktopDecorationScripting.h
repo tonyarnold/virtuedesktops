@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktopDecoration.h>
-#import <Virtue/VTDecorationPrimitive.h>
+#import "VTDesktopDecoration.h"
+#import "VTDecorationPrimitive.h"
 
 @interface VTDesktopDecoration(VTScripting)
 - (NSNumber*) uniqueIdentifier; 

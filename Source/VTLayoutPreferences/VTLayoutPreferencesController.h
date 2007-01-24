@@ -13,7 +13,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <PreferencePanes/NSPreferencePane.h> 
-#import <Virtue/VTDesktopLayout.h> 
+#import "VTDesktopLayout.h"
 
 @interface VTLayoutPreferencesController : NSPreferencePane {
 // outlets 

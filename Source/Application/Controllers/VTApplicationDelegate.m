@@ -10,16 +10,16 @@
 * See COPYING for licensing details
 *
 *****************************************************************************/
-#import <Virtue/VTDesktopBackgroundHelper.h>
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/VTDesktopDecorationController.h>
-#import <Virtue/VTLayoutController.h>
-#import <Virtue/VTTriggerController.h>
-#import <Virtue/VTApplicationController.h>
-#import <Virtue/VTPreferences.h>
-#import <Virtue/VTNotifications.h>
-#import <Virtue/NSUserDefaultsControllerKeyFactory.h>
-#import <Virtue/VTFileSystemExtensions.h>
+#import "VTDesktopBackgroundHelper.h"
+#import "VTDesktopController.h"
+#import "VTDesktopDecorationController.h"
+#import "VTLayoutController.h"
+#import "VTTriggerController.h"
+#import "VTApplicationController.h"
+#import "VTPreferences.h"
+#import "VTNotifications.h"
+#import "NSUserDefaultsControllerKeyFactory.h"
+#import "VTFileSystemExtensions.h"
 #import <Peony/Peony.h>
 #import <Zen/Zen.h>
 #import <Sparkle/Sparkle.h>

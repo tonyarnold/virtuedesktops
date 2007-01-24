@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "PNWindowScripting.h"
-#import <Virtue/VTDesktopController.h> 
+#import "VTDesktopController.h" 
 
 @implementation PNWindow(VTScripting)
 

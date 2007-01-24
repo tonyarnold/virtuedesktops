@@ -13,6 +13,7 @@
 #import "PNApplication.h"
 #import "PNNotifications.h"
 #import "PNStickyWindowCollection.h"
+#import <Zen/Zen.h>
 
 @interface PNDesktop(Private)
 - (PNWindow*) windowWithId: (CGSWindow) windowId;
@@ -55,7 +56,7 @@
 {
 	// generate default name
 	NSString* sDefaultName = [NSString stringWithFormat: @"Desktop %i", desktopId];
-	
+	  
 	// Pass on initialisation to designated initialiser
 	return [self initWithId: desktopId andName: sDefaultName];
 }
@@ -101,7 +102,7 @@
 	OSStatus oResult = CGSGetWorkspace(oConnection, &iWorkspaceId);
 	if (oResult)
 	{
-		NSLog(@"PNDesktop cannot access current workspace [Error: %i]", oResult);
+		ZNLog( @"PNDesktop cannot access current workspace [Error: %i]", oResult);
 		return kPnDesktopInvalidId;
 	}
   
@@ -187,7 +188,7 @@
 	int iActiveWorkspace;
 	OSStatus oResult = CGSGetWorkspace(oConnection, &iActiveWorkspace);
 	if (oResult) {
-		NSLog(@"[Desktop %i] Failed getting active workspace [Error: %i]", mDesktopId, oResult);
+		ZNLog( @"[Desktop %i] Failed getting active workspace [Error: %i]", mDesktopId, oResult);
 		return NO;
 	}
   
@@ -418,7 +419,7 @@
 	// first we have to query for the number of windows in our workspace
 	oResult = CGSGetWorkspaceWindowCount(oConnection, mDesktopId, &iNumberOfWindows);
 	if (oResult) {
-		NSLog(@"[Desktop %i] CGSGetWorkspaceWindowCount failed [%i]", mDesktopId, oResult);
+		ZNLog( @"[Desktop %i] CGSGetWorkspaceWindowCount failed [%i]", mDesktopId, oResult);
 		return;
 	}
   
@@ -430,7 +431,7 @@
 		oResult   = CGSGetWorkspaceWindowList(oConnection, mDesktopId, iNumberOfWindows, [oWindows mutableBytes], &iNumberOfWindows);
 		if (oResult) 
     {
-			NSLog(@"[Desktop %i] CGSGetWorkspaceWindowList failed [%i]", mDesktopId, oResult);
+			ZNLog( @"[Desktop %i] CGSGetWorkspaceWindowList failed [%i]", mDesktopId, oResult);
 			return;
 		}
 	}
@@ -533,7 +534,6 @@
 	PNWindow*				stickyWindow			= nil;
   
 	while (stickyWindow = [stickyIter nextObject]) {
-    
 		// we take the chance and remove all the sticky windows that are no longer valid
 		if ([stickyWindow isValid] == NO)
 		{
@@ -566,8 +566,7 @@
 				[mWindows addObject: stickyWindow];
         
 				PNApplication*	application = [mApplications objectForKey: [NSNumber numberWithInt: [stickyWindow ownerPid]]];
-				// if the application container does not contain a reference to the
-				// application, create a new one
+				// if the application container does not contain a reference to the application, create a new one
 				if (application == nil) {
 					didChangeApplications = YES;
           
@@ -576,8 +575,7 @@
 					[self attachApplication: application];
 					// safe to release it now
 					[application release];
-				}
-        
+				}        
 				[application bindWindow: stickyWindow];
 			}
 		}

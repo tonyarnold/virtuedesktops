@@ -9,10 +9,10 @@
 #import "VTWindowPager.h"
 #import "VTMatrixPagerView.h" 
 #import "VTMatrixPagerPreferences.h"
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/VTTriggerController.h> 
-#import <Virtue/NSUserDefaultsControllerKeyFactory.h>
-#import <Virtue/NSColorString.h> 
+#import "VTDesktopController.h"
+#import "VTTriggerController.h" 
+#import "NSUserDefaultsControllerKeyFactory.h"
+#import "NSColorString.h"
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 
 #import <Zen/ZNEffectWindow.h> 

@@ -12,14 +12,14 @@
  */
 
 #import "VTHotkeyPreferencesController.h"
-#import "VTTriggerToTypeImage.h" 
-#import <Virtue/VTDesktopController.h> 
-#import <Virtue/VTTriggerController.h>
-#import <Virtue/VTTriggerGroup.h>
-#import <Virtue/VTTriggerNotification.h>
-#import <Virtue/VTTrigger.h>
-#import <Virtue/VTHotkeyTrigger.h> 
-#import <Virtue/VTMouseTrigger.h> 
+#import "VTTriggerToTypeImage.h"
+#import "VTDesktopController.h"
+#import "VTTriggerController.h"
+#import "VTTriggerGroup.h"
+#import "VTTriggerNotification.h"
+#import "VTTrigger.h"
+#import "VTHotkeyTrigger.h"
+#import "VTMouseTrigger.h"
 #import <Zen/Zen.h>
 
 

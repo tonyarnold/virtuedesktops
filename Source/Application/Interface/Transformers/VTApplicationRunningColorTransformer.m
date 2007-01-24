@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTApplicationRunningColorTransformer.h"
-#import <Virtue/VTApplicationWrapper.h> 
+#import "VTApplicationWrapper.h"
 
 @implementation VTApplicationRunningColorTransformer
 

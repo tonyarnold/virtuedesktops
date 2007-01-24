@@ -12,7 +12,6 @@
 
 #import "ZNLog.h"
 
-
 @implementation ZNLog
 
 + (void)file:(char*)sourceFile function:(char*)functionName lineNumber:(int)lineNumber format:(NSString*)format, ...

@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTApplicationRunningTransformer.h"
-#import <Virtue/VTApplicationWrapper.h> 
+#import "VTApplicationWrapper.h"
 
 @implementation VTApplicationRunningTransformer
 

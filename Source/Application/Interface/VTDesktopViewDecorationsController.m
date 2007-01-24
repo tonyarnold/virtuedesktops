@@ -17,12 +17,12 @@
 #import "VTDecorationPrimitiveTintInspector.h" 
 #import "VTDecorationPrimitiveWatermarkInspector.h" 
 #import "VTDecorationPrimitivePositionMarkers.h" 
-#import <Virtue/VTPluginCollection.h> 
-#import <Virtue/VTDesktopDecorationController.h>
-#import <Virtue/VTDecorationPrimitiveText.h>
-#import <Virtue/VTDecorationPrimitiveTint.h>
-#import <Virtue/VTDecorationPrimitiveWatermark.h>
-#import <Virtue/VTPlugin.h> 
+#import "VTPluginCollection.h" 
+#import "VTDesktopDecorationController.h"
+#import "VTDecorationPrimitiveText.h"
+#import "VTDecorationPrimitiveTint.h"
+#import "VTDecorationPrimitiveWatermark.h"
+#import "VTPlugin.h" 
 #import <Zen/Zen.h> 
 
 #define kVtMovedRowsDropType @"VIRTUE_DESKTOP_COLLECTION_MOVE"

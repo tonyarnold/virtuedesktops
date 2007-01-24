@@ -13,11 +13,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <PreferencePanes/NSPreferencePane.h> 
-#import <Virtue/VTTriggerNotification.h> 
-#import <VTInterface/VTPositionGrid.h>
-#import <VTInterface/VTHotkeyTextField.h> 
-#import <VTInterface/VTHotkeyTextView.h>
-#import <VTInterface/VTHotkeyCell.h>
+#import "VTTriggerNotification.h"
+#import "VTPositionGrid.h"
+#import "VTHotkeyTextField.h"
+#import "VTHotkeyTextView.h"
+#import "VTHotkeyCell.h"
 #import "VTAssignedTriggerArrayController.h"
 
 #pragma mark -

@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktop.h>
-#import <Virtue/VTInspector.h>
+#import "VTDesktop.h"
+#import "VTInspector.h"
 
 @interface VTDesktopDecorationViewController : NSWindowController {
 	// outlets 

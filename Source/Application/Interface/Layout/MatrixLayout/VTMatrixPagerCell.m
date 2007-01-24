@@ -13,8 +13,8 @@
 
 #import "VTMatrixPagerCell.h"
 #import "VTMatrixPagerAppletCell.h" 
-#import <Virtue/NSScreenOverallScreen.h>
-#import <Virtue/NSBezierPathPlate.h>
+#import "NSScreenOverallScreen.h"
+#import "NSBezierPathPlate.h"
 #import <Zen/Zen.h> 
 
 enum
@@ -361,7 +361,7 @@ enum
 		[receiver compositeToPoint: destinationPoint operation: NSCompositeSourceOver fraction: 1.0]; 
 	}
 	
-	[[mDesktop name] drawAtPoint: textPosition withAttributes: textAttributes]; 
+	[[mDesktop name] drawAtPoint: textPosition withAttributes: textAttributes];
 	
 	// DRAWING COMPONENT: Desktop background 
 	NSRect desktopFrameRect		= [self frameAvailableForDesktopInFrame: frame]; 
@@ -381,10 +381,10 @@ enum
 	NSRectClip(desktopFrameRect);
 	
 	NSEnumerator*   windowIter  = [[mDesktop windows] reverseObjectEnumerator]; 
-	PNWindow*		window		= nil; 
+	PNWindow*       window      = nil; 
 	
-	while (window = [windowIter nextObject]) {
-		// check if the application is hidden and skip this window if it is 
+	while (window = [windowIter nextObject]) {    
+		// check if the application is hidden and skip this window if it is. We should also skip drawing the window if the individual window is hidden or not visible.
 		PNApplication* windowApplication = [mDesktop applicationForPid: [window ownerPid]]; 
 		if ((windowApplication) && ([windowApplication isHidden]))
 			continue; 

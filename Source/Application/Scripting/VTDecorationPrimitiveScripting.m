@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTDecorationPrimitiveScripting.h"
-#import <Virtue/VTDesktopDecoration.h>
+#import "VTDesktopDecoration.h"
 
 @implementation VTDecorationPrimitive(VTScripting)
 

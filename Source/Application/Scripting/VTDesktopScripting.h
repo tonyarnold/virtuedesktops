@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktop.h>
+#import "VTDesktop.h"
 
 @interface VTDesktop(VTScripting)
 

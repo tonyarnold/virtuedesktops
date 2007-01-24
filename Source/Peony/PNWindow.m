@@ -15,6 +15,7 @@
 #import "PNDesktop.h"
 #import "PNWindowPool.h"
 #import "DECEvent.h"
+#import <Zen/Zen.h>
 
 #define CGSTransparentBackgroundMask (1<<7)
 
@@ -150,7 +151,7 @@
   
 	OSStatus oResult = CGSGetWindowWorkspace(oConnection, mNativeWindow, &iDesktopId);
 	if (oResult) {
-		NSLog(@"PNWindow.m - [Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult);
+		ZNLog( @"PNWindow.m - [Window: %i] Failed getting workspace id [Error: %i]", mNativeWindow, oResult);
 		return kPnDesktopInvalidId;
 	}
   
@@ -219,6 +220,19 @@
 	}
   
 	return nil;
+}
+
+- (BOOL) isOrderedIn
+{
+  OSStatus oResult;
+  Boolean orderedIn = NO;
+ 
+	// Is the window currently displayed on the desktop we're interested in?
+	oResult = CGSWindowIsOrderedIn(_CGSDefaultConnection(), mNativeWindow,  &orderedIn);
+	if (oResult) {
+		return NO;
+	}
+  return orderedIn;
 }
 
 #pragma mark -
@@ -381,12 +395,12 @@
 	CGSConnection		oOwnerCID;
   
 	if (oResult = CGSGetWindowOwner(oConnection, mNativeWindow, &oOwnerCID)) {
-    NSLog(@"PNWindow.m - [Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
+    ZNLog( @"PNWindow.m - [Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
 		return 0;
 	}
   
 	if (oResult = CGSConnectionGetPID(oOwnerCID, &mOwnerPid, oOwnerCID)) {
-    NSLog(@"PNWindow.m - [Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
+    ZNLog( @"PNWindow.m - [Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
 		mOwnerPid = kPnWindowInvalidPid;
 	}
   
@@ -405,7 +419,7 @@
     
     oResult = GetProcessForPID([self ownerPid], &oOwnerPsn);
     if (oResult) {
-      NSLog(@"PNWindow.m - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
+      ZNLog( @"PNWindow.m - [Window: %i] Failed getting owner PSN [Error: %i]", mNativeWindow, oResult);
     }
     
     return oOwnerPsn;

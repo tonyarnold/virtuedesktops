@@ -13,8 +13,8 @@
 
 #import "VTHotkeyCell.h"
 #import "VTHotkeyTextView.h" 
-#import <Virtue/VTHotkeyTrigger.h>
-#import <Virtue/VTMouseTrigger.h> 
+#import "VTHotkeyTrigger.h"
+#import "VTMouseTrigger.h"
 
 @implementation VTHotkeyCell
 - (void) setObjectValue: (id) object {	

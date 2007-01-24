@@ -12,9 +12,9 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDesktop.h>
-#import <Virtue/VTInspector.h>
-#import <Virtue/VTDecorationPrimitive.h> 
+#import "VTDesktop.h"
+#import "VTInspector.h"
+#import "VTDecorationPrimitive.h" 
 #import "VTPositionGrid.h" 
 #import <Zen/ZNImagePopUpButton.h> 
 

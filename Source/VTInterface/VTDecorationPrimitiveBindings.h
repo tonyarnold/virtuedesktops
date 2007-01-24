@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDecorationPrimitive.h>
+#import "VTDecorationPrimitive.h"
 
 @interface VTDecorationPrimitive(VTBindings)
 

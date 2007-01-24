@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTApplicationPreferencesController.h"
-#import <Virtue/VTPreferences.h> 
+#import "VTPreferences.h"
 
 @interface VTApplicationPreferencesController(LoginItem)
 - (BOOL) _isLoginItem; 

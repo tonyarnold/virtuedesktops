@@ -15,9 +15,9 @@
 #import "VTMatrixPagerCell.h"
 #import "VTMatrixPagerPreferences.h" 
 
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/NSBezierPathPlate.h>
-#import <Virtue/NSUserDefaultsControllerKeyFactory.h> 
+#import "VTDesktopController.h"
+#import "NSBezierPathPlate.h"
+#import "NSUserDefaultsControllerKeyFactory.h"
 #import <Zen/Zen.h> 
 
 #define kVtDragTypeSource				@"VTDragTypeSourceIndex"

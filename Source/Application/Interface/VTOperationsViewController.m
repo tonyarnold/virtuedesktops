@@ -12,12 +12,12 @@
 *****************************************************************************/ 
 
 #import "VTOperationsViewController.h"
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/VTLayoutController.h> 
-#import <Virtue/VTPreferences.h>
-#import <Virtue/NSUserDefaultsColor.h>
-#import <Virtue/NSUserDefaultsControllerKeyFactory.h>
-#import <Virtue/VTApplicationController.h> 
+#import "VTDesktopController.h"
+#import "VTLayoutController.h"
+#import "VTPreferences.h"
+#import "NSUserDefaultsColor.h"
+#import "NSUserDefaultsControllerKeyFactory.h"
+#import "VTApplicationController.h"
 #import <Zen/Zen.h> 
 
 #pragma mark -

@@ -9,7 +9,7 @@
 //  Notes:
 //    - There needs to be a delay after each positive switch based on motion, as the sensor does encounter recoil and will trigger a switch if it is still active when this recoil occurs
 
-#import <Virtue/VTPreferences.h>
+#import "VTPreferences.h"
 #import "VTMotionController.h"
 
 #pragma mark Coding keys 

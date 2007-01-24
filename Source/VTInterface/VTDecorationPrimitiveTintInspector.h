@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTInspector.h> 
+#import "VTInspector.h" 
 
 
 @interface VTDecorationPrimitiveTintInspector : VTInspector {

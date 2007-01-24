@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTMatrixPagerAppletCell.h"
-#import <Virtue/NSBezierPathPlate.h> 
+#import "NSBezierPathPlate.h"
 #import <Zen/Zen.h> 
 
 #pragma mark -

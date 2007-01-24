@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDecorationPrimitiveTint.h>
+#import "VTDecorationPrimitiveTint.h"
 
 @interface VTDesktopColorLabelPrimitive : VTDecorationPrimitiveTint {
 

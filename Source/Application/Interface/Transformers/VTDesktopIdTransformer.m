@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTDesktopIdTransformer.h"
-#import <Virtue/VTDesktopController.h> 
+#import "VTDesktopController.h"
 
 @implementation VTDesktopIdTransformer
 

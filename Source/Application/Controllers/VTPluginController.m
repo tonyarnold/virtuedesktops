@@ -12,9 +12,9 @@
 *****************************************************************************/ 
 
 #import "VTPluginController.h"
-#import <Virtue/VTPluginInstance.h>
-#import <Virtue/VTPluginCollection.h> 
-#import <Virtue/VTFileSystemExtensions.h>
+#import "VTPluginInstance.h"
+#import "VTPluginCollection.h"
+#import "VTFileSystemExtensions.h"
 #import <Zen/Zen.h> 
 
 @interface VTPluginController (PluginLoading)

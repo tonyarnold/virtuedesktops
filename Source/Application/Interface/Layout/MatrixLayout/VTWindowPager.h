@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTPager.h>
-#import <Virtue/VTCoding.h> 
+#import "VTPager.h"
+#import "VTCoding.h" 
 #import "VTMatrixDesktopLayout.h" 
 
 @interface VTWindowPager : NSObject<VTPager, VTCoding> {

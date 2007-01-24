@@ -12,11 +12,11 @@
 *****************************************************************************/ 
 
 #import "VTBehaviourPreferencesController.h"
-#import <Virtue/VTHotkeyController.h>
-#import <Virtue/VTHotkeyGroup.h>
-#import <Virtue/VTHotkeyNotification.h>
-#import <Virtue/VTHotkey.h>
-#import <Virtue/VTHotkeyController.h>
+#import "VTHotkeyController.h"
+#import "VTHotkeyGroup.h"
+#import "VTHotkeyNotification.h"
+#import "VTHotkey.h"
+#import "VTHotkeyController.h"
 #import "VTHotkeyCell.h" 
 #import <Zen/Zen.h> 
 

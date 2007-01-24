@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTDecorationPrimitiveTextInspector.h"
-#import <Virtue/VTDecorationPrimitiveText.h>
+#import "VTDecorationPrimitiveText.h"
 #import <Zen/Zen.h> 
 
 @implementation VTDecorationPrimitiveTextInspector

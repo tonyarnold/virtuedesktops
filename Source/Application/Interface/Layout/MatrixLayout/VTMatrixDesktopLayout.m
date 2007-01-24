@@ -14,7 +14,7 @@
 #import "VTMatrixDesktopLayout.h"
 #import "VTMatrixPager.h" 
 #import "VTWindowPager.h"
-#import <Virtue/VTDesktopController.h>
+#import "VTDesktopController.h"
 #import <Zen/Zen.h>
 
 #define kVtCodingRowCount				@"rows"

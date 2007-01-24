@@ -13,11 +13,12 @@
 
 #import "VTDesktopControllerScripting.h"
 #import "VTDesktopScripting.h" 
+#import <Zen/Zen.h>
 
 @implementation VTDesktopController(VTCoreScripting)
 
 - (VTDesktop*) valueInDesktopsWithUniqueID: (id) identifier {
-	NSLog(@"VTDesktopController.VTCoreScripting.valueInDesktopsWithUniqueID"); 
+	ZNLog( @"VTDesktopController.VTCoreScripting.valueInDesktopsWithUniqueID"); 
 
 	NSEnumerator*	desktopIter = [mDesktops objectEnumerator]; 
 	VTDesktop*		desktop		= nil; 
@@ -30,7 +31,7 @@
 }
 
 - (VTDesktop*) valueInDesktopsAtIndex: (unsigned int) index {
-	NSLog(@"VTDesktopController.VTCoreScripting.valueInDesktopsAtIndex"); 
+	ZNLog( @"VTDesktopController.VTCoreScripting.valueInDesktopsAtIndex"); 
 
 	return [mDesktops objectAtIndex: index]; 
 }

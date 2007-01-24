@@ -12,6 +12,7 @@
  *****************************************************************************/ 
 
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
 /**
  * @brief	Overall screen frame and overall visible screen frame extensions

@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTDecorationPrimitive.h>
-#import <Virtue/VTDecorationPrimitiveText.h> 
+#import "VTDecorationPrimitive.h"
+#import "VTDecorationPrimitiveText.h" 
 
 @interface VTDecorationPrimitive(VTScripting)
 - (NSScriptObjectSpecifier*) objectSpecifier; 

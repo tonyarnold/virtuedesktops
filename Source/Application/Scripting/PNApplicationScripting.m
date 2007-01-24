@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import "PNApplicationScripting.h"
-#import <Virtue/VTDesktop.h> 
-#import <Virtue/VTDesktopController.h> 
+#import "VTDesktop.h" 
+#import "VTDesktopController.h" 
 
 @implementation PNApplication(VTScripting)
 

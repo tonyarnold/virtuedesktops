@@ -13,10 +13,11 @@
 
 #import "VTApplicationWatcherController.h"
 #import "VTPreferenceKeys.h" 
-#import <Virtue/VTDesktopController.h> 
-#import <Virtue/VTPreferences.h>
-#import <Virtue/VTModifiers.h> 
+#import "VTDesktopController.h"
+#import "VTPreferences.h"
+#import "VTModifiers.h"
 #import <Peony/Peony.h> 
+#import <Zen/Zen.h>
 
 @interface VTApplicationWatcherController(Private) 
 - (void) findFinderApplication; 
@@ -66,7 +67,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	
 	OSStatus err = InstallApplicationEventHandler(NewEventHandlerUPP(handleAppFrontSwitched), 1, &spec, (void*)self, NULL);	
 	if (err) {
-		NSLog(@"Failed to install event handler 'handleAppFrontSwitched' - application changes will not be detected.");
+		ZNLog( @"Failed to install event handler 'handleAppFrontSwitched' - application changes will not be detected.");
 	}
 }
 
@@ -129,7 +130,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	
 	result = GetFrontProcess(&mActivatedPSN);
 	if (result) {
-		NSLog(@"Error fetching PSN of application"); 
+		ZNLog( @"Error fetching PSN of application"); 
 		return;
 	}
 	
@@ -140,7 +141,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		// if this is the Finder, we abort here 
 		result = SameProcess(&mActivatedPSN, &mFinderPSN, &same); 
 		if (result)
-			NSLog(@"Error comparing PSN of applications"); 
+			ZNLog( @"Error comparing PSN of applications"); 
 				
 		if (same == TRUE)
 			return; 

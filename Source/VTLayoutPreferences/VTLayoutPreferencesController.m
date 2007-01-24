@@ -12,9 +12,9 @@
 *****************************************************************************/ 
 
 #import "VTLayoutPreferencesController.h"
-#import <Virtue/VTLayout.h> 
-#import <Virtue/VTLayoutController.h> 
-#import <Virtue/NSUserDefaultsColor.h> 
+#import "VTLayout.h"
+#import "VTLayoutController.h"
+#import "NSUserDefaultsColor.h" 
 
 #pragma mark -
 @interface VTLayoutPreferencesController (Selection)

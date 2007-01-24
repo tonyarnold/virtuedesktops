@@ -13,6 +13,7 @@
 
 #import "VTDesktopScripting.h"
 #import "VTDesktopController.h"
+#import <Zen/Zen.h>
 
 
 @implementation VTDesktop(VTCoreScripting)
@@ -22,7 +23,7 @@
 }
 
 - (NSScriptObjectSpecifier*) objectSpecifier {	
-	NSLog(@"VTDesktop.VTCoreScripting.objectSpecifier"); 
+	ZNLog( @"VTDesktop.VTCoreScripting.objectSpecifier"); 
 	
 	int index = [[[VTDesktopController sharedInstance] desktops] indexOfObject: self]; 
 	

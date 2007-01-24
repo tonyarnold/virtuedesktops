@@ -118,6 +118,8 @@ enum
 #pragma mark -
 - (NSString*) name; 
 
+- (BOOL) isOrderedIn;
+
 #pragma mark -
 - (NSImage*) icon; 
 

@@ -7,8 +7,8 @@
 //
 
 #import "VTAssignedTriggerArrayController.h"
-#import <Virtue/VTTrigger.h>
-#import <Virtue/VTTriggerNotification.h>
+#import "VTTrigger.h"
+#import "VTTriggerNotification.h"
 
 
 @implementation VTAssignedTriggerArrayController

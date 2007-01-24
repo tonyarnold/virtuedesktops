@@ -13,7 +13,7 @@
 
 #import "VTDesktopControllerScripting.h"
 #import "VTApplication.h" 
-#import <Virtue/VTDesktop.h> 
+#import "VTDesktop.h"
 
 
 @implementation VTDesktopController(VTScripting)

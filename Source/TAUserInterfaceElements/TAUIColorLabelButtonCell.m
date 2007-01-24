@@ -186,7 +186,7 @@
 	else
 		[[NSColor colorWithCalibratedWhite: 0.7 alpha: 1.0] set]; 
 	
-	[backgroundPath setLineWidth: 1]; 
+	[backgroundPath setLineWidth: 1.0]; 
 	[backgroundPath stroke];
 	
 	// and continue with innards
@@ -194,6 +194,7 @@
 }
 
 - (void) drawInteriorWithFrame: (NSRect) cellFrame inView: (NSView*) controlView {
+  // Don't draw a background for the clear button
 	if (mType == TAUIClearLabelType) {
 		NSPoint imagePosition = cellFrame.origin; 
 		imagePosition.x += 3; 
@@ -207,8 +208,8 @@
 	NSRect			blobPathRect; 
 	NSPoint			blobImagePosition; 
 	blobPathRect.origin = NSMakePoint(cellFrame.origin.x + 3, cellFrame.origin.y + 3); 
-	blobPathRect.size	= NSMakeSize(9,9);
-	blobImagePosition	= NSMakePoint(blobPathRect.origin.x, blobPathRect.origin.y + [mImage size].height); 
+	blobPathRect.size   = NSMakeSize(9,9);
+	blobImagePosition   = NSMakePoint(blobPathRect.origin.x, blobPathRect.origin.y + [mImage size].height); 
   
 	NSBezierPath* blobPath = [NSBezierPath bezierPathWithOvalInRect: blobPathRect]; 
 		
@@ -229,9 +230,8 @@
   [blobPath setLineWidth: 0.5];
   [blobPath stroke];
 	[NSGraphicsContext restoreGraphicsState]; 
-	
-	// draw our specular highlight and border with shadow 
-	[mImage dissolveToPoint: blobImagePosition fraction: 0.55];
   
+  // draw our specular highlight and border with shadow 
+  [mImage dissolveToPoint: blobImagePosition fraction: 0.55];
 }
 @end

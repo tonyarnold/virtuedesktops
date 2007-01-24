@@ -12,11 +12,11 @@
  *****************************************************************************/ 
 
 #import "VTPreferencesViewController.h"
-#import <Virtue/VTPreferences.h>
-#import <Virtue/NSUserDefaultsColor.h>
-#import <Virtue/VTTriggerController.h> 
+#import "VTPreferences.h"
+#import "NSUserDefaultsColor.h"
+#import "VTTriggerController.h"
 #import <Zen/Zen.h> 
-#import "../../../../Shared/Headers/CGSPrivate.h"
+#import "CGSPrivate.h"
 
 #define		VTPreferencePaneName					@"VTPreferencePaneName"
 #define		VTPreferencePaneHelpText			@"VTPreferencePaneHelpText"

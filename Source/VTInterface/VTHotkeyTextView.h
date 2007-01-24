@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
-#import <Virtue/VTHotkeyTrigger.h>
+#import "VTHotkeyTrigger.h"
 
 @interface VTHotkeyTextView : NSTextView {
 	NSButton*			mClearButton;

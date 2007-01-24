@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTDecorationPrimitiveWatermarkInspector.h"
-#import <Virtue/VTDecorationPrimitiveWatermark.h>
+#import "VTDecorationPrimitiveWatermark.h"
 #import <Zen/Zen.h> 
 
 @implementation VTDecorationPrimitiveWatermarkInspector

@@ -11,21 +11,21 @@
 * 
 *****************************************************************************/ 
 
-#import <Virtue/VTDesktopBackgroundHelper.h>
+#import "VTDesktopBackgroundHelper.h"
 #import "VTDesktopViewController.h"
-#import <Virtue/VTDecorationPrimitiveText.h>
+#import "VTDecorationPrimitiveText.h"
 #import "VTDecorationPrimitiveTextInspector.h" 
-#import <Virtue/VTDecorationPrimitiveTint.h> 
+#import "VTDecorationPrimitiveTint.h" 
 #import "VTDecorationPrimitiveTintInspector.h" 
-#import <Virtue/VTDecorationPrimitiveWatermark.h>
+#import "VTDecorationPrimitiveWatermark.h"
 #import "VTDecorationPrimitiveWatermarkInspector.h"
 #import "Transformers/VTApplicationRunningCountTransformer.h"
 
-#import <Virtue/VTPlugin.h> 
-#import <Virtue/VTPluginCollection.h> 
-#import <Virtue/VTNotifications.h>
-#import <Virtue/VTDesktopController.h> 
-#import <Virtue/VTLayoutController.h> 
+#import "VTPlugin.h" 
+#import "VTPluginCollection.h" 
+#import "VTNotifications.h"
+#import "VTDesktopController.h" 
+#import "VTLayoutController.h" 
 
 #import <Peony/Peony.h> 
 #import <Zen/Zen.h> 

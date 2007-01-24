@@ -12,6 +12,7 @@
  *****************************************************************************/ 
 
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
 /**
  * @brief	Plate bezier path extension 

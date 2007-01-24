@@ -12,8 +12,8 @@
 *****************************************************************************/ 
 
 #import "VTDesktopScripting.h"
-#import <Virtue/VTDesktopController.h>
-#import <Virtue/VTScriptPlugin.h> 
+#import "VTDesktopController.h"
+#import "VTScriptPlugin.h" 
 
 
 @implementation VTDesktop(VTScripting)

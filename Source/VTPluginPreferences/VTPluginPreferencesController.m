@@ -12,7 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTPluginPreferencesController.h"
-#import <Virtue/VTPluginCollection.h> 
+#import "VTPluginCollection.h" 
 
 @implementation VTPluginsArrayController 
 - (NSArray*) arrangeObjects: (NSArray*) objects {
