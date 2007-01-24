@@ -19,6 +19,7 @@
 
 #define kVtCodingBundlePath     @"path"
 #define kVtCodingBundleId       @"id"
+#define kVtCodingBundleTitle    @"title"
 #define kVtCodingSticky         @"sticky"
 #define kVtCodingHidden         @"hidden"
 #define kVtCodingUnfocused      @"unfocused"
@@ -134,6 +135,9 @@
   if (mBundleId)
     [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
   
+  if (mTitle)
+    [dictionary setObject: mTitle forKey: kVtCodingBundleTitle];
+  
 	if (mDesktop)
 		[dictionary setObject: [mDesktop uuid] forKey: kVtCodingDesktop]; 
 }
@@ -141,9 +145,11 @@
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
   // We use the path as the UID, so ensure precendence
   mBundlePath   = [[dictionary objectForKey: kVtCodingBundlePath] retain];
+
 	// decode primitives 
   mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
-	mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
+	mTitle        = [[dictionary objectForKey: kVtCodingBundleTitle] retain];
+  mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
 	mHidden       = [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
   mUnfocused		= [[dictionary objectForKey: kVtCodingUnfocused] boolValue];
 	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue]; 
@@ -562,7 +568,17 @@
   {
     NSBundle *bundle = [NSBundle bundleWithPath: [self bundlePath]];
     ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
-    ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+    
+    // If we can retrieve the application name from inside the bundle (if it is a bundle!), we do, otherwise just use the name of the application package at the path supplied
+    if ([bundle objectForInfoDictionaryKey: @"CFBundleName"] != nil)
+    {
+      ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+    }
+    else
+    {
+      ZEN_ASSIGN_COPY(mTitle, [[self bundlePath] lastPathComponent]);
+    }
+        
     ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
   }
   mLaunching = NO;
