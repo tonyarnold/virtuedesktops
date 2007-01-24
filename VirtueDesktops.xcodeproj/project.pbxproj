@@ -51,6 +51,7 @@
 		EA6041860A8E588A00B511DA /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
 		EA662C230B4CDCD5000009EB /* DefaultDesktops.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56500A86A70C000D6B5E /* DefaultDesktops.plist */; };
 		EA662C240B4CDCD5000009EB /* DefaultHotkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56510A86A70C000D6B5E /* DefaultHotkeys.plist */; };
+		EA6915E10B670C0D002C4F7A /* Zen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
 		EA7A56AA0A86A74E000D6B5E /* DECCgsExt.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546C0A86A623000D6B5E /* DECCgsExt.c */; };
 		EA7A56AB0A86A74E000D6B5E /* DECEvent.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546D0A86A623000D6B5E /* DECEvent.c */; };
 		EA7A56AC0A86A74E000D6B5E /* DECEventAlpha.c in Sources */ = {isa = PBXBuildFile; fileRef = EA7A546E0A86A623000D6B5E /* DECEventAlpha.c */; };
@@ -79,7 +80,6 @@
 		EA7A59070A86B08E000D6B5E /* ZenCocoaCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53D90A86A5B4000D6B5E /* ZenCocoaCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59080A86B08E000D6B5E /* ZNEdge.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53DB0A86A5B4000D6B5E /* ZNEdge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A59090A86B08E000D6B5E /* ZNEffectWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53E60A86A5B4000D6B5E /* ZNEffectWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A590A0A86B08E000D6B5E /* ZNFilesystemWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53E10A86A5B4000D6B5E /* ZNFilesystemWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A590B0A86B08E000D6B5E /* ZNImagePopUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53E80A86A5B4000D6B5E /* ZNImagePopUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A590C0A86B08E000D6B5E /* ZNMemoryManagementMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53E40A86A5B4000D6B5E /* ZNMemoryManagementMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA7A590D0A86B08E000D6B5E /* ZNShading.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53DC0A86A5B4000D6B5E /* ZNShading.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,7 +88,6 @@
 		EA7A59190A86B0E9000D6B5E /* NSNumber+Bytes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D60A86A5B4000D6B5E /* NSNumber+Bytes.m */; };
 		EA7A591A0A86B0E9000D6B5E /* NSString+Modifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53D80A86A5B4000D6B5E /* NSString+Modifiers.m */; };
 		EA7A591B0A86B0E9000D6B5E /* ZNEffectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53E70A86A5B4000D6B5E /* ZNEffectWindow.m */; };
-		EA7A591C0A86B0E9000D6B5E /* ZNFilesystemWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53E20A86A5B4000D6B5E /* ZNFilesystemWatcher.m */; };
 		EA7A591D0A86B0E9000D6B5E /* ZNImagePopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53E90A86A5B4000D6B5E /* ZNImagePopUpButton.m */; };
 		EA7A591E0A86B0E9000D6B5E /* ZNShading.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A53DD0A86A5B4000D6B5E /* ZNShading.m */; };
 		EA7A59620A86B4F5000D6B5E /* Peony.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7A53EB0A86A5C5000D6B5E /* Peony.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -424,6 +423,8 @@
 		EA7A69D70A870893000D6B5E /* VTLayoutPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A635C0A86FC58000D6B5E /* VTLayoutPreferences.prefPane */; };
 		EA7A69D80A870893000D6B5E /* VTPluginPreferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */; };
 		EA7D76980A918A5500D36F0E /* VTAssignedTriggerArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */; };
+		EA82FB800B67064700E09099 /* ZNLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EA82FB7E0B67064700E09099 /* ZNLog.h */; };
+		EA82FB810B67064700E09099 /* ZNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FB7F0B67064700E09099 /* ZNLog.m */; };
 		EA8F2E8A0A93F9620047C92C /* DefaultPrimitiveNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E890A93F9620047C92C /* DefaultPrimitiveNames.strings */; };
 		EA8F2E9D0A93F99E0047C92C /* Notifications.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2E9C0A93F99E0047C92C /* Notifications.strings */; };
 		EA8F2ECB0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA8F2ECA0A93FA340047C92C /* PrimitiveDesktopColorLabelInspector.nib */; };
@@ -468,6 +469,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA6915DC0B670BF9002C4F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteInfo = Zen;
+		};
 		EA7A583E0A86AD97000D6B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
@@ -909,8 +917,6 @@
 		EA7A53DB0A86A5B4000D6B5E /* ZNEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNEdge.h; sourceTree = "<group>"; };
 		EA7A53DC0A86A5B4000D6B5E /* ZNShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNShading.h; sourceTree = "<group>"; };
 		EA7A53DD0A86A5B4000D6B5E /* ZNShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNShading.m; sourceTree = "<group>"; };
-		EA7A53E10A86A5B4000D6B5E /* ZNFilesystemWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNFilesystemWatcher.h; sourceTree = "<group>"; };
-		EA7A53E20A86A5B4000D6B5E /* ZNFilesystemWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNFilesystemWatcher.m; sourceTree = "<group>"; };
 		EA7A53E40A86A5B4000D6B5E /* ZNMemoryManagementMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNMemoryManagementMacros.h; sourceTree = "<group>"; };
 		EA7A53E60A86A5B4000D6B5E /* ZNEffectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNEffectWindow.h; sourceTree = "<group>"; };
 		EA7A53E70A86A5B4000D6B5E /* ZNEffectWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNEffectWindow.m; sourceTree = "<group>"; };
@@ -1331,6 +1337,8 @@
 		EA7A6AB00A8709C2000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA7D76960A918A5500D36F0E /* VTAssignedTriggerArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAssignedTriggerArrayController.h; sourceTree = "<group>"; };
 		EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAssignedTriggerArrayController.m; sourceTree = "<group>"; };
+		EA82FB7E0B67064700E09099 /* ZNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNLog.h; sourceTree = "<group>"; };
+		EA82FB7F0B67064700E09099 /* ZNLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNLog.m; sourceTree = "<group>"; };
 		EA8B6C330AD214A2001D1241 /* TAUIColorLabelColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUIColorLabelColorTransformer.h; sourceTree = "<group>"; };
 		EA8B6C340AD214A2001D1241 /* TAUIColorLabelColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelColorTransformer.m; sourceTree = "<group>"; };
 		EA8F2E770A93F9100047C92C /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1488,6 +1496,7 @@
 				EA7A65C00A8702ED000D6B5E /* Carbon.framework in Frameworks */,
 				EA7A65BB0A8702E2000D6B5E /* Cocoa.framework in Frameworks */,
 				EA7A59810A86B554000D6B5E /* libDockCommunicator.a in Frameworks */,
+				EA6915E10B670C0D002C4F7A /* Zen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1738,7 +1747,6 @@
 			children = (
 				EA7A53D00A86A5B4000D6B5E /* Categories */,
 				EA7A53DA0A86A5B4000D6B5E /* Common */,
-				EA7A53E00A86A5B4000D6B5E /* FileSystem */,
 				EA7A53E30A86A5B4000D6B5E /* Macros */,
 				EA7A53E50A86A5B4000D6B5E /* Widgets */,
 				EA7A53EA0A86A5B4000D6B5E /* Zen.h */,
@@ -1770,17 +1778,10 @@
 				EA7A53DB0A86A5B4000D6B5E /* ZNEdge.h */,
 				EA7A53DC0A86A5B4000D6B5E /* ZNShading.h */,
 				EA7A53DD0A86A5B4000D6B5E /* ZNShading.m */,
+				EA82FB7E0B67064700E09099 /* ZNLog.h */,
+				EA82FB7F0B67064700E09099 /* ZNLog.m */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		EA7A53E00A86A5B4000D6B5E /* FileSystem */ = {
-			isa = PBXGroup;
-			children = (
-				EA7A53E10A86A5B4000D6B5E /* ZNFilesystemWatcher.h */,
-				EA7A53E20A86A5B4000D6B5E /* ZNFilesystemWatcher.m */,
-			);
-			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		EA7A53E30A86A5B4000D6B5E /* Macros */ = {
@@ -2727,11 +2728,11 @@
 				EA7A59070A86B08E000D6B5E /* ZenCocoaCategories.h in Headers */,
 				EA7A59080A86B08E000D6B5E /* ZNEdge.h in Headers */,
 				EA7A59090A86B08E000D6B5E /* ZNEffectWindow.h in Headers */,
-				EA7A590A0A86B08E000D6B5E /* ZNFilesystemWatcher.h in Headers */,
 				EA7A590B0A86B08E000D6B5E /* ZNImagePopUpButton.h in Headers */,
 				EA7A590C0A86B08E000D6B5E /* ZNMemoryManagementMacros.h in Headers */,
 				EA7A590D0A86B08E000D6B5E /* ZNShading.h in Headers */,
 				EAED24AC0B552CD8006E517B /* NSString+UUID.h in Headers */,
+				EA82FB800B67064700E09099 /* ZNLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2913,6 +2914,7 @@
 			);
 			dependencies = (
 				EA7A59780A86B534000D6B5E /* PBXTargetDependency */,
+				EA6915DD0B670BF9002C4F7A /* PBXTargetDependency */,
 			);
 			name = Peony;
 			productName = Peony;
@@ -3573,10 +3575,10 @@
 				EA7A59190A86B0E9000D6B5E /* NSNumber+Bytes.m in Sources */,
 				EA7A591A0A86B0E9000D6B5E /* NSString+Modifiers.m in Sources */,
 				EA7A591B0A86B0E9000D6B5E /* ZNEffectWindow.m in Sources */,
-				EA7A591C0A86B0E9000D6B5E /* ZNFilesystemWatcher.m in Sources */,
 				EA7A591D0A86B0E9000D6B5E /* ZNImagePopUpButton.m in Sources */,
 				EA7A591E0A86B0E9000D6B5E /* ZNShading.m in Sources */,
 				EAED24AD0B552CD8006E517B /* NSString+UUID.m in Sources */,
+				EA82FB810B67064700E09099 /* ZNLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3800,6 +3802,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA6915DD0B670BF9002C4F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7A58F70A86B076000D6B5E /* Zen */;
+			targetProxy = EA6915DC0B670BF9002C4F7A /* PBXContainerItemProxy */;
+		};
 		EA7A583F0A86AD97000D6B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA7A56A20A86A738000D6B5E /* DockCommunicator */;

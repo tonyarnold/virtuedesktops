@@ -16,8 +16,8 @@
 
 #import "Categories/ZenCocoaCategories.h"
 #import "Common/ZNEdge.h"
+#import "Common/ZNLog.h"
 #import "Common/ZNShading.h"
-#import "FileSystem/ZNFilesystemWatcher.h"
 #import "Macros/ZNMemoryManagementMacros.h"
 #import "Widgets/ZNEffectWindow.h"
 #import "Widgets/ZNImagePopupButton.h"
