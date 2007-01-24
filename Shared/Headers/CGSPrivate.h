@@ -190,6 +190,7 @@ extern OSStatus CGSFlushWindow(const CGSConnection cid, const CGSWindow wid, int
 
 extern OSStatus CGSGetWindowOwner(const CGSConnection cid, const CGSWindow wid, CGSConnection *ownerCid);
 extern OSStatus CGSConnectionGetPID(const CGSConnection cid, pid_t *pid, const CGSConnection ownerCid);
+extern OSStatus CGSWindowIsOrderedIn(const CGSConnection cid, const CGSWindow wid, Boolean *result);
 
 // Values
 extern int CGSIntegerValue(CGSValue intVal);
