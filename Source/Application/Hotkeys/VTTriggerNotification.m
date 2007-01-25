@@ -46,7 +46,7 @@
     mUserInfo   = [[NSMutableDictionary alloc] init];
     mTriggers   = [[NSMutableArray alloc] init];
     mGroup      = nil;
-
+    
     return self;
   }
 
@@ -102,44 +102,27 @@
   [dictionary setObject: triggerArray forKey: kVtCodingTriggers];
 }
 
-- (id) decodeFromDictionary: (NSDictionary*) dictionary {
+- (id) decodeFromDictionary: (NSDictionary*) dictionary {  
   mEnabled  = [[dictionary objectForKey: kVtCodingEnabled] boolValue];
-  mName   = [[dictionary objectForKey: kVtCodingName] retain];
+  mName     = [[dictionary objectForKey: kVtCodingName] retain];
   if (mTriggers == nil)
     mTriggers = [[NSMutableArray alloc] init];
 
   NSArray*    triggerArray = [dictionary objectForKey: kVtCodingTriggers];
-// Backwards compatibility for 0.5r1
-  if (triggerArray == nil) {
-    // try reading a single hotkey entry
-    NSDictionary* triggerDictionary = [dictionary objectForKey: kVtCodingHotkey];
-    if (triggerDictionary) {
-      VTHotkeyTrigger* trigger = [[VTHotkeyTrigger alloc] init];
-      trigger = [trigger decodeFromDictionary: triggerDictionary];
-
-      if (trigger) {
-        [self insertObjectInTriggers: trigger atIndex: 0];
-        [trigger release];
-      }
-
-      return self;
-    }
-  }
-// End Backwards compatibility for 0.5r1
-
   // read in all triggers from the array
   NSEnumerator* triggerIter = [triggerArray objectEnumerator];
   NSDictionary* triggerDict = nil;
 
   while (triggerDict = [triggerIter nextObject]) {
     // type...
-    NSString*   triggerType     = [triggerDict objectForKey: kVtCodingTriggerType];
+    NSString*   triggerType   = [triggerDict objectForKey: kVtCodingTriggerType];
 
     // instantiate trigger
-    Class     triggerClass    = NSClassFromString(triggerType);
-    VTTrigger*    trigger       = [[triggerClass alloc] init];
+    Class       triggerClass  = NSClassFromString(triggerType);
+    VTTrigger*  trigger       = [[triggerClass alloc] init];
 
     trigger = [trigger decodeFromDictionary: triggerDict];
+    
     if (trigger) {
       [self insertObjectInTriggers: trigger atIndex: 0];
       [trigger release];
@@ -197,7 +180,6 @@
   [trigger setNotification: self];
   // and add to our list
   [mTriggers insertObject: trigger atIndex: index];
-
   // and send notification
   [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationWasRegistered object: self];
 }
@@ -250,10 +232,7 @@
   if (mEnabled == NO)
     return;
   // post the notification passing self as the object and providing user info
-  [[NSNotificationCenter defaultCenter]
-    postNotificationName: mName
-            object: self
-          userInfo: mUserInfo];
+  [[NSNotificationCenter defaultCenter] postNotificationName: mName object: self userInfo: mUserInfo];
 }
 
 @end

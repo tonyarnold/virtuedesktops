@@ -87,9 +87,9 @@
 			return nil; 
 		}
 	
-		mKeyCode		= [[dictionary objectForKey: kVtCodingKeyCode] intValue]; 
+		mKeyCode      = [[dictionary objectForKey: kVtCodingKeyCode] intValue]; 
 		mKeyModifiers	= [[dictionary objectForKey: kVtCodingKeyModifiers] intValue]; 
-	
+    	
 		return self; 
 	}
 	

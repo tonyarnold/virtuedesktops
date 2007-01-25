@@ -544,210 +544,210 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD4C0B67982C00A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD500B67985A00A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD520B67986A00A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD540B67986F00A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
 			remoteInfo = Zen;
 		};
 		EAF7BD560B67986F00A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
 		EAF7BD580B67988100A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
 			remoteInfo = Zen;
 		};
 		EAF7BD5A0B67988100A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
 		EAF7BD5C0B67988400A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD5E0B67989300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD600B67989300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
 			remoteInfo = Zen;
 		};
 		EAF7BD620B67989300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
 		EAF7BD790B6798A600A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD7D0B6798BB00A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD880B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E /* VirtueDesktops */;
+			remoteGlobalIDString = EA7A63DF0A86FE65000D6B5E;
 			remoteInfo = VirtueDesktops;
 		};
 		EAF7BD8A0B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A56A20A86A738000D6B5E /* DockCommunicator */;
+			remoteGlobalIDString = EA7A56A20A86A738000D6B5E;
 			remoteInfo = DockCommunicator;
 		};
 		EAF7BD8C0B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A58150A86AD7B000D6B5E /* DockExtension */;
+			remoteGlobalIDString = EA7A58150A86AD7B000D6B5E;
 			remoteInfo = DockExtension;
 		};
 		EAF7BD8E0B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A58F70A86B076000D6B5E /* Zen */;
+			remoteGlobalIDString = EA7A58F70A86B076000D6B5E;
 			remoteInfo = Zen;
 		};
 		EAF7BD900B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E /* Peony */;
+			remoteGlobalIDString = EA7A59550A86B4D3000D6B5E;
 			remoteInfo = Peony;
 		};
 		EAF7BD920B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A5B480A86B7C4000D6B5E /* authtool */;
+			remoteGlobalIDString = EA7A5B480A86B7C4000D6B5E;
 			remoteInfo = authtool;
 		};
 		EAF7BD940B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A61780A86F366000D6B5E /* VTDesktopColorLabelPrimitive */;
+			remoteGlobalIDString = EA7A61780A86F366000D6B5E;
 			remoteInfo = VTDesktopColorLabelPrimitive;
 		};
 		EAF7BD960B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A62230A86F5C8000D6B5E /* VTDesktopNamePrimitive */;
+			remoteGlobalIDString = EA7A62230A86F5C8000D6B5E;
 			remoteInfo = VTDesktopNamePrimitive;
 		};
 		EAF7BD980B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A625F0A86F7AB000D6B5E /* VTAppearancePreferences */;
+			remoteGlobalIDString = EA7A625F0A86F7AB000D6B5E;
 			remoteInfo = VTAppearancePreferences;
 		};
 		EAF7BD9A0B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A62AD0A86F8D6000D6B5E /* VTApplicationPreferences */;
+			remoteGlobalIDString = EA7A62AD0A86F8D6000D6B5E;
 			remoteInfo = VTApplicationPreferences;
 		};
 		EAF7BD9C0B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A62D70A86F9AF000D6B5E /* VTDesktopTemplatePreferences */;
+			remoteGlobalIDString = EA7A62D70A86F9AF000D6B5E;
 			remoteInfo = VTDesktopTemplatePreferences;
 		};
 		EAF7BD9E0B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63350A86FB4F000D6B5E /* VTHotkeyPreferences */;
+			remoteGlobalIDString = EA7A63350A86FB4F000D6B5E;
 			remoteInfo = VTHotkeyPreferences;
 		};
 		EAF7BDA00B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A635B0A86FC58000D6B5E /* VTLayoutPreferences */;
+			remoteGlobalIDString = EA7A635B0A86FC58000D6B5E;
 			remoteInfo = VTLayoutPreferences;
 		};
 		EAF7BDA20B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7A63820A86FD3D000D6B5E /* VTPluginPreferences */;
+			remoteGlobalIDString = EA7A63820A86FD3D000D6B5E;
 			remoteInfo = VTPluginPreferences;
 		};
 		EAF7BDA40B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EAC00E240AD1065C00389BDB /* TAUserInterfaceElements */;
+			remoteGlobalIDString = EAC00E240AD1065C00389BDB;
 			remoteInfo = TAUserInterfaceElements;
 		};
 		EAF7BDA60B67999300A100FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA9266D0A86A4E800D4674B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EAC0139D0AD10BA400389BDB /* TA Interface Palette */;
+			remoteGlobalIDString = EAC0139D0AD10BA400389BDB;
 			remoteInfo = "TA Interface Palette";
 		};
 /* End PBXContainerItemProxy section */
@@ -1383,7 +1383,7 @@
 		EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButtonCell.m; sourceTree = "<group>"; };
 		EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+Plate.h"; sourceTree = "<group>"; };
 		EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+Plate.m"; sourceTree = "<group>"; };
-		EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TA Interface Palette.palette"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtue Interface Palette.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelInspector.h; sourceTree = "<group>"; };
 		EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelInspector.m; sourceTree = "<group>"; };
 		EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelPalette.h; sourceTree = "<group>"; };
@@ -2302,7 +2302,7 @@
 				EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */,
 				EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */,
 				EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */,
-				EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */,
+				EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2921,7 +2921,7 @@
 			);
 			name = "TA Interface Palette";
 			productName = "Virtue Interface Palette";
-			productReference = EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */;
+			productReference = EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */

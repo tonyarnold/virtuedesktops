@@ -1,5 +1,6 @@
 #import <AppKit/AppKit.h>
 #import <Carbon/Carbon.h>
+#import <Zen/Zen.h>
 #import "VTNotifications.h"
 #import "VTApplication.h"
 

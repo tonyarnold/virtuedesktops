@@ -23,9 +23,9 @@
 
 #pragma mark -
 @interface VTTriggerGroup : NSObject<VTCoding> {
-  NSString*     mName;      //!< Name of the hotkey group
-  NSString*     mKey;     //!< Key of the hotkey group
-  NSMutableArray*   mNotifications; //!< Notifications contained in this group
+  NSString*         mName;            //!< Name of the hotkey group
+  NSString*         mKey;             //!< Key of the hotkey group
+  NSMutableArray*   mNotifications;   //!< Notifications contained in this group
 }
 
 #pragma mark -

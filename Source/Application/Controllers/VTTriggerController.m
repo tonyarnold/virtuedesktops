@@ -47,7 +47,7 @@
 	if (self = [super init]) {
 		// initialize attributes 
 		mNotifications	= [[VTTriggerGroup alloc] initWithKey: @"VT_HOTKEY_ROOT"];  
-		mIsEnabled		= YES; 
+		mIsEnabled      = YES; 
 		
 		return self; 
 	}
@@ -110,7 +110,7 @@
 
 #pragma mark -
 - (NSArray*) notificationsWithName: (NSString*) name {
-	NSMutableArray*	notifications		= [NSMutableArray array]; 
+	NSMutableArray*	notifications     = [NSMutableArray array]; 
 	NSArray*				allNotifications	= [mNotifications allNotifications]; 
 	
 	// Now filter for the name of the notification and return it
@@ -166,7 +166,7 @@
 	// ignore if we are not enabled 
 	if (mIsEnabled == NO)
 		return;
-	
+
 	// fetch the object of the notification object 
 	NSValue* oValue = [notification object];
 	
@@ -178,16 +178,17 @@
 	// we just got passed in the notification 
 	NSEnumerator*						notificationIter		= [[mNotifications allNotifications] objectEnumerator]; 
 	VTTriggerNotification*	currentNotification	= nil; 
-	
+	  
 	while (currentNotification = [notificationIter nextObject]) {
 		// we have to iterate over all triggers in this notification object 
 		NSEnumerator*	triggerIter	= [[currentNotification triggers] objectEnumerator]; 
 		VTTrigger*		trigger			= nil; 
 		
-		while (trigger = [triggerIter nextObject]) {
+		while (trigger = [triggerIter nextObject]) {      
 			// ignore triggers other than hotkey triggers 
 			if ([trigger isKindOfClass: [VTHotkeyTrigger class]] == NO)
 				continue;
+      
 			if ([(VTHotkeyTrigger*)trigger hotkeyRef] == hotKeyRef) {
 				// request the notification 
 				[currentNotification requestNotification]; 
@@ -238,8 +239,8 @@
 		NSArray* desktops = [[VTDesktopController sharedInstance] desktops];  
 		
 		// bring our notifications up to date 
-		NSEnumerator*			notificationIter	= [[self notificationsWithName: VTRequestChangeDesktopName] objectEnumerator]; 
-		VTTriggerNotification*	notification		= nil; 
+		NSEnumerator*           notificationIter  = [[self notificationsWithName: VTRequestChangeDesktopName] objectEnumerator]; 
+		VTTriggerNotification*	notification      = nil; 
 		
 		while (notification = [notificationIter nextObject]) {
 			VTDesktop* desktop = [[notification userInfo] objectForKey: VTRequestChangeDesktopParamName]; 
@@ -271,13 +272,14 @@
 			
 			if (notification == nil) {
 				// add new notification for this group 
-				VTTriggerDesktopNotification* newNotification = [[[VTTriggerDesktopNotification alloc] init] autorelease];
+				VTTriggerDesktopNotification *newNotification = [[VTTriggerDesktopNotification alloc] init];
 				[navigationGroup addNotification: newNotification]; 
 				
 				// and we also need to localize the notification correctly 
 				[newNotification setDesktop: desktop]; 
 				[newNotification setNotification: NSLocalizedStringFromTable([[newNotification name] stringByAppendingString: @"_name"], @"Notifications", @"Notification name")];  
 				[newNotification setDescription: NSLocalizedStringFromTable([[newNotification name] stringByAppendingString: @"_desc"], @"Notifications", @"Notification description")];
+        [newNotification release];
 			}
 		}
 		
@@ -347,14 +349,13 @@
 - (void) readPreferences {
   // @TODO@: Rewrite me to only unarchive objects with modified keys, and not the actual objects, but just the key values.
   NSString* defaultHotkeysPath = [[NSBundle bundleForClass: [VTTriggerController class]] pathForResource: @"DefaultHotkeys" ofType: @"plist"];
-	NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile: defaultHotkeysPath];
+  NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile: defaultHotkeysPath];
   [dictionary addEntriesFromDictionary: [[NSUserDefaults standardUserDefaults] objectForKey: VTHotkeys]];
-
 	[mNotifications decodeFromDictionary: dictionary]; 
-	
+  	
 	// Now we ensure that all desktops have their notification registered 
-	NSArray*      desktopNotifications	= [self notificationsWithName: VTRequestChangeDesktopName]; 
-	NSEnumerator*	desktopIter           = [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
+	NSArray*      desktopNotifications	= [self notificationsWithName: VTRequestChangeDesktopName];
+  NSEnumerator*	desktopIter           = [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	VTDesktop*		desktop               = nil;
 	
 	while (desktop = [desktopIter nextObject]) {
@@ -362,19 +363,20 @@
 		VTTriggerNotification*	notification      = nil;
 		
 		while (notification = [notificationIter nextObject]) {
+      
 			if ([notification isKindOfClass: [VTTriggerDesktopNotification class]] == NO)
 				continue; 
 			
 			if ([[(VTTriggerDesktopNotification*)notification desktop] isEqual: desktop]) 
 				break; 
-		}
-		
-		if (notification == nil) {
-			notification = [[[VTTriggerDesktopNotification alloc] init] autorelease]; 
-			[(VTTriggerDesktopNotification*)notification setDesktop: desktop]; 
-			
-			[[self groupWithName: VTTriggerGroupNavigationName] addNotification: notification];
-		}
+      
+      if (notification == nil) {
+        notification = [[[VTTriggerDesktopNotification alloc] init] autorelease]; 
+        [(VTTriggerDesktopNotification*)notification setDesktop: desktop]; 
+        
+        [[self groupWithName: VTTriggerGroupNavigationName] addNotification: notification];
+      }
+		}		
 	}
   
 	// try to localize 

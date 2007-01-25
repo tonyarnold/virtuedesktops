@@ -82,8 +82,8 @@
   // fetch items from passed dictionary
   NSArray* items = [dictionary objectForKey: kVtCodingItems];
   if ((items == nil) || ([items count] == 0))
-    return;
-
+    return;    
+    
   NSEnumerator* itemIter = [items objectEnumerator];
   NSDictionary* itemDict = nil;
 
@@ -109,13 +109,16 @@
       if (group)
         [self addGroup: group];
     }
-    else {
-      VTTriggerNotification* notification = [[[[itemClass alloc] init] decodeFromDictionary: itemDict] autorelease];
+    else 
+    {
+      VTTriggerNotification* notification = [[[itemClass alloc] init] decodeFromDictionary: itemDict];
       if (notification)
         [self addNotification: notification];
+      
+      [notification release];
     }
+    
   }
-
   return self;
 }
 
@@ -141,9 +144,9 @@
 }
 
 - (NSArray*) groups {
-  NSMutableArray* groups    = [NSMutableArray array];
-  NSEnumerator* groupsIter  = [mNotifications objectEnumerator];
-  id        item    = nil;
+  NSMutableArray* groups      = [NSMutableArray array];
+  NSEnumerator*   groupsIter  = [mNotifications objectEnumerator];
+  id              item        = nil;
 
   while (item = [groupsIter nextObject]) {
     if ([item isKindOfClass: [VTTriggerGroup class]])
@@ -169,8 +172,7 @@
 
 - (NSArray*) allNotifications  {
   NSEnumerator* notificationIter  = [mNotifications objectEnumerator];
-  id        item        = nil;
-
+  id            item              = nil;
   NSMutableArray* notifications   = [NSMutableArray array];
 
   while (item = [notificationIter nextObject]) {

@@ -143,9 +143,9 @@
 	// prepare controllers 
 	[mAssignedTriggerController setContent: [[[VTTriggerController sharedInstance] root] allNotifications]]; 
 	
-	NSBundle*	bundle		= [NSBundle bundleForClass: [self class]]; 
+	NSBundle*	bundle      = [NSBundle bundleForClass: [self class]]; 
 	NSImage*	mouseImage	= [[[NSImage alloc] initByReferencingFile: [bundle pathForResource: @"imageMouseTrigger" ofType: @"png"]] autorelease]; 
-	NSImage*	keyImage	= [[[NSImage alloc] initByReferencingFile: [bundle pathForResource: @"imageKeyboardTrigger" ofType: @"png"]] autorelease]; 
+	NSImage*	keyImage    = [[[NSImage alloc] initByReferencingFile: [bundle pathForResource: @"imageKeyboardTrigger" ofType: @"png"]] autorelease]; 
 	
 	// prepare menu 
 	[mKeyTriggerItem setImage: keyImage];

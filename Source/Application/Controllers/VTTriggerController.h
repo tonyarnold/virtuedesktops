@@ -17,7 +17,7 @@
 
 @interface VTTriggerController : NSObject  {
 	VTTriggerGroup*	mNotifications;			//!< Our root group 
-	BOOL			mIsEnabled;				//!< If set to false, no trigger events will be generated 
+	BOOL            mIsEnabled;         //!< If set to false, no trigger events will be generated 
 }
 
 #pragma mark -
