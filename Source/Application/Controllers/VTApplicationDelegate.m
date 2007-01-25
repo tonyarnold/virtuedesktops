@@ -255,6 +255,9 @@ enum
 	
 	// Register private observers
 	[self registerObservers];
+  
+  // Enable hotkeys/triggers
+  [[VTTriggerController sharedInstance] setEnabled: YES];
 	
 	// We're all startup up!
 	mStartedUp = YES;
