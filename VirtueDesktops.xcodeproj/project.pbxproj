@@ -404,8 +404,6 @@
 		EAF7BF160B67A02F00A100FC /* VTDecorationPrimitiveInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = EA0EE5870A93ECC3009F3FC1 /* VTDecorationPrimitiveInspector.nib */; };
 		EAF823260A91F7ED008612A2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
 		EAF823400A91F7FA008612A2 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EAF823250A91F7ED008612A2 /* Sparkle.framework */; };
-		EAFAD1E80B6AD02500876D3A /* VTWindow.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAD1E60B6AD02500876D3A /* VTWindow.h */; };
-		EAFAD1E90B6AD02500876D3A /* VTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFAD1E70B6AD02500876D3A /* VTWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -777,7 +775,6 @@
 				EA7A69780A870874000D6B5E /* Peony.framework in Copy Frameworks */,
 				EA7A697B0A870874000D6B5E /* Zen.framework in Copy Frameworks */,
 				EA7A69720A870848000D6B5E /* libUniMotion.dylib in Copy Frameworks */,
-				EAFAD1E80B6AD02500876D3A /* VTWindow.h in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1421,8 +1418,6 @@
 		EAF52D440ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTApplicationRunningCountTransformer.m; sourceTree = "<group>"; };
 		EAF7BD180B67959800A100FC /* Bundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Bundle.xcconfig; sourceTree = "<group>"; };
 		EAF823250A91F7ED008612A2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		EAFAD1E60B6AD02500876D3A /* VTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTWindow.h; sourceTree = "<group>"; };
-		EAFAD1E70B6AD02500876D3A /* VTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2017,8 +2012,6 @@
 				EA7A559C0A86A6D0000D6B5E /* VTPluginController.m */,
 				EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */,
 				EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */,
-				EAFAD1E60B6AD02500876D3A /* VTWindow.h */,
-				EAFAD1E70B6AD02500876D3A /* VTWindow.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3514,7 +3507,6 @@
 				EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */,
 				EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */,
 				EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */,
-				EAFAD1E90B6AD02500876D3A /* VTWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
