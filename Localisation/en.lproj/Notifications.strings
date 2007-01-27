@@ -1,6 +1,7 @@
-
+﻿
 /* Request to change the desktop to a named desktop. Name and Description take
 the desktop name as the only format string parameter. */
+
 "VTGroupApplications_name" = "Application manipulation";
 
 /* Inspectors... */
@@ -20,7 +21,7 @@ the desktop name as the only format string parameter. */
 "VTRequestApplicationMoveToEast_name" = "Move application to east";
 
 /* Request application move to south */
-"VTRequestApplicationMoveToNorth_desc" = "Moves application to nort desktop";
+"VTRequestApplicationMoveToNorth_desc" = "Moves application to north desktop";
 "VTRequestApplicationMoveToNorth_name" = "Move application to north";
 
 /* Request to send window behind other windows */

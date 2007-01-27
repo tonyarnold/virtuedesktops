@@ -103,6 +103,7 @@
         {CLASS = NSDateFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
         {CLASS = NSFormatter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = NSNumberFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
         {
             CLASS = NSPreferencePane; 
             LANGUAGE = ObjC; 
@@ -154,7 +155,9 @@
             CLASS = VTVerticallyCentredTextFieldCell; 
             LANGUAGE = ObjC; 
             SUPERCLASS = NSTextFieldCell; 
-        }
+        }, 
+        {CLASS = VTWindow; LANGUAGE = ObjC; SUPERCLASS = ZNEffectWindow; }, 
+        {CLASS = ZNEffectWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
     ); 
     IBVersion = 1; 
 }
