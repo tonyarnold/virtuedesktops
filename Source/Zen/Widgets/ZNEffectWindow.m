@@ -52,7 +52,7 @@ NSString* ZNWindowDidFadeOutNotification	= @"ZNWindowDidFadeOutNotification";
 	_fadingDuration = seconds; 
 }
 
-- (float) fadingAdnimationTime {
+- (float) fadingAnimationTime {
 	return _fadingDuration; 
 }
 

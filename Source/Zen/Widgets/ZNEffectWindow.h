@@ -18,7 +18,7 @@
 #pragma mark -
 #pragma mark Attributes 
 - (void) setFadingAnimationTime: (float) seconds; 
-- (float) fadingAdnimationTime; 
+- (float) fadingAnimationTime; 
 
 #pragma mark -
 #pragma mark Visibility
