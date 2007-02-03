@@ -3714,10 +3714,6 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>165</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>119</integer>
 				</dict>
 				<dict>
@@ -3798,6 +3794,10 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>165</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>185</integer>
 				</dict>
 				<dict>
@@ -3862,10 +3862,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>167</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>163</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3949,6 +3945,10 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+					<integer>163</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>11</integer>
 				</dict>
 				<dict>
@@ -4004,10 +4004,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>169</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>165</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4088,6 +4084,10 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>180</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>165</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4272,7 +4272,6 @@
 		<string>OperationsPanel</string>
 		<string>PopUpList</string>
 		<string>Text Field Cell (Move application to)</string>
-		<string>Text Field Cell (Move window to)</string>
 		<string>Image View</string>
 		<string>Check Box - (Show window on all desktops)</string>
 		<string>Check Box Cell - (Show window on all desktops)</string>
@@ -4293,6 +4292,7 @@
 		<string>Text Field (Move window to)</string>
 		<string>Menu Item (&lt;&lt;Desktops&gt;&gt;)-1</string>
 		<string>NSTextField1</string>
+		<string>Text Field Cell (Move window to)</string>
 		<string>NSTextField11</string>
 		<string>Pop Up Button Cell - (&lt;&lt;Desktops&gt;&gt;)</string>
 		<string>Controller</string>
@@ -4338,14 +4338,6 @@
 			</dict>
 			<key>NS.objects</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>99</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>240</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>159</integer>
@@ -4413,6 +4405,10 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>210</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>165</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4485,10 +4481,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>244</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>165</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4613,6 +4605,14 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>42</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>99</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>240</integer>
 				</dict>
 			</array>
 		</dict>
@@ -4902,8 +4902,6 @@
 				</dict>
 			</array>
 		</dict>
-		<integer>72</integer>
-		<integer>284</integer>
 		<integer>174</integer>
 		<integer>226</integer>
 		<integer>5</integer>
@@ -4921,6 +4919,7 @@
 		<integer>287</integer>
 		<integer>82</integer>
 		<integer>221</integer>
+		<integer>242</integer>
 		<integer>91</integer>
 		<integer>288</integer>
 		<integer>80</integer>
@@ -4939,7 +4938,6 @@
 		<integer>285</integer>
 		<integer>250</integer>
 		<integer>291</integer>
-		<integer>242</integer>
 		<integer>73</integer>
 		<integer>252</integer>
 		<integer>71</integer>
@@ -4971,6 +4969,8 @@
 		<integer>243</integer>
 		<integer>281</integer>
 		<integer>189</integer>
+		<integer>72</integer>
+		<integer>284</integer>
 		<dict>
 			<key>$class</key>
 			<dict>

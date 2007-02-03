@@ -1,0 +1,119 @@
+﻿
+/* Request to change the desktop to a named desktop. Name and Description take
+the desktop name as the only format string parameter. */
+
+"VTGroupApplications_name" = "Application manipulation";
+
+/* Inspectors... */
+"VTGroupDesktops_name" = "Desktop manipulation";
+
+/* Applications... */
+"VTGroupInspection_name" = "Inspectors";
+
+/* Desktop manipulation group containing operations on desktops */
+"VTGroupNavigation_name" = "Navigation";
+
+/* Windows... */
+"VTGroupWindows_name" = "Windows";
+
+/* Request application move to west */
+"VTRequestApplicationMoveToEast_desc" = "Moves application to east desktop";
+"VTRequestApplicationMoveToEast_name" = "Move application to east";
+
+/* Request application move to south */
+"VTRequestApplicationMoveToNorth_desc" = "Moves application to north desktop";
+"VTRequestApplicationMoveToNorth_name" = "Move application to north";
+
+/* Request to send window behind other windows */
+"VTRequestApplicationMoveToSouth_desc" = "Moves application to south desktop";
+"VTRequestApplicationMoveToSouth_name" = "Move application to south";
+
+/* Request application move to north */
+"VTRequestApplicationMoveToWest_desc" = "Moves application to west desktop";
+"VTRequestApplicationMoveToWest_name" = "Move application to west";
+
+/* Request to change the desktop to the previous desktop. */
+"VTRequestChangeDesktop_desc" = "Shows the desktop named '%@'";
+"VTRequestChangeDesktop_name" = "Show desktop '%@'";
+
+/* Request to change to the desktop to the west (the left) */
+"VTRequestChangeDesktopToEast_desc" = "Shows the desktop located right of the currently shown desktop";
+"VTRequestChangeDesktopToEast_name" = "Show desktop to the right";
+
+/* Request to change the desktop to the desktop marked as the Snapback desktop */
+"VTRequestChangeDesktopToLast_desc" = "Shows the desktop that you worked on before you switched to the current desktop";
+"VTRequestChangeDesktopToLast_name" = "Show previous desktop";
+
+/* Request to change to the desktop to the south (below) */
+"VTRequestChangeDesktopToNorth_desc" = "Shows the desktop located above the currently shown desktop";
+"VTRequestChangeDesktopToNorth_name" = "Show desktop to the top";
+
+/* Request to set the currently visible desktop as the Snapback desktop */
+"VTRequestChangeDesktopToSnapback_desc" = "Shows the desktop that was marked as the snapback desktop";
+"VTRequestChangeDesktopToSnapback_name" = "Show Snapback desktop";
+
+/* Request to show the overlay pager in Normal-Mode */
+"VTRequestChangeDesktopToSouth_desc" = "Shows the desktop located below the currently shown desktop";
+"VTRequestChangeDesktopToSouth_name" = "Show desktop to the bottom";
+
+/* Request to change to the desktop to the north (above) */
+"VTRequestChangeDesktopToWest_desc" = "Shows the desktop located left of the currently shown desktop";
+"VTRequestChangeDesktopToWest_name" = "Show desktop to the left";
+
+/* Request to show the overlay window of the window under the mouse pointer */
+"VTRequestDeleteDesktop_desc" = "Deletes the currently shown desktop optionally moving all windows to another desktop and switches the shown desktop to the previous desktop";
+"VTRequestDeleteDesktop_name" = "Delete shown desktop";
+
+/* Request application move east */
+"VTRequestDisplayOverlay_desc" = "Displays the overlay window control that allows you to sticky/unsticky and move windows between desktops";
+"VTRequestDisplayOverlay_name" = "Display window control";
+
+/* Request to inspect preferences */
+"VTrequestInspectApplications_desc" = "Displays information about running and remembered application states like their desktop and sticky state.";
+"VTRequestInspectApplications_name" = "Inspect applications";
+
+/* Request to inspect Applications using the Application Inspector */
+"VTRequestInspectDesktop_desc" = "Displays information about a specific desktop and provides a list of all open applications and windows of the desktop";
+"VTRequestInspectDesktop_name" = "Inspect desktop";
+
+/* Request to inspect the visible desktop using the Desktop Inspector */
+"VTRequestInspectDesktops_desc" = "Displays all available desktops, their status and allows renaming, reordering, adding, and removal of desktops";
+"VTRequestInspectDesktops_name" = "Inspect available desktops";
+
+/* Request to toggle visiblity of the statusbar menu */
+"VTRequestInspectPreferences_desc" = "Displays user preferences of Virtue";
+"VTRequestInspectPreferences_name" = "Inspect preferences";
+"VTRequestSendWindowBack_desc" = "Send Window Under Point Back";
+"VTRequestSendWindowBack_name" = "Send Window Back";
+
+/* Request to change to the desktop to the east (the right) */
+"VTRequestSetSnapbackDesktop_desc" = "Sets the currently shown desktop to be the snapback desktop";
+"VTRequestSetSnapbackDesktop_name" = "Mark as Snapback desktop";
+
+/* Request to show the overlay pager in Sticky-Mode */
+"VTRequestShowPager_desc" = "Shows the desktop overlay pager that allows you to browse available desktops and switch to another desktop";
+"VTRequestShowPager_name" = "Show desktop overlay pager";
+
+/* Request to inspect Desktops using the Desktops Inspector (Deprecated) */
+"VTRequestShowPagerAndStick_desc" = "Shows the desktop overlay in pager mode. Allows you to brows available desktops and switch to another desktop without the need to hold the modifier key down all the time";
+"VTRequestShowPagerAndStick_name" = "Show sticky desktop overlay pager";
+
+/* Request to delete the visible desktop */
+"VTRequestToggleStatusbarMenu_desc" = "Allows you to hide and show the statusbar menu";
+"VTRequestToggleStatusbarMenu_name" = "Toggle statusbar menu";
+
+/* Request to move the window currently under the cursor to the desktop left of this one */
+"VTRequestMoveWindowLeft_desc" = "Moves the window currently under the cursor to the desktop left of this one";
+"VTRequestMoveWindowLeft_name" = "Move window under cursor left one desktop";
+
+/* Request to move the window currently under the cursor to the desktop right of this one */
+"VTRequestMoveWindowRight_desc" = "Moves the window currently under the cursor to the desktop right of this one";
+"VTRequestMoveWindowRight_name" = "Move window under cursor right one desktop";
+
+/* Request to move the window currently under the cursor to the desktop right of this one */
+"VTRequestMoveWindowUp_desc" = "Moves the window currently under the cursor to the desktop above this one";
+"VTRequestMoveWindowUp_name" = "Move window under cursor up one desktop";
+
+/* Request to move the window currently under the cursor to the desktop right of this one */
+"VTRequestMoveWindowDown_desc" = "Moves the window currently under the cursor to the desktop below this one";
+"VTRequestMoveWindowDown_name" = "Move window under cursor down one desktop";
