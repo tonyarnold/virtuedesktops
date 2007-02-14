@@ -1,12 +1,19 @@
-//
-//  PNDesktop.h
-//  Peony framework
-//
-//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
-//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
-//
-//  See COPYING for licensing details
-//  
+/*!
+ *	Peony - PNDesktop.h
+ *	@author	Tony Arnold
+ *	@author	Thomas Staller
+ *	
+ *	@addtogroup	peony	Peony framework
+ *
+ *	@brief A collection of windows representing a window tree called a "Workspace" in Apple's terminology
+ *
+ *	This interface provides functionality to manipulate and collect windows that belong to one desktop (a workspace) window tree. Since we do not own the workspace but provide a wrapper around existing functionality, this interface is but a wrapper. It is therefore possible to have multiple desktop interfaces for the same workspace, no data between the wrapper instances will be shared, e.g. if one of the instances gets assigned a name, the other will keep its own.
+ *	
+ *	Copyright (c) 2004, Thomas Staller  <playback@users.sourceforge.net>
+ *	Copyright (c) 2006-2007, Tony Arnold <tony@tonyarnold.com
+ *
+ *	See COPYING for licensing details
+ */
 
 /*!
     @header     PNDesktop

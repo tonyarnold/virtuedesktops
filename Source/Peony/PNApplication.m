@@ -1,12 +1,9 @@
-//
-//  PNApplication.m
-//  Peony framework
-//
-//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
-//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
-//
-//  See COPYING for licensing details
-//  
+/*
+	PNApplication.m
+	See COPYING for licensing details
+	Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>\n
+	Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+*/
 
 #import "PNApplication.h"
 #import "PNWindowList.h"
@@ -22,7 +19,7 @@
   {
 		mPid        = pid;
 		mDesktop    = [desktop retain]; 
-		mWindows    = [[NSMutableArray array] retain]; 
+		mWindows    = [[NSMutableArray alloc] init]; 
     
     _name       = nil;
 		
@@ -157,8 +154,7 @@
 
 - (float) alphaValue 
 {
-	// currently we return 1.0 here, as there is no meaningful value to return 
-	// for a collection of windows... 
+	// currently we return 1.0 here, as there is no meaningful value to return for a collection of windows... 
 	return 1.0f; 
 }
 
@@ -172,10 +168,6 @@
 	return [mDesktop identifier]; 
 }
 
-/**
- * @TODO	Move this method from separate window handling to handling a window list, which should be much more effecient
- *
- */ 
 - (void) setDesktop: (PNDesktop*) desktop {
 	// We will not modify the desktop we belong to but will just move all the windows we know about to the passed desktop, a new application instance will be created there...
 	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] init];

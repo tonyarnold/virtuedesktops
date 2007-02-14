@@ -1,12 +1,19 @@
-//
-//  PNDesktop.m
-//  Peony framework
-//
-//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
-//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
-//
-//  See COPYING for licensing details
-// 
+/*!
+ *	Peony - PNDesktop.m
+ *	@author	Tony Arnold
+ *	@author	Thomas Staller
+ *	
+ *	@addtogroup	peony	Peony framework
+ *
+ *	@brief A collection of windows representing a window tree called a "Workspace" in Apple's terminology
+ *
+ *	This interface provides functionality to manipulate and collect windows that belong to one desktop (a workspace) window tree. Since we do not own the workspace but provide a wrapper around existing functionality, this interface is but a wrapper. It is therefore possible to have multiple desktop interfaces for the same workspace, no data between the wrapper instances will be shared, e.g. if one of the instances gets assigned a name, the other will keep its own.
+ *	
+ *	Copyright (c) 2004, Thomas Staller  <playback@users.sourceforge.net>
+ *	Copyright (c) 2006-2007, Tony Arnold <tony@tonyarnold.com
+ *
+ *	See COPYING for licensing details
+ */
 
 #import "PNDesktop.h"
 #import "PNWindow.h"
@@ -328,6 +335,7 @@
   
 	PNWindow* referenceWindow = [mWindows objectAtIndex: 0];
 	[window orderAbove: referenceWindow];
+  
 }
 
 /*!
@@ -450,19 +458,18 @@
     
 		// get the window proxy
 		PNWindow* window = [PNWindow windowWithWindowId: iWindowId];
-    [window retain];
     
     if (window == nil)
       continue;
     
-		// ignore menus
-    if (([window level] == NSPopUpMenuWindowLevel) ||
-				([window level] == NSSubmenuWindowLevel) ||
-				([window level] == NSMainMenuWindowLevel)) {
-			[window release];
+		// ignore menus, and windows that are marked special
+    if (([window level] == NSPopUpMenuWindowLevel)  ||
+				([window level] == NSSubmenuWindowLevel)    ||
+				([window level] == NSMainMenuWindowLevel)   ||
+        [window isSpecial]) {
 			continue;
 		}
-    
+        
 		// get application container
 		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];    
 		
@@ -477,17 +484,7 @@
         // and attach
         [self attachApplication: application];
       }
-      
-      // and release application
-			[application release];
-		}
-		
-		// if the window is special, we do not include it in our list
-		if ([window isSpecial]) {
-			[window release];
-			continue;
-		}
-    
+    }
     
     // If it is a utility palette, we should make it sticky, so palettes don't get lost across desktops
     if (([window level] == kCGUtilityWindowLevelKey) ||
@@ -496,9 +493,7 @@
     {
       [window setSticky: YES];
     }
-    
-    
-    
+        
 		// check if the window is in our list and add it if it isn't
 		if ([mWindows containsObject: window] == NO) {
 			// add the window to the list of known windows and mark ourselves as dirty
@@ -523,7 +518,6 @@
     // Bind the window to it's parent application
     [application bindWindow: window];
     
-		[window release];
 		// increment the list index
 		currentListIndex++;
 	}

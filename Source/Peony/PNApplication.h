@@ -1,42 +1,37 @@
-//
-//  PNApplication.h
-//  Peony framework
-//
-//  Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
-//  Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
-//
-//  See COPYING for licensing details
-//  
-
 /*!
-  @header     PNApplication
-  @abstract   Classes for creating and managing "virtual desktops" by utilising Apple's workspace objects
-  @discussion This framework does a lot of the management of creating, modifying and maintaining virtual desktops using Apple's workspace objects. It does not define a "layout" for the desktops - as far as the framework is concerned, the desktops have an order, but no physical representation.
- */
+	PNApplication.h
+	
+	@addtogroup	peony	Peony framework
+
+	@brief Class for creating and managing "virtual desktops" by utilising Apple's workspace objects
+
+	This class does a lot of the management of creating, modifying and maintaining virtual desktops using Apple's workspace objects. It does not define a "layout" for the desktops - as far as the class is concerned, the desktops have an order, but no physical representation.\n
+	This interface is not really representing a whole application but acts as a window group grouping windows belonging to one application seen on a specific desktop. It is possible to have multiple applications with the same pid on different desktops at the same time.
+
+	 Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>\n
+	 Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+
+	 @license See COPYING for licensing details
+*/
 
 #import <Cocoa/Cocoa.h>
 #import "PNDesktopItem.h" 
 #import "PNDesktop.h" 
 #import "PNWindow.h" 
 
-/*!
-    @class      PNApplication
-    @abstract   Desktop bound window container grouping windows by application pid
-    @discussion This interface is not really representing a whole application but acts as a window group grouping windows belonging to one application seen on a specific desktop. It is possible to have multiple applications with the same pid on different desktops at the same time.. 
- */  
 @interface PNApplication : NSObject<PNDesktopItem>
 {
-	pid_t               mPid;			// The process id of the application 
-	ProcessSerialNumber	mPsn;			// The process serial number of the application 
+	pid_t               mPid;			//!< The process id of the application
+	ProcessSerialNumber	mPsn;			//!< The process serial number of the application
   
-	PNDesktop*          mDesktop; // Desktop this application is on 
-	NSMutableArray*     mWindows; // All windows of the application
+	PNDesktop*          mDesktop; //!< Desktop this application is on
+	NSMutableArray*     mWindows; //!< All windows of the application
   
   NSString            *_name;
   
-	BOOL				mIsSticky;		// Is the application stickied?  
-	BOOL				mIsHidden;		// Is the application hidden from display?
-  BOOL				mIsUnfocused;	// Is the application unfocused?
+	BOOL				mIsSticky;		//!< Is the application stickied?
+	BOOL				mIsHidden;		//!< Is the application hidden from display?
+  BOOL				mIsUnfocused;	//!< Is the application unfocused?
 }
 
 #pragma mark Lifetime
@@ -73,8 +68,15 @@
 - (float) alphaValue; 
 
 #pragma mark -
-// desktop
-- (int) desktopId; 
+/*!
+  @return The identifier of the application's desktop
+ */
+- (int) desktopId;
+/*!
+  @brief  Moves the represented application to the specified desktop
+  @param  desktop The PNDesktop instance to move the represented PNApplication instance to.
+  @todo   Move this method from separate window handling to handling a window list, which should be much more effecient 
+  */
 - (void) setDesktop: (PNDesktop*) desktop; 
 
 #pragma mark -
