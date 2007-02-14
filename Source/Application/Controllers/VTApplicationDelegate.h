@@ -86,4 +86,5 @@
 
 #pragma mark Growl
 - (void)postGrowlNotification;
+- (BOOL)growlIsUsable;
 @end

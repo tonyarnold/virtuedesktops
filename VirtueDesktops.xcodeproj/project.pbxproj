@@ -329,6 +329,9 @@
 		EAC060F50A89679E00020B92 /* imageKeyboardTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56730A86A70C000D6B5E /* imageKeyboardTrigger.png */; };
 		EAC060F60A89679E00020B92 /* imageMouseTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A56750A86A70C000D6B5E /* imageMouseTrigger.png */; };
 		EAC061060A89685D00020B92 /* imagePreferencesPagers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = EA7A636C0A86FCFA000D6B5E /* imagePreferencesPagers.tiff */; };
+		EACD36FB0B82D45E009B54C9 /* VTGrowlIntegration.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EACD36F90B82D45E009B54C9 /* VTGrowlIntegration.h */; };
+		EACD36FC0B82D45E009B54C9 /* VTGrowlIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD36FA0B82D45E009B54C9 /* VTGrowlIntegration.m */; };
+		EACD37570B82D5ED009B54C9 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A548B0A86A663000D6B5E /* Growl.framework */; };
 		EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A55F90A86A6D1000D6B5E /* VTDesktopViewController.m */; };
 		EAED24AC0B552CD8006E517B /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = EAED24AA0B552CD8006E517B /* NSString+UUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAED24AD0B552CD8006E517B /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = EAED24AB0B552CD8006E517B /* NSString+UUID.m */; };
@@ -775,6 +778,7 @@
 				EA7A69780A870874000D6B5E /* Peony.framework in Copy Frameworks */,
 				EA7A697B0A870874000D6B5E /* Zen.framework in Copy Frameworks */,
 				EA7A69720A870848000D6B5E /* libUniMotion.dylib in Copy Frameworks */,
+				EACD36FB0B82D45E009B54C9 /* VTGrowlIntegration.h in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1410,6 +1414,8 @@
 		EAC013BE0AD10C7400389BDB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = en.lproj/ColorLabelPalette.nib; sourceTree = "<group>"; };
 		EAC013C90AD10C8200389BDB /* ColorLabel.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorLabel.ibclassdescription; sourceTree = "<group>"; };
 		EAC060C70A8964F700020B92 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTLayoutPreferences.nib; sourceTree = SOURCE_ROOT; };
+		EACD36F90B82D45E009B54C9 /* VTGrowlIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTGrowlIntegration.h; sourceTree = "<group>"; };
+		EACD36FA0B82D45E009B54C9 /* VTGrowlIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTGrowlIntegration.m; sourceTree = "<group>"; };
 		EAE65ADA0B624D8100AC2655 /* Peony.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Peony.hdoc; path = Source/Peony/Peony.hdoc; sourceTree = "<group>"; };
 		EAE65AE10B624DE900AC2655 /* Zen.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Zen.hdoc; path = Source/Zen/Zen.hdoc; sourceTree = "<group>"; };
 		EAEB94D50B6CE4DE00701000 /* _p_n_application_8h.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = _p_n_application_8h.html; sourceTree = "<group>"; };
@@ -1537,6 +1543,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACD37570B82D5ED009B54C9 /* Growl.framework in Frameworks */,
 				EA7A66D20A870388000D6B5E /* PreferencePanes.framework in Frameworks */,
 				EA7A66CD0A870381000D6B5E /* Cocoa.framework in Frameworks */,
 			);
@@ -2059,6 +2066,8 @@
 				EA7A559C0A86A6D0000D6B5E /* VTPluginController.m */,
 				EA36CC7B0A9C4A290081417B /* VTLightSensorController.h */,
 				EA36CC7C0A9C4A290081417B /* VTLightSensorController.m */,
+				EACD36F90B82D45E009B54C9 /* VTGrowlIntegration.h */,
+				EACD36FA0B82D45E009B54C9 /* VTGrowlIntegration.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3117,6 +3126,7 @@
 				Itlian,
 				Norwegian,
 				Portuguese,
+				en_AU,
 			);
 			mainGroup = EAA9266B0A86A4E800D4674B;
 			productRefGroup = EA7A56A40A86A738000D6B5E /* Products */;
@@ -3371,7 +3381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/Configurations/ProductVersion.xcconfig\";\n#my $INFO   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/Configurations/ProductVersion.xcconfig\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);\n\n# Now touch the Info.plist to ensure it gets re-built and added to the application\nmy $cmd = `/usr/bin/env touch \"$ENV{PRODUCT_SETTINGS_PATH}\"`;";
 		};
 		EAC013FC0AD10D0C00389BDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3615,6 +3625,7 @@
 				EADC94AD0A88E873003BDC1A /* VTDesktopViewController.m in Sources */,
 				EA36CC7E0A9C4A290081417B /* VTLightSensorController.m in Sources */,
 				EAF52D460ACEBDE70086DEFA /* VTApplicationRunningCountTransformer.m in Sources */,
+				EACD36FC0B82D45E009B54C9 /* VTGrowlIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4387,6 +4398,11 @@
 			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -4974,6 +4990,11 @@
 			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -5001,6 +5022,11 @@
 			baseConfigurationReference = EAF7BD180B67959800A100FC /* Bundle.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/Shared/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;

@@ -250,9 +250,12 @@ enum
 	
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver: self forKeyPath: [NSUserDefaultsController pathForKey: VTVirtueShowStatusbarMenu] options: NSKeyValueObservingOptionNew context: NULL];
 	
-	// Enable Growl ( http://growl.info )
-	[GrowlApplicationBridge setGrowlDelegate:self];
-	
+  if ([self growlIsUsable])
+  {
+    // Enable Growl ( http://growl.info )
+    [GrowlApplicationBridge setGrowlDelegate:self];
+	}
+    
 	// Register private observers
 	[self registerObservers];
   
@@ -717,7 +720,16 @@ enum
 }
 
 - (void)postGrowlNotification {
-	[GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: NSLocalizedString(@"VTGrowlDesktopChangedMessage", @"Message shown when changing desktops"), [[[VTDesktopController sharedInstance] activeDesktop] name]] description: nil notificationName: NSLocalizedString(@"VTGrowlDesktopChangedTitle", @"Title shown when changing desktops") iconData: nil priority: 0 isSticky: NO clickContext: nil];
+  // Only post notifications if growl is installed and running
+  if ([self growlIsUsable])
+  {
+    [GrowlApplicationBridge notifyWithTitle: [NSString stringWithFormat: NSLocalizedString(@"VTGrowlDesktopChangedMessage", @"Message shown when changing desktops"), [[[VTDesktopController sharedInstance] activeDesktop] name]] description: nil notificationName: NSLocalizedString(@"VTGrowlDesktopChangedTitle", @"Title shown when changing desktops") iconData: nil priority: 0 isSticky: NO clickContext: nil];
+  }
+}
+
+- (BOOL)growlIsUsable
+{
+  return (Growl_IsInstalled() == YES && Growl_IsRunning() == YES);
 }
 
 @end

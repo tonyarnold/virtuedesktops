@@ -12,6 +12,7 @@
 *****************************************************************************/ 
 
 #import "VTAppearancePreferencesController.h"
+#import <Growl/Growl.h>
 
 #pragma mark -
 @implementation VTAppearancePreferencesController
@@ -23,6 +24,11 @@
 }
 
 - (void) willUnselect {
+}
+
+- (BOOL)growlIsUsable
+{
+  return (Growl_IsInstalled() == YES && Growl_IsRunning() == YES);
 }
 
 @end 
