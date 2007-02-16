@@ -14,23 +14,23 @@
 #pragma mark -
 #pragma mark Initialization and lifecycle
 
-+ (id) sharedWindowPool 
++ (PNWindowPool*) sharedWindowPool 
 {
-	static PNWindowPool* ms_oINSTANCE = nil; 
+	static PNWindowPool* ms_INSTANCE = nil; 
 	
-	if (ms_oINSTANCE == nil)
+	if (ms_INSTANCE == nil)
   {
-		ms_oINSTANCE = [[PNWindowPool alloc] init];  
+		ms_INSTANCE = [[PNWindowPool alloc] init];  
 	}
   
-	return ms_oINSTANCE; 
+	return ms_INSTANCE; 
 }
 
 - (id) init 
 {
 	if (self = [super init]) 
   {
-		mWindows = [[NSMutableDictionary alloc] init]; 
+		_windowDict = [[NSMutableDictionary alloc] init];
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onWindowRemoved:) name: kPnOnWindowRemoved object: nil]; 
 		return self; 
 	}
@@ -41,7 +41,7 @@
 - (void) dealloc 
 {
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
-	[mWindows release]; 
+	[_windowDict release];
 	[super dealloc]; 
 }
 
@@ -51,11 +51,12 @@
 - (PNWindow*) windowWithId: (CGSWindow) windowId 
 {
   // If the window is not present in the current pool, create a new instance with the specified ID and add it
-	if ([mWindows objectForKey: [NSNumber numberWithInt: windowId]] == nil) {
-		[mWindows setObject: [[PNWindow alloc] initWithWindowId: windowId] forKey: [NSNumber numberWithInt: windowId]];
-	}
-  
-	return [mWindows objectForKey: [NSNumber numberWithInt: windowId]]; 
+	if ([_windowDict objectForKey: [NSNumber numberWithInt: windowId]] == nil) 
+  {
+		[_windowDict setObject: [[PNWindow alloc] initWithWindowId: windowId] forKey: [NSNumber numberWithInt: windowId]];
+  }
+    
+	return [_windowDict objectForKey: [NSNumber numberWithInt: windowId]]; 
 }
 
 #pragma mark -
@@ -64,7 +65,7 @@
 - (void) onWindowRemoved: (NSNotification*) notification 
 {
 	// Remove the dead window proxy as it is no longer contained in any desktop
-	[mWindows removeObjectForKey: [NSNumber numberWithInt: [(PNWindow*)[notification object] nativeWindow]]];
+	[_windowDict removeObjectForKey: [NSNumber numberWithInt: [(PNWindow*)[notification object] nativeWindow]]];
 }
 
 @end

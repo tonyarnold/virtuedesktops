@@ -12,7 +12,15 @@
 *****************************************************************************/ 
 
 #import <Cocoa/Cocoa.h>
+#import <stdio.h>
+#import <sys/param.h>
 
 int main(int argc, char *argv[]) {
-    return NSApplicationMain(argc,  (const char **) argv);
+  char *val_buf, path_buf[MAXPATHLEN];
+
+  val_buf = getenv("HOME");
+  sprintf(path_buf,"%s/Library/Logs/VirtueDesktops.log",val_buf);
+  freopen(path_buf,"a",stderr);
+  
+  return NSApplicationMain(argc,  (const char **) argv);
 }

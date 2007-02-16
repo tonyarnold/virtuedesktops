@@ -1,18 +1,9 @@
-/*!
+/*
 	PNApplication.h
-	
-	@addtogroup	peony	Peony framework
-
-	@brief Class for creating and managing "virtual desktops" by utilising Apple's workspace objects
-
-	This class does a lot of the management of creating, modifying and maintaining virtual desktops using Apple's workspace objects. It does not define a "layout" for the desktops - as far as the class is concerned, the desktops have an order, but no physical representation.\n
-	This interface is not really representing a whole application but acts as a window group grouping windows belonging to one application seen on a specific desktop. It is possible to have multiple applications with the same pid on different desktops at the same time.
-
-	 Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>\n
-	 Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
-
-	 @license See COPYING for licensing details
-*/
+	See COPYING for licensing details
+	Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>
+	Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
+ */
 
 #import <Cocoa/Cocoa.h>
 #import "PNDesktopItem.h" 
@@ -75,7 +66,7 @@
 /*!
   @brief  Moves the represented application to the specified desktop
   @param  desktop The PNDesktop instance to move the represented PNApplication instance to.
-  @todo   Move this method from separate window handling to handling a window list, which should be much more effecient 
+  @todo   Move this method from separate window handling to handling a window list, which should be much more efficient 
   */
 - (void) setDesktop: (PNDesktop*) desktop; 
 

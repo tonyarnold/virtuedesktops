@@ -3,11 +3,19 @@
 	See COPYING for licensing details
 	Copyright 2004, Thomas Staller  <playback@users.sourceforge.net>\n
 	Copyright 2006-2007, Tony Arnold <tony@tonyarnold.com
-*/
+ */
 
 #import "PNApplication.h"
 #import "PNWindowList.h"
 #import "PNNotifications.h"
+
+/**
+  @class PNApplication
+  @brief Class for creating and managing "virtual desktops" by utilising Apple's workspace objects
+
+  This class does a lot of the management of creating, modifying and maintaining virtual desktops using Apple's workspace objects. It does not define a "layout" for the desktops - as far as the class is concerned, the desktops have an order, but no physical representation.\n
+  This interface is not really representing a whole application but acts as a window group grouping windows belonging to one application seen on a specific desktop. It is possible to have multiple applications with the same pid on different desktops at the same time.
+ */
 
 @implementation PNApplication
 

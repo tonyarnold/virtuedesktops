@@ -236,6 +236,23 @@
 }
 
 #pragma mark -
+#pragma mark Window Level Conveniences
+
+- (BOOL)isMenu
+{
+	int level = [self level];
+	
+	return (level == NSPopUpMenuWindowLevel) || (level == NSSubmenuWindowLevel) || (level == NSMainMenuWindowLevel);
+}
+- (BOOL)isPalette
+{
+	int level = [self level];
+	
+	return (level == kCGUtilityWindowLevelKey) || (level == kCGBackstopMenuLevelKey) || (level == kCGFloatingWindowLevelKey);
+}
+
+
+#pragma mark -
 - (BOOL) isSpecial {
 	return mIsSpecial;
 }

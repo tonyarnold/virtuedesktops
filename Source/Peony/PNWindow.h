@@ -87,6 +87,9 @@ enum
 #pragma mark -
 - (CGSWindow) nativeWindow;
 
+- (BOOL)isMenu;
+- (BOOL)isPalette;
+
 #pragma mark -
 - (BOOL) isSpecial;
 - (void) setSpecial: (BOOL) special;

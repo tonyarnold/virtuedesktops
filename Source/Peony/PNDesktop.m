@@ -90,8 +90,8 @@
                                              andName: mDesktopName
                                               update: NO];
   
-	desktop->mWindows				= [mWindows retain];
-	desktop->mApplications	= [mApplications retain];
+	desktop->mWindows = mWindows;
+	desktop->mApplications	= mApplications;
   
 	return desktop;
 }
@@ -101,15 +101,15 @@
 + (int) activeDesktopIdentifier
 {
 	// Get a connection to the CoreGraphics server
-	CGSConnection oConnection = _CGSDefaultConnection();
+	CGSConnection connection = _CGSDefaultConnection();
 	
 	// Fetch the active desktop id and return nil in case of an error
 	int iWorkspaceId;
   
-	OSStatus oResult = CGSGetWorkspace(oConnection, &iWorkspaceId);
-	if (oResult)
+	OSStatus result = CGSGetWorkspace(connection, &iWorkspaceId);
+	if (result)
 	{
-		ZNLog( @"PNDesktop cannot access current workspace [Error: %i]", oResult);
+		ZNLog( @"PNDesktop cannot access current workspace [Error: %i]", result);
 		return kPnDesktopInvalidId;
 	}
   
@@ -143,20 +143,25 @@
 
 - (void) setName: (NSString*) name 
 {
-  if (mDesktopName == name)
-    return;
+	if (mDesktopName == name)
+	{
+		return;
+	}
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopWillChangeName object: nil userInfo: nil];
   
-  [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopWillChangeName object: nil userInfo: nil];
-  
-  if (mDesktopName)
-    [mDesktopName release];
+	[mDesktopName release];
   
 	if (name && ([name length] > 0))
-		mDesktopName = [name retain];
+	{
+		mDesktopName = [name copy];
+	}
 	else
+	{
 		mDesktopName = @"None";
+	}
   
-  [[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopDidChangeName object: nil userInfo: nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName: PNDesktopDidChangeName object: nil userInfo: nil];
 }
 
 
@@ -403,6 +408,175 @@
 
 #pragma mark -
 #pragma mark Updating
+- (PNApplication*)applicationForWindow:(PNWindow*)window
+{
+	PNApplication *application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];
+	
+	// if the application container does not contain a reference to the application, create a new one
+	if (application == nil)
+	{
+		application = [[PNApplication alloc] initWithPid: [window ownerPid] onDesktop: self];
+		
+		if (application != nil)
+		{
+			// and attach
+			[self attachApplication: application];
+		}
+		
+		[application autorelease];
+		
+	}
+	
+	return application;
+}
+
+- (int)numberOfWindows
+{
+	ZNLog(@"Starting");
+	// get connection
+	CGSConnection connection = _CGSDefaultConnection();
+	ZNLog(@"Created connection");
+	OSStatus result;
+	
+	int numberOfWindows = -1;
+	
+	// first we have to query for the number of windows in our workspace
+	result = CGSGetWorkspaceWindowCount(connection, mDesktopId, &numberOfWindows);
+	ZNLog(@"Queried workspace for number of windows");
+	if (result)
+	{
+		ZNLog( @"[Desktop %i] CGSGetWorkspaceWindowCount failed [%i]", mDesktopId, result);
+	}
+	ZNLog(@"Ending");
+	return numberOfWindows;
+}
+
+- (NSData*)windowsInWorkspaceUptoIndex:(int)index numberRetrieved:(int*)retrieved
+{
+	ZNLog(@"Starting");
+	CGSConnection connection = _CGSDefaultConnection();
+	ZNLog(@"Created connection");
+	NSMutableData *windows = nil;
+	OSStatus result;
+	// query the list of windows in our workspace
+	windows = [NSMutableData dataWithCapacity: index * sizeof(int)];
+	ZNLog(@"Created windows variable");
+	result = CGSGetWorkspaceWindowList(connection, mDesktopId, index, [windows mutableBytes], &retrieved);
+	ZNLog(@"Queried workspace for list of windows");
+	if (result) 
+	{
+		ZNLog( @"[Desktop %i] CGSGetWorkspaceWindowList failed [%i]", mDesktopId, result);
+	}
+	ZNLog(@"Ending");
+	return windows;
+}
+
+- (NSArray*)nonExistentWindowsAfterSyncing
+{
+	ZNLog(@"Starting");
+	NSMutableArray *deadWindows = [NSMutableArray array];
+	NSData* windows = nil;
+	
+	int numberOfWindows = [self numberOfWindows];
+	ZNLog(@"Got number of windows");
+	int currentListIndex	 = 0;
+	int i = 0;
+	
+	// if the number of desktops is 0, we will skip fetching windows
+	if (numberOfWindows > 0)
+	{
+		windows = [self windowsInWorkspaceUptoIndex: numberOfWindows numberRetrieved: &numberOfWindows];
+		ZNLog(@"Got list of windows");
+	}
+	
+	int *windowIds = [windows bytes];
+	ZNLog(@"Created window IDs");
+	// Now we can start synchronizing. We will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
+	ZNLog(@"Going to loop over windows");
+	for ( i = 0; i < numberOfWindows; i++ )
+	{
+		// get entry from list of fetched windows
+		CGSWindow windowId = windowIds[i];
+		// get the window proxy
+		PNWindow* window = [PNWindow windowWithWindowId: windowId];
+		ZNLog(@"Created window");
+		
+		// ignore menus, and windows that are marked special
+		if (window == nil || [window isMenu] || [window isSpecial])
+		{
+			continue;
+		}
+		// If it is a utility palette, we should make it sticky, so palettes don't get lost across desktops
+		if ([window isPalette])
+		{
+			[window setSticky: YES];
+			ZNLog(@"Set window to be sticky");
+		}
+		
+		// get application container
+		[[self applicationForWindow: window] bindWindow: window];
+		ZNLog(@"Bound window to application");
+        
+		// check if the window is in our list and add it if it isn't
+		if ([mWindows containsObject: window] == NO)
+		{
+			// add the window to the list of known windows and mark ourselves as dirty
+			[mWindows insertObject: window atIndex: currentListIndex];
+			ZNLog(@"Inserted window in window array");
+		}
+		else
+		{
+			// we already knew about this window, and it apparently still exists, so we will remove it from the list of previous windows
+			[deadWindows addObject: window];
+			ZNLog(@"Window will be considered dead");
+		}
+		currentListIndex++;
+	}
+	ZNLog(@"Ending");
+	return deadWindows;
+}
+
+- (void)removeWindows:(NSArray*)windows
+{
+	ZNLog(@"Starting");
+	// All windows that are still left in the copied window list were not touched by the loop above and are no longer on the desktop, so we will remove them from the list of windows
+	NSEnumerator *windowsEnumerator = [windows objectEnumerator];
+	PNWindow *window = nil;
+	
+	ZNLog(@"Going to loop over windows to remove");
+	while (window = [windowsEnumerator nextObject])
+	{    
+		[mWindows removeObject: window];
+		ZNLog(@"Removed window from array");
+		// handle application windows
+		PNApplication *application = [self applicationForWindow: window];
+		ZNLog(@"Got application for window");
+		// check if the application is still valid
+		if ([application isValid])
+		{
+			[application unbindWindow: window];
+			ZNLog(@"Unbound window");
+			// check if there are still windows contained in the application wrappers and
+			// remove the application if there are none...
+			if ([[application windows] count] == 0)
+			{
+				[self detachApplication: application];
+				ZNLog(@"Detached application");
+			}
+		}
+		else
+		{
+			[self detachApplication: application];
+			ZNLog(@"Detached application");
+		}
+		
+		// and post notification that the window was removed
+		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowRemoved object: window];
+		ZNLog(@"Posted notification");
+	}
+	ZNLog(@"Ended");
+}
+
 /*!
   @method     updateDesktop
   @abstract   Clear the list of windows and fetch all windows in the workspace
@@ -410,218 +584,85 @@
  
       This method is inherently costly, it should not be called every millisecond and the caller should be prepared to wait a bit here.
  */
-- (void) updateDesktop 
+- (void)updateDesktop 
 {
 	if (mDesktopId < 0)
-		return;
-  
-	// get connection
-	CGSConnection oConnection = _CGSDefaultConnection();
-	OSStatus oResult;
-  
-	int							iNumberOfWindows			= 0;
-	NSMutableData*	oWindows							= nil;
-	BOOL						didChangeWindows			= NO;
-	BOOL						didChangeApplications = NO;
-  
-	// first we have to query for the number of windows in our workspace
-	oResult = CGSGetWorkspaceWindowCount(oConnection, mDesktopId, &iNumberOfWindows);
-	if (oResult) {
-		ZNLog( @"[Desktop %i] CGSGetWorkspaceWindowCount failed [%i]", mDesktopId, oResult);
+	{
 		return;
 	}
-  
-	// if the number of desktops is 0, we will skip fetching windows
-	if (iNumberOfWindows > 0)
-  {
-		// query the list of windows in our workspace
-		oWindows  = [NSMutableData dataWithCapacity: iNumberOfWindows * sizeof(int)];
-		oResult   = CGSGetWorkspaceWindowList(oConnection, mDesktopId, iNumberOfWindows, [oWindows mutableBytes], &iNumberOfWindows);
-		if (oResult) 
-    {
-			ZNLog( @"[Desktop %i] CGSGetWorkspaceWindowList failed [%i]", mDesktopId, oResult);
-			return;
-		}
-	}
-	
-  
+	ZNLog(@"Starting");
 	// Copy the current list of windows for cross checking
-	NSMutableArray* previousWindows = [NSMutableArray arrayWithArray: [self windows]];
-  
-	int i									= 0;
-	int currentListIndex	= 0;
-  
-	// Now we can start synchronizing. We will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
-	for ( i = 0; i < iNumberOfWindows; i++ ) {
-		// get entry from list of fetched windows
-		CGSWindow iWindowId = ((int*)[oWindows mutableBytes])[i];
-    
-		// get the window proxy
-		PNWindow* window = [PNWindow windowWithWindowId: iWindowId];
-    
-    if (window == nil)
-      continue;
-    
-		// ignore menus, and windows that are marked special
-    if (([window level] == NSPopUpMenuWindowLevel)  ||
-				([window level] == NSSubmenuWindowLevel)    ||
-				([window level] == NSMainMenuWindowLevel)   ||
-        [window isSpecial]) {
-			continue;
-		}
-        
-		// get application container
-		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [window ownerPid]]];    
-		
-		// if the application container does not contain a reference to the application, create a new one
-		if (application == nil) {
-			didChangeApplications = YES;
-      
-			application = [[PNApplication alloc] initWithPid: [window ownerPid] onDesktop: self];
-      
-      if (application != nil)
-      {
-        // and attach
-        [self attachApplication: application];
-      }
-    }
-    
-    // If it is a utility palette, we should make it sticky, so palettes don't get lost across desktops
-    if (([window level] == kCGUtilityWindowLevelKey) ||
-        ([window level] == kCGBackstopMenuLevelKey) ||
-        ([window level] == kCGFloatingWindowLevelKey))
-    {
-      [window setSticky: YES];
-    }
-        
-		// check if the window is in our list and add it if it isn't
-		if ([mWindows containsObject: window] == NO) {
-			// add the window to the list of known windows and mark ourselves as dirty
-			didChangeWindows = YES;
-			[mWindows insertObject: window atIndex: currentListIndex];
-		}
-		else {
-			// we already knew about this window, and it apparently still exists, so we will remove it from the list of previous windows
-			[previousWindows removeObject: window];
-      
-			// and check if the position of the window changed
-			if (currentListIndex != [mWindows indexOfObject: window])
-			{
-				didChangeWindows = YES;
-        
-				// now we move the window to the new index
-				[mWindows removeObject: window];
-				[mWindows insertObject: window atIndex: currentListIndex];
-			}
-		}
-    
-    // Bind the window to it's parent application
-    [application bindWindow: window];
-    
-		// increment the list index
-		currentListIndex++;
-	}
-  
+	NSMutableArray* previousWindows = [[NSMutableArray alloc] initWithArray: [self windows]];
+	
+	[previousWindows removeObjectsInArray: [self nonExistentWindowsAfterSyncing]];
+	ZNLog(@"Removed dead windows");
+	
 	// now handle sticky windows, this will only change the window list, if we are not the active desktop
-	NSArray*        stickyWindowsCopy = [NSArray arrayWithArray: [[PNStickyWindowCollection stickyWindowCollection] windows]];
-  NSEnumerator*		stickyIter				= [stickyWindowsCopy objectEnumerator];
-	PNWindow*				stickyWindow			= nil;
-  
-	while (stickyWindow = [stickyIter nextObject]) {
+	PNStickyWindowCollection *stickyWindowCollection = [PNStickyWindowCollection stickyWindowCollection];
+	NSArray *stickyWindowsCopy = [stickyWindowCollection windows];
+	NSEnumerator *stickyIter = [stickyWindowsCopy objectEnumerator];
+	PNWindow *stickyWindow = nil;
+	
+	ZNLog(@"Created variables");
+	
+	while (stickyWindow = [stickyIter nextObject])
+	{
 		// we take the chance and remove all the sticky windows that are no longer valid
 		if ([stickyWindow isValid] == NO)
 		{
 			// remove from the sticky window list as this window seems to be gone
-			[[PNStickyWindowCollection stickyWindowCollection] delWindow: stickyWindow];
+			[stickyWindowCollection delWindow: stickyWindow];
+			ZNLog(@"Deleted window from sticky window collection");
 			// and also remove it from the application list if necessary
-			PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [stickyWindow ownerPid]]];
-			if (application != nil) {
-				if ([application isValid] == YES)
-					[application unbindWindow: stickyWindow];
-				else {
-					didChangeApplications = YES;
-					// detach application
-					[self detachApplication: application];
-				}
+			PNApplication* application = [self applicationForWindow: stickyWindow];
+			ZNLog(@"Got application for window");
+			
+			if ([application isValid] == YES)
+			{
+				[application unbindWindow: stickyWindow];
+				ZNLog(@"Unbound window");
+			}
+			else
+			{
+				[self detachApplication: application];
+				ZNLog(@"Detached application");
 			}
       
-			if ([previousWindows containsObject: stickyWindow] == NO) {
-				// and post notification that the window was removed
+			if ([previousWindows containsObject: stickyWindow] == NO)
+			{
 				[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowRemoved object: stickyWindow];
+				ZNLog(@"Posted notification");
 			}
 		}
 		else
 		{
 			// remove from previous list if it is there
 			[previousWindows removeObject: stickyWindow];
+			ZNLog(@"Removed window from dead windows");
       
-			if (([stickyWindow isSpecial] == NO) && ([mWindows containsObject: stickyWindow] == NO)) {
-				didChangeWindows = YES;
+			if (([stickyWindow isSpecial] == NO) && ([mWindows containsObject: stickyWindow] == NO))
+			{
 				[mWindows addObject: stickyWindow];
+				ZNLog(@"Added window to array");
         
-				PNApplication*	application = [mApplications objectForKey: [NSNumber numberWithInt: [stickyWindow ownerPid]]];
+				PNApplication *application = [self applicationForWindow: stickyWindow];
+				ZNLog(@"Got application for window");
 				// if the application container does not contain a reference to the application, create a new one
-				if (application == nil) {
-					didChangeApplications = YES;
-          
-					application = [[PNApplication alloc] initWithPid: [stickyWindow ownerPid] onDesktop: self];
-					// and attach application
-					[self attachApplication: application];
-					// safe to release it now
-					[application release];
-				}        
+		
+				[self attachApplication: application];
+				ZNLog(@"Attached application");
 				[application bindWindow: stickyWindow];
+				ZNLog(@"Bound window");
 			}
 		}
 	}
   
-	// All windows that are still left in the copied window list were not touched by the loop above and are no longer on the desktop, so we will remove them from the list of windows
-	NSEnumerator*		previousWindowsIter = [previousWindows objectEnumerator];
-	PNWindow*				checkWindow = nil;
-  
-	while (checkWindow = [previousWindowsIter nextObject]) {
-		// remove…
-		didChangeWindows = YES;
-    
-		[mWindows removeObject: checkWindow];
-    
-		// handle application windows
-		PNApplication* application = [mApplications objectForKey: [NSNumber numberWithInt: [checkWindow ownerPid]]];
-		if (application != nil) {
-			// check if the application is still valid
-			if ([application isValid]) {
-				[application unbindWindow: checkWindow];
-				// check if there are still windows contained in the application wrappers and
-				// remove the application if there are none...
-				if ([[application windows] count] == 0) {
-					didChangeApplications = YES;
-					[self detachApplication: application];
-				}
-			}
-			else {
-				didChangeApplications = YES;
-				[self detachApplication: application];
-			}
-		}
-    
-		// and post notification that the window was removed
-		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowRemoved object: checkWindow];
-	}
-  
+	[self removeWindows: previousWindows];
+	ZNLog(@"Removed dead windows");
+	
+	ZNLog(@"Ending");
 	// clear the list of previous windows
-	[previousWindows removeAllObjects];
-  
-	// now post KVO notification
-	if (didChangeWindows == YES) {
-		// should not get performance issues as i doubt someone will have 1000 windows
-		// open on his desktop. so we just post notification for whole array
-		[self willChangeValueForKey: @"windows"];
-		[self didChangeValueForKey: @"windows"];
-	}
-	if (didChangeApplications == YES) {
-		[self willChangeValueForKey: @"applications"];
-		[self didChangeValueForKey: @"applications"];
-	}
+	[previousWindows release];
 }
 
 
@@ -753,34 +794,35 @@
 @implementation PNDesktop (ApplicationList)
 - (void) detachApplication: (PNApplication*) application 
 {
-	if (application == nil)
+	if (application == nil || [application path] == nil)
+	{
 		return;
-	if ([application path] == nil)
-		return;
+	}
   
-	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-		application, PNApplicationInstanceParam,
-		self, PNApplicationDesktopParam,
-		nil];
+	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
   
 	[mApplications removeObjectForKey: [NSNumber numberWithInt: [application pid]]];
   
 	// and post notification
+	[self willChangeValueForKey: @"applications"];
+	[self didChangeValueForKey: @"applications"];
 	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasRemoved object: [application path] userInfo: userInfo];
 }
 
 - (void) attachApplication: (PNApplication*) application 
 {
-	if (application == nil)
+	if (application == nil || [application path] == nil)
+	{
 		return;
-	if ([application path] == nil)
-		return;
-  
+	}
+	
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
   
 	[mApplications setObject: application forKey: [NSNumber numberWithInt: [application pid]]];
 	
 	// and post notification
+	[self willChangeValueForKey: @"applications"];
+	[self didChangeValueForKey: @"applications"];
 	[[NSNotificationCenter defaultCenter] postNotificationName: PNApplicationWasAdded object: [application path] userInfo: userInfo];
 }
 

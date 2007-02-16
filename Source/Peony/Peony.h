@@ -8,7 +8,7 @@
 //  See COPYING for licensing details
 //  
 
-/*!
+/**
     @header     Peony
     @abstract   Convenience header to import all related Peony components that contribute to the overall framework
     @discussion This is a convenience header to import all related Peony components that contribute to the overall framework.
@@ -17,6 +17,7 @@
 #import "PNNotifications.h" 
 #import "PNDesktopItem.h" 
 #import "PNWindow.h"
-#import "PNWindowList.h" 
+#import "PNWindowList.h"
+#import "PNWindowPool.h"
 #import "PNApplication.h" 
 #import "PNDesktop.h"

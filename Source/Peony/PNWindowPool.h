@@ -18,14 +18,14 @@
  */
 @interface PNWindowPool : NSObject 
 {
-	NSMutableDictionary*	mWindows;
+	NSMutableDictionary*	_windowDict;
 }
 
 /*! @method   sharedWindowPool
     @abstract Creates (if necessary) and returns a shared instance of the current class.  
     @result   Returns the newly initialized (if necessary) PNWindowPool object or nil on error.
 */
-+ (id) sharedWindowPool;
++ (PNWindowPool*) sharedWindowPool;
 
 /*! @method   windowWithId:   
     @abstract Creates (if necessary) and returns the PNWindow instance with the window identifier specified.  

@@ -289,7 +289,7 @@
 		EA7A66F30A8703C1000D6B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659A0A870299000D6B5E /* Cocoa.framework */; };
 		EA7A66F40A8703C1000D6B5E /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A659B0A870299000D6B5E /* PreferencePanes.framework */; };
 		EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A68860A870570000D6B5E /* CoreFoundation.framework */; };
-		EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */; };
+		EA7A68890A870586000D6B5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A68880A870586000D6B5E /* libz.dylib */; };
 		EA7A69720A870848000D6B5E /* libUniMotion.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A55700A86A668000D6B5E /* libUniMotion.dylib */; };
 		EA7A69780A870874000D6B5E /* Peony.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A59560A86B4D3000D6B5E /* Peony.framework */; };
 		EA7A697B0A870874000D6B5E /* Zen.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A58F80A86B076000D6B5E /* Zen.framework */; };
@@ -1298,7 +1298,7 @@
 		EA7A659D0A870299000D6B5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		EA7A670C0A87043B000D6B5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		EA7A68860A870570000D6B5E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
+		EA7A68880A870586000D6B5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
 		EA7A6AB00A8709C2000D6B5E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA7D76960A918A5500D36F0E /* VTAssignedTriggerArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAssignedTriggerArrayController.h; sourceTree = "<group>"; };
 		EA7D76970A918A5500D36F0E /* VTAssignedTriggerArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAssignedTriggerArrayController.m; sourceTree = "<group>"; };
@@ -1620,7 +1620,7 @@
 				EA7A65A30A870299000D6B5E /* Security.framework in Frameworks */,
 				EA7A65A40A870299000D6B5E /* WebKit.framework in Frameworks */,
 				EA7A68870A870570000D6B5E /* CoreFoundation.framework in Frameworks */,
-				EA7A68890A870586000D6B5E /* libz.1.2.3.dylib in Frameworks */,
+				EA7A68890A870586000D6B5E /* libz.dylib in Frameworks */,
 				EA36CD890A9C4F6B0081417B /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2525,7 +2525,7 @@
 				EAB6F4EA0A9DE83200B9B0E8 /* CoreGraphics.framework */,
 				EA36CCE90A9C4F6B0081417B /* IOKit.framework */,
 				EA94B9710A9456A000647E8E /* NetInfo.framework */,
-				EA7A68880A870586000D6B5E /* libz.1.2.3.dylib */,
+				EA7A68880A870586000D6B5E /* libz.dylib */,
 				EA7A68860A870570000D6B5E /* CoreFoundation.framework */,
 				EA7A670C0A87043B000D6B5E /* Foundation.framework */,
 				EA7A65970A870299000D6B5E /* AppKit.framework */,
