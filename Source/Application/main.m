@@ -16,11 +16,13 @@
 #import <sys/param.h>
 
 int main(int argc, char *argv[]) {
-  char *val_buf, path_buf[MAXPATHLEN];
-
-  val_buf = getenv("HOME");
-  sprintf(path_buf,"%s/Library/Logs/VirtueDesktops.log",val_buf);
-  freopen(path_buf,"a",stderr);
+  id pool = [NSAutoreleasePool new];
+  
+  NSString *applicationName = [NSString stringWithFormat: @"Library/Logs/%@.log", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]]; 
+  NSString *logPath = [NSHomeDirectory() stringByAppendingPathComponent: applicationName];
+	freopen([logPath fileSystemRepresentation], "a", stderr);
+  
+  [pool release];
   
   return NSApplicationMain(argc,  (const char **) argv);
 }
