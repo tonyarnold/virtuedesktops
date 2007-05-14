@@ -1275,7 +1275,7 @@
 		EA7A63950A86FDC3000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPluginPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63960A86FDC3000D6B5E /* VTPluginPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPluginPreferencesController.h; sourceTree = "<group>"; };
 		EA7A63970A86FDC3000D6B5E /* VTPluginPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPluginPreferencesController.m; sourceTree = "<group>"; };
-		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VirtueDesktops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A63F80A86FF08000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/Operations.nib; sourceTree = SOURCE_ROOT; };
 		EA7A63FB0A86FF15000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTPreferences.nib; sourceTree = SOURCE_ROOT; };
 		EA7A64020A86FF23000D6B5E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Localisation/en.lproj/VTApplicationInspector.nib; sourceTree = SOURCE_ROOT; };
@@ -2911,8 +2911,8 @@
 				EA5E5FD10B64F6FD004A1C6D /* ShellScript */,
 				EA7A63DC0A86FE65000D6B5E /* Resources */,
 				EA7A63DD0A86FE65000D6B5E /* Sources */,
-				EA7A696D0A870826000D6B5E /* Copy Frameworks */,
 				EA7A63DE0A86FE65000D6B5E /* Frameworks */,
+				EA7A696D0A870826000D6B5E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
