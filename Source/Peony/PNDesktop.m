@@ -461,7 +461,7 @@
 	// query the list of windows in our workspace
 	windows = [NSMutableData dataWithCapacity: index * sizeof(int)];
 	ZNLog(@"Created windows variable");
-	result = CGSGetWorkspaceWindowList(connection, mDesktopId, index, [windows mutableBytes], &retrieved);
+	result = CGSGetWorkspaceWindowList(connection, mDesktopId, index, [windows mutableBytes], (int*)&retrieved);
 	ZNLog(@"Queried workspace for list of windows");
 	if (result) 
 	{
@@ -471,69 +471,30 @@
 	return windows;
 }
 
-- (NSArray*)nonExistentWindowsAfterSyncing
+- (void)addWindows:(NSArray*)windows
 {
 	ZNLog(@"Starting");
-	NSMutableArray *deadWindows = [NSMutableArray array];
-	NSData* windows = nil;
+
+	NSEnumerator *windowsEnumerator = [windows objectEnumerator];
+	PNWindow *window = nil;
 	
-	int numberOfWindows = [self numberOfWindows];
-	ZNLog(@"Got number of windows");
-	int currentListIndex	 = 0;
-	int i = 0;
-	
-	// if the number of desktops is 0, we will skip fetching windows
-	if (numberOfWindows > 0)
+	ZNLog(@"Going to loop over windows to add");
+	while (window = [windowsEnumerator nextObject])
 	{
-		windows = [self windowsInWorkspaceUptoIndex: numberOfWindows numberRetrieved: &numberOfWindows];
-		ZNLog(@"Got list of windows");
+		[mWindows addObject:window];
+		ZNLog(@"Window added in array");
+		
+		PNApplication *application = [self applicationForWindow:window];
+		ZNLog(@"Got application for window");
+		if ([application isValid])
+		{
+			[application bindWindow:window];
+			[self attachApplication:application];
+			ZNLog(@"Bound window");
+		}
 	}
 	
-	int *windowIds = [windows bytes];
-	ZNLog(@"Created window IDs");
-	// Now we can start synchronizing. We will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
-	ZNLog(@"Going to loop over windows");
-	for ( i = 0; i < numberOfWindows; i++ )
-	{
-		// get entry from list of fetched windows
-		CGSWindow windowId = windowIds[i];
-		// get the window proxy
-		PNWindow* window = [PNWindow windowWithWindowId: windowId];
-		ZNLog(@"Created window");
-		
-		// ignore menus, and windows that are marked special
-		if (window == nil || [window isMenu] || [window isSpecial])
-		{
-			continue;
-		}
-		// If it is a utility palette, we should make it sticky, so palettes don't get lost across desktops
-		if ([window isPalette])
-		{
-			[window setSticky: YES];
-			ZNLog(@"Set window to be sticky");
-		}
-		
-		// get application container
-		[[self applicationForWindow: window] bindWindow: window];
-		ZNLog(@"Bound window to application");
-        
-		// check if the window is in our list and add it if it isn't
-		if ([mWindows containsObject: window] == NO)
-		{
-			// add the window to the list of known windows and mark ourselves as dirty
-			[mWindows insertObject: window atIndex: currentListIndex];
-			ZNLog(@"Inserted window in window array");
-		}
-		else
-		{
-			// we already knew about this window, and it apparently still exists, so we will remove it from the list of previous windows
-			[deadWindows addObject: window];
-			ZNLog(@"Window will be considered dead");
-		}
-		currentListIndex++;
-	}
-	ZNLog(@"Ending");
-	return deadWindows;
+	ZNLog(@"Ended");
 }
 
 - (void)removeWindows:(NSArray*)windows
@@ -577,6 +538,64 @@
 	ZNLog(@"Ended");
 }
 
+- (void)nonExistentWindowsAfterSyncing:(NSMutableArray*)newWindows withExistentWindows:(NSMutableArray*)oldWindows
+{
+	ZNLog(@"Starting");
+	NSData* windows = nil;
+	
+	int numberOfWindows = [self numberOfWindows];
+	ZNLog(@"Got number of windows");
+	int i = 0;
+	
+	// if the number of desktops is 0, we will skip fetching windows
+	if (numberOfWindows == 0)
+	{
+		ZNLog(@"No window to treat");
+		return;
+	}
+	
+	windows = [self windowsInWorkspaceUptoIndex: numberOfWindows numberRetrieved: &numberOfWindows];
+	ZNLog(@"Got list of windows");
+	
+	int *windowIds = (int*)[windows bytes];
+	ZNLog(@"Created window IDs");
+	// Now we can start synchronizing. We will iterate over all windows and check if we already know about them. If we find a window we do not know, we will add it. we will also remove windows we found from the copy.
+	ZNLog(@"Going to loop over windows");
+	for ( i = 0; i < numberOfWindows; i++ )
+	{
+		// get entry from list of fetched windows
+		CGSWindow windowId = windowIds[i];
+		
+		// get the window proxy
+		PNWindow* window = [PNWindow windowWithWindowId: windowId];		
+		// ignore menus, and windows that are marked special
+		if (window == nil || [window isMenu] || [window isSpecial])
+		{
+			continue;
+		}
+
+		// If it is a utility palette, we should make it sticky, so palettes don't get lost across desktops
+		if ([window isPalette])
+		{
+			[window setSticky: YES];
+			ZNLog(@"Set window to be sticky");
+		}
+			
+		if ([mWindows containsObject:window] == NO)
+		{
+			[newWindows addObject: window];
+			ZNLog(@"Inserted window in new window array");			
+		}
+		else
+		{
+			// we already knew about this window, and it apparently still exists, so we will remove it from the list of previous windows
+			[oldWindows addObject: window];
+			ZNLog(@"Window will be considered dead");
+		}
+	}
+	ZNLog(@"Ending");
+}
+
 /*!
   @method     updateDesktop
   @abstract   Clear the list of windows and fetch all windows in the workspace
@@ -591,45 +610,31 @@
 		return;
 	}
 	ZNLog(@"Starting");
+	
 	// Copy the current list of windows for cross checking
 	NSMutableArray* previousWindows = [[NSMutableArray alloc] initWithArray: [self windows]];
+	NSMutableArray* newWindows		= [[NSMutableArray alloc] init];
+	NSMutableArray* oldWindows		= [[NSMutableArray alloc] init];
 	
-	[previousWindows removeObjectsInArray: [self nonExistentWindowsAfterSyncing]];
-	ZNLog(@"Removed dead windows");
+	[self nonExistentWindowsAfterSyncing:newWindows withExistentWindows:oldWindows];
+	[previousWindows removeObjectsInArray:oldWindows];
+	ZNLog(@"Clean window list");
 	
 	// now handle sticky windows, this will only change the window list, if we are not the active desktop
 	PNStickyWindowCollection *stickyWindowCollection = [PNStickyWindowCollection stickyWindowCollection];
-	NSArray *stickyWindowsCopy = [stickyWindowCollection windows];
-	NSEnumerator *stickyIter = [stickyWindowsCopy objectEnumerator];
-	PNWindow *stickyWindow = nil;
-	
-	ZNLog(@"Created variables");
+	NSArray *stickyWindowsCopy						 = [stickyWindowCollection windows];
+	NSEnumerator *stickyIter						 = [stickyWindowsCopy objectEnumerator];
+	PNWindow *stickyWindow							 = nil;
 	
 	while (stickyWindow = [stickyIter nextObject])
 	{
 		// we take the chance and remove all the sticky windows that are no longer valid
-		if ([stickyWindow isValid] == NO)
+		if ([stickyWindow isValid])
 		{
-			// remove from the sticky window list as this window seems to be gone
 			[stickyWindowCollection delWindow: stickyWindow];
-			ZNLog(@"Deleted window from sticky window collection");
-			// and also remove it from the application list if necessary
-			PNApplication* application = [self applicationForWindow: stickyWindow];
-			ZNLog(@"Got application for window");
-			
-			if ([application isValid] == YES)
-			{
-				[application unbindWindow: stickyWindow];
-				ZNLog(@"Unbound window");
-			}
-			else
-			{
-				[self detachApplication: application];
-				ZNLog(@"Detached application");
-			}
-      
 			if ([previousWindows containsObject: stickyWindow] == NO)
 			{
+				[previousWindows addObject:stickyWindow];      
 				[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnWindowRemoved object: stickyWindow];
 				ZNLog(@"Posted notification");
 			}
@@ -640,29 +645,27 @@
 			[previousWindows removeObject: stickyWindow];
 			ZNLog(@"Removed window from dead windows");
       
-			if (([stickyWindow isSpecial] == NO) && ([mWindows containsObject: stickyWindow] == NO))
+			if (stickyWindow != nil && ([stickyWindow isSpecial] == NO) && ([mWindows containsObject: stickyWindow] == NO))
 			{
-				[mWindows addObject: stickyWindow];
-				ZNLog(@"Added window to array");
-        
-				PNApplication *application = [self applicationForWindow: stickyWindow];
-				ZNLog(@"Got application for window");
-				// if the application container does not contain a reference to the application, create a new one
-		
-				[self attachApplication: application];
-				ZNLog(@"Attached application");
-				[application bindWindow: stickyWindow];
-				ZNLog(@"Bound window");
+				[newWindows addObject:stickyWindow];
 			}
 		}
 	}
-  
+
+	[self willChangeValueForKey: @"windows"]; 
 	[self removeWindows: previousWindows];
 	ZNLog(@"Removed dead windows");
+	[self addWindows: newWindows];
+	ZNLog(@"Add new windows");
+	[self didChangeValueForKey: @"windows"]; 
+
 	
 	ZNLog(@"Ending");
+	
 	// clear the list of previous windows
 	[previousWindows release];
+	[newWindows release];
+	[oldWindows release];
 }
 
 

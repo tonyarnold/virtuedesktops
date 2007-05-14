@@ -43,8 +43,8 @@
 		mImage        = nil;
 		mSticky       = NO; 
 		mBindDesktop	= NO;
-    mUnfocused		= NO;
-    mBundlePath   = nil;
+		mUnfocused		= NO;
+		mBundlePath   = nil;
 				
 		// and register our interest in desktop collection changes 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillRemove:) name: VTDesktopWillRemoveNotification object: nil]; 
@@ -63,7 +63,7 @@
 		}
 		
 		ZEN_ASSIGN(mBundleId, bundleId);    
-    ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: mBundleId]);
+		ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: mBundleId]);
 		    
 		// and complete initialization by filling the application array 
 		[self createApplications];
@@ -108,8 +108,8 @@
 }
 
 - (void) dealloc {
-  ZEN_RELEASE(mBundleId);
-  ZEN_RELEASE(mBundlePath);
+	ZEN_RELEASE(mBundleId);
+	ZEN_RELEASE(mBundlePath);
 	ZEN_RELEASE(mApplications);
 	ZEN_RELEASE(mImage);
 	ZEN_RELEASE(mTitle);
@@ -118,7 +118,7 @@
 	// give up observer status 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
   
-  [super dealloc]; 
+	[super dealloc]; 
 }
 
 #pragma mark -
@@ -129,29 +129,29 @@
   
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
 	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
-  [dictionary setObject: [NSNumber numberWithBool: mUnfocused] forKey: kVtCodingUnfocused];
+	[dictionary setObject: [NSNumber numberWithBool: mUnfocused] forKey: kVtCodingUnfocused];
 	[dictionary setObject: [NSNumber numberWithBool: mBindDesktop] forKey: kVtCodingDesktopEnabled];
   
-  if (mBundleId)
-    [dictionary setObject: mBundleId forKey: kVtCodingBundleId];
+	if (mBundleId)
+		[dictionary setObject: mBundleId forKey: kVtCodingBundleId];
   
-  if (mTitle)
-    [dictionary setObject: mTitle forKey: kVtCodingBundleTitle];
+	if (mTitle)
+		[dictionary setObject: mTitle forKey: kVtCodingBundleTitle];
   
 	if (mDesktop)
 		[dictionary setObject: [mDesktop uuid] forKey: kVtCodingDesktop]; 
 }
 
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
-  // We use the path as the UID, so ensure precendence
-  mBundlePath   = [[dictionary objectForKey: kVtCodingBundlePath] retain];
+	// We use the path as the UID, so ensure precendence
+	mBundlePath   = [[dictionary objectForKey: kVtCodingBundlePath] retain];
 
 	// decode primitives 
-  mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
+	mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
 	mTitle        = [[dictionary objectForKey: kVtCodingBundleTitle] retain];
-  mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
+	mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
 	mHidden       = [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
-  mUnfocused		= [[dictionary objectForKey: kVtCodingUnfocused] boolValue];
+	mUnfocused		= [[dictionary objectForKey: kVtCodingUnfocused] boolValue];
 	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue]; 
 	
 	// try to read the desktop
@@ -267,8 +267,15 @@
 	return mBindDesktop; 
 }
 
-- (void) setBoundDesktop: (VTDesktop*) desktop {
+- (void) setBoundDesktop: (VTDesktop*) desktop
+{
+	if (mDesktop != nil) {
+		[mDesktop removeObserver:self forKeyPath:@"windows"];
+	}
 	ZEN_ASSIGN(mDesktop, desktop);
+	if (mDesktop != nil) {
+		[mDesktop addObserver:self forKeyPath:@"windows" options:NSKeyValueObservingOptionNew context:nil];
+	}
 	
 	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES) || (mUnfocused == YES))
 		return; 
@@ -418,7 +425,7 @@
 	// now apply attributes 
 	[application setSticky: mSticky]; 
 	[application setIsHidden: mHidden];
-  [application setIsUnfocused: mUnfocused];
+	[application setIsUnfocused: mUnfocused];
 	
 	// check if we should move this application to another desktop 
 	if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
@@ -435,9 +442,6 @@
 	
 	// ...and add 
 	[mApplications addObject: application]; 
-  
-	// We are now officially interested in changes of the windows of this application 
-	[application addObserver: self forKeyPath: @"windows" options: NSKeyValueObservingOptionNew context: NULL]; 
 }
 
 - (void) onApplicationDetached: (NSNotification*) notification {
@@ -451,8 +455,6 @@
 		return; 
 	}
 	
-	// remove observer status
-	[application removeObserver: self forKeyPath: @"windows"]; 
 	// remove it from our list 
 	[mApplications removeObjectAtIndex: index]; 
 	
@@ -526,11 +528,8 @@
 				// now apply attributes 
 				[application setSticky: mSticky]; 
 				[application setIsHidden: mHidden]; 
-        [application setIsUnfocused: mUnfocused];
-				
-				// plus we are now officially interested in changes of the windows of this application 
-				[application addObserver: self forKeyPath: @"windows" options: NSKeyValueObservingOptionNew context: NULL]; 
-				
+				[application setIsUnfocused: mUnfocused];
+								
 				// and skip to next desktop, as we expect only one application for a bundle per desktop 
 				break; 
 			}
@@ -545,8 +544,8 @@
 		
 		mPid = [application pid]; 
 		
-    ZEN_ASSIGN_COPY(mBundlePath, [application path]);
-    ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
+		ZEN_ASSIGN_COPY(mBundlePath, [application path]);
+		ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
 		ZEN_ASSIGN_COPY(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);
 				

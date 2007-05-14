@@ -41,10 +41,10 @@
  */
 - (id) initWithWindowId: (CGSWindow) windowId {
 	if (self = [super init]) {
-		mNativeWindow				= windowId;
-		mOwnerPid						= kPnWindowInvalidPid;
-		mIsSticky						= NO;
-		mIsSpecial					= NO;
+		mNativeWindow		= windowId;
+		mOwnerPid			= kPnWindowInvalidPid;
+		mIsSticky			= NO;
+		mIsSpecial			= NO;
 		mIsIgnoredByExpose	= NO;
 		return self;
 	}
@@ -264,8 +264,8 @@
 #pragma mark -
 - (int) level {
 	CGSConnection		oConnection = _CGSDefaultConnection();
-	OSStatus				oResult;
-	int							iLevel;
+	OSStatus			oResult;
+	int					iLevel;
   
 	oResult = CGSGetWindowLevel(oConnection, mNativeWindow, &iLevel);
 	if (oResult)
@@ -412,12 +412,12 @@
 	CGSConnection		oOwnerCID;
   
 	if (oResult = CGSGetWindowOwner(oConnection, mNativeWindow, &oOwnerCID)) {
-    ZNLog( @"PNWindow.m - [Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
+		ZNLog( @"PNWindow.m - [Window: %i] Failed getting window owner [Error: %i]", mNativeWindow, oResult);
 		return 0;
 	}
   
 	if (oResult = CGSConnectionGetPID(oOwnerCID, &mOwnerPid, oOwnerCID)) {
-    ZNLog( @"PNWindow.m - [Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
+		ZNLog( @"PNWindow.m - [Window: %i] Failed getting owner PID [Error: %i]", mNativeWindow, oResult);
 		mOwnerPid = kPnWindowInvalidPid;
 	}
   

@@ -19,7 +19,7 @@
 	static PNWindowPool* ms_INSTANCE = nil; 
 	
 	if (ms_INSTANCE == nil)
-  {
+    {
 		ms_INSTANCE = [[PNWindowPool alloc] init];  
 	}
   
@@ -50,13 +50,14 @@
 
 - (PNWindow*) windowWithId: (CGSWindow) windowId 
 {
-  // If the window is not present in the current pool, create a new instance with the specified ID and add it
-	if ([_windowDict objectForKey: [NSNumber numberWithInt: windowId]] == nil) 
-  {
-		[_windowDict setObject: [[PNWindow alloc] initWithWindowId: windowId] forKey: [NSNumber numberWithInt: windowId]];
-  }
+	NSNumber *number = [NSNumber numberWithInt: windowId];
+    // If the window is not present in the current pool, create a new instance with the specified ID and add it
+	if ([_windowDict objectForKey:number] == nil) 
+    {
+		[_windowDict setObject: [[PNWindow alloc] initWithWindowId: windowId] forKey:number];
+    }
     
-	return [_windowDict objectForKey: [NSNumber numberWithInt: windowId]]; 
+	return [_windowDict objectForKey:number]; 
 }
 
 #pragma mark -

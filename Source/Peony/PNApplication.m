@@ -115,13 +115,13 @@
 	}
 	
 	if (stickyState == YES) 
-  {
+	{
 		// post notification about the window becoming sticky 
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationStickied object: mWindows]; 
 	}
-  else
-  {
+	else
+	{
 		// post notification about the window being no longer sticky 
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnApplicationUnstickied object: mWindows];		
@@ -179,8 +179,8 @@
 - (void) setDesktop: (PNDesktop*) desktop {
 	// We will not modify the desktop we belong to but will just move all the windows we know about to the passed desktop, a new application instance will be created there...
 	NSMutableArray* windowsForSwitching = [[NSMutableArray alloc] init];
-	NSEnumerator*   windowIter					= [mWindows objectEnumerator];
-	PNWindow*       window							= nil;
+	NSEnumerator*   windowIter			= [mWindows objectEnumerator];
+	PNWindow*       window				= nil;
   
 	       
 	while (window = [windowIter nextObject]) {
@@ -190,14 +190,14 @@
   
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
 	[mWindowList setDesktop: desktop];
-  if (mDesktop)
-    [mDesktop release];
+	if (mDesktop)
+		[mDesktop release];
   
-  mDesktop = [desktop retain];
-  [mWindowList release];
+	mDesktop = [desktop retain];
+	[mWindowList release];
   
-  if (windowsForSwitching)
-    [windowsForSwitching release];
+	if (windowsForSwitching)
+		[windowsForSwitching release];
 }
 
 #pragma mark -
@@ -302,7 +302,7 @@
 {
 	// check if we already know about this window, and if we do, return 
 	if ([mWindows containsObject: window])
-		return; 
+		return;
 	
 	[self willChangeValueForKey: @"windows"]; 
 	

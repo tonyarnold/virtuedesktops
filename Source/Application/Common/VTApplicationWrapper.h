@@ -28,8 +28,8 @@
 	BOOL        mSticky; 
 	BOOL        mHidden; 
 	BOOL        mBindDesktop;
-  BOOL        mUnfocused;
-  BOOL        mLaunching;
+	BOOL        mUnfocused;
+	BOOL        mLaunching;
 	
 	NSMutableArray*	mApplications; 
 }
@@ -65,8 +65,7 @@
 #pragma mark -
 - (NSImage*) icon; 
 - (NSArray*) windows; 
-- (NSString*) title;
-
+		
 #pragma mark -
 - (pid_t) processIdentifier;
 - (BOOL) isRunning;
