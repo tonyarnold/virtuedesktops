@@ -28,7 +28,9 @@
 
 - (BOOL)growlIsUsable
 {
-  return (Growl_IsInstalled() == YES && Growl_IsRunning() == YES);
+  return YES;
+  // This was crashing
+  // return (Growl_IsInstalled() == YES && Growl_IsRunning() == YES);
 }
 
 @end 

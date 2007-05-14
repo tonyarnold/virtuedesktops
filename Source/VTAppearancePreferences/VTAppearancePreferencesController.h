@@ -17,6 +17,4 @@
 @interface VTAppearancePreferencesController : NSPreferencePane {
 }
 
-- (BOOL)growlIsUsable;
-
 @end
