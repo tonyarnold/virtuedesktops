@@ -79,23 +79,23 @@
 
 - (void) onDesktopDidActivate: (NSNotification*) aNotification
 {
-  // Ensure that our window will actually show up given that we're switching sticky windows off after the switch
-  [mWindows setDesktop: (PNDesktop*)[aNotification object]];
-  
+	// Ensure that our window will actually show up given that we're switching sticky windows off after the switch
+	[mWindows setDesktop: (PNDesktop*)[aNotification object]];
+	
 	// unsticky all windows to have them show up in the window lists returned by the CGSGetWorkspaceWindowList functions (is this intended behaviour or a bug in that function?)
-  [mWindows setSticky: NO];
+	[mWindows setSticky: NO];
 }
 
 - (void) onWindowStickied: (NSNotification*) aNotification
 {
 	// fetch the window that was just stickied and add it to our list 
-	[mWindows addWindow: [aNotification object]]; 
+	[self addWindow: [aNotification object]]; 
 }
 
 - (void) onWindowUnstickied: (NSNotification*) aNotification
 {
 	// fetch the window that was just unstickied and remove it from our list
-	[mWindows delWindow: [aNotification object]]; 
+	[self delWindow: [aNotification object]]; 
 }
 
 - (void) onApplicationStickied: (NSNotification*) aNotification

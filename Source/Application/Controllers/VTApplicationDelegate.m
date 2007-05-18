@@ -579,25 +579,18 @@ enum
 - (void) moveFrontApplicationInDirection: (VTDirection) direction {
 	VTDesktop* moveToDesktop = [[VTDesktopController sharedInstance] getDesktopInDirection: direction];
 	VTDesktop* activeDesktop = [[VTDesktopController sharedInstance] activeDesktop];
-	NSEnumerator* applicationIter = [[activeDesktop applications] objectEnumerator];
-	PNApplication* application    = nil;
 	
 	ProcessSerialNumber activePSN;
 	OSErr result = GetFrontProcess(&activePSN);
-	
-	while (application = [applicationIter nextObject]) {
-		ProcessSerialNumber currentPSN = [application psn];
-		Boolean same;
-		
-		result = SameProcess(&activePSN, &currentPSN, &same);
-		if (same == TRUE) {
-			[application setDesktop: moveToDesktop];
-			[[[VTDesktopController sharedInstance] activeDesktop] updateDesktop];
-			[moveToDesktop updateDesktop];
-			[[VTDesktopController sharedInstance] activateDesktop: moveToDesktop];
-			result = SetFrontProcess(&currentPSN);
-			return;
-		}
+	PNApplication* application    = [activeDesktop applicationForPSN: activePSN];
+
+	if (application != nil) {
+		[application setDesktop: moveToDesktop];
+		[[[VTDesktopController sharedInstance] activeDesktop] updateDesktop];
+		[moveToDesktop updateDesktop];
+		[[VTDesktopController sharedInstance] activateDesktop: moveToDesktop];
+		result = SetFrontProcess(&activePSN);
+		return;
 	}
 }
 

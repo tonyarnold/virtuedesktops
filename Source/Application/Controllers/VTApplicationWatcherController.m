@@ -12,6 +12,8 @@
 *****************************************************************************/ 
 
 #import "VTApplicationWatcherController.h"
+#import "VTApplicationController.h"
+#import "VTApplicationWrapper.h"
 #import "VTPreferenceKeys.h" 
 #import "VTDesktopController.h"
 #import "VTPreferences.h"
@@ -34,9 +36,9 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	if (self = [super init]) {
 		// register for notifications of application focus changes  
 		[[NSNotificationCenter defaultCenter] addObserver:self 
-																						 selector:@selector(onApplicationDidActivate:) 
-																								 name: kPnApplicationDidActive 
-																							 object: nil]; 
+											     selector:@selector(onApplicationDidActivate:) 
+													 name:kPnApplicationDidActive 
+												   object:nil]; 
 		
 		
 		[self setupAppChangeNotification];
@@ -102,7 +104,48 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
  * - We currently disable switches to the Finder process (com.apple.finder) except in cases where they were triggered by a modifier key switch, thus forced by the user. 
  * 
  */
-- (void) onApplicationDidActivate: (NSNotification*) notification {
+- (void) onApplicationDidActivate: (NSNotification*) notification
+{
+    Boolean same;
+    ProcessSerialNumber oldPSN = mActivatedPSN;
+
+	// If a new window has appeared and the applicatioin is bound on a desktop, we have to make sure the new window is on the good desktop
+	// get psn 
+	OSErr result; 
+	result = GetFrontProcess(&mActivatedPSN);
+	if (result) {
+		ZNLog( @"Error fetching PSN of application"); 
+		return;
+	}
+    
+    result = SameProcess(&oldPSN, &mActivatedPSN, &same);
+    if (result) {
+        same = FALSE;
+    }
+	
+	// Update the desktop to be sure the new window has been registered before looking for its application.
+    VTApplicationWrapper *wrapper = [[VTApplicationController sharedInstance] applicationForPSN:&mActivatedPSN];
+	VTDesktop* desktop = [[VTDesktopController sharedInstance] activeDesktop];
+	[desktop updateDesktop];
+    
+    // The previous application has been hidden or terminated, activate the next application
+    if ([desktop applicationForPSN:oldPSN] == nil && [desktop activateTopApplication]) {
+        return;
+    }
+	
+	// Is the application of this window bound to a desktop ?
+	PNApplication*  application = [desktop applicationForPSN: mActivatedPSN];
+	PNDesktop*     appliDesktop = [wrapper boundDesktop];
+	if (application != nil && appliDesktop != nil) {
+		if ([appliDesktop identifier] != [desktop identifier] && ![application isSticky]) {
+			[application setDesktop:appliDesktop];
+            [appliDesktop setActiveApplication:application];
+		} else {
+            [desktop setActiveApplication:application];
+			return; // The desktop of the current application is the active desktop... do nothing
+		}
+	}
+	
 	// first of all we check preferences, as this can save us some work here 
 	if ([[NSUserDefaults standardUserDefaults] boolForKey: VTDesktopFollowsApplicationFocus] == NO)
 		return; 
@@ -125,80 +168,62 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 			return; 
 	}
 	
-	// get psn 
-	OSErr result; 
-	
-	result = GetFrontProcess(&mActivatedPSN);
-	if (result) {
-		ZNLog( @"Error fetching PSN of application"); 
-		return;
-	}
-	
 	// as a dirty workaround, we will disable switches to the finder, except a modifier was used 
 	if (neededModifiers == 0) {
-		Boolean same; 
-		
 		// if this is the Finder, we abort here 
 		result = SameProcess(&mActivatedPSN, &mFinderPSN, &same); 
 		if (result)
 			ZNLog( @"Error comparing PSN of applications"); 
 				
 		if (same == TRUE)
-			return; 
+			return;
 		
 		// if this is VirtueDesktops itself, we also abort here 
 		// @TODO: Move ignore list out of here 
 		result = SameProcess(&mActivatedPSN, &mPSN, &same); 
 		
 		if (same == TRUE)
-			return; 
+			return;
 	}
 	
-	// we will now walk all desktops to fetch their applications and build up an array so we can then decide where to switch to 
-	NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
-	VTDesktop*		desktop		= nil; 
-	NSMutableArray*	desktops	= [NSMutableArray array]; 
+	// If we know where the application is, so this is useless to iterate through all desktops.
+	if (appliDesktop == nil) {
+		// we will now walk all desktops to fetch their applications and build up an array so we can then decide where to switch to 
+		NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	
-	while (desktop = [desktopIter nextObject]) {
-		// fetch all applications 
-		NSEnumerator*	applicationIter	= [[desktop applications] objectEnumerator]; 
-		PNApplication*	application		= nil; 
+		while (desktop = [desktopIter nextObject]) {
+			application	= [desktop applicationForPSN:mActivatedPSN]; 
 		
-		while (application = [applicationIter nextObject]) {
-			// now fetch the owner psn and compare with the passed one for a match
-			Boolean				same; 
-			ProcessSerialNumber currentPsn = [application psn]; 
-			
-			SameProcess(&currentPsn, &mActivatedPSN, &same); 
-			
-			// got it...
-			if (same == TRUE) {
+			if (application != nil) {
 				// check if this is the current desktop, and if it is, we will abort immediately
 				if ([[[VTDesktopController sharedInstance] activeDesktop] isEqual: desktop])
 					return; 
         
-        // Don't want to switch on new window, just like finder
-        if (neededModifiers == 0 && [application isUnfocused])
-          return;
-				
-				[desktops addObject: desktop]; 
+				// Don't want to switch on new window, just like finder
+				if (neededModifiers == 0 && [application isUnfocused])
+					return;
+			
+				appliDesktop = desktop;
+				break;
 			}
+            application = nil;
 		}
+        
+        if (appliDesktop == nil) {
+            if (wrapper != nil) {
+                appliDesktop = [wrapper boundDesktop];
+            }
+        }
 	}
 	
-	// if we did not find any desktops, something went wrong, so just ignore 
-	if ([desktops count] == 0)
-		return; 
-	
-	// now check if we got more than one and do not switch if we did 
-	if ([desktops count] > 1)
-		return; 
-
 	// set marker 
 	mFocusTriggeredSwitch = YES; 
 	
 	// switch... 
-	[[VTDesktopController sharedInstance] activateDesktop: [desktops objectAtIndex: 0]]; 
+    if (application != nil) {
+        [appliDesktop setActiveApplication:application];
+    }
+	[[VTDesktopController sharedInstance] activateDesktop: (VTDesktop*)appliDesktop];
 }
 
 - (void) onApplicationWillLaunch: (NSNotification*) notification {
@@ -212,7 +237,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 - (void) onDesktopDidChange: (NSNotification*) notification {
 	// If the switch was triggered via activation, give the activated process front process status and abort 
 	if (mFocusTriggeredSwitch) 
-  {
+    {
 		mFocusTriggeredSwitch = NO;
 		SetFrontProcess(&mActivatedPSN); 
 		
@@ -223,67 +248,10 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 
 	
 	// check if the new desktop has any applications, and if it does not, change to the finder process 
-	VTDesktop*			desktop							= [notification object];
-	PNApplication*	firstNonHiddenApp   = nil; 
-	NSArray*				applications				= [desktop applications]; 
-	int							applicationCount		= [applications count]; 
-	int							i										= 0; 
-	int							realCount						= 0; 
-	
-	// count non-hidden applications and remember the first non-hidden application we encounter for later use 
-	for (i=0; i<applicationCount; i++) {
-		if ([[applications objectAtIndex: i] isHidden] == NO) {
-			realCount++; 
-			
-			if (firstNonHiddenApp == nil)
-				firstNonHiddenApp = [[applications objectAtIndex: i] retain]; 
-		}
-	}
-	
-	// more than one application means, we have at least one application but the finder active, so lets return 
-	if (realCount <= 1) {
-		if ((realCount > 0) && (firstNonHiddenApp)) {
-			// we now have to check if the one non-application is the finder 
-			ProcessSerialNumber applicationPSN = [firstNonHiddenApp psn]; 
-			Boolean				same; 
-		
-			SameProcess(&applicationPSN, &mFinderPSN, &same); 
-			if (same == TRUE)
-				SetFrontProcess(&mFinderPSN); 
-		} else {
-			// if we come here, we have to activate the Finder 
-			SetFrontProcess(&mFinderPSN); 
-			[firstNonHiddenApp release]; 
-			
-			return; 
-		}
-	}
-		
-	[firstNonHiddenApp release]; 
-	
-	// Now take care of activating the first non-hidden application showing the topmost window 
-	int count = [[desktop windows] count]; 
-	int index = 0; 
-	
-	if (count == 0)
-		return; 
-
-	// we will exclude applications that were set as "hidden", that is why we have to loop here
-	while (index < count) {
-		PNWindow*       frontWindow				= [[desktop windows] objectAtIndex: index];
-		PNApplication*	frontWindowOwner	= [desktop applicationForPid: [frontWindow ownerPid]]; 
-		
-		if ([frontWindowOwner isHidden] == NO) {
-			ProcessSerialNumber frontWindowOwnerPsn = [frontWindow ownerPsn];
-			SetFrontProcess(&frontWindowOwnerPsn); 		
-			
-			break; 
-		}
-		
-		index++; 
-	}
-  
-  
+	VTDesktop*	desktop	= [notification object];
+    if (![desktop activateTopApplication]) {
+        SetFrontProcess(&mFinderPSN); 
+    }
 }
 
 - (void) appDidChange {

@@ -8,6 +8,8 @@
 #import "PNApplication.h"
 #import "PNWindowList.h"
 #import "PNNotifications.h"
+#import <Zen/Zen.h>
+#import <Carbon/Carbon.h>
 
 /**
   @class PNApplication
@@ -107,8 +109,8 @@
 #pragma mark -
 - (void) setSticky: (BOOL) stickyState
 {  
-  NSEnumerator*   windowIterator			= [[self windows] objectEnumerator];
-	PNWindow*       window							= nil;
+	NSEnumerator*   windowIterator			= [[self windows] objectEnumerator];
+	PNWindow*       window					= nil;
 	
 	while (window = [windowIterator nextObject]) {
 		[window setSticky: stickyState];
@@ -182,18 +184,17 @@
 	NSEnumerator*   windowIter			= [mWindows objectEnumerator];
 	PNWindow*       window				= nil;
   
-	       
 	while (window = [windowIter nextObject]) {
-		if ([window isSticky] == 0)
+		if (![window isSticky])
 			[windowsForSwitching addObject: window];
 	}
   
 	PNWindowList* mWindowList = [[PNWindowList alloc] initWithArray: windowsForSwitching];
 	[mWindowList setDesktop: desktop];
-	if (mDesktop)
-		[mDesktop release];
-  
-	mDesktop = [desktop retain];
+	if (mDesktop != desktop) {
+		ZEN_RELEASE(mDesktop);
+		ZEN_ASSIGN(mDesktop, desktop);
+	}
 	[mWindowList release];
   
 	if (windowsForSwitching)
@@ -293,6 +294,15 @@
   }
   
   return (BOOL) applicationIsFrontmost;
+}
+
+#pragma mark -
+#pragma mark Activation
+
+- (BOOL) activate
+{
+    OSErr result = SetFrontProcess(&mPsn);
+    return (result == 0);
 }
 
 #pragma mark -

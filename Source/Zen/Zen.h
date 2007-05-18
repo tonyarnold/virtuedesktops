@@ -20,4 +20,4 @@
 #import "Common/ZNShading.h"
 #import "Macros/ZNMemoryManagementMacros.h"
 #import "Widgets/ZNEffectWindow.h"
-#import "Widgets/ZNImagePopupButton.h"
+#import "Widgets/ZNImagePopUpButton.h"

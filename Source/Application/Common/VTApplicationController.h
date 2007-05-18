@@ -24,7 +24,9 @@
 - (void) scanApplications; 
 
 - (NSArray *) applications; 
-- (VTApplicationWrapper *) applicationForPath: (NSString *) path; 
+- (VTApplicationWrapper *) applicationForPath: (NSString *) path;
+- (VTApplicationWrapper *) applicationForPSN: (ProcessSerialNumber*) psn;
+- (VTApplicationWrapper *) applicationForPid: (pid_t) pid;
 
 - (void) attachApplication: (VTApplicationWrapper *) wrapper; 
 - (void) detachApplication: (VTApplicationWrapper *) wrapper; 

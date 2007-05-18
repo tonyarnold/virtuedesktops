@@ -304,8 +304,68 @@
 		
 	// Now release the transition from memory
 	CGSReleaseTransition(cgs, handle);
-  
-  handle = 0;
+    handle = 0;
+    
+    if (mActiveApp) {
+        [mActiveApp activate];
+    }
+}
+
+- (BOOL) activateTopApplication
+{
+    return [self activateTopApplicationIgnoring:nil];
+}
+
+- (BOOL) activateTopApplicationIgnoring: (PNApplication *) ignored
+{
+    PNApplication*  application         = nil;
+    NSEnumerator*   enumerator          = [mApplications objectEnumerator];
+	int				realCount			= 0;
+    
+    if (mActiveApp != nil && [mActiveApp activate]) {
+        return;
+    }
+	
+	// count non-hidden applications and remember the first non-hidden application we encounter for later use
+    while (application = [enumerator nextObject]) {
+        if ([application isHidden] == NO && [application isUnfocused] == NO && [application pid] != [ignored pid]) {
+            realCount++;
+        }
+    }
+	
+	// more than one application means, we have at least one application but the finder active, so lets return 
+	if (realCount <= 1) {
+        return FALSE;
+	}
+
+	// we will exclude applications that were set as "hidden", that is why we have to loop here
+    PNWindow *frontWindow = nil;
+    enumerator = [mWindows objectEnumerator];
+    while (frontWindow = [enumerator nextObject]) {
+		PNApplication*	frontWindowOwner	= [self applicationForPid: [frontWindow ownerPid]]; 
+		
+		if ([frontWindowOwner isHidden] == NO && [frontWindowOwner isUnfocused] == NO && [frontWindowOwner pid] != [ignored pid]) {
+            if ([frontWindowOwner activate]) {
+                [self setActiveApplication: frontWindowOwner];
+                return TRUE;
+            }
+		}
+	}
+    return FALSE;
+}
+
+- (void) setActiveApplication: (PNApplication*) application
+{
+    if ([self applicationForPid:[application pid]] == nil) {
+        return;
+    }
+    ZEN_RELEASE(mActiveApp);
+    ZEN_ASSIGN(mActiveApp, application);
+}
+
+- (PNApplication*) activeApplication
+{
+    return mActiveApp;
 }
 
 #pragma mark -
@@ -629,7 +689,7 @@
 	while (stickyWindow = [stickyIter nextObject])
 	{
 		// we take the chance and remove all the sticky windows that are no longer valid
-		if ([stickyWindow isValid])
+		if (![stickyWindow isValid])
 		{
 			[stickyWindowCollection delWindow: stickyWindow];
 			if ([previousWindows containsObject: stickyWindow] == NO)
@@ -722,6 +782,25 @@
 }
 
 /**
+ * @brief Searches for the application with the passed PSN
+ *
+ * @param psd Process Serial Number for the application to return
+ *
+ * @return Returns the application instance matching the passed psn or @c nil
+ *         if the desktop does not contain an application with the passed psn
+ */
+- (PNApplication*) applicationForPSN: (ProcessSerialNumber) psn
+{
+	OSStatus status;
+	pid_t    pid;
+	status = GetProcessPID(&psn, &pid);
+	if (status) {
+		return nil;
+	}
+	return [self applicationForPid:pid];
+}
+
+/**
 * @brief Searches for the window with the passed window id
  *
  * @param window	Window to search for
@@ -805,6 +884,10 @@
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys: application, PNApplicationInstanceParam, self, PNApplicationDesktopParam, nil];
   
 	[mApplications removeObjectForKey: [NSNumber numberWithInt: [application pid]]];
+    
+    if ([mActiveApp pid] == [application pid]) {
+        ZEN_RELEASE(mActiveApp);
+    }
   
 	// and post notification
 	[self willChangeValueForKey: @"applications"];

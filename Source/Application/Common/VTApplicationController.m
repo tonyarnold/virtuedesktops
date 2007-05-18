@@ -17,7 +17,8 @@
 
 #import "VTApplicationController.h"
 #import "VTDesktopController.h" 
-#import "VTNotifications.h" 
+#import "VTNotifications.h"
+#include <Carbon/Carbon.h>
 #import <Zen/Zen.h>
 
 #define kVtCodingApplications	@"applications"
@@ -138,9 +139,30 @@
 
 - (VTApplicationWrapper*) applicationForPath: (NSString*) path
 {
-  return [mApplications objectForKey: path];
+    return [mApplications objectForKey: path];
 }
 
+- (VTApplicationWrapper*) applicationForPSN: (ProcessSerialNumber *) psn
+{
+	OSStatus status;
+	pid_t    pid;
+	status = GetProcessPID(psn, &pid);
+	if (status) {
+		return nil;
+	}
+	return [self applicationForPid:pid];
+}
+
+- (VTApplicationWrapper*) applicationForPid: (pid_t) pid
+{
+    NSEnumerator *enumerator = [mApplications objectEnumerator];
+    VTApplicationWrapper *wrapper = nil;
+    while (wrapper = [enumerator nextObject]) {
+        if ([wrapper processIdentifier] == pid) {
+            return wrapper;
+        }
+    }
+}
 
 #pragma mark -
 - (void) attachApplication: (VTApplicationWrapper*) wrapper {
@@ -236,7 +258,7 @@
 
 - (void) onApplicationTerminated: (NSNotification*) notification
 {
-  [self onApplicationDetachedLocal: [[notification userInfo] objectForKey: @"NSApplicationPath"]];
+    [self onApplicationDetachedLocal: [[notification userInfo] objectForKey: @"NSApplicationPath"]];
 }
 
 - (void) onApplicationOptionsChanged: (NSNotification*) notification

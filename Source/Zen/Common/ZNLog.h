@@ -16,6 +16,10 @@
 
 +(void)file:(char*)sourceFile function:(char*)functionName lineNumber:(int)lineNumber format:(NSString*)format, ...;
 
+#ifdef ZNDEBUG
 #define ZNLog(s,...) [ZNLog file:__FILE__ function: (char *)__FUNCTION__ lineNumber:__LINE__ format:(s),##__VA_ARGS__]
+#else
+#define ZNLog(s,...) 
+#endif
 
 @end

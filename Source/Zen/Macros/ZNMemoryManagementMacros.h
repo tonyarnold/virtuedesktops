@@ -8,19 +8,20 @@
 //  See COPYING for licensing details
 //  
 
-#define	ZEN_ASSIGN(aTarget, aSource) \
-if (aTarget != nil)					 \
-[aTarget autorelease];			     \
+#define	ZEN_ASSIGN(aTarget, aSource)	\
+if (aTarget != nil)						\
+[	aTarget autorelease];			    \
 aTarget = [aSource retain];
 
 #define ZEN_ASSIGN_COPY(aTarget, aSource)	\
-if (aTarget != nil)						\
-[aTarget autorelease];				\
+if (aTarget != nil)							\
+	[aTarget autorelease];					\
 aTarget = [aSource copy];
 
-#define ZEN_RELEASE(aTarget)				\
+#define ZEN_RELEASE(aTarget)			\
 if (aTarget != nil)						\
 {										\
-[aTarget release];					\
-aTarget = nil;						\
+	id zen_old = aTarget;				\
+	aTarget = nil;						\
+	[zen_old release];					\
 }

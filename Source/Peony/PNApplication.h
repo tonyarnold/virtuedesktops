@@ -18,11 +18,11 @@
 	PNDesktop*          mDesktop; //!< Desktop this application is on
 	NSMutableArray*     mWindows; //!< All windows of the application
   
-  NSString            *_name;
+	NSString            *_name;
   
 	BOOL				mIsSticky;		//!< Is the application stickied?
 	BOOL				mIsHidden;		//!< Is the application hidden from display?
-  BOOL				mIsUnfocused;	//!< Is the application unfocused?
+	BOOL				mIsUnfocused;	//!< Is the application unfocused?
 }
 
 #pragma mark Lifetime
@@ -64,6 +64,10 @@
  */
 - (int) desktopId;
 /*!
+  @return The desktop of the application
+ */
+- (PNDesktop*) desktop;		
+/*!
   @brief  Moves the represented application to the specified desktop
   @param  desktop The PNDesktop instance to move the represented PNApplication instance to.
   @todo   Move this method from separate window handling to handling a window list, which should be much more efficient 
@@ -84,6 +88,9 @@
 #pragma mark -
 - (BOOL) isValid; 
 - (BOOL) isFrontmost;
+
+#pragma mark -
+- (BOOL) activate;
 
 #pragma mark -
 #pragma mark Binding windows  

@@ -16,8 +16,8 @@
 #import "VTDesktop.h" 
 
 @interface VTApplicationWrapper : NSObject<VTCoding> {
-  NSString*   mBundlePath;
-  NSString*   mBundleId;
+    NSString*   mBundlePath;
+    NSString*   mBundleId;
 	
 	// running applications 
 	pid_t       mPid; 

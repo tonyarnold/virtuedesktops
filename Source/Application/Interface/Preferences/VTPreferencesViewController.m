@@ -241,10 +241,10 @@
 	if ([[preferencePane objectForKey: VTPreferencePaneLoaded] boolValue] == YES)
 		return; 
 	
-	NSBundle*					preferencePaneBundle		= [preferencePane objectForKey: VTPreferencePaneBundle]; 
-	Class							preferencePaneClass			= [preferencePaneBundle principalClass]; 
+	NSBundle*			preferencePaneBundle	= [preferencePane objectForKey: VTPreferencePaneBundle]; 
+	Class				preferencePaneClass		= [preferencePaneBundle principalClass]; 
 	NSPreferencePane*	preferencePaneInstance	= [[preferencePaneClass alloc] initWithBundle: preferencePaneBundle];  
-	
+			
 	// load the main view 
 	[preferencePaneInstance loadMainView]; 
 	

@@ -104,10 +104,11 @@ enum
  */ 
 @interface PNDesktop : NSObject <NSCopying>
 {
-	int                   mDesktopId;			// The native workspace identifier of this desktop
+	int                   mDesktopId;		// The native workspace identifier of this desktop
 	NSString*             mDesktopName;		// The name of the desktop
-	NSMutableArray*       mWindows;       // List of windows managed by this desktop
-	NSMutableDictionary*	mApplications;	// List of applications managed by the desktop, and indexed by process identifier
+	NSMutableArray*       mWindows;         // List of windows managed by this desktop
+	NSMutableDictionary*  mApplications;	// List of applications managed by the desktop, and indexed by process identifier
+    PNApplication*        mActiveApp;       // The last active application of the desktop
 }
 
 #pragma mark -
@@ -214,6 +215,10 @@ enum
 #pragma mark Activation 
 - (void) activate; 
 - (void) activateWithTransition: (PNTransitionType) transition option: (PNTransitionOption) option duration: (float) seconds;
+- (BOOL) activateTopApplication;
+- (BOOL) activateTopApplicationIgnoring: (PNApplication*)application;
+- (void) setActiveApplication: (PNApplication*)application;
+- (PNApplication*) activeApplication;
 
 #pragma mark -
 #pragma mark Window operations
@@ -235,6 +240,7 @@ enum
 - (PNWindow*) windowContainingPoint: (NSPoint) point;
 - (PNWindow*) windowForId: (CGSWindow) window; 
 - (PNApplication*) applicationForPid: (pid_t) pid;
+- (PNApplication*) applicationForPSN: (ProcessSerialNumber) psn;
 - (PNWindow*) bottomMostWindow;
 
 @end 

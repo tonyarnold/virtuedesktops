@@ -45,7 +45,7 @@
 		mBindDesktop	= NO;
 		mUnfocused		= NO;
 		mBundlePath   = nil;
-				
+		
 		// and register our interest in desktop collection changes 
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onDesktopWillRemove:) name: VTDesktopWillRemoveNotification object: nil]; 
 		
@@ -64,7 +64,7 @@
 		
 		ZEN_ASSIGN(mBundleId, bundleId);    
 		ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier: mBundleId]);
-		    
+		
 		// and complete initialization by filling the application array 
 		[self createApplications];
 		
@@ -80,24 +80,24 @@
 			[self autorelease]; 
 			return nil; 
 		}
-    
-    if ([[NSFileManager defaultManager] fileExistsAtPath: path])
-    {
+		
+		if ([[NSFileManager defaultManager] fileExistsAtPath: path])
+		{
       // We have an application path, so assign and continue
-      ZEN_ASSIGN(mBundlePath, path);
-    }
-    else
-    {
-      ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] fullPathForApplication: [path lastPathComponent]]);
-      if (mBundlePath == nil)
-      {
-        [self autorelease];
-        return nil;
-      }
-    }
-    
-    ZEN_ASSIGN_COPY(mBundleId, [[NSBundle bundleWithPath: path] objectForInfoDictionaryKey: @"CFBundleIdentifier"]);
-		        
+			ZEN_ASSIGN(mBundlePath, path);
+		}
+		else
+		{
+			ZEN_ASSIGN(mBundlePath, [[NSWorkspace sharedWorkspace] fullPathForApplication: [path lastPathComponent]]);
+			if (mBundlePath == nil)
+			{
+				[self autorelease];
+				return nil;
+			}
+		}
+		
+		ZEN_ASSIGN_COPY(mBundleId, [[NSBundle bundleWithPath: path] objectForInfoDictionaryKey: @"CFBundleIdentifier"]);
+		
 		// and complete initialization by filling the application array 
 		[self createApplications];
 		
@@ -117,7 +117,7 @@
 	
 	// give up observer status 
 	[[NSNotificationCenter defaultCenter] removeObserver: self]; 
-  
+	
 	[super dealloc]; 
 }
 
@@ -125,19 +125,19 @@
 #pragma mark Coding 
 
 - (void) encodeToDictionary: (NSMutableDictionary*) dictionary {
-  [dictionary setObject: mBundlePath forKey: kVtCodingBundlePath];
-  
+	[dictionary setObject: mBundlePath forKey: kVtCodingBundlePath];
+	
 	[dictionary setObject: [NSNumber numberWithBool: mSticky] forKey: kVtCodingSticky];
 	[dictionary setObject: [NSNumber numberWithBool: mHidden] forKey: kVtCodingHidden];
 	[dictionary setObject: [NSNumber numberWithBool: mUnfocused] forKey: kVtCodingUnfocused];
 	[dictionary setObject: [NSNumber numberWithBool: mBindDesktop] forKey: kVtCodingDesktopEnabled];
-  
+	
 	if (mBundleId)
 		[dictionary setObject: mBundleId forKey: kVtCodingBundleId];
-  
+	
 	if (mTitle)
 		[dictionary setObject: mTitle forKey: kVtCodingBundleTitle];
-  
+	
 	if (mDesktop)
 		[dictionary setObject: [mDesktop uuid] forKey: kVtCodingDesktop]; 
 }
@@ -145,24 +145,24 @@
 - (id) decodeFromDictionary: (NSDictionary*) dictionary {
 	// We use the path as the UID, so ensure precendence
 	mBundlePath   = [[dictionary objectForKey: kVtCodingBundlePath] retain];
-
+	
 	// decode primitives 
 	mBundleId     = [[dictionary objectForKey: kVtCodingBundleId] retain];
 	mTitle        = [[dictionary objectForKey: kVtCodingBundleTitle] retain];
 	mSticky       = [[dictionary objectForKey: kVtCodingSticky] boolValue]; 
 	mHidden       = [[dictionary objectForKey: kVtCodingHidden] boolValue]; 
 	mUnfocused		= [[dictionary objectForKey: kVtCodingUnfocused] boolValue];
-	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue]; 
-	
+	mBindDesktop	= [[dictionary objectForKey: kVtCodingDesktopEnabled] boolValue];
+		
 	// try to read the desktop
 	NSString* desktopUUID = [dictionary objectForKey: kVtCodingDesktop];
-  
+	
 	// get the desktop, this may be nil, which is ok
 	if (desktopUUID)
 		ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] desktopWithUUID: desktopUUID]); 
 	
 	// and initialize applications 
-	[self createApplications]; 
+	[self createApplications];
 	
 	return self; 
 }
@@ -170,15 +170,16 @@
 #pragma mark -
 #pragma mark Attributes 
 
-- (void) setSticky: (BOOL) flag {
+- (void) setSticky: (BOOL) flag 
+{
 	if (mSticky == flag)
 		return; 
 	
 	mSticky = flag; 
 	
 	// if we are running, tell all application objects to sticky 
-	NSEnumerator*		applicationIter	= [mApplications objectEnumerator]; 
-	PNApplication*	application			= nil; 
+	NSEnumerator*		applicationIter 	= [mApplications objectEnumerator]; 
+	PNApplication*	    application			= nil; 
 	VTDesktop*			activeDesktop		= [[VTDesktopController sharedInstance] activeDesktop]; 
 	
 	while (application = [applicationIter nextObject]) {
@@ -194,9 +195,9 @@
 		// and move all of our windows to the bound desktop 
 		[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop]; 	
 	}
-  
-  if (mLaunching = NO)
-    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
+	
+	if (mLaunching = NO)
+		[[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isSticky {
@@ -216,9 +217,9 @@
 	while (application = [applicationIter nextObject]) {
 		[application setIsHidden: flag]; 
 	}	
-  
-  if (mLaunching = NO)
-    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
+	
+	if (mLaunching = NO)
+		[[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isHidden {
@@ -239,9 +240,9 @@
 	while (application = [applicationIter nextObject]) {
 		[application setIsUnfocused: flag]; 
 	}
-  
-  if (mLaunching = NO)
-    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
+	
+	if (mLaunching = NO)
+		[[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isUnfocused {
@@ -251,16 +252,16 @@
 #pragma mark -
 - (void) setBindingToDesktop: (BOOL) flag {
 	mBindDesktop = flag;
-  
+	
 	if ((mBindDesktop == NO) || (mUnfocused == YES) || (mSticky == YES))
 		return; 
-  
-  ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] activeDesktop]);
+	
+	ZEN_ASSIGN(mDesktop, [[VTDesktopController sharedInstance] activeDesktop]);
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];	
-
-  if (mLaunching = NO)
-    [[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
+	
+	if (mLaunching = NO)
+		[[NSNotificationCenter defaultCenter] postNotificationName: kVtNotificationApplicationWrapperOptionsChanged object: self];
 }
 
 - (BOOL) isBindingToDesktop {
@@ -279,7 +280,7 @@
 	
 	if ((mBindDesktop == NO) || (mDesktop == nil) || (mSticky == YES) || (mUnfocused == YES))
 		return; 
-  
+	
 	// and move all of our windows there 
 	[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
 }
@@ -289,20 +290,20 @@
 }
 
 - (NSImage*) icon {
-  if ([self canBeRemoved] && mImage != nil)
-  {
-    NSImage* fadedImage = [[NSImage alloc] initWithSize: [mImage size]];
-    [fadedImage lockFocus];
-    [mImage setFlipped: YES];
-    [mImage dissolveToPoint: NSZeroPoint fraction: 0.4];
-    [fadedImage unlockFocus];
-    return fadedImage;
-  }
-  
+	if ([self canBeRemoved] && mImage != nil)
+	{
+		NSImage* fadedImage = [[NSImage alloc] initWithSize: [mImage size]];
+		[fadedImage lockFocus];
+		[mImage setFlipped: YES];
+		[mImage dissolveToPoint: NSZeroPoint fraction: 0.4];
+		[fadedImage unlockFocus];
+		return fadedImage;
+	}
+	
   // Ensure our image is drawing right side up
-  [mImage setFlipped: NO];
-  
-  return mImage;
+	[mImage setFlipped: NO];
+	
+	return mImage;
 }
 
 - (NSArray*) windows {
@@ -314,13 +315,13 @@
 		PNApplication* firstInstance = [mApplications objectAtIndex: 0]; 
 		if (firstInstance == nil)
 			return nil; 
-    
+		
 		return [firstInstance windows]; 
 	}
 	
-	NSEnumerator*		applicationIter	= [mApplications objectEnumerator]; 
-	PNApplication*	application			= nil; 
-	NSMutableArray* windows					= [[[NSMutableArray alloc] init] autorelease]; 
+	NSEnumerator*	applicationIter	= [mApplications objectEnumerator]; 
+	PNApplication*	application		= nil; 
+	NSMutableArray* windows			= [[[NSMutableArray alloc] init] autorelease]; 
 	
 	while (application = [applicationIter nextObject]) {
 		NSEnumerator*	windowIter	= [[[application windows] objectEnumerator] retain]; 
@@ -345,17 +346,17 @@
 
 - (pid_t) processIdentifier
 {   
-  NSArray       *allApps = [[NSWorkspace sharedWorkspace] launchedApplications];
-  NSEnumerator  *enumerator = [allApps objectEnumerator];
-  NSDictionary  *app;
-  while (app = [enumerator nextObject]) {
-    if ([[app objectForKey:@"NSApplicationPath"] isEqualToString: [self bundlePath]])
-    {
-      return (pid_t)[[app objectForKey:@"NSApplicationProcessIdentifier"] intValue];
-    }    
-  }
-  
-  return (pid_t)0;
+	NSArray       *allApps = [[NSWorkspace sharedWorkspace] launchedApplications];
+	NSEnumerator  *enumerator = [allApps objectEnumerator];
+	NSDictionary  *app;
+	while (app = [enumerator nextObject]) {
+		if ([[app objectForKey:@"NSApplicationPath"] isEqualToString: [self bundlePath]])
+		{
+			return (pid_t)[[app objectForKey:@"NSApplicationProcessIdentifier"] intValue];
+		}    
+	}
+	
+	return (pid_t)0;
 }
 
 - (BOOL) isRunning
@@ -365,7 +366,7 @@
 
 - (BOOL) canBeRemoved
 {
-  return ([self isRunning] == NO) && ([[self windows] count] == 0);
+	return ([self isRunning] == NO) && ([[self windows] count] == 0);
 }
 
 #pragma mark -
@@ -385,17 +386,18 @@
 
 - (BOOL) hasCustomizedSettings
 {
-  if ([self isSticky] || [self isHidden] || [self isBindingToDesktop] || [self isUnfocused])
-    return YES;
-  
-  return NO;
+	if ([self isSticky] || [self isHidden] || [self isBindingToDesktop] || [self isUnfocused])
+		return YES;
+	
+	return NO;
 }
 
 
 #pragma mark -
 #pragma mark Notifications 
-- (void) onApplicationAttached: (NSNotification*) notification {
-	NSDictionary*		userInfo		= [notification userInfo]; 
+- (void) onApplicationAttached: (NSNotification*) notification
+{
+	NSDictionary*	userInfo	= [notification userInfo]; 
 	PNApplication*	application	= [userInfo objectForKey: PNApplicationInstanceParam]; 
 	
 	// check validity of this application 
@@ -413,12 +415,12 @@
 	if (mPid == 0) {
 		[self willChangeValueForKey: @"running"]; 
 		
-		mPid	= [application pid];
-    ZEN_ASSIGN(mBundlePath, [application path]);
-    ZEN_ASSIGN(mBundleId, [application bundleId]);
-    ZEN_ASSIGN(mTitle, [application name]);
+		mPid = [application pid];
+		ZEN_ASSIGN(mBundlePath, [application path]);
+		ZEN_ASSIGN(mBundleId, [application bundleId]);
+		ZEN_ASSIGN(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);     
-				
+		
 		[self didChangeValueForKey: @"running"]; 
 	}
 	
@@ -429,15 +431,8 @@
 	
 	// check if we should move this application to another desktop 
 	if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
-    // First move the application to the other desktop
-    [application setDesktop: mDesktop];
-    
-    // Then (if the preferences and circumstance are right) move to that desktop as well
-//    if ([[NSUserDefaults standardUserDefaults] boolForKey: @"VTDesktopFollowsApplicationFocus"] && [application isFrontmost])
-//    {
-//      [[VTDesktopController sharedInstance] activateDesktop: mDesktop];
-//    }
-    
+		// First move the application to the other desktop
+		[application setDesktop: mDesktop];
 	}
 	
 	// ...and add 
@@ -472,13 +467,13 @@
 	// check if we need this desktop, and if we do, reset ourselves. 
 	if ([notification object] != mDesktop)
 		return; 
-  
+	
 	[self willChangeValueForKey: @"boundDesktop"]; 
 	[self willChangeValueForKey: @"bindingToDesktop"]; 
 	
 	ZEN_RELEASE(mDesktop); 
 	mBindDesktop = NO; 
-  
+	
 	[self didChangeValueForKey: @"bindingToDesktop"]; 
 	[self didChangeValueForKey: @"boundDesktop"]; 
 }
@@ -490,7 +485,7 @@
 	if ([keyPath isEqualToString: @"windows"]) {
 		// note change of our windows path
 		[self willChangeValueForKey: @"windows"];
-    
+		
 		// Iterate all windows and move them if necessary 
 		if ((mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
@@ -507,40 +502,38 @@
 #pragma mark -
 @implementation VTApplicationWrapper (Binding) 
 
-- (void) createApplications {
+- (void) createApplications 
+{
 	// Clean array 
 	[mApplications removeAllObjects]; 
-  
-  mLaunching = YES;
+	
+	mLaunching = YES;
+	
 	// Walk the desktops to find an application matching our bundle 
 	NSEnumerator *desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	VTDesktop    *desktop     = nil;
-  
-  while (desktop = [desktopIter nextObject]) {
+	
+	while (desktop = [desktopIter nextObject]) {
 		// walk all applications to find our bundle string 
 		NSEnumerator    *applicationIter	= [[desktop applications] objectEnumerator]; 
 		PNApplication   *application      = nil; 
 		
 		while (application = [applicationIter nextObject]) {
 			if ([application path] && [[application path] isEqualToString: [self bundlePath]]) {
-				[mApplications addObject: application]; 
-				
-				// now apply attributes 
-				[application setSticky: mSticky]; 
-				[application setIsHidden: mHidden]; 
-				[application setIsUnfocused: mUnfocused];
-								
-				// and skip to next desktop, as we expect only one application for a bundle per desktop 
-				break; 
+				[mApplications addObject: application];
+				[application setSticky: mSticky];
+				[application setIsHidden:mHidden];
+				[application setIsUnfocused:mUnfocused];
 			}
 		}
 	}
-
-	if ([mApplications count] > 0) {
+	
+  	if ([mApplications count] > 0) {
 		PNApplication *application = [[mApplications objectAtIndex: 0] retain];
-    
-		if (application == nil)
+		
+		if (application == nil) {
 			return; 
+		}
 		
 		mPid = [application pid]; 
 		
@@ -548,39 +541,36 @@
 		ZEN_ASSIGN_COPY(mBundleId, [application bundleId]);
 		ZEN_ASSIGN_COPY(mTitle, [application name]);
 		ZEN_ASSIGN(mImage, [application icon]);
-				
+		
 		// check if we should move this application to another desktop 
 		if ((mSticky == NO) && (mUnfocused == NO) && (mBindDesktop == YES) && (mDesktop != nil) && (mDesktop != [[VTDesktopController sharedInstance] activeDesktop])) {
 			[mApplications makeObjectsPerformSelector: @selector(setDesktop:) withObject: mDesktop];
 		}
-    
-    if (application)
-      [application release];
+		[application release];
+	} else {
 		
-		return; 
+		// if the application is not running, we fetch the information from the bundle itself (if it exists)
+		mPid = 0;
+		
+		if ([[NSFileManager defaultManager] fileExistsAtPath: [self bundlePath]]) 
+		{
+			NSBundle *bundle = [NSBundle bundleWithPath: [self bundlePath]];
+			ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
+			
+			// If we can retrieve the application name from inside the bundle (if it is a bundle!), we do, otherwise just use the name of the application package at the path supplied
+			if ([bundle objectForInfoDictionaryKey: @"CFBundleName"] != nil)
+			{
+				ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
+			}
+			else
+			{
+				ZEN_ASSIGN_COPY(mTitle, [[self bundlePath] lastPathComponent]);
+			}
+			
+			ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
+		}
+		mLaunching = NO;
 	}
-	
-	// if the application is not running, we fetch the information from the bundle itself (if it exists)
-	mPid = 0;
-  
-  if ([[NSFileManager defaultManager] fileExistsAtPath: [self bundlePath]]) 
-  {
-    NSBundle *bundle = [NSBundle bundleWithPath: [self bundlePath]];
-    ZEN_ASSIGN_COPY(mBundleId, [bundle bundleIdentifier]);
-    
-    // If we can retrieve the application name from inside the bundle (if it is a bundle!), we do, otherwise just use the name of the application package at the path supplied
-    if ([bundle objectForInfoDictionaryKey: @"CFBundleName"] != nil)
-    {
-      ZEN_ASSIGN_COPY(mTitle, [bundle objectForInfoDictionaryKey: @"CFBundleName"]);
-    }
-    else
-    {
-      ZEN_ASSIGN_COPY(mTitle, [[self bundlePath] lastPathComponent]);
-    }
-        
-    ZEN_ASSIGN(mImage, [[NSWorkspace sharedWorkspace] iconForFile: [self bundlePath]]);
-  }
-  mLaunching = NO;
 }
 
 @end 
