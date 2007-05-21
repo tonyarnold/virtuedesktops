@@ -53,11 +53,10 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		[self findFinderApplication];
 		
 		// Set our own PSN 
-		GetProcessForPID([[NSProcessInfo processInfo] processIdentifier], &mPSN); 
-
-		// ..and now set our marker to NO (initially)
-		mFocusTriggeredSwitch = NO; 
-		
+		GetProcessForPID([[NSProcessInfo processInfo] processIdentifier], &mPSN);
+        
+        // Initialize mActivatedPSN
+        mActivatedPSN.lowLongOfPSN = kNoProcess;
 		return self; 
 	}
 	
@@ -129,19 +128,20 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	[desktop updateDesktop];
     
     // The previous application has been hidden or terminated, activate the next application
-    if ([desktop applicationForPSN:oldPSN] == nil && [desktop activateTopApplication]) {
+    if (oldPSN.lowLongOfPSN != kNoProcess && [desktop applicationForPSN:oldPSN] == nil && [desktop activateTopApplication]) {
         return;
     }
 	
 	// Is the application of this window bound to a desktop ?
 	PNApplication*  application = [desktop applicationForPSN: mActivatedPSN];
-	PNDesktop*     appliDesktop = [wrapper boundDesktop];
+	PNDesktop*     appliDesktop = [application desktop];
 	if (application != nil && appliDesktop != nil) {
-		if ([appliDesktop identifier] != [desktop identifier] && ![application isSticky]) {
+		if (!same && [appliDesktop identifier] != [desktop identifier] && ![application isSticky]) {
 			[application setDesktop:appliDesktop];
             [appliDesktop setActiveApplication:application];
 		} else {
             [desktop setActiveApplication:application];
+            [application activate];
 			return; // The desktop of the current application is the active desktop... do nothing
 		}
 	}
@@ -196,8 +196,10 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 		
 			if (application != nil) {
 				// check if this is the current desktop, and if it is, we will abort immediately
-				if ([[[VTDesktopController sharedInstance] activeDesktop] isEqual: desktop])
+				if ([[[VTDesktopController sharedInstance] activeDesktop] isEqual: desktop]) {
+                    [desktop setActiveApplication:application];
 					return; 
+                }
         
 				// Don't want to switch on new window, just like finder
 				if (neededModifiers == 0 && [application isUnfocused])
@@ -216,9 +218,6 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
         }
 	}
 	
-	// set marker 
-	mFocusTriggeredSwitch = YES; 
-	
 	// switch... 
     if (application != nil) {
         [appliDesktop setActiveApplication:application];
@@ -234,19 +233,8 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	// Same here...
 }
 
-- (void) onDesktopDidChange: (NSNotification*) notification {
-	// If the switch was triggered via activation, give the activated process front process status and abort 
-	if (mFocusTriggeredSwitch) 
-    {
-		mFocusTriggeredSwitch = NO;
-		SetFrontProcess(&mActivatedPSN); 
-		
-		return; 
-	}
-	// reset our flag 
-	mFocusTriggeredSwitch = NO; 	
-
-	
+- (void) onDesktopDidChange: (NSNotification*) notification
+{
 	// check if the new desktop has any applications, and if it does not, change to the finder process 
 	VTDesktop*	desktop	= [notification object];
     if (![desktop activateTopApplication]) {

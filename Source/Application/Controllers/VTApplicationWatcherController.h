@@ -33,8 +33,6 @@
 	ProcessSerialNumber		mFinderPSN; 
 	ProcessSerialNumber		mPSN; 
 	ProcessSerialNumber		mActivatedPSN; 
-	
-	BOOL				mFocusTriggeredSwitch; 
 }
 
 - (id) init; 

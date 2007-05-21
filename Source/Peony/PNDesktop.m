@@ -306,9 +306,7 @@
 	CGSReleaseTransition(cgs, handle);
     handle = 0;
     
-    if (mActiveApp) {
-        [mActiveApp activate];
-    }
+    [mActiveApp activate];
 }
 
 - (BOOL) activateTopApplication
@@ -322,7 +320,7 @@
     NSEnumerator*   enumerator          = [mApplications objectEnumerator];
 	int				realCount			= 0;
     
-    if (mActiveApp != nil && [mActiveApp activate]) {
+    if (mActiveApp != nil && ![mActiveApp isSticky] && [mActiveApp activate]) {
         return;
     }
 	
@@ -356,7 +354,7 @@
 
 - (void) setActiveApplication: (PNApplication*) application
 {
-    if ([self applicationForPid:[application pid]] == nil) {
+    if ([application isSticky] || [application isUnfocused] || [self applicationForPid:[application pid]] == nil) {
         return;
     }
     ZEN_RELEASE(mActiveApp);

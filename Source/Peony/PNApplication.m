@@ -301,6 +301,9 @@
 
 - (BOOL) activate
 {
+    if ([self isFrontmost]) {
+        return TRUE;
+    }
     OSErr result = SetFrontProcess(&mPsn);
     return (result == 0);
 }
