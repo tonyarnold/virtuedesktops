@@ -19,6 +19,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <mach-o/dyld.h>
+#include <grp.h> 
+
+/* Get procmod group identifier */
+static int
+getProcmodGid()
+{
+   struct group* groupDesc;
+   groupDesc = getgrnam("procmod");
+   if (groupDesc) {
+       return groupDesc->gr_gid;
+   }
+   return 9;
+}
 
 /* Perform the operation specified in myCommand. */
 static bool
@@ -41,7 +54,7 @@ performOperation(const MyAuthorizedCommand * myCommand)
 	
 	
 	// Set group to procmod
-	if (chown(myCommand->file, st.st_uid, 9)) {
+	if (chown(myCommand->file, st.st_uid, getProcmodGid())) {
 		snprintf(info, MAXPATHLEN, "chown %s", myCommand->file);
 		perror(info);
 		return false;
@@ -56,7 +69,6 @@ performOperation(const MyAuthorizedCommand * myCommand)
 	
   return true;
 }
-
 
 int
 main(int argc, char * const *argv)

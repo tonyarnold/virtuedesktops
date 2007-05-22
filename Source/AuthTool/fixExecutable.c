@@ -164,8 +164,9 @@ fixVirtueDesktopsExecutable(const char *vdPath)
       
       
       /* Specifying the kAuthorizationFlagDestroyRights causes the granted rights to be destroyed so they can't be shared between sessions and used again.  Rights will automatically timeout by default after 5 minutes, but the timeout value can be changed by editing the file located at /etc/authorization. The config file gives System Administrators the ability to enforce a stricter security policy, and it's recommended that you test with a zero second timeout enabled to make sure your application continues to behave as expected. */
-      
-    AuthorizationFree(authorizationRef, kAuthorizationFlagDestroyRights);
+    if (authorizationRef) {
+      AuthorizationFree(authorizationRef, kAuthorizationFlagDestroyRights);
+    }
     
 		if (status)
 			return status;
