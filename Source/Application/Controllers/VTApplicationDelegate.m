@@ -746,6 +746,7 @@ enum
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPagerSticky:) name: VTRequestShowPagerAndStickName object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowOperations:) name: VTRequestDisplayOverlayName object: nil];
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowDesktopInspector:) name: VTRequestInspectDesktopName object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowApplicationInspector:) name: VTRequestInspectApplicationsName object: nil];    
 	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(onShowPreferences:) name: VTRequestInspectPreferencesName object: nil];
 	[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self selector: @selector(invalidateQuitDialog:) name: NSWorkspaceWillPowerOffNotification object: [NSWorkspace sharedWorkspace]];
   [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(invalidateQuitDialog:) name: SUUpdaterWillRestartNotification object:nil];
