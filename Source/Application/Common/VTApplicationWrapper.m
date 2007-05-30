@@ -369,6 +369,11 @@
 	return ([self isRunning] == NO) && ([[self windows] count] == 0);
 }
 
+- (BOOL) isMe
+{
+    return mPid == [[NSProcessInfo processInfo] processIdentifier];
+}
+
 #pragma mark -
 
 - (NSString*) bundlePath

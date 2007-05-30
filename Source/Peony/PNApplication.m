@@ -26,37 +26,34 @@
 - (id) initWithPid: (pid_t) pid onDesktop: (PNDesktop*) desktop 
 {
 	if (self = [super init])
-  {
+    {
 		mPid        = pid;
 		mDesktop    = [desktop retain]; 
 		mWindows    = [[NSMutableArray alloc] init]; 
-    
-    _name       = nil;
+        
+        _name       = nil;
 		
 		mIsSticky	= NO; 
 		mIsHidden	= NO;
-    mIsUnfocused = NO;
-
+        mIsUnfocused = NO;
+        
 		if (mPid == 0)
-    {
+        {
 			// oops, no can do with this pid 
 			[self autorelease]; 
 			return nil; 
-		}
+		} else if ([self isMe]) {
+            mIsSticky = YES;
+        }
 		
 		// Create psn out of the pid
 		OSStatus oResult = GetProcessForPID(mPid, &mPsn); 
-		if (!oResult)
-    {
+		if (!oResult) {
 			return self;
-		}
-    else
-    {
+		} else {
 			[self autorelease]; 
 			return nil;
 		}
-    
-    
 	}
 	
 	return nil; 
@@ -112,6 +109,11 @@
 	NSEnumerator*   windowIterator			= [[self windows] objectEnumerator];
 	PNWindow*       window					= nil;
 	
+    // Overload stickyState to be sure the current application is stiky
+    if ([self isMe]) {
+        stickyState = YES;
+    }
+    
 	while (window = [windowIterator nextObject]) {
 		[window setSticky: stickyState];
 	}
@@ -294,6 +296,11 @@
   }
   
   return (BOOL) applicationIsFrontmost;
+}
+
+- (BOOL) isMe
+{
+    return mPid == [[NSProcessInfo processInfo] processIdentifier];
 }
 
 #pragma mark -

@@ -167,7 +167,9 @@
 #pragma mark -
 - (void) attachApplication: (VTApplicationWrapper*) wrapper {
 	[self willChangeValueForKey: @"applications"];
-	[mApplications setObject: wrapper forKey: [wrapper bundlePath]]; 
+    if (![wrapper isMe]) {
+        [mApplications setObject: wrapper forKey: [wrapper bundlePath]];
+    }
 	[self didChangeValueForKey: @"applications"]; 	
 }
 

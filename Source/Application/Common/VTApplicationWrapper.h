@@ -70,6 +70,7 @@
 - (pid_t) processIdentifier;
 - (BOOL) isRunning;
 - (BOOL) canBeRemoved;
+- (BOOL) isMe;
 
 #pragma mark -
 - (NSString*) bundlePath; 

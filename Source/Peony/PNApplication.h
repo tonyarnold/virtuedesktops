@@ -88,6 +88,7 @@
 #pragma mark -
 - (BOOL) isValid; 
 - (BOOL) isFrontmost;
+- (BOOL) isMe;
 
 #pragma mark -
 - (BOOL) activate;
