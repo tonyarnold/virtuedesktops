@@ -441,12 +441,21 @@ enum
 		NSEnumerator*	desktopIter = [[[VTDesktopController sharedInstance] desktops] objectEnumerator];
 		VTDesktop*		desktop		= nil;
 		VTDesktop*		target		= [[VTDesktopController sharedInstance] activeDesktop];
-		
+
+    int desktopId   = [VTDesktop firstDesktopIdentifier] + [[[VTDesktopController sharedInstance] desktops] count] - 1;
+    if ([target identifier] >= desktopId) {
+      [PNDesktop setDesktopId:desktopId];
+    } else {
+      desktopId = [target identifier];
+    }
+    
 		while (desktop = [desktopIter nextObject]) {
-			if ([desktop isEqual: target])
+			if ([desktop identifier] == desktopId)
 				continue;
 			
-			[desktop moveAllWindowsToDesktop: target];
+			PNWindowList *list = [[PNWindowPool sharedWindowPool] windowsOnDesktopId:[desktop identifier]];
+      [list setDesktopId:desktopId];
+      [list release];
 		}
 	}
 	

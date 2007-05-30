@@ -51,6 +51,7 @@
 	// desktop
 - (int) desktopId;
 - (void) setDesktop: (PNDesktop*) desktop;
+- (void) setDesktopId: (int) desktopId;
 
 	// name
 - (NSString*) name;

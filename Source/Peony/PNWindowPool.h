@@ -10,7 +10,9 @@
  */
 #import <Foundation/Foundation.h>
 #import "CGSPrivate.h" 
+#import "PNWindowList.h"
 #import "PNWindow.h"
+
 
 /*! @class       PNWindowPool
     @abstract    Provides a pool of currently allocated, valid PNWindow objects who are assigned to desktops
@@ -33,5 +35,6 @@
               A CGSWindow specifying the identifier of the window to return.
     @result   Returns the newly initialized (if necessary) PNWindow object or nil on error.
 */
-- (PNWindow*) windowWithId: (CGSWindow) windowId; 
+- (PNWindow*) windowWithId: (CGSWindow) windowId;
+- (PNWindowList*) windowsOnDesktopId: (int) desktopId;
 @end

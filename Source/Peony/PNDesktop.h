@@ -130,7 +130,9 @@ enum
     @param    andName   The name of the workspace you wish to return as a desktop wrapper
     @result   Returns an autoreleased desktop wrapper instance that is fully initialised and has been assigned a temporary desktop name.
  */
-+ (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name; 
++ (PNDesktop*) desktopWithId: (int) desktopId andName: (NSString*) name;
+
++ (void) setDesktopId: (int) desktopId;
 
 - (id) init; 
 

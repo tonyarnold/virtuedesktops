@@ -60,6 +60,20 @@
 	return [_windowDict objectForKey:number]; 
 }
 
+- (PNWindowList*) windowsOnDesktopId: (int) desktopId
+{
+    PNWindowList *list = [[PNWindowList alloc] init];
+    NSEnumerator *iter = [_windowDict objectEnumerator];
+    PNWindow     *window = nil;
+    
+    while (window = [iter nextObject]) {
+        if ([window desktopId] == desktopId) {
+            [list addWindow:window];
+        }
+    }
+    return list;
+}
+
 #pragma mark -
 #pragma mark Notification Sinks 
 

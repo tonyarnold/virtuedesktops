@@ -51,6 +51,12 @@
 	return [[PNDesktop alloc] initWithId: desktopId andName: name];
 }
 
++ (void) setDesktopId: (int) desktopId
+{
+    CGSConnection cgs = _CGSDefaultConnection();
+    CGSSetWorkspace(cgs, desktopId);
+}
+
 #pragma mark -
 
 - (id) init 
@@ -288,7 +294,7 @@
 	CGSNewTransition(cgs, &spec, &handle);
   
   // Now switch the workspace while the screen is frozen, setting up the transition target
-	CGSSetWorkspace(cgs, mDesktopId);
+	[PNDesktop setDesktopId: mDesktopId];
 	
   // Notify listeners that we are now the active desktop
 	[[NSNotificationCenter defaultCenter] postNotificationName: kPnOnDesktopDidActivate object: self];

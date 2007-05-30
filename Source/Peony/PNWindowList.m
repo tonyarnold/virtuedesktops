@@ -164,7 +164,13 @@
 	return -1;
 }
 
-- (void) setDesktop: (PNDesktop*) desktop {
+- (void) setDesktop: (PNDesktop*) desktop
+{
+    [self setDesktopId: [desktop identifier]];
+}
+
+- (void) setDesktopId: (int) desktopId
+{
 	if ([mWindows count] == 0)
 		return; 
 	
@@ -173,8 +179,8 @@
 	
 	windowsCount = [self nativeWindowsInCArray: &windows]; 
 	
-	CGSExtSetWindowListWorkspace(windows, windowsCount, [desktop identifier]);  
-
+	CGSExtSetWindowListWorkspace(windows, windowsCount, desktopId);  
+    
 	free(windows); 
 }
 

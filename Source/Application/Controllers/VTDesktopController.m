@@ -266,8 +266,8 @@
 
 - (VTDesktop*) activeDesktop {
 	// ask the desktop class for the active one 
-	int activeDesktopId = [PNDesktop activeDesktopIdentifier]; 
-	
+	int activeDesktopId = [PNDesktop activeDesktopIdentifier];
+    
 	// return that desktop 
 	return [self desktopForId: activeDesktopId]; 	
 }
@@ -388,7 +388,7 @@
 - (void) deserializeDesktops {
 	// desktop id 
 	int  desktopId = [PNDesktop firstDesktopIdentifier];
-  NSArray* serialisedDesktops = [[NSUserDefaults standardUserDefaults] objectForKey: VTDesktops];
+    NSArray* serialisedDesktops = [[NSUserDefaults standardUserDefaults] objectForKey: VTDesktops];
 	NSEnumerator*     serialisedDesktopsIterator	= [serialisedDesktops objectEnumerator];
 	NSDictionary*     serialisedDesktopDictionary;
 	NSMutableArray*   uuidArray = [[NSMutableArray alloc] init];
@@ -412,8 +412,14 @@
 	[uuidArray release];
   
 	// if we still have zero desktops handy, we will trigger creation of our default desktops 
-	if ([_desktops count] == 0)
-		[self createDefaultDesktops]; 
+	if ([_desktops count] == 0) {
+		[self createDefaultDesktops];
+  } else if ([PNDesktop activeDesktopIdentifier] >= desktopId) {
+    PNWindowList *list = [[PNWindowPool sharedWindowPool] windowsOnDesktopId:[PNDesktop activeDesktopIdentifier]];
+    [list setDesktopId:(desktopId - 1)];
+    [list release];
+    [PNDesktop setDesktopId:(desktopId - 1)];
+  }
 		
 	// bind to active desktop 
 	[[self activeDesktop] addObserver: self forKeyPath: @"desktopBackground" options: NSKeyValueObservingOptionNew context: NULL]; 
