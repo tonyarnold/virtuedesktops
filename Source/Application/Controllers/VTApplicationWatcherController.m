@@ -132,13 +132,21 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
         return;
     }
 	
-	// Is the application of this window bound to a desktop ?
+	// Is the application bound to a desktop ?
 	PNApplication*  application = [desktop applicationForPSN: mActivatedPSN];
 	PNDesktop*     appliDesktop = [application desktop];
+    if (appliDesktop == nil && [wrapper boundDesktop] != nil) {
+        appliDesktop = [wrapper boundDesktop];
+    }
+    
+    // Yes...
 	if (application != nil && appliDesktop != nil) {
-		if (!same && [appliDesktop identifier] != [desktop identifier] && ![application isSticky]) {
-			[application setDesktop:appliDesktop];
+		// And it is not the current desktop --> change the desktop
+        if (!same && [appliDesktop identifier] != [desktop identifier]) {
+			[application  setDesktop:appliDesktop];
+            [appliDesktop updateDesktop];
             [appliDesktop setActiveApplication:application];
+        // It is the current desktop --> confirm the activation
 		} else {
             [desktop setActiveApplication:application];
             [application activate];
@@ -237,7 +245,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 {
 	// check if the new desktop has any applications, and if it does not, change to the finder process 
 	VTDesktop*	desktop	= [notification object];
-    if (![desktop activateTopApplication]) {
+    if ([desktop applicationForPSN:mActivatedPSN] == nil && ![desktop activateTopApplication]) {
         SetFrontProcess(&mFinderPSN); 
     }
 }
