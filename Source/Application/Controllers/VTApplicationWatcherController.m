@@ -195,7 +195,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	}
 	
 	// If we know where the application is, so this is useless to iterate through all desktops.
-	if (appliDesktop == nil) {
+	if (appliDesktop == nil || application == nil) {
 		// we will now walk all desktops to fetch their applications and build up an array so we can then decide where to switch to 
 		NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	
@@ -213,7 +213,9 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 				if (neededModifiers == 0 && [application isUnfocused])
 					return;
 			
-				appliDesktop = desktop;
+                if (appliDesktop == nil) {
+                    appliDesktop = desktop;
+                }
 				break;
 			}
             application = nil;
