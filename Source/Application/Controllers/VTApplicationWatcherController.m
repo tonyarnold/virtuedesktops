@@ -126,15 +126,19 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
     VTApplicationWrapper *wrapper = [[VTApplicationController sharedInstance] applicationForPSN:&mActivatedPSN];
 	VTDesktop* desktop = [[VTDesktopController sharedInstance] activeDesktop];
 	[desktop updateDesktop];
-    
-    // The previous application has been hidden or terminated, activate the next application
-    if (oldPSN.lowLongOfPSN != kNoProcess && [desktop applicationForPSN:oldPSN] == nil && [desktop activateTopApplication]) {
-        return;
-    }
-	
+    	
 	// Is the application bound to a desktop ?
 	PNApplication*  application = [desktop applicationForPSN: mActivatedPSN];
 	PNDesktop*     appliDesktop = [application desktop];
+
+    // The previous application has been hidden or terminated, activate the next application
+    // and the new application is not on the current desktop --> let choose a new active application
+    // on the current desktop
+    if (oldPSN.lowLongOfPSN != kNoProcess && [desktop applicationForPSN:oldPSN] == nil && application == nil
+        && [desktop activateTopApplication]) {
+        return;
+    }
+    
     if (appliDesktop == nil && [wrapper boundDesktop] != nil) {
         appliDesktop = [wrapper boundDesktop];
     }
@@ -195,7 +199,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 	}
 	
 	// If we know where the application is, so this is useless to iterate through all desktops.
-	if (appliDesktop == nil || application == nil) {
+	if (appliDesktop == nil) {
 		// we will now walk all desktops to fetch their applications and build up an array so we can then decide where to switch to 
 		NSEnumerator*	desktopIter	= [[[VTDesktopController sharedInstance] desktops] objectEnumerator]; 
 	
@@ -213,21 +217,18 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 				if (neededModifiers == 0 && [application isUnfocused])
 					return;
 			
-                if (appliDesktop == nil) {
-                    appliDesktop = desktop;
-                }
+                appliDesktop = desktop;
 				break;
 			}
             application = nil;
 		}
-        
-        if (appliDesktop == nil) {
-            if (wrapper != nil) {
-                appliDesktop = [wrapper boundDesktop];
-            }
-        }
-	}
-	
+    }
+	if (appliDesktop == nil) {
+        return;
+    }
+    if (application == nil) {
+        application = [appliDesktop applicationForPSN:mActivatedPSN];
+    }
 	// switch... 
     if (application != nil) {
         [appliDesktop setActiveApplication:application];
@@ -247,6 +248,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 {
 	// check if the new desktop has any applications, and if it does not, change to the finder process 
 	VTDesktop*	desktop	= [notification object];
+    printf("Desktop changed to %s\n", [[ desktop name ] UTF8String]);
     if ([desktop applicationForPSN:mActivatedPSN] == nil && ![desktop activateTopApplication]) {
         SetFrontProcess(&mFinderPSN); 
     }
