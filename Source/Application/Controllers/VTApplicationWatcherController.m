@@ -135,7 +135,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
     // and the new application is not on the current desktop --> let choose a new active application
     // on the current desktop
     if (oldPSN.lowLongOfPSN != kNoProcess && [desktop applicationForPSN:oldPSN] == nil && application == nil
-        && [desktop activateTopApplication]) {
+        && !IsProcessVisible(&oldPSN) && [desktop activateTopApplication]) {
         return;
     }
     
@@ -248,7 +248,6 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
 {
 	// check if the new desktop has any applications, and if it does not, change to the finder process 
 	VTDesktop*	desktop	= [notification object];
-    printf("Desktop changed to %s\n", [[ desktop name ] UTF8String]);
     if ([desktop applicationForPSN:mActivatedPSN] == nil && ![desktop activateTopApplication]) {
         SetFrontProcess(&mFinderPSN); 
     }
