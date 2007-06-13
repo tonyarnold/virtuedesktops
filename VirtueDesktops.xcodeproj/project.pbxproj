@@ -1536,7 +1536,7 @@
 		EAC00E430AD1075D00389BDB /* TAUIColorLabelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUIColorLabelButtonCell.m; sourceTree = "<group>"; };
 		EAC00E6C0AD1088700389BDB /* NSBezierPath+Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+Plate.h"; sourceTree = "<group>"; };
 		EAC00E6D0AD1088700389BDB /* NSBezierPath+Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+Plate.m"; sourceTree = "<group>"; };
-		EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtue Interface Palette.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TA Interface Palette.palette"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC013B30AD10C2800389BDB /* ColorLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelInspector.h; sourceTree = "<group>"; };
 		EAC013B40AD10C2800389BDB /* ColorLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLabelInspector.m; sourceTree = "<group>"; };
 		EAC013B50AD10C2800389BDB /* ColorLabelPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLabelPalette.h; sourceTree = "<group>"; };
@@ -2480,7 +2480,7 @@
 				EA7A63830A86FD3D000D6B5E /* VTPluginPreferences.prefPane */,
 				EA7A63E00A86FE65000D6B5E /* VirtueDesktops.app */,
 				EAC00E250AD1065C00389BDB /* TAUserInterfaceElements.framework */,
-				EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */,
+				EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3120,7 +3120,7 @@
 			);
 			name = "TA Interface Palette";
 			productName = "Virtue Interface Palette";
-			productReference = EAC0139E0AD10BA400389BDB /* Virtue Interface Palette.bundle */;
+			productReference = EAC0139E0AD10BA400389BDB /* TA Interface Palette.palette */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -3422,7 +3422,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env perl";
-			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n $ENV{SRCROOT}`;\nmy $INFO   = \"$ENV{SRCROOT}/Configurations/ProductVersion.xcconfig\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);\n\n# Now touch the Info.plist to ensure it gets re-built and added to the application\nmy $cmd = `/usr/bin/env touch \"$ENV{PRODUCT_SETTINGS_PATH}\"`;";
+			shellScript = "use strict;\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $SVN    = `/usr/bin/which svnversion`;\nif ($SVN =~ m/no svnversion in/) {\n  foreach my $path (qw(/opt/darwinports/bin /opt/local/bin /sw/bin /opt/fink/bin /usr/local/bin /usr/bin)) {\n    $SVN = \"$path/svnversion\";\n    last if (-e $SVN);\n    $SVN = \"\";\n  }\n  die \"$0: Failed to find svnversion binary\" if ($SVN eq \"\");\n}\n\n\nmy $REV    = `$SVN -n \"$ENV{SRCROOT}\"`;\nmy $INFO   = \"$ENV{SRCROOT}/Configurations/ProductVersion.xcconfig\";\n\nmy  $version = $REV;\n    $version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/^(CURRENT_PROJECT_VERSION = ).*$/$1$version/mg;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);\n\n# Now touch the Info.plist to ensure it gets re-built and added to the application\nmy $cmd = `/usr/bin/env touch \"$ENV{PRODUCT_SETTINGS_PATH}\"`;";
 		};
 		EAC013FC0AD10D0C00389BDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
