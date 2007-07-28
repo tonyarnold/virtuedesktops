@@ -337,11 +337,11 @@ enum
 		
 		NSImage*		specularImage = [NSImage imageNamed: @"imageColorLabelMaskBar.png"]; 
 		NSImage*		receiver	= [[[NSImage alloc] initWithSize: plateRect.size] autorelease]; 
-		NSShadow*		shadow		= [[[NSShadow alloc] init] autorelease];
+		NSShadow*		shadower	= [[[NSShadow alloc] init] autorelease];
 		
-		[shadow setShadowColor: [NSColor darkGrayColor]];
-		[shadow setShadowBlurRadius: 0];
-		[shadow setShadowOffset: NSMakeSize(0, -1)];
+		[shadower setShadowColor: [NSColor darkGrayColor]];
+		[shadower setShadowBlurRadius: 0];
+		[shadower setShadowOffset: NSMakeSize(0, -1)];
 		
 		[specularImage setScalesWhenResized: YES]; 
 		[specularImage setSize: plateRect.size]; 
@@ -386,7 +386,7 @@ enum
 	while (window = [windowIter nextObject]) {    
 		// check if the application is hidden and skip this window if it is. We should also skip drawing the window if the individual window is hidden or not visible.
 		PNApplication* windowApplication = [mDesktop applicationForPid: [window ownerPid]]; 
-		if ((windowApplication) && ([windowApplication isHidden]))
+		if ((windowApplication) && ([windowApplication isHidden] || [windowApplication isMe]))
 			continue; 
 		
 		// get the window rect
@@ -480,7 +480,7 @@ enum
 	
 	while (application = [appletIter nextObject]) {
 		// skip hidden applications from display
-		if ([application isHidden]) 
+		if ([application isHidden] || [application isMe]) 
 			continue; 
 		
 		VTMatrixPagerAppletCell* cell = [[VTMatrixPagerAppletCell alloc] initWithApplication: application]; 

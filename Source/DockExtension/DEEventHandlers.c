@@ -16,6 +16,8 @@
 /* Decomm */ 
 #include "DEComm.h" 
 
+#include "DEEventHandlers.h"
+
 /* Current version is 1.1 */ 
 #define kDeVersionMajor	1
 #define kDeVersionMinor	1

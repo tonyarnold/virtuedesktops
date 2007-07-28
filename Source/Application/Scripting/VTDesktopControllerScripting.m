@@ -46,9 +46,9 @@
   [self insertObject: desktop inDesktopsAtIndex: [_desktops count]];
 }
 
-- (void) removeFromDesktopsAtIndex: (unsigned int) index 
+- (void) removeFromDesktopsAtIndex: (unsigned int) desktopIndex 
 {
-  [self removeObjectFromDesktopsAtIndex: index];
+  [self removeObjectFromDesktopsAtIndex: desktopIndex];
 }
 
 @end

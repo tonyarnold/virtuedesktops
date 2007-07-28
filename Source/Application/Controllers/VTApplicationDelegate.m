@@ -356,9 +356,9 @@ enum
 #pragma mark -
 - (IBAction) deleteActiveDesktop: (id) sender {
 	// fetch index of active desktop to delete
-	int index = [[[VTDesktopController sharedInstance] desktops] indexOfObject: [[VTDesktopController sharedInstance] activeDesktop]];
+	int desktopIndex = [[[VTDesktopController sharedInstance] desktops] indexOfObject: [[VTDesktopController sharedInstance] activeDesktop]];
 	// and get rid of it
-	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: index];
+	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex];
 }
 
 - (BOOL) checkExecutablePermissions {
@@ -370,7 +370,7 @@ enum
 
 - (IBAction) fixExecutablePermissions: (id) sender {
 	// If we were not able to inject code, with fix the executable by changing it's group to procmod (9) and by setting the set-group-ID-on-execution bit
-	int fixExecutableStatus = fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);	
+	fixVirtueDesktopsExecutable([[[NSBundle mainBundle] executablePath] fileSystemRepresentation]);	
 	
 	[[NSUserDefaults standardUserDefaults] setBool: YES	forKey: @"PermissionsFixed"];
 	// We override asking us whether we want to quit, because the user really doesn't have any choice.
@@ -378,7 +378,8 @@ enum
 	
 	// Thanks to Allan Odgaard for this restart code, which is much more clever than mine was.
 	setenv("LAUNCH_PATH", [[[NSBundle mainBundle] bundlePath] UTF8String], 1);
-	system("/bin/bash -c '{ for (( i = 0; i < 3000 && $(echo $(/bin/ps -xp $PPID|/usr/bin/wc -l))-1; i++ )); do\n"
+	system("/bin/bash -c '{ for (
+                                 ); do\n"
          "    /bin/sleep .2;\n"
          "  done\n"
          "  if [[ $(/bin/ps -xp $PPID|/usr/bin/wc -l) -ne 2 ]]; then\n"
@@ -858,7 +859,7 @@ enum
 		if (desktop == nil)
 			continue;
 		
-		NSMenuItem* menuItem = [[NSMenuItem alloc] initWithTitle: ([desktop name] == nil ? @" " : [desktop name]) action: @selector(onMenuDesktopSelected:) keyEquivalent: @""];
+		menuItem = [[NSMenuItem alloc] initWithTitle: ([desktop name] == nil ? @" " : [desktop name]) action: @selector(onMenuDesktopSelected:) keyEquivalent: @""];
 		[menuItem setRepresentedObject: desktop];
 		[menuItem setEnabled: YES];
 		
@@ -908,7 +909,7 @@ enum
 			continue;
     
 		
-		NSMenuItem* menuItem = [[NSMenuItem alloc] initWithTitle: applicationTitle action: nil keyEquivalent: @""];
+		menuItem = [[NSMenuItem alloc] initWithTitle: applicationTitle action: nil keyEquivalent: @""];
 		[menuItem setRepresentedObject: application];
 		[menuItem setEnabled: YES];
     
@@ -928,7 +929,7 @@ enum
 	
 	// if there were no entries to be made, we will add a placeholder
 	if ([applications count] == 0) {
-		NSMenuItem* menuItem = [[NSMenuItem alloc]
+		menuItem = [[NSMenuItem alloc]
 		initWithTitle: NSLocalizedString(@"VTStatusbarMenuNoApplication", @"No applications placeholder")
            action: nil
 		keyEquivalent: @""];

@@ -136,9 +136,8 @@ static void ZNAxialShaderFunction(void* infoIn, const float* in, float* out) {
 			startPoint  = CGPointMake(frame.size.width, frame.origin.y); 
 			endPoint    = CGPointMake(frame.origin.x, frame.size.height); 
 			break; 
-		// Just to stop the warning
-		case ZNEdgeAny:
-			break;
+        default:
+            endPoint = startPoint = CGPointMake(0.,0.);
 	}
 	
 	// create the shader 

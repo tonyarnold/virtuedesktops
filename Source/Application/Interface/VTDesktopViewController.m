@@ -101,7 +101,7 @@
 	[[VTDesktopController sharedInstance] removeObjectFromDesktopsAtIndex: desktopIndex];
 	[mDesktopsController rearrangeObjects];
   
-  if ([[[VTDesktopController sharedInstance] desktops] count] > desktopIndex)
+  if ((int)[[[VTDesktopController sharedInstance] desktops] count] > desktopIndex)
   {
     [mDesktopsController setSelectionIndex: desktopIndex];
   }
@@ -341,9 +341,9 @@
 
 - (void) setSelectedDesktop: (VTDesktop*) desktop {
   // get index of passed desktop
-  unsigned int index = [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] indexOfObject: desktop];
+  unsigned int desktopIndex = [[[[VTLayoutController sharedInstance] activeLayout] orderedDesktops] indexOfObject: desktop];
   // and select it in the table view
-  [mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: index]
+  [mDesktopsTableView selectRowIndexes: [NSIndexSet indexSetWithIndex: desktopIndex]
                   byExtendingSelection: NO];
 }
 

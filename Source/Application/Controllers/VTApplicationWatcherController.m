@@ -143,7 +143,7 @@ static OSStatus handleAppFrontSwitched(EventHandlerCallRef inHandlerCallRef, Eve
         appliDesktop = [wrapper boundDesktop];
     }
     
-    // Yes...
+    // It is bound to another desktop...
 	if (application != nil && appliDesktop != nil) {
 		// And it is not the current desktop --> change the desktop
         if (!same && [appliDesktop identifier] != [desktop identifier]) {

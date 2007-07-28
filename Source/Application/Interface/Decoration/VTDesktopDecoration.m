@@ -90,7 +90,6 @@
 	
 	while (primitive = [primitiveIter nextObject]) {    
 		// fetch the type of this primitive and persist it 
-		NSString*							primitiveType = NSStringFromClass([primitive class]); 
 		NSMutableDictionary*	primitiveDict = [NSMutableDictionary dictionary]; 
 		
 		[primitiveDict setObject: NSStringFromClass([primitive class]) forKey: kVtCodingPrimitiveType];
@@ -110,7 +109,7 @@
 	// now start decoding the list of primitives 
 	NSArray* primitiveList = [dictionary objectForKey: kVtCodingPrimitives]; 
 	if (primitiveList == nil)
-		return; 
+		return self; 
 	
 	NSEnumerator*	primitiveIter	= [primitiveList objectEnumerator]; 
 	NSDictionary*	primitiveDict	= nil; 
@@ -218,35 +217,35 @@
 #pragma mark -
 #pragma mark Bindings 
 
-- (void) insertObjectInDecorationPrimitives: (VTDecorationPrimitive*) primitive atIndex: (unsigned int) index {
-	[self insertPrimitive: primitive atIndex: index]; 
+- (void) insertObjectInDecorationPrimitives: (VTDecorationPrimitive*) primitive atIndex: (unsigned int) objIndex {
+	[self insertPrimitive: primitive atIndex: objIndex]; 
 }
 
-- (void) insertIntoDecorationPrimitives: (VTDecorationPrimitive*) primitive atIndex: (unsigned int) index {
-	[self insertPrimitive: primitive atIndex: index]; 
+- (void) insertIntoDecorationPrimitives: (VTDecorationPrimitive*) primitive atIndex: (unsigned int) objIndex {
+	[self insertPrimitive: primitive atIndex: objIndex]; 
 }
 
-- (void) removeObjectFromDecorationPrimitivesAtIndex: (unsigned int) index {
-	[self removePrimitiveAtIndex: index]; 
+- (void) removeObjectFromDecorationPrimitivesAtIndex: (unsigned int) objIndex {
+	[self removePrimitiveAtIndex: objIndex]; 
 }
 
-- (void) removeFromDecorationPrimitivesAtIndex: (unsigned int) index {
-	[self removePrimitiveAtIndex: index]; 
+- (void) removeFromDecorationPrimitivesAtIndex: (unsigned int) objIndex {
+	[self removePrimitiveAtIndex: objIndex]; 
 }
 
-- (void) moveObjectAtIndex: (unsigned int) index toIndex: (unsigned int) otherIndex {
+- (void) moveObjectAtIndex: (unsigned int) objIndex toIndex: (unsigned int) otherIndex {
 	// this is no vto compliant message, so we will have to do the notification ourselves 
 	[self willChangeValueForKey: @"decorationPrimitives"]; 
 	
 	// get the object instance we move 
-	VTDecorationPrimitive* primitiveToMove = [[mDecorationPrimitives objectAtIndex: index] retain]; 
+	VTDecorationPrimitive* primitiveToMove = [[mDecorationPrimitives objectAtIndex: objIndex] retain]; 
 	
 	// correct insertion index 
-	if (index < otherIndex)
+	if (objIndex < otherIndex)
 		otherIndex--; 
 	
 	// remove and reinsert object
-	[mDecorationPrimitives removeObjectAtIndex: index]; 
+	[mDecorationPrimitives removeObjectAtIndex: objIndex]; 
 	[mDecorationPrimitives insertObject: primitiveToMove atIndex: otherIndex]; 
 	
 	// and notify that we finished the move 
@@ -261,19 +260,19 @@
 #pragma mark -
 @implementation VTDesktopDecoration(Private) 
 
-- (void) insertPrimitive: (VTDecorationPrimitive*) primitive atIndex: (unsigned int) index {
+- (void) insertPrimitive: (VTDecorationPrimitive*) primitive atIndex: (unsigned int) objIndex {
 	[primitive setControlView: mControlView]; 
 	[primitive setContainer: self]; 
 	
-	[mDecorationPrimitives insertObject: primitive atIndex: index]; 
+	[mDecorationPrimitives insertObject: primitive atIndex: objIndex]; 
 	
 	if (mControlView)
 		// and update our control view 
 		[mControlView setNeedsDisplay: YES]; 	
 }
 
-- (void) removePrimitiveAtIndex: (unsigned int) index {
-	VTDecorationPrimitive* primitiveToRemove = [mDecorationPrimitives objectAtIndex: index]; 
+- (void) removePrimitiveAtIndex: (unsigned int) objIndex {
+	VTDecorationPrimitive* primitiveToRemove = [mDecorationPrimitives objectAtIndex: objIndex]; 
 		
 	// unhook the primitive 
 //	[primitiveToRemove setControlView: nil]; 

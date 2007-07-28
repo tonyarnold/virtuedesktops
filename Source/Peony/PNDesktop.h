@@ -239,6 +239,7 @@ enum
               
 #pragma mark -
 #pragma mark Queries 
+- (PNWindow*) windowUnderCursor;
 - (PNWindow*) windowContainingPoint: (NSPoint) point;
 - (PNWindow*) windowForId: (CGSWindow) window; 
 - (PNApplication*) applicationForPid: (pid_t) pid;

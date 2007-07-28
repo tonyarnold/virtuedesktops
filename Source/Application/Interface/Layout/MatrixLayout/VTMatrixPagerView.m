@@ -591,7 +591,6 @@ enum
 	[mPagerCells getRow: &row column: &col ofCell: mCurrentDraggingTarget]; 
   
 	// we will fetch indices of dragged cell and the target cell and exchange them 
-	NSString*	sourceUUID	= [dataDictionary objectForKey: kVtDragDataSourceUUID]; 
 	int			sourceIndex	= [[dataDictionary objectForKey: kVtDragDataSourceIndex] intValue]; 
 	int			targetIndex = (row * [mPagerCells numberOfColumns]) + col; 
 	

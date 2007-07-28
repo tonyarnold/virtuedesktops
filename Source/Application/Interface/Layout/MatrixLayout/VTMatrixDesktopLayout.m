@@ -313,18 +313,18 @@
 	return mDesktopLayout; 
 }
 
-- (void) swapDesktopAtIndex: (unsigned int) index withIndex: (unsigned int) otherIndex {
-	if (index == otherIndex)
+- (void) swapDesktopAtIndex: (unsigned int) firstIndex withIndex: (unsigned int) otherIndex {
+	if (firstIndex == otherIndex)
 		return; 
 	
 	[self willChangeValueForKey: @"desktopLayout"];
 	[self willChangeValueForKey: @"desktops"]; 
 	[self willChangeValueForKey: @"orderedDesktops"]; 
 	
-	NSString* uuidOfFirst	= [[[mDesktopLayout objectAtIndex: index] retain] autorelease]; 
+	NSString* uuidOfFirst	= [[[mDesktopLayout objectAtIndex: firstIndex] retain] autorelease]; 
 	NSString* uuidOfSecond	= [[[mDesktopLayout objectAtIndex: otherIndex] retain] autorelease]; 
 	
-	[mDesktopLayout replaceObjectAtIndex: index withObject: uuidOfSecond]; 
+	[mDesktopLayout replaceObjectAtIndex: firstIndex withObject: uuidOfSecond]; 
 	[mDesktopLayout replaceObjectAtIndex: otherIndex withObject: uuidOfFirst]; 
 	
 	[self didChangeValueForKey: @"orderedDesktops"]; 
@@ -332,18 +332,18 @@
 	[self didChangeValueForKey: @"desktopLayout"]; 
 }
 
-- (void) moveDesktopAtIndex: (unsigned int) index toIndex: (unsigned int) newIndex {	
+- (void) moveDesktopAtIndex: (unsigned int) oldIndex toIndex: (unsigned int) newIndex {	
 	[self willChangeValueForKey: @"desktopLayout"];
 	[self willChangeValueForKey: @"desktops"]; 
 	[self willChangeValueForKey: @"orderedDesktops"]; 
   
-  VTDesktop* desktopToMove = [[mDesktopLayout objectAtIndex: index] retain];
+  VTDesktop* desktopToMove = [[mDesktopLayout objectAtIndex: oldIndex] retain];
   
   // Correct insertion index
-  if (index < newIndex)
+  if (oldIndex < newIndex)
     newIndex--;
 	
-  [mDesktopLayout removeObjectAtIndex: index];
+  [mDesktopLayout removeObjectAtIndex: oldIndex];
   [mDesktopLayout insertObject: desktopToMove atIndex: newIndex];
   
 	[self didChangeValueForKey: @"orderedDesktops"]; 
@@ -398,30 +398,30 @@
 	// now we can search the desktop we need 
 	int referenceIndex = [indicesArray indexOfObject: [NSNumber numberWithInt: indexOfReferenceDesktop]]; 
 	// find our adjacent desktop 
-	int index = referenceIndex + indicesArrayIncrement; 
+	int indice = referenceIndex + indicesArrayIncrement; 
 	
-	while (index != referenceIndex) {
-		if ((index == [indicesArray count]) || (index < 0)) {
+	while (indice != referenceIndex) {
+		if ((indice == (int)[indicesArray count]) || (index < 0)) {
 			// if we should not wrap, we return 
 			if (mWraps == NO) 
 				return desktop; 
 			
-			if (index < 0)
-				index = [indicesArray count] - 1; 
+			if (indice < 0)
+				indice = [indicesArray count] - 1; 
 			else
-				index = 0; 
+				indice = 0; 
 		}
 		else {
-			if ([[mDesktopLayout objectAtIndex: [[indicesArray objectAtIndex: index] intValue]] isEqualToString: kFreeDesktopSlotIdentifier]) {
+			if ([[mDesktopLayout objectAtIndex: [[indicesArray objectAtIndex: indice] intValue]] isEqualToString: kFreeDesktopSlotIdentifier]) {
 				// if we should not jump gaps of non-taken slots, we return 
 				if (mJumpsGaps == NO)
 					return desktop; 
 				
-				index += indicesArrayIncrement; 
+				indice += indicesArrayIncrement; 
 			}
 			else {
 				// find the desktop 
-				NSString* identifier = [mDesktopLayout objectAtIndex: [[indicesArray objectAtIndex: index] intValue]]; 				
+				NSString* identifier = [mDesktopLayout objectAtIndex: [[indicesArray objectAtIndex: indice] intValue]]; 				
 				return [[VTDesktopController sharedInstance] desktopWithUUID: identifier]; 
 			}
 		}
@@ -484,12 +484,12 @@
 #pragma mark -
 @implementation VTMatrixDesktopLayout(Private) 
 
-- (int) columnForIndex: (unsigned int) index {
-	return (index % mColumns);
+- (int) columnForIndex: (unsigned int) objIndex {
+	return (objIndex % mColumns);
 }
 
-- (int) rowForIndex: (unsigned int) index {
-	return (index / mColumns); 
+- (int) rowForIndex: (unsigned int) objIndex {
+	return (objIndex / mColumns); 
 }
 
 #pragma mark -
@@ -500,9 +500,9 @@
 - (NSArray*) indicesForColumn: (unsigned int) column {
 	NSMutableArray* indices = [[NSMutableArray alloc] initWithCapacity: mRows]; 
 	
-	unsigned int index = column; 
-	for (index; index < [mDesktopLayout count]; index += mColumns) {
-		[indices addObject: [NSNumber numberWithUnsignedInt: index]]; 
+	unsigned int i; 
+	for (i = column; i < [mDesktopLayout count] ; i += mColumns) {
+		[indices addObject: [NSNumber numberWithUnsignedInt: i]]; 
 	}
 	
 	return [indices autorelease]; 
@@ -511,9 +511,9 @@
 - (NSArray*) indicesForRow: (unsigned int) row {
 	NSMutableArray* indices = [[NSMutableArray alloc] initWithCapacity: mColumns]; 
 	
-	unsigned int index = row * mColumns; 
-	for (index; index < (mColumns * (row + 1)); index++) {
-		[indices addObject: [NSNumber numberWithUnsignedInt: index]]; 
+	unsigned int i; 
+	for (i = row * mColumns ; i < (mColumns * (row + 1)); i++) {
+		[indices addObject: [NSNumber numberWithUnsignedInt: i]]; 
 	}
 	
 	return [indices autorelease]; 
@@ -522,9 +522,9 @@
 - (NSArray*) indicesForAll {
 	NSMutableArray* indices = [[NSMutableArray alloc] initWithCapacity: (mColumns * mRows)];
 	
-	unsigned int index = 0; 
-	for (index; index < (mColumns * mRows); index++) {
-		[indices addObject: [NSNumber numberWithUnsignedInt: index]]; 
+	unsigned int i; 
+	for (i = 0 ; i < (mColumns * mRows); i++) {
+		[indices addObject: [NSNumber numberWithUnsignedInt: i]]; 
 	}
 	
 	return [indices autorelease]; 
@@ -540,12 +540,12 @@
 	// resize and fill empty slots with null markers 
 	NSMutableArray*	newLayout = [[NSMutableArray alloc] initWithCapacity: (mRows * mColumns)]; 
 
-	NSEnumerator*		oldIter		= [mDesktopLayout objectEnumerator]; 
-	NSString*				old				= nil; 
-	int							index			= 0; 
+	NSEnumerator* oldIter = [mDesktopLayout objectEnumerator]; 
+	NSString*     old     = nil; 
+	unsigned int  i	      = 0; 
 	
 	// copy over old entries 
-	while ((index < (mRows * mColumns)) && (old = [oldIter nextObject])) {
+	while ((i < (mRows * mColumns)) && (old = [oldIter nextObject])) {
 		// if we are doing this in compacted mode, we will ignore missing 
 		// desktop slots and only deal with filled ones here 
 		if (mCompacted) {
@@ -554,7 +554,7 @@
 		}
 		
 		[newLayout addObject: old]; 
-		index++; 
+		i++; 
 	}
 	
 	// fill up any missing slots 
@@ -607,14 +607,14 @@
 			continue; 
 		
 		// now we are dealing with a new desktop, find us a free slot 
-		int index = [mDesktopLayout indexOfObject: kFreeDesktopSlotIdentifier]; 
+		int desktopIndex = [mDesktopLayout indexOfObject: kFreeDesktopSlotIdentifier]; 
 		// if there are no more free slots, we will add this desktop, otherwise    
-		if (index == NSNotFound) {
-      [self setNumberOfRows: ([self numberOfRows] + 1)];
-      [mDesktopLayout addObject: [desktop uuid]];
-    } else {
-      [mDesktopLayout replaceObjectAtIndex: index withObject: [desktop uuid]];
-    }
+		if (desktopIndex == NSNotFound) {
+            [self setNumberOfRows: ([self numberOfRows] + 1)];
+            [mDesktopLayout addObject: [desktop uuid]];
+        } else {
+            [mDesktopLayout replaceObjectAtIndex: desktopIndex withObject: [desktop uuid]];
+        }
 	}
 	
 	[self didChangeValueForKey: @"orderedDesktops"];

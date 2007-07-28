@@ -129,13 +129,13 @@
 	// See 'onDesktopWillChange' for an explanation of what is going on here
 	VTDesktop*  desktopToActivate		= [notification object]; 
 	NSWindow*		window							= [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]];
-	PNWindow*   pWindow             = [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
+	PNWindow*   pnWindow             = [PNWindow windowWithNSWindow: [mWindows objectForKey: [NSNumber numberWithInt: [desktopToActivate identifier]]]];
   
 	[window orderWindow: NSWindowBelow relativeTo: 0];
 	[window setLevel: (kCGDesktopIconWindowLevel - 1)];
 	
-	[pWindow setIgnoredByExpose: YES];
-	[pWindow setSticky: NO];
+	[pnWindow setIgnoredByExpose: YES];
+	[pnWindow setSticky: NO];
 }
 
 @end 
@@ -145,10 +145,10 @@
 
 - (NSWindow*) createWindowForDesktop: (VTDesktop*) desktop withDecoration: (VTDesktopDecoration*) decoration
 {
-	NSScreen* mainScreen = [NSScreen mainScreen];
+	NSScreen* mainScr = [NSScreen mainScreen];
 	
 	// Create a new window 
-	NSWindow* window = [[[NSWindow alloc] initWithContentRect: [mainScreen frame] 
+	NSWindow* window = [[[NSWindow alloc] initWithContentRect: [mainScr frame] 
                                                   styleMask: NSBorderlessWindowMask 
                                                     backing: NSBackingStoreBuffered
                                                       defer: NO] autorelease];

@@ -448,15 +448,15 @@
 	NSDictionary*	userInfo	= [notification userInfo]; 
 	PNApplication*	application	= [userInfo objectForKey: PNApplicationInstanceParam]; 
 	
-	unsigned int index = [mApplications indexOfObjectIdenticalTo: application]; 
+	unsigned int appIndex = [mApplications indexOfObjectIdenticalTo: application]; 
 	
 	// check if we already know about this instance 
-	if (index == NSNotFound) {
+	if (appIndex == NSNotFound) {
 		return; 
 	}
 	
 	// remove it from our list 
-	[mApplications removeObjectAtIndex: index]; 
+	[mApplications removeObjectAtIndex: appIndex]; 
 	
 	// if there are no more applications in our list, switch to non-running mode 
 	if ([mApplications count] == 0) {

@@ -18,6 +18,8 @@
 #import "VTPluginCollection.h" 
 #import "VTPluginScript.h" 
 #import "VTDesktopBackgroundHelper.h" 
+#import "VTApplicationWrapper.h"
+#import "VTApplicationController.h"
 
 #import <Zen/Zen.h> 
 
@@ -147,14 +149,14 @@
 	[self insertObject: desktop inDesktopsAtIndex: [_desktops count]]; 
 }
 
-- (void) insertObject: (VTDesktop*) desktop inDesktopsAtIndex: (unsigned int) index {
+- (void) insertObject: (VTDesktop*) desktop inDesktopsAtIndex: (unsigned int) objIndex {
 	[[NSNotificationCenter defaultCenter] postNotificationName: VTDesktopWillAddNotification object: desktop]; 
 	// notification that canDelete will change 
 	[self willChangeValueForKey: @"canAdd"];
 	[self willChangeValueForKey: @"canDelete"]; 
 	
 	// and add 
-	[_desktops insertObject: desktop atIndex: index]; 
+	[_desktops insertObject: desktop atIndex: objIndex]; 
 	
 	// attach the decoration 
 	[[VTDesktopDecorationController sharedInstance] attachDecoration: [desktop decoration]]; 
@@ -181,8 +183,8 @@
 	[self didChangeValueForKey: @"canDelete"]; 	
 }
 
-- (void) removeObjectFromDesktopsAtIndex: (unsigned int) index {
-	VTDesktop* desktopToRemove = [[_desktops objectAtIndex: index] retain]; 
+- (void) removeObjectFromDesktopsAtIndex: (unsigned int) objIndex {
+	VTDesktop* desktopToRemove = [[_desktops objectAtIndex: objIndex] retain]; 
 	
 	// here we are sure we want to delete the desktop, so we will trigger some 
 	// notifications by hand to inform our plugins 
@@ -196,7 +198,7 @@
 	
 	
 	// check which desktop to move them to 
-	int targetIndex = index - 1; 
+	int targetIndex = objIndex - 1; 
 	if (targetIndex < 0)
 		targetIndex = [_desktops count] - 1; 
 	
@@ -232,7 +234,7 @@
 	// and remove the object 
 	[self willChangeValueForKey: @"canAdd"];
 	[self willChangeValueForKey: @"canDelete"]; 
-	[_desktops removeObjectAtIndex: index]; 
+	[_desktops removeObjectAtIndex: objIndex]; 
 	[self didChangeValueForKey: @"canAdd"];
 	[self didChangeValueForKey: @"canDelete"]; 
 	
@@ -250,7 +252,19 @@
 }
 
 - (void) moveWindowUnderCursorToDesktop: (VTDesktop*) desktop {
-	[[self activeDesktop] moveWindowUnderCursorToDesktop: desktop];
+    // Retreive the window
+    PNDesktop *activeDesktop = [self activeDesktop];
+    PNWindow *window = [activeDesktop windowUnderCursor];
+    if (!window) {
+        return;
+    }
+    
+    // Check the application: do not move windows of application bounded to a desktop
+    VTApplicationWrapper *wrapper = [[VTApplicationController sharedInstance] applicationForPid: [window ownerPid]];
+    if ([wrapper boundDesktop]) {
+        return;
+    }
+	[window setDesktop:desktop];
 }
 
 #pragma mark -

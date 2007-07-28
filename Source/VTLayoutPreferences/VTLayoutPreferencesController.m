@@ -98,6 +98,7 @@
 
 - (VTDesktopLayout*) selectedLayout {
 //	return [[mLayoutList selectedItem] representedObject]; 
+    return nil;
 }
 
 @end 

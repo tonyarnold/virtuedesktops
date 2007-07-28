@@ -261,16 +261,16 @@
 		VTTriggerGroup*	navigationGroup	= [self groupWithName: VTTriggerGroupNavigationName]; 
 		
 		while (desktop = [desktopIter nextObject]) {
-			NSEnumerator*					notificationIter	= [[[VTTriggerController sharedInstance] notificationsWithName: VTRequestChangeDesktopName] objectEnumerator]; 
-			VTTriggerDesktopNotification*	notification		= nil; 
+			VTTriggerDesktopNotification*	desktopNotification		= nil; 
+			notificationIter	= [[[VTTriggerController sharedInstance] notificationsWithName: VTRequestChangeDesktopName] objectEnumerator]; 
 			
-			while (notification = [notificationIter nextObject]) {
-				if ([[notification desktop] isEqual: desktop]) {
+			while (desktopNotification = [notificationIter nextObject]) {
+				if ([[desktopNotification desktop] isEqual: desktop]) {
 					break; 
 				}
 			}
 			
-			if (notification == nil) {
+			if (desktopNotification == nil) {
 				// add new notification for this group 
 				VTTriggerDesktopNotification *newNotification = [[VTTriggerDesktopNotification alloc] init];
 				[navigationGroup addNotification: newNotification]; 
@@ -321,9 +321,6 @@
 
 // TODO: Move into application bundle code 
 - (void) readLocalizedNamesForGroup: (VTTriggerGroup*) group {
-	NSString*	nameKey; 
-	NSString*	descKey; 
-	
 	// First, fetch the group 
 	[group setName: NSLocalizedStringFromTable([[group key] stringByAppendingString: @"_name"], @"Notifications", @"Group name")]; 
 	

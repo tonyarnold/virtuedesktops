@@ -20,13 +20,13 @@
 - (NSScriptObjectSpecifier*) objectSpecifier {
 	VTDesktop* desktop = [[VTDesktopController sharedInstance] desktopWithIdentifier: [self desktopId]]; 
 	
-	int index = [[desktop applications] indexOfObject: self]; 
+	int appIndex = [[desktop applications] indexOfObject: self]; 
 	
 	NSScriptObjectSpecifier* containerRef = [desktop objectSpecifier]; 
 	return [[[NSIndexSpecifier alloc] initWithContainerClassDescription: [containerRef keyClassDescription] 
                                                    containerSpecifier: containerRef 
                                                                   key: @"applications" 
-                                                                index: index] autorelease]; 
+                                                                index: appIndex] autorelease]; 
 }
 
 #pragma mark -

@@ -21,12 +21,12 @@
 	VTDesktop*      desktop			= [[[VTDesktopController sharedInstance] desktopWithIdentifier: [self desktopId]] retain]; 
 	PNApplication*	application	= [[desktop applicationForPid: [self ownerPid]] retain]; 
 	
-	int index = [[application windows] indexOfObject: self]; 
+	int windowIndex = [[application windows] indexOfObject: self]; 
 	
 	NSScriptObjectSpecifier* containerRef = [application objectSpecifier]; 
   [desktop release];
   [application release];
-	return [[[NSIndexSpecifier alloc] initWithContainerClassDescription: [containerRef keyClassDescription] containerSpecifier: containerRef key: @"windows" index: index] autorelease]; 
+	return [[[NSIndexSpecifier alloc] initWithContainerClassDescription: [containerRef keyClassDescription] containerSpecifier: containerRef key: @"windows" index: windowIndex] autorelease]; 
 }
 
 

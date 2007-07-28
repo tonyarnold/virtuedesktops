@@ -118,16 +118,17 @@
 		
 		if (newWrapper == nil)
 			break; 
-    
-    if ([[NSFileManager defaultManager] fileExistsAtPath: [newWrapper bundlePath]] == NO)
-    {  
-      break;
-    }
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath: [newWrapper bundlePath]] == NO)
+        {  
+            break;
+        }
 		
 		// and add it 
 		[self attachApplication: newWrapper]; 
 		[newWrapper release]; 
 	}
+    return self;
 }
 
 #pragma mark -
@@ -162,6 +163,11 @@
             return wrapper;
         }
     }
+    return nil;
+}
+
+- (VTApplicationWrapper*) application: (PNApplication*) app {
+    return [self applicationForPid: [app pid]];
 }
 
 #pragma mark -

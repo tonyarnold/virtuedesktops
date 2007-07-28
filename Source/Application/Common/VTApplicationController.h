@@ -27,6 +27,7 @@
 - (VTApplicationWrapper *) applicationForPath: (NSString *) path;
 - (VTApplicationWrapper *) applicationForPSN: (ProcessSerialNumber*) psn;
 - (VTApplicationWrapper *) applicationForPid: (pid_t) pid;
+- (VTApplicationWrapper *) application: (PNApplication*) app;
 
 - (void) attachApplication: (VTApplicationWrapper *) wrapper; 
 - (void) detachApplication: (VTApplicationWrapper *) wrapper; 

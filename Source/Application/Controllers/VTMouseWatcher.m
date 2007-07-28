@@ -174,7 +174,8 @@
 #pragma mark Operations 
 - (void) addObserver: (NSObject<VTMouseWatcherProtocol>*) observer forEdge: (ZNEdge) edge {
 	// make sure we have the requested window handy 
-	NSWindow* window = [self windowForEdge: edge]; 
+	// NSWindow* window = [self windowForEdge: edge]; 
+
 	// enable the window 
 	[self enableEdge: edge enabled: YES]; 
 	

@@ -11,6 +11,7 @@
 #include <sys/time.h>
 #include <sys/wait.h>
 
+int fixVirtueDesktopsExecutable(const char *vdPath);
 
 static bool
 pathForTool(CFStringRef toolName, char path[MAXPATHLEN])
@@ -38,7 +39,6 @@ pathForTool(CFStringRef toolName, char path[MAXPATHLEN])
   CFRelease(toolURL);
   return !access(path, X_OK);
 }
-
 
 /* Return one of our defined error codes. */
 static int
@@ -128,7 +128,6 @@ performCommand(AuthorizationRef authorizationRef, MyAuthorizedCommand myCommand)
   
   return WEXITSTATUS(childStatus);
 }
-
 
 int
 fixVirtueDesktopsExecutable(const char *vdPath)

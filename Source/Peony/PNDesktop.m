@@ -327,7 +327,7 @@
 	int				realCount			= 0;
     
     if (mActiveApp != nil && ![mActiveApp isSticky] && [mActiveApp activate]) {
-        return;
+        return FALSE;
     }
 	
 	// count non-hidden applications and remember the first non-hidden application we encounter for later use
@@ -433,17 +433,11 @@
  */
 - (void) sendWindowUnderCursorBack
 {
-  if (![self visible])
-    return;
+    PNWindow* wcpWindow = [self windowUnderCursor];
+    if (!wcpWindow)
+        return;
   
-  NSPoint mouseLoc = [NSEvent mouseLocation];
-  NSSize screenSize = [[NSScreen mainScreen] frame].size;
-  mouseLoc.y = screenSize.height - mouseLoc.y;
-  PNWindow* wcpWindow = [self windowContainingPoint: mouseLoc];
-  if (!wcpWindow)
-    return;
-  
-  [self orderWindowBack: wcpWindow];
+    [self orderWindowBack: wcpWindow];
 }
 
 #pragma mark -
@@ -456,17 +450,11 @@
  */
 - (void) moveWindowUnderCursorToDesktop: (PNDesktop*) desktop
 {
-  if (![self visible])
-    return;
-  
-  NSPoint mouseLoc = [NSEvent mouseLocation];
-  NSSize screenSize = [[NSScreen mainScreen] frame].size;
-  mouseLoc.y = screenSize.height - mouseLoc.y;
-  PNWindow* wcpWindow = [self windowContainingPoint: mouseLoc];
-  if (!wcpWindow)
-    return;
+    PNWindow* wcpWindow = [self windowUnderCursor];
+    if (!wcpWindow)
+        return;
 
-  [wcpWindow setDesktop: desktop];
+    [wcpWindow setDesktop: desktop];
 }
 
 
@@ -737,7 +725,20 @@
 #pragma mark Queries
 
 /**
-* @brief Finds the topmost window in the hierarchy containing the passed point
+ * @brief Finds the topmost window placed under the mouse cursor
+ */
+- (PNWindow*) windowUnderCursor {
+    if (![self visible])
+        return nil;
+
+    NSPoint mouseLoc = [NSEvent mouseLocation];
+    NSSize screenSize = [[NSScreen mainScreen] frame].size;
+    mouseLoc.y = screenSize.height - mouseLoc.y;
+    return [self windowContainingPoint: mouseLoc];
+}
+
+/**
+ * @brief Finds the topmost window in the hierarchy containing the passed point
  *
  * @param point Point to search for
  *
@@ -752,7 +753,8 @@
 	// windows that were marked as special
   
 	NSEnumerator*		windowIter	= [mWindows objectEnumerator];
-	PNWindow*				window			= nil;
+	PNWindow*				window	= nil;
+    PNWindow*             selected  = nil;        
   
 	while (window = [windowIter nextObject]) {
 		//if ([window isSpecial])
@@ -764,11 +766,26 @@
 		NSRect	windowRect = [window screenRectangle];
     
 		if (NSMouseInRect(point, windowRect, NO)) {
-			return window;
+            if (selected != nil) {
+                if ([window level] > [selected level]) {
+                    selected = window;
+                } else if ([window level] == [selected level]) {
+                    PNApplication *application = [self applicationForWindow:window];
+                    if ([application isFrontmost]) {
+                        selected = window;
+                    }
+                }
+            } else {
+                selected = window;
+            }
 		}
 	}
   
-	return nil;
+    if (selected == nil || [selected isSticky]) {
+        return nil;
+    } else {
+        return selected;
+    }
 }
 
 /**

@@ -218,7 +218,7 @@
 #pragma mark -
 #pragma mark NSOutlineView DataSource implementation 
 
-- (id) outlineView: (NSOutlineView*) outlineView child: (int) index ofItem: (id) item {
+- (id) outlineView: (NSOutlineView*) outlineView child: (int) olIndex ofItem: (id) item {
   //	if (item == nil) {
   //		// fetch desktop as the top-level item 
   //		return [[[VTDesktopController sharedInstance] desktops] objectAtIndex: index]; 
@@ -230,7 +230,7 @@
 		
 		// fetch all of its applications and return the correct application instance 
 		NSArray* applications = [desktop applications]; 
-		return [applications objectAtIndex: index]; 
+		return [applications objectAtIndex: olIndex]; 
 	}
 	
 	// we are dealing with an application item here 
@@ -240,7 +240,7 @@
 		// fetch all of its windows and return the correct window instance 
 		NSArray* applicationWindows	= [application windows];
 		
-		return [applicationWindows objectAtIndex: index]; 
+		return [applicationWindows objectAtIndex: olIndex]; 
 	}
 	
 	// nothing if we are not asked for the toplevel item or the item is no

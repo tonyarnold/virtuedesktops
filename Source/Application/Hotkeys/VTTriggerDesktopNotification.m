@@ -91,9 +91,8 @@
 - (void) setDesktop: (VTDesktop*) desktop {
 	// unregister if necessary 
 	if ([mUserInfo objectForKey: VTRequestChangeDesktopParamName]) {
-		VTDesktop* desktop = [mUserInfo objectForKey: VTRequestChangeDesktopParamName]; 
-		
-		[desktop removeObserver: self forKeyPath: @"name"]; 
+		VTDesktop* oldDesktop = [mUserInfo objectForKey: VTRequestChangeDesktopParamName]; 
+		[oldDesktop removeObserver: self forKeyPath: @"name"]; 
 	}
 	
 	// add it to our user info dictionary 
