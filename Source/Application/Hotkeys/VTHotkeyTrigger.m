@@ -169,35 +169,49 @@
 	// code and then translate that to the resulting string that we return 
 	
 	KeyboardLayoutRef   kbdLayout;
-	Handle				kchrHandle;
-	
+        Handle	            kchrHandle;
+
+	UInt32              state = 0;
+        UniChar             charCode = 0;
+        UniCharCount        length;
+
 	KLGetCurrentKeyboardLayout(&kbdLayout);
-	KLGetKeyboardLayoutProperty(kbdLayout, kKLKCHRData, (const void**) &kchrHandle);
-	
-	if (kchrHandle) {
-		UInt32 state = 0;
-		UInt32 charCode = KeyTranslate(kchrHandle, mKeyCode, &state);
+        KLGetKeyboardLayoutProperty(kbdLayout, kKLKCHRData, (const void**) &kchrHandle);
+        if (kchrHandle) {
+            // non-Unicode keyboard
+            charCode = KeyTranslate(kchrHandle, mKeyCode, &state);
+        } else {
+            KLGetKeyboardLayoutProperty(kbdLayout, kKLuchrData, (const void**) &kchrHandle);
+            if (kchrHandle) {
+                // unicode keyboard
+                OSErr err = UCKeyTranslate(kchrHandle, mKeyCode,
+                                           kUCKeyActionDisplay, 0,
+                                           LMGetKbdType(),
+                                           kUCKeyTranslateNoDeadKeysMask,
+                                           &state, 1, &length, &charCode);
+            } else {
+                return @"";
+            }
+        }
+
+        NSMutableString * stringValue = [NSMutableString string];
+
+        // handle modifiers and append them to the resulting string representation
+        if (mKeyModifiers & NSControlKeyMask) 
+            [stringValue appendString: [self unicodeToString: kControlUnicode]]; 
+        if (mKeyModifiers & NSShiftKeyMask) 
+            [stringValue appendString: [self unicodeToString: kShiftUnicode]]; 			
+        if (mKeyModifiers & NSAlternateKeyMask) 
+            [stringValue appendString: [self unicodeToString: kOptionUnicode]]; 			
+        if (mKeyModifiers & NSCommandKeyMask) 
+            [stringValue appendString: [self unicodeToString: kCommandUnicode]]; 			
+
+        [stringValue appendString: @" "]; 
+        [stringValue appendString: [self charCodeToString: charCode fromKeyCode: mKeyCode]]; 
 		
-		NSMutableString* stringValue = [NSMutableString string];
-		
-		// handle modifiers and append them to the resulting string representation
-		if (mKeyModifiers & NSControlKeyMask) 
-			[stringValue appendString: [self unicodeToString: kControlUnicode]]; 
-		if (mKeyModifiers & NSShiftKeyMask) 
-			[stringValue appendString: [self unicodeToString: kShiftUnicode]]; 			
-		if (mKeyModifiers & NSAlternateKeyMask) 
-			[stringValue appendString: [self unicodeToString: kOptionUnicode]]; 			
-		if (mKeyModifiers & NSCommandKeyMask) 
-			[stringValue appendString: [self unicodeToString: kCommandUnicode]]; 			
-		
-		[stringValue appendString: @" "]; 
-		[stringValue appendString: [self charCodeToString: charCode fromKeyCode: mKeyCode]]; 
-		
-		mStringValue = [[NSString stringWithString: stringValue] retain]; 
-		return mStringValue;
-	}
-	
-	return @"";
+        mStringValue = [[NSString stringWithString: stringValue] retain]; 
+
+        return mStringValue;
 }
 
 #pragma mark -
